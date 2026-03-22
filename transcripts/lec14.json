@@ -1,0 +1,4927 @@
+{
+  "lecture": "lec14",
+  "language": "en",
+  "duration": 3163.0293125,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.44,
+      "text": "The following content is provided under a Creative"
+    },
+    {
+      "start": 2.44,
+      "end": 3.96,
+      "text": "Commons license."
+    },
+    {
+      "start": 3.96,
+      "end": 6.28,
+      "text": "Your support will help MIT OpenCourseWare"
+    },
+    {
+      "start": 6.28,
+      "end": 10.64,
+      "text": "continue to offer high quality educational resources for free."
+    },
+    {
+      "start": 10.64,
+      "end": 13.26,
+      "text": "To make a donation or view additional materials"
+    },
+    {
+      "start": 13.26,
+      "end": 17.2,
+      "text": "from hundreds of MIT courses, visit MIT OpenCourseWare"
+    },
+    {
+      "start": 17.2,
+      "end": 22.78,
+      "text": "at ocw.mit.edu."
+    },
+    {
+      "start": 22.78,
+      "end": 26.66,
+      "text": "So last time we started talking about random processes."
+    },
+    {
+      "start": 26.66,
+      "end": 29.94,
+      "text": "Random process is a random experiment"
+    },
+    {
+      "start": 29.94,
+      "end": 32.62,
+      "text": "that evolves over time."
+    },
+    {
+      "start": 32.62,
+      "end": 34.74,
+      "text": "And conceptually, it's important to realize"
+    },
+    {
+      "start": 34.74,
+      "end": 37.98,
+      "text": "that it's a single probabilistic experiment that"
+    },
+    {
+      "start": 37.98,
+      "end": 39.26,
+      "text": "has many stages."
+    },
+    {
+      "start": 39.26,
+      "end": 42.48,
+      "text": "Actually, it has an infinite number of stages."
+    },
+    {
+      "start": 42.48,
+      "end": 45.6,
+      "text": "And we discussed the easiest random, the simplest random"
+    },
+    {
+      "start": 45.6,
+      "end": 48.3,
+      "text": "process there is, the Bernoulli process, which"
+    },
+    {
+      "start": 48.3,
+      "end": 51.58,
+      "text": "is nothing but the sequence of Bernoulli trials,"
+    },
+    {
+      "start": 51.58,
+      "end": 54.3,
+      "text": "an infinite sequence of Bernoulli trials,"
+    },
+    {
+      "start": 54.3,
+      "end": 58.26,
+      "text": "like, for example, flipping a coin over and over."
+    },
+    {
+      "start": 58.26,
+      "end": 59.92,
+      "text": "Once we understand what's going on"
+    },
+    {
+      "start": 59.92,
+      "end": 62.46,
+      "text": "with that process, then what we want"
+    },
+    {
+      "start": 62.46,
+      "end": 66.22,
+      "text": "is to move into a continuous time version of the Bernoulli"
+    },
+    {
+      "start": 66.22,
+      "end": 66.76,
+      "text": "process."
+    },
+    {
+      "start": 66.76,
+      "end": 69.46,
+      "text": "And this is what we will call the Poisson process."
+    },
+    {
+      "start": 69.46,
+      "end": 70.88,
+      "text": "And for the Poisson process, we're"
+    },
+    {
+      "start": 70.88,
+      "end": 72.54,
+      "text": "going to do exactly the same things"
+    },
+    {
+      "start": 72.54,
+      "end": 74.3,
+      "text": "that we did for the Bernoulli process."
+    },
+    {
+      "start": 74.3,
+      "end": 77.38,
+      "text": "That is, talk about the number of arrivals"
+    },
+    {
+      "start": 77.38,
+      "end": 80.14,
+      "text": "during a given time period, and talk also"
+    },
+    {
+      "start": 80.14,
+      "end": 82.84,
+      "text": "about the time between consecutive arrivals"
+    },
+    {
+      "start": 82.84,
+      "end": 87.68,
+      "text": "and for the distribution of inter-arrival times."
+    },
+    {
+      "start": 87.68,
+      "end": 89.64,
+      "text": "So let's start with a quick review."
+    },
+    {
+      "start": 89.64,
+      "end": 92.88,
+      "text": "So let's start with a quick review of what we discussed last time."
+    },
+    {
+      "start": 92.88,
+      "end": 95.54,
+      "text": "First, a note about language."
+    },
+    {
+      "start": 95.54,
+      "end": 100.66,
+      "text": "If you think of coin tosses, we then talk about heads and tails."
+    },
+    {
+      "start": 100.66,
+      "end": 103.12,
+      "text": "If you think of these as a sequence of trials,"
+    },
+    {
+      "start": 103.12,
+      "end": 107.1,
+      "text": "you can talk about successes and failures."
+    },
+    {
+      "start": 107.1,
+      "end": 109.34,
+      "text": "The language that we will be using"
+    },
+    {
+      "start": 109.34,
+      "end": 111.9,
+      "text": "will be more the language of arrivals."
+    },
+    {
+      "start": 111.9,
+      "end": 115.56,
+      "text": "That is, if in a given slot you have a success,"
+    },
+    {
+      "start": 115.56,
+      "end": 117.96,
+      "text": "you say that something arrived."
+    },
+    {
+      "start": 117.96,
+      "end": 119.48,
+      "text": "If you have a failure, nothing arrived."
+    },
+    {
+      "start": 119.48,
+      "end": 123.08,
+      "text": "And that language is a little more convenient and more"
+    },
+    {
+      "start": 123.08,
+      "end": 126.96,
+      "text": "natural, especially when we talk about continuous time,"
+    },
+    {
+      "start": 126.96,
+      "end": 130.24,
+      "text": "to talk about arrivals instead of successes."
+    },
+    {
+      "start": 130.24,
+      "end": 132.22,
+      "text": "But in any case, for the Bernoulli process,"
+    },
+    {
+      "start": 132.22,
+      "end": 135.2,
+      "text": "let's keep for a little bit the language of successes."
+    },
+    {
+      "start": 135.2,
+      "end": 137.04,
+      "text": "We're working in discrete time."
+    },
+    {
+      "start": 137.04,
+      "end": 138.52,
+      "text": "We have time slots."
+    },
+    {
+      "start": 138.52,
+      "end": 142.84,
+      "text": "During each time slot, we have an independent Bernoulli trial."
+    },
+    {
+      "start": 142.84,
+      "end": 145.72,
+      "text": "There's probability P of having a success."
+    },
+    {
+      "start": 145.72,
+      "end": 149.42,
+      "text": "Different slots are independent of each other."
+    },
+    {
+      "start": 149.48,
+      "end": 153.24,
+      "text": "And this probability P is the same for any given time slot."
+    },
+    {
+      "start": 153.24,
+      "end": 156.6,
+      "text": "So for this process, we discussed the one random"
+    },
+    {
+      "start": 156.6,
+      "end": 159.24,
+      "text": "variable of interest, which is the following."
+    },
+    {
+      "start": 159.24,
+      "end": 162.34,
+      "text": "If we have n time slots or n trials,"
+    },
+    {
+      "start": 162.34,
+      "end": 164.62,
+      "text": "how many arrivals will there be?"
+    },
+    {
+      "start": 164.62,
+      "end": 167.34,
+      "text": "Or how many successes will there be?"
+    },
+    {
+      "start": 167.34,
+      "end": 170.92,
+      "text": "Well, this is just given by the binomial PMF."
+    },
+    {
+      "start": 170.92,
+      "end": 174.78,
+      "text": "Number of successes in n trials is a random variable"
+    },
+    {
+      "start": 174.78,
+      "end": 176.68,
+      "text": "that has a binomial PMF."
+    },
+    {
+      "start": 176.68,
+      "end": 178.44,
+      "text": "And we know what this is."
+    },
+    {
+      "start": 178.44,
+      "end": 179.48,
+      "text": "Then we talked about success."
+    },
+    {
+      "start": 179.48,
+      "end": 181.16,
+      "text": "Inter-arrival times."
+    },
+    {
+      "start": 181.16,
+      "end": 183.94,
+      "text": "The time until the first arrival happens"
+    },
+    {
+      "start": 183.94,
+      "end": 187.92,
+      "text": "has a geometric distribution."
+    },
+    {
+      "start": 187.92,
+      "end": 191.76,
+      "text": "And we have seen that from some time ago."
+    },
+    {
+      "start": 191.76,
+      "end": 194.84,
+      "text": "Now, if you start thinking about the time until k"
+    },
+    {
+      "start": 194.84,
+      "end": 199.16,
+      "text": "arrivals happen, and we denote that by yk,"
+    },
+    {
+      "start": 199.16,
+      "end": 202.2,
+      "text": "this is the time until the first arrival happens."
+    },
+    {
+      "start": 202.2,
+      "end": 204.42,
+      "text": "And then after the first arrival happens,"
+    },
+    {
+      "start": 204.42,
+      "end": 207.0,
+      "text": "you have to wait some time until the second arrival"
+    },
+    {
+      "start": 207.0,
+      "end": 208.72,
+      "text": "happens, and so on."
+    },
+    {
+      "start": 208.72,
+      "end": 212.04,
+      "text": "And then the time from the k minus 1 arrival"
+    },
+    {
+      "start": 212.04,
+      "end": 214.84,
+      "text": "until arrival number k."
+    },
+    {
+      "start": 214.84,
+      "end": 216.66,
+      "text": "The important thing to realize here"
+    },
+    {
+      "start": 216.66,
+      "end": 221.1,
+      "text": "is that because the process has a memorylessness property,"
+    },
+    {
+      "start": 221.1,
+      "end": 223.12,
+      "text": "once the first arrival comes, it's"
+    },
+    {
+      "start": 223.12,
+      "end": 225.32,
+      "text": "as if we're starting from scratch."
+    },
+    {
+      "start": 225.32,
+      "end": 227.62,
+      "text": "And we will be flipping our coins"
+    },
+    {
+      "start": 227.62,
+      "end": 229.54,
+      "text": "until the next arrival comes."
+    },
+    {
+      "start": 229.54,
+      "end": 232.16,
+      "text": "So the time it will take until the next arrival comes"
+    },
+    {
+      "start": 232.16,
+      "end": 234.8,
+      "text": "will also be a geometric random variable."
+    },
+    {
+      "start": 234.8,
+      "end": 238.24,
+      "text": "And because different slots are independent, whatever happens,"
+    },
+    {
+      "start": 238.24,
+      "end": 241.64,
+      "text": "after the first arrival is independent from whatever"
+    },
+    {
+      "start": 241.64,
+      "end": 242.62,
+      "text": "happened before."
+    },
+    {
+      "start": 242.62,
+      "end": 246.28,
+      "text": "So t1 and t2 will be independent random variables."
+    },
+    {
+      "start": 246.28,
+      "end": 248.96,
+      "text": "And similarly, all the way up to tk."
+    },
+    {
+      "start": 248.96,
+      "end": 251.5,
+      "text": "So the time until the kth arrival"
+    },
+    {
+      "start": 251.5,
+      "end": 257.02,
+      "text": "is a sum of independent geometric random variables"
+    },
+    {
+      "start": 257.02,
+      "end": 259.5,
+      "text": "with the same parameter p."
+    },
+    {
+      "start": 259.5,
+      "end": 263.02,
+      "text": "And we saw last time that we can find the probability"
+    },
+    {
+      "start": 263.02,
+      "end": 268.22,
+      "text": "distribution of yk, the probability that yk takes a value of 3."
+    },
+    {
+      "start": 268.24,
+      "end": 274.2,
+      "text": "So t is equal to this combinatorial factor here."
+    },
+    {
+      "start": 274.2,
+      "end": 280.1,
+      "text": "And then get p to the k, 1 minus p to the t minus k."
+    },
+    {
+      "start": 280.1,
+      "end": 288.06,
+      "text": "And this formula is true for t equal to k, k plus 1, and so on."
+    },
+    {
+      "start": 288.06,
+      "end": 289.96,
+      "text": "And this distribution has a name."
+    },
+    {
+      "start": 289.96,
+      "end": 294.56,
+      "text": "It's called the Pascal PMF."
+    },
+    {
+      "start": 294.56,
+      "end": 299.14,
+      "text": "So this is all there is to know about the Bernoulli process."
+    },
+    {
+      "start": 299.14,
+      "end": 299.94,
+      "text": "One important question."
+    },
+    {
+      "start": 299.96,
+      "end": 303.9,
+      "text": "One comment is to realize what exactly this memorylessness"
+    },
+    {
+      "start": 303.9,
+      "end": 305.56,
+      "text": "property is saying."
+    },
+    {
+      "start": 305.56,
+      "end": 307.48,
+      "text": "So I discussed it a little bit last time."
+    },
+    {
+      "start": 307.48,
+      "end": 310.52,
+      "text": "Let me sort of reiterate it."
+    },
+    {
+      "start": 310.52,
+      "end": 312.64,
+      "text": "So we have a Bernoulli process, which"
+    },
+    {
+      "start": 312.64,
+      "end": 315.26,
+      "text": "is a sequence of Bernoulli trials."
+    },
+    {
+      "start": 315.26,
+      "end": 317.5,
+      "text": "And these are 0, 1 random variables"
+    },
+    {
+      "start": 317.5,
+      "end": 320.32,
+      "text": "that keep going on forever."
+    },
+    {
+      "start": 320.32,
+      "end": 324.04,
+      "text": "So someone is watching this movie,"
+    },
+    {
+      "start": 324.04,
+      "end": 327.42,
+      "text": "this B movie of Bernoulli trials."
+    },
+    {
+      "start": 327.42,
+      "end": 329.92,
+      "text": "And at some point, they say."
+    },
+    {
+      "start": 329.96,
+      "end": 333.02,
+      "text": "They think, oh, something interesting has happened."
+    },
+    {
+      "start": 333.02,
+      "end": 336.32,
+      "text": "Why don't you come in and start watching?"
+    },
+    {
+      "start": 336.32,
+      "end": 339.26,
+      "text": "So at some time, t, they tell you"
+    },
+    {
+      "start": 339.26,
+      "end": 341.3,
+      "text": "to come in and start watching."
+    },
+    {
+      "start": 341.3,
+      "end": 344.48,
+      "text": "So what you will see once you come in"
+    },
+    {
+      "start": 344.48,
+      "end": 348.34,
+      "text": "will be these future trials."
+    },
+    {
+      "start": 348.34,
+      "end": 350.34,
+      "text": "So actually, what you will see is"
+    },
+    {
+      "start": 350.34,
+      "end": 354.5,
+      "text": "a random process whose first random variable"
+    },
+    {
+      "start": 354.5,
+      "end": 359.4,
+      "text": "is going to be the first one that you see, bt plus 1."
+    },
+    {
+      "start": 359.4,
+      "end": 363.16,
+      "text": "The second one is going to be this, and so on."
+    },
+    {
+      "start": 363.16,
+      "end": 364.98,
+      "text": "So this is the process that's seen"
+    },
+    {
+      "start": 364.98,
+      "end": 368.42,
+      "text": "by the person who is asked to come in and start"
+    },
+    {
+      "start": 368.42,
+      "end": 370.4,
+      "text": "watching at that time."
+    },
+    {
+      "start": 370.4,
+      "end": 374.56,
+      "text": "And the claim is that this process is itself"
+    },
+    {
+      "start": 374.56,
+      "end": 379.28,
+      "text": "a Bernoulli process, provided that the person who"
+    },
+    {
+      "start": 379.28,
+      "end": 383.74,
+      "text": "calls you into the room does not look into the future."
+    },
+    {
+      "start": 383.74,
+      "end": 385.78,
+      "text": "The person who calls you into the room"
+    },
+    {
+      "start": 385.78,
+      "end": 389.4,
+      "text": "decides to call you in only on the basis of what"
+    },
+    {
+      "start": 389.4,
+      "end": 391.3,
+      "text": "they have seen so far."
+    },
+    {
+      "start": 391.3,
+      "end": 393.12,
+      "text": "So for example, who calls you into the room"
+    },
+    {
+      "start": 393.12,
+      "end": 396.1,
+      "text": "might have a rule that says, as soon as I"
+    },
+    {
+      "start": 396.1,
+      "end": 400.78,
+      "text": "see a sequence of three heads, I ask the other person"
+    },
+    {
+      "start": 400.78,
+      "end": 403.72,
+      "text": "to come in."
+    },
+    {
+      "start": 403.72,
+      "end": 405.6,
+      "text": "So if they use that particular rule,"
+    },
+    {
+      "start": 405.6,
+      "end": 407.54,
+      "text": "it means that when you're called in,"
+    },
+    {
+      "start": 407.54,
+      "end": 409.92,
+      "text": "the previous three were heads."
+    },
+    {
+      "start": 409.92,
+      "end": 413.3,
+      "text": "But this doesn't give you any information about the future."
+    },
+    {
+      "start": 413.3,
+      "end": 415.26,
+      "text": "And so the future ones will be just"
+    },
+    {
+      "start": 415.26,
+      "end": 417.18,
+      "text": "independent Bernoulli trials."
+    },
+    {
+      "start": 417.18,
+      "end": 419.4,
+      "text": "If, on the other hand, the person who calls you"
+    },
+    {
+      "start": 419.4,
+      "end": 424.02,
+      "text": "in has seen the movie before, and they use a rule such as,"
+    },
+    {
+      "start": 424.02,
+      "end": 429.42,
+      "text": "for example, I call you in just before three heads show up"
+    },
+    {
+      "start": 429.42,
+      "end": 430.92,
+      "text": "for the first time."
+    },
+    {
+      "start": 430.92,
+      "end": 433.3,
+      "text": "So the person calls you in based on knowledge"
+    },
+    {
+      "start": 433.3,
+      "end": 435.76,
+      "text": "that these two will be three heads."
+    },
+    {
+      "start": 435.76,
+      "end": 439.84,
+      "text": "If they have such foresight, if they can look into the future,"
+    },
+    {
+      "start": 439.84,
+      "end": 444.8,
+      "text": "then x1, x2, x3, they're certain to be three heads."
+    },
+    {
+      "start": 444.8,
+      "end": 448.3,
+      "text": "So they do not correspond to random independent Bernoulli"
+    },
+    {
+      "start": 448.3,
+      "end": 448.8,
+      "text": "trials."
+    },
+    {
+      "start": 449.4,
+      "end": 453.66,
+      "text": "So to rephrase this, the process is memoryless."
+    },
+    {
+      "start": 453.66,
+      "end": 458.52,
+      "text": "It does not matter what has happened in the past."
+    },
+    {
+      "start": 458.52,
+      "end": 461.92,
+      "text": "And that's true even if you're called into the room"
+    },
+    {
+      "start": 461.92,
+      "end": 464.34,
+      "text": "and start watching at a random time,"
+    },
+    {
+      "start": 464.34,
+      "end": 469.64,
+      "text": "as long as that random time is determined in a causal way"
+    },
+    {
+      "start": 469.64,
+      "end": 472.36,
+      "text": "on the basis of what has happened so far."
+    },
+    {
+      "start": 472.36,
+      "end": 475.3,
+      "text": "So you are called into the room in a causal manner,"
+    },
+    {
+      "start": 475.3,
+      "end": 477.64,
+      "text": "just based on what happened so far."
+    },
+    {
+      "start": 477.64,
+      "end": 479.1,
+      "text": "What you're going to see, starting"
+    },
+    {
+      "start": 479.1,
+      "end": 481.14,
+      "text": "from that time, will still be a sequence"
+    },
+    {
+      "start": 481.14,
+      "end": 483.28,
+      "text": "of independent Bernoulli trials."
+    },
+    {
+      "start": 483.28,
+      "end": 486.38,
+      "text": "And this is the argument that we used here, essentially,"
+    },
+    {
+      "start": 486.38,
+      "end": 489.6,
+      "text": "to argue that this t2 is an independent random variable"
+    },
+    {
+      "start": 489.6,
+      "end": 491.06,
+      "text": "from t1."
+    },
+    {
+      "start": 491.06,
+      "end": 494.52,
+      "text": "So a person is watching the movie, sees the first success."
+    },
+    {
+      "start": 497.26,
+      "end": 499.76,
+      "text": "And on the basis of what they have seen,"
+    },
+    {
+      "start": 499.76,
+      "end": 501.62,
+      "text": "they have just seen the first success,"
+    },
+    {
+      "start": 501.62,
+      "end": 503.58,
+      "text": "they ask you to come in."
+    },
+    {
+      "start": 503.58,
+      "end": 504.3,
+      "text": "You come in."
+    },
+    {
+      "start": 504.3,
+      "end": 507.3,
+      "text": "What you're going to see is a sequence of Bernoulli trials."
+    },
+    {
+      "start": 507.3,
+      "end": 509.1,
+      "text": "And you wait this long."
+    },
+    {
+      "start": 509.1,
+      "end": 512.2,
+      "text": "Until the next success comes in."
+    },
+    {
+      "start": 512.2,
+      "end": 514.16,
+      "text": "What you see is a Bernoulli process"
+    },
+    {
+      "start": 514.16,
+      "end": 517.32,
+      "text": "as if the process was just starting right now."
+    },
+    {
+      "start": 517.32,
+      "end": 519.5,
+      "text": "And that convinces us that this should"
+    },
+    {
+      "start": 519.5,
+      "end": 523.04,
+      "text": "be a geometric random variable of the same kind as this one,"
+    },
+    {
+      "start": 523.04,
+      "end": 527.38,
+      "text": "as independent from what happened before."
+    },
+    {
+      "start": 527.38,
+      "end": 528.98,
+      "text": "So this is pretty much all there is"
+    },
+    {
+      "start": 528.98,
+      "end": 530.62,
+      "text": "to know about the Bernoulli process,"
+    },
+    {
+      "start": 530.62,
+      "end": 533.58,
+      "text": "plus the two things that we did at the end of last lecture."
+    },
+    {
+      "start": 533.58,
+      "end": 536.26,
+      "text": "When we merge two independent Bernoulli processes,"
+    },
+    {
+      "start": 536.26,
+      "end": 538.08,
+      "text": "we get a Bernoulli process."
+    },
+    {
+      "start": 538.08,
+      "end": 538.94,
+      "text": "If we have a Bernoulli process, we get a Bernoulli process."
+    },
+    {
+      "start": 538.94,
+      "end": 541.6,
+      "text": "And we split it by flipping a coin"
+    },
+    {
+      "start": 541.6,
+      "end": 544.58,
+      "text": "and sending things one way or the other."
+    },
+    {
+      "start": 544.58,
+      "end": 547.82,
+      "text": "Then we get two separate Bernoulli processes."
+    },
+    {
+      "start": 547.82,
+      "end": 550.46,
+      "text": "And we see that all of these carry over"
+    },
+    {
+      "start": 550.46,
+      "end": 551.7,
+      "text": "to the continuous time."
+    },
+    {
+      "start": 551.7,
+      "end": 553.52,
+      "text": "And our task for today is basically"
+    },
+    {
+      "start": 553.52,
+      "end": 558.02,
+      "text": "to work these continuous time variations."
+    },
+    {
+      "start": 558.02,
+      "end": 561.08,
+      "text": "So the Poisson process is a continuous time version"
+    },
+    {
+      "start": 561.08,
+      "end": 563.36,
+      "text": "of the Bernoulli process."
+    },
+    {
+      "start": 563.36,
+      "end": 565.94,
+      "text": "Here's the motivation for considering the Bernoulli"
+    },
+    {
+      "start": 565.94,
+      "end": 566.94,
+      "text": "process."
+    },
+    {
+      "start": 566.94,
+      "end": 568.76,
+      "text": "So you have that person whose job"
+    },
+    {
+      "start": 568.76,
+      "end": 572.16,
+      "text": "is to sit outside the door of a bank."
+    },
+    {
+      "start": 572.16,
+      "end": 574.44,
+      "text": "And they have this long sheet."
+    },
+    {
+      "start": 574.44,
+      "end": 578.54,
+      "text": "And for every one second slot, they"
+    },
+    {
+      "start": 578.54,
+      "end": 583.22,
+      "text": "mark an X if a person came in, or they mark something else"
+    },
+    {
+      "start": 583.22,
+      "end": 585.74,
+      "text": "if no one came in during that slot."
+    },
+    {
+      "start": 585.74,
+      "end": 588.92,
+      "text": "Now the bank manager is a really scientifically trained person"
+    },
+    {
+      "start": 588.92,
+      "end": 590.48,
+      "text": "and wants very accurate results."
+    },
+    {
+      "start": 590.48,
+      "end": 593.12,
+      "text": "So they tell you, don't use one second slots."
+    },
+    {
+      "start": 593.12,
+      "end": 594.44,
+      "text": "Use millisecond slots."
+    },
+    {
+      "start": 594.44,
+      "end": 597.02,
+      "text": "So you have all those slots, and you keep filling"
+    },
+    {
+      "start": 597.02,
+      "end": 598.76,
+      "text": "if someone arrived or not during the day."
+    },
+    {
+      "start": 598.76,
+      "end": 600.02,
+      "text": "That slot."
+    },
+    {
+      "start": 600.02,
+      "end": 601.84,
+      "text": "Well, then you come up with an idea,"
+    },
+    {
+      "start": 601.84,
+      "end": 606.76,
+      "text": "why use millisecond slots and keep putting crosses or zeros"
+    },
+    {
+      "start": 606.76,
+      "end": 608.18,
+      "text": "into each slot?"
+    },
+    {
+      "start": 608.18,
+      "end": 612.14,
+      "text": "It's much simpler if I just record the exact times"
+    },
+    {
+      "start": 612.14,
+      "end": 614.04,
+      "text": "when people came in."
+    },
+    {
+      "start": 614.04,
+      "end": 616.4,
+      "text": "So time is continuous."
+    },
+    {
+      "start": 616.4,
+      "end": 620.4,
+      "text": "I don't keep doing something at every time slot."
+    },
+    {
+      "start": 620.4,
+      "end": 623.48,
+      "text": "But instead, on the time axis, I mark the times"
+    },
+    {
+      "start": 623.48,
+      "end": 626.4,
+      "text": "at which customers arrive."
+    },
+    {
+      "start": 626.4,
+      "end": 628.64,
+      "text": "So there's no real need for slots,"
+    },
+    {
+      "start": 628.64,
+      "end": 630.62,
+      "text": "the only information that you want"
+    },
+    {
+      "start": 630.62,
+      "end": 634.14,
+      "text": "is when did we have arrivals of people."
+    },
+    {
+      "start": 634.14,
+      "end": 637.8,
+      "text": "And we want to now model a process of this kind happening"
+    },
+    {
+      "start": 637.8,
+      "end": 641.68,
+      "text": "in continuous time that has the same flavor, however,"
+    },
+    {
+      "start": 641.68,
+      "end": 644.22,
+      "text": "as the Bernoulli process."
+    },
+    {
+      "start": 644.22,
+      "end": 648.16,
+      "text": "So that's the model we want to develop."
+    },
+    {
+      "start": 648.16,
+      "end": 652.9,
+      "text": "OK, so what are the properties that we're going to have?"
+    },
+    {
+      "start": 652.9,
+      "end": 658.26,
+      "text": "First, we're going to assume that intervals of the same length"
+    },
+    {
+      "start": 658.64,
+      "end": 664.6,
+      "text": "arrive probabilistically in an identical fashion."
+    },
+    {
+      "start": 664.6,
+      "end": 666.66,
+      "text": "So what does that mean?"
+    },
+    {
+      "start": 666.66,
+      "end": 669.64,
+      "text": "Think of an interval of some given length."
+    },
+    {
+      "start": 669.64,
+      "end": 671.5,
+      "text": "During the interval of that length,"
+    },
+    {
+      "start": 671.5,
+      "end": 674.76,
+      "text": "there's going to be a random number of arrivals."
+    },
+    {
+      "start": 674.76,
+      "end": 676.46,
+      "text": "And that random number of arrivals"
+    },
+    {
+      "start": 676.46,
+      "end": 679.06,
+      "text": "is going to have a probability distribution."
+    },
+    {
+      "start": 679.06,
+      "end": 680.64,
+      "text": "So that probability distribution,"
+    },
+    {
+      "start": 680.64,
+      "end": 683.82,
+      "text": "let's denote it by this notation."
+    },
+    {
+      "start": 683.82,
+      "end": 688.62,
+      "text": "So it's the probability we fix t, we fix the duration,"
+    },
+    {
+      "start": 688.64,
+      "end": 691.66,
+      "text": "so this is fixed."
+    },
+    {
+      "start": 691.66,
+      "end": 694.16,
+      "text": "And we look at the different k's."
+    },
+    {
+      "start": 694.16,
+      "end": 696.24,
+      "text": "The probability of having zero arrivals,"
+    },
+    {
+      "start": 696.24,
+      "end": 698.54,
+      "text": "the probability of one arrival, the probability of two"
+    },
+    {
+      "start": 698.54,
+      "end": 700.1,
+      "text": "arrivals, and so on."
+    },
+    {
+      "start": 700.1,
+      "end": 702.62,
+      "text": "So this thing is essentially a PMF."
+    },
+    {
+      "start": 702.62,
+      "end": 706.92,
+      "text": "So it should have the property that the sum over all k's of"
+    },
+    {
+      "start": 706.92,
+      "end": 712.59,
+      "text": "this pk tau should be equal to 1."
+    },
+    {
+      "start": 712.59,
+      "end": 717.47,
+      "text": "Now, hidden inside this notation is an assumption of"
+    },
+    {
+      "start": 717.47,
+      "end": 719.55,
+      "text": "time homogeneity."
+    },
+    {
+      "start": 719.55,
+      "end": 720.63,
+      "text": "That is."
+    },
+    {
+      "start": 720.63,
+      "end": 724.81,
+      "text": "This probability distribution for the number of arrivals"
+    },
+    {
+      "start": 724.81,
+      "end": 728.69,
+      "text": "only depends on the length of the interval,"
+    },
+    {
+      "start": 728.69,
+      "end": 733.25,
+      "text": "but not the exact location of the interval on the time axis."
+    },
+    {
+      "start": 733.25,
+      "end": 737.25,
+      "text": "That is, if I take an interval of length tau,"
+    },
+    {
+      "start": 737.25,
+      "end": 741.21,
+      "text": "and I ask about the number of arrivals in this interval,"
+    },
+    {
+      "start": 741.21,
+      "end": 744.11,
+      "text": "and I take another interval of length tau,"
+    },
+    {
+      "start": 744.11,
+      "end": 747.79,
+      "text": "and I ask about the number of arrivals during that interval,"
+    },
+    {
+      "start": 747.79,
+      "end": 750.63,
+      "text": "number of arrivals here and number of arrivals there,"
+    },
+    {
+      "start": 750.63,
+      "end": 753.41,
+      "text": "have the same probability distribution,"
+    },
+    {
+      "start": 753.41,
+      "end": 756.97,
+      "text": "which is denoted this way."
+    },
+    {
+      "start": 756.97,
+      "end": 761.61,
+      "text": "So the statistical behavior of arrivals here is the same as"
+    },
+    {
+      "start": 761.61,
+      "end": 764.23,
+      "text": "statistical behavior of arrivals there."
+    },
+    {
+      "start": 764.23,
+      "end": 766.79,
+      "text": "What's the relation with the Bernoulli process?"
+    },
+    {
+      "start": 766.79,
+      "end": 769.03,
+      "text": "It's very much like the assumption of the Bernoulli"
+    },
+    {
+      "start": 769.03,
+      "end": 771.53,
+      "text": "process, that in different slots,"
+    },
+    {
+      "start": 771.53,
+      "end": 774.43,
+      "text": "we have the same probability of success."
+    },
+    {
+      "start": 774.43,
+      "end": 776.71,
+      "text": "Every slot looks probabilistically"
+    },
+    {
+      "start": 776.71,
+      "end": 778.39,
+      "text": "as any other slot."
+    },
+    {
+      "start": 778.39,
+      "end": 780.59,
+      "text": "So similarly here, any interval"
+    },
+    {
+      "start": 780.63,
+      "end": 783.75,
+      "text": "of length tau looks probabilistically"
+    },
+    {
+      "start": 783.75,
+      "end": 786.81,
+      "text": "as any other interval of length tau."
+    },
+    {
+      "start": 786.81,
+      "end": 789.45,
+      "text": "And the number of arrivals during that interval"
+    },
+    {
+      "start": 789.45,
+      "end": 792.33,
+      "text": "is a random variable described by these probabilities."
+    },
+    {
+      "start": 792.33,
+      "end": 795.39,
+      "text": "Number of arrivals here is a random variable described"
+    },
+    {
+      "start": 795.39,
+      "end": 798.37,
+      "text": "by these same probabilities."
+    },
+    {
+      "start": 798.37,
+      "end": 799.93,
+      "text": "So that's our first assumption."
+    },
+    {
+      "start": 799.93,
+      "end": 801.01,
+      "text": "Then what else?"
+    },
+    {
+      "start": 801.01,
+      "end": 803.11,
+      "text": "In the Bernoulli process, we have the assumption"
+    },
+    {
+      "start": 803.11,
+      "end": 807.71,
+      "text": "that different time slots were independent of each other."
+    },
+    {
+      "start": 807.71,
+      "end": 810.57,
+      "text": "Here we do not have time slots, but we"
+    },
+    {
+      "start": 810.57,
+      "end": 815.87,
+      "text": "can still think in a similar way and impose"
+    },
+    {
+      "start": 815.87,
+      "end": 819.53,
+      "text": "the following assumption, that these joint time intervals"
+    },
+    {
+      "start": 819.53,
+      "end": 820.97,
+      "text": "are statistically independent."
+    },
+    {
+      "start": 820.97,
+      "end": 822.65,
+      "text": "What does that mean?"
+    },
+    {
+      "start": 822.65,
+      "end": 825.55,
+      "text": "There's a random number of arrivals during this interval,"
+    },
+    {
+      "start": 825.55,
+      "end": 828.27,
+      "text": "and a random number of arrivals during this interval,"
+    },
+    {
+      "start": 828.27,
+      "end": 831.75,
+      "text": "and a random number of arrivals during this interval."
+    },
+    {
+      "start": 831.75,
+      "end": 835.13,
+      "text": "So these are three different random variables."
+    },
+    {
+      "start": 835.13,
+      "end": 838.75,
+      "text": "These three random variables are independent of each other."
+    },
+    {
+      "start": 838.75,
+      "end": 840.41,
+      "text": "How many arrivals we got here?"
+    },
+    {
+      "start": 840.41,
+      "end": 844.05,
+      "text": "Is independent from how many arrivals we got there."
+    },
+    {
+      "start": 844.05,
+      "end": 847.45,
+      "text": "So this is similar to saying that different time slots were"
+    },
+    {
+      "start": 847.45,
+      "end": 848.11,
+      "text": "independent."
+    },
+    {
+      "start": 848.11,
+      "end": 850.03,
+      "text": "That's what we did in discrete time."
+    },
+    {
+      "start": 850.03,
+      "end": 853.21,
+      "text": "The continuous time analog is this independence assumption."
+    },
+    {
+      "start": 853.21,
+      "end": 856.21,
+      "text": "So for example, in particular, number of arrivals here"
+    },
+    {
+      "start": 856.21,
+      "end": 859.45,
+      "text": "is independent from the number of arrivals there."
+    },
+    {
+      "start": 859.45,
+      "end": 865.6,
+      "text": "So these are two basic assumptions about the process."
+    },
+    {
+      "start": 865.6,
+      "end": 869.86,
+      "text": "Now in order to write down a formula eventually"
+    },
+    {
+      "start": 869.86,
+      "end": 871.36,
+      "text": "about this probability distribution,"
+    },
+    {
+      "start": 871.36,
+      "end": 871.84,
+      "text": "we need to write down a formula."
+    },
+    {
+      "start": 871.84,
+      "end": 871.94,
+      "text": "We need to write down a formula eventually about this probability distribution."
+    },
+    {
+      "start": 871.94,
+      "end": 875.26,
+      "text": "Which is our next objective."
+    },
+    {
+      "start": 875.26,
+      "end": 878.78,
+      "text": "We would like to say something specific about this distribution"
+    },
+    {
+      "start": 878.78,
+      "end": 880.34,
+      "text": "of number of arrivals."
+    },
+    {
+      "start": 880.34,
+      "end": 883.98,
+      "text": "We need to add a little more structure into the problem."
+    },
+    {
+      "start": 883.98,
+      "end": 887.42,
+      "text": "And we're going to make the following assumption."
+    },
+    {
+      "start": 887.42,
+      "end": 891.16,
+      "text": "If we look at the time interval of length delta,"
+    },
+    {
+      "start": 891.16,
+      "end": 893.78,
+      "text": "and delta now is supposed to be a small number,"
+    },
+    {
+      "start": 893.78,
+      "end": 895.88,
+      "text": "so a picture like this."
+    },
+    {
+      "start": 895.88,
+      "end": 901.84,
+      "text": "During a very little small time interval, there is a probability"
+    },
+    {
+      "start": 901.84,
+      "end": 907.72,
+      "text": "that we get exactly one arrival, which is lambda times delta."
+    },
+    {
+      "start": 907.72,
+      "end": 909.7,
+      "text": "Delta is the length of the interval."
+    },
+    {
+      "start": 909.7,
+      "end": 912.1,
+      "text": "And lambda is a proportionality factor,"
+    },
+    {
+      "start": 912.1,
+      "end": 916.18,
+      "text": "which is sort of the intensity of the arrival process."
+    },
+    {
+      "start": 916.18,
+      "end": 920.42,
+      "text": "Bigger lambda means that the little interval is more"
+    },
+    {
+      "start": 920.42,
+      "end": 924.16,
+      "text": "likely to get an arrival."
+    },
+    {
+      "start": 924.16,
+      "end": 927.58,
+      "text": "So there's a probability lambda delta of one arrival."
+    },
+    {
+      "start": 927.58,
+      "end": 931.74,
+      "text": "The remaining probability goes to zero arrivals."
+    },
+    {
+      "start": 931.74,
+      "end": 935.3,
+      "text": "And when delta is small, the probability of two arrivals"
+    },
+    {
+      "start": 935.3,
+      "end": 939.62,
+      "text": "can be approximated by zero."
+    },
+    {
+      "start": 939.62,
+      "end": 941.98,
+      "text": "So this is a description of what happens"
+    },
+    {
+      "start": 941.98,
+      "end": 945.2,
+      "text": "during a small, tiny slot."
+    },
+    {
+      "start": 945.2,
+      "end": 947.76,
+      "text": "Now this is something that's supposed to be true"
+    },
+    {
+      "start": 947.76,
+      "end": 951.52,
+      "text": "in some limiting sense when delta is very small."
+    },
+    {
+      "start": 951.52,
+      "end": 954.8,
+      "text": "So the exact version of this statement"
+    },
+    {
+      "start": 954.8,
+      "end": 959.3,
+      "text": "would be that this is an equality plus order"
+    },
+    {
+      "start": 959.3,
+      "end": 961.64,
+      "text": "of delta squared terms."
+    },
+    {
+      "start": 961.64,
+      "end": 964.04,
+      "text": "So this is an approximate equality."
+    },
+    {
+      "start": 964.04,
+      "end": 967.26,
+      "text": "And what approximation means is that in the limit"
+    },
+    {
+      "start": 967.26,
+      "end": 972.72,
+      "text": "of small deltas, the dominant terms, the constant"
+    },
+    {
+      "start": 972.72,
+      "end": 975.88,
+      "text": "and the first-order term, are given by this."
+    },
+    {
+      "start": 975.88,
+      "end": 979.6,
+      "text": "Now when delta is very small, second-order terms in delta"
+    },
+    {
+      "start": 979.6,
+      "end": 981.14,
+      "text": "do not matter."
+    },
+    {
+      "start": 981.14,
+      "end": 984.36,
+      "text": "They are small compared to first-order terms."
+    },
+    {
+      "start": 984.36,
+      "end": 986.2,
+      "text": "So we ignore this."
+    },
+    {
+      "start": 986.2,
+      "end": 990.24,
+      "text": "So you can either think in terms of sort of an exact relation,"
+    },
+    {
+      "start": 990.24,
+      "end": 991.52,
+      "text": "which is the probability of two arrivals,"
+    },
+    {
+      "start": 991.52,
+      "end": 993.76,
+      "text": "or you can think of this as a very simple equation."
+    },
+    {
+      "start": 993.76,
+      "end": 997.64,
+      "text": "And the probabilities are given by this plus delta squared"
+    },
+    {
+      "start": 997.64,
+      "end": 998.7,
+      "text": "terms."
+    },
+    {
+      "start": 998.7,
+      "end": 1000.52,
+      "text": "Or if you want to be a little more loose,"
+    },
+    {
+      "start": 1000.52,
+      "end": 1003.46,
+      "text": "you just write here as an approximate equality."
+    },
+    {
+      "start": 1003.46,
+      "end": 1006.28,
+      "text": "And the understanding is that this equality holds"
+    },
+    {
+      "start": 1006.28,
+      "end": 1013.16,
+      "text": "approximately becomes more and more correct as delta goes to"
+    },
+    {
+      "start": 1013.16,
+      "end": 1015.4,
+      "text": "zero."
+    },
+    {
+      "start": 1015.4,
+      "end": 1017.44,
+      "text": "So another version of that statement"
+    },
+    {
+      "start": 1017.44,
+      "end": 1020.96,
+      "text": "would be that if you take the limit as delta goes"
+    },
+    {
+      "start": 1020.96,
+      "end": 1025.56,
+      "text": "of p, the probability of having one arrival in an interval of"
+    },
+    {
+      "start": 1025.56,
+      "end": 1030.24,
+      "text": "length delta divided by delta, this is equal to lambda."
+    },
+    {
+      "start": 1030.24,
+      "end": 1036.28,
+      "text": "So that would be one version of an exact statement of what we"
+    },
+    {
+      "start": 1036.28,
+      "end": 1039.24,
+      "text": "are assuming here."
+    },
+    {
+      "start": 1039.24,
+      "end": 1042.74,
+      "text": "So this lambda, we call it the arrival rate or the intensity"
+    },
+    {
+      "start": 1042.74,
+      "end": 1043.92,
+      "text": "of the process."
+    },
+    {
+      "start": 1043.92,
+      "end": 1046.84,
+      "text": "And clearly, if you double lambda, then a little"
+    },
+    {
+      "start": 1046.84,
+      "end": 1050.34,
+      "text": "interval is likely to be what you expect to get."
+    },
+    {
+      "start": 1050.96,
+      "end": 1053.98,
+      "text": "And the probability of obtaining an arrival during"
+    },
+    {
+      "start": 1053.98,
+      "end": 1055.74,
+      "text": "that interval has doubled."
+    },
+    {
+      "start": 1055.74,
+      "end": 1059.4,
+      "text": "So in some sense, we have a twice as intense arrival"
+    },
+    {
+      "start": 1059.4,
+      "end": 1060.52,
+      "text": "process."
+    },
+    {
+      "start": 1060.52,
+      "end": 1066.48,
+      "text": "If you look at the number of arrivals during a delta"
+    },
+    {
+      "start": 1066.48,
+      "end": 1074.56,
+      "text": "interval, what is the expected value of that random variable?"
+    },
+    {
+      "start": 1074.56,
+      "end": 1080.1,
+      "text": "Well, with probability lambda delta, we get one arrival."
+    },
+    {
+      "start": 1080.1,
+      "end": 1081.86,
+      "text": "And with the remaining probability,"
+    },
+    {
+      "start": 1081.86,
+      "end": 1083.62,
+      "text": "we get zero arrivals."
+    },
+    {
+      "start": 1083.62,
+      "end": 1086.68,
+      "text": "So it's just lambda times delta."
+    },
+    {
+      "start": 1086.68,
+      "end": 1090.2,
+      "text": "So expected number of arrivals during a little interval"
+    },
+    {
+      "start": 1090.2,
+      "end": 1092.18,
+      "text": "is lambda times delta."
+    },
+    {
+      "start": 1092.18,
+      "end": 1095.26,
+      "text": "So expected number of arrivals is proportional to lambda."
+    },
+    {
+      "start": 1095.26,
+      "end": 1099.06,
+      "text": "And that's, again, why we call lambda the arrival rate."
+    },
+    {
+      "start": 1099.06,
+      "end": 1102.86,
+      "text": "If you sent delta to the denominator in this equality,"
+    },
+    {
+      "start": 1102.86,
+      "end": 1106.22,
+      "text": "it tells you that lambda is the expected number"
+    },
+    {
+      "start": 1106.22,
+      "end": 1110.02,
+      "text": "of arrivals per unit time."
+    },
+    {
+      "start": 1110.02,
+      "end": 1113.22,
+      "text": "So arrival rate is expected number."
+    },
+    {
+      "start": 1113.62,
+      "end": 1118.72,
+      "text": "It's expected number of arrivals per unit time."
+    },
+    {
+      "start": 1118.72,
+      "end": 1122.56,
+      "text": "And again, that justifies why we call lambda the intensity"
+    },
+    {
+      "start": 1122.56,
+      "end": 1126.32,
+      "text": "of this process."
+    },
+    {
+      "start": 1126.32,
+      "end": 1129.68,
+      "text": "All right, so where are we now?"
+    },
+    {
+      "start": 1129.68,
+      "end": 1133.76,
+      "text": "For the Bernoulli process, the number of arrivals during a"
+    },
+    {
+      "start": 1133.76,
+      "end": 1138.98,
+      "text": "given interval of length n had the PMF that we knew what it"
+    },
+    {
+      "start": 1138.98,
+      "end": 1139.72,
+      "text": "was."
+    },
+    {
+      "start": 1139.72,
+      "end": 1141.44,
+      "text": "It was the binomial PMF."
+    },
+    {
+      "start": 1144.44,
+      "end": 1145.34,
+      "text": "What is the formula?"
+    },
+    {
+      "start": 1145.34,
+      "end": 1149.2,
+      "text": "For the corresponding PMF for the continuous time process."
+    },
+    {
+      "start": 1149.2,
+      "end": 1152.56,
+      "text": "Somehow, we would like to use our assumptions and come up"
+    },
+    {
+      "start": 1152.56,
+      "end": 1156.1,
+      "text": "with the formula for this quantity."
+    },
+    {
+      "start": 1156.1,
+      "end": 1159.08,
+      "text": "So this tells us about the distribution of number of"
+    },
+    {
+      "start": 1159.08,
+      "end": 1163.74,
+      "text": "arrivals during an interval of some general length."
+    },
+    {
+      "start": 1163.74,
+      "end": 1167.68,
+      "text": "We have made assumptions about the number of arrivals during"
+    },
+    {
+      "start": 1167.68,
+      "end": 1170.4,
+      "text": "an interval of small length."
+    },
+    {
+      "start": 1170.4,
+      "end": 1174.34,
+      "text": "An interval of big length is composed of many intervals of"
+    },
+    {
+      "start": 1174.34,
+      "end": 1175.28,
+      "text": "small length."
+    },
+    {
+      "start": 1175.34,
+      "end": 1177.58,
+      "text": "So maybe this is the way to go."
+    },
+    {
+      "start": 1177.58,
+      "end": 1181.48,
+      "text": "Take a big interval and split it into many"
+    },
+    {
+      "start": 1181.48,
+      "end": 1184.9,
+      "text": "intervals of small length."
+    },
+    {
+      "start": 1184.9,
+      "end": 1188.28,
+      "text": "So we have here our time axis."
+    },
+    {
+      "start": 1188.28,
+      "end": 1191.44,
+      "text": "And we have an interval of length tau."
+    },
+    {
+      "start": 1191.44,
+      "end": 1195.2,
+      "text": "And I'm going to split it into lots of little intervals of"
+    },
+    {
+      "start": 1195.2,
+      "end": 1196.54,
+      "text": "length delta."
+    },
+    {
+      "start": 1196.54,
+      "end": 1198.96,
+      "text": "So how many intervals are we going to have?"
+    },
+    {
+      "start": 1198.96,
+      "end": 1203.0,
+      "text": "The number of intervals is going to be the total time"
+    },
+    {
+      "start": 1203.0,
+      "end": 1204.4,
+      "text": "divided by delta."
+    },
+    {
+      "start": 1207.2,
+      "end": 1212.96,
+      "text": "Now, what happens during each one of these little intervals?"
+    },
+    {
+      "start": 1212.96,
+      "end": 1222.36,
+      "text": "As long as the intervals are small, what you have is that"
+    },
+    {
+      "start": 1222.36,
+      "end": 1226.4,
+      "text": "during an interval, you're going to have either 0 or 1"
+    },
+    {
+      "start": 1226.4,
+      "end": 1227.26,
+      "text": "arrival."
+    },
+    {
+      "start": 1227.26,
+      "end": 1229.94,
+      "text": "The probability of more than one arrival during a little"
+    },
+    {
+      "start": 1229.94,
+      "end": 1231.94,
+      "text": "interval is negligible."
+    },
+    {
+      "start": 1231.94,
+      "end": 1235.36,
+      "text": "So with this picture, you have essentially a Bernoulli"
+    },
+    {
+      "start": 1235.36,
+      "end": 1238.74,
+      "text": "process that consists of so many trials."
+    },
+    {
+      "start": 1239.44,
+      "end": 1243.16,
+      "text": "And during each one of those trials, we have a probability"
+    },
+    {
+      "start": 1243.16,
+      "end": 1249.82,
+      "text": "of success, which is lambda times delta."
+    },
+    {
+      "start": 1249.82,
+      "end": 1254.34,
+      "text": "Different little intervals here are"
+    },
+    {
+      "start": 1254.34,
+      "end": 1256.12,
+      "text": "independent of each other."
+    },
+    {
+      "start": 1256.12,
+      "end": 1258.66,
+      "text": "That's one of our assumptions, that these joint time"
+    },
+    {
+      "start": 1258.66,
+      "end": 1260.4,
+      "text": "intervals are independent."
+    },
+    {
+      "start": 1260.4,
+      "end": 1265.6,
+      "text": "So approximately, what we have is a Bernoulli process."
+    },
+    {
+      "start": 1265.6,
+      "end": 1266.94,
+      "text": "We have independence."
+    },
+    {
+      "start": 1266.94,
+      "end": 1269.22,
+      "text": "We have the number of slots of interest."
+    },
+    {
+      "start": 1269.22,
+      "end": 1271.1,
+      "text": "And during each one of the slots, we have a"
+    },
+    {
+      "start": 1271.1,
+      "end": 1273.54,
+      "text": "certain probability of success."
+    },
+    {
+      "start": 1273.54,
+      "end": 1277.46,
+      "text": "So if we think of this as a good approximation of the"
+    },
+    {
+      "start": 1277.46,
+      "end": 1280.68,
+      "text": "Poisson process, with the approximation becoming more"
+    },
+    {
+      "start": 1280.68,
+      "end": 1284.86,
+      "text": "and more accurate as delta goes to 0, what we should do"
+    },
+    {
+      "start": 1284.86,
+      "end": 1288.74,
+      "text": "would be to take the formula for the PMF of number of"
+    },
+    {
+      "start": 1288.74,
+      "end": 1292.7,
+      "text": "arrivals in a Bernoulli process, and then take the"
+    },
+    {
+      "start": 1292.7,
+      "end": 1297.2,
+      "text": "limit as delta goes to 0."
+    },
+    {
+      "start": 1297.2,
+      "end": 1300.86,
+      "text": "So in the Bernoulli process, the probability of"
+    },
+    {
+      "start": 1300.86,
+      "end": 1312.7,
+      "text": "K arrivals is n choose K. And then you have P to the K."
+    },
+    {
+      "start": 1312.7,
+      "end": 1316.76,
+      "text": "Now in our case, we have here lambda times delta."
+    },
+    {
+      "start": 1316.76,
+      "end": 1322.12,
+      "text": "Delta is tau over n."
+    },
+    {
+      "start": 1322.12,
+      "end": 1323.94,
+      "text": "Delta is tau over n."
+    },
+    {
+      "start": 1323.94,
+      "end": 1328.42,
+      "text": "So P is lambda tau divided by n."
+    },
+    {
+      "start": 1328.42,
+      "end": 1334.44,
+      "text": "So here's our P. Lambda tau over n to the power K."
+    },
+    {
+      "start": 1334.44,
+      "end": 1334.46,
+      "text": "OK."
+    },
+    {
+      "start": 1334.46,
+      "end": 1334.52,
+      "text": "OK."
+    },
+    {
+      "start": 1334.52,
+      "end": 1334.56,
+      "text": "OK."
+    },
+    {
+      "start": 1334.56,
+      "end": 1334.6,
+      "text": "OK."
+    },
+    {
+      "start": 1334.6,
+      "end": 1334.62,
+      "text": "OK."
+    },
+    {
+      "start": 1334.62,
+      "end": 1334.66,
+      "text": "OK."
+    },
+    {
+      "start": 1334.66,
+      "end": 1334.68,
+      "text": "OK."
+    },
+    {
+      "start": 1334.68,
+      "end": 1334.72,
+      "text": "OK."
+    },
+    {
+      "start": 1334.72,
+      "end": 1334.78,
+      "text": "OK."
+    },
+    {
+      "start": 1334.78,
+      "end": 1334.92,
+      "text": "OK."
+    },
+    {
+      "start": 1334.92,
+      "end": 1334.94,
+      "text": "OK."
+    },
+    {
+      "start": 1334.96,
+      "end": 1338.44,
+      "text": "OK."
+    },
+    {
+      "start": 1338.44,
+      "end": 1342.18,
+      "text": "And then times 1 minus this."
+    },
+    {
+      "start": 1342.18,
+      "end": 1350.01,
+      "text": "This is our 1 minus P to the power n minus K."
+    },
+    {
+      "start": 1350.01,
+      "end": 1355.73,
+      "text": "So this is the exact formula for the Bernoulli process."
+    },
+    {
+      "start": 1355.73,
+      "end": 1359.83,
+      "text": "For the Poisson process, what we do is we take that formula"
+    },
+    {
+      "start": 1359.83,
+      "end": 1363.37,
+      "text": "and we let delta go to 0."
+    },
+    {
+      "start": 1363.37,
+      "end": 1368.15,
+      "text": "As delta goes to 0, n goes to infinity."
+    },
+    {
+      "start": 1368.15,
+      "end": 1370.03,
+      "text": "So that's the limit that we are taking."
+    },
+    {
+      "start": 1370.03,
+      "end": 1371.15,
+      "text": "So that's the limit that we are taking."
+    },
+    {
+      "start": 1371.15,
+      "end": 1379.66,
+      "text": "On the other hand, this expression lambda times tau,"
+    },
+    {
+      "start": 1379.66,
+      "end": 1383.66,
+      "text": "lambda times tau, what is it going to be?"
+    },
+    {
+      "start": 1383.66,
+      "end": 1390.76,
+      "text": "Lambda times tau is equal to n times P. n times P,"
+    },
+    {
+      "start": 1390.76,
+      "end": 1392.46,
+      "text": "is that what I want?"
+    },
+    {
+      "start": 1392.46,
+      "end": 1394.44,
+      "text": "Lambda times tau?"
+    },
+    {
+      "start": 1394.44,
+      "end": 1401.52,
+      "text": "No."
+    },
+    {
+      "start": 1401.52,
+      "end": 1402.6,
+      "text": "Let's see."
+    },
+    {
+      "start": 1402.6,
+      "end": 1408.05,
+      "text": "Lambda tau is np."
+    },
+    {
+      "start": 1408.05,
+      "end": 1409.97,
+      "text": "Yeah."
+    },
+    {
+      "start": 1409.97,
+      "end": 1433.29,
+      "text": "So lambda tau is np."
+    },
+    {
+      "start": 1433.29,
+      "end": 1433.95,
+      "text": "All right."
+    },
+    {
+      "start": 1433.95,
+      "end": 1434.51,
+      "text": "So."
+    },
+    {
+      "start": 1434.51,
+      "end": 1435.01,
+      "text": "OK."
+    },
+    {
+      "start": 1435.01,
+      "end": 1439.33,
+      "text": "So we have this relation, lambda tau equals np."
+    },
+    {
+      "start": 1439.33,
+      "end": 1442.33,
+      "text": "These two numbers being equal kind of makes sense."
+    },
+    {
+      "start": 1442.33,
+      "end": 1444.97,
+      "text": "np is the expected number of successes"
+    },
+    {
+      "start": 1444.97,
+      "end": 1447.49,
+      "text": "you're going to get in the Bernoulli process."
+    },
+    {
+      "start": 1447.49,
+      "end": 1450.49,
+      "text": "Lambda tau, since lambda is the arrival rate"
+    },
+    {
+      "start": 1450.49,
+      "end": 1453.43,
+      "text": "and you have a total time of tau, lambda tau,"
+    },
+    {
+      "start": 1453.43,
+      "end": 1457.35,
+      "text": "you can think of it as the number of expected arrivals"
+    },
+    {
+      "start": 1457.35,
+      "end": 1459.77,
+      "text": "in the Bernoulli process."
+    },
+    {
+      "start": 1459.77,
+      "end": 1461.99,
+      "text": "We're doing a Bernoulli approximation"
+    },
+    {
+      "start": 1461.99,
+      "end": 1463.25,
+      "text": "to the Poisson process."
+    },
+    {
+      "start": 1463.25,
+      "end": 1464.97,
+      "text": "We take the formula for the Bernoulli."
+    },
+    {
+      "start": 1464.97,
+      "end": 1470.03,
+      "text": "And now take the limit as n goes to infinity."
+    },
+    {
+      "start": 1470.03,
+      "end": 1475.09,
+      "text": "Now, lambda tau over n is equal to P. So it's clear what"
+    },
+    {
+      "start": 1475.09,
+      "end": 1477.03,
+      "text": "this term is going to give us."
+    },
+    {
+      "start": 1477.03,
+      "end": 1488.79,
+      "text": "This is just P to the power k."
+    },
+    {
+      "start": 1488.79,
+      "end": 1493.19,
+      "text": "It will actually take a little more work than that."
+    },
+    {
+      "start": 1493.19,
+      "end": 1496.33,
+      "text": "Now, I'm not going to do the algebra,"
+    },
+    {
+      "start": 1496.33,
+      "end": 1501.23,
+      "text": "but I'm just telling you that one can take the limit in these,"
+    },
+    {
+      "start": 1501.23,
+      "end": 1502.11,
+      "text": "in this order."
+    },
+    {
+      "start": 1502.11,
+      "end": 1505.05,
+      "text": "So I'm going to take the formula here as n goes to infinity."
+    },
+    {
+      "start": 1505.05,
+      "end": 1508.71,
+      "text": "And that will give you another formula, the final formula"
+    },
+    {
+      "start": 1508.71,
+      "end": 1510.35,
+      "text": "for the Poisson PMF."
+    },
+    {
+      "start": 1510.35,
+      "end": 1512.07,
+      "text": "One thing to notice is that here you"
+    },
+    {
+      "start": 1512.07,
+      "end": 1517.49,
+      "text": "have something like 1 minus a constant over n to the power n."
+    },
+    {
+      "start": 1517.49,
+      "end": 1522.39,
+      "text": "And you may recall from calculus a formula of this kind"
+    },
+    {
+      "start": 1522.39,
+      "end": 1526.79,
+      "text": "that this converges to e to the minus c."
+    },
+    {
+      "start": 1526.79,
+      "end": 1528.87,
+      "text": "If you remember that formula from calculus,"
+    },
+    {
+      "start": 1528.87,
+      "end": 1532.07,
+      "text": "then you will expect that here in the limit, you"
+    },
+    {
+      "start": 1532.07,
+      "end": 1536.55,
+      "text": "are going to get something like an e to the minus lambda tau."
+    },
+    {
+      "start": 1536.55,
+      "end": 1539.21,
+      "text": "So indeed, we will get such a term."
+    },
+    {
+      "start": 1539.21,
+      "end": 1540.77,
+      "text": "There is some work that needs to be"
+    },
+    {
+      "start": 1540.77,
+      "end": 1543.93,
+      "text": "done to find the limit of this expression times"
+    },
+    {
+      "start": 1543.93,
+      "end": 1546.05,
+      "text": "that expression."
+    },
+    {
+      "start": 1546.05,
+      "end": 1547.55,
+      "text": "The algebra is not hard."
+    },
+    {
+      "start": 1547.55,
+      "end": 1548.69,
+      "text": "It's in the text."
+    },
+    {
+      "start": 1548.69,
+      "end": 1551.39,
+      "text": "Let's not spend more time doing this."
+    },
+    {
+      "start": 1551.39,
+      "end": 1553.79,
+      "text": "But let me just give you the formula of what"
+    },
+    {
+      "start": 1553.79,
+      "end": 1555.65,
+      "text": "comes at the end."
+    },
+    {
+      "start": 1555.65,
+      "end": 1559.75,
+      "text": "And the formula that comes at the end is of this form."
+    },
+    {
+      "start": 1559.75,
+      "end": 1561.91,
+      "text": "So what matters here is not so much the space."
+    },
+    {
+      "start": 1561.91,
+      "end": 1563.85,
+      "text": "It's the specific algebra that you"
+    },
+    {
+      "start": 1563.85,
+      "end": 1567.69,
+      "text": "will do to go from this formula to that one."
+    },
+    {
+      "start": 1567.69,
+      "end": 1569.39,
+      "text": "It's kind of straightforward."
+    },
+    {
+      "start": 1569.39,
+      "end": 1574.03,
+      "text": "What's important is the idea that the Poisson process,"
+    },
+    {
+      "start": 1574.03,
+      "end": 1578.77,
+      "text": "sort of by definition, can be approximated"
+    },
+    {
+      "start": 1578.77,
+      "end": 1583.87,
+      "text": "by a Bernoulli process in which we have a very large number"
+    },
+    {
+      "start": 1583.87,
+      "end": 1588.99,
+      "text": "of slots, n goes to infinity, whereas we"
+    },
+    {
+      "start": 1588.99,
+      "end": 1591.61,
+      "text": "have a very small probability of success."
+    },
+    {
+      "start": 1591.91,
+      "end": 1594.43,
+      "text": "During each time slot."
+    },
+    {
+      "start": 1594.43,
+      "end": 1599.17,
+      "text": "So large number of slots, but tiny probability of success"
+    },
+    {
+      "start": 1599.17,
+      "end": 1600.49,
+      "text": "during each slot."
+    },
+    {
+      "start": 1600.49,
+      "end": 1602.35,
+      "text": "And we take the limit as the slots"
+    },
+    {
+      "start": 1602.35,
+      "end": 1604.67,
+      "text": "become smaller and smaller."
+    },
+    {
+      "start": 1604.67,
+      "end": 1606.85,
+      "text": "So with this approximation, we end up"
+    },
+    {
+      "start": 1606.85,
+      "end": 1609.05,
+      "text": "with this particular formula."
+    },
+    {
+      "start": 1609.05,
+      "end": 1611.89,
+      "text": "And this is the so-called Poisson PMF."
+    },
+    {
+      "start": 1611.89,
+      "end": 1615.19,
+      "text": "Now this function p here has two arguments."
+    },
+    {
+      "start": 1615.19,
+      "end": 1617.11,
+      "text": "The important thing to realize is"
+    },
+    {
+      "start": 1617.11,
+      "end": 1621.91,
+      "text": "that when you think of this as a PMF, you fix t times."
+    },
+    {
+      "start": 1621.91,
+      "end": 1622.91,
+      "text": "Tau."
+    },
+    {
+      "start": 1622.91,
+      "end": 1626.01,
+      "text": "And for a fixed tau, now this is a PMF."
+    },
+    {
+      "start": 1626.01,
+      "end": 1631.25,
+      "text": "As I said before, the sum over k has to be equal to 1."
+    },
+    {
+      "start": 1631.25,
+      "end": 1635.51,
+      "text": "So for a given tau, these probabilities add up to 1."
+    },
+    {
+      "start": 1635.51,
+      "end": 1639.11,
+      "text": "The formula is moderately messy, but not too messy."
+    },
+    {
+      "start": 1639.11,
+      "end": 1644.53,
+      "text": "One can work with it without too much pain."
+    },
+    {
+      "start": 1644.53,
+      "end": 1648.47,
+      "text": "And what's the mean and variance of this PMF?"
+    },
+    {
+      "start": 1648.47,
+      "end": 1651.47,
+      "text": "Well, what's the expected number of arrivals?"
+    },
+    {
+      "start": 1651.47,
+      "end": 1654.77,
+      "text": "If you think of this Bernoulli analogy,"
+    },
+    {
+      "start": 1654.77,
+      "end": 1657.23,
+      "text": "we know that the expected number of arrivals"
+    },
+    {
+      "start": 1657.23,
+      "end": 1661.23,
+      "text": "in the Bernoulli process is n times p."
+    },
+    {
+      "start": 1661.23,
+      "end": 1665.17,
+      "text": "In the approximation that we're using in this procedure,"
+    },
+    {
+      "start": 1665.17,
+      "end": 1668.15,
+      "text": "n times p is the same as lambda tau."
+    },
+    {
+      "start": 1668.15,
+      "end": 1672.47,
+      "text": "And that's why we get lambda tau to be the expected number"
+    },
+    {
+      "start": 1672.47,
+      "end": 1673.47,
+      "text": "of arrivals."
+    },
+    {
+      "start": 1673.47,
+      "end": 1676.11,
+      "text": "Here I'm using t instead of tau."
+    },
+    {
+      "start": 1676.11,
+      "end": 1681.43,
+      "text": "The expected number of arrivals is lambda t."
+    },
+    {
+      "start": 1681.47,
+      "end": 1685.47,
+      "text": "So if you double the time, you expect to get"
+    },
+    {
+      "start": 1685.47,
+      "end": 1687.29,
+      "text": "twice as many arrivals."
+    },
+    {
+      "start": 1687.29,
+      "end": 1690.51,
+      "text": "If you double the arrival rate, you expect to get"
+    },
+    {
+      "start": 1690.51,
+      "end": 1692.75,
+      "text": "twice as many arrivals."
+    },
+    {
+      "start": 1692.75,
+      "end": 1695.29,
+      "text": "How about the formula for the variance?"
+    },
+    {
+      "start": 1695.29,
+      "end": 1702.71,
+      "text": "The variance of the Bernoulli process is np times 1 minus p."
+    },
+    {
+      "start": 1702.71,
+      "end": 1705.81,
+      "text": "What does this go to in the limit?"
+    },
+    {
+      "start": 1705.81,
+      "end": 1712.56,
+      "text": "In the limit that we're taking, as delta goes to 0, then p also"
+    },
+    {
+      "start": 1712.56,
+      "end": 1713.54,
+      "text": "goes to 0."
+    },
+    {
+      "start": 1713.54,
+      "end": 1717.28,
+      "text": "The probability of success in any given slot goes to 0."
+    },
+    {
+      "start": 1717.28,
+      "end": 1719.68,
+      "text": "So this term becomes insignificant."
+    },
+    {
+      "start": 1719.68,
+      "end": 1726.0,
+      "text": "So this becomes n times p, which is again lambda t, or"
+    },
+    {
+      "start": 1726.0,
+      "end": 1727.72,
+      "text": "lambda tau."
+    },
+    {
+      "start": 1727.72,
+      "end": 1730.98,
+      "text": "So the variance, instead of having this more complicated"
+    },
+    {
+      "start": 1730.98,
+      "end": 1734.5,
+      "text": "form of the variance in the Bernoulli process, here it gets"
+    },
+    {
+      "start": 1734.5,
+      "end": 1736.84,
+      "text": "simplified that it's lambda t."
+    },
+    {
+      "start": 1736.84,
+      "end": 1740.6,
+      "text": "So interestingly, the variance in the Poisson process is"
+    },
+    {
+      "start": 1740.6,
+      "end": 1742.56,
+      "text": "exactly the same as the expected value."
+    },
+    {
+      "start": 1742.56,
+      "end": 1745.86,
+      "text": "So you can look at this as just some"
+    },
+    {
+      "start": 1745.86,
+      "end": 1747.8,
+      "text": "interesting coincidence."
+    },
+    {
+      "start": 1747.8,
+      "end": 1750.26,
+      "text": "So now we're going to take this formula and"
+    },
+    {
+      "start": 1750.26,
+      "end": 1751.38,
+      "text": "see how to use it."
+    },
+    {
+      "start": 1751.38,
+      "end": 1754.06,
+      "text": "First, we're going to do a completely trivial,"
+    },
+    {
+      "start": 1754.06,
+      "end": 1756.58,
+      "text": "straightforward example."
+    },
+    {
+      "start": 1756.58,
+      "end": 1764.61,
+      "text": "So 15 years ago, when that example was made, email was"
+    },
+    {
+      "start": 1764.61,
+      "end": 1767.23,
+      "text": "coming at the rate of five messages per hour."
+    },
+    {
+      "start": 1767.23,
+      "end": 1769.99,
+      "text": "I wish that was the case today."
+    },
+    {
+      "start": 1769.99,
+      "end": 1772.33,
+      "text": "So and now."
+    },
+    {
+      "start": 1772.33,
+      "end": 1774.09,
+      "text": "Emails that are coming in."
+    },
+    {
+      "start": 1774.09,
+      "end": 1778.13,
+      "text": "Let's say during the day."
+    },
+    {
+      "start": 1778.13,
+      "end": 1781.59,
+      "text": "I mean, the arrival rates of emails are probably different"
+    },
+    {
+      "start": 1781.59,
+      "end": 1782.95,
+      "text": "in different times of the day."
+    },
+    {
+      "start": 1782.95,
+      "end": 1786.83,
+      "text": "But if you fix a time slot, let's say one to two in the"
+    },
+    {
+      "start": 1786.83,
+      "end": 1789.37,
+      "text": "afternoon, there's probably a constant rate."
+    },
+    {
+      "start": 1789.37,
+      "end": 1793.09,
+      "text": "And email arrivals are reasonably well modeled by a"
+    },
+    {
+      "start": 1793.09,
+      "end": 1794.77,
+      "text": "Poisson process."
+    },
+    {
+      "start": 1794.77,
+      "end": 1798.09,
+      "text": "Speaking of modeling, it's not just email arrivals."
+    },
+    {
+      "start": 1798.09,
+      "end": 1802.27,
+      "text": "Whenever arrivals happen in a completely random way without"
+    },
+    {
+      "start": 1802.27,
+      "end": 1803.87,
+      "text": "any additional structure, the"
+    },
+    {
+      "start": 1803.87,
+      "end": 1807.01,
+      "text": "Poisson process is a good model of these arrivals."
+    },
+    {
+      "start": 1807.01,
+      "end": 1809.81,
+      "text": "So the times at which car accidents will happen."
+    },
+    {
+      "start": 1809.81,
+      "end": 1812.11,
+      "text": "That's a Poisson process."
+    },
+    {
+      "start": 1812.11,
+      "end": 1818.93,
+      "text": "The times if you have a very, very weak light source that's"
+    },
+    {
+      "start": 1818.93,
+      "end": 1824.01,
+      "text": "shooting out photons just one at a time, the times at which"
+    },
+    {
+      "start": 1824.01,
+      "end": 1827.89,
+      "text": "these photons will go out is well modeled, again, by a"
+    },
+    {
+      "start": 1827.89,
+      "end": 1828.85,
+      "text": "Poisson process."
+    },
+    {
+      "start": 1828.85,
+      "end": 1830.55,
+      "text": "So it's completely random."
+    },
+    {
+      "start": 1830.55,
+      "end": 1833.61,
+      "text": "Or if you have a radioactive material, where the"
+    },
+    {
+      "start": 1833.61,
+      "end": 1843.88,
+      "text": "one atom at a time sort of changes at random times, so"
+    },
+    {
+      "start": 1843.88,
+      "end": 1847.16,
+      "text": "it's a very slow radioactive decay, the time at which these"
+    },
+    {
+      "start": 1847.16,
+      "end": 1850.42,
+      "text": "alpha particles or whatever will get emitted, again, is"
+    },
+    {
+      "start": 1850.42,
+      "end": 1853.18,
+      "text": "going to be described by a Poisson process."
+    },
+    {
+      "start": 1853.18,
+      "end": 1858.1,
+      "text": "So if you have arrivals or emissions that happen at sort"
+    },
+    {
+      "start": 1858.1,
+      "end": 1862.7,
+      "text": "of completely random times, and once in a while you get an"
+    },
+    {
+      "start": 1862.7,
+      "end": 1864.64,
+      "text": "arrival or an event."
+    },
+    {
+      "start": 1864.64,
+      "end": 1869.2,
+      "text": "Then the Poisson process is a very good model for these"
+    },
+    {
+      "start": 1869.2,
+      "end": 1870.08,
+      "text": "events."
+    },
+    {
+      "start": 1870.08,
+      "end": 1872.14,
+      "text": "So back to emails."
+    },
+    {
+      "start": 1872.14,
+      "end": 1876.36,
+      "text": "Get them at the rate of five messages per day, per hour."
+    },
+    {
+      "start": 1876.36,
+      "end": 1879.42,
+      "text": "In 30 minutes, this is half an hour."
+    },
+    {
+      "start": 1879.42,
+      "end": 1884.22,
+      "text": "So what we have is that lambda t, the total number of"
+    },
+    {
+      "start": 1884.22,
+      "end": 1889.04,
+      "text": "arrivals, is the expected number of arrivals is 5."
+    },
+    {
+      "start": 1889.04,
+      "end": 1890.0,
+      "text": "Lambda is 5."
+    },
+    {
+      "start": 1890.0,
+      "end": 1893.82,
+      "text": "t is 1 half if we talk in hours, about hours."
+    },
+    {
+      "start": 1893.82,
+      "end": 1894.48,
+      "text": "So lambda t is 1 half."
+    },
+    {
+      "start": 1894.48,
+      "end": 1894.6,
+      "text": "lambda t is 1 half."
+    },
+    {
+      "start": 1894.6,
+      "end": 1894.64,
+      "text": "lambda t is 1 half."
+    },
+    {
+      "start": 1894.64,
+      "end": 1896.48,
+      "text": "lambda t is 2 to the 0.5."
+    },
+    {
+      "start": 1896.48,
+      "end": 1901.24,
+      "text": "The probability of no new messages is the probability of"
+    },
+    {
+      "start": 1901.24,
+      "end": 1909.14,
+      "text": "0 in the time interval of length t, which in our case is"
+    },
+    {
+      "start": 1909.14,
+      "end": 1911.8,
+      "text": "1 half."
+    },
+    {
+      "start": 1911.8,
+      "end": 1914.68,
+      "text": "And then we look back into the formula from"
+    },
+    {
+      "start": 1914.68,
+      "end": 1916.36,
+      "text": "the previous slide."
+    },
+    {
+      "start": 1916.36,
+      "end": 1919.68,
+      "text": "And the probability of 0 arrivals is lambda t to the"
+    },
+    {
+      "start": 1919.68,
+      "end": 1923.94,
+      "text": "power 0, divided by 0 factorial, and then an e to"
+    },
+    {
+      "start": 1923.94,
+      "end": 1924.6,
+      "text": "the lambda t."
+    },
+    {
+      "start": 1924.6,
+      "end": 1927.86,
+      "text": "And you plug in the numbers that we have."
+    },
+    {
+      "start": 1927.86,
+      "end": 1930.36,
+      "text": "Lambda t to the 0 power is 1."
+    },
+    {
+      "start": 1930.36,
+      "end": 1932.04,
+      "text": "0 factorial is 1."
+    },
+    {
+      "start": 1932.04,
+      "end": 1935.52,
+      "text": "So we're left with e to the minus 2.5."
+    },
+    {
+      "start": 1935.52,
+      "end": 1938.88,
+      "text": "And that number is 0.08."
+    },
+    {
+      "start": 1938.88,
+      "end": 1942.1,
+      "text": "Similarly, you can ask for the probability that you get"
+    },
+    {
+      "start": 1942.1,
+      "end": 1944.9,
+      "text": "exactly one message in half an hour."
+    },
+    {
+      "start": 1944.9,
+      "end": 1948.68,
+      "text": "And that would be probability of one message in half an hour"
+    },
+    {
+      "start": 1948.68,
+      "end": 1952.6,
+      "text": "is going to be lambda t to the first power divided by 1"
+    },
+    {
+      "start": 1952.6,
+      "end": 1954.56,
+      "text": "factorial e to the minus 1.5."
+    },
+    {
+      "start": 1954.56,
+      "end": 1958.16,
+      "text": "And that's going to be lambda t to the minus lambda t."
+    },
+    {
+      "start": 1958.16,
+      "end": 1960.62,
+      "text": "Which is, as we now get the extra lambda t factor, is going"
+    },
+    {
+      "start": 1960.62,
+      "end": 1963.66,
+      "text": "to be 2.5 e to the minus 2.5."
+    },
+    {
+      "start": 1963.66,
+      "end": 1966.94,
+      "text": "And the numerical answer is 0.20."
+    },
+    {
+      "start": 1966.94,
+      "end": 1970.44,
+      "text": "So this is how you use the PMF formula for the Poisson"
+    },
+    {
+      "start": 1970.44,
+      "end": 1975.53,
+      "text": "distribution that we had in the previous slide."
+    },
+    {
+      "start": 1975.53,
+      "end": 1975.87,
+      "text": "All right."
+    },
+    {
+      "start": 1975.87,
+      "end": 1980.03,
+      "text": "So this was all about the distribution of"
+    },
+    {
+      "start": 1980.03,
+      "end": 1981.79,
+      "text": "the number of arrivals."
+    },
+    {
+      "start": 1981.79,
+      "end": 1983.39,
+      "text": "What else did we do last time?"
+    },
+    {
+      "start": 1983.39,
+      "end": 1985.91,
+      "text": "Last time, we also talked about the"
+    },
+    {
+      "start": 1985.91,
+      "end": 1986.03,
+      "text": "duration of the arrival."
+    },
+    {
+      "start": 1986.03,
+      "end": 1986.05,
+      "text": "So we talked about the duration of the arrival."
+    },
+    {
+      "start": 1986.05,
+      "end": 1986.07,
+      "text": "So we talked about the duration of the arrival."
+    },
+    {
+      "start": 1986.07,
+      "end": 1992.78,
+      "text": "The time it takes until the k-th arrival."
+    },
+    {
+      "start": 1992.78,
+      "end": 1996.0,
+      "text": "So let's try to figure out something about this"
+    },
+    {
+      "start": 1996.0,
+      "end": 1998.26,
+      "text": "particular distribution."
+    },
+    {
+      "start": 1998.26,
+      "end": 2001.18,
+      "text": "We can derive the distribution of the time of the k-th"
+    },
+    {
+      "start": 2001.18,
+      "end": 2007.36,
+      "text": "arrival by using the exact same argument as we did last time."
+    },
+    {
+      "start": 2007.36,
+      "end": 2011.62,
+      "text": "So now, the time of the k-th arrival is a"
+    },
+    {
+      "start": 2011.62,
+      "end": 2013.82,
+      "text": "continuous random variable."
+    },
+    {
+      "start": 2013.82,
+      "end": 2016.04,
+      "text": "So it has a PDF."
+    },
+    {
+      "start": 2016.04,
+      "end": 2018.06,
+      "text": "Since we are in continuous time, arrival"
+    },
+    {
+      "start": 2018.06,
+      "end": 2019.9,
+      "text": "intervals can happen at any time."
+    },
+    {
+      "start": 2019.9,
+      "end": 2023.74,
+      "text": "So yk is a continuous random variable."
+    },
+    {
+      "start": 2023.74,
+      "end": 2028.16,
+      "text": "So for the k, but now let's think of a time interval of"
+    },
+    {
+      "start": 2028.16,
+      "end": 2032.38,
+      "text": "length little delta."
+    },
+    {
+      "start": 2032.38,
+      "end": 2038.8,
+      "text": "And use our usual interpretation of PDFs."
+    },
+    {
+      "start": 2038.8,
+      "end": 2043.16,
+      "text": "The PDF of a random variable evaluated at a certain time"
+    },
+    {
+      "start": 2043.16,
+      "end": 2048.3,
+      "text": "times delta, this is the probability that yk falls in"
+    },
+    {
+      "start": 2048.3,
+      "end": 2050.06,
+      "text": "this little interval."
+    },
+    {
+      "start": 2050.06,
+      "end": 2056.6,
+      "text": "So as I've said before, this is the best way of thinking"
+    },
+    {
+      "start": 2056.6,
+      "end": 2058.2,
+      "text": "about PDFs."
+    },
+    {
+      "start": 2058.2,
+      "end": 2062.2,
+      "text": "PDFs give you probabilities of little intervals."
+    },
+    {
+      "start": 2062.2,
+      "end": 2065.54,
+      "text": "So now let's try to calculate this probability."
+    },
+    {
+      "start": 2065.54,
+      "end": 2070.08,
+      "text": "For the k-th arrival to happen inside this little interval,"
+    },
+    {
+      "start": 2070.08,
+      "end": 2071.54,
+      "text": "we need two things."
+    },
+    {
+      "start": 2071.54,
+      "end": 2076.12,
+      "text": "We need an arrival to happen in this interval, and we need k"
+    },
+    {
+      "start": 2076.12,
+      "end": 2081.52,
+      "text": "minus 1 arrivals to happen during that interval."
+    },
+    {
+      "start": 2081.52,
+      "end": 2083.02,
+      "text": "OK, you'll tell me, but it's"
+    },
+    {
+      "start": 2083.02,
+      "end": 2088.3,
+      "text": "possible that we might have the k minus 1 arrival to happen"
+    },
+    {
+      "start": 2088.3,
+      "end": 2091.22,
+      "text": "here, and the k-th arrival to happen here."
+    },
+    {
+      "start": 2091.22,
+      "end": 2093.02,
+      "text": "In principle, that's possible."
+    },
+    {
+      "start": 2093.02,
+      "end": 2096.14,
+      "text": "But in the limit, when we take delta very small, the"
+    },
+    {
+      "start": 2096.14,
+      "end": 2099.84,
+      "text": "probability of having two arrivals in the same little"
+    },
+    {
+      "start": 2099.84,
+      "end": 2101.84,
+      "text": "slot is negligible."
+    },
+    {
+      "start": 2101.84,
+      "end": 2107.7,
+      "text": "So assuming that two arrivals cannot happen in the same mini"
+    },
+    {
+      "start": 2107.7,
+      "end": 2111.78,
+      "text": "slot, then for the k-th one to happen here, we must have k"
+    },
+    {
+      "start": 2111.78,
+      "end": 2112.9,
+      "text": "minus 1."
+    },
+    {
+      "start": 2112.9,
+      "end": 2115.7,
+      "text": "During this interval."
+    },
+    {
+      "start": 2115.7,
+      "end": 2120.22,
+      "text": "Now, because we have assumed that these joint intervals are"
+    },
+    {
+      "start": 2120.22,
+      "end": 2123.9,
+      "text": "independent of each other, this breaks down into the"
+    },
+    {
+      "start": 2123.9,
+      "end": 2133.0,
+      "text": "probability that we have exactly k minus 1 arrivals"
+    },
+    {
+      "start": 2133.0,
+      "end": 2137.58,
+      "text": "during the interval from 0 to t, times the probability of"
+    },
+    {
+      "start": 2137.58,
+      "end": 2141.4,
+      "text": "exactly one arrival during that little interval, which is"
+    },
+    {
+      "start": 2141.4,
+      "end": 2142.66,
+      "text": "lambda delta."
+    },
+    {
+      "start": 2142.9,
+      "end": 2151.0,
+      "text": "We do have a formula for this from the previous slide, which"
+    },
+    {
+      "start": 2151.0,
+      "end": 2159.32,
+      "text": "is lambda t to the k minus 1 over k minus 1 factorial,"
+    },
+    {
+      "start": 2159.32,
+      "end": 2169.7,
+      "text": "times e to the minus lambda t, and then lambda times delta."
+    },
+    {
+      "start": 2169.7,
+      "end": 2184.99,
+      "text": "That is something."
+    },
+    {
+      "start": 2184.99,
+      "end": 2186.27,
+      "text": "OK."
+    },
+    {
+      "start": 2186.27,
+      "end": 2186.93,
+      "text": "All right."
+    },
+    {
+      "start": 2186.93,
+      "end": 2190.19,
+      "text": "And now you cancel this delta with that delta."
+    },
+    {
+      "start": 2190.19,
+      "end": 2196.77,
+      "text": "And that gives us a formula for the PDF of the time until"
+    },
+    {
+      "start": 2196.77,
+      "end": 2199.15,
+      "text": "the k-th arrival."
+    },
+    {
+      "start": 2199.15,
+      "end": 2203.25,
+      "text": "This PDF, of course, depends on the number k."
+    },
+    {
+      "start": 2203.25,
+      "end": 2207.53,
+      "text": "The first arrival is going to happen somewhere in this range"
+    },
+    {
+      "start": 2207.53,
+      "end": 2208.13,
+      "text": "of times."
+    },
+    {
+      "start": 2208.13,
+      "end": 2210.09,
+      "text": "This is the PDF that it has."
+    },
+    {
+      "start": 2210.09,
+      "end": 2213.15,
+      "text": "The second arrival, of course, is going to happen later."
+    },
+    {
+      "start": 2213.15,
+      "end": 2214.73,
+      "text": "And the PDF is this."
+    },
+    {
+      "start": 2214.73,
+      "end": 2216.27,
+      "text": "So it's more likely to happen."
+    },
+    {
+      "start": 2216.27,
+      "end": 2217.87,
+      "text": "around these times."
+    },
+    {
+      "start": 2217.87,
+      "end": 2221.39,
+      "text": "The third arrival has this PDF, so it's more likely to"
+    },
+    {
+      "start": 2221.39,
+      "end": 2223.65,
+      "text": "happen around those times."
+    },
+    {
+      "start": 2223.65,
+      "end": 2228.95,
+      "text": "And if you were to take k equal to 100, you might get a"
+    },
+    {
+      "start": 2228.95,
+      "end": 2232.71,
+      "text": "PDF that it's extremely unlikely that the k-th arrival"
+    },
+    {
+      "start": 2232.71,
+      "end": 2234.31,
+      "text": "happens in the beginning."
+    },
+    {
+      "start": 2234.31,
+      "end": 2239.01,
+      "text": "And it might happen somewhere down there, far into the"
+    },
+    {
+      "start": 2239.01,
+      "end": 2239.99,
+      "text": "future."
+    },
+    {
+      "start": 2239.99,
+      "end": 2242.23,
+      "text": "So depending on which particular arrival we're"
+    },
+    {
+      "start": 2242.23,
+      "end": 2244.89,
+      "text": "talking about, it has a different"
+    },
+    {
+      "start": 2244.89,
+      "end": 2245.89,
+      "text": "probability distribution."
+    },
+    {
+      "start": 2246.27,
+      "end": 2250.33,
+      "text": "The time of the 100th arrival, of course, is expected to be a"
+    },
+    {
+      "start": 2250.33,
+      "end": 2254.07,
+      "text": "lot larger than the time of the first arrival."
+    },
+    {
+      "start": 2254.07,
+      "end": 2258.51,
+      "text": "Incidentally, the time of the first arrival has a PDF whose"
+    },
+    {
+      "start": 2258.51,
+      "end": 2260.13,
+      "text": "form is quite simple."
+    },
+    {
+      "start": 2260.13,
+      "end": 2263.81,
+      "text": "If you let k equal to 1 here, this term disappears."
+    },
+    {
+      "start": 2263.81,
+      "end": 2266.27,
+      "text": "That term becomes a 1."
+    },
+    {
+      "start": 2266.27,
+      "end": 2269.85,
+      "text": "You're left with just lambda e to the minus lambda."
+    },
+    {
+      "start": 2269.85,
+      "end": 2271.09,
+      "text": "And you recognize it."
+    },
+    {
+      "start": 2271.09,
+      "end": 2273.17,
+      "text": "It's the exponential distribution."
+    },
+    {
+      "start": 2273.17,
+      "end": 2275.99,
+      "text": "So the time until the first arrival in a Poisson"
+    },
+    {
+      "start": 2275.99,
+      "end": 2280.13,
+      "text": "process is an exponential distribution."
+    },
+    {
+      "start": 2280.13,
+      "end": 2282.67,
+      "text": "What was the time of the first arrival in the Bernoulli"
+    },
+    {
+      "start": 2282.67,
+      "end": 2283.95,
+      "text": "process?"
+    },
+    {
+      "start": 2283.95,
+      "end": 2287.03,
+      "text": "It was a geometric distribution."
+    },
+    {
+      "start": 2287.03,
+      "end": 2291.15,
+      "text": "Well, not coincidentally, these two look quite a bit"
+    },
+    {
+      "start": 2291.15,
+      "end": 2293.01,
+      "text": "like the other."
+    },
+    {
+      "start": 2293.01,
+      "end": 2298.25,
+      "text": "A geometric distribution has this kind of shape."
+    },
+    {
+      "start": 2298.25,
+      "end": 2301.89,
+      "text": "The exponential distribution has that kind of shape."
+    },
+    {
+      "start": 2301.89,
+      "end": 2305.27,
+      "text": "The geometric is just a discrete version of"
+    },
+    {
+      "start": 2305.27,
+      "end": 2305.55,
+      "text": "the exponential."
+    },
+    {
+      "start": 2305.55,
+      "end": 2307.09,
+      "text": "exponential."
+    },
+    {
+      "start": 2307.09,
+      "end": 2309.83,
+      "text": "In the Bernoulli case, we're in discrete time."
+    },
+    {
+      "start": 2309.83,
+      "end": 2313.27,
+      "text": "We have a PMF for the time of the first arrival, which is"
+    },
+    {
+      "start": 2313.27,
+      "end": 2314.33,
+      "text": "geometric."
+    },
+    {
+      "start": 2314.33,
+      "end": 2318.51,
+      "text": "In the Poisson case, what we get is the limit of the"
+    },
+    {
+      "start": 2318.51,
+      "end": 2321.53,
+      "text": "geometric as you let those lines become closer and"
+    },
+    {
+      "start": 2321.53,
+      "end": 2326.45,
+      "text": "closer, which gives you the exponential distribution."
+    },
+    {
+      "start": 2326.45,
+      "end": 2330.41,
+      "text": "Now, the Poisson process shares all the memorylessness"
+    },
+    {
+      "start": 2330.41,
+      "end": 2332.85,
+      "text": "properties of the Bernoulli process."
+    },
+    {
+      "start": 2332.85,
+      "end": 2336.63,
+      "text": "And the way one can argue is just in terms of this picture."
+    },
+    {
+      "start": 2336.63,
+      "end": 2337.03,
+      "text": "Since the"
+    },
+    {
+      "start": 2337.03,
+      "end": 2341.53,
+      "text": "Poisson process is the limit of Bernoulli processes,"
+    },
+    {
+      "start": 2341.53,
+      "end": 2344.21,
+      "text": "whatever qualitative processes you have in the Bernoulli"
+    },
+    {
+      "start": 2344.21,
+      "end": 2348.53,
+      "text": "process, they remain valid for the Poisson process."
+    },
+    {
+      "start": 2348.53,
+      "end": 2351.49,
+      "text": "In particular, we have this memorylessness property."
+    },
+    {
+      "start": 2351.49,
+      "end": 2354.65,
+      "text": "You let the Poisson process run for some time,"
+    },
+    {
+      "start": 2354.65,
+      "end": 2356.63,
+      "text": "and then you start watching it."
+    },
+    {
+      "start": 2356.63,
+      "end": 2360.23,
+      "text": "Whatever happened in the past has no bearing about the future."
+    },
+    {
+      "start": 2360.23,
+      "end": 2363.65,
+      "text": "Starting from right now, what's going to happen in the future"
+    },
+    {
+      "start": 2363.65,
+      "end": 2366.69,
+      "text": "is described, again, by a Poisson process."
+    },
+    {
+      "start": 2366.69,
+      "end": 2369.75,
+      "text": "In the sense that during every little slot of length"
+    },
+    {
+      "start": 2369.75,
+      "end": 2372.45,
+      "text": "delta, there's going to be a probability of lambda delta of"
+    },
+    {
+      "start": 2372.45,
+      "end": 2373.79,
+      "text": "having an arrival."
+    },
+    {
+      "start": 2373.79,
+      "end": 2376.93,
+      "text": "And that probability lambda delta is the same, is always"
+    },
+    {
+      "start": 2376.93,
+      "end": 2379.57,
+      "text": "lambda delta, no matter what happened in"
+    },
+    {
+      "start": 2379.57,
+      "end": 2381.27,
+      "text": "the past of the process."
+    },
+    {
+      "start": 2381.27,
+      "end": 2387.19,
+      "text": "And in particular, we can use this argument to say that the"
+    },
+    {
+      "start": 2387.19,
+      "end": 2391.17,
+      "text": "time until the k-th arrival is the time that it takes for the"
+    },
+    {
+      "start": 2391.17,
+      "end": 2392.93,
+      "text": "first arrival to happen."
+    },
+    {
+      "start": 2392.93,
+      "end": 2396.39,
+      "text": "And then, OK, let me do it for k equal to 2."
+    },
+    {
+      "start": 2396.39,
+      "end": 2399.63,
+      "text": "And then, after the first arrival happens, you wait a"
+    },
+    {
+      "start": 2399.63,
+      "end": 2402.59,
+      "text": "certain amount of time until the second arrival happens."
+    },
+    {
+      "start": 2402.59,
+      "end": 2406.43,
+      "text": "Now, once the first arrival happened, that's in the past,"
+    },
+    {
+      "start": 2406.43,
+      "end": 2407.39,
+      "text": "you start watching."
+    },
+    {
+      "start": 2407.39,
+      "end": 2410.69,
+      "text": "From now on, you have many slots of length delta, each"
+    },
+    {
+      "start": 2410.69,
+      "end": 2413.05,
+      "text": "one having a probability of success lambda delta."
+    },
+    {
+      "start": 2413.05,
+      "end": 2416.25,
+      "text": "It's as if we started the Poisson process from scratch."
+    },
+    {
+      "start": 2416.25,
+      "end": 2419.97,
+      "text": "So starting from that time, the time until the next arrival is"
+    },
+    {
+      "start": 2419.97,
+      "end": 2422.75,
+      "text": "going to be, again, an exponential distribution,"
+    },
+    {
+      "start": 2422.75,
+      "end": 2426.01,
+      "text": "which doesn't care about what happened in the past, how long"
+    },
+    {
+      "start": 2426.01,
+      "end": 2426.39,
+      "text": "it took you."
+    },
+    {
+      "start": 2426.39,
+      "end": 2427.97,
+      "text": "For the first arrival."
+    },
+    {
+      "start": 2427.97,
+      "end": 2433.39,
+      "text": "So these two random variables are going to be independent"
+    },
+    {
+      "start": 2433.39,
+      "end": 2438.13,
+      "text": "and exponential with the same parameter lambda."
+    },
+    {
+      "start": 2438.13,
+      "end": 2442.57,
+      "text": "So among other things, what we have done here is we have"
+    },
+    {
+      "start": 2442.57,
+      "end": 2448.11,
+      "text": "essentially derived the PDF of the sum of k independent"
+    },
+    {
+      "start": 2448.11,
+      "end": 2449.33,
+      "text": "exponentials."
+    },
+    {
+      "start": 2449.33,
+      "end": 2454.97,
+      "text": "The time of the k-th arrival is the sum of k inter-arrival"
+    },
+    {
+      "start": 2454.97,
+      "end": 2456.21,
+      "text": "times."
+    },
+    {
+      "start": 2456.21,
+      "end": 2459.37,
+      "text": "The inter-arrival times are all independent of each other"
+    },
+    {
+      "start": 2459.37,
+      "end": 2461.49,
+      "text": "because of memorylessness."
+    },
+    {
+      "start": 2461.49,
+      "end": 2467.14,
+      "text": "And they all have the same exponential distribution."
+    },
+    {
+      "start": 2467.14,
+      "end": 2470.22,
+      "text": "And by the way, this gives you a way to simulate the Poisson"
+    },
+    {
+      "start": 2470.22,
+      "end": 2471.1,
+      "text": "process."
+    },
+    {
+      "start": 2471.1,
+      "end": 2474.6,
+      "text": "If you wanted to simulate it on your computer, you would have"
+    },
+    {
+      "start": 2474.6,
+      "end": 2480.14,
+      "text": "one option is to break time into tiny, tiny slots."
+    },
+    {
+      "start": 2480.14,
+      "end": 2484.0,
+      "text": "And for every tiny slot, use your random number generator"
+    },
+    {
+      "start": 2484.0,
+      "end": 2487.66,
+      "text": "to decide whether there was an arrival or not. To get the time"
+    },
+    {
+      "start": 2487.66,
+      "end": 2491.12,
+      "text": "to get it very accurate, you would have to use tiny, tiny"
+    },
+    {
+      "start": 2491.12,
+      "end": 2495.28,
+      "text": "slots, so that would be a lot of computation."
+    },
+    {
+      "start": 2495.28,
+      "end": 2498.52,
+      "text": "The more clever way of simulating the Poisson process"
+    },
+    {
+      "start": 2498.52,
+      "end": 2502.34,
+      "text": "is you use your random number generator to generate a sample"
+    },
+    {
+      "start": 2502.34,
+      "end": 2505.3,
+      "text": "from an exponential distribution and call that"
+    },
+    {
+      "start": 2505.3,
+      "end": 2507.24,
+      "text": "your first arrival time."
+    },
+    {
+      "start": 2507.24,
+      "end": 2510.04,
+      "text": "Then go back to your random number generator, generate"
+    },
+    {
+      "start": 2510.04,
+      "end": 2513.04,
+      "text": "another sample, independent sample, again from the same"
+    },
+    {
+      "start": 2513.04,
+      "end": 2517.06,
+      "text": "exponential distribution, that's the time between the"
+    },
+    {
+      "start": 2517.06,
+      "end": 2517.42,
+      "text": "first."
+    },
+    {
+      "start": 2517.42,
+      "end": 2521.38,
+      "text": "And the second arrival, and you keep going that way."
+    },
+    {
+      "start": 2521.38,
+      "end": 2524.94,
+      "text": "So as a sort of quick summary, this is the big picture."
+    },
+    {
+      "start": 2524.94,
+      "end": 2528.42,
+      "text": "This table doesn't tell you anything new."
+    },
+    {
+      "start": 2528.42,
+      "end": 2532.24,
+      "text": "But it's good to have it as a reference and to look at it"
+    },
+    {
+      "start": 2532.24,
+      "end": 2534.74,
+      "text": "and to make sure you understand what all the"
+    },
+    {
+      "start": 2534.74,
+      "end": 2536.3,
+      "text": "different boxes are."
+    },
+    {
+      "start": 2536.3,
+      "end": 2538.58,
+      "text": "Basically, the Bernoulli process runs in discrete"
+    },
+    {
+      "start": 2538.58,
+      "end": 2540.98,
+      "text": "time, the Poisson process runs in continuous time."
+    },
+    {
+      "start": 2540.98,
+      "end": 2545.14,
+      "text": "There's an analogy of arrival rates, p per trial, or"
+    },
+    {
+      "start": 2545.14,
+      "end": 2547.3,
+      "text": "intensity per unit time."
+    },
+    {
+      "start": 2547.3,
+      "end": 2552.18,
+      "text": "We did derive or sketch the derivation for the PMF of the"
+    },
+    {
+      "start": 2552.18,
+      "end": 2553.62,
+      "text": "number of arrivals."
+    },
+    {
+      "start": 2553.62,
+      "end": 2557.82,
+      "text": "And the Poisson distribution, which is the distribution that"
+    },
+    {
+      "start": 2557.82,
+      "end": 2562.48,
+      "text": "we get, this pk of t, of pk and t, is the limit of the"
+    },
+    {
+      "start": 2562.48,
+      "end": 2567.12,
+      "text": "binomial when we take the limit in this particular way,"
+    },
+    {
+      "start": 2567.12,
+      "end": 2571.24,
+      "text": "as delta goes to zero and n goes to infinity."
+    },
+    {
+      "start": 2571.24,
+      "end": 2574.28,
+      "text": "The geometry becomes an exponential in the limit."
+    },
+    {
+      "start": 2574.28,
+      "end": 2577.3,
+      "text": "And the distribution of the time of the kth arrival, we had"
+    },
+    {
+      "start": 2577.3,
+      "end": 2581.06,
+      "text": "the closed-form formula last time for the Bernoulli process."
+    },
+    {
+      "start": 2581.06,
+      "end": 2584.7,
+      "text": "We got the closed-form formula this time for the Poisson"
+    },
+    {
+      "start": 2584.7,
+      "end": 2585.24,
+      "text": "process."
+    },
+    {
+      "start": 2585.24,
+      "end": 2588.92,
+      "text": "And we actually used exactly the same arguments to get these"
+    },
+    {
+      "start": 2588.92,
+      "end": 2592.3,
+      "text": "two closed-form formulas."
+    },
+    {
+      "start": 2592.3,
+      "end": 2597.08,
+      "text": "All right, so now let's talk about adding or merging Poisson"
+    },
+    {
+      "start": 2597.08,
+      "end": 2598.54,
+      "text": "processes."
+    },
+    {
+      "start": 2598.54,
+      "end": 2601.06,
+      "text": "And there's two statements that we can make here."
+    },
+    {
+      "start": 2601.06,
+      "end": 2605.98,
+      "text": "One has to do with adding Poisson random variables, just"
+    },
+    {
+      "start": 2605.98,
+      "end": 2606.82,
+      "text": "random variables."
+    },
+    {
+      "start": 2606.82,
+      "end": 2610.76,
+      "text": "There's another statement about adding Poisson processes."
+    },
+    {
+      "start": 2610.76,
+      "end": 2613.86,
+      "text": "And the second is sort of a bigger statement than the"
+    },
+    {
+      "start": 2613.86,
+      "end": 2619.14,
+      "text": "first, but as a warm-up, let's work with the first statement."
+    },
+    {
+      "start": 2619.14,
+      "end": 2622.48,
+      "text": "So the claim is that the sum of independent Poisson random"
+    },
+    {
+      "start": 2622.48,
+      "end": 2625.32,
+      "text": "variables is Poisson."
+    },
+    {
+      "start": 2625.32,
+      "end": 2630.46,
+      "text": "OK, so suppose that we have a Poisson process with rate,"
+    },
+    {
+      "start": 2630.46,
+      "end": 2633.18,
+      "text": "just for simplicity, lambda 1."
+    },
+    {
+      "start": 2633.18,
+      "end": 2636.26,
+      "text": "And I take the interval from 0 to 2."
+    },
+    {
+      "start": 2636.26,
+      "end": 2640.66,
+      "text": "And I take, then, the interval from 2 until 5."
+    },
+    {
+      "start": 2640.66,
+      "end": 2644.88,
+      "text": "The number of arrivals during this interval, let's call it n"
+    },
+    {
+      "start": 2644.88,
+      "end": 2653.92,
+      "text": "from 0 to 2, is going to be a Poisson random variable with"
+    },
+    {
+      "start": 2653.92,
+      "end": 2658.24,
+      "text": "parameter or with mean 2."
+    },
+    {
+      "start": 2658.24,
+      "end": 2664.58,
+      "text": "The number of arrivals during this interval is n from time 2"
+    },
+    {
+      "start": 2664.58,
+      "end": 2666.58,
+      "text": "until 5."
+    },
+    {
+      "start": 2666.58,
+      "end": 2668.28,
+      "text": "This is, again, a Poisson"
+    },
+    {
+      "start": 2668.3,
+      "end": 2672.54,
+      "text": "random variable with mean equal to 3, because the"
+    },
+    {
+      "start": 2672.54,
+      "end": 2674.76,
+      "text": "arrival rate is 1 and the duration of the"
+    },
+    {
+      "start": 2674.76,
+      "end": 2677.0,
+      "text": "interval is 3."
+    },
+    {
+      "start": 2677.0,
+      "end": 2681.32,
+      "text": "These two random variables are independent."
+    },
+    {
+      "start": 2681.32,
+      "end": 2684.66,
+      "text": "They obey the Poisson distribution that we derived"
+    },
+    {
+      "start": 2684.66,
+      "end": 2685.64,
+      "text": "before."
+    },
+    {
+      "start": 2685.64,
+      "end": 2690.9,
+      "text": "If you add them, what you get is the number of arrivals"
+    },
+    {
+      "start": 2690.9,
+      "end": 2693.84,
+      "text": "during the interval from 0 to 5."
+    },
+    {
+      "start": 2693.84,
+      "end": 2696.28,
+      "text": "Now, what kind of distribution does this"
+    },
+    {
+      "start": 2696.28,
+      "end": 2697.92,
+      "text": "random variable have?"
+    },
+    {
+      "start": 2697.92,
+      "end": 2700.76,
+      "text": "Well, this is the number of arrivals over an interval of a"
+    },
+    {
+      "start": 2700.76,
+      "end": 2703.6,
+      "text": "certain length in a Poisson process."
+    },
+    {
+      "start": 2703.6,
+      "end": 2713.45,
+      "text": "Therefore, this is also Poisson with mean 5."
+    },
+    {
+      "start": 2713.45,
+      "end": 2719.03,
+      "text": "So just because for the Poisson process we know that this"
+    },
+    {
+      "start": 2719.03,
+      "end": 2723.29,
+      "text": "number of arrivals is Poisson, this is Poisson, but also the"
+    },
+    {
+      "start": 2723.29,
+      "end": 2727.67,
+      "text": "number of overall arrivals is also Poisson, this establishes"
+    },
+    {
+      "start": 2727.67,
+      "end": 2731.49,
+      "text": "that the sum of a Poisson plus a Poisson random variable gives"
+    },
+    {
+      "start": 2731.49,
+      "end": 2733.69,
+      "text": "us another Poisson random variable."
+    },
+    {
+      "start": 2733.69,
+      "end": 2737.13,
+      "text": "So adding Poisson random variables gives us a Poisson"
+    },
+    {
+      "start": 2737.13,
+      "end": 2738.81,
+      "text": "random variable."
+    },
+    {
+      "start": 2738.81,
+      "end": 2742.65,
+      "text": "But now I'm going to make a more general statement that"
+    },
+    {
+      "start": 2742.65,
+      "end": 2746.09,
+      "text": "it's not just number of arrivals during a fixed time"
+    },
+    {
+      "start": 2746.09,
+      "end": 2752.91,
+      "text": "interval, it's not just numbers of arrivals for given"
+    },
+    {
+      "start": 2752.91,
+      "end": 2754.29,
+      "text": "time intervals."
+    },
+    {
+      "start": 2754.29,
+      "end": 2757.79,
+      "text": "But rather, if you take two different Poisson processes"
+    },
+    {
+      "start": 2757.79,
+      "end": 2761.13,
+      "text": "and add them up, the process itself is Poisson."
+    },
+    {
+      "start": 2761.49,
+      "end": 2765.31,
+      "text": "In the sense that this process is going to satisfy all the"
+    },
+    {
+      "start": 2765.31,
+      "end": 2767.53,
+      "text": "assumptions of a Poisson process."
+    },
+    {
+      "start": 2767.53,
+      "end": 2771.09,
+      "text": "So the story is that you have a red bulb that flashes at"
+    },
+    {
+      "start": 2771.09,
+      "end": 2773.35,
+      "text": "random times at the rate of lambda 1."
+    },
+    {
+      "start": 2773.35,
+      "end": 2774.99,
+      "text": "It's a Poisson process."
+    },
+    {
+      "start": 2774.99,
+      "end": 2779.25,
+      "text": "You have an independent process where a green bulb"
+    },
+    {
+      "start": 2779.25,
+      "end": 2781.25,
+      "text": "flashes at random times."
+    },
+    {
+      "start": 2781.25,
+      "end": 2784.81,
+      "text": "And you happen to be color blind, so you just see when"
+    },
+    {
+      "start": 2784.81,
+      "end": 2786.65,
+      "text": "something is flashing."
+    },
+    {
+      "start": 2786.65,
+      "end": 2789.97,
+      "text": "So these two are assumed to be independent Poisson processes."
+    },
+    {
+      "start": 2789.97,
+      "end": 2790.77,
+      "text": "What can we say?"
+    },
+    {
+      "start": 2790.77,
+      "end": 2791.13,
+      "text": "."
+    },
+    {
+      "start": 2791.13,
+      "end": 2795.07,
+      "text": "About the process that you observe."
+    },
+    {
+      "start": 2795.07,
+      "end": 2800.21,
+      "text": "So in the process that you observe, if you take a typical"
+    },
+    {
+      "start": 2800.21,
+      "end": 2805.19,
+      "text": "time interval of length little delta, what can happen during"
+    },
+    {
+      "start": 2805.19,
+      "end": 2808.35,
+      "text": "that little time interval?"
+    },
+    {
+      "start": 2808.35,
+      "end": 2815.29,
+      "text": "The red process may have something flashing."
+    },
+    {
+      "start": 2815.29,
+      "end": 2819.84,
+      "text": "So red flashes."
+    },
+    {
+      "start": 2819.84,
+      "end": 2821.94,
+      "text": "Or the red does not."
+    },
+    {
+      "start": 2821.94,
+      "end": 2832.17,
+      "text": "And for the other bulb, the green bulb, there's two"
+    },
+    {
+      "start": 2832.17,
+      "end": 2833.01,
+      "text": "possibilities."
+    },
+    {
+      "start": 2833.01,
+      "end": 2837.91,
+      "text": "The green one flashes."
+    },
+    {
+      "start": 2837.91,
+      "end": 2844.99,
+      "text": "And the other possibility is that the green does not."
+    },
+    {
+      "start": 2844.99,
+      "end": 2848.19,
+      "text": "OK, so there's four possibilities about what can"
+    },
+    {
+      "start": 2848.19,
+      "end": 2851.17,
+      "text": "happen during a little slot."
+    },
+    {
+      "start": 2851.17,
+      "end": 2856.09,
+      "text": "The probability that the red one flashes and the green one"
+    },
+    {
+      "start": 2856.09,
+      "end": 2858.31,
+      "text": "flashes, what is this probability?"
+    },
+    {
+      "start": 2859.11,
+      "end": 2862.91,
+      "text": "It's lambda 1 delta that the first one flashes."
+    },
+    {
+      "start": 2862.91,
+      "end": 2867.27,
+      "text": "And lambda 2 delta that the second one does."
+    },
+    {
+      "start": 2867.27,
+      "end": 2870.31,
+      "text": "I'm multiplying probabilities here because I'm making the"
+    },
+    {
+      "start": 2870.31,
+      "end": 2875.3,
+      "text": "assumption that the two processes are independent."
+    },
+    {
+      "start": 2875.3,
+      "end": 2880.74,
+      "text": "OK, now the probability that the red one flashes is lambda"
+    },
+    {
+      "start": 2880.74,
+      "end": 2881.3,
+      "text": "1 delta."
+    },
+    {
+      "start": 2881.3,
+      "end": 2882.94,
+      "text": "But the green one doesn't."
+    },
+    {
+      "start": 2882.94,
+      "end": 2888.0,
+      "text": "It's 1 minus lambda 2 delta."
+    },
+    {
+      "start": 2888.0,
+      "end": 2890.34,
+      "text": "Here the probability that would be that the red"
+    },
+    {
+      "start": 2890.34,
+      "end": 2894.84,
+      "text": "one does not, times the probability that the green one"
+    },
+    {
+      "start": 2894.84,
+      "end": 2899.76,
+      "text": "does, and then here we have the probability that none of"
+    },
+    {
+      "start": 2899.76,
+      "end": 2907.48,
+      "text": "them flash, which is, I guess, whatever is left, but it's 1"
+    },
+    {
+      "start": 2907.48,
+      "end": 2913.14,
+      "text": "minus lambda 1 delta times 1 minus lambda 2 delta."
+    },
+    {
+      "start": 2913.14,
+      "end": 2916.92,
+      "text": "Now we're thinking about deltas small."
+    },
+    {
+      "start": 2916.92,
+      "end": 2923.68,
+      "text": "So think of the case where delta goes to 0, but in a way"
+    },
+    {
+      "start": 2923.68,
+      "end": 2929.74,
+      "text": "that's where we keep the first-order terms."
+    },
+    {
+      "start": 2929.74,
+      "end": 2933.6,
+      "text": "We keep the delta terms, but we throw away the"
+    },
+    {
+      "start": 2933.6,
+      "end": 2935.0,
+      "text": "delta-squared terms."
+    },
+    {
+      "start": 2935.0,
+      "end": 2938.14,
+      "text": "Delta-squared terms are much smaller than the delta terms"
+    },
+    {
+      "start": 2938.14,
+      "end": 2940.24,
+      "text": "when delta becomes small."
+    },
+    {
+      "start": 2940.24,
+      "end": 2945.64,
+      "text": "If we do that, if we only keep the order of delta terms,"
+    },
+    {
+      "start": 2945.64,
+      "end": 2946.44,
+      "text": "this term"
+    },
+    {
+      "start": 2946.44,
+      "end": 2946.9,
+      "text": "effectively"
+    },
+    {
+      "start": 2946.9,
+      "end": 2947.9,
+      "text": "disappears."
+    },
+    {
+      "start": 2947.9,
+      "end": 2951.54,
+      "text": "This is delta-squared, so we make it 0."
+    },
+    {
+      "start": 2951.54,
+      "end": 2954.36,
+      "text": "So the probability of having simultaneously a red and a"
+    },
+    {
+      "start": 2954.36,
+      "end": 2957.96,
+      "text": "green flash during a little interval is negligible."
+    },
+    {
+      "start": 2957.96,
+      "end": 2960.28,
+      "text": "What do we get here?"
+    },
+    {
+      "start": 2960.28,
+      "end": 2964.86,
+      "text": "Lambda delta times 1 survives, but this times that doesn't,"
+    },
+    {
+      "start": 2964.86,
+      "end": 2968.74,
+      "text": "so we can throw that away."
+    },
+    {
+      "start": 2968.74,
+      "end": 2972.2,
+      "text": "So the approximation that we get is lambda 1 delta."
+    },
+    {
+      "start": 2972.2,
+      "end": 2974.02,
+      "text": "Similarly here, this goes away."
+    },
+    {
+      "start": 2974.02,
+      "end": 2976.42,
+      "text": "We're left with a lambda 2 delta."
+    },
+    {
+      "start": 2976.42,
+      "end": 2982.14,
+      "text": "And this remains whatever is left."
+    },
+    {
+      "start": 2982.14,
+      "end": 2984.98,
+      "text": "So what do we have?"
+    },
+    {
+      "start": 2984.98,
+      "end": 2991.36,
+      "text": "That there is a probability of seeing a flash, either a red"
+    },
+    {
+      "start": 2991.36,
+      "end": 2997.0,
+      "text": "or a green, which is lambda 1 delta plus lambda 2 delta."
+    },
+    {
+      "start": 2997.0,
+      "end": 3002.0,
+      "text": "So if we take a little interval of length delta here, it's"
+    },
+    {
+      "start": 3002.0,
+      "end": 3004.42,
+      "text": "going to have, it's going to see an arrival."
+    },
+    {
+      "start": 3004.42,
+      "end": 3005.42,
+      "text": "It's going to see an arrival."
+    },
+    {
+      "start": 3005.42,
+      "end": 3007.29,
+      "text": "It's going to see an arrival."
+    },
+    {
+      "start": 3007.29,
+      "end": 3012.79,
+      "text": "with probability, which is approximately lambda 1 plus"
+    },
+    {
+      "start": 3012.79,
+      "end": 3014.73,
+      "text": "lambda 2 delta."
+    },
+    {
+      "start": 3014.73,
+      "end": 3020.91,
+      "text": "So every slot in this merged process has an arrival"
+    },
+    {
+      "start": 3020.91,
+      "end": 3025.75,
+      "text": "probability with a rate, which is the sum of the rates of"
+    },
+    {
+      "start": 3025.75,
+      "end": 3027.57,
+      "text": "these two processes."
+    },
+    {
+      "start": 3027.57,
+      "end": 3029.73,
+      "text": "So this is one part of the definition of"
+    },
+    {
+      "start": 3029.73,
+      "end": 3032.05,
+      "text": "the Poisson process."
+    },
+    {
+      "start": 3032.05,
+      "end": 3034.81,
+      "text": "There's a few more things that one would need to verify,"
+    },
+    {
+      "start": 3034.81,
+      "end": 3037.99,
+      "text": "namely that intervals of the same length have the same"
+    },
+    {
+      "start": 3037.99,
+      "end": 3040.99,
+      "text": "probability distribution, and that different slots are"
+    },
+    {
+      "start": 3040.99,
+      "end": 3042.71,
+      "text": "independent of each other."
+    },
+    {
+      "start": 3042.71,
+      "end": 3050.79,
+      "text": "This can be argued by starting from here, because different"
+    },
+    {
+      "start": 3050.79,
+      "end": 3053.63,
+      "text": "intervals in this process are independent from each other."
+    },
+    {
+      "start": 3053.63,
+      "end": 3056.93,
+      "text": "Different intervals here are independent from each other."
+    },
+    {
+      "start": 3056.93,
+      "end": 3059.87,
+      "text": "It's not hard to argue that different intervals in the"
+    },
+    {
+      "start": 3059.87,
+      "end": 3063.57,
+      "text": "merged process will also be independent of each other."
+    },
+    {
+      "start": 3063.57,
+      "end": 3064.71,
+      "text": "So the conclusion"
+    },
+    {
+      "start": 3064.71,
+      "end": 3068.19,
+      "text": "that comes at the end is that this process is a Poisson"
+    },
+    {
+      "start": 3068.19,
+      "end": 3071.23,
+      "text": "process with a total rate which is equal to the sum of"
+    },
+    {
+      "start": 3071.23,
+      "end": 3073.21,
+      "text": "the rates of the two processes."
+    },
+    {
+      "start": 3073.21,
+      "end": 3077.03,
+      "text": "And now, if I tell you that an arrival happened in the merged"
+    },
+    {
+      "start": 3077.03,
+      "end": 3080.71,
+      "text": "process at a certain time, how likely is it that it"
+    },
+    {
+      "start": 3080.71,
+      "end": 3083.47,
+      "text": "came from here?"
+    },
+    {
+      "start": 3083.47,
+      "end": 3084.95,
+      "text": "How likely is it?"
+    },
+    {
+      "start": 3084.95,
+      "end": 3086.83,
+      "text": "We go to this picture."
+    },
+    {
+      "start": 3086.83,
+      "end": 3094.09,
+      "text": "Given that an arrival occurred, which is the event that this or"
+    },
+    {
+      "start": 3094.09,
+      "end": 3098.53,
+      "text": "that happened, what is the probability that it came from"
+    },
+    {
+      "start": 3098.53,
+      "end": 3102.13,
+      "text": "the first process, the red one?"
+    },
+    {
+      "start": 3102.13,
+      "end": 3105.77,
+      "text": "Well, it's the probability of this divided by the probability"
+    },
+    {
+      "start": 3105.77,
+      "end": 3108.03,
+      "text": "of this times that."
+    },
+    {
+      "start": 3108.03,
+      "end": 3112.73,
+      "text": "Given that this event occurred, you want to find the"
+    },
+    {
+      "start": 3112.73,
+      "end": 3116.57,
+      "text": "conditional probability of that sub-event."
+    },
+    {
+      "start": 3116.57,
+      "end": 3118.97,
+      "text": "So we're asking the question, out of the total probability"
+    },
+    {
+      "start": 3118.97,
+      "end": 3121.89,
+      "text": "of these two, what fraction of that probability is assigned"
+    },
+    {
+      "start": 3121.89,
+      "end": 3122.81,
+      "text": "here?"
+    },
+    {
+      "start": 3122.81,
+      "end": 3123.89,
+      "text": "And this is lambda 1.2."
+    },
+    {
+      "start": 3123.89,
+      "end": 3124.09,
+      "text": "OK."
+    },
+    {
+      "start": 3124.09,
+      "end": 3127.07,
+      "text": "Delta, after we ignore the other terms."
+    },
+    {
+      "start": 3127.07,
+      "end": 3129.09,
+      "text": "This is lambda 2 delta."
+    },
+    {
+      "start": 3129.09,
+      "end": 3134.31,
+      "text": "So that fraction is going to be lambda 1 over"
+    },
+    {
+      "start": 3134.31,
+      "end": 3136.77,
+      "text": "lambda 1 plus lambda 2."
+    },
+    {
+      "start": 3136.77,
+      "end": 3137.57,
+      "text": "What does this tell you?"
+    },
+    {
+      "start": 3137.57,
+      "end": 3141.75,
+      "text": "If lambda 1 and lambda 2 are equal, given that I saw an"
+    },
+    {
+      "start": 3141.75,
+      "end": 3145.59,
+      "text": "arrival here, it's equally likely to be red or green."
+    },
+    {
+      "start": 3145.59,
+      "end": 3149.69,
+      "text": "But if the reds have a much higher arrival rate, when I"
+    },
+    {
+      "start": 3149.69,
+      "end": 3152.69,
+      "text": "see an arrival here, it's more likely this"
+    },
+    {
+      "start": 3152.69,
+      "end": 3154.09,
+      "text": "number will be large."
+    },
+    {
+      "start": 3154.09,
+      "end": 3158.41,
+      "text": "So it's more likely to have come from the red process."
+    },
+    {
+      "start": 3158.41,
+      "end": 3158.69,
+      "text": "OK."
+    },
+    {
+      "start": 3158.69,
+      "end": 3160.85,
+      "text": "So we'll continue with this story and do some"
+    },
+    {
+      "start": 3160.85,
+      "end": 3162.27,
+      "text": "applications next time."
+    }
+  ]
+}

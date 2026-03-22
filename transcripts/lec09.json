@@ -1,0 +1,4837 @@
+{
+  "lecture": "lec09",
+  "language": "en",
+  "duration": 3050.0906875,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.44,
+      "text": "The following content is provided under a Creative"
+    },
+    {
+      "start": 2.44,
+      "end": 3.96,
+      "text": "Commons license."
+    },
+    {
+      "start": 3.96,
+      "end": 6.28,
+      "text": "Your support will help MIT OpenCourseWare"
+    },
+    {
+      "start": 6.28,
+      "end": 10.64,
+      "text": "continue to offer high quality educational resources for free."
+    },
+    {
+      "start": 10.64,
+      "end": 13.26,
+      "text": "To make a donation or view additional materials"
+    },
+    {
+      "start": 13.26,
+      "end": 17.2,
+      "text": "from hundreds of MIT courses, visit MIT OpenCourseWare"
+    },
+    {
+      "start": 17.2,
+      "end": 23.0,
+      "text": "at ocw.mit.edu."
+    },
+    {
+      "start": 23.0,
+      "end": 25.04,
+      "text": "OK, let's start."
+    },
+    {
+      "start": 25.04,
+      "end": 27.24,
+      "text": "So we've had the quiz, and I guess there's"
+    },
+    {
+      "start": 27.24,
+      "end": 29.76,
+      "text": "both good and bad news in it."
+    },
+    {
+      "start": 29.76,
+      "end": 31.56,
+      "text": "Yes, you know the bad news."
+    },
+    {
+      "start": 31.56,
+      "end": 36.22,
+      "text": "The average was a little lower than what we would have wanted."
+    },
+    {
+      "start": 36.22,
+      "end": 39.56,
+      "text": "On the other hand, the good news is that the distribution"
+    },
+    {
+      "start": 39.56,
+      "end": 41.74,
+      "text": "was nicely spread."
+    },
+    {
+      "start": 41.74,
+      "end": 44.72,
+      "text": "And that's the main purpose of this quiz, is basically for"
+    },
+    {
+      "start": 44.72,
+      "end": 48.38,
+      "text": "you to calibrate and see roughly where you are standing."
+    },
+    {
+      "start": 48.38,
+      "end": 50.6,
+      "text": "The other piece of the good news is that, as you know,"
+    },
+    {
+      "start": 50.6,
+      "end": 53.56,
+      "text": "this quiz doesn't count for very much in your final grade."
+    },
+    {
+      "start": 53.56,
+      "end": 58.18,
+      "text": "So it's really a matter of calibration and to get your"
+    },
+    {
+      "start": 58.18,
+      "end": 61.56,
+      "text": "mindset appropriately to prepare for the second"
+    },
+    {
+      "start": 61.56,
+      "end": 66.34,
+      "text": "quiz, which counts a lot more, and it's more substantial."
+    },
+    {
+      "start": 66.34,
+      "end": 68.76,
+      "text": "And we'll make sure that the second quiz will"
+    },
+    {
+      "start": 68.76,
+      "end": 72.06,
+      "text": "have a higher average."
+    },
+    {
+      "start": 72.06,
+      "end": 75.38,
+      "text": "All right, so let's go to our material."
+    },
+    {
+      "start": 75.38,
+      "end": 78.14,
+      "text": "We're talking now these days about"
+    },
+    {
+      "start": 78.14,
+      "end": 80.42,
+      "text": "continuous random variables."
+    },
+    {
+      "start": 80.42,
+      "end": 83.76,
+      "text": "And I'll remind you what we discussed last time, remind"
+    },
+    {
+      "start": 83.76,
+      "end": 86.36,
+      "text": "you the concept of the probability density function"
+    },
+    {
+      "start": 86.36,
+      "end": 88.2,
+      "text": "of a single random variable."
+    },
+    {
+      "start": 88.2,
+      "end": 91.04,
+      "text": "And then we're going to rush through all the concepts that"
+    },
+    {
+      "start": 91.04,
+      "end": 91.54,
+      "text": "we covered."
+    },
+    {
+      "start": 91.56,
+      "end": 94.68,
+      "text": "For the case of discrete random variables, and discuss"
+    },
+    {
+      "start": 94.68,
+      "end": 97.78,
+      "text": "their analogs for the continuous case."
+    },
+    {
+      "start": 97.78,
+      "end": 100.4,
+      "text": "And talk about notions such as conditioning,"
+    },
+    {
+      "start": 100.4,
+      "end": 102.16,
+      "text": "independence, and so on."
+    },
+    {
+      "start": 102.16,
+      "end": 106.32,
+      "text": "So the big picture is here."
+    },
+    {
+      "start": 106.32,
+      "end": 109.58,
+      "text": "We have all those concepts that we developed for the case"
+    },
+    {
+      "start": 109.58,
+      "end": 112.34,
+      "text": "of discrete random variables."
+    },
+    {
+      "start": 112.34,
+      "end": 115.54,
+      "text": "And now we will just talk about their analogs in the"
+    },
+    {
+      "start": 115.54,
+      "end": 116.86,
+      "text": "continuous case."
+    },
+    {
+      "start": 116.86,
+      "end": 120.8,
+      "text": "We already discussed this analog last week, the density"
+    },
+    {
+      "start": 120.8,
+      "end": 124.38,
+      "text": "of a single random variable."
+    },
+    {
+      "start": 124.38,
+      "end": 128.56,
+      "text": "Then there are certain concepts that show up both in"
+    },
+    {
+      "start": 128.56,
+      "end": 130.76,
+      "text": "the discrete and the continuous case."
+    },
+    {
+      "start": 130.76,
+      "end": 134.56,
+      "text": "So we have the cumulative distribution function, which"
+    },
+    {
+      "start": 134.56,
+      "end": 138.04,
+      "text": "is a description of the probability distribution of a"
+    },
+    {
+      "start": 138.04,
+      "end": 141.44,
+      "text": "random variable, and which applies whether you have a"
+    },
+    {
+      "start": 141.44,
+      "end": 143.78,
+      "text": "discrete or continuous random variable."
+    },
+    {
+      "start": 143.78,
+      "end": 146.48,
+      "text": "Then there's the notion of the expected value."
+    },
+    {
+      "start": 146.48,
+      "end": 150.02,
+      "text": "And in the two cases, the expected value is calculated"
+    },
+    {
+      "start": 150.02,
+      "end": 153.0,
+      "text": "in a slightly different way, but not very different."
+    },
+    {
+      "start": 153.0,
+      "end": 156.08,
+      "text": "We have sums in one case, integrals in the other."
+    },
+    {
+      "start": 156.08,
+      "end": 159.02,
+      "text": "And this is the general pattern that we're going to have."
+    },
+    {
+      "start": 159.02,
+      "end": 162.12,
+      "text": "Formulas for the discrete case translate to corresponding"
+    },
+    {
+      "start": 162.12,
+      "end": 164.9,
+      "text": "formulas or expressions in the continuous case."
+    },
+    {
+      "start": 164.9,
+      "end": 168.34,
+      "text": "We generically replace sums by integrals."
+    },
+    {
+      "start": 168.34,
+      "end": 174.2,
+      "text": "And we replace mass functions with density functions."
+    },
+    {
+      "start": 174.2,
+      "end": 178.3,
+      "text": "Then the new pieces for today are going to be mostly the"
+    },
+    {
+      "start": 178.3,
+      "end": 179.5,
+      "text": "notion of a joint density function."
+    },
+    {
+      "start": 179.5,
+      "end": 182.36,
+      "text": "Density function, which is how we describe the"
+    },
+    {
+      "start": 182.36,
+      "end": 185.14,
+      "text": "probability distribution of two random variables that are"
+    },
+    {
+      "start": 185.14,
+      "end": 187.74,
+      "text": "somehow related in general."
+    },
+    {
+      "start": 187.74,
+      "end": 191.1,
+      "text": "And then the notion of a conditional density function"
+    },
+    {
+      "start": 191.1,
+      "end": 194.62,
+      "text": "that tells us the distribution of one random variable x when"
+    },
+    {
+      "start": 194.62,
+      "end": 198.56,
+      "text": "you're told the value of another random variable y."
+    },
+    {
+      "start": 198.56,
+      "end": 202.38,
+      "text": "There's another concept, which is the conditional PDF given"
+    },
+    {
+      "start": 202.38,
+      "end": 204.9,
+      "text": "that a certain event has happened."
+    },
+    {
+      "start": 204.9,
+      "end": 207.42,
+      "text": "This is a concept that's in some ways simpler."
+    },
+    {
+      "start": 207.42,
+      "end": 209.5,
+      "text": "You've already seen a little bit of that."
+    },
+    {
+      "start": 209.5,
+      "end": 214.14,
+      "text": "But in last week's recitation and tutorial, the idea is that"
+    },
+    {
+      "start": 214.14,
+      "end": 215.64,
+      "text": "we have a single random variable."
+    },
+    {
+      "start": 215.64,
+      "end": 217.72,
+      "text": "It's described by a density."
+    },
+    {
+      "start": 217.72,
+      "end": 220.06,
+      "text": "Then you're told that a certain event has occurred."
+    },
+    {
+      "start": 220.06,
+      "end": 222.9,
+      "text": "This changes your model, changes the universe that"
+    },
+    {
+      "start": 222.9,
+      "end": 223.98,
+      "text": "you're dealing with."
+    },
+    {
+      "start": 223.98,
+      "end": 226.64,
+      "text": "In the new universe, you're dealing with a new density"
+    },
+    {
+      "start": 226.64,
+      "end": 231.3,
+      "text": "function, the one that applies given the knowledge that we"
+    },
+    {
+      "start": 231.3,
+      "end": 235.68,
+      "text": "have that a certain event has occurred."
+    },
+    {
+      "start": 235.68,
+      "end": 236.22,
+      "text": "All right."
+    },
+    {
+      "start": 236.22,
+      "end": 239.5,
+      "text": "So what exactly did we say?"
+    },
+    {
+      "start": 239.5,
+      "end": 242.12,
+      "text": "About continuous random variables?"
+    },
+    {
+      "start": 242.12,
+      "end": 244.98,
+      "text": "The first thing is the definition that a random"
+    },
+    {
+      "start": 244.98,
+      "end": 249.34,
+      "text": "variable is said to be continuous if we're given a"
+    },
+    {
+      "start": 249.34,
+      "end": 253.16,
+      "text": "certain object that we call the probability density function."
+    },
+    {
+      "start": 253.16,
+      "end": 257.24,
+      "text": "And we can calculate interval probabilities given this"
+    },
+    {
+      "start": 257.24,
+      "end": 258.7,
+      "text": "density function."
+    },
+    {
+      "start": 258.7,
+      "end": 261.56,
+      "text": "So the definition is that the random variable is continuous"
+    },
+    {
+      "start": 261.56,
+      "end": 264.44,
+      "text": "if you can calculate probabilities associated with"
+    },
+    {
+      "start": 264.44,
+      "end": 267.34,
+      "text": "that random variable given that formula."
+    },
+    {
+      "start": 267.34,
+      "end": 269.34,
+      "text": "So this formula tells you that the probability that's going to"
+    },
+    {
+      "start": 269.34,
+      "end": 272.5,
+      "text": "be that your random variable falls inside this interval is"
+    },
+    {
+      "start": 272.5,
+      "end": 277.35,
+      "text": "the area under the density curve."
+    },
+    {
+      "start": 277.35,
+      "end": 277.67,
+      "text": "OK."
+    },
+    {
+      "start": 277.67,
+      "end": 280.31,
+      "text": "There's a few properties that the density function must"
+    },
+    {
+      "start": 280.31,
+      "end": 282.87,
+      "text": "satisfy, since we're talking about probabilities and"
+    },
+    {
+      "start": 282.87,
+      "end": 284.81,
+      "text": "probabilities are non-negative."
+    },
+    {
+      "start": 284.81,
+      "end": 287.43,
+      "text": "We have that the density function is always a"
+    },
+    {
+      "start": 287.43,
+      "end": 289.49,
+      "text": "non-negative function."
+    },
+    {
+      "start": 289.49,
+      "end": 293.59,
+      "text": "The total probability over the entire real line must be equal"
+    },
+    {
+      "start": 293.59,
+      "end": 294.53,
+      "text": "to 1."
+    },
+    {
+      "start": 294.53,
+      "end": 298.05,
+      "text": "So the integral, when you integrate over the entire real"
+    },
+    {
+      "start": 298.05,
+      "end": 299.59,
+      "text": "line, has to be equal to 1."
+    },
+    {
+      "start": 299.59,
+      "end": 300.57,
+      "text": "That's the second property."
+    },
+    {
+      "start": 300.57,
+      "end": 305.69,
+      "text": "Another property that you get is that if you let a equal to b,"
+    },
+    {
+      "start": 305.69,
+      "end": 307.73,
+      "text": "this integral becomes 0."
+    },
+    {
+      "start": 307.73,
+      "end": 311.39,
+      "text": "And that tells you that the probability of a single point"
+    },
+    {
+      "start": 311.39,
+      "end": 316.01,
+      "text": "in the continuous case is always equal to 0."
+    },
+    {
+      "start": 316.01,
+      "end": 317.91,
+      "text": "So these are formal properties."
+    },
+    {
+      "start": 317.91,
+      "end": 321.29,
+      "text": "When you want to think intuitively, the best way to"
+    },
+    {
+      "start": 321.29,
+      "end": 325.21,
+      "text": "think about what the density function is is to think in"
+    },
+    {
+      "start": 325.21,
+      "end": 327.03,
+      "text": "terms of little intervals."
+    },
+    {
+      "start": 327.03,
+      "end": 329.95,
+      "text": "The probability that my random variable falls inside a little"
+    },
+    {
+      "start": 329.95,
+      "end": 330.57,
+      "text": "interval."
+    },
+    {
+      "start": 330.57,
+      "end": 335.17,
+      "text": "Well, inside that little interval, the density function"
+    },
+    {
+      "start": 335.17,
+      "end": 336.93,
+      "text": "here is roughly constant."
+    },
+    {
+      "start": 336.93,
+      "end": 342.43,
+      "text": "So that integral becomes the value of the density times the"
+    },
+    {
+      "start": 342.43,
+      "end": 345.33,
+      "text": "length of the interval over which you're integrating,"
+    },
+    {
+      "start": 345.33,
+      "end": 347.05,
+      "text": "which is delta."
+    },
+    {
+      "start": 347.05,
+      "end": 350.23,
+      "text": "And so the density function basically gives us"
+    },
+    {
+      "start": 350.23,
+      "end": 354.99,
+      "text": "probabilities of little events, of small events."
+    },
+    {
+      "start": 354.99,
+      "end": 359.07,
+      "text": "And the density is to be interpreted as probability per"
+    },
+    {
+      "start": 359.07,
+      "end": 360.33,
+      "text": "unit length."
+    },
+    {
+      "start": 360.33,
+      "end": 362.31,
+      "text": "At a certain place in the diagram."
+    },
+    {
+      "start": 362.31,
+      "end": 364.83,
+      "text": "So in that place in the diagram, the probability per"
+    },
+    {
+      "start": 364.83,
+      "end": 367.89,
+      "text": "unit length around this neighborhood would be the"
+    },
+    {
+      "start": 367.89,
+      "end": 372.23,
+      "text": "height of the density function at that point."
+    },
+    {
+      "start": 372.23,
+      "end": 373.17,
+      "text": "What else?"
+    },
+    {
+      "start": 373.17,
+      "end": 376.51,
+      "text": "We have a formula for calculating expected values for"
+    },
+    {
+      "start": 376.51,
+      "end": 377.97,
+      "text": "functions of random variables."
+    },
+    {
+      "start": 377.97,
+      "end": 381.31,
+      "text": "In the discrete case, we had the formula, where here we had"
+    },
+    {
+      "start": 381.31,
+      "end": 382.31,
+      "text": "the sum."
+    },
+    {
+      "start": 382.31,
+      "end": 385.43,
+      "text": "And instead of the density, we had the PMF."
+    },
+    {
+      "start": 385.43,
+      "end": 388.45,
+      "text": "The same formula is also valid in the continuous case."
+    },
+    {
+      "start": 388.45,
+      "end": 389.65,
+      "text": "And it's ."
+    },
+    {
+      "start": 389.65,
+      "end": 390.13,
+      "text": "OK."
+    },
+    {
+      "start": 390.13,
+      "end": 395.13,
+      "text": "It's not too hard to derive, but we will not do it."
+    },
+    {
+      "start": 395.13,
+      "end": 396.97,
+      "text": "But let's think of the intuition of what"
+    },
+    {
+      "start": 396.97,
+      "end": 398.41,
+      "text": "this formula says."
+    },
+    {
+      "start": 398.41,
+      "end": 401.51,
+      "text": "You're trying to figure out, on the average, how much g of x"
+    },
+    {
+      "start": 401.51,
+      "end": 402.77,
+      "text": "is going to be."
+    },
+    {
+      "start": 402.77,
+      "end": 407.13,
+      "text": "And then you reason, and you say, well, x may turn out to"
+    },
+    {
+      "start": 407.13,
+      "end": 412.55,
+      "text": "take a particular value, or a small interval of values."
+    },
+    {
+      "start": 412.55,
+      "end": 414.75,
+      "text": "This is the probability that x falls"
+    },
+    {
+      "start": 414.75,
+      "end": 416.63,
+      "text": "inside the small interval."
+    },
+    {
+      "start": 416.63,
+      "end": 419.45,
+      "text": "And when that happens, g of x takes that value."
+    },
+    {
+      "start": 419.45,
+      "end": 423.91,
+      "text": "So this fraction of the time, you fall in a little"
+    },
+    {
+      "start": 423.91,
+      "end": 427.31,
+      "text": "neighborhood of x, and you get so much."
+    },
+    {
+      "start": 427.31,
+      "end": 430.85,
+      "text": "Then you average over all the possible x's that can happen."
+    },
+    {
+      "start": 430.85,
+      "end": 437.38,
+      "text": "And that gives you the average value of the function g of x."
+    },
+    {
+      "start": 437.38,
+      "end": 437.74,
+      "text": "OK."
+    },
+    {
+      "start": 437.74,
+      "end": 440.66,
+      "text": "So this is the easy stuff."
+    },
+    {
+      "start": 440.66,
+      "end": 443.68,
+      "text": "Now let's get to the new material."
+    },
+    {
+      "start": 443.68,
+      "end": 445.88,
+      "text": "We want to talk about multiple random"
+    },
+    {
+      "start": 445.88,
+      "end": 447.34,
+      "text": "variables simultaneously."
+    },
+    {
+      "start": 447.34,
+      "end": 451.52,
+      "text": "So we want to talk now about two random variables that are"
+    },
+    {
+      "start": 451.52,
+      "end": 455.0,
+      "text": "continuous, and in some sense that they're jointly"
+    },
+    {
+      "start": 455.0,
+      "end": 455.84,
+      "text": "continuous."
+    },
+    {
+      "start": 455.84,
+      "end": 458.08,
+      "text": "And let's see what this means."
+    },
+    {
+      "start": 458.08,
+      "end": 460.84,
+      "text": "The definition is similar to the definition we had for a"
+    },
+    {
+      "start": 460.84,
+      "end": 463.14,
+      "text": "single random variable."
+    },
+    {
+      "start": 463.14,
+      "end": 467.58,
+      "text": "Take this formula here as the definition of continuous random"
+    },
+    {
+      "start": 467.58,
+      "end": 469.42,
+      "text": "variables."
+    },
+    {
+      "start": 469.42,
+      "end": 473.8,
+      "text": "Two random variables are said to be jointly continuous if we"
+    },
+    {
+      "start": 473.8,
+      "end": 478.18,
+      "text": "can calculate probabilities by integrating a certain function"
+    },
+    {
+      "start": 478.18,
+      "end": 481.38,
+      "text": "that we call the joint density function over"
+    },
+    {
+      "start": 481.38,
+      "end": 483.32,
+      "text": "the set of interests."
+    },
+    {
+      "start": 483.32,
+      "end": 488.64,
+      "text": "So we have our two-dimensional plane."
+    },
+    {
+      "start": 488.64,
+      "end": 490.88,
+      "text": "This is the xy plane."
+    },
+    {
+      "start": 490.88,
+      "end": 493.78,
+      "text": "There's a certain event s that we're interested in."
+    },
+    {
+      "start": 493.78,
+      "end": 495.84,
+      "text": "We want to calculate the probability."
+    },
+    {
+      "start": 495.84,
+      "end": 497.36,
+      "text": "How do we do that?"
+    },
+    {
+      "start": 497.36,
+      "end": 502.66,
+      "text": "We are given this function, f sub xy, the joint density."
+    },
+    {
+      "start": 502.66,
+      "end": 505.9,
+      "text": "It's a function of the two arguments, x and y."
+    },
+    {
+      "start": 505.9,
+      "end": 509.78,
+      "text": "So think of that function as being some kind of surface that"
+    },
+    {
+      "start": 509.78,
+      "end": 510.7,
+      "text": "sits on top."
+    },
+    {
+      "start": 510.7,
+      "end": 514.8,
+      "text": "On top of the two-dimensional plane."
+    },
+    {
+      "start": 514.8,
+      "end": 519.12,
+      "text": "The probability of falling inside the set s, we calculate"
+    },
+    {
+      "start": 519.12,
+      "end": 525.38,
+      "text": "it by looking at the volume under the surface, that volume"
+    },
+    {
+      "start": 525.38,
+      "end": 527.78,
+      "text": "that sits on top of s."
+    },
+    {
+      "start": 527.78,
+      "end": 531.96,
+      "text": "So the surface underneath it has a certain total volume."
+    },
+    {
+      "start": 531.96,
+      "end": 534.58,
+      "text": "What should that total volume be?"
+    },
+    {
+      "start": 534.58,
+      "end": 537.06,
+      "text": "Well, we think of these volumes as probabilities."
+    },
+    {
+      "start": 537.06,
+      "end": 540.04,
+      "text": "So the total probability should be equal to 1."
+    },
+    {
+      "start": 540.04,
+      "end": 545.42,
+      "text": "The total volume under the surface should be equal to 1."
+    },
+    {
+      "start": 545.42,
+      "end": 549.28,
+      "text": "So that's one property that we want our density function to"
+    },
+    {
+      "start": 549.28,
+      "end": 556.03,
+      "text": "have."
+    },
+    {
+      "start": 556.03,
+      "end": 560.47,
+      "text": "So when you integrate over the entire space, this is the"
+    },
+    {
+      "start": 560.47,
+      "end": 562.35,
+      "text": "volume under your surface."
+    },
+    {
+      "start": 562.35,
+      "end": 564.03,
+      "text": "That should be equal to 1."
+    },
+    {
+      "start": 564.03,
+      "end": 567.27,
+      "text": "Of course, since we're talking about probabilities, the joint"
+    },
+    {
+      "start": 567.27,
+      "end": 569.53,
+      "text": "density should be a non-negative function."
+    },
+    {
+      "start": 569.53,
+      "end": 574.47,
+      "text": "So think of the situation as having one pound of probability."
+    },
+    {
+      "start": 574.59,
+      "end": 578.23,
+      "text": "That's spread all over your space."
+    },
+    {
+      "start": 578.23,
+      "end": 581.45,
+      "text": "And the height of this joint density function basically"
+    },
+    {
+      "start": 581.45,
+      "end": 585.47,
+      "text": "tells you how much probability tends to be accumulated in"
+    },
+    {
+      "start": 585.47,
+      "end": 588.03,
+      "text": "certain regions of space, as opposed to"
+    },
+    {
+      "start": 588.03,
+      "end": 589.87,
+      "text": "other parts of the space."
+    },
+    {
+      "start": 589.87,
+      "end": 593.27,
+      "text": "So wherever the density is big, that means that this is an"
+    },
+    {
+      "start": 593.27,
+      "end": 594.91,
+      "text": "area of the two-dimensional plane that's"
+    },
+    {
+      "start": 594.91,
+      "end": 596.33,
+      "text": "more likely to occur."
+    },
+    {
+      "start": 596.33,
+      "end": 599.15,
+      "text": "Where the density is small, that means that those x, y's"
+    },
+    {
+      "start": 599.15,
+      "end": 601.07,
+      "text": "are less likely to occur."
+    },
+    {
+      "start": 601.07,
+      "end": 604.03,
+      "text": "You have already seen one example of continuous"
+    },
+    {
+      "start": 604.03,
+      "end": 606.03,
+      "text": "densities."
+    },
+    {
+      "start": 606.03,
+      "end": 609.15,
+      "text": "That was the example we had in the very beginning of the class"
+    },
+    {
+      "start": 609.15,
+      "end": 613.37,
+      "text": "with a uniform distribution on the unit square."
+    },
+    {
+      "start": 613.37,
+      "end": 615.49,
+      "text": "That was a special case of a density"
+    },
+    {
+      "start": 615.49,
+      "end": 617.25,
+      "text": "function that was constant."
+    },
+    {
+      "start": 617.25,
+      "end": 620.07,
+      "text": "So all places in the unit square were roughly equally"
+    },
+    {
+      "start": 620.07,
+      "end": 621.99,
+      "text": "likely as any other places."
+    },
+    {
+      "start": 621.99,
+      "end": 625.93,
+      "text": "But in other models, some parts of the space may be more likely"
+    },
+    {
+      "start": 625.93,
+      "end": 626.97,
+      "text": "than others."
+    },
+    {
+      "start": 626.97,
+      "end": 630.17,
+      "text": "And we describe those relative likelihoods using this density"
+    },
+    {
+      "start": 630.17,
+      "end": 631.09,
+      "text": "function."
+    },
+    {
+      "start": 631.09,
+      "end": 633.15,
+      "text": "So somebody gives us the density function."
+    },
+    {
+      "start": 633.15,
+      "end": 633.93,
+      "text": "This determines"
+    },
+    {
+      "start": 633.93,
+      "end": 639.53,
+      "text": "for us probabilities of all the subsets of the"
+    },
+    {
+      "start": 639.53,
+      "end": 641.49,
+      "text": "two-dimensional plane."
+    },
+    {
+      "start": 641.49,
+      "end": 645.31,
+      "text": "Now for an intuitive interpretation, it's again"
+    },
+    {
+      "start": 645.31,
+      "end": 647.47,
+      "text": "good to think about small events."
+    },
+    {
+      "start": 647.47,
+      "end": 651.15,
+      "text": "So let's take a particular x here and an x plus delta."
+    },
+    {
+      "start": 651.15,
+      "end": 653.03,
+      "text": "So this is a small interval."
+    },
+    {
+      "start": 653.03,
+      "end": 656.21,
+      "text": "Take another small interval here that goes from y to y"
+    },
+    {
+      "start": 656.21,
+      "end": 657.57,
+      "text": "plus delta."
+    },
+    {
+      "start": 657.57,
+      "end": 663.29,
+      "text": "And let's look at the event that x falls here and y falls"
+    },
+    {
+      "start": 663.29,
+      "end": 663.93,
+      "text": "right there."
+    },
+    {
+      "start": 663.93,
+      "end": 665.77,
+      "text": "What is this event?"
+    },
+    {
+      "start": 665.77,
+      "end": 667.75,
+      "text": "Well, this is the event that we fall"
+    },
+    {
+      "start": 667.75,
+      "end": 671.01,
+      "text": "inside this little rectangle."
+    },
+    {
+      "start": 671.01,
+      "end": 676.53,
+      "text": "Using this rule for calculating probabilities, what is the"
+    },
+    {
+      "start": 676.53,
+      "end": 679.01,
+      "text": "probability of that rectangle going to be?"
+    },
+    {
+      "start": 679.01,
+      "end": 683.13,
+      "text": "Well, it should be the integral of the density over"
+    },
+    {
+      "start": 683.13,
+      "end": 684.55,
+      "text": "this rectangle."
+    },
+    {
+      "start": 684.55,
+      "end": 689.71,
+      "text": "Or it's the volume under the surface that sits on top of"
+    },
+    {
+      "start": 689.71,
+      "end": 690.99,
+      "text": "that rectangle."
+    },
+    {
+      "start": 690.99,
+      "end": 693.89,
+      "text": "Now if the rectangle is very small, the joint density is a"
+    },
+    {
+      "start": 693.89,
+      "end": 696.75,
+      "text": "not going to change very much in that neighborhood."
+    },
+    {
+      "start": 696.75,
+      "end": 698.77,
+      "text": "So we can treat it as a constant."
+    },
+    {
+      "start": 698.77,
+      "end": 703.09,
+      "text": "So the volume is going to be the height times the area of"
+    },
+    {
+      "start": 703.09,
+      "end": 704.05,
+      "text": "the base."
+    },
+    {
+      "start": 704.05,
+      "end": 707.13,
+      "text": "The height at that point is whatever the function happens"
+    },
+    {
+      "start": 707.13,
+      "end": 709.45,
+      "text": "to be around that point."
+    },
+    {
+      "start": 709.45,
+      "end": 712.57,
+      "text": "And the area of the base is delta squared."
+    },
+    {
+      "start": 712.57,
+      "end": 718.75,
+      "text": "So this is the intuitive way to understand what a joint"
+    },
+    {
+      "start": 718.75,
+      "end": 721.05,
+      "text": "density function really tells you."
+    },
+    {
+      "start": 721.05,
+      "end": 723.77,
+      "text": "It specifies for you probabilities of"
+    },
+    {
+      "start": 723.77,
+      "end": 728.49,
+      "text": "little squares, of little rectangles."
+    },
+    {
+      "start": 728.49,
+      "end": 731.89,
+      "text": "And it allows you to think of the joint density function as"
+    },
+    {
+      "start": 731.89,
+      "end": 735.31,
+      "text": "probability per unit area."
+    },
+    {
+      "start": 735.31,
+      "end": 737.27,
+      "text": "So these are the units of the density."
+    },
+    {
+      "start": 737.27,
+      "end": 741.45,
+      "text": "It's probability per unit area in the neighborhood of a"
+    },
+    {
+      "start": 741.45,
+      "end": 743.79,
+      "text": "certain point."
+    },
+    {
+      "start": 743.79,
+      "end": 746.97,
+      "text": "So what do we do with this density function once we have"
+    },
+    {
+      "start": 746.97,
+      "end": 748.45,
+      "text": "it in our hands?"
+    },
+    {
+      "start": 748.45,
+      "end": 752.65,
+      "text": "Well, we can use it to calculate expected values."
+    },
+    {
+      "start": 752.65,
+      "end": 753.77,
+      "text": "Suppose that you have a function."
+    },
+    {
+      "start": 753.77,
+      "end": 756.99,
+      "text": "It's a function of two random variables described by a joint"
+    },
+    {
+      "start": 756.99,
+      "end": 758.05,
+      "text": "density."
+    },
+    {
+      "start": 758.05,
+      "end": 761.59,
+      "text": "You can find, perhaps, the distribution of this random"
+    },
+    {
+      "start": 761.59,
+      "end": 765.33,
+      "text": "variable, and then use the basic definition of the"
+    },
+    {
+      "start": 765.33,
+      "end": 766.15,
+      "text": "expectation."
+    },
+    {
+      "start": 766.15,
+      "end": 769.41,
+      "text": "Or you can calculate expectations directly using the"
+    },
+    {
+      "start": 769.41,
+      "end": 772.03,
+      "text": "distribution of the original random variables."
+    },
+    {
+      "start": 772.03,
+      "end": 774.55,
+      "text": "This is a formula that's, again, identical to the"
+    },
+    {
+      "start": 774.55,
+      "end": 777.29,
+      "text": "formula that we had for the discrete case."
+    },
+    {
+      "start": 777.29,
+      "end": 780.61,
+      "text": "In the discrete case, we had the double sum here, and we"
+    },
+    {
+      "start": 780.61,
+      "end": 782.59,
+      "text": "had PMFs."
+    },
+    {
+      "start": 782.59,
+      "end": 786.29,
+      "text": "So the intuition behind this formula is the same that one"
+    },
+    {
+      "start": 786.29,
+      "end": 788.21,
+      "text": "had for the discrete case."
+    },
+    {
+      "start": 788.21,
+      "end": 792.54,
+      "text": "It's just that the mechanics are different."
+    },
+    {
+      "start": 792.54,
+      "end": 796.28,
+      "text": "Then something that we did in the discrete case was to find a"
+    },
+    {
+      "start": 796.28,
+      "end": 801.5,
+      "text": "way to go from the joint density of the two random"
+    },
+    {
+      "start": 801.5,
+      "end": 805.74,
+      "text": "variables taken together to the density of just one of the"
+    },
+    {
+      "start": 805.74,
+      "end": 808.2,
+      "text": "random variables."
+    },
+    {
+      "start": 808.2,
+      "end": 810.56,
+      "text": "So we had the formula for the discrete case."
+    },
+    {
+      "start": 810.56,
+      "end": 813.78,
+      "text": "Let's see how things are going to work out in the continuous."
+    },
+    {
+      "start": 813.9,
+      "end": 815.8,
+      "text": "case."
+    },
+    {
+      "start": 815.8,
+      "end": 821.32,
+      "text": "So in the continuous case, we have here our two random"
+    },
+    {
+      "start": 821.32,
+      "end": 825.02,
+      "text": "variables, and we have a density for them."
+    },
+    {
+      "start": 825.02,
+      "end": 828.32,
+      "text": "And let's say that we want to calculate the probability that"
+    },
+    {
+      "start": 828.32,
+      "end": 831.5,
+      "text": "x falls inside this interval."
+    },
+    {
+      "start": 831.5,
+      "end": 833.5,
+      "text": "So we're looking at the probability that our random"
+    },
+    {
+      "start": 833.5,
+      "end": 838.34,
+      "text": "variable x falls in the interval from little x to x"
+    },
+    {
+      "start": 838.34,
+      "end": 842.11,
+      "text": "plus delta."
+    },
+    {
+      "start": 842.11,
+      "end": 845.81,
+      "text": "Now, by the properties that we already have, we can start to"
+    },
+    {
+      "start": 845.81,
+      "end": 849.55,
+      "text": "already have for interpreting the density function of a"
+    },
+    {
+      "start": 849.55,
+      "end": 852.45,
+      "text": "single random variable, the probability of a little"
+    },
+    {
+      "start": 852.45,
+      "end": 855.57,
+      "text": "interval is approximately the density of that single random"
+    },
+    {
+      "start": 855.57,
+      "end": 858.73,
+      "text": "variable times delta."
+    },
+    {
+      "start": 858.73,
+      "end": 862.09,
+      "text": "And now we're going to find the formula for this marginal"
+    },
+    {
+      "start": 862.09,
+      "end": 866.93,
+      "text": "density in terms of the joint density."
+    },
+    {
+      "start": 866.93,
+      "end": 869.41,
+      "text": "So this is the probability that x falls"
+    },
+    {
+      "start": 869.41,
+      "end": 870.97,
+      "text": "inside this interval."
+    },
+    {
+      "start": 870.97,
+      "end": 874.05,
+      "text": "In terms of the two-dimensional plane, this is"
+    },
+    {
+      "start": 874.05,
+      "end": 880.03,
+      "text": "the probability that xy falls inside this strip."
+    },
+    {
+      "start": 880.03,
+      "end": 884.51,
+      "text": "So to find that probability, we need to calculate the"
+    },
+    {
+      "start": 884.51,
+      "end": 888.73,
+      "text": "probability that xy falls in here, which is going to be the"
+    },
+    {
+      "start": 888.73,
+      "end": 905.07,
+      "text": "double interval over this strip of the joint density."
+    },
+    {
+      "start": 905.07,
+      "end": 907.89,
+      "text": "And what are we integrating over?"
+    },
+    {
+      "start": 907.89,
+      "end": 911.13,
+      "text": "y goes from minus infinity to plus infinity."
+    },
+    {
+      "start": 911.57,
+      "end": 927.24,
+      "text": "And the dummy variable x goes from little x to x plus delta."
+    },
+    {
+      "start": 927.24,
+      "end": 931.6,
+      "text": "So to integrate over this strip, what we do is for any"
+    },
+    {
+      "start": 931.6,
+      "end": 934.8,
+      "text": "given y, we integrate in this dimension."
+    },
+    {
+      "start": 934.8,
+      "end": 936.76,
+      "text": "This is the x integral."
+    },
+    {
+      "start": 936.76,
+      "end": 940.2,
+      "text": "And then we integrate over the y dimension."
+    },
+    {
+      "start": 940.2,
+      "end": 942.9,
+      "text": "Now what is this inner integral?"
+    },
+    {
+      "start": 942.9,
+      "end": 950.0,
+      "text": "Because x only varies very little, this is approximately"
+    },
+    {
+      "start": 950.02,
+      "end": 953.06,
+      "text": "constant in that range."
+    },
+    {
+      "start": 953.06,
+      "end": 959.18,
+      "text": "So the integral with respect to x just becomes delta times f of"
+    },
+    {
+      "start": 959.18,
+      "end": 966.93,
+      "text": "xy, and then we've got our dy."
+    },
+    {
+      "start": 966.93,
+      "end": 971.79,
+      "text": "So this is what the inner integral will evaluate to."
+    },
+    {
+      "start": 971.79,
+      "end": 975.27,
+      "text": "We're integrating over that little interval."
+    },
+    {
+      "start": 975.27,
+      "end": 978.87,
+      "text": "So we're keeping y fixed, integrating over here."
+    },
+    {
+      "start": 978.87,
+      "end": 981.81,
+      "text": "We take the value of the density times how much is the"
+    },
+    {
+      "start": 981.81,
+      "end": 982.19,
+      "text": "density."
+    },
+    {
+      "start": 982.19,
+      "end": 984.95,
+      "text": "How much we're integrating over."
+    },
+    {
+      "start": 984.95,
+      "end": 988.39,
+      "text": "And we get this formula."
+    },
+    {
+      "start": 988.39,
+      "end": 993.19,
+      "text": "Now this expression must be equal to that expression."
+    },
+    {
+      "start": 993.19,
+      "end": 1000.05,
+      "text": "So if we cancel the deltas, we see that the marginal density"
+    },
+    {
+      "start": 1000.05,
+      "end": 1003.99,
+      "text": "must be equal to the integral of the joint density, where we"
+    },
+    {
+      "start": 1003.99,
+      "end": 1014.07,
+      "text": "have integrated out the value of y."
+    },
+    {
+      "start": 1014.07,
+      "end": 1017.21,
+      "text": "So this formula should come as no."
+    },
+    {
+      "start": 1017.21,
+      "end": 1018.99,
+      "text": "Surprise at this point."
+    },
+    {
+      "start": 1018.99,
+      "end": 1021.91,
+      "text": "It's exactly the same as the formula that we had for discrete"
+    },
+    {
+      "start": 1021.91,
+      "end": 1023.29,
+      "text": "random variables."
+    },
+    {
+      "start": 1023.29,
+      "end": 1026.79,
+      "text": "But now we are replacing the sum with an integral."
+    },
+    {
+      "start": 1026.79,
+      "end": 1033.01,
+      "text": "And instead of using the PDF, the PMF, we are using the joint."
+    },
+    {
+      "start": 1033.01,
+      "end": 1038.49,
+      "text": "Instead of using the joint PMF, we're using the joint PDF."
+    },
+    {
+      "start": 1038.49,
+      "end": 1041.81,
+      "text": "Then continuing going down the list of things we did for"
+    },
+    {
+      "start": 1041.81,
+      "end": 1044.83,
+      "text": "discrete random variables, we can now introduce a definition"
+    },
+    {
+      "start": 1044.83,
+      "end": 1047.01,
+      "text": "of the notion of independence of two random variables."
+    },
+    {
+      "start": 1047.21,
+      "end": 1051.03,
+      "text": "And by analogy with the discrete case, we define"
+    },
+    {
+      "start": 1051.03,
+      "end": 1053.93,
+      "text": "independence to be the following condition."
+    },
+    {
+      "start": 1053.93,
+      "end": 1057.07,
+      "text": "Two random variables are independent if and only if"
+    },
+    {
+      "start": 1057.07,
+      "end": 1062.21,
+      "text": "their joint density function factors out as a product of"
+    },
+    {
+      "start": 1062.21,
+      "end": 1064.39,
+      "text": "their marginal densities."
+    },
+    {
+      "start": 1064.39,
+      "end": 1067.99,
+      "text": "And this property needs to be true for all x and y."
+    },
+    {
+      "start": 1067.99,
+      "end": 1069.89,
+      "text": "So this is the formal definition."
+    },
+    {
+      "start": 1069.89,
+      "end": 1072.99,
+      "text": "Operationally and intuitively, what does it mean?"
+    },
+    {
+      "start": 1072.99,
+      "end": 1075.19,
+      "text": "Well, intuitively, it means the same thing as in the"
+    },
+    {
+      "start": 1075.19,
+      "end": 1076.59,
+      "text": "discrete case."
+    },
+    {
+      "start": 1076.59,
+      "end": 1080.61,
+      "text": "Knowing anything about x shouldn't tell you anything"
+    },
+    {
+      "start": 1080.61,
+      "end": 1082.71,
+      "text": "about y."
+    },
+    {
+      "start": 1082.71,
+      "end": 1085.51,
+      "text": "That is, information about x is not going to change your"
+    },
+    {
+      "start": 1085.51,
+      "end": 1087.19,
+      "text": "beliefs about y."
+    },
+    {
+      "start": 1087.19,
+      "end": 1088.93,
+      "text": "We're going to see shortly."
+    },
+    {
+      "start": 1088.93,
+      "end": 1091.31,
+      "text": "We're going to come back to this statement in a second."
+    },
+    {
+      "start": 1094.31,
+      "end": 1097.91,
+      "text": "The other thing that it allows you to do, I'm not going to"
+    },
+    {
+      "start": 1097.91,
+      "end": 1102.53,
+      "text": "derive this, is it allows you to calculate probabilities by"
+    },
+    {
+      "start": 1102.53,
+      "end": 1105.73,
+      "text": "multiplying individual probabilities."
+    },
+    {
+      "start": 1105.73,
+      "end": 1106.57,
+      "text": "So if you ask for the"
+    },
+    {
+      "start": 1106.59,
+      "end": 1110.75,
+      "text": "probability that x falls in a certain set A and y falls in a"
+    },
+    {
+      "start": 1110.75,
+      "end": 1115.79,
+      "text": "certain set B, then you can calculate that probability by"
+    },
+    {
+      "start": 1115.79,
+      "end": 1121.82,
+      "text": "multiplying individual probabilities."
+    },
+    {
+      "start": 1121.82,
+      "end": 1126.3,
+      "text": "This takes just two lines of derivation, which I'm not going"
+    },
+    {
+      "start": 1126.3,
+      "end": 1127.68,
+      "text": "to do."
+    },
+    {
+      "start": 1127.68,
+      "end": 1131.22,
+      "text": "But it comes back to the usual notion of"
+    },
+    {
+      "start": 1131.22,
+      "end": 1133.36,
+      "text": "independence of events."
+    },
+    {
+      "start": 1133.36,
+      "end": 1136.3,
+      "text": "Basically, operationally, independence means that you"
+    },
+    {
+      "start": 1136.3,
+      "end": 1137.66,
+      "text": "can multiply probabilities."
+    },
+    {
+      "start": 1139.89,
+      "end": 1145.57,
+      "text": "So now, let's look at an example, which is a sort of"
+    },
+    {
+      "start": 1145.57,
+      "end": 1148.67,
+      "text": "pretty famous and classical one."
+    },
+    {
+      "start": 1148.67,
+      "end": 1152.57,
+      "text": "Goes back a lot more than 100 years."
+    },
+    {
+      "start": 1152.57,
+      "end": 1156.33,
+      "text": "And it's the famous needle of Buffon."
+    },
+    {
+      "start": 1156.33,
+      "end": 1159.89,
+      "text": "Buffon was a French naturalist who, for some reason, also"
+    },
+    {
+      "start": 1159.89,
+      "end": 1162.17,
+      "text": "decided to play with probability."
+    },
+    {
+      "start": 1162.17,
+      "end": 1164.59,
+      "text": "And look at the following problem."
+    },
+    {
+      "start": 1164.59,
+      "end": 1169.73,
+      "text": "So you have the two-dimensional plane, and on the plane, we'd"
+    },
+    {
+      "start": 1169.73,
+      "end": 1173.85,
+      "text": "draw a bunch of parallel lines."
+    },
+    {
+      "start": 1173.85,
+      "end": 1178.67,
+      "text": "And those parallel lines are separated by a length."
+    },
+    {
+      "start": 1178.67,
+      "end": 1192.26,
+      "text": "And the lines are apart at a distance d."
+    },
+    {
+      "start": 1192.26,
+      "end": 1198.76,
+      "text": "And we throw a needle at random, completely at random."
+    },
+    {
+      "start": 1198.76,
+      "end": 1201.52,
+      "text": "And we'll have to give a meaning to what completely at"
+    },
+    {
+      "start": 1201.52,
+      "end": 1203.16,
+      "text": "random means."
+    },
+    {
+      "start": 1203.16,
+      "end": 1206.48,
+      "text": "And when we throw a needle, there's two possibilities."
+    },
+    {
+      "start": 1206.48,
+      "end": 1207.64,
+      "text": "Either the needle is going to work."
+    },
+    {
+      "start": 1207.64,
+      "end": 1210.68,
+      "text": "It's going to fall in a way that does not intersect any of"
+    },
+    {
+      "start": 1210.68,
+      "end": 1211.58,
+      "text": "the lines."
+    },
+    {
+      "start": 1211.58,
+      "end": 1213.52,
+      "text": "Or it's going to fall in a way that it"
+    },
+    {
+      "start": 1213.52,
+      "end": 1215.7,
+      "text": "intersects one of the lines."
+    },
+    {
+      "start": 1215.7,
+      "end": 1219.22,
+      "text": "We're taking the needle to be shorter than this distance."
+    },
+    {
+      "start": 1219.22,
+      "end": 1222.5,
+      "text": "So the needle cannot intersect two lines simultaneously."
+    },
+    {
+      "start": 1222.5,
+      "end": 1226.22,
+      "text": "It either intersects 0, or it intersects one of the lines."
+    },
+    {
+      "start": 1226.22,
+      "end": 1229.62,
+      "text": "The question is to find the probability that the needle is"
+    },
+    {
+      "start": 1229.62,
+      "end": 1232.06,
+      "text": "going to intersect a line."
+    },
+    {
+      "start": 1232.06,
+      "end": 1234.66,
+      "text": "What's the probability of this?"
+    },
+    {
+      "start": 1234.66,
+      "end": 1237.64,
+      "text": "OK, we're going to approach this problem by using our"
+    },
+    {
+      "start": 1237.64,
+      "end": 1242.12,
+      "text": "standard four-step procedure."
+    },
+    {
+      "start": 1242.12,
+      "end": 1244.54,
+      "text": "Set up your sample space."
+    },
+    {
+      "start": 1244.54,
+      "end": 1248.22,
+      "text": "Describe a probability law on that sample space."
+    },
+    {
+      "start": 1248.22,
+      "end": 1251.24,
+      "text": "Identify the event of interest."
+    },
+    {
+      "start": 1251.24,
+      "end": 1253.38,
+      "text": "And then calculate."
+    },
+    {
+      "start": 1253.38,
+      "end": 1258.46,
+      "text": "These four steps basically correspond to these three"
+    },
+    {
+      "start": 1258.46,
+      "end": 1264.1,
+      "text": "bullets, and then the last equation down here."
+    },
+    {
+      "start": 1264.1,
+      "end": 1266.52,
+      "text": "So first thing is to set up a sample space."
+    },
+    {
+      "start": 1266.52,
+      "end": 1267.48,
+      "text": "We need some variables."
+    },
+    {
+      "start": 1267.48,
+      "end": 1270.76,
+      "text": "To describe what happened in the experiment."
+    },
+    {
+      "start": 1270.76,
+      "end": 1274.24,
+      "text": "So what happens in the experiment is that the needle"
+    },
+    {
+      "start": 1274.24,
+      "end": 1276.48,
+      "text": "lands somewhere."
+    },
+    {
+      "start": 1276.48,
+      "end": 1280.48,
+      "text": "And where it lands, we can describe this by specifying"
+    },
+    {
+      "start": 1280.48,
+      "end": 1284.14,
+      "text": "the location of the center of the needle."
+    },
+    {
+      "start": 1284.14,
+      "end": 1286.98,
+      "text": "And what do we mean by the location of the center?"
+    },
+    {
+      "start": 1286.98,
+      "end": 1290.26,
+      "text": "Well, we can take as our variable to be the distance"
+    },
+    {
+      "start": 1290.26,
+      "end": 1296.26,
+      "text": "from the center of the needle to the nearest line."
+    },
+    {
+      "start": 1296.26,
+      "end": 1298.34,
+      "text": "So it tells us sort of the vertical."
+    },
+    {
+      "start": 1299.82,
+      "end": 1304.0,
+      "text": "The vertical distance of the center of the needle from the"
+    },
+    {
+      "start": 1304.0,
+      "end": 1305.64,
+      "text": "nearest line."
+    },
+    {
+      "start": 1305.64,
+      "end": 1309.4,
+      "text": "The other thing that matters is the orientation of the needle."
+    },
+    {
+      "start": 1309.4,
+      "end": 1313.94,
+      "text": "So we need one more variable, which we take to be the angle"
+    },
+    {
+      "start": 1313.94,
+      "end": 1316.94,
+      "text": "that the needle is forming with the lines."
+    },
+    {
+      "start": 1316.94,
+      "end": 1320.26,
+      "text": "We can put the angle here, or you can put it there."
+    },
+    {
+      "start": 1320.26,
+      "end": 1322.62,
+      "text": "I guess it's still the same angle."
+    },
+    {
+      "start": 1322.62,
+      "end": 1326.94,
+      "text": "So we have these two variables that describe what happened in"
+    },
+    {
+      "start": 1326.94,
+      "end": 1328.18,
+      "text": "the experiment."
+    },
+    {
+      "start": 1328.18,
+      "end": 1329.62,
+      "text": "And we can take our sample space."
+    },
+    {
+      "start": 1329.62,
+      "end": 1334.38,
+      "text": "To be the set of all possible x's and thetas."
+    },
+    {
+      "start": 1334.38,
+      "end": 1336.76,
+      "text": "What are the possible x's?"
+    },
+    {
+      "start": 1336.76,
+      "end": 1340.76,
+      "text": "The lines are d apart, so the nearest line is going to be"
+    },
+    {
+      "start": 1340.76,
+      "end": 1344.38,
+      "text": "anywhere between 0 and d over 2 away."
+    },
+    {
+      "start": 1344.38,
+      "end": 1348.6,
+      "text": "So that tells us what the possible x's will be."
+    },
+    {
+      "start": 1348.6,
+      "end": 1353.2,
+      "text": "As for theta, it really depends how you define your angle."
+    },
+    {
+      "start": 1353.2,
+      "end": 1357.78,
+      "text": "We're going to define our theta to be the acute angle that's"
+    },
+    {
+      "start": 1357.78,
+      "end": 1359.44,
+      "text": "formed between the needle."
+    },
+    {
+      "start": 1359.44,
+      "end": 1365.14,
+      "text": "And a line, if you were to extend it."
+    },
+    {
+      "start": 1365.14,
+      "end": 1368.7,
+      "text": "So theta is going to be something between 0 and pi"
+    },
+    {
+      "start": 1368.7,
+      "end": 1370.2,
+      "text": "over 2."
+    },
+    {
+      "start": 1370.2,
+      "end": 1374.2,
+      "text": "So I guess these red pieces really correspond to the part"
+    },
+    {
+      "start": 1374.2,
+      "end": 1378.5,
+      "text": "of setting up the sample space."
+    },
+    {
+      "start": 1378.5,
+      "end": 1380.26,
+      "text": "OK, so that's part one."
+    },
+    {
+      "start": 1380.26,
+      "end": 1383.68,
+      "text": "Second part is we need a model."
+    },
+    {
+      "start": 1383.68,
+      "end": 1388.12,
+      "text": "Let's take our model to B, that we basically know nothing"
+    },
+    {
+      "start": 1388.12,
+      "end": 1389.12,
+      "text": "about."
+    },
+    {
+      "start": 1389.12,
+      "end": 1390.62,
+      "text": "How the needle falls."
+    },
+    {
+      "start": 1390.62,
+      "end": 1393.88,
+      "text": "It can fall in any possible way, and all possible ways are"
+    },
+    {
+      "start": 1393.88,
+      "end": 1395.22,
+      "text": "equally likely."
+    },
+    {
+      "start": 1395.22,
+      "end": 1398.92,
+      "text": "Now, if you have those parallel lines, and you close"
+    },
+    {
+      "start": 1398.92,
+      "end": 1402.32,
+      "text": "your eyes completely and throw a needle completely at random,"
+    },
+    {
+      "start": 1402.32,
+      "end": 1405.28,
+      "text": "any x should be equally likely."
+    },
+    {
+      "start": 1405.28,
+      "end": 1409.48,
+      "text": "So we describe that situation by saying that x should have a"
+    },
+    {
+      "start": 1409.48,
+      "end": 1411.4,
+      "text": "uniform distribution."
+    },
+    {
+      "start": 1411.4,
+      "end": 1413.88,
+      "text": "That is, it should have a constant density over the"
+    },
+    {
+      "start": 1413.88,
+      "end": 1415.44,
+      "text": "range of interest."
+    },
+    {
+      "start": 1415.44,
+      "end": 1418.98,
+      "text": "Similarly, if you kind of spin your needle completely at a"
+    },
+    {
+      "start": 1418.98,
+      "end": 1423.56,
+      "text": "random, any angle should be as likely as any other angle."
+    },
+    {
+      "start": 1423.56,
+      "end": 1427.1,
+      "text": "And we decide to model this situation by saying that theta"
+    },
+    {
+      "start": 1427.1,
+      "end": 1432.22,
+      "text": "also has a uniform distribution over the range of interest."
+    },
+    {
+      "start": 1432.22,
+      "end": 1438.08,
+      "text": "So if, and finally, where we put it should have nothing to"
+    },
+    {
+      "start": 1438.08,
+      "end": 1440.34,
+      "text": "do with how much we rotate it."
+    },
+    {
+      "start": 1440.34,
+      "end": 1444.88,
+      "text": "And we capture this mathematically by saying that x"
+    },
+    {
+      "start": 1444.88,
+      "end": 1447.46,
+      "text": "is going to be independent by theta."
+    },
+    {
+      "start": 1447.46,
+      "end": 1448.78,
+      "text": "Now, this is going to be our model."
+    },
+    {
+      "start": 1448.78,
+      "end": 1451.9,
+      "text": "I'm not deriving the model from anything."
+    },
+    {
+      "start": 1451.9,
+      "end": 1455.5,
+      "text": "I'm only saying that this sounds like a model that does"
+    },
+    {
+      "start": 1455.5,
+      "end": 1459.78,
+      "text": "not assume any knowledge or preference for certain values"
+    },
+    {
+      "start": 1459.78,
+      "end": 1462.36,
+      "text": "of x rather than other values of theta."
+    },
+    {
+      "start": 1462.36,
+      "end": 1465.68,
+      "text": "In the absence of any other particular information you"
+    },
+    {
+      "start": 1465.68,
+      "end": 1468.4,
+      "text": "might have in your hands, that's the most reasonable"
+    },
+    {
+      "start": 1468.4,
+      "end": 1470.52,
+      "text": "model to come up with."
+    },
+    {
+      "start": 1470.52,
+      "end": 1472.16,
+      "text": "So you model the problem that way."
+    },
+    {
+      "start": 1472.16,
+      "end": 1475.5,
+      "text": "So what's the formula for the joint density?"
+    },
+    {
+      "start": 1475.5,
+      "end": 1478.72,
+      "text": "It's going to be the product of the densities of"
+    },
+    {
+      "start": 1478.72,
+      "end": 1481.1,
+      "text": "x and theta."
+    },
+    {
+      "start": 1481.1,
+      "end": 1482.4,
+      "text": "Why is it the product?"
+    },
+    {
+      "start": 1482.4,
+      "end": 1485.54,
+      "text": "This is because we assumed independence."
+    },
+    {
+      "start": 1485.54,
+      "end": 1488.9,
+      "text": "And the density of x, since it's uniform, and since it"
+    },
+    {
+      "start": 1488.9,
+      "end": 1494.64,
+      "text": "needs to integrate to 1, that density needs to be 2 over d."
+    },
+    {
+      "start": 1494.64,
+      "end": 1496.5,
+      "text": "That's the density of x."
+    },
+    {
+      "start": 1496.5,
+      "end": 1500.76,
+      "text": "And the density of theta needs to be 2 over pi."
+    },
+    {
+      "start": 1500.76,
+      "end": 1503.66,
+      "text": "That's the value for the density of theta, so that the"
+    },
+    {
+      "start": 1503.66,
+      "end": 1507.92,
+      "text": "overall probability over this interval ends up being 1."
+    },
+    {
+      "start": 1507.92,
+      "end": 1512.4,
+      "text": "So now we do have our joint density in our hands."
+    },
+    {
+      "start": 1512.4,
+      "end": 1515.46,
+      "text": "The next thing to do is to identify the event of"
+    },
+    {
+      "start": 1515.46,
+      "end": 1518.06,
+      "text": "interest."
+    },
+    {
+      "start": 1518.06,
+      "end": 1520.74,
+      "text": "And this is best done in a picture."
+    },
+    {
+      "start": 1520.74,
+      "end": 1523.36,
+      "text": "And there's two possible situations"
+    },
+    {
+      "start": 1523.36,
+      "end": 1525.48,
+      "text": "that one could have."
+    },
+    {
+      "start": 1525.48,
+      "end": 1533.46,
+      "text": "Either the needle falls this way, or it falls this way."
+    },
+    {
+      "start": 1533.46,
+      "end": 1538.36,
+      "text": "So how can we tell if one or the other is going to happen?"
+    },
+    {
+      "start": 1538.36,
+      "end": 1545.28,
+      "text": "It has to do with whether this interval here is smaller"
+    },
+    {
+      "start": 1545.28,
+      "end": 1550.12,
+      "text": "than that, or bigger than that."
+    },
+    {
+      "start": 1550.12,
+      "end": 1553.42,
+      "text": "So we are comparing the height of this interval"
+    },
+    {
+      "start": 1553.42,
+      "end": 1555.46,
+      "text": "to that interval."
+    },
+    {
+      "start": 1555.46,
+      "end": 1560.46,
+      "text": "This interval here is capital X. This interval here, what is"
+    },
+    {
+      "start": 1560.46,
+      "end": 1562.34,
+      "text": "it?"
+    },
+    {
+      "start": 1562.34,
+      "end": 1567.04,
+      "text": "This is half of the length of the needle, which is l over 2."
+    },
+    {
+      "start": 1567.04,
+      "end": 1568.3,
+      "text": "To find this height, we"
+    },
+    {
+      "start": 1568.3,
+      "end": 1572.8,
+      "text": "take l over 2 and multiply it with the sine of the angle that"
+    },
+    {
+      "start": 1572.8,
+      "end": 1573.72,
+      "text": "we have."
+    },
+    {
+      "start": 1573.72,
+      "end": 1581.06,
+      "text": "So the length of this interval up here is l over 2 times sine"
+    },
+    {
+      "start": 1581.06,
+      "end": 1583.52,
+      "text": "theta."
+    },
+    {
+      "start": 1583.52,
+      "end": 1588.54,
+      "text": "If this is smaller than x, the needle does not"
+    },
+    {
+      "start": 1588.54,
+      "end": 1590.02,
+      "text": "intersect the line."
+    },
+    {
+      "start": 1590.02,
+      "end": 1594.2,
+      "text": "If this is bigger than x, then the needle intersects the"
+    },
+    {
+      "start": 1594.2,
+      "end": 1594.92,
+      "text": "line."
+    },
+    {
+      "start": 1594.92,
+      "end": 1597.88,
+      "text": "So the event of interest, that the needle intersects the"
+    },
+    {
+      "start": 1597.88,
+      "end": 1602.72,
+      "text": "line, is described this way in terms of x and theta."
+    },
+    {
+      "start": 1602.72,
+      "end": 1606.12,
+      "text": "And now that we have the event of interest described"
+    },
+    {
+      "start": 1606.12,
+      "end": 1610.08,
+      "text": "mathematically, all that we need to do is to find the"
+    },
+    {
+      "start": 1610.08,
+      "end": 1611.64,
+      "text": "probability of this event."
+    },
+    {
+      "start": 1611.64,
+      "end": 1618.36,
+      "text": "We integrate the joint density over the part of x theta space"
+    },
+    {
+      "start": 1618.36,
+      "end": 1621.32,
+      "text": "in which this inequality is true."
+    },
+    {
+      "start": 1621.32,
+      "end": 1624.66,
+      "text": "So it's a double integral over the set of all x's and thetas"
+    },
+    {
+      "start": 1624.66,
+      "end": 1626.44,
+      "text": "where this is true."
+    },
+    {
+      "start": 1626.44,
+      "end": 1627.88,
+      "text": "The way to do this integral"
+    },
+    {
+      "start": 1627.88,
+      "end": 1632.76,
+      "text": "is we fix theta, and we integrate for x's that go from"
+    },
+    {
+      "start": 1632.76,
+      "end": 1635.16,
+      "text": "0 up to that number."
+    },
+    {
+      "start": 1635.16,
+      "end": 1639.04,
+      "text": "And theta can be anything between 0 and pi over 2."
+    },
+    {
+      "start": 1639.04,
+      "end": 1643.64,
+      "text": "So the integral over this set is basically this double"
+    },
+    {
+      "start": 1643.64,
+      "end": 1645.0,
+      "text": "integral here."
+    },
+    {
+      "start": 1645.0,
+      "end": 1647.44,
+      "text": "We already have a formula for the joint density."
+    },
+    {
+      "start": 1647.44,
+      "end": 1650.94,
+      "text": "It's 4 over pi d, so we put it here."
+    },
+    {
+      "start": 1650.94,
+      "end": 1652.88,
+      "text": "And now, fortunately, this is a pretty easy"
+    },
+    {
+      "start": 1652.88,
+      "end": 1655.0,
+      "text": "integral to evaluate."
+    },
+    {
+      "start": 1655.0,
+      "end": 1657.64,
+      "text": "Integral with respect to x, there's nothing in here."
+    },
+    {
+      "start": 1657.64,
+      "end": 1660.98,
+      "text": "So the integral is just the length of the interval over"
+    },
+    {
+      "start": 1660.98,
+      "end": 1662.38,
+      "text": "which we're integrating."
+    },
+    {
+      "start": 1662.38,
+      "end": 1664.96,
+      "text": "It's l over 2 sine theta."
+    },
+    {
+      "start": 1664.96,
+      "end": 1667.94,
+      "text": "And then we need to integrate this with respect to theta."
+    },
+    {
+      "start": 1667.94,
+      "end": 1673.96,
+      "text": "We know that the integral of a sine is a negative cosine."
+    },
+    {
+      "start": 1673.96,
+      "end": 1677.5,
+      "text": "You plug in the values for the negative cosine at the two"
+    },
+    {
+      "start": 1677.5,
+      "end": 1678.38,
+      "text": "endpoints."
+    },
+    {
+      "start": 1678.38,
+      "end": 1680.28,
+      "text": "I'm sure you can do this integral."
+    },
+    {
+      "start": 1680.28,
+      "end": 1684.54,
+      "text": "And we finally obtained the answer, which is amazingly"
+    },
+    {
+      "start": 1684.54,
+      "end": 1687.48,
+      "text": "simple for such a pretty complicated-looking"
+    },
+    {
+      "start": 1687.48,
+      "end": 1688.22,
+      "text": "problem."
+    },
+    {
+      "start": 1688.22,
+      "end": 1692.32,
+      "text": "It's 2l over pi d."
+    },
+    {
+      "start": 1692.32,
+      "end": 1695.38,
+      "text": "So some people a long, long time ago, after they looked at"
+    },
+    {
+      "start": 1695.38,
+      "end": 1699.26,
+      "text": "this answer, they said that maybe that gives us an"
+    },
+    {
+      "start": 1699.26,
+      "end": 1703.4,
+      "text": "interesting way where one could estimate the value of pi,"
+    },
+    {
+      "start": 1703.4,
+      "end": 1706.1,
+      "text": "for example, experimentally."
+    },
+    {
+      "start": 1706.1,
+      "end": 1707.72,
+      "text": "How do you do that?"
+    },
+    {
+      "start": 1707.72,
+      "end": 1712.36,
+      "text": "Fix l and d, the dimensions of the problem."
+    },
+    {
+      "start": 1712.36,
+      "end": 1716.66,
+      "text": "Throw a million needles on your piece of paper."
+    },
+    {
+      "start": 1716.66,
+      "end": 1717.26,
+      "text": "See how often you can do that."
+    },
+    {
+      "start": 1717.26,
+      "end": 1720.68,
+      "text": "How often your needles do intersect the line."
+    },
+    {
+      "start": 1720.68,
+      "end": 1723.82,
+      "text": "That gives you a number for this quantity."
+    },
+    {
+      "start": 1723.82,
+      "end": 1728.5,
+      "text": "You know l and d, so you can use that to infer pi."
+    },
+    {
+      "start": 1728.5,
+      "end": 1732.5,
+      "text": "And there's an apocryphal story about a wounded soldier in a"
+    },
+    {
+      "start": 1732.5,
+      "end": 1736.08,
+      "text": "hospital after the American Civil War who actually had"
+    },
+    {
+      "start": 1736.08,
+      "end": 1738.6,
+      "text": "heard about this and was spending his time in the"
+    },
+    {
+      "start": 1738.6,
+      "end": 1742.84,
+      "text": "hospital throwing needles on pieces of paper."
+    },
+    {
+      "start": 1742.84,
+      "end": 1745.38,
+      "text": "Don't know if it's true or not, but let's do"
+    },
+    {
+      "start": 1745.38,
+      "end": 1746.76,
+      "text": "something similar here."
+    },
+    {
+      "start": 1747.26,
+      "end": 1751.72,
+      "text": "So let's look at this diagram."
+    },
+    {
+      "start": 1751.72,
+      "end": 1754.06,
+      "text": "We fixed the dimensions."
+    },
+    {
+      "start": 1754.06,
+      "end": 1755.88,
+      "text": "This is supposed to be our little d."
+    },
+    {
+      "start": 1755.88,
+      "end": 1758.3,
+      "text": "That's supposed to be our little l."
+    },
+    {
+      "start": 1758.3,
+      "end": 1763.18,
+      "text": "We have the formula from the previous slide that p is 2l"
+    },
+    {
+      "start": 1763.18,
+      "end": 1765.2,
+      "text": "over pi d."
+    },
+    {
+      "start": 1765.2,
+      "end": 1769.2,
+      "text": "In this instance, we choose d to be twice l."
+    },
+    {
+      "start": 1769.2,
+      "end": 1772.16,
+      "text": "So this number is 1 over pi."
+    },
+    {
+      "start": 1772.16,
+      "end": 1776.46,
+      "text": "So the probability that the needle hits the line is 1 over"
+    },
+    {
+      "start": 1776.46,
+      "end": 1776.54,
+      "text": "pi."
+    },
+    {
+      "start": 1777.26,
+      "end": 1781.22,
+      "text": "So I need needles that are 3.1 centimeters long."
+    },
+    {
+      "start": 1781.22,
+      "end": 1784.34,
+      "text": "I couldn't find such needles, but I could find paper clips"
+    },
+    {
+      "start": 1784.34,
+      "end": 1787.36,
+      "text": "that are 3.1 centimeters long."
+    },
+    {
+      "start": 1787.36,
+      "end": 1791.52,
+      "text": "So let's start throwing paper clips at random and see how"
+    },
+    {
+      "start": 1791.52,
+      "end": 1795.34,
+      "text": "many of them will end up intersecting the lines."
+    },
+    {
+      "start": 1801.93,
+      "end": 1809.11,
+      "text": "OK, so out of eight paper clips, we have exactly four"
+    },
+    {
+      "start": 1809.11,
+      "end": 1810.31,
+      "text": "that intersected."
+    },
+    {
+      "start": 1810.43,
+      "end": 1811.49,
+      "text": "The line."
+    },
+    {
+      "start": 1811.49,
+      "end": 1813.99,
+      "text": "So our estimate for the probability of intersecting"
+    },
+    {
+      "start": 1813.99,
+      "end": 1818.55,
+      "text": "the line is 1 over 2, which gives us an estimate for the"
+    },
+    {
+      "start": 1818.55,
+      "end": 1821.99,
+      "text": "value of pi, which is 2."
+    },
+    {
+      "start": 1821.99,
+      "end": 1824.95,
+      "text": "Well, I mean, within an engineering approximation,"
+    },
+    {
+      "start": 1824.95,
+      "end": 1829.14,
+      "text": "we're in the right ballpark, right?"
+    },
+    {
+      "start": 1829.14,
+      "end": 1832.86,
+      "text": "So this might look like a silly way of trying to"
+    },
+    {
+      "start": 1832.86,
+      "end": 1836.42,
+      "text": "estimate pi, and it probably is."
+    },
+    {
+      "start": 1836.42,
+      "end": 1840.6,
+      "text": "On the other hand, this kind of methodology is being used,"
+    },
+    {
+      "start": 1840.6,
+      "end": 1841.8,
+      "text": "especially by scientists."
+    },
+    {
+      "start": 1841.8,
+      "end": 1846.68,
+      "text": "By physicists, and also by statisticians, it's used a lot."
+    },
+    {
+      "start": 1846.68,
+      "end": 1848.26,
+      "text": "When is it used?"
+    },
+    {
+      "start": 1848.26,
+      "end": 1852.3,
+      "text": "If you have an integral to calculate, such as this"
+    },
+    {
+      "start": 1852.3,
+      "end": 1855.98,
+      "text": "integral, but you're not lucky, and your functions are"
+    },
+    {
+      "start": 1855.98,
+      "end": 1859.96,
+      "text": "not so simple where you can do your calculations by hand, and"
+    },
+    {
+      "start": 1859.96,
+      "end": 1861.68,
+      "text": "maybe the dimensions are larger."
+    },
+    {
+      "start": 1861.68,
+      "end": 1863.72,
+      "text": "Instead of two random variables, you have a hundred"
+    },
+    {
+      "start": 1863.72,
+      "end": 1864.46,
+      "text": "random variables."
+    },
+    {
+      "start": 1864.46,
+      "end": 1868.22,
+      "text": "So it's a hundred-fold integral."
+    },
+    {
+      "start": 1868.22,
+      "end": 1871.74,
+      "text": "Then there's no way to do that in a computer, but the way that"
+    },
+    {
+      "start": 1871.74,
+      "end": 1876.3,
+      "text": "you can actually do it is by generating random samples of"
+    },
+    {
+      "start": 1876.3,
+      "end": 1880.08,
+      "text": "your random variables, doing that simulation over and over"
+    },
+    {
+      "start": 1880.08,
+      "end": 1881.2,
+      "text": "many times."
+    },
+    {
+      "start": 1881.2,
+      "end": 1884.98,
+      "text": "That is, by interpreting an integral as a probability, you"
+    },
+    {
+      "start": 1884.98,
+      "end": 1889.42,
+      "text": "can use simulation to estimate that probability, and that"
+    },
+    {
+      "start": 1889.42,
+      "end": 1892.46,
+      "text": "gives you a way of calculating integrals."
+    },
+    {
+      "start": 1892.46,
+      "end": 1896.98,
+      "text": "And physicists do actually use that a lot, as well as"
+    },
+    {
+      "start": 1896.98,
+      "end": 1899.6,
+      "text": "statisticians, computer scientists, and so on."
+    },
+    {
+      "start": 1899.6,
+      "end": 1901.74,
+      "text": "It's a so-called Monte Carlo method."
+    },
+    {
+      "start": 1901.74,
+      "end": 1903.98,
+      "text": "For evaluating integrals."
+    },
+    {
+      "start": 1903.98,
+      "end": 1910.23,
+      "text": "And it's a basic piece of the toolbox in science these days."
+    },
+    {
+      "start": 1910.23,
+      "end": 1914.59,
+      "text": "Finally, the harder concept of the day is the idea of"
+    },
+    {
+      "start": 1914.59,
+      "end": 1915.75,
+      "text": "conditioning."
+    },
+    {
+      "start": 1915.75,
+      "end": 1918.69,
+      "text": "And here, things become a little subtle when you deal"
+    },
+    {
+      "start": 1918.69,
+      "end": 1920.93,
+      "text": "with continuous random variables."
+    },
+    {
+      "start": 1920.93,
+      "end": 1922.29,
+      "text": "OK."
+    },
+    {
+      "start": 1922.29,
+      "end": 1925.79,
+      "text": "First, remember, again, our basic interpretation of what a"
+    },
+    {
+      "start": 1925.79,
+      "end": 1926.81,
+      "text": "density is."
+    },
+    {
+      "start": 1926.81,
+      "end": 1928.77,
+      "text": "A density gives us probabilities"
+    },
+    {
+      "start": 1928.77,
+      "end": 1930.49,
+      "text": "of little intervals."
+    },
+    {
+      "start": 1930.49,
+      "end": 1933.47,
+      "text": "So how should we define conditional densities?"
+    },
+    {
+      "start": 1933.47,
+      "end": 1935.75,
+      "text": "Conditional densities should, again, give us"
+    },
+    {
+      "start": 1935.75,
+      "end": 1939.23,
+      "text": "probabilities of little intervals, but inside a"
+    },
+    {
+      "start": 1939.23,
+      "end": 1942.87,
+      "text": "conditional world, where we have been told something about"
+    },
+    {
+      "start": 1942.87,
+      "end": 1944.47,
+      "text": "the other random variable."
+    },
+    {
+      "start": 1944.47,
+      "end": 1948.07,
+      "text": "So what we would like to be true is the following."
+    },
+    {
+      "start": 1948.07,
+      "end": 1951.29,
+      "text": "We would like to define the concept of a conditional"
+    },
+    {
+      "start": 1951.29,
+      "end": 1954.47,
+      "text": "density of a random variable X, given the value of another"
+    },
+    {
+      "start": 1954.47,
+      "end": 1957.83,
+      "text": "random variable Y. And it should behave the following"
+    },
+    {
+      "start": 1957.83,
+      "end": 1960.51,
+      "text": "way, that the conditional density gives us the"
+    },
+    {
+      "start": 1960.51,
+      "end": 1962.65,
+      "text": "probability of little intervals."
+    },
+    {
+      "start": 1962.65,
+      "end": 1963.43,
+      "text": "Same as here."
+    },
+    {
+      "start": 1963.43,
+      "end": 1968.45,
+      "text": "Given that we are told the value of Y."
+    },
+    {
+      "start": 1968.45,
+      "end": 1971.11,
+      "text": "And here's where the subtleties come."
+    },
+    {
+      "start": 1971.11,
+      "end": 1974.43,
+      "text": "The main thing to notice is that here, I didn't write"
+    },
+    {
+      "start": 1974.43,
+      "end": 1978.25,
+      "text": "equal, I wrote approximately equal."
+    },
+    {
+      "start": 1978.25,
+      "end": 1981.45,
+      "text": "Why do we need that?"
+    },
+    {
+      "start": 1981.45,
+      "end": 1984.47,
+      "text": "Well, the thing is that conditional probabilities are"
+    },
+    {
+      "start": 1984.47,
+      "end": 1988.05,
+      "text": "not defined when you condition on an event that"
+    },
+    {
+      "start": 1988.05,
+      "end": 1990.19,
+      "text": "has zero probability."
+    },
+    {
+      "start": 1990.19,
+      "end": 1993.41,
+      "text": "So we need the conditioning event here to have positive"
+    },
+    {
+      "start": 1993.43,
+      "end": 1994.43,
+      "text": "probability."
+    },
+    {
+      "start": 1994.43,
+      "end": 1998.85,
+      "text": "So instead of saying that Y is exactly equal to little y, we"
+    },
+    {
+      "start": 1998.85,
+      "end": 2003.15,
+      "text": "want to instead say we're in a new universe where capital Y is"
+    },
+    {
+      "start": 2003.15,
+      "end": 2007.07,
+      "text": "very close to little y."
+    },
+    {
+      "start": 2007.07,
+      "end": 2011.45,
+      "text": "And then this notion of very close kind of takes the limit"
+    },
+    {
+      "start": 2011.45,
+      "end": 2014.91,
+      "text": "and takes it to be infinitesimally close."
+    },
+    {
+      "start": 2014.91,
+      "end": 2018.61,
+      "text": "So this is the way to interpret conditional"
+    },
+    {
+      "start": 2018.61,
+      "end": 2020.11,
+      "text": "probabilities."
+    },
+    {
+      "start": 2020.11,
+      "end": 2022.55,
+      "text": "That's what they should mean."
+    },
+    {
+      "start": 2022.55,
+      "end": 2022.85,
+      "text": "Now."
+    },
+    {
+      "start": 2022.85,
+      "end": 2023.35,
+      "text": "In practice."
+    },
+    {
+      "start": 2023.35,
+      "end": 2026.09,
+      "text": "When you actually use probability, you forget about"
+    },
+    {
+      "start": 2026.09,
+      "end": 2026.81,
+      "text": "that subtlety."
+    },
+    {
+      "start": 2026.81,
+      "end": 2030.93,
+      "text": "And you say, well, I've been told that Y is equal to 1.3."
+    },
+    {
+      "start": 2030.93,
+      "end": 2033.79,
+      "text": "Give me the conditional distribution of X. But"
+    },
+    {
+      "start": 2033.79,
+      "end": 2038.11,
+      "text": "formally or rigorously, you should say I'm being told that"
+    },
+    {
+      "start": 2038.11,
+      "end": 2041.41,
+      "text": "Y is infinitesimally close to 1.3."
+    },
+    {
+      "start": 2041.41,
+      "end": 2043.59,
+      "text": "Tell me the distribution of X."
+    },
+    {
+      "start": 2043.59,
+      "end": 2048.57,
+      "text": "Now, if this is what we want, what should this quantity be?"
+    },
+    {
+      "start": 2048.57,
+      "end": 2050.61,
+      "text": "It's a conditional probability, so it should be the"
+    },
+    {
+      "start": 2050.61,
+      "end": 2052.77,
+      "text": "probability of two things happening."
+    },
+    {
+      "start": 2052.77,
+      "end": 2056.53,
+      "text": "X being close to little x, Y being close to little y."
+    },
+    {
+      "start": 2056.53,
+      "end": 2059.99,
+      "text": "And that's basically given to us by the joint density,"
+    },
+    {
+      "start": 2059.99,
+      "end": 2063.87,
+      "text": "divided by the probability of the conditioning event, which"
+    },
+    {
+      "start": 2063.87,
+      "end": 2067.43,
+      "text": "has something to do with the density of Y itself."
+    },
+    {
+      "start": 2067.43,
+      "end": 2071.41,
+      "text": "And if you do things carefully, you see that the only way to"
+    },
+    {
+      "start": 2071.41,
+      "end": 2076.01,
+      "text": "satisfy this relation is to define the conditional density"
+    },
+    {
+      "start": 2076.01,
+      "end": 2078.17,
+      "text": "by this particular formula."
+    },
+    {
+      "start": 2078.17,
+      "end": 2078.57,
+      "text": "OK."
+    },
+    {
+      "start": 2078.57,
+      "end": 2080.93,
+      "text": "Big discussion to come down in the end."
+    },
+    {
+      "start": 2080.93,
+      "end": 2081.61,
+      "text": "To whom?"
+    },
+    {
+      "start": 2081.61,
+      "end": 2082.19,
+      "text": "To whom?"
+    },
+    {
+      "start": 2082.19,
+      "end": 2086.13,
+      "text": "To what you should have probably guessed by now."
+    },
+    {
+      "start": 2086.13,
+      "end": 2089.15,
+      "text": "We just take any formulas and expressions from the discrete"
+    },
+    {
+      "start": 2089.15,
+      "end": 2093.57,
+      "text": "case and replace PMFs by PDFs."
+    },
+    {
+      "start": 2093.57,
+      "end": 2097.95,
+      "text": "So the conditional PDF is defined by this formula, where"
+    },
+    {
+      "start": 2097.95,
+      "end": 2102.43,
+      "text": "here we have joint PDF and marginal PDF, as opposed to"
+    },
+    {
+      "start": 2102.43,
+      "end": 2105.93,
+      "text": "the discrete case, where we had the joint PMF and the"
+    },
+    {
+      "start": 2105.93,
+      "end": 2107.51,
+      "text": "marginal PMF."
+    },
+    {
+      "start": 2107.51,
+      "end": 2111.83,
+      "text": "So in some sense, it's just a syntactic change."
+    },
+    {
+      "start": 2112.19,
+      "end": 2114.49,
+      "text": "In another sense, it's a little subtler on how you"
+    },
+    {
+      "start": 2114.49,
+      "end": 2117.15,
+      "text": "actually interpret it."
+    },
+    {
+      "start": 2117.15,
+      "end": 2120.23,
+      "text": "Speaking about interpretation, what are some ways of thinking"
+    },
+    {
+      "start": 2120.23,
+      "end": 2122.01,
+      "text": "about the joint density?"
+    },
+    {
+      "start": 2122.01,
+      "end": 2124.71,
+      "text": "Well, the best way to think about it is that somebody has"
+    },
+    {
+      "start": 2124.71,
+      "end": 2127.71,
+      "text": "fixed little y for you."
+    },
+    {
+      "start": 2127.71,
+      "end": 2131.99,
+      "text": "So little y is being fixed here."
+    },
+    {
+      "start": 2131.99,
+      "end": 2136.03,
+      "text": "And we look at this density as a function of X. I've told you"
+    },
+    {
+      "start": 2136.03,
+      "end": 2137.01,
+      "text": "what Y is."
+    },
+    {
+      "start": 2137.01,
+      "end": 2139.87,
+      "text": "Tell me what you know about X. And you tell me that X has a"
+    },
+    {
+      "start": 2139.87,
+      "end": 2140.19,
+      "text": "certain distribution."
+    },
+    {
+      "start": 2140.19,
+      "end": 2140.37,
+      "text": "OK."
+    },
+    {
+      "start": 2140.37,
+      "end": 2140.57,
+      "text": "OK."
+    },
+    {
+      "start": 2140.57,
+      "end": 2140.71,
+      "text": "OK."
+    },
+    {
+      "start": 2140.71,
+      "end": 2140.97,
+      "text": "OK."
+    },
+    {
+      "start": 2140.97,
+      "end": 2141.03,
+      "text": "OK."
+    },
+    {
+      "start": 2141.03,
+      "end": 2141.13,
+      "text": "OK."
+    },
+    {
+      "start": 2141.13,
+      "end": 2141.21,
+      "text": "OK."
+    },
+    {
+      "start": 2141.21,
+      "end": 2141.31,
+      "text": "OK."
+    },
+    {
+      "start": 2141.31,
+      "end": 2141.41,
+      "text": "OK."
+    },
+    {
+      "start": 2141.41,
+      "end": 2141.55,
+      "text": "OK."
+    },
+    {
+      "start": 2141.55,
+      "end": 2141.61,
+      "text": "OK."
+    },
+    {
+      "start": 2141.61,
+      "end": 2141.65,
+      "text": "OK."
+    },
+    {
+      "start": 2141.65,
+      "end": 2141.91,
+      "text": "OK."
+    },
+    {
+      "start": 2141.91,
+      "end": 2142.01,
+      "text": "OK."
+    },
+    {
+      "start": 2142.01,
+      "end": 2142.19,
+      "text": "OK."
+    },
+    {
+      "start": 2142.19,
+      "end": 2142.39,
+      "text": "OK."
+    },
+    {
+      "start": 2142.39,
+      "end": 2142.49,
+      "text": "OK."
+    },
+    {
+      "start": 2142.49,
+      "end": 2142.53,
+      "text": "OK."
+    },
+    {
+      "start": 2142.53,
+      "end": 2142.55,
+      "text": "OK."
+    },
+    {
+      "start": 2142.55,
+      "end": 2144.87,
+      "text": "What does that distribution look like?"
+    },
+    {
+      "start": 2144.87,
+      "end": 2150.09,
+      "text": "It has exactly the same shape as the joint density."
+    },
+    {
+      "start": 2150.09,
+      "end": 2153.41,
+      "text": "Remember, we fixed y, so this is a constant."
+    },
+    {
+      "start": 2153.41,
+      "end": 2157.21,
+      "text": "So the only thing that varies is X. So we get the function"
+    },
+    {
+      "start": 2157.21,
+      "end": 2159.19,
+      "text": "that behaves like the joint density."
+    },
+    {
+      "start": 2159.19,
+      "end": 2163.35,
+      "text": "When you fix y, which is really, you take the joint"
+    },
+    {
+      "start": 2163.35,
+      "end": 2165.67,
+      "text": "density and you take a slice of it."
+    },
+    {
+      "start": 2165.67,
+      "end": 2169.59,
+      "text": "You fix y, and you see how it varies with X. So in that"
+    },
+    {
+      "start": 2169.59,
+      "end": 2171.83,
+      "text": "sense, the conditional PDF is just a"
+    },
+    {
+      "start": 2171.83,
+      "end": 2176.07,
+      "text": "slice of the joint PDF, but we need to divide by a certain"
+    },
+    {
+      "start": 2176.07,
+      "end": 2179.53,
+      "text": "number, which just scales it and changes its shape."
+    },
+    {
+      "start": 2179.53,
+      "end": 2182.01,
+      "text": "We're coming back to a picture in a second."
+    },
+    {
+      "start": 2182.01,
+      "end": 2185.41,
+      "text": "But before going to the picture, let's go back to the"
+    },
+    {
+      "start": 2185.41,
+      "end": 2187.83,
+      "text": "interpretation of independence."
+    },
+    {
+      "start": 2187.83,
+      "end": 2191.11,
+      "text": "If the two random variables are independent, according to our"
+    },
+    {
+      "start": 2191.11,
+      "end": 2194.25,
+      "text": "definition in the previous slide, the joint density is"
+    },
+    {
+      "start": 2194.25,
+      "end": 2197.81,
+      "text": "going to factor as the product of the marginal densities."
+    },
+    {
+      "start": 2197.81,
+      "end": 2200.91,
+      "text": "The density of y in the numerator cancels the density"
+    },
+    {
+      "start": 2200.91,
+      "end": 2204.43,
+      "text": "in the denominator, and we're just left with the density of X."
+    },
+    {
+      "start": 2204.43,
+      "end": 2207.11,
+      "text": "So in the case of independence, what we get is that"
+    },
+    {
+      "start": 2207.11,
+      "end": 2209.87,
+      "text": "the conditional is the same as the marginal."
+    },
+    {
+      "start": 2209.87,
+      "end": 2212.99,
+      "text": "And that solidifies our intuition that in the case of"
+    },
+    {
+      "start": 2212.99,
+      "end": 2218.05,
+      "text": "independence, being told something about the value of y"
+    },
+    {
+      "start": 2218.05,
+      "end": 2222.53,
+      "text": "does not change our beliefs about how X is distributed."
+    },
+    {
+      "start": 2222.53,
+      "end": 2226.11,
+      "text": "So whatever we expected about X is going to remain true even"
+    },
+    {
+      "start": 2226.11,
+      "end": 2229.35,
+      "text": "after we are told something about y."
+    },
+    {
+      "start": 2229.35,
+      "end": 2230.79,
+      "text": "So let's look at some pictures."
+    },
+    {
+      "start": 2230.91,
+      "end": 2236.09,
+      "text": "Here's what a joint PDF might look like."
+    },
+    {
+      "start": 2236.09,
+      "end": 2239.51,
+      "text": "Here we got our x- and y-axis."
+    },
+    {
+      "start": 2239.51,
+      "end": 2243.09,
+      "text": "And if you want to calculate the probability of a certain"
+    },
+    {
+      "start": 2243.09,
+      "end": 2247.25,
+      "text": "event, what you do is you look at that event, and you see how"
+    },
+    {
+      "start": 2247.25,
+      "end": 2251.73,
+      "text": "much of that mass is sitting on top of that event."
+    },
+    {
+      "start": 2251.73,
+      "end": 2255.23,
+      "text": "Now let's start slicing."
+    },
+    {
+      "start": 2255.23,
+      "end": 2260.87,
+      "text": "Let's fix a value of X. And look at a long"
+    },
+    {
+      "start": 2260.87,
+      "end": 2260.91,
+      "text": "thing."
+    },
+    {
+      "start": 2260.91,
+      "end": 2268.59,
+      "text": "That slice, where we obtain this function."
+    },
+    {
+      "start": 2268.59,
+      "end": 2272.27,
+      "text": "Now what does that slice do?"
+    },
+    {
+      "start": 2272.27,
+      "end": 2276.13,
+      "text": "That slice tells us, for that particular X, what the possible"
+    },
+    {
+      "start": 2276.13,
+      "end": 2280.33,
+      "text": "values of y are going to be, and how likely they are."
+    },
+    {
+      "start": 2280.33,
+      "end": 2285.43,
+      "text": "If we integrate over all y's, what do we get?"
+    },
+    {
+      "start": 2285.43,
+      "end": 2288.93,
+      "text": "Integrating over all y's just gives us the"
+    },
+    {
+      "start": 2288.93,
+      "end": 2291.77,
+      "text": "marginal density of X."
+    },
+    {
+      "start": 2291.77,
+      "end": 2295.27,
+      "text": "It's the calculation that we did here."
+    },
+    {
+      "start": 2295.27,
+      "end": 2298.77,
+      "text": "By integrating over all y's, we'll find the"
+    },
+    {
+      "start": 2298.77,
+      "end": 2301.51,
+      "text": "marginal density of X."
+    },
+    {
+      "start": 2301.51,
+      "end": 2308.53,
+      "text": "So the total area under that slice gives us the marginal"
+    },
+    {
+      "start": 2308.53,
+      "end": 2312.05,
+      "text": "density of X. And by looking at the different slices, we"
+    },
+    {
+      "start": 2312.05,
+      "end": 2316.63,
+      "text": "found how likely the different values of X are going to be."
+    },
+    {
+      "start": 2316.63,
+      "end": 2319.41,
+      "text": "How about the conditional?"
+    },
+    {
+      "start": 2319.41,
+      "end": 2321.29,
+      "text": "If we're interested at the"
+    },
+    {
+      "start": 2321.29,
+      "end": 2331.2,
+      "text": "conditional of y given X, how would you think about it?"
+    },
+    {
+      "start": 2331.2,
+      "end": 2335.5,
+      "text": "This refers to a universe where we are told that capital X"
+    },
+    {
+      "start": 2335.5,
+      "end": 2337.54,
+      "text": "takes on a specific value."
+    },
+    {
+      "start": 2337.54,
+      "end": 2340.02,
+      "text": "So we put ourselves in the universe where"
+    },
+    {
+      "start": 2340.02,
+      "end": 2341.8,
+      "text": "this line has happened."
+    },
+    {
+      "start": 2341.8,
+      "end": 2345.9,
+      "text": "There's still possible values of y that can happen."
+    },
+    {
+      "start": 2345.9,
+      "end": 2349.26,
+      "text": "And this shape kind of tells us the relative likelihoods of"
+    },
+    {
+      "start": 2349.26,
+      "end": 2350.72,
+      "text": "the different y's."
+    },
+    {
+      "start": 2350.72,
+      "end": 2353.46,
+      "text": "And this is indeed going to be the shape of the"
+    },
+    {
+      "start": 2353.46,
+      "end": 2357.86,
+      "text": "conditional distribution of y, given that X has occurred."
+    },
+    {
+      "start": 2357.86,
+      "end": 2361.06,
+      "text": "On the other hand, the conditional distribution must"
+    },
+    {
+      "start": 2361.06,
+      "end": 2362.66,
+      "text": "add up to 1."
+    },
+    {
+      "start": 2362.66,
+      "end": 2366.76,
+      "text": "So the total probability of the different y's in this universe,"
+    },
+    {
+      "start": 2366.76,
+      "end": 2369.52,
+      "text": "that total probability should be equal to 1."
+    },
+    {
+      "start": 2369.52,
+      "end": 2371.46,
+      "text": "Here, it's not equal to 1."
+    },
+    {
+      "start": 2371.46,
+      "end": 2374.28,
+      "text": "The total area is the marginal density."
+    },
+    {
+      "start": 2374.28,
+      "end": 2378.56,
+      "text": "To make it equal to 1, we need to divide by the marginal"
+    },
+    {
+      "start": 2378.56,
+      "end": 2383.3,
+      "text": "density, which is basically to renormalize this shape."
+    },
+    {
+      "start": 2383.46,
+      "end": 2388.5,
+      "text": "So that the total area under that slice, under that shape, is"
+    },
+    {
+      "start": 2388.5,
+      "end": 2390.4,
+      "text": "equal to 1."
+    },
+    {
+      "start": 2390.4,
+      "end": 2393.4,
+      "text": "So we start with the joint."
+    },
+    {
+      "start": 2393.4,
+      "end": 2395.72,
+      "text": "We take the slices."
+    },
+    {
+      "start": 2395.72,
+      "end": 2400.28,
+      "text": "And then we adjust the slices so that every slice has an"
+    },
+    {
+      "start": 2400.28,
+      "end": 2403.62,
+      "text": "area underneath equal to 1."
+    },
+    {
+      "start": 2403.62,
+      "end": 2405.66,
+      "text": "And this gives us the conditional."
+    },
+    {
+      "start": 2405.66,
+      "end": 2411.0,
+      "text": "So for example, down here, you cannot even see it in this"
+    },
+    {
+      "start": 2411.0,
+      "end": 2411.82,
+      "text": "diagram."
+    },
+    {
+      "start": 2411.82,
+      "end": 2413.06,
+      "text": "But after you renormalize it, you can see that the total area"
+    },
+    {
+      "start": 2413.06,
+      "end": 2413.98,
+      "text": "is equal to 1."
+    },
+    {
+      "start": 2413.98,
+      "end": 2417.2,
+      "text": "So that its total area is equal to 1, you get this sort"
+    },
+    {
+      "start": 2417.2,
+      "end": 2420.16,
+      "text": "of narrow spike that goes up."
+    },
+    {
+      "start": 2420.16,
+      "end": 2423.0,
+      "text": "And so this is a plot of the conditional distributions that"
+    },
+    {
+      "start": 2423.0,
+      "end": 2426.38,
+      "text": "you get for the different values of X. Given a"
+    },
+    {
+      "start": 2426.38,
+      "end": 2429.48,
+      "text": "particular value of X, you're going to get a certain"
+    },
+    {
+      "start": 2429.48,
+      "end": 2431.44,
+      "text": "conditional distribution."
+    },
+    {
+      "start": 2431.44,
+      "end": 2436.48,
+      "text": "So this picture is worth about as much as anything else in"
+    },
+    {
+      "start": 2436.48,
+      "end": 2438.82,
+      "text": "this particular chapter."
+    },
+    {
+      "start": 2438.82,
+      "end": 2442.98,
+      "text": "Make sure you kind of understand exactly all these"
+    },
+    {
+      "start": 2442.98,
+      "end": 2447.14,
+      "text": "pieces of the picture."
+    },
+    {
+      "start": 2447.14,
+      "end": 2449.86,
+      "text": "And finally, let's go in the remaining time through an"
+    },
+    {
+      "start": 2449.86,
+      "end": 2455.22,
+      "text": "example, where we're going to throw in the buckets all the"
+    },
+    {
+      "start": 2455.22,
+      "end": 2458.32,
+      "text": "concepts and notation that we have introduced so far."
+    },
+    {
+      "start": 2458.32,
+      "end": 2459.96,
+      "text": "So the example is as follows."
+    },
+    {
+      "start": 2459.96,
+      "end": 2464.2,
+      "text": "We start with a stick that has a certain length."
+    },
+    {
+      "start": 2464.2,
+      "end": 2467.78,
+      "text": "And we break it at a completely random location."
+    },
+    {
+      "start": 2467.78,
+      "end": 2474.36,
+      "text": "And I guess this 1 should be L. OK."
+    },
+    {
+      "start": 2474.36,
+      "end": 2475.2,
+      "text": "So it has length."
+    },
+    {
+      "start": 2475.2,
+      "end": 2479.2,
+      "text": "L. And we're going to break it at a random place."
+    },
+    {
+      "start": 2479.2,
+      "end": 2481.96,
+      "text": "And we call that random place where we break it, we call it"
+    },
+    {
+      "start": 2481.96,
+      "end": 2486.66,
+      "text": "X. X can be anywhere, uniform distribution."
+    },
+    {
+      "start": 2486.66,
+      "end": 2490.02,
+      "text": "So this means that X has a density that"
+    },
+    {
+      "start": 2490.02,
+      "end": 2494.06,
+      "text": "goes from 0 to L. I guess this capital L is supposed to be"
+    },
+    {
+      "start": 2494.06,
+      "end": 2498.02,
+      "text": "the same as the lower case L. So that's the density of X."
+    },
+    {
+      "start": 2498.02,
+      "end": 2501.52,
+      "text": "And since a density needs to integrate to 1, the height of"
+    },
+    {
+      "start": 2501.52,
+      "end": 2506.3,
+      "text": "that density has to be 1 over L."
+    },
+    {
+      "start": 2506.3,
+      "end": 2506.68,
+      "text": "Now."
+    },
+    {
+      "start": 2506.68,
+      "end": 2510.42,
+      "text": "Having broken the stick, and given that we're left with this"
+    },
+    {
+      "start": 2510.42,
+      "end": 2513.86,
+      "text": "piece of the stick, I'm now going to break it again at a"
+    },
+    {
+      "start": 2513.86,
+      "end": 2515.96,
+      "text": "completely random place."
+    },
+    {
+      "start": 2515.96,
+      "end": 2518.36,
+      "text": "Meaning I'm going to choose a point where I break it"
+    },
+    {
+      "start": 2518.36,
+      "end": 2520.94,
+      "text": "uniformly over the length of the stick."
+    },
+    {
+      "start": 2520.94,
+      "end": 2522.74,
+      "text": "What does this mean?"
+    },
+    {
+      "start": 2522.74,
+      "end": 2525.72,
+      "text": "And let's call Y the location where I break it."
+    },
+    {
+      "start": 2525.72,
+      "end": 2531.1,
+      "text": "So Y is going to range between 0 and X. X is the stick that"
+    },
+    {
+      "start": 2531.1,
+      "end": 2531.86,
+      "text": "I'm left with."
+    },
+    {
+      "start": 2531.86,
+      "end": 2534.18,
+      "text": "So I'm going to break it somewhere in between."
+    },
+    {
+      "start": 2534.18,
+      "end": 2536.3,
+      "text": "So I pick a Y between."
+    },
+    {
+      "start": 2536.68,
+      "end": 2545.06,
+      "text": "0 and X. And of course, X is less than L. And I'm going to"
+    },
+    {
+      "start": 2545.06,
+      "end": 2546.14,
+      "text": "break it there."
+    },
+    {
+      "start": 2546.14,
+      "end": 2552.02,
+      "text": "So Y is uniform between 0 and X. What does that mean?"
+    },
+    {
+      "start": 2552.02,
+      "end": 2557.6,
+      "text": "That the density of Y, given that you have already told me"
+    },
+    {
+      "start": 2557.6,
+      "end": 2562.92,
+      "text": "X, ranges from 0 to little x."
+    },
+    {
+      "start": 2562.92,
+      "end": 2566.16,
+      "text": "If I told you that the first break happened at a particular"
+    },
+    {
+      "start": 2566.16,
+      "end": 2566.68,
+      "text": "X."
+    },
+    {
+      "start": 2566.68,
+      "end": 2570.84,
+      "text": "Then Y can only range over this interval."
+    },
+    {
+      "start": 2570.84,
+      "end": 2573.86,
+      "text": "And I'm assuming a uniform distribution over that"
+    },
+    {
+      "start": 2573.86,
+      "end": 2576.42,
+      "text": "interval, so we have this kind of shape."
+    },
+    {
+      "start": 2576.42,
+      "end": 2580.8,
+      "text": "And that fixes for us the height of the"
+    },
+    {
+      "start": 2580.8,
+      "end": 2585.36,
+      "text": "conditional density."
+    },
+    {
+      "start": 2585.36,
+      "end": 2591.66,
+      "text": "So what's the joint density of those two random variables?"
+    },
+    {
+      "start": 2591.66,
+      "end": 2594.42,
+      "text": "By the definition of conditional densities, the"
+    },
+    {
+      "start": 2594.42,
+      "end": 2598.02,
+      "text": "conditional was defined as the ratio of this divided by that."
+    },
+    {
+      "start": 2598.02,
+      "end": 2601.48,
+      "text": "So we can find the joint density by taking the marginal"
+    },
+    {
+      "start": 2601.48,
+      "end": 2603.62,
+      "text": "and then multiplying by the conditional."
+    },
+    {
+      "start": 2603.62,
+      "end": 2606.08,
+      "text": "This is the same formula as in the discrete case."
+    },
+    {
+      "start": 2606.08,
+      "end": 2609.74,
+      "text": "This is our very familiar multiplication rule, but"
+    },
+    {
+      "start": 2609.74,
+      "end": 2612.16,
+      "text": "adjusted to the case of continuous random variables."
+    },
+    {
+      "start": 2612.16,
+      "end": 2615.28,
+      "text": "So P's become F's."
+    },
+    {
+      "start": 2615.28,
+      "end": 2617.6,
+      "text": "So we do have a formula for this."
+    },
+    {
+      "start": 2617.6,
+      "end": 2618.56,
+      "text": "What is it?"
+    },
+    {
+      "start": 2618.56,
+      "end": 2623.44,
+      "text": "It's 1 over L, that's the density of X, times 1 over X,"
+    },
+    {
+      "start": 2623.44,
+      "end": 2626.64,
+      "text": "which is the conditional density of Y. This is the"
+    },
+    {
+      "start": 2626.64,
+      "end": 2627.9,
+      "text": "formula for the joint density."
+    },
+    {
+      "start": 2627.9,
+      "end": 2628.02,
+      "text": "OK."
+    },
+    {
+      "start": 2628.02,
+      "end": 2630.14,
+      "text": "density, but we must be careful."
+    },
+    {
+      "start": 2630.14,
+      "end": 2633.24,
+      "text": "This is a formula that's not valid anywhere."
+    },
+    {
+      "start": 2633.24,
+      "end": 2637.14,
+      "text": "It's only valid for the x's and y's that are possible."
+    },
+    {
+      "start": 2637.14,
+      "end": 2640.82,
+      "text": "And the x's and y's that are possible are given by these"
+    },
+    {
+      "start": 2640.82,
+      "end": 2641.9,
+      "text": "inequalities."
+    },
+    {
+      "start": 2641.9,
+      "end": 2645.5,
+      "text": "So x can range from 0 to L, and y can"
+    },
+    {
+      "start": 2645.5,
+      "end": 2647.26,
+      "text": "only be smaller than x."
+    },
+    {
+      "start": 2647.26,
+      "end": 2649.9,
+      "text": "So this is the formula for the density on"
+    },
+    {
+      "start": 2649.9,
+      "end": 2652.3,
+      "text": "this part of our space."
+    },
+    {
+      "start": 2652.3,
+      "end": 2656.3,
+      "text": "The density is 0 anywhere else."
+    },
+    {
+      "start": 2656.3,
+      "end": 2658.42,
+      "text": "So what does it look like?"
+    },
+    {
+      "start": 2658.42,
+      "end": 2660.96,
+      "text": "It's basically a 1 over x function."
+    },
+    {
+      "start": 2660.96,
+      "end": 2664.6,
+      "text": "So it's sort of constant along that dimension, but as x goes"
+    },
+    {
+      "start": 2664.6,
+      "end": 2669.3,
+      "text": "to 0, your density goes up and can even blow up."
+    },
+    {
+      "start": 2669.3,
+      "end": 2673.4,
+      "text": "It sort of looks like a sail that's raised and somewhat"
+    },
+    {
+      "start": 2673.4,
+      "end": 2677.64,
+      "text": "curved and has a point up there going to infinity."
+    },
+    {
+      "start": 2677.64,
+      "end": 2679.68,
+      "text": "So this is the joint density."
+    },
+    {
+      "start": 2679.68,
+      "end": 2683.48,
+      "text": "Now once you have in your hands a joint density, then"
+    },
+    {
+      "start": 2683.48,
+      "end": 2686.0,
+      "text": "you can answer, in principle, any problem."
+    },
+    {
+      "start": 2686.0,
+      "end": 2690.56,
+      "text": "It's just a matter of plugging in and doing computations."
+    },
+    {
+      "start": 2690.56,
+      "end": 2693.64,
+      "text": "How about calculating something like a conditional"
+    },
+    {
+      "start": 2693.64,
+      "end": 2699.04,
+      "text": "expectation of y given a value of x?"
+    },
+    {
+      "start": 2699.04,
+      "end": 2703.0,
+      "text": "OK, that's a concept we have not defined so far, but how"
+    },
+    {
+      "start": 2703.0,
+      "end": 2704.82,
+      "text": "should we define it?"
+    },
+    {
+      "start": 2704.82,
+      "end": 2707.58,
+      "text": "It means the reasonable thing, we'll define it the same way"
+    },
+    {
+      "start": 2707.58,
+      "end": 2712.26,
+      "text": "as ordinary expectations, except that since we're given"
+    },
+    {
+      "start": 2712.26,
+      "end": 2715.62,
+      "text": "some conditioning information, we should use the probability"
+    },
+    {
+      "start": 2715.62,
+      "end": 2717.32,
+      "text": "distribution that applies to that"
+    },
+    {
+      "start": 2717.32,
+      "end": 2718.86,
+      "text": "particular situation."
+    },
+    {
+      "start": 2718.86,
+      "end": 2722.56,
+      "text": "So in a situation where we're told the value of x, the"
+    },
+    {
+      "start": 2722.56,
+      "end": 2725.12,
+      "text": "distribution that applies is the conditional"
+    },
+    {
+      "start": 2725.12,
+      "end": 2726.7,
+      "text": "distribution of y."
+    },
+    {
+      "start": 2726.7,
+      "end": 2729.94,
+      "text": "So it's going to be the conditional density of y given"
+    },
+    {
+      "start": 2729.94,
+      "end": 2731.42,
+      "text": "the value of x."
+    },
+    {
+      "start": 2731.42,
+      "end": 2734.08,
+      "text": "Now we know what this is."
+    },
+    {
+      "start": 2734.08,
+      "end": 2737.84,
+      "text": "It's given by 1 over x."
+    },
+    {
+      "start": 2737.84,
+      "end": 2746.14,
+      "text": "So we need to integrate y times 1 over x dy."
+    },
+    {
+      "start": 2746.14,
+      "end": 2747.32,
+      "text": "And what should we integrate?"
+    },
+    {
+      "start": 2747.32,
+      "end": 2749.0,
+      "text": "Integrate over?"
+    },
+    {
+      "start": 2749.0,
+      "end": 2753.94,
+      "text": "Well, given the value of x, y can only range from 0 to x."
+    },
+    {
+      "start": 2753.94,
+      "end": 2756.16,
+      "text": "So this is what we get."
+    },
+    {
+      "start": 2756.16,
+      "end": 2761.64,
+      "text": "And you do your integral, and you get that this is x over 2."
+    },
+    {
+      "start": 2761.64,
+      "end": 2763.04,
+      "text": "Is it a surprise?"
+    },
+    {
+      "start": 2763.04,
+      "end": 2764.44,
+      "text": "It shouldn't be."
+    },
+    {
+      "start": 2764.44,
+      "end": 2770.88,
+      "text": "This is just the expected value of y in a universe where"
+    },
+    {
+      "start": 2770.88,
+      "end": 2774.54,
+      "text": "x has been realized and y is given by this distribution."
+    },
+    {
+      "start": 2774.54,
+      "end": 2777.32,
+      "text": "y is uniform between 0 and x."
+    },
+    {
+      "start": 2777.32,
+      "end": 2780.78,
+      "text": "The expected value of y should be the midpoint of this"
+    },
+    {
+      "start": 2780.78,
+      "end": 2785.0,
+      "text": "interval, which is x over 2."
+    },
+    {
+      "start": 2785.0,
+      "end": 2788.56,
+      "text": "Now let's do fancier stuff."
+    },
+    {
+      "start": 2788.56,
+      "end": 2791.8,
+      "text": "Since we have the joint distribution, we should be"
+    },
+    {
+      "start": 2791.8,
+      "end": 2794.16,
+      "text": "able to calculate the marginal."
+    },
+    {
+      "start": 2794.16,
+      "end": 2796.22,
+      "text": "What is the distribution of y?"
+    },
+    {
+      "start": 2796.22,
+      "end": 2800.48,
+      "text": "After breaking the stick twice, how big is the little"
+    },
+    {
+      "start": 2800.48,
+      "end": 2802.86,
+      "text": "piece that I'm left with?"
+    },
+    {
+      "start": 2802.86,
+      "end": 2804.58,
+      "text": "How do we find this?"
+    },
+    {
+      "start": 2804.58,
+      "end": 2806.94,
+      "text": "To find the marginal, we just take the"
+    },
+    {
+      "start": 2806.94,
+      "end": 2812.58,
+      "text": "joint and integrate out the variable that we don't want."
+    },
+    {
+      "start": 2812.58,
+      "end": 2815.2,
+      "text": "A particular y can happen in many ways."
+    },
+    {
+      "start": 2815.2,
+      "end": 2817.78,
+      "text": "It can happen together with any x."
+    },
+    {
+      "start": 2817.78,
+      "end": 2820.7,
+      "text": "So we consider all the possible x's that can go"
+    },
+    {
+      "start": 2820.7,
+      "end": 2825.92,
+      "text": "together with this y and average over all those x's."
+    },
+    {
+      "start": 2825.92,
+      "end": 2829.32,
+      "text": "So we plug in the formula for the joint density from the"
+    },
+    {
+      "start": 2829.32,
+      "end": 2830.14,
+      "text": "previous slide."
+    },
+    {
+      "start": 2830.14,
+      "end": 2833.06,
+      "text": "We know that it's 1 over Lx."
+    },
+    {
+      "start": 2833.06,
+      "end": 2836.86,
+      "text": "And what's the range of the x's?"
+    },
+    {
+      "start": 2836.86,
+      "end": 2843.1,
+      "text": "So to find the density of y for a particular y up here, I'm"
+    },
+    {
+      "start": 2843.1,
+      "end": 2846.44,
+      "text": "going to integrate over x's."
+    },
+    {
+      "start": 2846.44,
+      "end": 2849.02,
+      "text": "The density is 0 here and there."
+    },
+    {
+      "start": 2849.02,
+      "end": 2852.14,
+      "text": "The density is non-zero only in this part."
+    },
+    {
+      "start": 2852.14,
+      "end": 2857.22,
+      "text": "So I need to integrate over x's going from here to there."
+    },
+    {
+      "start": 2857.22,
+      "end": 2859.08,
+      "text": "So what's the here?"
+    },
+    {
+      "start": 2859.08,
+      "end": 2862.18,
+      "text": "This line goes up at the slope of 1."
+    },
+    {
+      "start": 2862.18,
+      "end": 2865.38,
+      "text": "So this is the line x equals y."
+    },
+    {
+      "start": 2865.38,
+      "end": 2866.7,
+      "text": "So if I fix y."
+    },
+    {
+      "start": 2866.7,
+      "end": 2871.22,
+      "text": "It means that my integral starts from a value of x that"
+    },
+    {
+      "start": 2871.22,
+      "end": 2873.64,
+      "text": "is also equal to y."
+    },
+    {
+      "start": 2873.64,
+      "end": 2878.3,
+      "text": "So where the integral starts from is at x equals y."
+    },
+    {
+      "start": 2878.3,
+      "end": 2881.72,
+      "text": "And it goes all the way until the end of the length of our"
+    },
+    {
+      "start": 2881.72,
+      "end": 2885.2,
+      "text": "stick, which is L. So we need to integrate from"
+    },
+    {
+      "start": 2885.2,
+      "end": 2888.66,
+      "text": "little y up to L."
+    },
+    {
+      "start": 2888.66,
+      "end": 2892.48,
+      "text": "So that's something that pretty almost always comes up."
+    },
+    {
+      "start": 2892.48,
+      "end": 2895.66,
+      "text": "It's not enough to have just this formula for integrating"
+    },
+    {
+      "start": 2895.66,
+      "end": 2896.64,
+      "text": "the joint density."
+    },
+    {
+      "start": 2896.64,
+      "end": 2899.16,
+      "text": "You need to keep track of different regions."
+    },
+    {
+      "start": 2899.16,
+      "end": 2903.88,
+      "text": "And if the joint density is 0 in some regions, then you"
+    },
+    {
+      "start": 2903.88,
+      "end": 2908.24,
+      "text": "exclude those regions from the range of integration."
+    },
+    {
+      "start": 2908.24,
+      "end": 2912.36,
+      "text": "So the range of integration is only over those values where"
+    },
+    {
+      "start": 2912.36,
+      "end": 2915.58,
+      "text": "the particular formula is valid, the places where the"
+    },
+    {
+      "start": 2915.58,
+      "end": 2917.96,
+      "text": "joint density is non-zero."
+    },
+    {
+      "start": 2917.96,
+      "end": 2918.42,
+      "text": "All right."
+    },
+    {
+      "start": 2918.42,
+      "end": 2921.7,
+      "text": "Integral of 1 over x dx, that gives you a logarithm."
+    },
+    {
+      "start": 2921.7,
+      "end": 2926.26,
+      "text": "So we evaluate this integral, and we get an expression of"
+    },
+    {
+      "start": 2926.26,
+      "end": 2926.64,
+      "text": "this kind."
+    },
+    {
+      "start": 2926.64,
+      "end": 2933.64,
+      "text": "So the density of y has an unexpected shape."
+    },
+    {
+      "start": 2933.64,
+      "end": 2939.84,
+      "text": "So it's a logarithmic function, and it goes this way."
+    },
+    {
+      "start": 2939.84,
+      "end": 2945.2,
+      "text": "It's for y going all the way to L. When y is equal to L, the"
+    },
+    {
+      "start": 2945.2,
+      "end": 2947.76,
+      "text": "logarithm of 1 is equal to 0."
+    },
+    {
+      "start": 2947.76,
+      "end": 2952.46,
+      "text": "But when y approaches 0, logarithm of something big"
+    },
+    {
+      "start": 2952.46,
+      "end": 2961.84,
+      "text": "blows up, and we get the shape of this form."
+    },
+    {
+      "start": 2961.84,
+      "end": 2962.08,
+      "text": "OK."
+    },
+    {
+      "start": 2962.08,
+      "end": 2966.14,
+      "text": "Finally, we can calculate the expected value of y, and we can"
+    },
+    {
+      "start": 2966.14,
+      "end": 2969.4,
+      "text": "do this by using the definition of the expectation."
+    },
+    {
+      "start": 2969.4,
+      "end": 2974.2,
+      "text": "So integral of y times the density of y, we already found"
+    },
+    {
+      "start": 2974.2,
+      "end": 2977.98,
+      "text": "what that density is, so we can plug it in here."
+    },
+    {
+      "start": 2977.98,
+      "end": 2981.28,
+      "text": "And we're integrating over the range of possible y's, from 0"
+    },
+    {
+      "start": 2981.28,
+      "end": 2986.58,
+      "text": "to L. Now, this involves the integral of y log y, which I'm"
+    },
+    {
+      "start": 2986.58,
+      "end": 2989.08,
+      "text": "sure you have encountered in your calculus classes, but"
+    },
+    {
+      "start": 2989.08,
+      "end": 2991.32,
+      "text": "maybe do not remember how to do it."
+    },
+    {
+      "start": 2991.32,
+      "end": 2992.08,
+      "text": "In any case, you can do it."
+    },
+    {
+      "start": 2992.08,
+      "end": 2994.84,
+      "text": "You look it up in some integral tables, or do it by"
+    },
+    {
+      "start": 2994.84,
+      "end": 2999.42,
+      "text": "parts, and you get the final answer of L over 4."
+    },
+    {
+      "start": 2999.42,
+      "end": 3002.38,
+      "text": "And at this point, you say, that's a really simple answer."
+    },
+    {
+      "start": 3002.38,
+      "end": 3006.2,
+      "text": "Shouldn't I have expected it to be L over 4?"
+    },
+    {
+      "start": 3006.2,
+      "end": 3008.08,
+      "text": "I guess, yes."
+    },
+    {
+      "start": 3008.08,
+      "end": 3011.42,
+      "text": "When you break it once, the expected value of what you're"
+    },
+    {
+      "start": 3011.42,
+      "end": 3015.76,
+      "text": "left with is going to be 1 half of what you started with."
+    },
+    {
+      "start": 3015.76,
+      "end": 3019.32,
+      "text": "When you break it the next time, the expected length of"
+    },
+    {
+      "start": 3019.32,
+      "end": 3021.32,
+      "text": "what you're left with should be 1 half."
+    },
+    {
+      "start": 3021.32,
+      "end": 3024.54,
+      "text": "1 half of the piece that you are now breaking."
+    },
+    {
+      "start": 3024.54,
+      "end": 3027.36,
+      "text": "So each time that you break it at random, you expect it to"
+    },
+    {
+      "start": 3027.36,
+      "end": 3029.84,
+      "text": "become smaller by a factor of 1 half."
+    },
+    {
+      "start": 3029.84,
+      "end": 3031.94,
+      "text": "So if you break it twice, you're left something that's"
+    },
+    {
+      "start": 3031.94,
+      "end": 3033.94,
+      "text": "expected to be 1 fourth."
+    },
+    {
+      "start": 3033.94,
+      "end": 3037.36,
+      "text": "This is reasoning on the average, which happens to give"
+    },
+    {
+      "start": 3037.36,
+      "end": 3039.0,
+      "text": "you the right answer in this case."
+    },
+    {
+      "start": 3039.0,
+      "end": 3041.78,
+      "text": "But again, there's the warning that reasoning on the average"
+    },
+    {
+      "start": 3041.78,
+      "end": 3044.2,
+      "text": "doesn't always give you the right answer."
+    },
+    {
+      "start": 3044.2,
+      "end": 3048.08,
+      "text": "So be careful about doing arguments of this type."
+    },
+    {
+      "start": 3048.08,
+      "end": 3048.66,
+      "text": "Very good."
+    },
+    {
+      "start": 3048.66,
+      "end": 3049.92,
+      "text": "See you on Wednesday."
+    }
+  ]
+}

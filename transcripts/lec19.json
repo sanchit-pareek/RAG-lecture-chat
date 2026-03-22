@@ -1,0 +1,5057 @@
+{
+  "lecture": "lec19",
+  "language": "en",
+  "duration": 3012.0533125,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.44,
+      "text": "The following content is provided under a Creative"
+    },
+    {
+      "start": 2.44,
+      "end": 3.96,
+      "text": "Commons license."
+    },
+    {
+      "start": 3.96,
+      "end": 6.28,
+      "text": "Your support will help MIT OpenCourseWare"
+    },
+    {
+      "start": 6.28,
+      "end": 10.64,
+      "text": "continue to offer high quality educational resources for free."
+    },
+    {
+      "start": 10.64,
+      "end": 13.26,
+      "text": "To make a donation or view additional materials"
+    },
+    {
+      "start": 13.26,
+      "end": 17.2,
+      "text": "from hundreds of MIT courses, visit MIT OpenCourseWare"
+    },
+    {
+      "start": 17.2,
+      "end": 21.99,
+      "text": "at ocw.mit.edu."
+    },
+    {
+      "start": 21.99,
+      "end": 25.35,
+      "text": "We're going to start today a new unit."
+    },
+    {
+      "start": 25.35,
+      "end": 29.31,
+      "text": "So we will be talking about limit theorems."
+    },
+    {
+      "start": 29.31,
+      "end": 33.15,
+      "text": "So just to introduce the topic, let's think"
+    },
+    {
+      "start": 33.15,
+      "end": 35.63,
+      "text": "of a following situation."
+    },
+    {
+      "start": 35.63,
+      "end": 38.41,
+      "text": "There's a population of penguins down at the South"
+    },
+    {
+      "start": 38.41,
+      "end": 42.69,
+      "text": "Pole, and if you were to pick a penguin at random and measure"
+    },
+    {
+      "start": 42.69,
+      "end": 46.93,
+      "text": "their height, the expected value of their height would be"
+    },
+    {
+      "start": 46.93,
+      "end": 50.01,
+      "text": "the average of the heights of the different penguins in the"
+    },
+    {
+      "start": 50.01,
+      "end": 50.97,
+      "text": "population."
+    },
+    {
+      "start": 50.97,
+      "end": 54.43,
+      "text": "So suppose when you pick one, every penguin is equally"
+    },
+    {
+      "start": 54.43,
+      "end": 57.75,
+      "text": "likely, then the expected value is just the average of"
+    },
+    {
+      "start": 57.75,
+      "end": 59.31,
+      "text": "all the penguins out there."
+    },
+    {
+      "start": 59.31,
+      "end": 62.99,
+      "text": "So your boss asks you to find out what that expected value is."
+    },
+    {
+      "start": 62.99,
+      "end": 66.53,
+      "text": "One way would be to go and measure each and every penguin."
+    },
+    {
+      "start": 66.53,
+      "end": 68.59,
+      "text": "That might be a little time consuming."
+    },
+    {
+      "start": 68.59,
+      "end": 73.11,
+      "text": "So alternatively, what you can do is to go and pick penguins"
+    },
+    {
+      "start": 73.11,
+      "end": 77.45,
+      "text": "at random, pick a few of them, let's say a number n of them."
+    },
+    {
+      "start": 77.45,
+      "end": 82.19,
+      "text": "So you measure the height of each one, and then you"
+    },
+    {
+      "start": 82.19,
+      "end": 86.99,
+      "text": "calculate the average of the heights of those penguins that"
+    },
+    {
+      "start": 86.99,
+      "end": 89.07,
+      "text": "you have collected."
+    },
+    {
+      "start": 89.07,
+      "end": 93.07,
+      "text": "So this is your estimate of the expected value."
+    },
+    {
+      "start": 93.07,
+      "end": 99.59,
+      "text": "Now here, we call this the sample mean, which is the mean"
+    },
+    {
+      "start": 99.59,
+      "end": 104.41,
+      "text": "value, but within the sample that you have collected."
+    },
+    {
+      "start": 104.41,
+      "end": 108.65,
+      "text": "This is something that sort of feels the same as the expected"
+    },
+    {
+      "start": 108.65,
+      "end": 113.35,
+      "text": "value, which is again the mean, but the expected value is a"
+    },
+    {
+      "start": 113.35,
+      "end": 114.41,
+      "text": "different kind of mean."
+    },
+    {
+      "start": 114.41,
+      "end": 117.85,
+      "text": "The expected value is the mean over the entire population,"
+    },
+    {
+      "start": 117.85,
+      "end": 118.83,
+      "text": "whereas the sample"
+    },
+    {
+      "start": 119.07,
+      "end": 122.65,
+      "text": "mean is the average over the smaller sample that you have"
+    },
+    {
+      "start": 122.65,
+      "end": 123.91,
+      "text": "measured."
+    },
+    {
+      "start": 123.91,
+      "end": 126.31,
+      "text": "The expected value is a number."
+    },
+    {
+      "start": 126.31,
+      "end": 129.23,
+      "text": "The sample mean is a random variable."
+    },
+    {
+      "start": 129.23,
+      "end": 132.73,
+      "text": "It's a random variable because the sample you have collected"
+    },
+    {
+      "start": 132.73,
+      "end": 134.97,
+      "text": "is random."
+    },
+    {
+      "start": 134.97,
+      "end": 138.51,
+      "text": "Now we think that this is a reasonable way of estimating"
+    },
+    {
+      "start": 138.51,
+      "end": 139.87,
+      "text": "the expectation."
+    },
+    {
+      "start": 139.87,
+      "end": 145.67,
+      "text": "So in the limit as n goes to infinity, it's plausible that"
+    },
+    {
+      "start": 145.67,
+      "end": 149.07,
+      "text": "the sample mean, the estimate that we are constructing,"
+    },
+    {
+      "start": 149.07,
+      "end": 152.99,
+      "text": "should somehow get close to the expected value."
+    },
+    {
+      "start": 152.99,
+      "end": 154.55,
+      "text": "What does this mean?"
+    },
+    {
+      "start": 154.55,
+      "end": 156.13,
+      "text": "What does it mean to get close?"
+    },
+    {
+      "start": 156.13,
+      "end": 157.59,
+      "text": "In what sense?"
+    },
+    {
+      "start": 157.59,
+      "end": 159.41,
+      "text": "And is this statement true?"
+    },
+    {
+      "start": 159.41,
+      "end": 164.11,
+      "text": "This is the kind of statement that we deal with when dealing"
+    },
+    {
+      "start": 164.11,
+      "end": 165.65,
+      "text": "with limit theorems."
+    },
+    {
+      "start": 165.65,
+      "end": 168.03,
+      "text": "That's the subject of limit theorems."
+    },
+    {
+      "start": 168.03,
+      "end": 171.25,
+      "text": "What happens if you're dealing with lots and lots of random"
+    },
+    {
+      "start": 171.25,
+      "end": 174.59,
+      "text": "variables, and perhaps take averages and so on?"
+    },
+    {
+      "start": 174.59,
+      "end": 177.23,
+      "text": "So why do we bother about this?"
+    },
+    {
+      "start": 177.23,
+      "end": 178.91,
+      "text": "Well, I mean."
+    },
+    {
+      "start": 178.91,
+      "end": 181.15,
+      "text": "If you're in the sampling business, it would be"
+    },
+    {
+      "start": 181.15,
+      "end": 184.85,
+      "text": "reassuring to know that this particular way of estimating"
+    },
+    {
+      "start": 184.85,
+      "end": 187.67,
+      "text": "the expected value actually gets you close to the true"
+    },
+    {
+      "start": 187.67,
+      "end": 188.79,
+      "text": "answer."
+    },
+    {
+      "start": 188.79,
+      "end": 191.85,
+      "text": "There's also a higher level reason, which is a little more"
+    },
+    {
+      "start": 191.85,
+      "end": 193.59,
+      "text": "abstract and mathematical."
+    },
+    {
+      "start": 193.59,
+      "end": 197.07,
+      "text": "So probability problems are easy to deal with if you're"
+    },
+    {
+      "start": 197.07,
+      "end": 199.99,
+      "text": "having in your hands one or two random variables."
+    },
+    {
+      "start": 199.99,
+      "end": 203.49,
+      "text": "You can write down their mass functions, joint density"
+    },
+    {
+      "start": 203.49,
+      "end": 204.87,
+      "text": "functions, and so on."
+    },
+    {
+      "start": 204.87,
+      "end": 207.45,
+      "text": "You can calculate on paper or on a computer."
+    },
+    {
+      "start": 207.45,
+      "end": 208.47,
+      "text": "You can get answers."
+    },
+    {
+      "start": 208.91,
+      "end": 213.55,
+      "text": "Probability problems become computationally intractable if"
+    },
+    {
+      "start": 213.55,
+      "end": 216.75,
+      "text": "you're dealing, let's say, with 100 random variables, and"
+    },
+    {
+      "start": 216.75,
+      "end": 220.27,
+      "text": "you're trying to get exact answers for anything."
+    },
+    {
+      "start": 220.27,
+      "end": 223.03,
+      "text": "So in principle, the same formulas that we have, they"
+    },
+    {
+      "start": 223.03,
+      "end": 224.19,
+      "text": "still apply."
+    },
+    {
+      "start": 224.19,
+      "end": 227.35,
+      "text": "But they involve summations over large ranges of"
+    },
+    {
+      "start": 227.35,
+      "end": 228.81,
+      "text": "combinations of indices."
+    },
+    {
+      "start": 228.81,
+      "end": 231.31,
+      "text": "And that makes life extremely difficult."
+    },
+    {
+      "start": 231.31,
+      "end": 234.43,
+      "text": "But when you push the envelope, and you go to a"
+    },
+    {
+      "start": 234.43,
+      "end": 238.11,
+      "text": "situation where you're dealing with a very, very large number"
+    },
+    {
+      "start": 238.11,
+      "end": 238.79,
+      "text": "of random variables."
+    },
+    {
+      "start": 238.79,
+      "end": 242.11,
+      "text": "Then you can start taking limits."
+    },
+    {
+      "start": 242.11,
+      "end": 245.21,
+      "text": "And when you take limits, wonderful things happen."
+    },
+    {
+      "start": 245.21,
+      "end": 248.03,
+      "text": "Many formulas start simplifying, and you can"
+    },
+    {
+      "start": 248.03,
+      "end": 251.75,
+      "text": "actually get useful answers by considering those limits."
+    },
+    {
+      "start": 251.75,
+      "end": 255.47,
+      "text": "And that's sort of the big reason why looking at limit"
+    },
+    {
+      "start": 255.47,
+      "end": 257.83,
+      "text": "theorems is a useful thing to do."
+    },
+    {
+      "start": 257.83,
+      "end": 260.39,
+      "text": "So what we're going to do today first, we're going to"
+    },
+    {
+      "start": 260.39,
+      "end": 267.11,
+      "text": "start with a useful, simple tool that allows us to relate"
+    },
+    {
+      "start": 267.11,
+      "end": 268.63,
+      "text": "probabilities with"
+    },
+    {
+      "start": 268.63,
+      "end": 270.71,
+      "text": "expected values."
+    },
+    {
+      "start": 270.71,
+      "end": 273.31,
+      "text": "The Markov inequality is the first inequality we're going to"
+    },
+    {
+      "start": 273.31,
+      "end": 273.83,
+      "text": "write down."
+    },
+    {
+      "start": 273.83,
+      "end": 277.53,
+      "text": "And then using that, we're going to get the Chebyshev"
+    },
+    {
+      "start": 277.53,
+      "end": 279.75,
+      "text": "inequality, a related inequality."
+    },
+    {
+      "start": 279.75,
+      "end": 283.73,
+      "text": "Then we need to define what do we mean by convergence when we"
+    },
+    {
+      "start": 283.73,
+      "end": 285.25,
+      "text": "talk about random variables."
+    },
+    {
+      "start": 285.25,
+      "end": 288.29,
+      "text": "It's a notion that's a generalization of the notion"
+    },
+    {
+      "start": 288.29,
+      "end": 291.75,
+      "text": "of the usual convergence of limits of a sequence of"
+    },
+    {
+      "start": 291.75,
+      "end": 292.67,
+      "text": "numbers."
+    },
+    {
+      "start": 292.67,
+      "end": 296.19,
+      "text": "And once we have our notion of convergence, we're going to see"
+    },
+    {
+      "start": 296.19,
+      "end": 298.33,
+      "text": "that, indeed, the sample mean."
+    },
+    {
+      "start": 298.63,
+      "end": 302.11,
+      "text": "The sample mean converges to the true mean, converges to the"
+    },
+    {
+      "start": 302.11,
+      "end": 304.39,
+      "text": "expected value of the x's."
+    },
+    {
+      "start": 304.39,
+      "end": 308.85,
+      "text": "And this statement is called the weak law of large numbers."
+    },
+    {
+      "start": 308.85,
+      "end": 311.63,
+      "text": "The reason it's called the weak law is because there's"
+    },
+    {
+      "start": 311.63,
+      "end": 315.23,
+      "text": "also a strong law, which is a statement with the same flavor"
+    },
+    {
+      "start": 315.23,
+      "end": 318.39,
+      "text": "but with a somewhat different mathematical content."
+    },
+    {
+      "start": 318.39,
+      "end": 320.79,
+      "text": "But it's a little more abstract, and we will not be"
+    },
+    {
+      "start": 320.79,
+      "end": 321.67,
+      "text": "getting into this."
+    },
+    {
+      "start": 321.67,
+      "end": 326.07,
+      "text": "So the weak law is all that you're going to get."
+    },
+    {
+      "start": 326.07,
+      "end": 328.51,
+      "text": "All right."
+    },
+    {
+      "start": 328.51,
+      "end": 331.01,
+      "text": "So now we start our digression."
+    },
+    {
+      "start": 331.01,
+      "end": 345.01,
+      "text": "And our first tool will be the so-called Markov inequality."
+    },
+    {
+      "start": 345.01,
+      "end": 348.01,
+      "text": "So let's take a random variable that's always"
+    },
+    {
+      "start": 348.01,
+      "end": 348.81,
+      "text": "non-negative."
+    },
+    {
+      "start": 348.81,
+      "end": 351.95,
+      "text": "No matter what, it gets non-negative values."
+    },
+    {
+      "start": 351.95,
+      "end": 354.57,
+      "text": "To keep things simple, let's assume it's a discrete random"
+    },
+    {
+      "start": 354.57,
+      "end": 355.47,
+      "text": "variable."
+    },
+    {
+      "start": 355.47,
+      "end": 359.71,
+      "text": "So the expected value is the sum over all possible values"
+    },
+    {
+      "start": 359.71,
+      "end": 365.53,
+      "text": "that the random variable can take, the values of the random"
+    },
+    {
+      "start": 365.53,
+      "end": 366.45,
+      "text": "variables that can take."
+    },
+    {
+      "start": 366.45,
+      "end": 369.05,
+      "text": "Take weighted according to their"
+    },
+    {
+      "start": 369.05,
+      "end": 370.83,
+      "text": "corresponding probabilities."
+    },
+    {
+      "start": 370.83,
+      "end": 373.73,
+      "text": "Now this is the sum over all x's."
+    },
+    {
+      "start": 373.73,
+      "end": 378.77,
+      "text": "But x takes non-negative values, and the PMF is also"
+    },
+    {
+      "start": 378.77,
+      "end": 379.79,
+      "text": "non-negative."
+    },
+    {
+      "start": 379.79,
+      "end": 384.31,
+      "text": "So if I take a sum over fewer things, I'm going to get a"
+    },
+    {
+      "start": 384.31,
+      "end": 385.55,
+      "text": "smaller value."
+    },
+    {
+      "start": 385.55,
+      "end": 389.15,
+      "text": "So the sum, when I add over everything, is less than or"
+    },
+    {
+      "start": 389.15,
+      "end": 393.35,
+      "text": "equal to the sum that I will get if I only add those terms"
+    },
+    {
+      "start": 393.35,
+      "end": 395.55,
+      "text": "that are bigger than a certain constant."
+    },
+    {
+      "start": 398.53,
+      "end": 405.11,
+      "text": "Now if I'm adding over x's that are bigger than a, the x"
+    },
+    {
+      "start": 405.11,
+      "end": 408.65,
+      "text": "that shows up up there will always be larger"
+    },
+    {
+      "start": 408.65,
+      "end": 410.43,
+      "text": "than or equal to a."
+    },
+    {
+      "start": 410.43,
+      "end": 418.12,
+      "text": "So we get this inequality."
+    },
+    {
+      "start": 418.12,
+      "end": 419.92,
+      "text": "And now a is a constant."
+    },
+    {
+      "start": 419.92,
+      "end": 422.82,
+      "text": "I can pull it outside the summation."
+    },
+    {
+      "start": 422.82,
+      "end": 425.28,
+      "text": "And then I'm left with the probabilities of all the x's"
+    },
+    {
+      "start": 425.28,
+      "end": 426.94,
+      "text": "that are bigger than a."
+    },
+    {
+      "start": 426.94,
+      "end": 429.6,
+      "text": "And that's just the probability of being bigger"
+    },
+    {
+      "start": 429.6,
+      "end": 435.5,
+      "text": "than a."
+    },
+    {
+      "start": 435.5,
+      "end": 435.9,
+      "text": "OK."
+    },
+    {
+      "start": 435.9,
+      "end": 437.38,
+      "text": "So that's the Markov inequality."
+    },
+    {
+      "start": 437.38,
+      "end": 437.68,
+      "text": "Thank you."
+    },
+    {
+      "start": 437.74,
+      "end": 443.56,
+      "text": "Basically, it tells us that the expected value is larger"
+    },
+    {
+      "start": 443.56,
+      "end": 446.22,
+      "text": "than or equal to this number."
+    },
+    {
+      "start": 446.22,
+      "end": 450.24,
+      "text": "It relates expected values to probabilities."
+    },
+    {
+      "start": 450.24,
+      "end": 454.66,
+      "text": "It tells us that if the expected value is small, then"
+    },
+    {
+      "start": 454.66,
+      "end": 459.24,
+      "text": "the probability that x is big is also going to be small."
+    },
+    {
+      "start": 459.24,
+      "end": 462.22,
+      "text": "So it translates a statement about smallness of expected"
+    },
+    {
+      "start": 462.22,
+      "end": 469.01,
+      "text": "values to a statement about smallness of probabilities."
+    },
+    {
+      "start": 469.01,
+      "end": 469.31,
+      "text": "OK."
+    },
+    {
+      "start": 469.31,
+      "end": 474.19,
+      "text": "What we actually need is a somewhat different version of"
+    },
+    {
+      "start": 474.19,
+      "end": 477.19,
+      "text": "this same statement."
+    },
+    {
+      "start": 477.19,
+      "end": 482.93,
+      "text": "And what we're going to do is to apply this inequality to a"
+    },
+    {
+      "start": 482.93,
+      "end": 488.11,
+      "text": "non-negative random variable of a special type."
+    },
+    {
+      "start": 488.11,
+      "end": 493.29,
+      "text": "And you can think of applying this same calculation to a"
+    },
+    {
+      "start": 493.29,
+      "end": 498.91,
+      "text": "random variable of this form, x minus mu squared, where mu is"
+    },
+    {
+      "start": 498.91,
+      "end": 501.85,
+      "text": "the expected value of x."
+    },
+    {
+      "start": 501.85,
+      "end": 504.73,
+      "text": "Now, this is a non-negative random variable."
+    },
+    {
+      "start": 504.73,
+      "end": 511.61,
+      "text": "So the expected value of this random variable has to be"
+    },
+    {
+      "start": 511.61,
+      "end": 517.43,
+      "text": "larger than or the expected value of this random variable,"
+    },
+    {
+      "start": 517.43,
+      "end": 521.39,
+      "text": "which is the variance, by following the same thinking as"
+    },
+    {
+      "start": 521.39,
+      "end": 528.91,
+      "text": "we had in that derivation up to there, is bigger than the"
+    },
+    {
+      "start": 528.91,
+      "end": 538.19,
+      "text": "probability that this random variable is bigger than some,"
+    },
+    {
+      "start": 538.19,
+      "end": 546.26,
+      "text": "let me use an a squared instead of an a, times the value a"
+    },
+    {
+      "start": 546.26,
+      "end": 547.16,
+      "text": "squared."
+    },
+    {
+      "start": 547.16,
+      "end": 556.29,
+      "text": "So now, of course, this probability is the same as the"
+    },
+    {
+      "start": 556.29,
+      "end": 561.73,
+      "text": "probability that the absolute value of x minus mu is bigger"
+    },
+    {
+      "start": 561.73,
+      "end": 566.03,
+      "text": "than a squared, than a times a squared."
+    },
+    {
+      "start": 566.69,
+      "end": 573.58,
+      "text": "And this side is equal to the variance of x."
+    },
+    {
+      "start": 573.58,
+      "end": 579.78,
+      "text": "So this relates the variance of x to the probability that"
+    },
+    {
+      "start": 579.78,
+      "end": 585.14,
+      "text": "our random variable is far away from its mean."
+    },
+    {
+      "start": 585.14,
+      "end": 590.56,
+      "text": "If the variance is small, then it means that the probability"
+    },
+    {
+      "start": 590.56,
+      "end": 596.36,
+      "text": "of being far away from the mean is also small."
+    },
+    {
+      "start": 596.36,
+      "end": 597.2,
+      "text": "OK."
+    },
+    {
+      "start": 597.2,
+      "end": 598.24,
+      "text": "So I derived this."
+    },
+    {
+      "start": 598.24,
+      "end": 598.26,
+      "text": "."
+    },
+    {
+      "start": 598.26,
+      "end": 598.3,
+      "text": "."
+    },
+    {
+      "start": 598.3,
+      "end": 598.34,
+      "text": "."
+    },
+    {
+      "start": 598.34,
+      "end": 598.36,
+      "text": "."
+    },
+    {
+      "start": 598.36,
+      "end": 598.4,
+      "text": "."
+    },
+    {
+      "start": 598.4,
+      "end": 598.42,
+      "text": "."
+    },
+    {
+      "start": 598.42,
+      "end": 598.44,
+      "text": "."
+    },
+    {
+      "start": 598.44,
+      "end": 598.52,
+      "text": "."
+    },
+    {
+      "start": 598.52,
+      "end": 598.54,
+      "text": "."
+    },
+    {
+      "start": 598.54,
+      "end": 598.56,
+      "text": "."
+    },
+    {
+      "start": 598.56,
+      "end": 598.58,
+      "text": "."
+    },
+    {
+      "start": 598.58,
+      "end": 600.24,
+      "text": "And I can do this by applying the Markov"
+    },
+    {
+      "start": 600.24,
+      "end": 604.92,
+      "text": "inequality to this particular non-negative random variable,"
+    },
+    {
+      "start": 604.92,
+      "end": 609.44,
+      "text": "or just to reinforce, perhaps, the message and increase your"
+    },
+    {
+      "start": 609.44,
+      "end": 612.42,
+      "text": "confidence in this inequality."
+    },
+    {
+      "start": 612.42,
+      "end": 615.76,
+      "text": "Let's just look at the derivation once more, where I'm"
+    },
+    {
+      "start": 615.76,
+      "end": 618.94,
+      "text": "going here to start from first principles, but use the same"
+    },
+    {
+      "start": 618.94,
+      "end": 623.06,
+      "text": "idea as the one that was used in the proof out here."
+    },
+    {
+      "start": 623.06,
+      "end": 626.86,
+      "text": "OK, so just for variety, now let's think of x as being a"
+    },
+    {
+      "start": 626.86,
+      "end": 628.52,
+      "text": "continuous random variable."
+    },
+    {
+      "start": 628.52,
+      "end": 630.86,
+      "text": "The derivation is the same, whether it's"
+    },
+    {
+      "start": 630.86,
+      "end": 632.52,
+      "text": "discrete or continuous."
+    },
+    {
+      "start": 632.52,
+      "end": 635.98,
+      "text": "So by definition, the variance is the integral, is this"
+    },
+    {
+      "start": 635.98,
+      "end": 638.14,
+      "text": "particular integral."
+    },
+    {
+      "start": 638.14,
+      "end": 643.92,
+      "text": "Now, the integral is going to become smaller if I integrate."
+    },
+    {
+      "start": 643.92,
+      "end": 647.14,
+      "text": "Instead of integrating over the full range, I only"
+    },
+    {
+      "start": 647.14,
+      "end": 651.08,
+      "text": "integrate over x's that are far away from the mean."
+    },
+    {
+      "start": 651.08,
+      "end": 652.7,
+      "text": "So mu is the mean."
+    },
+    {
+      "start": 652.7,
+      "end": 654.96,
+      "text": "Think of c as some big number."
+    },
+    {
+      "start": 654.96,
+      "end": 657.58,
+      "text": "This is the probability that you're far away from the mean"
+    },
+    {
+      "start": 657.58,
+      "end": 658.56,
+      "text": "to the left."
+    },
+    {
+      "start": 658.56,
+      "end": 662.22,
+      "text": "Sorry, these are x's that are far away from the mean to the"
+    },
+    {
+      "start": 662.22,
+      "end": 665.42,
+      "text": "left, from minus infinity to mu minus c."
+    },
+    {
+      "start": 665.42,
+      "end": 669.02,
+      "text": "And these are the x's that are far away from the mean on the"
+    },
+    {
+      "start": 669.02,
+      "end": 671.22,
+      "text": "positive side."
+    },
+    {
+      "start": 671.22,
+      "end": 674.48,
+      "text": "So by integrating over fewer stuff, I'm getting a smaller"
+    },
+    {
+      "start": 674.48,
+      "end": 675.58,
+      "text": "integral."
+    },
+    {
+      "start": 675.58,
+      "end": 681.98,
+      "text": "Now, for any x in this range, this distance, x minus mu is"
+    },
+    {
+      "start": 681.98,
+      "end": 683.22,
+      "text": "at least c."
+    },
+    {
+      "start": 683.22,
+      "end": 686.32,
+      "text": "So that squared is at least c squared."
+    },
+    {
+      "start": 686.32,
+      "end": 689.68,
+      "text": "So this term over this range of integration is at least c"
+    },
+    {
+      "start": 689.68,
+      "end": 690.56,
+      "text": "squared."
+    },
+    {
+      "start": 690.56,
+      "end": 693.26,
+      "text": "So I can take it outside the integral."
+    },
+    {
+      "start": 693.26,
+      "end": 696.4,
+      "text": "And I'm left just with the integral of the density."
+    },
+    {
+      "start": 696.4,
+      "end": 698.5,
+      "text": "Same thing on the other side."
+    },
+    {
+      "start": 698.5,
+      "end": 701.8,
+      "text": "And so what factors out is this term c squared."
+    },
+    {
+      "start": 701.8,
+      "end": 705.54,
+      "text": "And inside, we're left with the probability of being to the"
+    },
+    {
+      "start": 705.54,
+      "end": 709.16,
+      "text": "left of mu minus c, and then the probability of being to"
+    },
+    {
+      "start": 709.16,
+      "end": 712.96,
+      "text": "the right of mu plus c, which is the same as the probability"
+    },
+    {
+      "start": 712.96,
+      "end": 716.3,
+      "text": "that the absolute value of the distance from the mean is"
+    },
+    {
+      "start": 716.32,
+      "end": 718.76,
+      "text": "larger than or equal to c."
+    },
+    {
+      "start": 718.76,
+      "end": 724.82,
+      "text": "So that's the same inequality that we proved there, except"
+    },
+    {
+      "start": 724.82,
+      "end": 726.04,
+      "text": "that here I'm using c."
+    },
+    {
+      "start": 726.04,
+      "end": 730.5,
+      "text": "There I used a, but it's exactly the same one."
+    },
+    {
+      "start": 730.5,
+      "end": 732.96,
+      "text": "This inequality is maybe better to understand if you"
+    },
+    {
+      "start": 732.96,
+      "end": 737.42,
+      "text": "take that term and send it to the other side and write it in"
+    },
+    {
+      "start": 737.42,
+      "end": 738.76,
+      "text": "this form."
+    },
+    {
+      "start": 738.76,
+      "end": 740.0,
+      "text": "What does it tell us?"
+    },
+    {
+      "start": 740.0,
+      "end": 745.76,
+      "text": "It tells us that if c is a big number, it tells us that the"
+    },
+    {
+      "start": 745.76,
+      "end": 750.54,
+      "text": "probability of being more than c away from the mean is"
+    },
+    {
+      "start": 750.54,
+      "end": 752.36,
+      "text": "going to be a small number."
+    },
+    {
+      "start": 752.36,
+      "end": 754.78,
+      "text": "When c is big, this is small."
+    },
+    {
+      "start": 754.78,
+      "end": 755.96,
+      "text": "Now this is intuitive."
+    },
+    {
+      "start": 755.96,
+      "end": 758.28,
+      "text": "The variance is a measure of the spread of the"
+    },
+    {
+      "start": 758.28,
+      "end": 760.98,
+      "text": "distribution, how wide it is."
+    },
+    {
+      "start": 760.98,
+      "end": 763.96,
+      "text": "It tells us that if the variance is small, the"
+    },
+    {
+      "start": 763.96,
+      "end": 766.32,
+      "text": "distribution is not very wide."
+    },
+    {
+      "start": 766.32,
+      "end": 768.96,
+      "text": "And mathematically, this translates to this statement"
+    },
+    {
+      "start": 768.96,
+      "end": 772.38,
+      "text": "that when the variance is small, the probability of"
+    },
+    {
+      "start": 772.38,
+      "end": 774.88,
+      "text": "being far away is going to be small."
+    },
+    {
+      "start": 774.88,
+      "end": 775.74,
+      "text": "And the further away the distribution is, the more the"
+    },
+    {
+      "start": 775.74,
+      "end": 779.6,
+      "text": "way you're looking, that is, if c is a bigger number, that"
+    },
+    {
+      "start": 779.6,
+      "end": 784.93,
+      "text": "probability also becomes small."
+    },
+    {
+      "start": 784.93,
+      "end": 787.87,
+      "text": "Maybe an even more intuitive way to think about the content"
+    },
+    {
+      "start": 787.87,
+      "end": 793.29,
+      "text": "of this inequality is to, instead of c, use the number"
+    },
+    {
+      "start": 793.29,
+      "end": 797.47,
+      "text": "k, where k is positive and sigma is the standard"
+    },
+    {
+      "start": 797.47,
+      "end": 798.53,
+      "text": "deviation."
+    },
+    {
+      "start": 798.53,
+      "end": 802.67,
+      "text": "So let's just plug k sigma in the place of c."
+    },
+    {
+      "start": 802.67,
+      "end": 805.33,
+      "text": "So this becomes k sigma squared."
+    },
+    {
+      "start": 805.33,
+      "end": 807.13,
+      "text": "The sigma squares cancel."
+    },
+    {
+      "start": 807.13,
+      "end": 809.77,
+      "text": "We're left with 1 over k squared."
+    },
+    {
+      "start": 809.77,
+      "end": 811.69,
+      "text": "Now what is this?"
+    },
+    {
+      "start": 811.69,
+      "end": 816.59,
+      "text": "This is the event that you are k standard deviations away from"
+    },
+    {
+      "start": 816.59,
+      "end": 817.79,
+      "text": "the mean."
+    },
+    {
+      "start": 817.79,
+      "end": 820.81,
+      "text": "So for example, this statement here tells you that if you look"
+    },
+    {
+      "start": 820.81,
+      "end": 824.89,
+      "text": "at the test scores from a quiz, what fraction of the"
+    },
+    {
+      "start": 824.89,
+      "end": 829.89,
+      "text": "class are three standard deviations away from the mean?"
+    },
+    {
+      "start": 829.89,
+      "end": 833.01,
+      "text": "It's possible, but it's not going to be a lot of people."
+    },
+    {
+      "start": 833.01,
+      "end": 837.13,
+      "text": "It's going to be at most one ninth of the class that can be"
+    },
+    {
+      "start": 837.13,
+      "end": 842.15,
+      "text": "three standard deviations or more away from the mean."
+    },
+    {
+      "start": 842.15,
+      "end": 845.47,
+      "text": "So the Chebyshev inequality is a really useful one."
+    },
+    {
+      "start": 845.47,
+      "end": 847.81,
+      "text": "It comes in handy."
+    },
+    {
+      "start": 847.81,
+      "end": 851.25,
+      "text": "It comes in handy whenever you want to relate probabilities"
+    },
+    {
+      "start": 851.25,
+      "end": 852.75,
+      "text": "and expected values."
+    },
+    {
+      "start": 852.75,
+      "end": 856.35,
+      "text": "So if you know something about expected values, or in"
+    },
+    {
+      "start": 856.35,
+      "end": 859.23,
+      "text": "particular that your variance is small, this tells you"
+    },
+    {
+      "start": 859.23,
+      "end": 863.05,
+      "text": "something about tail probabilities."
+    },
+    {
+      "start": 863.05,
+      "end": 865.77,
+      "text": "So this is the end of our first digression."
+    },
+    {
+      "start": 865.77,
+      "end": 866.91,
+      "text": "We have this inequality."
+    },
+    {
+      "start": 866.91,
+      "end": 868.31,
+      "text": "It's in our hands."
+    },
+    {
+      "start": 868.31,
+      "end": 874.67,
+      "text": "Our second digression is talk about limits."
+    },
+    {
+      "start": 874.67,
+      "end": 877.19,
+      "text": "We want to eventually talk about limits of random"
+    },
+    {
+      "start": 877.19,
+      "end": 879.75,
+      "text": "variables, but as a warm up, we're going to start with"
+    },
+    {
+      "start": 879.75,
+      "end": 882.45,
+      "text": "limits of sequences."
+    },
+    {
+      "start": 882.45,
+      "end": 890.49,
+      "text": "So you're given a sequence of numbers, a1, a2, a3, and so on."
+    },
+    {
+      "start": 890.49,
+      "end": 894.15,
+      "text": "And we want to define the notion that a sequence"
+    },
+    {
+      "start": 894.15,
+      "end": 896.47,
+      "text": "converges to a number."
+    },
+    {
+      "start": 896.47,
+      "end": 898.79,
+      "text": "You sort of know what this means."
+    },
+    {
+      "start": 898.79,
+      "end": 906.48,
+      "text": "But let's just go through it once more."
+    },
+    {
+      "start": 906.48,
+      "end": 909.94,
+      "text": "So here's a."
+    },
+    {
+      "start": 909.94,
+      "end": 916.16,
+      "text": "We have our sequence of values as n increases."
+    },
+    {
+      "start": 916.16,
+      "end": 920.28,
+      "text": "What do we mean by the sequence converging to a is"
+    },
+    {
+      "start": 920.28,
+      "end": 923.58,
+      "text": "that when you look at those values, they get closer and"
+    },
+    {
+      "start": 923.58,
+      "end": 925.14,
+      "text": "closer to a."
+    },
+    {
+      "start": 925.14,
+      "end": 929.22,
+      "text": "So this value here is your typical a sub n."
+    },
+    {
+      "start": 929.22,
+      "end": 929.58,
+      "text": "OK."
+    },
+    {
+      "start": 929.58,
+      "end": 933.88,
+      "text": "They get closer and closer to a, and they stay closer."
+    },
+    {
+      "start": 933.88,
+      "end": 936.86,
+      "text": "So let's try to make that more precise."
+    },
+    {
+      "start": 936.86,
+      "end": 940.86,
+      "text": "What it means is let's fix a sense of what it"
+    },
+    {
+      "start": 940.86,
+      "end": 942.26,
+      "text": "means to be close."
+    },
+    {
+      "start": 942.26,
+      "end": 947.3,
+      "text": "Let me look at an interval that goes from a minus epsilon"
+    },
+    {
+      "start": 947.3,
+      "end": 950.34,
+      "text": "to a plus epsilon."
+    },
+    {
+      "start": 950.34,
+      "end": 957.3,
+      "text": "Then if my sequence converges to a, this means that as n"
+    },
+    {
+      "start": 957.3,
+      "end": 957.94,
+      "text": "increases."
+    },
+    {
+      "start": 959.58,
+      "end": 964.66,
+      "text": "Eventually, the values of the sequence that I get stay"
+    },
+    {
+      "start": 964.66,
+      "end": 966.4,
+      "text": "inside this band."
+    },
+    {
+      "start": 966.4,
+      "end": 970.46,
+      "text": "Since they converge to a, this means that eventually they"
+    },
+    {
+      "start": 970.46,
+      "end": 975.02,
+      "text": "will be smaller than a plus epsilon and bigger than a"
+    },
+    {
+      "start": 975.02,
+      "end": 976.32,
+      "text": "minus epsilon."
+    },
+    {
+      "start": 976.32,
+      "end": 981.34,
+      "text": "So convergence means that given a band of positive"
+    },
+    {
+      "start": 981.34,
+      "end": 985.7,
+      "text": "length around the number a, the values of the sequence"
+    },
+    {
+      "start": 985.7,
+      "end": 989.46,
+      "text": "that you get eventually get inside and stay inside this"
+    },
+    {
+      "start": 989.46,
+      "end": 989.66,
+      "text": "band."
+    },
+    {
+      "start": 989.66,
+      "end": 994.96,
+      "text": "So that's sort of the picture definition of what convergence"
+    },
+    {
+      "start": 994.96,
+      "end": 995.84,
+      "text": "means."
+    },
+    {
+      "start": 995.84,
+      "end": 1000.44,
+      "text": "So now let's translate this into a mathematical statement."
+    },
+    {
+      "start": 1000.44,
+      "end": 1005.62,
+      "text": "Given a band of positive length, no matter how wide"
+    },
+    {
+      "start": 1005.62,
+      "end": 1010.66,
+      "text": "that band is or how narrow it is, so for every epsilon"
+    },
+    {
+      "start": 1010.66,
+      "end": 1016.56,
+      "text": "positive, eventually the sequence gets inside the band."
+    },
+    {
+      "start": 1016.56,
+      "end": 1018.44,
+      "text": "What does eventually mean?"
+    },
+    {
+      "start": 1018.44,
+      "end": 1019.46,
+      "text": "There exists a time."
+    },
+    {
+      "start": 1019.46,
+      "end": 1023.5,
+      "text": "So that after that time, something happens."
+    },
+    {
+      "start": 1023.5,
+      "end": 1027.7,
+      "text": "And the something that happens is that after that time, we are"
+    },
+    {
+      "start": 1027.7,
+      "end": 1029.52,
+      "text": "inside that band."
+    },
+    {
+      "start": 1029.52,
+      "end": 1032.06,
+      "text": "So this is a formal mathematical definition which"
+    },
+    {
+      "start": 1032.06,
+      "end": 1037.74,
+      "text": "actually translates what I was telling in a wordy way before"
+    },
+    {
+      "start": 1037.74,
+      "end": 1040.12,
+      "text": "and showing in terms of the picture."
+    },
+    {
+      "start": 1040.12,
+      "end": 1045.12,
+      "text": "Given a certain band, even if it's narrow, eventually, after"
+    },
+    {
+      "start": 1045.12,
+      "end": 1048.52,
+      "text": "a certain time n0, the values of the sequence are going to"
+    },
+    {
+      "start": 1048.52,
+      "end": 1049.46,
+      "text": "stay inside this band."
+    },
+    {
+      "start": 1049.46,
+      "end": 1055.78,
+      "text": "Now if I were to take epsilon to be very small, this thing"
+    },
+    {
+      "start": 1055.78,
+      "end": 1058.14,
+      "text": "would still be true that eventually I'm going to get"
+    },
+    {
+      "start": 1058.14,
+      "end": 1062.66,
+      "text": "inside the band, except that I may have to wait longer for the"
+    },
+    {
+      "start": 1062.66,
+      "end": 1065.76,
+      "text": "values to get inside here."
+    },
+    {
+      "start": 1065.76,
+      "end": 1068.94,
+      "text": "All right, that's what it means for a deterministic sequence to"
+    },
+    {
+      "start": 1068.94,
+      "end": 1071.32,
+      "text": "converge to something."
+    },
+    {
+      "start": 1071.32,
+      "end": 1074.14,
+      "text": "Now how about random variables?"
+    },
+    {
+      "start": 1074.14,
+      "end": 1077.42,
+      "text": "What does it mean for a sequence of random variables to"
+    },
+    {
+      "start": 1077.42,
+      "end": 1078.62,
+      "text": "converge to a number?"
+    },
+    {
+      "start": 1079.46,
+      "end": 1083.26,
+      "text": "We're just going to twist a little bit the word definition."
+    },
+    {
+      "start": 1083.26,
+      "end": 1088.4,
+      "text": "For numbers, we said that eventually, the numbers get"
+    },
+    {
+      "start": 1088.4,
+      "end": 1090.14,
+      "text": "inside that band."
+    },
+    {
+      "start": 1090.14,
+      "end": 1093.26,
+      "text": "But if instead of numbers, we have random variables with a"
+    },
+    {
+      "start": 1093.26,
+      "end": 1098.06,
+      "text": "certain distribution, so here instead of a n, we're dealing"
+    },
+    {
+      "start": 1098.06,
+      "end": 1100.82,
+      "text": "with a random variable that has a distribution, let's say,"
+    },
+    {
+      "start": 1100.82,
+      "end": 1106.64,
+      "text": "of this kind, what we want is that this distribution gets"
+    },
+    {
+      "start": 1106.64,
+      "end": 1108.58,
+      "text": "inside this band."
+    },
+    {
+      "start": 1108.58,
+      "end": 1109.44,
+      "text": "So that it's"
+    },
+    {
+      "start": 1109.46,
+      "end": 1111.46,
+      "text": "gets concentrated inside here."
+    },
+    {
+      "start": 1111.46,
+      "end": 1113.36,
+      "text": "What does it mean that the distribution gets"
+    },
+    {
+      "start": 1113.36,
+      "end": 1114.86,
+      "text": "inside this band?"
+    },
+    {
+      "start": 1114.86,
+      "end": 1116.9,
+      "text": "I mean, a random variable has a distribution."
+    },
+    {
+      "start": 1116.9,
+      "end": 1118.58,
+      "text": "It may have some tails."
+    },
+    {
+      "start": 1118.58,
+      "end": 1122.48,
+      "text": "So maybe not the entire distribution gets concentrated"
+    },
+    {
+      "start": 1122.48,
+      "end": 1123.9,
+      "text": "inside the band."
+    },
+    {
+      "start": 1123.9,
+      "end": 1128.62,
+      "text": "But we want that more and more of this distribution is"
+    },
+    {
+      "start": 1128.62,
+      "end": 1130.82,
+      "text": "concentrated on this band."
+    },
+    {
+      "start": 1130.82,
+      "end": 1134.44,
+      "text": "So that's in the sense that the probability of falling"
+    },
+    {
+      "start": 1134.44,
+      "end": 1139.0,
+      "text": "outside the band converges to 0, becomes smaller and smaller."
+    },
+    {
+      "start": 1139.46,
+      "end": 1145.22,
+      "text": "So in words, we're going to say that the sequence of"
+    },
+    {
+      "start": 1145.22,
+      "end": 1148.34,
+      "text": "random variables, or a sequence of probability"
+    },
+    {
+      "start": 1148.34,
+      "end": 1151.44,
+      "text": "distributions, that would be the same, converges to a"
+    },
+    {
+      "start": 1151.44,
+      "end": 1155.1,
+      "text": "particular number a if the following is true."
+    },
+    {
+      "start": 1155.1,
+      "end": 1161.34,
+      "text": "If I consider a small band around a, then the"
+    },
+    {
+      "start": 1161.34,
+      "end": 1165.2,
+      "text": "probability that my random variable falls outside this"
+    },
+    {
+      "start": 1165.2,
+      "end": 1169.06,
+      "text": "band, which is the area under this curve, this probability"
+    },
+    {
+      "start": 1169.06,
+      "end": 1172.62,
+      "text": "becomes smaller and smaller as n goes to infinity."
+    },
+    {
+      "start": 1172.62,
+      "end": 1176.2,
+      "text": "The probability of being outside this band converges to"
+    },
+    {
+      "start": 1176.2,
+      "end": 1178.56,
+      "text": "0."
+    },
+    {
+      "start": 1178.56,
+      "end": 1180.6,
+      "text": "So that's the intuitive idea."
+    },
+    {
+      "start": 1180.6,
+      "end": 1184.12,
+      "text": "So in the beginning, maybe our distribution is"
+    },
+    {
+      "start": 1184.12,
+      "end": 1186.56,
+      "text": "sitting everywhere."
+    },
+    {
+      "start": 1186.56,
+      "end": 1189.46,
+      "text": "As n increases, the distribution starts to get"
+    },
+    {
+      "start": 1189.46,
+      "end": 1191.54,
+      "text": "concentrating inside the band."
+    },
+    {
+      "start": 1191.54,
+      "end": 1197.28,
+      "text": "When a is even bigger, our distribution is even more"
+    },
+    {
+      "start": 1197.28,
+      "end": 1198.44,
+      "text": "inside that band."
+    },
+    {
+      "start": 1198.44,
+      "end": 1201.06,
+      "text": "So that these outside probabilities become smaller"
+    },
+    {
+      "start": 1201.06,
+      "end": 1202.44,
+      "text": "and smaller."
+    },
+    {
+      "start": 1202.44,
+      "end": 1204.62,
+      "text": "So the corresponding mathematical statement is the"
+    },
+    {
+      "start": 1204.62,
+      "end": 1206.76,
+      "text": "following."
+    },
+    {
+      "start": 1206.76,
+      "end": 1213.68,
+      "text": "I fix a band around a, a plus or minus epsilon."
+    },
+    {
+      "start": 1213.68,
+      "end": 1217.48,
+      "text": "Given that band, the probability of falling"
+    },
+    {
+      "start": 1217.48,
+      "end": 1221.32,
+      "text": "outside this band, this probability converges to 0."
+    },
+    {
+      "start": 1221.32,
+      "end": 1223.58,
+      "text": "Or another way to say it is that the limit of this"
+    },
+    {
+      "start": 1223.58,
+      "end": 1226.52,
+      "text": "probability is equal to 0."
+    },
+    {
+      "start": 1226.52,
+      "end": 1228.42,
+      "text": "If you were to translate this into"
+    },
+    {
+      "start": 1228.42,
+      "end": 1231.02,
+      "text": "a complete mathematical statement, you would have to"
+    },
+    {
+      "start": 1231.02,
+      "end": 1234.14,
+      "text": "write down the following messy thing."
+    },
+    {
+      "start": 1234.14,
+      "end": 1239.7,
+      "text": "For every epsilon positive, that's this statement, the"
+    },
+    {
+      "start": 1239.7,
+      "end": 1241.34,
+      "text": "limit is 0."
+    },
+    {
+      "start": 1241.34,
+      "end": 1244.6,
+      "text": "What does it mean that the limit of something is 0?"
+    },
+    {
+      "start": 1244.6,
+      "end": 1247.5,
+      "text": "We flip back to the previous slide."
+    },
+    {
+      "start": 1247.5,
+      "end": 1248.08,
+      "text": "Why?"
+    },
+    {
+      "start": 1248.08,
+      "end": 1251.42,
+      "text": "Because a probability is a number."
+    },
+    {
+      "start": 1251.42,
+      "end": 1254.68,
+      "text": "So here we're talking about a sequence of numbers"
+    },
+    {
+      "start": 1254.68,
+      "end": 1256.26,
+      "text": "converging to 0."
+    },
+    {
+      "start": 1256.26,
+      "end": 1258.18,
+      "text": "What does it mean for a sequence of numbers to"
+    },
+    {
+      "start": 1258.18,
+      "end": 1259.28,
+      "text": "converge to 0?"
+    },
+    {
+      "start": 1259.28,
+      "end": 1265.3,
+      "text": "It means that for any epsilon prime positive, there exists"
+    },
+    {
+      "start": 1265.3,
+      "end": 1271.78,
+      "text": "some n0, such that for every n bigger than n0, the following"
+    },
+    {
+      "start": 1271.78,
+      "end": 1276.44,
+      "text": "is true, that this probability is less than or"
+    },
+    {
+      "start": 1276.44,
+      "end": 1277.7,
+      "text": "equal to epsilon prime."
+    },
+    {
+      "start": 1280.6,
+      "end": 1286.06,
+      "text": "So the mathematical statement is a little hard to parse."
+    },
+    {
+      "start": 1286.06,
+      "end": 1286.26,
+      "text": "."
+    },
+    {
+      "start": 1286.26,
+      "end": 1286.3,
+      "text": "."
+    },
+    {
+      "start": 1286.3,
+      "end": 1286.4,
+      "text": "."
+    },
+    {
+      "start": 1286.4,
+      "end": 1286.48,
+      "text": "."
+    },
+    {
+      "start": 1286.48,
+      "end": 1286.54,
+      "text": "."
+    },
+    {
+      "start": 1286.54,
+      "end": 1286.6,
+      "text": "."
+    },
+    {
+      "start": 1286.6,
+      "end": 1286.66,
+      "text": "."
+    },
+    {
+      "start": 1286.66,
+      "end": 1286.72,
+      "text": "."
+    },
+    {
+      "start": 1286.72,
+      "end": 1286.78,
+      "text": "."
+    },
+    {
+      "start": 1286.78,
+      "end": 1286.88,
+      "text": "."
+    },
+    {
+      "start": 1286.88,
+      "end": 1286.94,
+      "text": "."
+    },
+    {
+      "start": 1286.94,
+      "end": 1287.04,
+      "text": "."
+    },
+    {
+      "start": 1287.04,
+      "end": 1287.14,
+      "text": "."
+    },
+    {
+      "start": 1287.14,
+      "end": 1287.18,
+      "text": "."
+    },
+    {
+      "start": 1287.18,
+      "end": 1287.24,
+      "text": "."
+    },
+    {
+      "start": 1287.24,
+      "end": 1287.34,
+      "text": "."
+    },
+    {
+      "start": 1287.34,
+      "end": 1287.38,
+      "text": "."
+    },
+    {
+      "start": 1287.38,
+      "end": 1287.44,
+      "text": "."
+    },
+    {
+      "start": 1287.44,
+      "end": 1287.48,
+      "text": "."
+    },
+    {
+      "start": 1287.48,
+      "end": 1287.52,
+      "text": "."
+    },
+    {
+      "start": 1287.52,
+      "end": 1287.54,
+      "text": "."
+    },
+    {
+      "start": 1287.54,
+      "end": 1287.6,
+      "text": "."
+    },
+    {
+      "start": 1287.6,
+      "end": 1287.64,
+      "text": "."
+    },
+    {
+      "start": 1287.64,
+      "end": 1287.68,
+      "text": "."
+    },
+    {
+      "start": 1287.68,
+      "end": 1287.74,
+      "text": "."
+    },
+    {
+      "start": 1287.74,
+      "end": 1287.78,
+      "text": "."
+    },
+    {
+      "start": 1287.78,
+      "end": 1287.84,
+      "text": "."
+    },
+    {
+      "start": 1287.84,
+      "end": 1288.02,
+      "text": "."
+    },
+    {
+      "start": 1288.18,
+      "end": 1288.68,
+      "text": "."
+    },
+    {
+      "start": 1288.68,
+      "end": 1288.74,
+      "text": "."
+    },
+    {
+      "start": 1288.74,
+      "end": 1288.84,
+      "text": "."
+    },
+    {
+      "start": 1288.84,
+      "end": 1289.26,
+      "text": "."
+    },
+    {
+      "start": 1289.26,
+      "end": 1289.84,
+      "text": "."
+    },
+    {
+      "start": 1289.84,
+      "end": 1289.88,
+      "text": "."
+    },
+    {
+      "start": 1289.88,
+      "end": 1289.9,
+      "text": "."
+    },
+    {
+      "start": 1289.9,
+      "end": 1290.16,
+      "text": "."
+    },
+    {
+      "start": 1290.16,
+      "end": 1290.2,
+      "text": "."
+    },
+    {
+      "start": 1290.2,
+      "end": 1290.22,
+      "text": "."
+    },
+    {
+      "start": 1290.22,
+      "end": 1290.34,
+      "text": "."
+    },
+    {
+      "start": 1290.34,
+      "end": 1290.84,
+      "text": "."
+    },
+    {
+      "start": 1290.84,
+      "end": 1291.44,
+      "text": "."
+    },
+    {
+      "start": 1291.44,
+      "end": 1291.46,
+      "text": "."
+    },
+    {
+      "start": 1291.46,
+      "end": 1293.9,
+      "text": "And then you take the definition of what it means for the"
+    },
+    {
+      "start": 1293.9,
+      "end": 1298.14,
+      "text": "limit of a sequence of numbers to converge to 0."
+    },
+    {
+      "start": 1298.14,
+      "end": 1302.38,
+      "text": "But it's a lot easier to describe this in words and"
+    },
+    {
+      "start": 1302.38,
+      "end": 1305.5,
+      "text": "basically think in terms of this picture."
+    },
+    {
+      "start": 1305.5,
+      "end": 1309.32,
+      "text": "As n increases, the probability of falling outside those bonds"
+    },
+    {
+      "start": 1309.32,
+      "end": 1311.26,
+      "text": "just becomes smaller and smaller."
+    },
+    {
+      "start": 1311.26,
+      "end": 1315.64,
+      "text": "So the statement is that our distribution gets"
+    },
+    {
+      "start": 1315.64,
+      "end": 1317.72,
+      "text": "concentrated in arbitrarily narrow."
+    },
+    {
+      "start": 1317.72,
+      "end": 1325.02,
+      "text": "narrow little bands around that particular number A."
+    },
+    {
+      "start": 1325.02,
+      "end": 1327.8,
+      "text": "OK, so let's look at an example."
+    },
+    {
+      "start": 1327.8,
+      "end": 1331.64,
+      "text": "Suppose our random variable Yn has a discrete distribution of"
+    },
+    {
+      "start": 1331.64,
+      "end": 1333.68,
+      "text": "this particular type."
+    },
+    {
+      "start": 1333.68,
+      "end": 1337.14,
+      "text": "Does it converge to something?"
+    },
+    {
+      "start": 1337.14,
+      "end": 1339.56,
+      "text": "Well, the probability distribution of this random"
+    },
+    {
+      "start": 1339.56,
+      "end": 1342.34,
+      "text": "variable gets concentrated at 0."
+    },
+    {
+      "start": 1342.34,
+      "end": 1346.52,
+      "text": "There's more and more probability of being at 0."
+    },
+    {
+      "start": 1346.52,
+      "end": 1352.12,
+      "text": "If I fix a band around 0, so if I take the band from minus"
+    },
+    {
+      "start": 1352.12,
+      "end": 1357.48,
+      "text": "epsilon to epsilon and look at that band, the probability of"
+    },
+    {
+      "start": 1357.48,
+      "end": 1362.34,
+      "text": "falling outside this band is 1 over n."
+    },
+    {
+      "start": 1362.34,
+      "end": 1365.76,
+      "text": "As n goes to infinity, that probability goes to 0."
+    },
+    {
+      "start": 1365.76,
+      "end": 1370.54,
+      "text": "So in this case, we do have convergence."
+    },
+    {
+      "start": 1370.54,
+      "end": 1376.52,
+      "text": "And Yn converges in probability to the number 0."
+    },
+    {
+      "start": 1376.52,
+      "end": 1380.26,
+      "text": "So this just captures the fact, obvious from this"
+    },
+    {
+      "start": 1380.26,
+      "end": 1383.64,
+      "text": "picture, that more and more of our probability distribution"
+    },
+    {
+      "start": 1383.64,
+      "end": 1387.58,
+      "text": "gets concentrated around 0 as n goes to infinity."
+    },
+    {
+      "start": 1387.58,
+      "end": 1390.3,
+      "text": "Now an interesting thing to notice is the following, that"
+    },
+    {
+      "start": 1390.3,
+      "end": 1395.36,
+      "text": "even though Yn converges to 0, if you were to write down the"
+    },
+    {
+      "start": 1395.36,
+      "end": 1400.4,
+      "text": "expected value of Yn, what would it be?"
+    },
+    {
+      "start": 1400.4,
+      "end": 1404.36,
+      "text": "It's going to be n times the probability of this value,"
+    },
+    {
+      "start": 1404.36,
+      "end": 1406.18,
+      "text": "which is 1 over n."
+    },
+    {
+      "start": 1406.52,
+      "end": 1409.2,
+      "text": "The expected value turns out to be 1."
+    },
+    {
+      "start": 1409.2,
+      "end": 1414.28,
+      "text": "And if you were to look at the expected value of Yn squared,"
+    },
+    {
+      "start": 1414.28,
+      "end": 1420.58,
+      "text": "this would be 0 times this probability, and then n"
+    },
+    {
+      "start": 1420.58,
+      "end": 1425.72,
+      "text": "squared times this probability, which is equal to n."
+    },
+    {
+      "start": 1425.72,
+      "end": 1429.84,
+      "text": "And this actually goes to infinity."
+    },
+    {
+      "start": 1429.84,
+      "end": 1433.54,
+      "text": "So we have this perhaps strange situation where a"
+    },
+    {
+      "start": 1433.54,
+      "end": 1435.96,
+      "text": "random variable goes to 0."
+    },
+    {
+      "start": 1435.96,
+      "end": 1440.2,
+      "text": "But the expected value of this random variable does not go to"
+    },
+    {
+      "start": 1440.2,
+      "end": 1444.26,
+      "text": "0, and the second moment of that random variable actually"
+    },
+    {
+      "start": 1444.26,
+      "end": 1445.78,
+      "text": "goes to infinity."
+    },
+    {
+      "start": 1445.78,
+      "end": 1448.72,
+      "text": "So this tells us that convergence in probability"
+    },
+    {
+      "start": 1448.72,
+      "end": 1451.42,
+      "text": "tells you something, but it doesn't tell"
+    },
+    {
+      "start": 1451.42,
+      "end": 1453.28,
+      "text": "you the whole story."
+    },
+    {
+      "start": 1453.28,
+      "end": 1457.84,
+      "text": "Convergence to 0 of a random variable doesn't imply anything"
+    },
+    {
+      "start": 1457.84,
+      "end": 1460.56,
+      "text": "about convergence of expected values or of"
+    },
+    {
+      "start": 1460.56,
+      "end": 1463.4,
+      "text": "variances, and so on."
+    },
+    {
+      "start": 1463.4,
+      "end": 1465.68,
+      "text": "So the reason is that convergence in probability, in"
+    },
+    {
+      "start": 1465.68,
+      "end": 1469.04,
+      "text": "probability, tells you that this tail probability here is"
+    },
+    {
+      "start": 1469.04,
+      "end": 1474.46,
+      "text": "very small, but it doesn't tell you how far does this tail go."
+    },
+    {
+      "start": 1474.46,
+      "end": 1479.38,
+      "text": "As in this example, the tail probability is small, but that"
+    },
+    {
+      "start": 1479.38,
+      "end": 1483.4,
+      "text": "tail acts far away, so it gives a disproportionate"
+    },
+    {
+      "start": 1483.4,
+      "end": 1485.96,
+      "text": "contribution to the expected value or the"
+    },
+    {
+      "start": 1485.96,
+      "end": 1487.22,
+      "text": "expected value squared."
+    },
+    {
+      "start": 1493.64,
+      "end": 1498.4,
+      "text": "So now we got everything that we need to go back to the"
+    },
+    {
+      "start": 1498.4,
+      "end": 1502.9,
+      "text": "sample mean and study its properties."
+    },
+    {
+      "start": 1502.9,
+      "end": 1506.74,
+      "text": "So the setting is that we have a sequence of random"
+    },
+    {
+      "start": 1506.74,
+      "end": 1507.4,
+      "text": "variables."
+    },
+    {
+      "start": 1507.4,
+      "end": 1508.36,
+      "text": "They're independent."
+    },
+    {
+      "start": 1508.36,
+      "end": 1510.46,
+      "text": "They have the same distribution."
+    },
+    {
+      "start": 1510.46,
+      "end": 1513.44,
+      "text": "And we assume that they have a finite mean and a finite"
+    },
+    {
+      "start": 1513.44,
+      "end": 1514.48,
+      "text": "variance."
+    },
+    {
+      "start": 1514.48,
+      "end": 1518.42,
+      "text": "We're looking at the sample mean."
+    },
+    {
+      "start": 1518.42,
+      "end": 1521.68,
+      "text": "Now in principle, you can calculate the probability"
+    },
+    {
+      "start": 1521.68,
+      "end": 1525.1,
+      "text": "distribution of the sample mean because we know how to"
+    },
+    {
+      "start": 1525.1,
+      "end": 1527.84,
+      "text": "find the distributions of sums of independent random"
+    },
+    {
+      "start": 1527.84,
+      "end": 1528.36,
+      "text": "variables."
+    },
+    {
+      "start": 1528.36,
+      "end": 1531.44,
+      "text": "You use the convolution formula over and over, but this"
+    },
+    {
+      "start": 1531.44,
+      "end": 1532.64,
+      "text": "is pretty complicated."
+    },
+    {
+      "start": 1532.64,
+      "end": 1534.72,
+      "text": "So let's not look at that."
+    },
+    {
+      "start": 1534.72,
+      "end": 1538.92,
+      "text": "Let's just look at expected values, variances, and the"
+    },
+    {
+      "start": 1538.92,
+      "end": 1541.32,
+      "text": "probabilities that the sample mean is far away"
+    },
+    {
+      "start": 1541.32,
+      "end": 1544.3,
+      "text": "from the true mean."
+    },
+    {
+      "start": 1544.3,
+      "end": 1547.46,
+      "text": "So what is the expected value of this random variable?"
+    },
+    {
+      "start": 1547.46,
+      "end": 1551.26,
+      "text": "The expected value of a sum of random variables is the sum of"
+    },
+    {
+      "start": 1551.26,
+      "end": 1556.33,
+      "text": "the expected values."
+    },
+    {
+      "start": 1556.33,
+      "end": 1560.31,
+      "text": "And then we have this factor of n in the denominator."
+    },
+    {
+      "start": 1560.31,
+      "end": 1564.25,
+      "text": "Each one of these expected values is mu."
+    },
+    {
+      "start": 1564.25,
+      "end": 1567.03,
+      "text": "So we get mu."
+    },
+    {
+      "start": 1567.03,
+      "end": 1573.97,
+      "text": "So the sample mean, the average value of this mn in"
+    },
+    {
+      "start": 1573.97,
+      "end": 1577.35,
+      "text": "expectation, is the same as the true mean"
+    },
+    {
+      "start": 1577.35,
+      "end": 1580.61,
+      "text": "inside our population."
+    },
+    {
+      "start": 1580.61,
+      "end": 1586.07,
+      "text": "Now here is a fine conceptual point."
+    },
+    {
+      "start": 1586.07,
+      "end": 1589.69,
+      "text": "There's two kinds of averages involved when you write down"
+    },
+    {
+      "start": 1589.69,
+      "end": 1590.27,
+      "text": "this expression."
+    },
+    {
+      "start": 1590.27,
+      "end": 1593.97,
+      "text": "We understand that expectations are some kind of"
+    },
+    {
+      "start": 1593.97,
+      "end": 1596.49,
+      "text": "average."
+    },
+    {
+      "start": 1596.49,
+      "end": 1600.23,
+      "text": "The sample mean is also an average over the values that"
+    },
+    {
+      "start": 1600.23,
+      "end": 1602.29,
+      "text": "we have observed."
+    },
+    {
+      "start": 1602.29,
+      "end": 1605.23,
+      "text": "But it's two different kinds of averages."
+    },
+    {
+      "start": 1605.23,
+      "end": 1610.45,
+      "text": "The sample mean is the average of the heights of the penguins"
+    },
+    {
+      "start": 1610.45,
+      "end": 1614.41,
+      "text": "that we collected over a single expedition."
+    },
+    {
+      "start": 1614.41,
+      "end": 1618.93,
+      "text": "The expected value is to be thought of as follows."
+    },
+    {
+      "start": 1618.93,
+      "end": 1620.25,
+      "text": "My probabilistic expectation is that the expected value is"
+    },
+    {
+      "start": 1620.25,
+      "end": 1624.15,
+      "text": "one expedition to the south pole."
+    },
+    {
+      "start": 1624.15,
+      "end": 1629.77,
+      "text": "Expected value here means thinking on the average over a"
+    },
+    {
+      "start": 1629.77,
+      "end": 1632.61,
+      "text": "huge number of expeditions."
+    },
+    {
+      "start": 1632.61,
+      "end": 1635.35,
+      "text": "So my expedition is a random experiment."
+    },
+    {
+      "start": 1635.35,
+      "end": 1637.23,
+      "text": "I collect random samples."
+    },
+    {
+      "start": 1637.23,
+      "end": 1641.21,
+      "text": "And I record m sub n."
+    },
+    {
+      "start": 1641.21,
+      "end": 1647.13,
+      "text": "The average result of an expedition is what we would"
+    },
+    {
+      "start": 1647.13,
+      "end": 1649.47,
+      "text": "get if we were to carry out a zillion expeditions."
+    },
+    {
+      "start": 1649.47,
+      "end": 1654.51,
+      "text": "And average, the averages that we get at each"
+    },
+    {
+      "start": 1654.51,
+      "end": 1656.09,
+      "text": "particular expedition."
+    },
+    {
+      "start": 1656.09,
+      "end": 1659.85,
+      "text": "So this m sub n is the average during a single expedition."
+    },
+    {
+      "start": 1659.85,
+      "end": 1664.07,
+      "text": "This expectation is the average over an imagined"
+    },
+    {
+      "start": 1664.07,
+      "end": 1666.23,
+      "text": "infinite sequence of expeditions."
+    },
+    {
+      "start": 1669.75,
+      "end": 1672.79,
+      "text": "And of course, the other thing to always keep in mind is that"
+    },
+    {
+      "start": 1672.79,
+      "end": 1676.89,
+      "text": "expectations give you numbers, whereas the sample mean is"
+    },
+    {
+      "start": 1676.89,
+      "end": 1678.21,
+      "text": "actually a random variable."
+    },
+    {
+      "start": 1679.47,
+      "end": 1680.21,
+      "text": "All right."
+    },
+    {
+      "start": 1680.21,
+      "end": 1683.29,
+      "text": "So this random variable, how random is it?"
+    },
+    {
+      "start": 1683.29,
+      "end": 1685.57,
+      "text": "How big is its variance?"
+    },
+    {
+      "start": 1685.57,
+      "end": 1690.03,
+      "text": "So the variance of a sum of random variables is the sum of"
+    },
+    {
+      "start": 1690.03,
+      "end": 1692.39,
+      "text": "the variances."
+    },
+    {
+      "start": 1692.39,
+      "end": 1696.61,
+      "text": "But since we're dividing by n, when you calculate variances,"
+    },
+    {
+      "start": 1696.61,
+      "end": 1699.57,
+      "text": "this brings in a factor of n squared."
+    },
+    {
+      "start": 1699.57,
+      "end": 1704.33,
+      "text": "So the variance is sigma squared over n."
+    },
+    {
+      "start": 1704.33,
+      "end": 1706.87,
+      "text": "And in particular, the variance of the sample mean"
+    },
+    {
+      "start": 1706.87,
+      "end": 1708.59,
+      "text": "becomes smaller and smaller."
+    },
+    {
+      "start": 1708.59,
+      "end": 1709.25,
+      "text": "It means that."
+    },
+    {
+      "start": 1709.25,
+      "end": 1712.33,
+      "text": "When you estimate that average height of penguins, if you"
+    },
+    {
+      "start": 1712.33,
+      "end": 1716.17,
+      "text": "take a large sample, then your estimate is not going to be"
+    },
+    {
+      "start": 1716.17,
+      "end": 1717.53,
+      "text": "too random."
+    },
+    {
+      "start": 1717.53,
+      "end": 1721.05,
+      "text": "The randomness in your estimates becomes small if you"
+    },
+    {
+      "start": 1721.05,
+      "end": 1723.25,
+      "text": "have a large sample size."
+    },
+    {
+      "start": 1723.25,
+      "end": 1726.09,
+      "text": "Having a large sample size kind of removes the randomness"
+    },
+    {
+      "start": 1726.09,
+      "end": 1727.91,
+      "text": "from your experiments."
+    },
+    {
+      "start": 1727.91,
+      "end": 1732.67,
+      "text": "Now let's apply the Chebyshev inequality to say something"
+    },
+    {
+      "start": 1732.67,
+      "end": 1736.01,
+      "text": "about tail probabilities for the sample mean."
+    },
+    {
+      "start": 1736.01,
+      "end": 1739.61,
+      "text": "The probability that you are more than epsilon away from"
+    },
+    {
+      "start": 1739.61,
+      "end": 1743.65,
+      "text": "the true mean is less than or equal to the variance of this"
+    },
+    {
+      "start": 1743.65,
+      "end": 1747.03,
+      "text": "quantity divided by this number squared."
+    },
+    {
+      "start": 1747.03,
+      "end": 1749.77,
+      "text": "So that's just a translation of the Chebyshev inequality"
+    },
+    {
+      "start": 1749.77,
+      "end": 1752.33,
+      "text": "to the particular context we've got here."
+    },
+    {
+      "start": 1752.33,
+      "end": 1753.59,
+      "text": "We found the variance."
+    },
+    {
+      "start": 1753.59,
+      "end": 1755.09,
+      "text": "It's sigma squared over n."
+    },
+    {
+      "start": 1755.09,
+      "end": 1758.33,
+      "text": "So we end up with this expression."
+    },
+    {
+      "start": 1758.33,
+      "end": 1761.21,
+      "text": "So what does this expression do?"
+    },
+    {
+      "start": 1761.21,
+      "end": 1765.31,
+      "text": "For any given n."
+    },
+    {
+      "start": 1765.31,
+      "end": 1765.57,
+      "text": "Sorry."
+    },
+    {
+      "start": 1765.57,
+      "end": 1766.01,
+      "text": "For any given n."
+    },
+    {
+      "start": 1766.01,
+      "end": 1772.38,
+      "text": "For any given epsilon, if I fix epsilon, then this"
+    },
+    {
+      "start": 1772.38,
+      "end": 1776.6,
+      "text": "probability, which is less than sigma squared over n"
+    },
+    {
+      "start": 1776.6,
+      "end": 1784.74,
+      "text": "epsilon squared, converges to 0 as n goes to infinity."
+    },
+    {
+      "start": 1784.74,
+      "end": 1787.12,
+      "text": "And this is just the definition of"
+    },
+    {
+      "start": 1787.12,
+      "end": 1789.7,
+      "text": "convergence in probability."
+    },
+    {
+      "start": 1789.7,
+      "end": 1794.12,
+      "text": "If this happens, that the probability of being far more"
+    },
+    {
+      "start": 1794.12,
+      "end": 1795.96,
+      "text": "than epsilon away from the mean, that"
+    },
+    {
+      "start": 1795.96,
+      "end": 1797.62,
+      "text": "probability goes to 0."
+    },
+    {
+      "start": 1797.62,
+      "end": 1800.44,
+      "text": "And this is true no matter how I choose my epsilon."
+    },
+    {
+      "start": 1800.44,
+      "end": 1804.48,
+      "text": "Then by definition, we have convergence in probability."
+    },
+    {
+      "start": 1804.48,
+      "end": 1808.04,
+      "text": "So we have proved that the sample mean converges in"
+    },
+    {
+      "start": 1808.04,
+      "end": 1811.44,
+      "text": "probability to the true mean."
+    },
+    {
+      "start": 1811.44,
+      "end": 1816.2,
+      "text": "And this is what the weak law of large numbers tells us."
+    },
+    {
+      "start": 1816.2,
+      "end": 1821.84,
+      "text": "So in some vague sense, it tells us that the sample mean,"
+    },
+    {
+      "start": 1821.84,
+      "end": 1825.1,
+      "text": "when you take the average of many, many measurements in"
+    },
+    {
+      "start": 1825.1,
+      "end": 1829.12,
+      "text": "your sample, then the sample mean is a good estimate of the"
+    },
+    {
+      "start": 1829.12,
+      "end": 1830.08,
+      "text": "true mean."
+    },
+    {
+      "start": 1830.08,
+      "end": 1833.66,
+      "text": "In the sense that it approaches the true mean as"
+    },
+    {
+      "start": 1833.66,
+      "end": 1836.4,
+      "text": "your sample size increases."
+    },
+    {
+      "start": 1836.4,
+      "end": 1839.24,
+      "text": "It approaches the true mean, but of course in a very"
+    },
+    {
+      "start": 1839.24,
+      "end": 1842.34,
+      "text": "specific sense, in probability, according to"
+    },
+    {
+      "start": 1842.34,
+      "end": 1846.54,
+      "text": "this notion of convergence that we have used."
+    },
+    {
+      "start": 1846.54,
+      "end": 1851.08,
+      "text": "So since we're talking about sampling, let's go over an"
+    },
+    {
+      "start": 1851.08,
+      "end": 1856.32,
+      "text": "example, which is the typical situation faced by someone who"
+    },
+    {
+      "start": 1856.32,
+      "end": 1858.12,
+      "text": "is constructing a pole."
+    },
+    {
+      "start": 1858.12,
+      "end": 1861.32,
+      "text": "So you're interested in some property of"
+    },
+    {
+      "start": 1861.32,
+      "end": 1862.68,
+      "text": "the population."
+    },
+    {
+      "start": 1862.68,
+      "end": 1865.6,
+      "text": "So what fraction of the population"
+    },
+    {
+      "start": 1865.6,
+      "end": 1868.38,
+      "text": "prefers Coke to Pepsi?"
+    },
+    {
+      "start": 1868.38,
+      "end": 1871.08,
+      "text": "So there's a number f, which is that fraction of the"
+    },
+    {
+      "start": 1871.08,
+      "end": 1872.46,
+      "text": "population."
+    },
+    {
+      "start": 1872.46,
+      "end": 1876.22,
+      "text": "And so this is an exact number."
+    },
+    {
+      "start": 1876.22,
+      "end": 1880.22,
+      "text": "So out of a population of 100 million, if 20 million prefer"
+    },
+    {
+      "start": 1880.22,
+      "end": 1885.58,
+      "text": "Coke, then f would be 0.2."
+    },
+    {
+      "start": 1885.58,
+      "end": 1887.98,
+      "text": "We want to find out what that fraction is."
+    },
+    {
+      "start": 1887.98,
+      "end": 1890.5,
+      "text": "We cannot ask everyone."
+    },
+    {
+      "start": 1890.5,
+      "end": 1891.32,
+      "text": "What we're going to do?"
+    },
+    {
+      "start": 1891.32,
+      "end": 1896.1,
+      "text": "Is to take a random sample of people and ask them for their"
+    },
+    {
+      "start": 1896.1,
+      "end": 1897.3,
+      "text": "preferences."
+    },
+    {
+      "start": 1897.3,
+      "end": 1902.7,
+      "text": "So the i-th person either says yes for Coke or no."
+    },
+    {
+      "start": 1902.7,
+      "end": 1907.0,
+      "text": "And we record that by putting a 1 each time that we get a yes"
+    },
+    {
+      "start": 1907.0,
+      "end": 1909.16,
+      "text": "answer."
+    },
+    {
+      "start": 1909.16,
+      "end": 1911.84,
+      "text": "And then we form the average of these x's."
+    },
+    {
+      "start": 1911.84,
+      "end": 1913.08,
+      "text": "What is this average?"
+    },
+    {
+      "start": 1913.08,
+      "end": 1917.0,
+      "text": "It's the number of 1's that we got divided by n."
+    },
+    {
+      "start": 1917.0,
+      "end": 1920.52,
+      "text": "So this is a fraction, but calculated only on the x's."
+    },
+    {
+      "start": 1920.52,
+      "end": 1920.82,
+      "text": "."
+    },
+    {
+      "start": 1920.82,
+      "end": 1921.0,
+      "text": "."
+    },
+    {
+      "start": 1921.0,
+      "end": 1924.9,
+      "text": "It's only on the basis of the sample that we have."
+    },
+    {
+      "start": 1924.9,
+      "end": 1930.4,
+      "text": "So you can think of this as being an estimate, f hat,"
+    },
+    {
+      "start": 1930.4,
+      "end": 1933.12,
+      "text": "based on the sample that we have."
+    },
+    {
+      "start": 1933.12,
+      "end": 1937.5,
+      "text": "Now, even though I used the lower case letter here, this f"
+    },
+    {
+      "start": 1937.5,
+      "end": 1940.58,
+      "text": "hat is, of course, a random variable."
+    },
+    {
+      "start": 1940.58,
+      "end": 1943.32,
+      "text": "f is a number."
+    },
+    {
+      "start": 1943.32,
+      "end": 1947.6,
+      "text": "This is the true fraction in the overall population."
+    },
+    {
+      "start": 1947.6,
+      "end": 1950.98,
+      "text": "f hat is the estimate that we get by using our particular"
+    },
+    {
+      "start": 1950.98,
+      "end": 1952.02,
+      "text": "sample."
+    },
+    {
+      "start": 1952.02,
+      "end": 1957.82,
+      "text": "OK, so your boss told you, I need to know what f is."
+    },
+    {
+      "start": 1957.82,
+      "end": 1960.08,
+      "text": "But go and do some sampling."
+    },
+    {
+      "start": 1960.08,
+      "end": 1962.72,
+      "text": "What are you going to respond?"
+    },
+    {
+      "start": 1962.72,
+      "end": 1966.42,
+      "text": "Unless I ask everyone in the whole population, there's no"
+    },
+    {
+      "start": 1966.42,
+      "end": 1971.18,
+      "text": "way for me to know f exactly."
+    },
+    {
+      "start": 1971.18,
+      "end": 1972.1,
+      "text": "Right?"
+    },
+    {
+      "start": 1972.1,
+      "end": 1974.54,
+      "text": "There's no way."
+    },
+    {
+      "start": 1974.54,
+      "end": 1979.1,
+      "text": "OK, so the boss tells you, well, OK, then tell me f"
+    },
+    {
+      "start": 1979.1,
+      "end": 1980.84,
+      "text": "within an accuracy."
+    },
+    {
+      "start": 1980.84,
+      "end": 1985.24,
+      "text": "I want an answer from you, that's your answer, which is"
+    },
+    {
+      "start": 1985.24,
+      "end": 1990.64,
+      "text": "within the correct number, with probability 1%."
+    },
+    {
+      "start": 1990.64,
+      "end": 1994.22,
+      "text": "It's close to the correct answer within 1 percentage"
+    },
+    {
+      "start": 1994.22,
+      "end": 1994.94,
+      "text": "point."
+    },
+    {
+      "start": 1994.94,
+      "end": 2000.26,
+      "text": "So if the true f is 0.4, your answer should be somewhere"
+    },
+    {
+      "start": 2000.26,
+      "end": 2002.48,
+      "text": "between 0.39 and 0.41."
+    },
+    {
+      "start": 2002.48,
+      "end": 2005.46,
+      "text": "I want a really accurate answer."
+    },
+    {
+      "start": 2005.46,
+      "end": 2007.62,
+      "text": "What are you going to say?"
+    },
+    {
+      "start": 2007.62,
+      "end": 2008.88,
+      "text": "Well, there's no guarantee."
+    },
+    {
+      "start": 2008.88,
+      "end": 2009.88,
+      "text": "."
+    },
+    {
+      "start": 2009.88,
+      "end": 2013.24,
+      "text": "That my answer will be with 1%."
+    },
+    {
+      "start": 2013.24,
+      "end": 2017.32,
+      "text": "Maybe I'm unlucky, and I just happen to sample the wrong set"
+    },
+    {
+      "start": 2017.32,
+      "end": 2020.46,
+      "text": "of people, and my answer comes out to be wrong."
+    },
+    {
+      "start": 2020.46,
+      "end": 2025.82,
+      "text": "So I cannot give you a hard guarantee that this inequality"
+    },
+    {
+      "start": 2025.82,
+      "end": 2027.36,
+      "text": "will be satisfied."
+    },
+    {
+      "start": 2027.36,
+      "end": 2032.0,
+      "text": "But perhaps I can give you a guarantee that this inequality"
+    },
+    {
+      "start": 2032.0,
+      "end": 2035.68,
+      "text": "will be satisfied, this accuracy requirement will be"
+    },
+    {
+      "start": 2035.68,
+      "end": 2038.02,
+      "text": "satisfied, with high confidence."
+    },
+    {
+      "start": 2038.02,
+      "end": 2039.28,
+      "text": "."
+    },
+    {
+      "start": 2039.28,
+      "end": 2042.76,
+      "text": "That is, there's going to be a small probability that things"
+    },
+    {
+      "start": 2042.76,
+      "end": 2047.04,
+      "text": "go wrong, that I'm unlucky and I use a bad sample."
+    },
+    {
+      "start": 2047.04,
+      "end": 2050.72,
+      "text": "But leaving aside that small probability of being unlucky,"
+    },
+    {
+      "start": 2050.72,
+      "end": 2053.96,
+      "text": "my answer will be accurate within the accuracy"
+    },
+    {
+      "start": 2053.96,
+      "end": 2056.04,
+      "text": "requirement that you have."
+    },
+    {
+      "start": 2056.04,
+      "end": 2060.48,
+      "text": "So these two numbers are the usual specs that one has when"
+    },
+    {
+      "start": 2060.48,
+      "end": 2062.0,
+      "text": "designing polls."
+    },
+    {
+      "start": 2062.0,
+      "end": 2067.34,
+      "text": "So this number is the accuracy that we want."
+    },
+    {
+      "start": 2067.34,
+      "end": 2069.28,
+      "text": "It's the desired accuracy."
+    },
+    {
+      "start": 2069.28,
+      "end": 2075.2,
+      "text": "And this number has to do with the confidence that we want."
+    },
+    {
+      "start": 2075.2,
+      "end": 2080.18,
+      "text": "So 1 minus that number, we could call it the confidence"
+    },
+    {
+      "start": 2080.18,
+      "end": 2082.92,
+      "text": "that we want out of our sample."
+    },
+    {
+      "start": 2082.92,
+      "end": 2086.94,
+      "text": "So I guess this is really 1 minus confidence."
+    },
+    {
+      "start": 2086.94,
+      "end": 2087.78,
+      "text": "All right."
+    },
+    {
+      "start": 2087.78,
+      "end": 2091.8,
+      "text": "So now your job is to figure out how large an n, how large"
+    },
+    {
+      "start": 2091.8,
+      "end": 2096.18,
+      "text": "a sample should you be using, in order to satisfy the specs"
+    },
+    {
+      "start": 2096.18,
+      "end": 2097.32,
+      "text": "that your boss gave you."
+    },
+    {
+      "start": 2097.32,
+      "end": 2097.52,
+      "text": "."
+    },
+    {
+      "start": 2097.52,
+      "end": 2097.76,
+      "text": "All right."
+    },
+    {
+      "start": 2097.76,
+      "end": 2097.86,
+      "text": "."
+    },
+    {
+      "start": 2097.86,
+      "end": 2097.96,
+      "text": "."
+    },
+    {
+      "start": 2097.96,
+      "end": 2098.02,
+      "text": "."
+    },
+    {
+      "start": 2098.02,
+      "end": 2098.16,
+      "text": "."
+    },
+    {
+      "start": 2098.16,
+      "end": 2098.24,
+      "text": "."
+    },
+    {
+      "start": 2098.24,
+      "end": 2098.4,
+      "text": "."
+    },
+    {
+      "start": 2098.4,
+      "end": 2098.46,
+      "text": "."
+    },
+    {
+      "start": 2098.46,
+      "end": 2098.62,
+      "text": "."
+    },
+    {
+      "start": 2098.62,
+      "end": 2098.68,
+      "text": "."
+    },
+    {
+      "start": 2098.68,
+      "end": 2098.74,
+      "text": "."
+    },
+    {
+      "start": 2098.74,
+      "end": 2099.04,
+      "text": "."
+    },
+    {
+      "start": 2099.04,
+      "end": 2099.08,
+      "text": "."
+    },
+    {
+      "start": 2099.08,
+      "end": 2099.14,
+      "text": "."
+    },
+    {
+      "start": 2099.14,
+      "end": 2099.24,
+      "text": "."
+    },
+    {
+      "start": 2099.24,
+      "end": 2099.28,
+      "text": "."
+    },
+    {
+      "start": 2099.28,
+      "end": 2100.86,
+      "text": "All you know at this stage is the"
+    },
+    {
+      "start": 2100.86,
+      "end": 2102.56,
+      "text": "Chebyshev inequality."
+    },
+    {
+      "start": 2102.56,
+      "end": 2105.2,
+      "text": "So you just try to use it."
+    },
+    {
+      "start": 2105.2,
+      "end": 2109.74,
+      "text": "The probability of getting an answer that's more than 0.01"
+    },
+    {
+      "start": 2109.74,
+      "end": 2114.78,
+      "text": "away from the true answer is, by Chebyshev's inequality, the"
+    },
+    {
+      "start": 2114.78,
+      "end": 2120.16,
+      "text": "variance of this random variable divided by this"
+    },
+    {
+      "start": 2120.16,
+      "end": 2121.52,
+      "text": "number squared."
+    },
+    {
+      "start": 2121.52,
+      "end": 2126.36,
+      "text": "The variance, as we argued a little earlier, is the variance"
+    },
+    {
+      "start": 2126.36,
+      "end": 2129.04,
+      "text": "of the x's divided by n."
+    },
+    {
+      "start": 2129.04,
+      "end": 2131.84,
+      "text": "So we get this expression."
+    },
+    {
+      "start": 2131.84,
+      "end": 2138.32,
+      "text": "So we would like this number to be less than or equal to 0.05."
+    },
+    {
+      "start": 2138.32,
+      "end": 2138.62,
+      "text": "OK."
+    },
+    {
+      "start": 2138.62,
+      "end": 2141.64,
+      "text": "Here we hit a little bit of a difficulty."
+    },
+    {
+      "start": 2141.64,
+      "end": 2149.1,
+      "text": "The variance, sigma x squared, what is it?"
+    },
+    {
+      "start": 2149.1,
+      "end": 2153.86,
+      "text": "Sigma x squared is, if you remember the variance of a"
+    },
+    {
+      "start": 2153.86,
+      "end": 2158.0,
+      "text": "Bernoulli random variable, is this quantity."
+    },
+    {
+      "start": 2158.0,
+      "end": 2159.04,
+      "text": ". But we don't know."
+    },
+    {
+      "start": 2159.04,
+      "end": 2162.88,
+      "text": "It f is what we're trying to estimate in the first place."
+    },
+    {
+      "start": 2162.88,
+      "end": 2164.7,
+      "text": "So the variance is not known."
+    },
+    {
+      "start": 2164.7,
+      "end": 2168.1,
+      "text": "So I cannot plug in a number inside here."
+    },
+    {
+      "start": 2168.1,
+      "end": 2172.32,
+      "text": "What I can do is to be conservative and use an upper"
+    },
+    {
+      "start": 2172.32,
+      "end": 2174.04,
+      "text": "bound of the variance."
+    },
+    {
+      "start": 2174.04,
+      "end": 2177.32,
+      "text": "How large can this number get?"
+    },
+    {
+      "start": 2177.32,
+      "end": 2185.96,
+      "text": "Well, you can plot f times 1 minus f."
+    },
+    {
+      "start": 2185.96,
+      "end": 2187.1,
+      "text": "It's a parabola."
+    },
+    {
+      "start": 2187.1,
+      "end": 2189.4,
+      "text": "It has a root at 0 and a 1."
+    },
+    {
+      "start": 2189.4,
+      "end": 2193.04,
+      "text": "So the maximum value is going to be, by symmetry, at 1.0."
+    },
+    {
+      "start": 2193.04,
+      "end": 2194.26,
+      "text": "1.5."
+    },
+    {
+      "start": 2194.26,
+      "end": 2199.34,
+      "text": "And when f is 1.5, then this variance becomes 1.4."
+    },
+    {
+      "start": 2199.34,
+      "end": 2202.88,
+      "text": "So I don't know sigma x squared, but I'm going to use"
+    },
+    {
+      "start": 2202.88,
+      "end": 2208.48,
+      "text": "the worst case value for sigma x squared, which is 4."
+    },
+    {
+      "start": 2208.48,
+      "end": 2213.32,
+      "text": "And this is now an inequality that I know to be always true."
+    },
+    {
+      "start": 2213.32,
+      "end": 2216.92,
+      "text": "I've got my specs, and my specs tell me that I want this"
+    },
+    {
+      "start": 2216.92,
+      "end": 2219.8,
+      "text": "number to be less than 0.05."
+    },
+    {
+      "start": 2219.8,
+      "end": 2222.92,
+      "text": "And given what I know."
+    },
+    {
+      "start": 2222.92,
+      "end": 2226.5,
+      "text": "The best thing I can do is to say, OK, I'm going to take this"
+    },
+    {
+      "start": 2226.5,
+      "end": 2234.12,
+      "text": "number and make it less than 0.05."
+    },
+    {
+      "start": 2234.12,
+      "end": 2240.48,
+      "text": "If I choose my n so that this is less than 0.05, then I'm"
+    },
+    {
+      "start": 2240.48,
+      "end": 2244.82,
+      "text": "certain that this probability is also less than 0.05."
+    },
+    {
+      "start": 2244.82,
+      "end": 2248.7,
+      "text": "What does it take for this inequality to be true?"
+    },
+    {
+      "start": 2248.7,
+      "end": 2251.24,
+      "text": "You can solve for n here."
+    },
+    {
+      "start": 2251.24,
+      "end": 2252.7,
+      "text": "And you find that n."
+    },
+    {
+      "start": 2254.52,
+      "end": 2259.8,
+      "text": "To satisfy this inequality, n should be larger than or equal"
+    },
+    {
+      "start": 2259.8,
+      "end": 2260.76,
+      "text": "to 50,000."
+    },
+    {
+      "start": 2260.76,
+      "end": 2264.26,
+      "text": "So you can just let n be equal to 50,000."
+    },
+    {
+      "start": 2264.26,
+      "end": 2267.92,
+      "text": "So the Chebyshev inequality tells us that if you take n"
+    },
+    {
+      "start": 2267.92,
+      "end": 2271.94,
+      "text": "equal to 50,000, then by the Chebyshev inequality, we're"
+    },
+    {
+      "start": 2271.94,
+      "end": 2277.86,
+      "text": "guaranteed to satisfy the specs that we were given."
+    },
+    {
+      "start": 2277.86,
+      "end": 2282.36,
+      "text": "Now 50,000 is a bit of a large sample size."
+    },
+    {
+      "start": 2282.36,
+      "end": 2282.52,
+      "text": "Right?"
+    },
+    {
+      "start": 2282.52,
+      "end": 2282.6,
+      "text": "Yes."
+    },
+    {
+      "start": 2282.6,
+      "end": 2282.7,
+      "text": "Yes."
+    },
+    {
+      "start": 2282.7,
+      "end": 2282.8,
+      "text": "Yes."
+    },
+    {
+      "start": 2282.8,
+      "end": 2282.86,
+      "text": "Yes."
+    },
+    {
+      "start": 2282.86,
+      "end": 2282.9,
+      "text": "Yes."
+    },
+    {
+      "start": 2282.9,
+      "end": 2282.96,
+      "text": "Yes."
+    },
+    {
+      "start": 2282.96,
+      "end": 2283.02,
+      "text": "Yes."
+    },
+    {
+      "start": 2283.02,
+      "end": 2283.12,
+      "text": "Yes."
+    },
+    {
+      "start": 2283.12,
+      "end": 2283.22,
+      "text": "Yes."
+    },
+    {
+      "start": 2283.22,
+      "end": 2283.28,
+      "text": "Yes."
+    },
+    {
+      "start": 2283.28,
+      "end": 2283.4,
+      "text": "Yes."
+    },
+    {
+      "start": 2283.4,
+      "end": 2283.46,
+      "text": "Yes."
+    },
+    {
+      "start": 2283.46,
+      "end": 2283.5,
+      "text": "Yes."
+    },
+    {
+      "start": 2283.5,
+      "end": 2283.6,
+      "text": "Yes."
+    },
+    {
+      "start": 2283.6,
+      "end": 2283.7,
+      "text": "Yes."
+    },
+    {
+      "start": 2283.7,
+      "end": 2283.74,
+      "text": "Yes."
+    },
+    {
+      "start": 2283.74,
+      "end": 2283.82,
+      "text": "Yes."
+    },
+    {
+      "start": 2283.82,
+      "end": 2283.88,
+      "text": "Yes."
+    },
+    {
+      "start": 2283.88,
+      "end": 2283.92,
+      "text": "Yes."
+    },
+    {
+      "start": 2283.92,
+      "end": 2283.94,
+      "text": "Yes."
+    },
+    {
+      "start": 2283.94,
+      "end": 2283.98,
+      "text": "Yes."
+    },
+    {
+      "start": 2283.98,
+      "end": 2284.06,
+      "text": "Yes."
+    },
+    {
+      "start": 2284.06,
+      "end": 2284.12,
+      "text": "Yes."
+    },
+    {
+      "start": 2284.12,
+      "end": 2284.52,
+      "text": "Yes."
+    },
+    {
+      "start": 2284.52,
+      "end": 2284.58,
+      "text": "Yes."
+    },
+    {
+      "start": 2284.58,
+      "end": 2284.66,
+      "text": "Yes."
+    },
+    {
+      "start": 2284.66,
+      "end": 2285.0,
+      "text": "Yes."
+    },
+    {
+      "start": 2285.0,
+      "end": 2285.02,
+      "text": "Yes."
+    },
+    {
+      "start": 2285.02,
+      "end": 2285.1,
+      "text": "Yes."
+    },
+    {
+      "start": 2285.1,
+      "end": 2285.14,
+      "text": "Yes."
+    },
+    {
+      "start": 2285.14,
+      "end": 2285.16,
+      "text": "Yes."
+    },
+    {
+      "start": 2285.16,
+      "end": 2285.24,
+      "text": "Yes."
+    },
+    {
+      "start": 2285.24,
+      "end": 2285.26,
+      "text": "Yes."
+    },
+    {
+      "start": 2285.26,
+      "end": 2285.28,
+      "text": "Yes."
+    },
+    {
+      "start": 2285.28,
+      "end": 2285.3,
+      "text": "Yes."
+    },
+    {
+      "start": 2285.3,
+      "end": 2285.36,
+      "text": "Yes."
+    },
+    {
+      "start": 2285.36,
+      "end": 2285.38,
+      "text": "Yes."
+    },
+    {
+      "start": 2285.38,
+      "end": 2285.4,
+      "text": "Yes."
+    },
+    {
+      "start": 2285.4,
+      "end": 2285.44,
+      "text": "Yes."
+    },
+    {
+      "start": 2285.44,
+      "end": 2289.52,
+      "text": "If you read anything in the newspapers where they say so"
+    },
+    {
+      "start": 2289.52,
+      "end": 2293.24,
+      "text": "much of the voters think this and that, this was determined"
+    },
+    {
+      "start": 2293.24,
+      "end": 2299.88,
+      "text": "on the basis of a sample of 1,200 likely voters or so."
+    },
+    {
+      "start": 2299.88,
+      "end": 2303.46,
+      "text": "So the numbers that you will typically see in these news"
+    },
+    {
+      "start": 2303.46,
+      "end": 2307.6,
+      "text": "items about polling, they usually involve sample sizes"
+    },
+    {
+      "start": 2307.6,
+      "end": 2310.1,
+      "text": "about 1,000 or so."
+    },
+    {
+      "start": 2310.1,
+      "end": 2313.98,
+      "text": "You will never see a sample thousand or 50,000, a sample"
+    },
+    {
+      "start": 2313.98,
+      "end": 2317.22,
+      "text": "size of 50,000, that's too much."
+    },
+    {
+      "start": 2317.22,
+      "end": 2321.68,
+      "text": "So where can we cut some corners?"
+    },
+    {
+      "start": 2321.68,
+      "end": 2326.46,
+      "text": "Well, we can cut corners basically in three places."
+    },
+    {
+      "start": 2326.46,
+      "end": 2329.94,
+      "text": "This requirement is a little too tight."
+    },
+    {
+      "start": 2329.94,
+      "end": 2333.54,
+      "text": "Newspaper stories will usually tell you we have an accuracy"
+    },
+    {
+      "start": 2333.54,
+      "end": 2338.82,
+      "text": "of plus or minus 3 percentage points instead of 1 point."
+    },
+    {
+      "start": 2338.82,
+      "end": 2343.62,
+      "text": "And because this number comes up as a square, by making it"
+    },
+    {
+      "start": 2343.62,
+      "end": 2349.02,
+      "text": "3 percentage points instead of 1, saves you a factor of 10."
+    },
+    {
+      "start": 2349.02,
+      "end": 2355.16,
+      "text": "Then, OK, the 5% confidence, I guess that's usually OK."
+    },
+    {
+      "start": 2355.16,
+      "end": 2359.42,
+      "text": "If we use that factor of 10, then we make our sample that"
+    },
+    {
+      "start": 2359.42,
+      "end": 2360.96,
+      "text": "we gain from here."
+    },
+    {
+      "start": 2360.96,
+      "end": 2364.02,
+      "text": "Then we get the sample size of 10,000."
+    },
+    {
+      "start": 2364.02,
+      "end": 2366.0,
+      "text": "That's again a little too big."
+    },
+    {
+      "start": 2366.0,
+      "end": 2368.14,
+      "text": "So where can we fix things?"
+    },
+    {
+      "start": 2368.14,
+      "end": 2371.14,
+      "text": "Well, it turns out that this inequality that we're using"
+    },
+    {
+      "start": 2371.14,
+      "end": 2373.6,
+      "text": "here, Chebyshev's inequality, is just"
+    },
+    {
+      "start": 2373.6,
+      "end": 2374.6,
+      "text": "an inequality."
+    },
+    {
+      "start": 2374.6,
+      "end": 2376.88,
+      "text": "It's not that tight."
+    },
+    {
+      "start": 2376.88,
+      "end": 2378.84,
+      "text": "It's not very accurate."
+    },
+    {
+      "start": 2378.84,
+      "end": 2382.8,
+      "text": "Maybe there's a better way of calculating or estimating this"
+    },
+    {
+      "start": 2382.8,
+      "end": 2386.76,
+      "text": "quantity, which is smaller than this."
+    },
+    {
+      "start": 2386.76,
+      "end": 2389.84,
+      "text": "And using a more accurate inequality or a more accurate"
+    },
+    {
+      "start": 2389.84,
+      "end": 2395.28,
+      "text": "bound, then we can convince ourselves that we can settle"
+    },
+    {
+      "start": 2395.28,
+      "end": 2397.84,
+      "text": "with a smaller sample size."
+    },
+    {
+      "start": 2397.84,
+      "end": 2401.76,
+      "text": "This more accurate kind of inequality comes out of a"
+    },
+    {
+      "start": 2401.76,
+      "end": 2403.1,
+      "text": "different limit theorem."
+    },
+    {
+      "start": 2403.1,
+      "end": 2406.02,
+      "text": "Which is the next limit theorem we're going to consider."
+    },
+    {
+      "start": 2406.02,
+      "end": 2408.28,
+      "text": "We're going to start the discussion today, but we're"
+    },
+    {
+      "start": 2408.28,
+      "end": 2412.22,
+      "text": "going to continue with it next week."
+    },
+    {
+      "start": 2412.22,
+      "end": 2418.8,
+      "text": "Before I tell you exactly what that other limit theorem says,"
+    },
+    {
+      "start": 2418.8,
+      "end": 2424.78,
+      "text": "let me give you the big picture of what's involved here."
+    },
+    {
+      "start": 2424.78,
+      "end": 2429.14,
+      "text": "We're dealing with sums of iid random variables."
+    },
+    {
+      "start": 2429.14,
+      "end": 2432.78,
+      "text": "Each x has a distribution of its own."
+    },
+    {
+      "start": 2432.78,
+      "end": 2434.66,
+      "text": "If you were to look at the distribution of the distribution"
+    },
+    {
+      "start": 2434.66,
+      "end": 2441.22,
+      "text": "of x, suppose that x has a distribution which is"
+    },
+    {
+      "start": 2441.22,
+      "end": 2443.1,
+      "text": "something like this."
+    },
+    {
+      "start": 2443.1,
+      "end": 2445.42,
+      "text": "This is the density of x."
+    },
+    {
+      "start": 2445.42,
+      "end": 2449.84,
+      "text": "If I add lots of x's together, what kind of distribution do I"
+    },
+    {
+      "start": 2449.84,
+      "end": 2451.44,
+      "text": "expect?"
+    },
+    {
+      "start": 2451.44,
+      "end": 2455.16,
+      "text": "The mean is going to be n times the mean of an"
+    },
+    {
+      "start": 2455.16,
+      "end": 2456.76,
+      "text": "individual x."
+    },
+    {
+      "start": 2456.76,
+      "end": 2462.66,
+      "text": "So if this is mu, I'm going to get a mean of n times mu."
+    },
+    {
+      "start": 2462.66,
+      "end": 2464.66,
+      "text": "But my variance will also be n times mu."
+    },
+    {
+      "start": 2464.66,
+      "end": 2466.64,
+      "text": "So increase."
+    },
+    {
+      "start": 2466.64,
+      "end": 2468.84,
+      "text": "When I add the random variables, I'm adding the"
+    },
+    {
+      "start": 2468.84,
+      "end": 2470.2,
+      "text": "variances."
+    },
+    {
+      "start": 2470.2,
+      "end": 2473.42,
+      "text": "So since the variance increases, we're going to get"
+    },
+    {
+      "start": 2473.42,
+      "end": 2477.6,
+      "text": "a distribution that's pretty wide."
+    },
+    {
+      "start": 2477.6,
+      "end": 2483.24,
+      "text": "So this is the density of x1 plus all the way to xn."
+    },
+    {
+      "start": 2483.24,
+      "end": 2487.64,
+      "text": "So as n increases, my distribution shifts, because"
+    },
+    {
+      "start": 2487.64,
+      "end": 2488.78,
+      "text": "the mean is positive."
+    },
+    {
+      "start": 2488.78,
+      "end": 2490.62,
+      "text": "So I keep adding things."
+    },
+    {
+      "start": 2490.62,
+      "end": 2493.9,
+      "text": "And also my distribution becomes wider and wider."
+    },
+    {
+      "start": 2493.9,
+      "end": 2496.08,
+      "text": "The variance increases."
+    },
+    {
+      "start": 2496.08,
+      "end": 2499.2,
+      "text": "Well, we studied a different scaling."
+    },
+    {
+      "start": 2499.2,
+      "end": 2502.52,
+      "text": "We studied the scaled version of this quantity when we"
+    },
+    {
+      "start": 2502.52,
+      "end": 2506.16,
+      "text": "looked at the weak law of large numbers."
+    },
+    {
+      "start": 2506.16,
+      "end": 2509.56,
+      "text": "In the weak law of large numbers, we take this random"
+    },
+    {
+      "start": 2509.56,
+      "end": 2512.12,
+      "text": "variable and divide it by n."
+    },
+    {
+      "start": 2512.12,
+      "end": 2516.28,
+      "text": "And what the weak law tells us is that we're going to get a"
+    },
+    {
+      "start": 2516.28,
+      "end": 2521.02,
+      "text": "distribution that's very highly concentrated around the"
+    },
+    {
+      "start": 2521.02,
+      "end": 2523.64,
+      "text": "true mean, which is mu."
+    },
+    {
+      "start": 2523.64,
+      "end": 2529.92,
+      "text": "So this here would be the density of x1 plus xn divided"
+    },
+    {
+      "start": 2529.92,
+      "end": 2532.62,
+      "text": "by n."
+    },
+    {
+      "start": 2532.62,
+      "end": 2536.58,
+      "text": "Because I've divided by n, the mean has become the original"
+    },
+    {
+      "start": 2536.58,
+      "end": 2539.36,
+      "text": "mean, which is mu."
+    },
+    {
+      "start": 2539.36,
+      "end": 2542.58,
+      "text": "But the weak law of large numbers tells us that the"
+    },
+    {
+      "start": 2542.58,
+      "end": 2546.58,
+      "text": "distribution of this random variable is very concentrated"
+    },
+    {
+      "start": 2546.58,
+      "end": 2547.78,
+      "text": "around the mean."
+    },
+    {
+      "start": 2547.78,
+      "end": 2549.8,
+      "text": "So we get a distribution that's very"
+    },
+    {
+      "start": 2549.8,
+      "end": 2551.48,
+      "text": "narrow in this kind."
+    },
+    {
+      "start": 2551.48,
+      "end": 2553.62,
+      "text": "In the limit, this distribution becomes"
+    },
+    {
+      "start": 2553.64,
+      "end": 2557.58,
+      "text": "one that's just concentrated on top of mu."
+    },
+    {
+      "start": 2557.58,
+      "end": 2560.92,
+      "text": "So it's sort of a degenerate distribution."
+    },
+    {
+      "start": 2560.92,
+      "end": 2563.14,
+      "text": "So these are two extremes."
+    },
+    {
+      "start": 2563.14,
+      "end": 2567.8,
+      "text": "No scaling for the sum, a scaling where we divide by n."
+    },
+    {
+      "start": 2567.8,
+      "end": 2570.68,
+      "text": "In this extreme, we get a trivial case of a distribution"
+    },
+    {
+      "start": 2570.68,
+      "end": 2572.88,
+      "text": "that flattens out completely."
+    },
+    {
+      "start": 2572.88,
+      "end": 2576.06,
+      "text": "In this scaling, we get a distribution that gets"
+    },
+    {
+      "start": 2576.06,
+      "end": 2579.16,
+      "text": "concentrated around a single point."
+    },
+    {
+      "start": 2579.16,
+      "end": 2582.02,
+      "text": "Can we look at some intermediate scaling that"
+    },
+    {
+      "start": 2582.02,
+      "end": 2583.62,
+      "text": "makes things more interesting?"
+    },
+    {
+      "start": 2583.64,
+      "end": 2589.62,
+      "text": "Things do become interesting if we scale by dividing the"
+    },
+    {
+      "start": 2589.62,
+      "end": 2594.52,
+      "text": "sum by square root of n instead of dividing by n."
+    },
+    {
+      "start": 2594.52,
+      "end": 2597.12,
+      "text": "What effect does this have?"
+    },
+    {
+      "start": 2597.12,
+      "end": 2602.26,
+      "text": "When we scale by dividing by square root of n, the variance"
+    },
+    {
+      "start": 2602.26,
+      "end": 2606.72,
+      "text": "of Sn over the square root of n is going to be the variance"
+    },
+    {
+      "start": 2606.72,
+      "end": 2610.74,
+      "text": "of Sn of the sum, divided by n."
+    },
+    {
+      "start": 2610.74,
+      "end": 2612.78,
+      "text": "That's how variances behave."
+    },
+    {
+      "start": 2612.78,
+      "end": 2613.58,
+      "text": "The variance of"
+    },
+    {
+      "start": 2613.58,
+      "end": 2619.3,
+      "text": "Sn is n sigma squared, divided by n, which is sigma squared."
+    },
+    {
+      "start": 2619.3,
+      "end": 2624.98,
+      "text": "Which means that when we scale in this particular way, as n"
+    },
+    {
+      "start": 2624.98,
+      "end": 2628.22,
+      "text": "changes, the variance doesn't change."
+    },
+    {
+      "start": 2628.22,
+      "end": 2630.76,
+      "text": "So the width of our distribution will be"
+    },
+    {
+      "start": 2630.76,
+      "end": 2632.2,
+      "text": "sort of constant."
+    },
+    {
+      "start": 2632.2,
+      "end": 2636.34,
+      "text": "The distribution changes shape, but it doesn't become"
+    },
+    {
+      "start": 2636.34,
+      "end": 2639.9,
+      "text": "narrower, as was the case here."
+    },
+    {
+      "start": 2639.9,
+      "end": 2641.82,
+      "text": "It doesn't become wider."
+    },
+    {
+      "start": 2641.82,
+      "end": 2644.54,
+      "text": "It kind of keeps the same width."
+    },
+    {
+      "start": 2644.54,
+      "end": 2649.26,
+      "text": "So perhaps in the limit, this distribution is going to take"
+    },
+    {
+      "start": 2649.26,
+      "end": 2651.08,
+      "text": "an interesting shape."
+    },
+    {
+      "start": 2651.08,
+      "end": 2654.16,
+      "text": "And that's indeed the case."
+    },
+    {
+      "start": 2654.16,
+      "end": 2659.82,
+      "text": "So let's do what we did before."
+    },
+    {
+      "start": 2659.82,
+      "end": 2665.24,
+      "text": "So we're looking at the sum, and we want to divide the sum"
+    },
+    {
+      "start": 2665.24,
+      "end": 2668.86,
+      "text": "by something that goes like square root of n."
+    },
+    {
+      "start": 2668.86,
+      "end": 2671.82,
+      "text": "So the variance of Sn is n sigma squared."
+    },
+    {
+      "start": 2671.82,
+      "end": 2678.22,
+      "text": "The variance of the sigma of Sn is the square root of that."
+    },
+    {
+      "start": 2678.22,
+      "end": 2679.58,
+      "text": "It's this number."
+    },
+    {
+      "start": 2679.58,
+      "end": 2683.9,
+      "text": "So effectively, we're descaling by order of square root n."
+    },
+    {
+      "start": 2683.9,
+      "end": 2687.58,
+      "text": "Now I'm doing another thing here."
+    },
+    {
+      "start": 2687.58,
+      "end": 2692.32,
+      "text": "If my random variable has a positive mean, then this"
+    },
+    {
+      "start": 2692.32,
+      "end": 2695.42,
+      "text": "quantity is going to have a mean that's"
+    },
+    {
+      "start": 2695.42,
+      "end": 2696.94,
+      "text": "positive and growing."
+    },
+    {
+      "start": 2696.94,
+      "end": 2699.4,
+      "text": "It's going to be shifting to the right."
+    },
+    {
+      "start": 2699.4,
+      "end": 2701.36,
+      "text": "Why is that?"
+    },
+    {
+      "start": 2701.36,
+      "end": 2704.3,
+      "text": "Because Sn has a mean that's proportional to n."
+    },
+    {
+      "start": 2704.3,
+      "end": 2709.48,
+      "text": "When I divide by square root n, then it means that the mean"
+    },
+    {
+      "start": 2709.48,
+      "end": 2711.94,
+      "text": "scales like square root of n."
+    },
+    {
+      "start": 2711.94,
+      "end": 2715.66,
+      "text": "So my distribution would still keep shifting after I do this"
+    },
+    {
+      "start": 2715.66,
+      "end": 2716.68,
+      "text": "division."
+    },
+    {
+      "start": 2716.68,
+      "end": 2720.98,
+      "text": "I want to keep my distribution in place, so I subtract out the"
+    },
+    {
+      "start": 2720.98,
+      "end": 2723.92,
+      "text": "mean of Sn."
+    },
+    {
+      "start": 2723.92,
+      "end": 2729.52,
+      "text": "So what we're doing here is a standard technique or"
+    },
+    {
+      "start": 2729.52,
+      "end": 2731.36,
+      "text": "transformation, where you take around"
+    },
+    {
+      "start": 2731.36,
+      "end": 2734.86,
+      "text": "a random variable, and you so-called standardize it."
+    },
+    {
+      "start": 2734.86,
+      "end": 2738.48,
+      "text": "I remove the mean of that random variable, and I divide"
+    },
+    {
+      "start": 2738.48,
+      "end": 2740.08,
+      "text": "by the standard deviation."
+    },
+    {
+      "start": 2740.08,
+      "end": 2742.7,
+      "text": "This results in a random variable that has zero mean"
+    },
+    {
+      "start": 2742.7,
+      "end": 2744.98,
+      "text": "and unit variance."
+    },
+    {
+      "start": 2744.98,
+      "end": 2747.84,
+      "text": "What Zn measures is the following."
+    },
+    {
+      "start": 2747.84,
+      "end": 2752.74,
+      "text": "Zn tells me how many standard deviations am I"
+    },
+    {
+      "start": 2752.74,
+      "end": 2755.5,
+      "text": "away from the mean."
+    },
+    {
+      "start": 2755.5,
+      "end": 2760.64,
+      "text": "Sn minus an expected value of X tells me how much is Sn away"
+    },
+    {
+      "start": 2760.64,
+      "end": 2762.96,
+      "text": "from the mean value of Sn."
+    },
+    {
+      "start": 2762.96,
+      "end": 2766.58,
+      "text": "And by dividing by the standard deviation of Sn, this"
+    },
+    {
+      "start": 2766.58,
+      "end": 2770.4,
+      "text": "tells me how many standard deviations away from the mean"
+    },
+    {
+      "start": 2770.4,
+      "end": 2774.98,
+      "text": "am I. So we're going to look at this random variable, which"
+    },
+    {
+      "start": 2774.98,
+      "end": 2779.42,
+      "text": "is just a transformation of Sn."
+    },
+    {
+      "start": 2779.42,
+      "end": 2781.88,
+      "text": "It's a linear transformation of Sn."
+    },
+    {
+      "start": 2781.88,
+      "end": 2785.2,
+      "text": "And we're going to compare this random variable to a standard"
+    },
+    {
+      "start": 2785.2,
+      "end": 2787.22,
+      "text": "normal random variable."
+    },
+    {
+      "start": 2787.22,
+      "end": 2790.64,
+      "text": "So a standard normal is the random variable that you are"
+    },
+    {
+      "start": 2790.64,
+      "end": 2795.36,
+      "text": "familiar with, given by the usual formula, and for which we"
+    },
+    {
+      "start": 2795.36,
+      "end": 2797.4,
+      "text": "have tables for it."
+    },
+    {
+      "start": 2797.4,
+      "end": 2800.38,
+      "text": "This Zn has zero mean and unit variance."
+    },
+    {
+      "start": 2800.38,
+      "end": 2804.2,
+      "text": "So in that respect, it has the same statistics as the"
+    },
+    {
+      "start": 2804.2,
+      "end": 2805.88,
+      "text": "standard normal."
+    },
+    {
+      "start": 2805.88,
+      "end": 2808.9,
+      "text": "The distribution of Zn could be anything."
+    },
+    {
+      "start": 2808.9,
+      "end": 2810.76,
+      "text": "It can be pretty messy."
+    },
+    {
+      "start": 2810.76,
+      "end": 2813.3,
+      "text": "But there's this amazing theorem called the central"
+    },
+    {
+      "start": 2813.3,
+      "end": 2818.24,
+      "text": "limit theorem that tells us that the distribution of Zn"
+    },
+    {
+      "start": 2818.24,
+      "end": 2820.46,
+      "text": "approaches the distribution of the standard"
+    },
+    {
+      "start": 2820.46,
+      "end": 2820.56,
+      "text": "normal."
+    },
+    {
+      "start": 2820.56,
+      "end": 2820.64,
+      "text": "."
+    },
+    {
+      "start": 2820.64,
+      "end": 2828.06,
+      "text": ", in the following sense, that probabilities of this type that"
+    },
+    {
+      "start": 2828.06,
+      "end": 2832.3,
+      "text": "you can calculate for Zn in the limit become the same as the"
+    },
+    {
+      "start": 2832.3,
+      "end": 2835.14,
+      "text": "probabilities that you would get from the standard normal"
+    },
+    {
+      "start": 2835.14,
+      "end": 2837.58,
+      "text": "tables from Z."
+    },
+    {
+      "start": 2837.58,
+      "end": 2839.7,
+      "text": "It's a statement about the cumulative"
+    },
+    {
+      "start": 2839.7,
+      "end": 2841.96,
+      "text": "distribution functions."
+    },
+    {
+      "start": 2841.96,
+      "end": 2845.02,
+      "text": "This quantity as a function of C is the cumulative"
+    },
+    {
+      "start": 2845.02,
+      "end": 2847.9,
+      "text": "distribution function of the random variable Zn."
+    },
+    {
+      "start": 2847.9,
+      "end": 2850.56,
+      "text": "This is the cumulative distribution function of the"
+    },
+    {
+      "start": 2850.56,
+      "end": 2852.06,
+      "text": "standard normal."
+    },
+    {
+      "start": 2852.06,
+      "end": 2854.48,
+      "text": "The central limit theorem tells us that the cumulative"
+    },
+    {
+      "start": 2854.48,
+      "end": 2859.32,
+      "text": "distribution function of the sum of a number of random"
+    },
+    {
+      "start": 2859.32,
+      "end": 2863.0,
+      "text": "variables, after they're appropriately standardized,"
+    },
+    {
+      "start": 2863.0,
+      "end": 2866.46,
+      "text": "approaches the cumulative distribution function of the"
+    },
+    {
+      "start": 2866.46,
+      "end": 2870.57,
+      "text": "standard normal distribution."
+    },
+    {
+      "start": 2870.57,
+      "end": 2873.57,
+      "text": "In particular, this tells us that we can calculate"
+    },
+    {
+      "start": 2873.57,
+      "end": 2879.49,
+      "text": "probabilities for Zn when n is large by calculating instead"
+    },
+    {
+      "start": 2879.49,
+      "end": 2881.73,
+      "text": "probabilities for Z. And that's going to give us the"
+    },
+    {
+      "start": 2881.73,
+      "end": 2884.07,
+      "text": "good approximation."
+    },
+    {
+      "start": 2884.07,
+      "end": 2887.69,
+      "text": "Probabilities for Z are easy to calculate, because they're"
+    },
+    {
+      "start": 2887.69,
+      "end": 2889.25,
+      "text": "well tabulated."
+    },
+    {
+      "start": 2889.25,
+      "end": 2892.85,
+      "text": "So we get a very nice shortcut for calculating"
+    },
+    {
+      "start": 2892.85,
+      "end": 2894.99,
+      "text": "probabilities for Zn."
+    },
+    {
+      "start": 2894.99,
+      "end": 2897.97,
+      "text": "Now, it's not Zn that you're interested in."
+    },
+    {
+      "start": 2897.97,
+      "end": 2900.91,
+      "text": "What you're interested in is Sn."
+    },
+    {
+      "start": 2900.91,
+      "end": 2911.55,
+      "text": "And Sn is, I'm inverting this relation here, Sn is the square"
+    },
+    {
+      "start": 2911.55,
+      "end": 2911.65,
+      "text": "root."
+    },
+    {
+      "start": 2911.65,
+      "end": 2921.41,
+      "text": "So we're going to put n sigma Zn plus n expected value of X."
+    },
+    {
+      "start": 2921.41,
+      "end": 2922.31,
+      "text": "All right."
+    },
+    {
+      "start": 2922.31,
+      "end": 2926.63,
+      "text": "Now, if you can calculate probabilities for Zn, even"
+    },
+    {
+      "start": 2926.63,
+      "end": 2929.39,
+      "text": "approximately, then you can certainly calculate"
+    },
+    {
+      "start": 2929.39,
+      "end": 2933.29,
+      "text": "probabilities for Sn, because one is a linear"
+    },
+    {
+      "start": 2933.29,
+      "end": 2935.41,
+      "text": "function of the other."
+    },
+    {
+      "start": 2935.41,
+      "end": 2938.69,
+      "text": "And we're going to do a little bit of that next time."
+    },
+    {
+      "start": 2938.69,
+      "end": 2941.03,
+      "text": "You're going to get also some practice in recitation."
+    },
+    {
+      "start": 2941.03,
+      "end": 2944.95,
+      "text": "At the more vague level, you could describe the central"
+    },
+    {
+      "start": 2944.95,
+      "end": 2947.07,
+      "text": "Leibniz theorem as saying the following."
+    },
+    {
+      "start": 2947.07,
+      "end": 2951.37,
+      "text": "When n is large, you can pretend that Zn is a standard"
+    },
+    {
+      "start": 2951.37,
+      "end": 2955.35,
+      "text": "normal random variable, and do the calculations as if Zn was"
+    },
+    {
+      "start": 2955.35,
+      "end": 2956.65,
+      "text": "standard normal."
+    },
+    {
+      "start": 2956.65,
+      "end": 2961.37,
+      "text": "Now, pretending that Zn is normal is the same as"
+    },
+    {
+      "start": 2961.37,
+      "end": 2964.23,
+      "text": "pretending that Sn is normal."
+    },
+    {
+      "start": 2964.23,
+      "end": 2967.69,
+      "text": "Because Sn is a linear function of Zn."
+    },
+    {
+      "start": 2967.69,
+      "end": 2970.37,
+      "text": "And we know that linear functions of normal random"
+    },
+    {
+      "start": 2970.37,
+      "end": 2972.13,
+      "text": "variables are normal."
+    },
+    {
+      "start": 2972.13,
+      "end": 2976.25,
+      "text": "So the central limit theorem essentially tells us that we"
+    },
+    {
+      "start": 2976.25,
+      "end": 2980.19,
+      "text": "can pretend that Sn is a normal random variable, and do the"
+    },
+    {
+      "start": 2980.19,
+      "end": 2984.73,
+      "text": "calculations just as if it were a normal random variable."
+    },
+    {
+      "start": 2984.73,
+      "end": 2986.99,
+      "text": "Mathematically speaking, though, the central limit"
+    },
+    {
+      "start": 2986.99,
+      "end": 2990.85,
+      "text": "theorem does not talk about the distribution of Sn, because"
+    },
+    {
+      "start": 2990.85,
+      "end": 2995.53,
+      "text": "the distribution of Sn becomes degenerate in the limit, just a"
+    },
+    {
+      "start": 2995.53,
+      "end": 2997.65,
+      "text": "very flat and long thing."
+    },
+    {
+      "start": 2997.65,
+      "end": 2999.81,
+      "text": "So strictly speaking, mathematically, it's a"
+    },
+    {
+      "start": 2999.81,
+      "end": 3000.33,
+      "text": "statement."
+    },
+    {
+      "start": 3000.33,
+      "end": 3004.19,
+      "text": "But cumulative distributions of Zn's, practically, the way"
+    },
+    {
+      "start": 3004.19,
+      "end": 3008.73,
+      "text": "you use it is by just pretending that Sn is normal."
+    },
+    {
+      "start": 3008.73,
+      "end": 3009.33,
+      "text": "Very good."
+    },
+    {
+      "start": 3009.33,
+      "end": 3011.09,
+      "text": "Enjoy the Thanksgiving holiday."
+    }
+  ]
+}

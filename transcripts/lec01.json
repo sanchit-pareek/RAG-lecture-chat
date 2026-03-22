@@ -1,0 +1,4932 @@
+{
+  "lecture": "lec01",
+  "language": "en",
+  "duration": 3070.4426875,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.44,
+      "text": "The following content is provided under a Creative"
+    },
+    {
+      "start": 2.44,
+      "end": 3.96,
+      "text": "Commons license."
+    },
+    {
+      "start": 3.96,
+      "end": 6.28,
+      "text": "Your support will help MIT OpenCourseWare"
+    },
+    {
+      "start": 6.28,
+      "end": 10.64,
+      "text": "continue to offer high quality educational resources for free."
+    },
+    {
+      "start": 10.64,
+      "end": 13.26,
+      "text": "To make a donation or view additional materials"
+    },
+    {
+      "start": 13.26,
+      "end": 17.2,
+      "text": "from hundreds of MIT courses, visit MIT OpenCourseWare"
+    },
+    {
+      "start": 17.2,
+      "end": 22.37,
+      "text": "at ocw.mit.edu."
+    },
+    {
+      "start": 22.37,
+      "end": 24.33,
+      "text": "OK."
+    },
+    {
+      "start": 24.33,
+      "end": 30.55,
+      "text": "So welcome to 60416431, a class on probability models"
+    },
+    {
+      "start": 30.55,
+      "end": 31.77,
+      "text": "and the like."
+    },
+    {
+      "start": 31.77,
+      "end": 32.77,
+      "text": "I'm John Tsitsiklis."
+    },
+    {
+      "start": 32.77,
+      "end": 34.27,
+      "text": "I will be teaching this class."
+    },
+    {
+      "start": 34.27,
+      "end": 39.33,
+      "text": "And I'm looking forward to this being an enjoyable and also"
+    },
+    {
+      "start": 39.33,
+      "end": 41.07,
+      "text": "useful experience."
+    },
+    {
+      "start": 41.07,
+      "end": 44.21,
+      "text": "We have a fair amount of staff involved in this course,"
+    },
+    {
+      "start": 44.21,
+      "end": 47.73,
+      "text": "your recitation instructors, and also a bunch of TAs."
+    },
+    {
+      "start": 47.73,
+      "end": 52.05,
+      "text": "But I want to single out our head TA, Uzoma,"
+    },
+    {
+      "start": 52.05,
+      "end": 54.47,
+      "text": "who is the key person in this class."
+    },
+    {
+      "start": 54.47,
+      "end": 56.57,
+      "text": "Everything has to go through him."
+    },
+    {
+      "start": 56.57,
+      "end": 59.67,
+      "text": "If he doesn't know in which recitation section you are,"
+    },
+    {
+      "start": 59.67,
+      "end": 60.55,
+      "text": "then simply you do not."
+    },
+    {
+      "start": 60.55,
+      "end": 61.63,
+      "text": "He does not exist."
+    },
+    {
+      "start": 61.63,
+      "end": 63.73,
+      "text": "So keep that in mind."
+    },
+    {
+      "start": 63.73,
+      "end": 64.23,
+      "text": "All right."
+    },
+    {
+      "start": 64.23,
+      "end": 67.79,
+      "text": "So we want to jump right into the subject."
+    },
+    {
+      "start": 67.79,
+      "end": 69.65,
+      "text": "But I'm going to take just a few minutes"
+    },
+    {
+      "start": 69.65,
+      "end": 72.61,
+      "text": "to talk about a few administrative details"
+    },
+    {
+      "start": 72.61,
+      "end": 74.61,
+      "text": "and how the course is run."
+    },
+    {
+      "start": 74.61,
+      "end": 77.65,
+      "text": "So we're going to have lectures twice a week."
+    },
+    {
+      "start": 77.65,
+      "end": 80.31,
+      "text": "And I'm going to use old-fashioned transparencies."
+    },
+    {
+      "start": 80.31,
+      "end": 83.27,
+      "text": "Now, you get copies of these slides with plenty of space"
+    },
+    {
+      "start": 83.27,
+      "end": 85.75,
+      "text": "for you to keep notes on them."
+    },
+    {
+      "start": 85.75,
+      "end": 89.67,
+      "text": "A useful way of making good use of the slides"
+    },
+    {
+      "start": 89.67,
+      "end": 93.91,
+      "text": "is to use them as a sort of mnemonic summary of what"
+    },
+    {
+      "start": 93.91,
+      "end": 95.67,
+      "text": "happens in lecture."
+    },
+    {
+      "start": 95.67,
+      "end": 98.21,
+      "text": "Not everything that I'm going to say is, of course,"
+    },
+    {
+      "start": 98.21,
+      "end": 99.37,
+      "text": "on the slides."
+    },
+    {
+      "start": 99.37,
+      "end": 101.27,
+      "text": "But by looking them, you get a sense"
+    },
+    {
+      "start": 101.27,
+      "end": 102.73,
+      "text": "of what's happening right now."
+    },
+    {
+      "start": 102.73,
+      "end": 105.03,
+      "text": "And it may be a good idea to review them"
+    },
+    {
+      "start": 105.03,
+      "end": 107.23,
+      "text": "before you go to recitation."
+    },
+    {
+      "start": 107.23,
+      "end": 108.69,
+      "text": "So what happens in recitation?"
+    },
+    {
+      "start": 108.69,
+      "end": 111.03,
+      "text": "In recitation, your recitation instructor"
+    },
+    {
+      "start": 111.03,
+      "end": 113.97,
+      "text": "is going to maybe review some of the theory"
+    },
+    {
+      "start": 113.97,
+      "end": 117.15,
+      "text": "and then solve some problems for you."
+    },
+    {
+      "start": 117.15,
+      "end": 119.67,
+      "text": "And then you have tutorials where you meet,"
+    },
+    {
+      "start": 119.67,
+      "end": 122.77,
+      "text": "in very small groups, together with your TA."
+    },
+    {
+      "start": 122.77,
+      "end": 125.35,
+      "text": "And what happens in tutorials is that you actually"
+    },
+    {
+      "start": 125.35,
+      "end": 128.23,
+      "text": "do the problem solving with the help of your TA"
+    },
+    {
+      "start": 128.23,
+      "end": 132.27,
+      "text": "and the help of your classmates in your tutorial section."
+    },
+    {
+      "start": 132.27,
+      "end": 134.35,
+      "text": "Now, probability is a tricky subject."
+    },
+    {
+      "start": 134.35,
+      "end": 136.75,
+      "text": "You may be reading the text, listening to lectures,"
+    },
+    {
+      "start": 136.75,
+      "end": 139.65,
+      "text": "everything makes perfect sense, and so on."
+    },
+    {
+      "start": 139.65,
+      "end": 143.13,
+      "text": "But until you actually sit down and try to solve problems,"
+    },
+    {
+      "start": 143.13,
+      "end": 146.17,
+      "text": "you don't quite appreciate the subtleties and the difficulties"
+    },
+    {
+      "start": 146.17,
+      "end": 147.33,
+      "text": "that are involved."
+    },
+    {
+      "start": 147.33,
+      "end": 149.67,
+      "text": "So problem solving is a key part of this."
+    },
+    {
+      "start": 149.67,
+      "end": 153.21,
+      "text": "This class and tutorials are extremely useful just"
+    },
+    {
+      "start": 153.21,
+      "end": 155.29,
+      "text": "for this reason, because that's where you actually"
+    },
+    {
+      "start": 155.29,
+      "end": 158.11,
+      "text": "get the practice of solving problems on your own,"
+    },
+    {
+      "start": 158.11,
+      "end": 161.49,
+      "text": "as opposed to seeing someone else who's"
+    },
+    {
+      "start": 161.49,
+      "end": 163.53,
+      "text": "solving them for you."
+    },
+    {
+      "start": 163.53,
+      "end": 167.25,
+      "text": "OK, about mechanics, a key part of what's going to happen today"
+    },
+    {
+      "start": 167.25,
+      "end": 171.55,
+      "text": "is that you will all turn in your schedule forms that"
+    },
+    {
+      "start": 171.55,
+      "end": 175.29,
+      "text": "are at the end of the handout that you have in your hands."
+    },
+    {
+      "start": 175.29,
+      "end": 178.97,
+      "text": "Then the TAs will be working frantically through the night."
+    },
+    {
+      "start": 179.67,
+      "end": 183.67,
+      "text": "And they're going to be producing a list of who"
+    },
+    {
+      "start": 183.67,
+      "end": 185.73,
+      "text": "goes into what section."
+    },
+    {
+      "start": 185.73,
+      "end": 189.33,
+      "text": "And when that happens, any person in this class"
+    },
+    {
+      "start": 189.33,
+      "end": 193.39,
+      "text": "with probability 90% is going to be happy with their assignment."
+    },
+    {
+      "start": 193.39,
+      "end": 197.67,
+      "text": "And with probability 10%, they're going to be unhappy."
+    },
+    {
+      "start": 197.67,
+      "end": 200.89,
+      "text": "Now, unhappy people have an option, though."
+    },
+    {
+      "start": 200.89,
+      "end": 203.25,
+      "text": "You can resubmit your form together"
+    },
+    {
+      "start": 203.25,
+      "end": 205.29,
+      "text": "with your full schedule and constraints,"
+    },
+    {
+      "start": 205.29,
+      "end": 209.59,
+      "text": "give it back to the head TA, who will then do some further jog"
+    },
+    {
+      "start": 209.59,
+      "end": 209.67,
+      "text": "list."
+    },
+    {
+      "start": 209.67,
+      "end": 211.67,
+      "text": "And that's going to give you a little bit of a chance"
+    },
+    {
+      "start": 211.67,
+      "end": 213.67,
+      "text": "to do something and reassign people."
+    },
+    {
+      "start": 213.67,
+      "end": 217.17,
+      "text": "And after that happens, 90% of those unhappy people"
+    },
+    {
+      "start": 217.17,
+      "end": 218.67,
+      "text": "will become happy."
+    },
+    {
+      "start": 218.67,
+      "end": 223.67,
+      "text": "And 10% of them will be left unhappy."
+    },
+    {
+      "start": 223.67,
+      "end": 227.67,
+      "text": "OK, so what's the probability that a random person is going"
+    },
+    {
+      "start": 227.67,
+      "end": 230.67,
+      "text": "to be unhappy at the end of this process?"
+    },
+    {
+      "start": 230.67,
+      "end": 231.67,
+      "text": "It's 1%."
+    },
+    {
+      "start": 231.67,
+      "end": 232.67,
+      "text": "Excellent."
+    },
+    {
+      "start": 232.67,
+      "end": 234.67,
+      "text": "Maybe you don't need this class."
+    },
+    {
+      "start": 234.67,
+      "end": 235.67,
+      "text": "OK, so 1%."
+    },
+    {
+      "start": 235.67,
+      "end": 238.17,
+      "text": "We have about 100 people in this class."
+    },
+    {
+      "start": 238.17,
+      "end": 239.59,
+      "text": "So there's going to be about one unhappy person."
+    },
+    {
+      "start": 239.59,
+      "end": 243.25,
+      "text": "I mean, anywhere you look in life, in any group you look at,"
+    },
+    {
+      "start": 243.25,
+      "end": 245.35,
+      "text": "there's always one unhappy person, right?"
+    },
+    {
+      "start": 245.35,
+      "end": 249.05,
+      "text": "So what can we do about it?"
+    },
+    {
+      "start": 249.05,
+      "end": 251.69,
+      "text": "All right, another important part about mechanics"
+    },
+    {
+      "start": 251.69,
+      "end": 253.29,
+      "text": "is to read carefully the statement"
+    },
+    {
+      "start": 253.29,
+      "end": 256.01,
+      "text": "that we have about collaboration, academic honesty,"
+    },
+    {
+      "start": 256.01,
+      "end": 257.05,
+      "text": "and all that."
+    },
+    {
+      "start": 257.05,
+      "end": 258.01,
+      "text": "You're encouraged."
+    },
+    {
+      "start": 258.01,
+      "end": 261.17,
+      "text": "It's a very good idea to work with other students."
+    },
+    {
+      "start": 261.17,
+      "end": 264.09,
+      "text": "You can consult sources that are out there."
+    },
+    {
+      "start": 264.09,
+      "end": 266.91,
+      "text": "But when you sit down and write your solutions,"
+    },
+    {
+      "start": 266.91,
+      "end": 269.51,
+      "text": "you have to do that by setting things aside."
+    },
+    {
+      "start": 269.51,
+      "end": 272.07,
+      "text": "And just write them on your own."
+    },
+    {
+      "start": 272.07,
+      "end": 277.09,
+      "text": "You cannot copy something that somebody else has given to you."
+    },
+    {
+      "start": 277.09,
+      "end": 279.81,
+      "text": "One reason is that we're not going"
+    },
+    {
+      "start": 279.81,
+      "end": 282.73,
+      "text": "to like it when it happens."
+    },
+    {
+      "start": 282.73,
+      "end": 284.27,
+      "text": "And another reason is that you're not"
+    },
+    {
+      "start": 284.27,
+      "end": 286.23,
+      "text": "going to do yourself any favor."
+    },
+    {
+      "start": 286.23,
+      "end": 288.11,
+      "text": "Really, the only way to do well in this class"
+    },
+    {
+      "start": 288.11,
+      "end": 291.69,
+      "text": "is to get a lot of practice by solving problems yourselves."
+    },
+    {
+      "start": 291.69,
+      "end": 293.47,
+      "text": "So if you don't do that on your own,"
+    },
+    {
+      "start": 293.47,
+      "end": 296.87,
+      "text": "then when quiz and exam time comes,"
+    },
+    {
+      "start": 296.87,
+      "end": 299.17,
+      "text": "things are going to be difficult."
+    },
+    {
+      "start": 299.17,
+      "end": 301.09,
+      "text": "So as I mentioned here, we're going"
+    },
+    {
+      "start": 301.09,
+      "end": 304.51,
+      "text": "to have recitation sections that some of them"
+    },
+    {
+      "start": 304.51,
+      "end": 308.23,
+      "text": "are for 6041 students, some are for 631 students,"
+    },
+    {
+      "start": 308.23,
+      "end": 310.27,
+      "text": "the graduate section of the class."
+    },
+    {
+      "start": 310.27,
+      "end": 314.17,
+      "text": "Now undergraduates can sit in the graduate recitation"
+    },
+    {
+      "start": 314.17,
+      "end": 314.67,
+      "text": "sections."
+    },
+    {
+      "start": 314.67,
+      "end": 316.87,
+      "text": "What's going to happen there is that things"
+    },
+    {
+      "start": 316.87,
+      "end": 318.79,
+      "text": "may be just a little faster, and you"
+    },
+    {
+      "start": 318.79,
+      "end": 322.27,
+      "text": "may be covering a problem that's a little more advanced"
+    },
+    {
+      "start": 322.27,
+      "end": 324.69,
+      "text": "and is not covered in the undergrad sections."
+    },
+    {
+      "start": 324.69,
+      "end": 326.41,
+      "text": "But if you sit in the graduate section,"
+    },
+    {
+      "start": 326.41,
+      "end": 327.67,
+      "text": "you're still just responding."
+    },
+    {
+      "start": 327.67,
+      "end": 328.77,
+      "text": "You're an undergraduate."
+    },
+    {
+      "start": 328.77,
+      "end": 333.09,
+      "text": "You're still just responsible for the undergraduate material."
+    },
+    {
+      "start": 333.09,
+      "end": 335.43,
+      "text": "That is, you can just do the undergraduate work"
+    },
+    {
+      "start": 335.43,
+      "end": 337.53,
+      "text": "in the class, but maybe be exposed"
+    },
+    {
+      "start": 337.53,
+      "end": 338.45,
+      "text": "at a different section."
+    },
+    {
+      "start": 343.39,
+      "end": 346.17,
+      "text": "A few words about the style of this class."
+    },
+    {
+      "start": 346.17,
+      "end": 350.71,
+      "text": "We want to focus on basic ideas and concepts."
+    },
+    {
+      "start": 350.71,
+      "end": 352.55,
+      "text": "There's going to be lots of formulas,"
+    },
+    {
+      "start": 352.55,
+      "end": 354.65,
+      "text": "but what we try to do in this class"
+    },
+    {
+      "start": 354.65,
+      "end": 356.43,
+      "text": "is to actually have you understand"
+    },
+    {
+      "start": 356.43,
+      "end": 358.15,
+      "text": "what those formulas mean."
+    },
+    {
+      "start": 358.15,
+      "end": 361.23,
+      "text": "And in a year from now, when almost all of the formulas"
+    },
+    {
+      "start": 361.23,
+      "end": 363.47,
+      "text": "have been wiped out from your memory,"
+    },
+    {
+      "start": 363.47,
+      "end": 365.59,
+      "text": "you still have the basic concepts."
+    },
+    {
+      "start": 365.59,
+      "end": 366.57,
+      "text": "You can understand them."
+    },
+    {
+      "start": 366.57,
+      "end": 368.65,
+      "text": "So when you look things up again,"
+    },
+    {
+      "start": 368.65,
+      "end": 372.77,
+      "text": "they will still make sense."
+    },
+    {
+      "start": 372.77,
+      "end": 375.61,
+      "text": "It's not a plug and chug kind of class,"
+    },
+    {
+      "start": 375.61,
+      "end": 379.15,
+      "text": "where you're given a list of formulas, you're given numbers,"
+    },
+    {
+      "start": 379.15,
+      "end": 381.43,
+      "text": "and you plug in and you get answers."
+    },
+    {
+      "start": 381.43,
+      "end": 385.57,
+      "text": "The really hard part is usually to choose which formulas you're"
+    },
+    {
+      "start": 385.57,
+      "end": 386.27,
+      "text": "going to use."
+    },
+    {
+      "start": 386.27,
+      "end": 387.19,
+      "text": "You need judgment."
+    },
+    {
+      "start": 387.19,
+      "end": 388.15,
+      "text": "You need intuition."
+    },
+    {
+      "start": 388.15,
+      "end": 392.39,
+      "text": "Lots of probability problems, at least the interesting ones,"
+    },
+    {
+      "start": 392.39,
+      "end": 394.43,
+      "text": "often have lots of different solutions."
+    },
+    {
+      "start": 394.43,
+      "end": 395.71,
+      "text": "Some are extremely long."
+    },
+    {
+      "start": 395.71,
+      "end": 397.45,
+      "text": "Some are extremely short."
+    },
+    {
+      "start": 397.45,
+      "end": 399.93,
+      "text": "The extremely short ones usually involve"
+    },
+    {
+      "start": 399.93,
+      "end": 402.09,
+      "text": "some kind of deeper understanding"
+    },
+    {
+      "start": 402.09,
+      "end": 406.35,
+      "text": "of what's going on, so that you can pick a shortcut and use it."
+    },
+    {
+      "start": 406.35,
+      "end": 409.09,
+      "text": "And hopefully, you are going to develop this skill"
+    },
+    {
+      "start": 409.09,
+      "end": 411.57,
+      "text": "during this class."
+    },
+    {
+      "start": 411.57,
+      "end": 416.05,
+      "text": "Now, I could spend a lot of time in this lecture"
+    },
+    {
+      "start": 416.05,
+      "end": 418.15,
+      "text": "talking about why the subject is important."
+    },
+    {
+      "start": 418.15,
+      "end": 422.29,
+      "text": "I'll keep it short, because I think it's almost obvious."
+    },
+    {
+      "start": 422.29,
+      "end": 425.65,
+      "text": "Anything that happens in life is uncertain."
+    },
+    {
+      "start": 425.65,
+      "end": 427.25,
+      "text": "There's uncertainty anywhere."
+    },
+    {
+      "start": 427.25,
+      "end": 429.25,
+      "text": "So whatever you try to do, you need"
+    },
+    {
+      "start": 429.25,
+      "end": 431.83,
+      "text": "to have some way of dealing or thinking"
+    },
+    {
+      "start": 431.83,
+      "end": 433.97,
+      "text": "about this uncertainty."
+    },
+    {
+      "start": 433.97,
+      "end": 436.29,
+      "text": "And the way to do that in a systematic way"
+    },
+    {
+      "start": 436.29,
+      "end": 438.45,
+      "text": "is by using the models that are given to us"
+    },
+    {
+      "start": 438.45,
+      "end": 440.23,
+      "text": "by probability theory."
+    },
+    {
+      "start": 440.23,
+      "end": 441.81,
+      "text": "So if you're an engineer and you're"
+    },
+    {
+      "start": 441.81,
+      "end": 444.65,
+      "text": "dealing with a communication system or signal processing,"
+    },
+    {
+      "start": 444.65,
+      "end": 448.15,
+      "text": "basically, you're facing a fight against noise."
+    },
+    {
+      "start": 448.15,
+      "end": 449.59,
+      "text": "Noise is random."
+    },
+    {
+      "start": 449.59,
+      "end": 450.39,
+      "text": "It's uncertain."
+    },
+    {
+      "start": 450.39,
+      "end": 451.45,
+      "text": "How do you model it?"
+    },
+    {
+      "start": 451.45,
+      "end": 453.13,
+      "text": "How do you deal with it?"
+    },
+    {
+      "start": 453.13,
+      "end": 455.23,
+      "text": "If you're a manager, I guess you're"
+    },
+    {
+      "start": 455.23,
+      "end": 458.51,
+      "text": "dealing with customer demand, which is, of course, random."
+    },
+    {
+      "start": 458.51,
+      "end": 460.91,
+      "text": "Or you're dealing with the stock market,"
+    },
+    {
+      "start": 460.91,
+      "end": 462.85,
+      "text": "which is definitely random."
+    },
+    {
+      "start": 462.85,
+      "end": 468.23,
+      "text": "Or you play at the casino, which is, again, random, and so on."
+    },
+    {
+      "start": 468.23,
+      "end": 470.77,
+      "text": "And the same goes for pretty much any other field"
+    },
+    {
+      "start": 470.77,
+      "end": 472.91,
+      "text": "that you can think of."
+    },
+    {
+      "start": 472.91,
+      "end": 477.23,
+      "text": "But independent of which field you're coming from,"
+    },
+    {
+      "start": 477.23,
+      "end": 478.05,
+      "text": "the basic concepts."
+    },
+    {
+      "start": 478.05,
+      "end": 480.77,
+      "text": "And tools are really all the same."
+    },
+    {
+      "start": 480.77,
+      "end": 483.19,
+      "text": "So you may see in bookstores that there"
+    },
+    {
+      "start": 483.19,
+      "end": 485.61,
+      "text": "are books, probability for scientists,"
+    },
+    {
+      "start": 485.61,
+      "end": 487.67,
+      "text": "probability for engineers, probability"
+    },
+    {
+      "start": 487.67,
+      "end": 491.49,
+      "text": "for social scientists, probability for astrologists."
+    },
+    {
+      "start": 491.49,
+      "end": 494.13,
+      "text": "Well, what all those books have inside them"
+    },
+    {
+      "start": 494.13,
+      "end": 496.81,
+      "text": "is exactly the same models, the same equations,"
+    },
+    {
+      "start": 496.81,
+      "end": 498.05,
+      "text": "the same problems."
+    },
+    {
+      "start": 498.05,
+      "end": 501.55,
+      "text": "They just make them somewhat different word problems."
+    },
+    {
+      "start": 501.55,
+      "end": 504.81,
+      "text": "The basic concepts are just one and the same."
+    },
+    {
+      "start": 504.81,
+      "end": 507.93,
+      "text": "And we'll take this as an excuse for not"
+    },
+    {
+      "start": 507.93,
+      "end": 512.01,
+      "text": "going too much into specific domain applications."
+    },
+    {
+      "start": 512.01,
+      "end": 513.83,
+      "text": "We will have problems and examples"
+    },
+    {
+      "start": 513.83,
+      "end": 516.15,
+      "text": "that are motivated in some loose sense"
+    },
+    {
+      "start": 516.15,
+      "end": 518.17,
+      "text": "from real-world situations."
+    },
+    {
+      "start": 518.17,
+      "end": 520.51,
+      "text": "But we're not really trying, in this class,"
+    },
+    {
+      "start": 520.51,
+      "end": 526.23,
+      "text": "to develop the skills for domain-specific problems."
+    },
+    {
+      "start": 526.23,
+      "end": 529.65,
+      "text": "Rather, we're going to try to stick to a general understanding"
+    },
+    {
+      "start": 529.65,
+      "end": 532.39,
+      "text": "of the subject."
+    },
+    {
+      "start": 532.39,
+      "end": 537.53,
+      "text": "OK, so the next slide, which you do have in your handout, gives"
+    },
+    {
+      "start": 537.53,
+      "end": 537.93,
+      "text": "you a few more."
+    },
+    {
+      "start": 537.93,
+      "end": 541.07,
+      "text": "More details about the class."
+    },
+    {
+      "start": 541.07,
+      "end": 543.03,
+      "text": "Maybe one thing to comment here is"
+    },
+    {
+      "start": 543.03,
+      "end": 546.37,
+      "text": "that you do need to read the text."
+    },
+    {
+      "start": 546.37,
+      "end": 548.55,
+      "text": "And with calculus books, perhaps you"
+    },
+    {
+      "start": 548.55,
+      "end": 550.81,
+      "text": "can live with just a two-page summary"
+    },
+    {
+      "start": 550.81,
+      "end": 553.17,
+      "text": "of all the interesting formulas in calculus."
+    },
+    {
+      "start": 553.17,
+      "end": 558.05,
+      "text": "And you can get by just with those formulas."
+    },
+    {
+      "start": 558.05,
+      "end": 561.09,
+      "text": "But here, because we want to develop concepts and intuition,"
+    },
+    {
+      "start": 561.09,
+      "end": 563.55,
+      "text": "actually reading words, as opposed"
+    },
+    {
+      "start": 563.55,
+      "end": 565.83,
+      "text": "to just browsing through equations,"
+    },
+    {
+      "start": 565.83,
+      "end": 567.53,
+      "text": "does make a difference."
+    },
+    {
+      "start": 567.53,
+      "end": 570.35,
+      "text": "In the beginning, the class is kind of easy."
+    },
+    {
+      "start": 570.35,
+      "end": 572.43,
+      "text": "When we deal with discrete probability,"
+    },
+    {
+      "start": 572.43,
+      "end": 575.17,
+      "text": "that's the material until our first quiz."
+    },
+    {
+      "start": 575.17,
+      "end": 579.09,
+      "text": "And some of you may get by without being too systematic"
+    },
+    {
+      "start": 579.09,
+      "end": 580.75,
+      "text": "about following the material."
+    },
+    {
+      "start": 580.75,
+      "end": 584.01,
+      "text": "But it does get substantially harder afterwards."
+    },
+    {
+      "start": 584.01,
+      "end": 587.03,
+      "text": "And I will keep restating that you"
+    },
+    {
+      "start": 587.03,
+      "end": 592.49,
+      "text": "do have to read the text to really understand the material."
+    },
+    {
+      "start": 592.49,
+      "end": 596.77,
+      "text": "OK, so now we can start with the real part of the lecture."
+    },
+    {
+      "start": 597.53,
+      "end": 601.67,
+      "text": "Let us set the goals for today."
+    },
+    {
+      "start": 601.67,
+      "end": 604.35,
+      "text": "So probability of probability theory"
+    },
+    {
+      "start": 604.35,
+      "end": 608.15,
+      "text": "is a framework for dealing with uncertainty,"
+    },
+    {
+      "start": 608.15,
+      "end": 610.25,
+      "text": "for dealing with situations in which we"
+    },
+    {
+      "start": 610.25,
+      "end": 612.23,
+      "text": "have some kind of randomness."
+    },
+    {
+      "start": 612.23,
+      "end": 615.87,
+      "text": "So what we want to do is, by the end of today's lecture,"
+    },
+    {
+      "start": 615.87,
+      "end": 620.37,
+      "text": "to give you anything that you need to know how to set up,"
+    },
+    {
+      "start": 620.37,
+      "end": 623.99,
+      "text": "what does it take to set up a probabilistic model,"
+    },
+    {
+      "start": 623.99,
+      "end": 627.41,
+      "text": "and what are the basic rules of the game,"
+    },
+    {
+      "start": 627.41,
+      "end": 630.55,
+      "text": "for dealing with probabilistic models."
+    },
+    {
+      "start": 630.55,
+      "end": 632.25,
+      "text": "So by the end of this lecture, you"
+    },
+    {
+      "start": 632.25,
+      "end": 636.89,
+      "text": "will have essentially recovered half of this semester's tuition."
+    },
+    {
+      "start": 636.89,
+      "end": 639.79,
+      "text": "So we're going to talk about probabilistic models"
+    },
+    {
+      "start": 639.79,
+      "end": 642.15,
+      "text": "in more detail, the sample space, which"
+    },
+    {
+      "start": 642.15,
+      "end": 644.49,
+      "text": "is basically a description of all the things that"
+    },
+    {
+      "start": 644.49,
+      "end": 647.45,
+      "text": "may happen during a random experiment,"
+    },
+    {
+      "start": 647.45,
+      "end": 649.79,
+      "text": "and the probability law, which describes"
+    },
+    {
+      "start": 649.79,
+      "end": 653.69,
+      "text": "our beliefs about which outcomes are more likely to occur"
+    },
+    {
+      "start": 653.69,
+      "end": 656.21,
+      "text": "compared to other outcomes."
+    },
+    {
+      "start": 656.21,
+      "end": 657.31,
+      "text": "Probability laws."
+    },
+    {
+      "start": 657.31,
+      "end": 658.85,
+      "text": "We have to obey certain properties"
+    },
+    {
+      "start": 658.85,
+      "end": 660.63,
+      "text": "that we call the axioms of probability."
+    },
+    {
+      "start": 660.63,
+      "end": 663.55,
+      "text": "So the main part of today's lecture"
+    },
+    {
+      "start": 663.55,
+      "end": 665.39,
+      "text": "is to describe those axioms, which"
+    },
+    {
+      "start": 665.39,
+      "end": 668.55,
+      "text": "are the rules of the game, and consider"
+    },
+    {
+      "start": 668.55,
+      "end": 672.77,
+      "text": "a few really trivial examples."
+    },
+    {
+      "start": 672.77,
+      "end": 675.37,
+      "text": "OK, so let's start with our agenda."
+    },
+    {
+      "start": 675.37,
+      "end": 677.61,
+      "text": "The first piece in a probabilistic model"
+    },
+    {
+      "start": 677.61,
+      "end": 681.95,
+      "text": "is a description of the sample space of an experiment."
+    },
+    {
+      "start": 681.95,
+      "end": 684.77,
+      "text": "So we do an experiment."
+    },
+    {
+      "start": 684.77,
+      "end": 687.31,
+      "text": "And by experiment, we just mean that"
+    },
+    {
+      "start": 687.31,
+      "end": 690.31,
+      "text": "just something happens out there."
+    },
+    {
+      "start": 690.31,
+      "end": 692.31,
+      "text": "And that something that happens, it"
+    },
+    {
+      "start": 692.31,
+      "end": 696.81,
+      "text": "could be flipping a coin, or it could be rolling a die,"
+    },
+    {
+      "start": 696.81,
+      "end": 701.63,
+      "text": "or it could be doing something in a card game."
+    },
+    {
+      "start": 701.63,
+      "end": 704.23,
+      "text": "So we fix a particular experiment."
+    },
+    {
+      "start": 704.23,
+      "end": 708.77,
+      "text": "And we come up with a list of all the possible things that"
+    },
+    {
+      "start": 708.77,
+      "end": 711.23,
+      "text": "may happen during this experiment."
+    },
+    {
+      "start": 711.23,
+      "end": 714.97,
+      "text": "So we write down a list of all the possible outcomes."
+    },
+    {
+      "start": 714.97,
+      "end": 716.75,
+      "text": "So here's a list of all the possible outcomes."
+    },
+    {
+      "start": 716.75,
+      "end": 719.07,
+      "text": "Here's a list of all the possible outcomes of the experiment."
+    },
+    {
+      "start": 719.07,
+      "end": 723.65,
+      "text": "I used the word list, but if you want to be a little more formal,"
+    },
+    {
+      "start": 723.65,
+      "end": 726.79,
+      "text": "it's better to think of that list as a set."
+    },
+    {
+      "start": 726.79,
+      "end": 728.65,
+      "text": "So we have a set."
+    },
+    {
+      "start": 728.65,
+      "end": 731.03,
+      "text": "That set is our sample space."
+    },
+    {
+      "start": 731.03,
+      "end": 734.53,
+      "text": "And it's a set whose elements are the possible outcomes"
+    },
+    {
+      "start": 734.53,
+      "end": 735.93,
+      "text": "of the experiment."
+    },
+    {
+      "start": 735.93,
+      "end": 738.55,
+      "text": "So for example, if you're dealing with flipping a coin,"
+    },
+    {
+      "start": 738.55,
+      "end": 741.25,
+      "text": "your sample space would be heads."
+    },
+    {
+      "start": 741.25,
+      "end": 742.67,
+      "text": "This is one outcome."
+    },
+    {
+      "start": 742.67,
+      "end": 744.47,
+      "text": "Tails is one outcome."
+    },
+    {
+      "start": 744.47,
+      "end": 746.45,
+      "text": "And this set, which has two elements,"
+    },
+    {
+      "start": 746.45,
+      "end": 749.23,
+      "text": "is the sample space of the experiment."
+    },
+    {
+      "start": 749.23,
+      "end": 752.55,
+      "text": "OK, what do we need to think about when we're"
+    },
+    {
+      "start": 752.55,
+      "end": 754.43,
+      "text": "setting up the sample space?"
+    },
+    {
+      "start": 754.43,
+      "end": 756.65,
+      "text": "First, the list should be mutually exclusive,"
+    },
+    {
+      "start": 756.65,
+      "end": 757.81,
+      "text": "collectively exhaustive."
+    },
+    {
+      "start": 757.81,
+      "end": 759.13,
+      "text": "What does that mean?"
+    },
+    {
+      "start": 759.13,
+      "end": 761.59,
+      "text": "Collectively exhaustive means that no matter"
+    },
+    {
+      "start": 761.59,
+      "end": 763.95,
+      "text": "what happens in the experiment, you're"
+    },
+    {
+      "start": 763.95,
+      "end": 767.69,
+      "text": "going to get one of the outcomes inside here."
+    },
+    {
+      "start": 767.69,
+      "end": 770.97,
+      "text": "So you have not forgotten any of the possibilities of what"
+    },
+    {
+      "start": 770.97,
+      "end": 772.99,
+      "text": "may happen in the experiment."
+    },
+    {
+      "start": 772.99,
+      "end": 776.45,
+      "text": "Mutually exclusive means that if this happens,"
+    },
+    {
+      "start": 776.45,
+      "end": 778.87,
+      "text": "then that cannot happen."
+    },
+    {
+      "start": 778.87,
+      "end": 782.55,
+      "text": "So at the end of the experiment, you should be able to point out"
+    },
+    {
+      "start": 782.55,
+      "end": 786.57,
+      "text": "to me just one, exactly one of these outcomes,"
+    },
+    {
+      "start": 786.57,
+      "end": 790.69,
+      "text": "and say this is the outcome that happened."
+    },
+    {
+      "start": 790.69,
+      "end": 793.69,
+      "text": "OK, so these are sort of basic requirements."
+    },
+    {
+      "start": 793.69,
+      "end": 796.55,
+      "text": "There's another requirement which is a little more loose."
+    },
+    {
+      "start": 796.55,
+      "end": 798.13,
+      "text": "When you set up your sample space,"
+    },
+    {
+      "start": 798.13,
+      "end": 799.95,
+      "text": "sometimes you do have some freedom"
+    },
+    {
+      "start": 799.95,
+      "end": 804.91,
+      "text": "about the details of how you're going to describe it."
+    },
+    {
+      "start": 804.91,
+      "end": 806.23,
+      "text": "And the question is, how much?"
+    },
+    {
+      "start": 806.23,
+      "end": 808.73,
+      "text": "much detail are you going to include?"
+    },
+    {
+      "start": 808.73,
+      "end": 811.87,
+      "text": "So let's take this coin flipping experiment and think"
+    },
+    {
+      "start": 811.87,
+      "end": 814.07,
+      "text": "of the following sample space."
+    },
+    {
+      "start": 814.07,
+      "end": 816.27,
+      "text": "One possible outcome is heads."
+    },
+    {
+      "start": 816.27,
+      "end": 821.69,
+      "text": "Second possible outcome is tails, and it's raining."
+    },
+    {
+      "start": 821.69,
+      "end": 829.18,
+      "text": "And the third possible outcome is tails, and it's not raining."
+    },
+    {
+      "start": 829.18,
+      "end": 832.76,
+      "text": "So this is another possible sample space for the"
+    },
+    {
+      "start": 832.76,
+      "end": 836.9,
+      "text": "experiment, where I flip a coin just once."
+    },
+    {
+      "start": 836.9,
+      "end": 838.24,
+      "text": "It's a legitimate one."
+    },
+    {
+      "start": 838.24,
+      "end": 841.56,
+      "text": "These three possibilities are mutually exclusive and"
+    },
+    {
+      "start": 841.56,
+      "end": 843.36,
+      "text": "collectively exhaustive."
+    },
+    {
+      "start": 843.36,
+      "end": 845.38,
+      "text": "Which one is the right sample space?"
+    },
+    {
+      "start": 845.38,
+      "end": 848.42,
+      "text": "Is it this one or that one?"
+    },
+    {
+      "start": 848.42,
+      "end": 851.98,
+      "text": "Well, if you think that my coin flipping inside this room"
+    },
+    {
+      "start": 851.98,
+      "end": 855.64,
+      "text": "is completely unrelated to the weather outside, then you're"
+    },
+    {
+      "start": 855.64,
+      "end": 858.48,
+      "text": "going to stick with this sample space."
+    },
+    {
+      "start": 858.48,
+      "end": 862.04,
+      "text": "If, on the other hand, you have some superstitious beliefs"
+    },
+    {
+      "start": 862.04,
+      "end": 867.18,
+      "text": "that maybe rain has an effect on my coins, you might work"
+    },
+    {
+      "start": 867.18,
+      "end": 868.24,
+      "text": "with the sample space."
+    },
+    {
+      "start": 868.24,
+      "end": 873.16,
+      "text": "So you probably wouldn't do that, but it's a legitimate"
+    },
+    {
+      "start": 873.16,
+      "end": 875.36,
+      "text": "option, strictly speaking."
+    },
+    {
+      "start": 875.36,
+      "end": 878.92,
+      "text": "Now, this example is a little bit on the frivolous side, but"
+    },
+    {
+      "start": 878.92,
+      "end": 882.62,
+      "text": "the issue that comes up here is a basic one that shows up"
+    },
+    {
+      "start": 882.62,
+      "end": 884.8,
+      "text": "anywhere in science and engineering."
+    },
+    {
+      "start": 884.8,
+      "end": 888.16,
+      "text": "Whenever you're dealing with a model or with a situation,"
+    },
+    {
+      "start": 888.16,
+      "end": 890.84,
+      "text": "there are zillions of details in that situation."
+    },
+    {
+      "start": 890.84,
+      "end": 894.34,
+      "text": "And when you come up with a model, you choose some of"
+    },
+    {
+      "start": 894.34,
+      "end": 898.24,
+      "text": "those details that you keep in your model and some that you"
+    },
+    {
+      "start": 898.24,
+      "end": 900.92,
+      "text": "say, well, these are irrelevant, or maybe there are"
+    },
+    {
+      "start": 900.92,
+      "end": 904.48,
+      "text": "small effects that can neglect them, and you keep them"
+    },
+    {
+      "start": 904.48,
+      "end": 905.98,
+      "text": "outside your model."
+    },
+    {
+      "start": 905.98,
+      "end": 908.8,
+      "text": "So there's definitely, when you go to the real world, there's"
+    },
+    {
+      "start": 908.8,
+      "end": 912.14,
+      "text": "definitely an element of art and some judgment that you"
+    },
+    {
+      "start": 912.14,
+      "end": 920.29,
+      "text": "need to do in order to set up an appropriate sample space."
+    },
+    {
+      "start": 920.29,
+      "end": 923.31,
+      "text": "So an easy example now."
+    },
+    {
+      "start": 923.31,
+      "end": 926.01,
+      "text": "So of course, the elementary examples are"
+    },
+    {
+      "start": 926.01,
+      "end": 929.39,
+      "text": "coins, cards, dice."
+    },
+    {
+      "start": 929.39,
+      "end": 930.87,
+      "text": "So let's deal with dice."
+    },
+    {
+      "start": 930.87,
+      "end": 931.59,
+      "text": "But to keep the"
+    },
+    {
+      "start": 931.59,
+      "end": 935.31,
+      "text": "diagram small, instead of a six-sided die, we're going to"
+    },
+    {
+      "start": 935.31,
+      "end": 938.27,
+      "text": "think about the die that only has four faces."
+    },
+    {
+      "start": 938.27,
+      "end": 940.23,
+      "text": "So you can do that with a tetrahedron."
+    },
+    {
+      "start": 940.23,
+      "end": 941.15,
+      "text": "Doesn't really matter."
+    },
+    {
+      "start": 941.15,
+      "end": 944.09,
+      "text": "Basically, it's a die that when you roll it, you get the"
+    },
+    {
+      "start": 944.09,
+      "end": 947.39,
+      "text": "result, which is one, two, three, or four."
+    },
+    {
+      "start": 947.39,
+      "end": 950.83,
+      "text": "However, the experiment that I'm going to think about will"
+    },
+    {
+      "start": 950.83,
+      "end": 956.11,
+      "text": "consist of two rolls of a die."
+    },
+    {
+      "start": 956.11,
+      "end": 957.57,
+      "text": "Crucial point here."
+    },
+    {
+      "start": 957.57,
+      "end": 961.57,
+      "text": "I'm rolling the die twice, but I'm thinking of this as just"
+    },
+    {
+      "start": 961.59,
+      "end": 966.19,
+      "text": "one experiment, not two different experiments, not a"
+    },
+    {
+      "start": 966.19,
+      "end": 970.21,
+      "text": "repetition of twice of the same experiment."
+    },
+    {
+      "start": 970.21,
+      "end": 972.27,
+      "text": "So it's one big experiment."
+    },
+    {
+      "start": 972.27,
+      "end": 977.17,
+      "text": "During that big experiment, various things will happen, such as I'm rolling the die once"
+    },
+    {
+      "start": 977.17,
+      "end": 980.31,
+      "text": "and then I'm rolling the die twice."
+    },
+    {
+      "start": 980.31,
+      "end": 982.57,
+      "text": "OK."
+    },
+    {
+      "start": 982.57,
+      "end": 985.27,
+      "text": "So what's the sample space for that experiment?"
+    },
+    {
+      "start": 985.27,
+      "end": 988.93,
+      "text": "Well, the sample space consists of the possible outcomes."
+    },
+    {
+      "start": 988.93,
+      "end": 991.55,
+      "text": "One possible outcome is that your first"
+    },
+    {
+      "start": 991.55,
+      "end": 998.13,
+      "text": "role resulted in two, and the second role resulted in three, in which case the outcome"
+    },
+    {
+      "start": 998.13,
+      "end": 1002.97,
+      "text": "that you get is this one, a two followed by three."
+    },
+    {
+      "start": 1002.97,
+      "end": 1005.93,
+      "text": "This is one possible outcome."
+    },
+    {
+      "start": 1005.93,
+      "end": 1012.47,
+      "text": "The way I'm describing things, this outcome is to be distinguished from this outcome here"
+    },
+    {
+      "start": 1012.47,
+      "end": 1017.21,
+      "text": "where a three is followed by two."
+    },
+    {
+      "start": 1017.21,
+      "end": 1022.65,
+      "text": "If you're playing backgammon, it doesn't matter which one of the two happened."
+    },
+    {
+      "start": 1022.65,
+      "end": 1027.29,
+      "text": "But if you're dealing with a probabilistic model that wants to keep track of everything"
+    },
+    {
+      "start": 1027.29,
+      "end": 1033.93,
+      "text": "that happens in this composite experiment, there are good reasons for distinguishing"
+    },
+    {
+      "start": 1033.93,
+      "end": 1035.83,
+      "text": "between these two outcomes."
+    },
+    {
+      "start": 1035.83,
+      "end": 1040.21,
+      "text": "I mean, when this happens, it's definitely something different from that happening."
+    },
+    {
+      "start": 1040.21,
+      "end": 1044.47,
+      "text": "A two followed by a three is different from a three followed by a two."
+    },
+    {
+      "start": 1044.47,
+      "end": 1047.19,
+      "text": "So this is the correct sample space for this experiment."
+    },
+    {
+      "start": 1047.19,
+      "end": 1050.01,
+      "text": "This experiment where we roll the die twice."
+    },
+    {
+      "start": 1050.01,
+      "end": 1056.07,
+      "text": "It has a total of 16 elements, and it's, of course, a finite set."
+    },
+    {
+      "start": 1056.07,
+      "end": 1063.03,
+      "text": "Sometimes instead of describing sample spaces in terms of lists or sets or diagrams of this"
+    },
+    {
+      "start": 1063.03,
+      "end": 1068.75,
+      "text": "kind, it's useful to describe the experiment in some sequential way."
+    },
+    {
+      "start": 1068.75,
+      "end": 1073.89,
+      "text": "Whenever you have an experiment that consists of multiple stages, it might be useful at"
+    },
+    {
+      "start": 1073.89,
+      "end": 1077.19,
+      "text": "least visually to give a diagram."
+    },
+    {
+      "start": 1077.19,
+      "end": 1080.09,
+      "text": "That shows you how those stages evolve."
+    },
+    {
+      "start": 1080.09,
+      "end": 1086.33,
+      "text": "And that's what we do by using a sequential description or a tree-based description by"
+    },
+    {
+      "start": 1086.33,
+      "end": 1091.35,
+      "text": "drawing a tree of the possible evolutions during our experiment."
+    },
+    {
+      "start": 1091.35,
+      "end": 1096.73,
+      "text": "So in this tree, I'm thinking of a first stage in which I roll the first die."
+    },
+    {
+      "start": 1096.73,
+      "end": 1100.71,
+      "text": "And there are four possible results, one, two, three, and four."
+    },
+    {
+      "start": 1100.71,
+      "end": 1106.35,
+      "text": "And given what happened in the first, let's say, in the first roll, suppose I got a one."
+    },
+    {
+      "start": 1106.35,
+      "end": 1108.47,
+      "text": "Then I'm rolling the second die."
+    },
+    {
+      "start": 1108.47,
+      "end": 1112.15,
+      "text": "And there are four possibilities for what may happen to the second die."
+    },
+    {
+      "start": 1112.15,
+      "end": 1116.11,
+      "text": "And the possible results are one, two, three, and four again."
+    },
+    {
+      "start": 1116.11,
+      "end": 1118.73,
+      "text": "So what's the relation between the two diagrams?"
+    },
+    {
+      "start": 1118.73,
+      "end": 1127.05,
+      "text": "Well, for example, the outcome two followed by three corresponds to this path on the tree."
+    },
+    {
+      "start": 1127.05,
+      "end": 1130.83,
+      "text": "So this path corresponds to two followed by a three."
+    },
+    {
+      "start": 1130.83,
+      "end": 1134.09,
+      "text": "Any path is associated to a particular outcome."
+    },
+    {
+      "start": 1134.09,
+      "end": 1136.35,
+      "text": "Any outcome is associated to a particular path."
+    },
+    {
+      "start": 1136.35,
+      "end": 1142.29,
+      "text": "And instead of paths, you may want to think in terms of the leaves of this diagram."
+    },
+    {
+      "start": 1142.29,
+      "end": 1143.29,
+      "text": "Same thing."
+    },
+    {
+      "start": 1143.29,
+      "end": 1148.13,
+      "text": "Think of each one of the leaves as being one possible outcome."
+    },
+    {
+      "start": 1148.13,
+      "end": 1150.45,
+      "text": "And of course, we have 16 outcomes here."
+    },
+    {
+      "start": 1150.45,
+      "end": 1153.17,
+      "text": "We have 16 outcomes here."
+    },
+    {
+      "start": 1153.17,
+      "end": 1155.95,
+      "text": "Maybe you noticed the subtlety that I used in my language."
+    },
+    {
+      "start": 1155.95,
+      "end": 1158.11,
+      "text": "I said I rolled the first die."
+    },
+    {
+      "start": 1158.11,
+      "end": 1160.53,
+      "text": "And the result that I get is a two."
+    },
+    {
+      "start": 1160.53,
+      "end": 1162.65,
+      "text": "I didn't use the word outcome."
+    },
+    {
+      "start": 1162.65,
+      "end": 1165.55,
+      "text": "I want to reserve the word outcome to mean the outcome."
+    },
+    {
+      "start": 1165.55,
+      "end": 1166.15,
+      "text": "Okay."
+    },
+    {
+      "start": 1166.35,
+      "end": 1170.03,
+      "text": "Overall outcome at the end of the overall experiment."
+    },
+    {
+      "start": 1170.65,
+      "end": 1176.07,
+      "text": "So two comma three is the outcome of the experiment."
+    },
+    {
+      "start": 1176.31,
+      "end": 1178.15,
+      "text": "The experiment consisted of stages."
+    },
+    {
+      "start": 1178.93,
+      "end": 1180.89,
+      "text": "Two was the result in the first stage."
+    },
+    {
+      "start": 1180.99,
+      "end": 1183.09,
+      "text": "Three was the result in the second stage."
+    },
+    {
+      "start": 1183.33,
+      "end": 1186.71,
+      "text": "You put all those results together, and you get your outcome."
+    },
+    {
+      "start": 1187.49,
+      "end": 1187.73,
+      "text": "Okay."
+    },
+    {
+      "start": 1187.85,
+      "end": 1189.77,
+      "text": "Perhaps we are splitting hairs here."
+    },
+    {
+      "start": 1189.77,
+      "end": 1194.63,
+      "text": "But it's useful to keep the concepts right."
+    },
+    {
+      "start": 1196.35,
+      "end": 1200.19,
+      "text": "What's special about this example is that besides being trivial,"
+    },
+    {
+      "start": 1200.41,
+      "end": 1202.59,
+      "text": "it has a sample space which is finite."
+    },
+    {
+      "start": 1203.13,
+      "end": 1205.41,
+      "text": "There's 16 possible total outcomes."
+    },
+    {
+      "start": 1205.93,
+      "end": 1208.63,
+      "text": "Not every experiment has a finite sample space."
+    },
+    {
+      "start": 1209.19,
+      "end": 1212.17,
+      "text": "Here's an experiment in which the sample space is infinite."
+    },
+    {
+      "start": 1212.81,
+      "end": 1217.29,
+      "text": "So you're playing darts, and the target is this square."
+    },
+    {
+      "start": 1217.29,
+      "end": 1220.41,
+      "text": "And you're perfect at that game."
+    },
+    {
+      "start": 1220.51,
+      "end": 1224.63,
+      "text": "So you're sure that your darts will always fall inside this square."
+    },
+    {
+      "start": 1225.67,
+      "end": 1226.27,
+      "text": "So."
+    },
+    {
+      "start": 1226.35,
+      "end": 1229.49,
+      "text": "But where exactly your dart will fall inside that square?"
+    },
+    {
+      "start": 1229.49,
+      "end": 1231.17,
+      "text": "That itself is random."
+    },
+    {
+      "start": 1231.17,
+      "end": 1232.85,
+      "text": "We don't know what it's going to be."
+    },
+    {
+      "start": 1232.85,
+      "end": 1233.73,
+      "text": "It's uncertain."
+    },
+    {
+      "start": 1234.31,
+      "end": 1239.37,
+      "text": "So all the possible points inside the square are possible outcomes of the experiment."
+    },
+    {
+      "start": 1239.71,
+      "end": 1244.29,
+      "text": "So a typical outcome of the experiment is going to be a pair of numbers, x, y,"
+    },
+    {
+      "start": 1244.29,
+      "end": 1247.61,
+      "text": "where x and y are real numbers between zero and one."
+    },
+    {
+      "start": 1248.25,
+      "end": 1250.59,
+      "text": "Now there's infinitely many real numbers."
+    },
+    {
+      "start": 1251.11,
+      "end": 1253.71,
+      "text": "There's infinitely many points in the square."
+    },
+    {
+      "start": 1254.13,
+      "end": 1255.99,
+      "text": "So this is an example in which our sample space is infinite."
+    },
+    {
+      "start": 1255.99,
+      "end": 1256.23,
+      "text": "So we're going to have to find out how many real numbers there are in the square."
+    },
+    {
+      "start": 1256.23,
+      "end": 1256.33,
+      "text": "So this is an example in which our sample space is infinite."
+    },
+    {
+      "start": 1256.35,
+      "end": 1256.37,
+      "text": "So this is an example in which our sample space is infinite."
+    },
+    {
+      "start": 1256.37,
+      "end": 1258.69,
+      "text": "So this is an example in which our sample space is an infinite set."
+    },
+    {
+      "start": 1261.4,
+      "end": 1261.86,
+      "text": "Okay."
+    },
+    {
+      "start": 1262.02,
+      "end": 1265.22,
+      "text": "So we're going to revisit this example a little later."
+    },
+    {
+      "start": 1266.56,
+      "end": 1266.82,
+      "text": "Okay."
+    },
+    {
+      "start": 1266.94,
+      "end": 1273.02,
+      "text": "So these are two examples of what a sample space might be in simple experiments."
+    },
+    {
+      "start": 1273.66,
+      "end": 1279.58,
+      "text": "Now the more important order of business is now to look at those possible outcomes"
+    },
+    {
+      "start": 1279.58,
+      "end": 1283.6,
+      "text": "and make some statements about their relative likelihoods."
+    },
+    {
+      "start": 1283.6,
+      "end": 1288.22,
+      "text": "Which outcome is more likely to occur compared to the other?"
+    },
+    {
+      "start": 1288.22,
+      "end": 1294.64,
+      "text": "And the way we do this is by assigning probabilities to the outcomes."
+    },
+    {
+      "start": 1296.28,
+      "end": 1297.66,
+      "text": "Well, not exactly."
+    },
+    {
+      "start": 1298.6,
+      "end": 1303.88,
+      "text": "Suppose that all you were to do was to assign probabilities to individual outcomes."
+    },
+    {
+      "start": 1304.34,
+      "end": 1311.6,
+      "text": "If you go back to this example and you consider one particular outcome, let's say this point,"
+    },
+    {
+      "start": 1312.18,
+      "end": 1317.1,
+      "text": "what would be the probability that you hit exactly this point to infinite precision?"
+    },
+    {
+      "start": 1317.1,
+      "end": 1320.66,
+      "text": "Intuitively, that probability would be zero."
+    },
+    {
+      "start": 1321.0,
+      "end": 1328.06,
+      "text": "So any individual point in this diagram in any reasonable model should have zero probability."
+    },
+    {
+      "start": 1328.06,
+      "end": 1332.64,
+      "text": "So if you just tell me that any individual outcome has zero probability,"
+    },
+    {
+      "start": 1332.84,
+      "end": 1336.4,
+      "text": "you're not really telling me much to work with."
+    },
+    {
+      "start": 1336.8,
+      "end": 1344.2,
+      "text": "For that reason, what instead we're going to do is to assign probabilities to subsets of the sample space"
+    },
+    {
+      "start": 1344.2,
+      "end": 1347.06,
+      "text": "as opposed to assigning probabilities to individual outcomes."
+    },
+    {
+      "start": 1347.1,
+      "end": 1350.32,
+      "text": "So here's the picture."
+    },
+    {
+      "start": 1352.04,
+      "end": 1355.26,
+      "text": "We have our sample space, which is omega."
+    },
+    {
+      "start": 1356.16,
+      "end": 1360.5,
+      "text": "And we consider some subsets of the sample space, call it A."
+    },
+    {
+      "start": 1361.72,
+      "end": 1368.48,
+      "text": "And I want to assign a number, a numerical probability, to this particular subset,"
+    },
+    {
+      "start": 1368.48,
+      "end": 1376.78,
+      "text": "which represents my belief about how likely this set is to occur."
+    },
+    {
+      "start": 1377.1,
+      "end": 1378.68,
+      "text": "Okay, what do we mean to occur?"
+    },
+    {
+      "start": 1379.68,
+      "end": 1383.6,
+      "text": "And I'm introducing here a language that's being used in probability theory."
+    },
+    {
+      "start": 1383.6,
+      "end": 1390.04,
+      "text": "When we talk about subsets of the sample space, we usually call them events as opposed to subsets."
+    },
+    {
+      "start": 1390.54,
+      "end": 1396.36,
+      "text": "And the reason is because it works nicely with the language that describes what's going on."
+    },
+    {
+      "start": 1396.7,
+      "end": 1398.22,
+      "text": "So the outcome is a point."
+    },
+    {
+      "start": 1398.96,
+      "end": 1400.04,
+      "text": "The outcome is random."
+    },
+    {
+      "start": 1400.04,
+      "end": 1407.04,
+      "text": "The outcome may be inside this set, in which case we say that events,"
+    },
+    {
+      "start": 1407.1,
+      "end": 1410.98,
+      "text": "event A occurred, if we get an outcome inside here."
+    },
+    {
+      "start": 1411.14,
+      "end": 1417.98,
+      "text": "Or the outcome may fall outside the set, in which case we say that event A did not occur."
+    },
+    {
+      "start": 1418.4,
+      "end": 1421.5,
+      "text": "So we're going to assign probabilities to events."
+    },
+    {
+      "start": 1422.26,
+      "end": 1425.4,
+      "text": "And now how should we do this assignment?"
+    },
+    {
+      "start": 1425.4,
+      "end": 1432.84,
+      "text": "Well, probabilities are meant to describe your beliefs about which sets are more likely to occur versus other sets."
+    },
+    {
+      "start": 1432.94,
+      "end": 1435.58,
+      "text": "So there's many ways that you can assign those probabilities."
+    },
+    {
+      "start": 1436.08,
+      "end": 1436.88,
+      "text": "But there are some grammar."
+    },
+    {
+      "start": 1436.88,
+      "end": 1438.36,
+      "text": "There are some ground rules for this game."
+    },
+    {
+      "start": 1439.28,
+      "end": 1445.48,
+      "text": "First, we want probabilities to be numbers between 0 and 1, because that's the usual convention."
+    },
+    {
+      "start": 1446.5,
+      "end": 1450.74,
+      "text": "So probability of 0 means we're certain that something is not going to happen."
+    },
+    {
+      "start": 1450.86,
+      "end": 1454.78,
+      "text": "Probability of 1 means that we're essentially certain that something is not going to happen."
+    },
+    {
+      "start": 1454.82,
+      "end": 1456.98,
+      "text": "So we want numbers between 0 and 1."
+    },
+    {
+      "start": 1457.4,
+      "end": 1459.34,
+      "text": "We also want a few other things."
+    },
+    {
+      "start": 1459.34,
+      "end": 1464.36,
+      "text": "And those few other things are going to be encapsulated in a set of axioms."
+    },
+    {
+      "start": 1465.0,
+      "end": 1466.62,
+      "text": "What axioms means?"
+    },
+    {
+      "start": 1466.62,
+      "end": 1472.56,
+      "text": "In this context, it's the ground rules that any legitimate probabilistic model should obey."
+    },
+    {
+      "start": 1473.36,
+      "end": 1477.04,
+      "text": "You have a choice of what kind of probabilities you use."
+    },
+    {
+      "start": 1477.12,
+      "end": 1482.12,
+      "text": "But no matter what you use, they should obey certain consistency properties."
+    },
+    {
+      "start": 1482.38,
+      "end": 1488.84,
+      "text": "Because if they obey those properties, then you can go ahead and do useful calculations and do some useful reasoning."
+    },
+    {
+      "start": 1489.42,
+      "end": 1490.54,
+      "text": "So what are these properties?"
+    },
+    {
+      "start": 1491.0,
+      "end": 1493.94,
+      "text": "First, probabilities should be non-negative."
+    },
+    {
+      "start": 1494.98,
+      "end": 1495.22,
+      "text": "Okay?"
+    },
+    {
+      "start": 1496.62,
+      "end": 1497.4,
+      "text": "That's our convention."
+    },
+    {
+      "start": 1497.58,
+      "end": 1502.02,
+      "text": "We want probabilities to be numbers between 0 and 1, so they should certainly be non-negative."
+    },
+    {
+      "start": 1502.14,
+      "end": 1505.6,
+      "text": "The probability that event A occurs should be a non-negative number."
+    },
+    {
+      "start": 1506.36,
+      "end": 1507.56,
+      "text": "What's the second axiom?"
+    },
+    {
+      "start": 1508.1,
+      "end": 1512.72,
+      "text": "The probability of the entire sample space is equal to 1."
+    },
+    {
+      "start": 1513.44,
+      "end": 1515.02,
+      "text": "Why does this make sense?"
+    },
+    {
+      "start": 1515.2,
+      "end": 1524.34,
+      "text": "Well, the outcome is certain to be an element of the sample space, because we set up a sample space which is collectively exhaustive."
+    },
+    {
+      "start": 1524.5,
+      "end": 1525.52,
+      "text": "No matter what."
+    },
+    {
+      "start": 1525.68,
+      "end": 1526.48,
+      "text": "No matter what."
+    },
+    {
+      "start": 1526.48,
+      "end": 1526.6,
+      "text": "No matter what."
+    },
+    {
+      "start": 1526.6,
+      "end": 1529.3,
+      "text": "The outcome is, it's going to be an element of the sample space."
+    },
+    {
+      "start": 1529.42,
+      "end": 1533.16,
+      "text": "We're certain that event omega is going to occur."
+    },
+    {
+      "start": 1533.76,
+      "end": 1539.64,
+      "text": "Therefore, we represent this certainty by saying that the probability of omega is equal to 1."
+    },
+    {
+      "start": 1541.46,
+      "end": 1544.74,
+      "text": "Pretty straightforward so far."
+    },
+    {
+      "start": 1547.13,
+      "end": 1550.49,
+      "text": "The more interesting axiom is the third rule."
+    },
+    {
+      "start": 1551.99,
+      "end": 1555.03,
+      "text": "Before getting into it, just a quick reminder."
+    },
+    {
+      "start": 1555.03,
+      "end": 1558.03,
+      "text": "If you have two sets, A and B..."
+    },
+    {
+      "start": 1558.13,
+      "end": 1566.53,
+      "text": "The intersection of A and B consists of those elements that belong both to A and to B."
+    },
+    {
+      "start": 1567.19,
+      "end": 1568.63,
+      "text": "And we denote it this way."
+    },
+    {
+      "start": 1569.47,
+      "end": 1574.01,
+      "text": "When you think probabilistically, the way to think of intersection is by using the word and."
+    },
+    {
+      "start": 1575.05,
+      "end": 1582.07,
+      "text": "This event, this intersection, is the event that A occurred and B occurred."
+    },
+    {
+      "start": 1582.07,
+      "end": 1587.37,
+      "text": "If I get an outcome inside here, A has occurred and B has occurred at the same time."
+    },
+    {
+      "start": 1587.37,
+      "end": 1592.43,
+      "text": "So, you may find the word and to be a little more convenient than the word intersection."
+    },
+    {
+      "start": 1593.69,
+      "end": 1601.65,
+      "text": "And similarly, we have some notation for the union of two events, which we write this way."
+    },
+    {
+      "start": 1602.23,
+      "end": 1610.71,
+      "text": "The union of two sets or two events is the collection of all elements that belong either to the first set or to the second or to both."
+    },
+    {
+      "start": 1611.21,
+      "end": 1614.27,
+      "text": "When you talk about events, you can use the word or."
+    },
+    {
+      "start": 1614.53,
+      "end": 1617.27,
+      "text": "So, this is the event that A..."
+    },
+    {
+      "start": 1617.37,
+      "end": 1619.47,
+      "text": "Occurred or B occurred."
+    },
+    {
+      "start": 1620.09,
+      "end": 1624.43,
+      "text": "And this or means that it could also be that both of them occurred."
+    },
+    {
+      "start": 1628.6,
+      "end": 1629.08,
+      "text": "Okay."
+    },
+    {
+      "start": 1629.22,
+      "end": 1633.24,
+      "text": "So, now that we have this notation, what does the third axiom say?"
+    },
+    {
+      "start": 1634.0,
+      "end": 1641.54,
+      "text": "The third axiom says that if we have two events, A and B, that have no common elements..."
+    },
+    {
+      "start": 1642.8,
+      "end": 1645.16,
+      "text": "So, here's A."
+    },
+    {
+      "start": 1645.86,
+      "end": 1646.78,
+      "text": "Here's B."
+    },
+    {
+      "start": 1648.08,
+      "end": 1650.52,
+      "text": "And perhaps this is our big sample space."
+    },
+    {
+      "start": 1651.08,
+      "end": 1653.28,
+      "text": "The two events have no common elements."
+    },
+    {
+      "start": 1653.28,
+      "end": 1656.4,
+      "text": "So, the intersection of the two events is the empty set."
+    },
+    {
+      "start": 1656.5,
+      "end": 1658.18,
+      "text": "There's nothing in their intersection."
+    },
+    {
+      "start": 1658.94,
+      "end": 1666.06,
+      "text": "Then, the total probability of A together with B has to be equal to the sum of the individual probabilities."
+    },
+    {
+      "start": 1666.58,
+      "end": 1674.16,
+      "text": "So, the probability that A occurs or B occurs is equal to the probability that A occurs plus the probability that B occurs."
+    },
+    {
+      "start": 1675.0,
+      "end": 1678.3,
+      "text": "So, think of probability as being cream cheese."
+    },
+    {
+      "start": 1678.3,
+      "end": 1680.3,
+      "text": "You have one pound of cream."
+    },
+    {
+      "start": 1680.54,
+      "end": 1681.34,
+      "text": "Cream cheese."
+    },
+    {
+      "start": 1681.34,
+      "end": 1685.28,
+      "text": "The total probability assigned to the entire sample space."
+    },
+    {
+      "start": 1685.48,
+      "end": 1692.04,
+      "text": "And that cream cheese is spread out over this set."
+    },
+    {
+      "start": 1692.6,
+      "end": 1696.82,
+      "text": "The probability of A is how much cream cheese sits on top of A."
+    },
+    {
+      "start": 1696.94,
+      "end": 1699.38,
+      "text": "Probability of B is how much sits on top of B."
+    },
+    {
+      "start": 1700.06,
+      "end": 1708.24,
+      "text": "The probability of A union B is the total amount of cream cheese sitting on top of this and that."
+    },
+    {
+      "start": 1708.24,
+      "end": 1710.24,
+      "text": "Which is obviously the sum of..."
+    },
+    {
+      "start": 1710.54,
+      "end": 1713.02,
+      "text": "How much is sitting here and how much is sitting there."
+    },
+    {
+      "start": 1713.02,
+      "end": 1718.3,
+      "text": "So, probabilities behave like cream cheese or they behave like mass."
+    },
+    {
+      "start": 1718.3,
+      "end": 1725.02,
+      "text": "For example, the total mass over the mass of a set."
+    },
+    {
+      "start": 1725.02,
+      "end": 1732.7,
+      "text": "If you think of some material object, the mass of this set consisting of two pieces is obviously the sum of the two masses."
+    },
+    {
+      "start": 1732.7,
+      "end": 1735.7,
+      "text": "So, this property is a very intuitive one."
+    },
+    {
+      "start": 1735.7,
+      "end": 1737.7,
+      "text": "It's a pretty natural one to have."
+    },
+    {
+      "start": 1738.5,
+      "end": 1739.14,
+      "text": "Okay."
+    },
+    {
+      "start": 1740.54,
+      "end": 1743.32,
+      "text": "Are these axioms enough for what we want to do?"
+    },
+    {
+      "start": 1743.68,
+      "end": 1749.54,
+      "text": "I mentioned a while ago that we want probabilities to be numbers between 0 and 1."
+    },
+    {
+      "start": 1750.04,
+      "end": 1753.16,
+      "text": "Here's an axiom that tells you that probabilities are non-negative."
+    },
+    {
+      "start": 1753.66,
+      "end": 1760.48,
+      "text": "Should we have another axiom that tells us that probabilities are less than or equal to 1?"
+    },
+    {
+      "start": 1761.36,
+      "end": 1763.04,
+      "text": "It's a desirable property."
+    },
+    {
+      "start": 1763.18,
+      "end": 1764.98,
+      "text": "We would like to have it in our hands."
+    },
+    {
+      "start": 1766.04,
+      "end": 1766.38,
+      "text": "Okay."
+    },
+    {
+      "start": 1766.48,
+      "end": 1768.3,
+      "text": "Why is it not in that list?"
+    },
+    {
+      "start": 1768.66,
+      "end": 1770.3,
+      "text": "Well, the people who are..."
+    },
+    {
+      "start": 1770.54,
+      "end": 1773.68,
+      "text": "in the axiom-making business are mathematicians."
+    },
+    {
+      "start": 1773.8,
+      "end": 1775.86,
+      "text": "And mathematicians tend to be pretty laconic."
+    },
+    {
+      "start": 1775.86,
+      "end": 1779.26,
+      "text": "You don't say something if you don't have to say it."
+    },
+    {
+      "start": 1779.98,
+      "end": 1782.1,
+      "text": "And this is the case here."
+    },
+    {
+      "start": 1782.54,
+      "end": 1787.84,
+      "text": "We don't need that extra axiom because we can derive it from the existing axioms."
+    },
+    {
+      "start": 1788.38,
+      "end": 1789.54,
+      "text": "Here's how it goes."
+    },
+    {
+      "start": 1790.74,
+      "end": 1794.4,
+      "text": "One is the probability of the entire sample space."
+    },
+    {
+      "start": 1795.12,
+      "end": 1797.56,
+      "text": "Here we're using the second axiom."
+    },
+    {
+      "start": 1797.68,
+      "end": 1801.48,
+      "text": "Now, the sample space..."
+    },
+    {
+      "start": 1801.48,
+      "end": 1802.44,
+      "text": "is..."
+    },
+    {
+      "start": 1802.46,
+      "end": 1807.1,
+      "text": "consists of A together with the complement of A."
+    },
+    {
+      "start": 1807.72,
+      "end": 1807.94,
+      "text": "Okay?"
+    },
+    {
+      "start": 1808.04,
+      "end": 1810.72,
+      "text": "So this is..."
+    },
+    {
+      "start": 1810.72,
+      "end": 1813.02,
+      "text": "when I write the complement of A,"
+    },
+    {
+      "start": 1813.1,
+      "end": 1816.32,
+      "text": "I mean the complement of A inside the set omega."
+    },
+    {
+      "start": 1816.72,
+      "end": 1818.26,
+      "text": "So we have omega."
+    },
+    {
+      "start": 1818.86,
+      "end": 1819.74,
+      "text": "Here's A."
+    },
+    {
+      "start": 1819.86,
+      "end": 1821.24,
+      "text": "Here's the complement of A."
+    },
+    {
+      "start": 1821.24,
+      "end": 1823.8,
+      "text": "And the overall set is omega."
+    },
+    {
+      "start": 1824.66,
+      "end": 1824.9,
+      "text": "Okay."
+    },
+    {
+      "start": 1825.26,
+      "end": 1827.5,
+      "text": "Now, what's the next step?"
+    },
+    {
+      "start": 1827.58,
+      "end": 1828.54,
+      "text": "What should I do next?"
+    },
+    {
+      "start": 1828.64,
+      "end": 1829.88,
+      "text": "Which axiom should I use?"
+    },
+    {
+      "start": 1831.08,
+      "end": 1832.24,
+      "text": "We use axiom 3."
+    },
+    {
+      "start": 1832.46,
+      "end": 1836.6,
+      "text": "Because a set and the complement of that set are disjoint."
+    },
+    {
+      "start": 1836.72,
+      "end": 1838.42,
+      "text": "They don't have any common elements."
+    },
+    {
+      "start": 1838.86,
+      "end": 1845.04,
+      "text": "So axiom 3 applies and tells me that this is the probability of A"
+    },
+    {
+      "start": 1845.04,
+      "end": 1847.28,
+      "text": "plus the probability of A complement."
+    },
+    {
+      "start": 1847.86,
+      "end": 1855.5,
+      "text": "In particular, the probability of A is equal to 1 minus the probability of A complement."
+    },
+    {
+      "start": 1856.5,
+      "end": 1859.86,
+      "text": "And this is less than or equal to 1."
+    },
+    {
+      "start": 1860.24,
+      "end": 1860.88,
+      "text": "Why?"
+    },
+    {
+      "start": 1860.88,
+      "end": 1860.94,
+      "text": "Why?"
+    },
+    {
+      "start": 1863.9,
+      "end": 1867.94,
+      "text": "Because probabilities are non-negative by the first axiom."
+    },
+    {
+      "start": 1869.66,
+      "end": 1870.22,
+      "text": "Okay."
+    },
+    {
+      "start": 1870.34,
+      "end": 1872.4,
+      "text": "So we got the conclusion that we wanted."
+    },
+    {
+      "start": 1872.54,
+      "end": 1875.02,
+      "text": "Probabilities are always less than or equal to 1."
+    },
+    {
+      "start": 1875.34,
+      "end": 1879.04,
+      "text": "And this is a simple consequence of the three axioms that we have."
+    },
+    {
+      "start": 1879.92,
+      "end": 1886.46,
+      "text": "This is a really nice argument because it actually uses each one of those axioms."
+    },
+    {
+      "start": 1886.56,
+      "end": 1887.52,
+      "text": "The argument is simple,"
+    },
+    {
+      "start": 1887.52,
+      "end": 1892.12,
+      "text": "but you have to use all these three properties to get the conclusion that you want."
+    },
+    {
+      "start": 1893.06,
+      "end": 1893.3,
+      "text": "Okay."
+    },
+    {
+      "start": 1893.9,
+      "end": 1896.64,
+      "text": "So we can get interesting things out of our axioms."
+    },
+    {
+      "start": 1897.06,
+      "end": 1899.5,
+      "text": "Can we get some more interesting ones?"
+    },
+    {
+      "start": 1899.5,
+      "end": 1903.32,
+      "text": "How about the union of three sets?"
+    },
+    {
+      "start": 1904.44,
+      "end": 1906.38,
+      "text": "What kind of probability should it have?"
+    },
+    {
+      "start": 1906.96,
+      "end": 1911.82,
+      "text": "So here's an event consisting of three pieces."
+    },
+    {
+      "start": 1912.82,
+      "end": 1918.56,
+      "text": "And I want to say something about the probability of A union B union C."
+    },
+    {
+      "start": 1919.28,
+      "end": 1923.46,
+      "text": "What I would like to say is that this probability is equal to the sum of the three sets."
+    },
+    {
+      "start": 1923.46,
+      "end": 1923.52,
+      "text": "Okay."
+    },
+    {
+      "start": 1923.52,
+      "end": 1926.26,
+      "text": "So the sum of the three individual probabilities."
+    },
+    {
+      "start": 1927.0,
+      "end": 1928.16,
+      "text": "How can I do it?"
+    },
+    {
+      "start": 1928.54,
+      "end": 1932.38,
+      "text": "I have an axiom that tells me that I can do it for two events."
+    },
+    {
+      "start": 1932.38,
+      "end": 1934.76,
+      "text": "I don't have an axiom for three events."
+    },
+    {
+      "start": 1935.32,
+      "end": 1940.12,
+      "text": "Well, maybe I can massage things and still be able to use that axiom."
+    },
+    {
+      "start": 1940.64,
+      "end": 1941.72,
+      "text": "And here's the trick."
+    },
+    {
+      "start": 1942.56,
+      "end": 1949.96,
+      "text": "The union of three sets, you can think of it as forming the union of the first two sets"
+    },
+    {
+      "start": 1949.96,
+      "end": 1953.38,
+      "text": "and then taking the union with the third."
+    },
+    {
+      "start": 1953.52,
+      "end": 1954.02,
+      "text": "Okay."
+    },
+    {
+      "start": 1954.02,
+      "end": 1960.04,
+      "text": "So taking unions, you can take the unions in any order that you want."
+    },
+    {
+      "start": 1960.48,
+      "end": 1963.58,
+      "text": "So here we have the union of two sets."
+    },
+    {
+      "start": 1964.6,
+      "end": 1970.78,
+      "text": "Now, A, B, C are disjoint by assumption, or that's how I drew it."
+    },
+    {
+      "start": 1971.72,
+      "end": 1977.0,
+      "text": "So if A, B, and C are disjoint, then A union B is disjoint from C."
+    },
+    {
+      "start": 1978.0,
+      "end": 1981.0,
+      "text": "So here we have the union of two disjoint sets."
+    },
+    {
+      "start": 1981.0,
+      "end": 1983.2,
+      "text": "So by the additivity axiom."
+    },
+    {
+      "start": 1983.52,
+      "end": 1988.44,
+      "text": "The probability of that union is going to be the probability of the first set"
+    },
+    {
+      "start": 1988.44,
+      "end": 1990.96,
+      "text": "plus the probability of the second set."
+    },
+    {
+      "start": 1991.68,
+      "end": 1994.9,
+      "text": "And now I can use the additivity axiom once more"
+    },
+    {
+      "start": 1994.9,
+      "end": 2001.68,
+      "text": "to write that this is probability of A plus probability of B plus probability of C."
+    },
+    {
+      "start": 2002.96,
+      "end": 2006.24,
+      "text": "So by using this axiom, which was stated for two sets,"
+    },
+    {
+      "start": 2006.24,
+      "end": 2012.08,
+      "text": "we can actually derive a similar property for the union of three disjoint sets."
+    },
+    {
+      "start": 2012.5,
+      "end": 2013.48,
+      "text": "And then you can repeat."
+    },
+    {
+      "start": 2013.48,
+      "end": 2015.92,
+      "text": "This argument as many times as you want."
+    },
+    {
+      "start": 2015.92,
+      "end": 2021.24,
+      "text": "It's valid for the union of 10 disjoint sets, for the union of 100 disjoint sets,"
+    },
+    {
+      "start": 2021.24,
+      "end": 2024.88,
+      "text": "for the union of any finite number of sets."
+    },
+    {
+      "start": 2024.88,
+      "end": 2037.02,
+      "text": "So if A1 up to IN are disjoint, then the probability of A1 union AN"
+    },
+    {
+      "start": 2037.02,
+      "end": 2044.32,
+      "text": "is equal to the sum of the probabilities of the individual sets."
+    },
+    {
+      "start": 2044.32,
+      "end": 2045.72,
+      "text": "Okay."
+    },
+    {
+      "start": 2045.72,
+      "end": 2046.68,
+      "text": "Special case."
+    },
+    {
+      "start": 2046.68,
+      "end": 2050.78,
+      "text": "Special case of this is when we're dealing with finite sets."
+    },
+    {
+      "start": 2050.78,
+      "end": 2054.28,
+      "text": "Suppose I have just a finite set of outcomes."
+    },
+    {
+      "start": 2054.28,
+      "end": 2056.8,
+      "text": "I put them together in a set."
+    },
+    {
+      "start": 2056.8,
+      "end": 2059.6,
+      "text": "And I'm interested in the probability of that set."
+    },
+    {
+      "start": 2059.6,
+      "end": 2062.0,
+      "text": "So here's our sample space."
+    },
+    {
+      "start": 2062.0,
+      "end": 2063.54,
+      "text": "There's lots of outcomes."
+    },
+    {
+      "start": 2063.54,
+      "end": 2066.6,
+      "text": "But I'm taking a few of these."
+    },
+    {
+      "start": 2066.6,
+      "end": 2070.08,
+      "text": "And I form a set out of them."
+    },
+    {
+      "start": 2070.08,
+      "end": 2074.72,
+      "text": "This is a set consisting of, in this picture, of three elements."
+    },
+    {
+      "start": 2074.72,
+      "end": 2076.68,
+      "text": "In general, it consists of four."
+    },
+    {
+      "start": 2076.68,
+      "end": 2078.24,
+      "text": "It's a set of K elements."
+    },
+    {
+      "start": 2078.24,
+      "end": 2084.9,
+      "text": "Now, a finite set, I can write it as a union of single element sets."
+    },
+    {
+      "start": 2084.9,
+      "end": 2089.52,
+      "text": "So this set here is the union of this one element set together"
+    },
+    {
+      "start": 2089.52,
+      "end": 2093.98,
+      "text": "with this one element set together with that one element set."
+    },
+    {
+      "start": 2093.98,
+      "end": 2099.0,
+      "text": "So the total probability of this set is going to be the sum of the probabilities"
+    },
+    {
+      "start": 2099.0,
+      "end": 2102.52,
+      "text": "of the one element sets."
+    },
+    {
+      "start": 2102.52,
+      "end": 2105.66,
+      "text": "Now, probability of a one element set."
+    },
+    {
+      "start": 2105.66,
+      "end": 2106.16,
+      "text": "Yes."
+    },
+    {
+      "start": 2106.16,
+      "end": 2106.66,
+      "text": "Yes."
+    },
+    {
+      "start": 2106.68,
+      "end": 2110.36,
+      "text": "You need to use the brackets here, because probabilities"
+    },
+    {
+      "start": 2110.36,
+      "end": 2112.32,
+      "text": "are assigned to sets."
+    },
+    {
+      "start": 2112.32,
+      "end": 2114.12,
+      "text": "But this gets kind of tedious."
+    },
+    {
+      "start": 2114.12,
+      "end": 2117.18,
+      "text": "So here, one abuses notation a little bit."
+    },
+    {
+      "start": 2117.18,
+      "end": 2119.58,
+      "text": "And we get rid of those brackets and just"
+    },
+    {
+      "start": 2119.58,
+      "end": 2124.44,
+      "text": "write probability of this single individual outcome."
+    },
+    {
+      "start": 2124.44,
+      "end": 2126.72,
+      "text": "In any case, conclusion from this exercise"
+    },
+    {
+      "start": 2126.72,
+      "end": 2132.4,
+      "text": "is that the total probability of a finite collection"
+    },
+    {
+      "start": 2132.4,
+      "end": 2135.78,
+      "text": "of possible outcomes, the total probability"
+    },
+    {
+      "start": 2135.78,
+      "end": 2136.66,
+      "text": "is equal."
+    },
+    {
+      "start": 2136.66,
+      "end": 2142.2,
+      "text": "To the sum of the probabilities of individual elements."
+    },
+    {
+      "start": 2142.2,
+      "end": 2146.52,
+      "text": "So these are basically the axioms of probability theory."
+    },
+    {
+      "start": 2146.52,
+      "end": 2149.98,
+      "text": "Or, well, they're almost the axioms."
+    },
+    {
+      "start": 2149.98,
+      "end": 2153.08,
+      "text": "There are some subtleties that are involved here."
+    },
+    {
+      "start": 2153.08,
+      "end": 2157.32,
+      "text": "One subtlety is that this axiom here"
+    },
+    {
+      "start": 2157.32,
+      "end": 2161.38,
+      "text": "doesn't quite do the job for everything we would like to do."
+    },
+    {
+      "start": 2161.38,
+      "end": 2165.18,
+      "text": "And we're going to come back to this at the end of the lecture."
+    },
+    {
+      "start": 2165.18,
+      "end": 2166.14,
+      "text": "A second subtlety."
+    },
+    {
+      "start": 2166.14,
+      "end": 2170.42,
+      "text": "A second subtlety has to do with weird sets."
+    },
+    {
+      "start": 2170.42,
+      "end": 2173.34,
+      "text": "We said that an event is a subset of the sample space."
+    },
+    {
+      "start": 2173.34,
+      "end": 2176.78,
+      "text": "And we assign probabilities to events."
+    },
+    {
+      "start": 2176.78,
+      "end": 2179.74,
+      "text": "Does this mean that we are going to assign probability"
+    },
+    {
+      "start": 2179.74,
+      "end": 2183.52,
+      "text": "to every possible subset of the sample space?"
+    },
+    {
+      "start": 2183.52,
+      "end": 2186.68,
+      "text": "Ideally, we would wish to do that."
+    },
+    {
+      "start": 2186.68,
+      "end": 2189.6,
+      "text": "Unfortunately, this is not always possible."
+    },
+    {
+      "start": 2189.6,
+      "end": 2195.02,
+      "text": "If you take a sample space such as the square, the square"
+    },
+    {
+      "start": 2195.02,
+      "end": 2196.0,
+      "text": "has nice subsets."
+    },
+    {
+      "start": 2196.0,
+      "end": 2200.26,
+      "text": "Those that you can describe by cutting it with lines and so on."
+    },
+    {
+      "start": 2200.26,
+      "end": 2205.58,
+      "text": "But it does have some very ugly subsets as well that"
+    },
+    {
+      "start": 2205.58,
+      "end": 2208.58,
+      "text": "are impossible to visualize, impossible to imagine."
+    },
+    {
+      "start": 2208.58,
+      "end": 2210.06,
+      "text": "But they do exist."
+    },
+    {
+      "start": 2210.06,
+      "end": 2212.72,
+      "text": "And those very weird sets are such"
+    },
+    {
+      "start": 2212.72,
+      "end": 2215.54,
+      "text": "that there's no way to assign probabilities to them"
+    },
+    {
+      "start": 2215.54,
+      "end": 2219.04,
+      "text": "in a way that's consistent with the axioms of probability."
+    },
+    {
+      "start": 2219.04,
+      "end": 2221.48,
+      "text": "So this is a very, very fine point"
+    },
+    {
+      "start": 2221.48,
+      "end": 2225.88,
+      "text": "that you can immediately forget for the rest of this class."
+    },
+    {
+      "start": 2225.88,
+      "end": 2228.08,
+      "text": "You will only encounter these sets"
+    },
+    {
+      "start": 2228.08,
+      "end": 2232.34,
+      "text": "if you end up doing doctoral work on the theoretical aspects"
+    },
+    {
+      "start": 2232.34,
+      "end": 2235.94,
+      "text": "of probability theory."
+    },
+    {
+      "start": 2235.94,
+      "end": 2238.38,
+      "text": "So it's just a mathematical subtlety"
+    },
+    {
+      "start": 2238.38,
+      "end": 2241.8,
+      "text": "that some very weird sets do not have probabilities assigned"
+    },
+    {
+      "start": 2241.8,
+      "end": 2242.64,
+      "text": "to them."
+    },
+    {
+      "start": 2242.64,
+      "end": 2244.78,
+      "text": "But we're not going to encounter these sets."
+    },
+    {
+      "start": 2244.78,
+      "end": 2249.44,
+      "text": "And they do not show up in any applications."
+    },
+    {
+      "start": 2249.44,
+      "end": 2252.42,
+      "text": "OK, so now let's revisit our examples."
+    },
+    {
+      "start": 2252.42,
+      "end": 2254.84,
+      "text": "Let's go back to the dye example."
+    },
+    {
+      "start": 2254.84,
+      "end": 2255.88,
+      "text": "We have our samples."
+    },
+    {
+      "start": 2255.88,
+      "end": 2257.84,
+      "text": "Let's go back to the space."
+    },
+    {
+      "start": 2257.84,
+      "end": 2261.94,
+      "text": "Now we need to assign a probability law."
+    },
+    {
+      "start": 2261.94,
+      "end": 2264.44,
+      "text": "There's lots of possible probability laws"
+    },
+    {
+      "start": 2264.44,
+      "end": 2265.82,
+      "text": "that you can assign."
+    },
+    {
+      "start": 2265.82,
+      "end": 2269.74,
+      "text": "I'm picking one here arbitrarily in which"
+    },
+    {
+      "start": 2269.74,
+      "end": 2273.44,
+      "text": "I say that every possible outcome has the same probability"
+    },
+    {
+      "start": 2273.44,
+      "end": 2276.44,
+      "text": "of 1 over 16."
+    },
+    {
+      "start": 2276.44,
+      "end": 2279.14,
+      "text": "OK, why do I make this model?"
+    },
+    {
+      "start": 2279.14,
+      "end": 2283.14,
+      "text": "Well, empirically, if you have well-manufactured dyes,"
+    },
+    {
+      "start": 2283.14,
+      "end": 2285.88,
+      "text": "they tend to behave that way."
+    },
+    {
+      "start": 2285.88,
+      "end": 2288.54,
+      "text": "We'll get back to this kind of story later in this class."
+    },
+    {
+      "start": 2288.54,
+      "end": 2293.04,
+      "text": "But I'm not saying that this is the only probability law"
+    },
+    {
+      "start": 2293.04,
+      "end": 2293.92,
+      "text": "that there can be."
+    },
+    {
+      "start": 2293.92,
+      "end": 2297.46,
+      "text": "You might have weird dyes in which certain outcomes are"
+    },
+    {
+      "start": 2297.46,
+      "end": 2299.26,
+      "text": "more likely than others."
+    },
+    {
+      "start": 2299.26,
+      "end": 2301.72,
+      "text": "But to keep things simple, let's take every outcome"
+    },
+    {
+      "start": 2301.72,
+      "end": 2304.88,
+      "text": "to have the same probability of 1 over 16."
+    },
+    {
+      "start": 2304.88,
+      "end": 2309.12,
+      "text": "OK, so now that we have in our hands the sample space"
+    },
+    {
+      "start": 2309.12,
+      "end": 2311.36,
+      "text": "and the probability law, we can actually"
+    },
+    {
+      "start": 2311.36,
+      "end": 2313.3,
+      "text": "solve any problem there is."
+    },
+    {
+      "start": 2313.3,
+      "end": 2315.84,
+      "text": "We can answer any question that could be posed to us."
+    },
+    {
+      "start": 2315.88,
+      "end": 2318.24,
+      "text": "For example, what's the probability"
+    },
+    {
+      "start": 2318.24,
+      "end": 2323.62,
+      "text": "that the outcome, which is this pair, is either 1, 1 or 1, 2?"
+    },
+    {
+      "start": 2323.62,
+      "end": 2330.16,
+      "text": "We're talking here about this particular event, 1, 1 or 1, 2."
+    },
+    {
+      "start": 2330.16,
+      "end": 2333.28,
+      "text": "So it's an event consisting of these two items."
+    },
+    {
+      "start": 2333.28,
+      "end": 2335.88,
+      "text": "According to what we were just discussing,"
+    },
+    {
+      "start": 2335.88,
+      "end": 2338.72,
+      "text": "the probability of a finite collection of outcomes"
+    },
+    {
+      "start": 2338.72,
+      "end": 2341.16,
+      "text": "is the sum of their individual probabilities."
+    },
+    {
+      "start": 2341.16,
+      "end": 2343.74,
+      "text": "Each one of them has probability 1 over 16."
+    },
+    {
+      "start": 2343.74,
+      "end": 2345.58,
+      "text": "So the probability of this is 2 over 16."
+    },
+    {
+      "start": 2345.58,
+      "end": 2345.84,
+      "text": "OK."
+    },
+    {
+      "start": 2345.84,
+      "end": 2347.74,
+      "text": "1 over 16."
+    },
+    {
+      "start": 2347.74,
+      "end": 2352.24,
+      "text": "How about the probability of the event that x is equal to 1?"
+    },
+    {
+      "start": 2352.24,
+      "end": 2353.68,
+      "text": "x is the first roll."
+    },
+    {
+      "start": 2353.68,
+      "end": 2358.12,
+      "text": "So that's the probability that the first roll is equal to 1."
+    },
+    {
+      "start": 2358.12,
+      "end": 2362.34,
+      "text": "Notice the syntax that's being used here."
+    },
+    {
+      "start": 2362.34,
+      "end": 2366.24,
+      "text": "Probabilities are assigned to sets."
+    },
+    {
+      "start": 2366.24,
+      "end": 2370.84,
+      "text": "So we think of this as meaning the set of all outcomes"
+    },
+    {
+      "start": 2370.84,
+      "end": 2373.7,
+      "text": "such that x is equal to 1."
+    },
+    {
+      "start": 2373.7,
+      "end": 2375.24,
+      "text": "How do you answer this question?"
+    },
+    {
+      "start": 2375.24,
+      "end": 2376.74,
+      "text": "You go back to the picture, and you"
+    },
+    {
+      "start": 2376.74,
+      "end": 2380.86,
+      "text": "try to visualize or identify this event of interest."
+    },
+    {
+      "start": 2380.86,
+      "end": 2385.58,
+      "text": "x is equal to 1 corresponds to this event here."
+    },
+    {
+      "start": 2385.58,
+      "end": 2389.0,
+      "text": "These are all the outcomes at which x is equal to 1."
+    },
+    {
+      "start": 2389.0,
+      "end": 2390.12,
+      "text": "There's four outcomes."
+    },
+    {
+      "start": 2390.12,
+      "end": 2392.76,
+      "text": "Each one has probability 1 over 16."
+    },
+    {
+      "start": 2392.76,
+      "end": 2396.84,
+      "text": "So the answer is 4 over 16."
+    },
+    {
+      "start": 2396.84,
+      "end": 2397.74,
+      "text": "OK."
+    },
+    {
+      "start": 2397.74,
+      "end": 2404.47,
+      "text": "How about the probability that x plus y is odd?"
+    },
+    {
+      "start": 2404.47,
+      "end": 2404.97,
+      "text": "OK."
+    },
+    {
+      "start": 2406.55,
+      "end": 2407.05,
+      "text": "OK."
+    },
+    {
+      "start": 2407.05,
+      "end": 2409.83,
+      "text": "That will take a little bit more work."
+    },
+    {
+      "start": 2409.83,
+      "end": 2412.87,
+      "text": "But you go to the sample space, and you identify all the"
+    },
+    {
+      "start": 2412.87,
+      "end": 2416.01,
+      "text": "outcomes at which the sum is an odd number."
+    },
+    {
+      "start": 2416.01,
+      "end": 2420.01,
+      "text": "So that's a place where the sum is odd."
+    },
+    {
+      "start": 2420.01,
+      "end": 2424.47,
+      "text": "These are other places."
+    },
+    {
+      "start": 2424.47,
+      "end": 2429.15,
+      "text": "And I guess that exhausts all the possible outcomes at which"
+    },
+    {
+      "start": 2429.15,
+      "end": 2431.97,
+      "text": "we have an odd sum."
+    },
+    {
+      "start": 2431.97,
+      "end": 2432.91,
+      "text": "We count them."
+    },
+    {
+      "start": 2432.91,
+      "end": 2434.03,
+      "text": "How many are there?"
+    },
+    {
+      "start": 2434.03,
+      "end": 2435.53,
+      "text": "There's a total of eight of them."
+    },
+    {
+      "start": 2435.53,
+      "end": 2437.59,
+      "text": "Each one has probability 1 over 16."
+    },
+    {
+      "start": 2437.59,
+      "end": 2438.47,
+      "text": "Total probability is 1 over 16."
+    },
+    {
+      "start": 2438.47,
+      "end": 2440.47,
+      "text": "8 over 16."
+    },
+    {
+      "start": 2440.47,
+      "end": 2441.63,
+      "text": "And harder question."
+    },
+    {
+      "start": 2441.63,
+      "end": 2443.77,
+      "text": "What's the probability that the minimum of the two"
+    },
+    {
+      "start": 2443.77,
+      "end": 2445.79,
+      "text": "rolls is equal to 2?"
+    },
+    {
+      "start": 2445.79,
+      "end": 2448.65,
+      "text": "This is something that you probably couldn't do in your"
+    },
+    {
+      "start": 2448.65,
+      "end": 2451.59,
+      "text": "head without the help of a diagram."
+    },
+    {
+      "start": 2451.59,
+      "end": 2454.75,
+      "text": "But once you have a diagram, things are simple."
+    },
+    {
+      "start": 2454.75,
+      "end": 2458.85,
+      "text": "You ask the question, OK, this is an event that the minimum"
+    },
+    {
+      "start": 2458.85,
+      "end": 2461.09,
+      "text": "of the two rolls is equal to 2."
+    },
+    {
+      "start": 2461.09,
+      "end": 2463.09,
+      "text": "This can happen in several ways."
+    },
+    {
+      "start": 2463.09,
+      "end": 2465.19,
+      "text": "What are the several ways that it can happen?"
+    },
+    {
+      "start": 2465.19,
+      "end": 2467.93,
+      "text": "Go to the diagram and try to identify them."
+    },
+    {
+      "start": 2467.93,
+      "end": 2474.69,
+      "text": "So the minimum is equal to 2 if both of them are 2's, or it"
+    },
+    {
+      "start": 2474.69,
+      "end": 2479.87,
+      "text": "could be that x is 2 and y is bigger, or y is 2 and x is"
+    },
+    {
+      "start": 2479.87,
+      "end": 2481.89,
+      "text": "bigger."
+    },
+    {
+      "start": 2481.89,
+      "end": 2483.03,
+      "text": "OK."
+    },
+    {
+      "start": 2483.03,
+      "end": 2488.63,
+      "text": "I guess we rediscovered that yellow and blue make green."
+    },
+    {
+      "start": 2488.63,
+      "end": 2491.91,
+      "text": "So we see here that there's a total of"
+    },
+    {
+      "start": 2491.91,
+      "end": 2494.59,
+      "text": "five possible outcomes."
+    },
+    {
+      "start": 2494.59,
+      "end": 2496.81,
+      "text": "The probability of this event is 5.5."
+    },
+    {
+      "start": 2496.81,
+      "end": 2497.05,
+      "text": "OK."
+    },
+    {
+      "start": 2497.05,
+      "end": 2497.31,
+      "text": "OK."
+    },
+    {
+      "start": 2497.31,
+      "end": 2497.73,
+      "text": "OK."
+    },
+    {
+      "start": 2497.73,
+      "end": 2497.93,
+      "text": "OK."
+    },
+    {
+      "start": 2497.93,
+      "end": 2498.43,
+      "text": "OK."
+    },
+    {
+      "start": 2498.43,
+      "end": 2501.24,
+      "text": "OK."
+    },
+    {
+      "start": 2501.24,
+      "end": 2507.46,
+      "text": "Simple example, but the procedure that we followed in"
+    },
+    {
+      "start": 2507.46,
+      "end": 2512.48,
+      "text": "this example actually applies to any probability model you"
+    },
+    {
+      "start": 2512.48,
+      "end": 2514.22,
+      "text": "might ever encounter."
+    },
+    {
+      "start": 2514.22,
+      "end": 2516.48,
+      "text": "You set up your sample space."
+    },
+    {
+      "start": 2516.48,
+      "end": 2519.24,
+      "text": "You make a statement that describes the probability law"
+    },
+    {
+      "start": 2519.24,
+      "end": 2520.52,
+      "text": "over that sample space."
+    },
+    {
+      "start": 2520.52,
+      "end": 2522.76,
+      "text": "Then somebody asks you questions about various"
+    },
+    {
+      "start": 2522.76,
+      "end": 2523.64,
+      "text": "events."
+    },
+    {
+      "start": 2523.64,
+      "end": 2527.28,
+      "text": "You go to your pictures, identify those events, pin"
+    },
+    {
+      "start": 2527.28,
+      "end": 2531.44,
+      "text": "them down, and then start kind of counting and calculating"
+    },
+    {
+      "start": 2531.44,
+      "end": 2533.94,
+      "text": "the total probability for those outcomes"
+    },
+    {
+      "start": 2533.94,
+      "end": 2536.74,
+      "text": "that you are considering."
+    },
+    {
+      "start": 2536.74,
+      "end": 2539.1,
+      "text": "This example is a special case of what"
+    },
+    {
+      "start": 2539.1,
+      "end": 2541.88,
+      "text": "is called the discrete uniform law."
+    },
+    {
+      "start": 2541.88,
+      "end": 2544.94,
+      "text": "This model obeys the discrete uniform law"
+    },
+    {
+      "start": 2544.94,
+      "end": 2548.34,
+      "text": "if all outcomes are equally likely."
+    },
+    {
+      "start": 2548.34,
+      "end": 2550.02,
+      "text": "It doesn't have to be that way."
+    },
+    {
+      "start": 2550.02,
+      "end": 2553.28,
+      "text": "That's just one example of a probability law."
+    },
+    {
+      "start": 2553.28,
+      "end": 2557.84,
+      "text": "But when things are that way, if all outcomes are equally likely"
+    },
+    {
+      "start": 2557.84,
+      "end": 2559.54,
+      "text": "and we have n of them."
+    },
+    {
+      "start": 2559.54,
+      "end": 2562.88,
+      "text": "And we have n of them."
+    },
+    {
+      "start": 2562.88,
+      "end": 2569.62,
+      "text": "And you have a set A that has little n elements, then each"
+    },
+    {
+      "start": 2569.62,
+      "end": 2573.84,
+      "text": "one of those elements has probability 1 over capital N,"
+    },
+    {
+      "start": 2573.84,
+      "end": 2576.46,
+      "text": "since all outcomes are equally likely."
+    },
+    {
+      "start": 2576.46,
+      "end": 2579.72,
+      "text": "And for probabilities to add up to 1, each one must have this"
+    },
+    {
+      "start": 2579.72,
+      "end": 2581.0,
+      "text": "much probability."
+    },
+    {
+      "start": 2581.0,
+      "end": 2582.62,
+      "text": "And there's little n elements."
+    },
+    {
+      "start": 2582.62,
+      "end": 2586.14,
+      "text": "That gives you the probability of the event of interest."
+    },
+    {
+      "start": 2586.14,
+      "end": 2589.02,
+      "text": "So problems like the one in the previous slide, and more"
+    },
+    {
+      "start": 2589.02,
+      "end": 2592.12,
+      "text": "generally of the type described here under discrete uniform"
+    },
+    {
+      "start": 2592.12,
+      "end": 2592.68,
+      "text": "law."
+    },
+    {
+      "start": 2592.68,
+      "end": 2595.28,
+      "text": "These problems reduce to just counting."
+    },
+    {
+      "start": 2595.28,
+      "end": 2597.5,
+      "text": "How many elements are there in my sample space?"
+    },
+    {
+      "start": 2597.5,
+      "end": 2601.16,
+      "text": "How many elements are there inside the event of interest?"
+    },
+    {
+      "start": 2601.16,
+      "end": 2603.02,
+      "text": "Counting is generally simple."
+    },
+    {
+      "start": 2603.02,
+      "end": 2605.98,
+      "text": "But for some problems, it gets pretty complicated."
+    },
+    {
+      "start": 2605.98,
+      "end": 2608.18,
+      "text": "And in a couple of weeks, we're going"
+    },
+    {
+      "start": 2608.18,
+      "end": 2610.38,
+      "text": "to have to spend the whole lecture just"
+    },
+    {
+      "start": 2610.38,
+      "end": 2613.28,
+      "text": "on the subject of how to count systematically."
+    },
+    {
+      "start": 2613.28,
+      "end": 2616.78,
+      "text": "Now the procedure we followed in the previous example"
+    },
+    {
+      "start": 2616.78,
+      "end": 2619.02,
+      "text": "is the same as the procedure you would follow"
+    },
+    {
+      "start": 2619.02,
+      "end": 2621.34,
+      "text": "in continuous probability problems."
+    },
+    {
+      "start": 2621.34,
+      "end": 2622.52,
+      "text": "So going back to our dark."
+    },
+    {
+      "start": 2622.52,
+      "end": 2626.56,
+      "text": "problem, we get a random point inside this square."
+    },
+    {
+      "start": 2626.56,
+      "end": 2628.02,
+      "text": "That's our sample space."
+    },
+    {
+      "start": 2628.02,
+      "end": 2630.34,
+      "text": "We need to assign a probability law."
+    },
+    {
+      "start": 2630.34,
+      "end": 2633.56,
+      "text": "For lack of imagination, I'm taking the probability law to"
+    },
+    {
+      "start": 2633.56,
+      "end": 2636.28,
+      "text": "be the area of a subset."
+    },
+    {
+      "start": 2636.28,
+      "end": 2640.98,
+      "text": "So if we have two subsets of the sample space that have"
+    },
+    {
+      "start": 2640.98,
+      "end": 2644.98,
+      "text": "equal areas, then I'm postulating that they are"
+    },
+    {
+      "start": 2644.98,
+      "end": 2646.58,
+      "text": "equally likely to occur."
+    },
+    {
+      "start": 2646.58,
+      "end": 2648.48,
+      "text": "The probability that I fall here is the same as the"
+    },
+    {
+      "start": 2648.48,
+      "end": 2651.56,
+      "text": "probability that I fall there."
+    },
+    {
+      "start": 2651.56,
+      "end": 2652.52,
+      "text": "The model doesn't have a probability."
+    },
+    {
+      "start": 2652.52,
+      "end": 2653.68,
+      "text": "It has to be that way."
+    },
+    {
+      "start": 2653.68,
+      "end": 2656.64,
+      "text": "But if I have sort of complete ignorance of which points"
+    },
+    {
+      "start": 2656.64,
+      "end": 2659.84,
+      "text": "are more likely than others, that might be the reasonable"
+    },
+    {
+      "start": 2659.84,
+      "end": 2661.46,
+      "text": "model to use."
+    },
+    {
+      "start": 2661.46,
+      "end": 2664.88,
+      "text": "So equal areas mean equal probabilities."
+    },
+    {
+      "start": 2664.88,
+      "end": 2666.94,
+      "text": "If the area is twice as large, the probability"
+    },
+    {
+      "start": 2666.94,
+      "end": 2668.9,
+      "text": "is going to be twice as big."
+    },
+    {
+      "start": 2668.9,
+      "end": 2672.36,
+      "text": "So this is our model."
+    },
+    {
+      "start": 2672.36,
+      "end": 2674.56,
+      "text": "We can now answer questions."
+    },
+    {
+      "start": 2674.56,
+      "end": 2675.76,
+      "text": "Let's answer the easy one."
+    },
+    {
+      "start": 2675.76,
+      "end": 2680.72,
+      "text": "What's the probability that the outcome is exactly this point?"
+    },
+    {
+      "start": 2680.72,
+      "end": 2682.32,
+      "text": "That, of course, is 0."
+    },
+    {
+      "start": 2682.52,
+      "end": 2687.48,
+      "text": "Because a single point has 0 area."
+    },
+    {
+      "start": 2687.48,
+      "end": 2691.48,
+      "text": "And since probability is equal to area, that's 0 probability."
+    },
+    {
+      "start": 2691.48,
+      "end": 2695.92,
+      "text": "How about the probability that the sum of the coordinates of"
+    },
+    {
+      "start": 2695.92,
+      "end": 2700.12,
+      "text": "the point that we got is less than or equal to 1 half?"
+    },
+    {
+      "start": 2700.12,
+      "end": 2701.54,
+      "text": "How do you deal with it?"
+    },
+    {
+      "start": 2701.54,
+      "end": 2704.76,
+      "text": "Well, you look at the picture again, at your sample space,"
+    },
+    {
+      "start": 2704.76,
+      "end": 2708.08,
+      "text": "and try to describe the event that you're talking about."
+    },
+    {
+      "start": 2708.08,
+      "end": 2712.48,
+      "text": "The sum being less than 1 half corresponds to getting an out"
+    },
+    {
+      "start": 2712.52,
+      "end": 2716.06,
+      "text": "outcome that's below this line, where this line is the"
+    },
+    {
+      "start": 2716.06,
+      "end": 2719.62,
+      "text": "line where x plus y equals to 1 half."
+    },
+    {
+      "start": 2719.62,
+      "end": 2723.88,
+      "text": "So the intercepts of that line with the axis are 1 half and"
+    },
+    {
+      "start": 2723.88,
+      "end": 2725.88,
+      "text": "1 half."
+    },
+    {
+      "start": 2725.88,
+      "end": 2728.64,
+      "text": "So you describe the event visually."
+    },
+    {
+      "start": 2728.64,
+      "end": 2730.78,
+      "text": "And then you use your probability law."
+    },
+    {
+      "start": 2730.78,
+      "end": 2733.26,
+      "text": "The probability law that we have is that the probability"
+    },
+    {
+      "start": 2733.26,
+      "end": 2736.62,
+      "text": "of a set is equal to the area of that set."
+    },
+    {
+      "start": 2736.62,
+      "end": 2739.88,
+      "text": "So all we need to find is the area of this triangle, which"
+    },
+    {
+      "start": 2739.88,
+      "end": 2742.38,
+      "text": "is 1 half times 1 half."
+    },
+    {
+      "start": 2742.38,
+      "end": 2749.41,
+      "text": "Times 1 half equals to 1 eighth."
+    },
+    {
+      "start": 2749.41,
+      "end": 2752.59,
+      "text": "Moral from these two examples is that it's always useful to"
+    },
+    {
+      "start": 2752.59,
+      "end": 2756.77,
+      "text": "have a picture and work with a picture to visualize the"
+    },
+    {
+      "start": 2756.77,
+      "end": 2758.75,
+      "text": "events that you're talking about."
+    },
+    {
+      "start": 2758.75,
+      "end": 2761.33,
+      "text": "And once you have a probability law in your hands,"
+    },
+    {
+      "start": 2761.33,
+      "end": 2764.47,
+      "text": "then it's a matter of calculation to find the"
+    },
+    {
+      "start": 2764.47,
+      "end": 2766.55,
+      "text": "probabilities of an event of interest."
+    },
+    {
+      "start": 2766.55,
+      "end": 2769.09,
+      "text": "The calculations we did in these two examples, of course,"
+    },
+    {
+      "start": 2769.09,
+      "end": 2770.13,
+      "text": "were very simple."
+    },
+    {
+      "start": 2770.13,
+      "end": 2774.51,
+      "text": "Sometimes calculations may be a lot harder, but it's a"
+    },
+    {
+      "start": 2774.51,
+      "end": 2775.29,
+      "text": "different business."
+    },
+    {
+      "start": 2775.29,
+      "end": 2779.23,
+      "text": "It's a business of calculus, for example, or being good in"
+    },
+    {
+      "start": 2779.23,
+      "end": 2780.25,
+      "text": "algebra and so on."
+    },
+    {
+      "start": 2780.25,
+      "end": 2784.25,
+      "text": "As far as probability is concerned, it's clear what you"
+    },
+    {
+      "start": 2784.25,
+      "end": 2784.95,
+      "text": "will be doing."
+    },
+    {
+      "start": 2784.95,
+      "end": 2787.93,
+      "text": "And then maybe you're faced with a harder algebraic part"
+    },
+    {
+      "start": 2787.93,
+      "end": 2790.47,
+      "text": "to actually carry out the calculations."
+    },
+    {
+      "start": 2790.47,
+      "end": 2792.91,
+      "text": "The area of a triangle is easy to compute."
+    },
+    {
+      "start": 2792.91,
+      "end": 2796.05,
+      "text": "If I had put down a very complicated shape, then you"
+    },
+    {
+      "start": 2796.05,
+      "end": 2799.31,
+      "text": "might need to solve a hard integration problem to find"
+    },
+    {
+      "start": 2799.31,
+      "end": 2800.63,
+      "text": "the area of that shape."
+    },
+    {
+      "start": 2800.63,
+      "end": 2803.97,
+      "text": "But that's stuff that belongs to another class that you have"
+    },
+    {
+      "start": 2803.97,
+      "end": 2805.29,
+      "text": "presumably mastered by now."
+    },
+    {
+      "start": 2805.29,
+      "end": 2806.69,
+      "text": "Good."
+    },
+    {
+      "start": 2806.69,
+      "end": 2807.01,
+      "text": "OK."
+    },
+    {
+      "start": 2807.01,
+      "end": 2809.75,
+      "text": "So now let me spend just a couple of minutes to return to"
+    },
+    {
+      "start": 2809.75,
+      "end": 2812.17,
+      "text": "a point that I raised before."
+    },
+    {
+      "start": 2812.17,
+      "end": 2816.25,
+      "text": "I was saying that the axiom that we had about additivity"
+    },
+    {
+      "start": 2816.25,
+      "end": 2818.71,
+      "text": "might not quite be enough."
+    },
+    {
+      "start": 2818.71,
+      "end": 2821.73,
+      "text": "Let's illustrate what I mean by the following example."
+    },
+    {
+      "start": 2821.73,
+      "end": 2824.97,
+      "text": "Think of the experiment where you keep flipping a coin and"
+    },
+    {
+      "start": 2824.97,
+      "end": 2828.11,
+      "text": "you wait until you obtain heads for the first time."
+    },
+    {
+      "start": 2828.11,
+      "end": 2831.41,
+      "text": "What's the sample space of this experiment?"
+    },
+    {
+      "start": 2831.41,
+      "end": 2832.85,
+      "text": "It might happen in the first flip."
+    },
+    {
+      "start": 2832.85,
+      "end": 2834.99,
+      "text": "It might happen in the 10th flip."
+    },
+    {
+      "start": 2834.99,
+      "end": 2838.53,
+      "text": "Heads for the first time might occur in the millionth flip."
+    },
+    {
+      "start": 2838.53,
+      "end": 2840.37,
+      "text": "So the outcome of this experiment"
+    },
+    {
+      "start": 2840.37,
+      "end": 2841.59,
+      "text": "is going to be an integer."
+    },
+    {
+      "start": 2841.59,
+      "end": 2843.81,
+      "text": "And there's no bound to that integer."
+    },
+    {
+      "start": 2843.81,
+      "end": 2846.81,
+      "text": "You might have to wait very much until that happens."
+    },
+    {
+      "start": 2846.81,
+      "end": 2848.85,
+      "text": "So the natural sample space is the set"
+    },
+    {
+      "start": 2848.85,
+      "end": 2850.97,
+      "text": "of all possible integers."
+    },
+    {
+      "start": 2850.97,
+      "end": 2854.71,
+      "text": "Somebody tells you some information"
+    },
+    {
+      "start": 2854.71,
+      "end": 2856.31,
+      "text": "about the probability law."
+    },
+    {
+      "start": 2856.31,
+      "end": 2859.31,
+      "text": "The probability that you have to wait for n flips"
+    },
+    {
+      "start": 2859.31,
+      "end": 2861.45,
+      "text": "is equal to 2 to the minus n."
+    },
+    {
+      "start": 2861.45,
+      "end": 2862.99,
+      "text": "Where did this come?"
+    },
+    {
+      "start": 2862.99,
+      "end": 2864.31,
+      "text": "It's a separate story."
+    },
+    {
+      "start": 2864.31,
+      "end": 2865.75,
+      "text": "Where did it come from?"
+    },
+    {
+      "start": 2865.75,
+      "end": 2869.67,
+      "text": "Somebody tells this to us, and those probabilities"
+    },
+    {
+      "start": 2869.67,
+      "end": 2872.17,
+      "text": "are plotted here as a function of n."
+    },
+    {
+      "start": 2872.17,
+      "end": 2873.73,
+      "text": "And you're asked to find the probability"
+    },
+    {
+      "start": 2873.73,
+      "end": 2875.89,
+      "text": "that the outcome is an even number."
+    },
+    {
+      "start": 2875.89,
+      "end": 2879.95,
+      "text": "How do you go about calculating that probability?"
+    },
+    {
+      "start": 2879.95,
+      "end": 2881.83,
+      "text": "So the probability of being an even number"
+    },
+    {
+      "start": 2881.83,
+      "end": 2884.55,
+      "text": "is the probability of the subset that"
+    },
+    {
+      "start": 2884.55,
+      "end": 2888.41,
+      "text": "consists of just the even numbers."
+    },
+    {
+      "start": 2888.41,
+      "end": 2891.09,
+      "text": "So it would be a subset of this kind that"
+    },
+    {
+      "start": 2891.09,
+      "end": 2893.77,
+      "text": "includes 2, 4, and so on."
+    },
+    {
+      "start": 2894.31,
+      "end": 2897.43,
+      "text": "Any reasonable person would say, well,"
+    },
+    {
+      "start": 2897.43,
+      "end": 2901.37,
+      "text": "the probability of obtaining an outcome that's either 2, or 4,"
+    },
+    {
+      "start": 2901.37,
+      "end": 2905.77,
+      "text": "or 6, and so on, is equal to the probability of obtaining a 2,"
+    },
+    {
+      "start": 2905.77,
+      "end": 2908.07,
+      "text": "plus the probability of obtaining a 4,"
+    },
+    {
+      "start": 2908.07,
+      "end": 2911.15,
+      "text": "plus the probability of obtaining a 6, and so on."
+    },
+    {
+      "start": 2911.15,
+      "end": 2913.65,
+      "text": "These probabilities are given to us."
+    },
+    {
+      "start": 2913.65,
+      "end": 2916.03,
+      "text": "So here I have to do my algebra."
+    },
+    {
+      "start": 2916.03,
+      "end": 2920.85,
+      "text": "I add this geometric series, and I get an answer of 1 third."
+    },
+    {
+      "start": 2920.85,
+      "end": 2923.43,
+      "text": "That's what any reasonable person would do."
+    },
+    {
+      "start": 2923.43,
+      "end": 2924.31,
+      "text": "But the person."
+    },
+    {
+      "start": 2924.31,
+      "end": 2930.25,
+      "text": "who only knows the axioms that I posted just a little earlier,"
+    },
+    {
+      "start": 2930.25,
+      "end": 2931.85,
+      "text": "may get stuck."
+    },
+    {
+      "start": 2931.85,
+      "end": 2933.59,
+      "text": "They would get stuck at this point."
+    },
+    {
+      "start": 2933.59,
+      "end": 2938.93,
+      "text": "How do we justify this?"
+    },
+    {
+      "start": 2938.93,
+      "end": 2943.73,
+      "text": "We had this property for the union of disjoint sets,"
+    },
+    {
+      "start": 2943.73,
+      "end": 2945.23,
+      "text": "and the corresponding property that"
+    },
+    {
+      "start": 2945.23,
+      "end": 2948.83,
+      "text": "tells us that the total probability of finitely"
+    },
+    {
+      "start": 2948.83,
+      "end": 2951.57,
+      "text": "many things, outcomes, is the sum"
+    },
+    {
+      "start": 2951.57,
+      "end": 2953.81,
+      "text": "of their individual probabilities."
+    },
+    {
+      "start": 2953.81,
+      "end": 2955.73,
+      "text": "But here we're using it on an infinite number."
+    },
+    {
+      "start": 2955.73,
+      "end": 2957.89,
+      "text": "On an infinite collection."
+    },
+    {
+      "start": 2957.89,
+      "end": 2961.35,
+      "text": "The probability of infinitely many points"
+    },
+    {
+      "start": 2961.35,
+      "end": 2964.31,
+      "text": "is equal to the sum of the probabilities"
+    },
+    {
+      "start": 2964.31,
+      "end": 2965.99,
+      "text": "of each one of these."
+    },
+    {
+      "start": 2965.99,
+      "end": 2970.79,
+      "text": "To justify this step, we need to introduce one additional rule,"
+    },
+    {
+      "start": 2970.79,
+      "end": 2974.99,
+      "text": "an additional axiom that tells us that this step is actually"
+    },
+    {
+      "start": 2974.99,
+      "end": 2976.11,
+      "text": "legitimate."
+    },
+    {
+      "start": 2976.11,
+      "end": 2979.07,
+      "text": "And this is the countable additivity axiom, which"
+    },
+    {
+      "start": 2979.07,
+      "end": 2982.51,
+      "text": "is a little stronger, or quite a bit stronger,"
+    },
+    {
+      "start": 2982.51,
+      "end": 2985.11,
+      "text": "than the additivity axiom we had before."
+    },
+    {
+      "start": 2985.11,
+      "end": 2985.61,
+      "text": "It tells us."
+    },
+    {
+      "start": 2985.61,
+      "end": 2989.07,
+      "text": "It tells us that if we have a sequence of sets that"
+    },
+    {
+      "start": 2989.07,
+      "end": 2993.75,
+      "text": "are disjoint, and we want to find their total probability,"
+    },
+    {
+      "start": 2993.75,
+      "end": 2998.23,
+      "text": "then we are allowed to add their individual probabilities."
+    },
+    {
+      "start": 2998.23,
+      "end": 3001.01,
+      "text": "So the picture might be such as follows."
+    },
+    {
+      "start": 3001.01,
+      "end": 3007.43,
+      "text": "We have a sequence of sets, a1, a2, a3, and so on."
+    },
+    {
+      "start": 3007.43,
+      "end": 3009.95,
+      "text": "I guess in order to fit them inside the sample space,"
+    },
+    {
+      "start": 3009.95,
+      "end": 3013.89,
+      "text": "the sets need to get smaller and smaller, perhaps."
+    },
+    {
+      "start": 3013.89,
+      "end": 3015.39,
+      "text": "They are disjoint."
+    },
+    {
+      "start": 3015.39,
+      "end": 3017.33,
+      "text": "We have a sequence of such sets."
+    },
+    {
+      "start": 3017.33,
+      "end": 3022.37,
+      "text": "The total probability of falling anywhere inside one of those sets"
+    },
+    {
+      "start": 3022.37,
+      "end": 3025.69,
+      "text": "is the sum of their individual probabilities."
+    },
+    {
+      "start": 3025.69,
+      "end": 3028.51,
+      "text": "A key subtlety that's involved here"
+    },
+    {
+      "start": 3028.51,
+      "end": 3033.81,
+      "text": "is that we're talking about the sequence of events."
+    },
+    {
+      "start": 3033.81,
+      "end": 3036.29,
+      "text": "By sequence, we mean that these events"
+    },
+    {
+      "start": 3036.29,
+      "end": 3038.47,
+      "text": "can be arranged in order."
+    },
+    {
+      "start": 3038.47,
+      "end": 3042.19,
+      "text": "I can tell you the first event, the second event, the third"
+    },
+    {
+      "start": 3042.19,
+      "end": 3043.55,
+      "text": "event, and so on."
+    },
+    {
+      "start": 3043.55,
+      "end": 3044.69,
+      "text": "So if you have such a collection of events, then you can tell us"
+    },
+    {
+      "start": 3044.69,
+      "end": 3048.35,
+      "text": "that you have a collection of events that can be ordered as first,"
+    },
+    {
+      "start": 3048.35,
+      "end": 3050.09,
+      "text": "second, third, and so on."
+    },
+    {
+      "start": 3050.09,
+      "end": 3053.35,
+      "text": "Then you can add their probabilities"
+    },
+    {
+      "start": 3053.35,
+      "end": 3055.81,
+      "text": "to find the probability of their union."
+    },
+    {
+      "start": 3055.81,
+      "end": 3057.91,
+      "text": "So this point is actually a little more subtle"
+    },
+    {
+      "start": 3057.91,
+      "end": 3059.67,
+      "text": "that you might appreciate at this point,"
+    },
+    {
+      "start": 3059.67,
+      "end": 3062.47,
+      "text": "and I'm going to return to it at the beginning"
+    },
+    {
+      "start": 3062.47,
+      "end": 3064.09,
+      "text": "of the next lecture."
+    },
+    {
+      "start": 3064.09,
+      "end": 3067.17,
+      "text": "For now, enjoy the first week of classes,"
+    },
+    {
+      "start": 3067.17,
+      "end": 3069.75,
+      "text": "and have a good weekend."
+    },
+    {
+      "start": 3069.75,
+      "end": 3071.25,
+      "text": "Thank you."
+    }
+  ]
+}

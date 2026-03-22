@@ -1,0 +1,4457 @@
+{
+  "lecture": "lec20",
+  "language": "en",
+  "duration": 3082.048,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.44,
+      "text": "The following content is provided under a Creative"
+    },
+    {
+      "start": 2.44,
+      "end": 3.96,
+      "text": "Commons license."
+    },
+    {
+      "start": 3.96,
+      "end": 6.28,
+      "text": "Your support will help MIT OpenCourseWare"
+    },
+    {
+      "start": 6.28,
+      "end": 10.64,
+      "text": "continue to offer high quality educational resources for free."
+    },
+    {
+      "start": 10.64,
+      "end": 13.26,
+      "text": "To make a donation or view additional materials"
+    },
+    {
+      "start": 13.26,
+      "end": 17.2,
+      "text": "from hundreds of MIT courses, visit MIT OpenCourseWare"
+    },
+    {
+      "start": 17.2,
+      "end": 22.55,
+      "text": "at ocw.mit.edu."
+    },
+    {
+      "start": 22.55,
+      "end": 27.23,
+      "text": "We're going to finish today our discussion of limit theorems."
+    },
+    {
+      "start": 27.23,
+      "end": 30.29,
+      "text": "I'm going to remind you what the central limit theorem is,"
+    },
+    {
+      "start": 30.29,
+      "end": 33.47,
+      "text": "which we introduced briefly last time."
+    },
+    {
+      "start": 33.47,
+      "end": 37.21,
+      "text": "We're going to discuss what exactly it says and its"
+    },
+    {
+      "start": 37.21,
+      "end": 38.75,
+      "text": "implications."
+    },
+    {
+      "start": 38.75,
+      "end": 42.09,
+      "text": "And then we're going to apply it to a couple of examples,"
+    },
+    {
+      "start": 42.09,
+      "end": 45.47,
+      "text": "mostly on the binomial distribution."
+    },
+    {
+      "start": 45.47,
+      "end": 46.29,
+      "text": "OK."
+    },
+    {
+      "start": 46.29,
+      "end": 49.93,
+      "text": "So the situation is that we are dealing with a large"
+    },
+    {
+      "start": 49.93,
+      "end": 53.47,
+      "text": "number of independent, identically distributed random"
+    },
+    {
+      "start": 53.47,
+      "end": 54.97,
+      "text": "variables."
+    },
+    {
+      "start": 54.97,
+      "end": 58.21,
+      "text": "And we want to look at the sum of them and say something"
+    },
+    {
+      "start": 58.21,
+      "end": 60.29,
+      "text": "about the distribution of the sum."
+    },
+    {
+      "start": 60.29,
+      "end": 67.73,
+      "text": "We might want to say that the sum is distributed approximately"
+    },
+    {
+      "start": 67.73,
+      "end": 70.05,
+      "text": "as a normal random variable."
+    },
+    {
+      "start": 70.05,
+      "end": 72.75,
+      "text": "Although formally this is not quite right."
+    },
+    {
+      "start": 72.75,
+      "end": 76.27,
+      "text": "As n goes to infinity, the distribution of the sum"
+    },
+    {
+      "start": 76.27,
+      "end": 79.97,
+      "text": "becomes very spread out, and it doesn't converge to a"
+    },
+    {
+      "start": 79.97,
+      "end": 81.83,
+      "text": "limiting distribution."
+    },
+    {
+      "start": 81.83,
+      "end": 84.93,
+      "text": "In order to get an interesting limit, we need first to take"
+    },
+    {
+      "start": 84.93,
+      "end": 88.09,
+      "text": "the sum and standardize it."
+    },
+    {
+      "start": 88.09,
+      "end": 89.69,
+      "text": "By standardizing it, what we're going to do is we're going to"
+    },
+    {
+      "start": 89.69,
+      "end": 89.71,
+      "text": "take the sum and we're going to standardize it."
+    },
+    {
+      "start": 89.71,
+      "end": 96.25,
+      "text": "What we mean is to subtract the mean and then divide by the"
+    },
+    {
+      "start": 96.25,
+      "end": 98.03,
+      "text": "standard deviation."
+    },
+    {
+      "start": 98.03,
+      "end": 101.31,
+      "text": "Now the mean is, of course, n times the expected value of"
+    },
+    {
+      "start": 101.31,
+      "end": 103.07,
+      "text": "each one of the x's."
+    },
+    {
+      "start": 103.07,
+      "end": 105.89,
+      "text": "And the standard deviation is the square root of the"
+    },
+    {
+      "start": 105.89,
+      "end": 106.61,
+      "text": "variance."
+    },
+    {
+      "start": 106.61,
+      "end": 110.53,
+      "text": "The variance is n times sigma squared, where sigma is the"
+    },
+    {
+      "start": 110.53,
+      "end": 112.17,
+      "text": "variance of the x's."
+    },
+    {
+      "start": 112.17,
+      "end": 113.67,
+      "text": "So that's the standard deviation."
+    },
+    {
+      "start": 113.67,
+      "end": 116.95,
+      "text": "After we do this, we obtain a random variable that has zero"
+    },
+    {
+      "start": 116.95,
+      "end": 117.23,
+      "text": "mean."
+    },
+    {
+      "start": 117.23,
+      "end": 118.47,
+      "text": "It's centered."
+    },
+    {
+      "start": 119.71,
+      "end": 123.23,
+      "text": "The variance is equal to one."
+    },
+    {
+      "start": 123.23,
+      "end": 127.23,
+      "text": "And so the variance stays the same no matter how large n is"
+    },
+    {
+      "start": 127.23,
+      "end": 128.49,
+      "text": "going to be."
+    },
+    {
+      "start": 128.49,
+      "end": 132.67,
+      "text": "So the distribution of Zn keeps changing with n, but it"
+    },
+    {
+      "start": 132.67,
+      "end": 134.07,
+      "text": "cannot change too much."
+    },
+    {
+      "start": 134.07,
+      "end": 135.23,
+      "text": "It stays in place."
+    },
+    {
+      "start": 135.23,
+      "end": 136.87,
+      "text": "The mean is zero."
+    },
+    {
+      "start": 136.87,
+      "end": 140.03,
+      "text": "And the width remains also roughly the same because the"
+    },
+    {
+      "start": 140.03,
+      "end": 141.97,
+      "text": "variance is one."
+    },
+    {
+      "start": 141.97,
+      "end": 145.79,
+      "text": "The surprising thing is that as n grows, that distribution"
+    },
+    {
+      "start": 145.79,
+      "end": 148.77,
+      "text": "of Zn kind of settles to a certain aspect."
+    },
+    {
+      "start": 148.77,
+      "end": 148.99,
+      "text": "."
+    },
+    {
+      "start": 148.99,
+      "end": 151.23,
+      "text": "certain asymptotic shape."
+    },
+    {
+      "start": 151.23,
+      "end": 153.59,
+      "text": "And that's the shape of a standard"
+    },
+    {
+      "start": 153.59,
+      "end": 155.29,
+      "text": "normal random variable."
+    },
+    {
+      "start": 155.29,
+      "end": 157.87,
+      "text": "So standard normal means that it has zero mean"
+    },
+    {
+      "start": 157.87,
+      "end": 159.91,
+      "text": "and unit variance."
+    },
+    {
+      "start": 159.91,
+      "end": 163.13,
+      "text": "More precisely, what the central limit theorem tells"
+    },
+    {
+      "start": 163.13,
+      "end": 166.55,
+      "text": "us is a relation between the cumulative distribution"
+    },
+    {
+      "start": 166.55,
+      "end": 169.41,
+      "text": "function of Zn and its relation to the cumulative"
+    },
+    {
+      "start": 169.41,
+      "end": 171.99,
+      "text": "distribution function of the standard normal."
+    },
+    {
+      "start": 171.99,
+      "end": 176.61,
+      "text": "So for any given number, C, the probability that Zn is"
+    },
+    {
+      "start": 176.61,
+      "end": 181.13,
+      "text": "less than or equal to C in the limit becomes the same as"
+    },
+    {
+      "start": 181.13,
+      "end": 184.09,
+      "text": "the probability that the standard normal becomes less"
+    },
+    {
+      "start": 184.09,
+      "end": 187.27,
+      "text": "than or equal to C. And of course, this is useful"
+    },
+    {
+      "start": 187.27,
+      "end": 190.55,
+      "text": "because these probabilities are available from the normal"
+    },
+    {
+      "start": 190.55,
+      "end": 193.73,
+      "text": "tables, whereas the distribution of Zn might be a"
+    },
+    {
+      "start": 193.73,
+      "end": 196.31,
+      "text": "very complicated expression if you were to"
+    },
+    {
+      "start": 196.31,
+      "end": 199.53,
+      "text": "calculate it exactly."
+    },
+    {
+      "start": 199.53,
+      "end": 202.95,
+      "text": "So some comments about the central limit theorem."
+    },
+    {
+      "start": 202.95,
+      "end": 206.37,
+      "text": "First thing is that it's quite amazing that it's"
+    },
+    {
+      "start": 206.37,
+      "end": 207.85,
+      "text": "universal."
+    },
+    {
+      "start": 207.85,
+      "end": 211.97,
+      "text": "It doesn't matter what the distribution of the X's is."
+    },
+    {
+      "start": 211.97,
+      "end": 215.93,
+      "text": "It can be any distribution whatsoever, as long as it has"
+    },
+    {
+      "start": 215.93,
+      "end": 219.03,
+      "text": "finite mean and finite variance."
+    },
+    {
+      "start": 219.03,
+      "end": 222.13,
+      "text": "And when you go and do your approximations using the"
+    },
+    {
+      "start": 222.13,
+      "end": 224.49,
+      "text": "central limit theorem, the only thing that you need to"
+    },
+    {
+      "start": 224.49,
+      "end": 228.15,
+      "text": "know about the distribution of the X's are the mean and the"
+    },
+    {
+      "start": 228.15,
+      "end": 229.09,
+      "text": "variance."
+    },
+    {
+      "start": 229.09,
+      "end": 232.35,
+      "text": "You need those in order to standardize Sn."
+    },
+    {
+      "start": 232.35,
+      "end": 235.89,
+      "text": "I mean, to subtract the mean, divide by the standard"
+    },
+    {
+      "start": 235.89,
+      "end": 236.35,
+      "text": "deviation."
+    },
+    {
+      "start": 236.35,
+      "end": 239.11,
+      "text": "You need to know the mean and the variance."
+    },
+    {
+      "start": 239.11,
+      "end": 242.29,
+      "text": "But these are the only things that you need to know in order"
+    },
+    {
+      "start": 242.29,
+      "end": 245.99,
+      "text": "to apply it."
+    },
+    {
+      "start": 245.99,
+      "end": 248.67,
+      "text": "In addition, it's a very accurate"
+    },
+    {
+      "start": 248.67,
+      "end": 250.61,
+      "text": "computational shortcut."
+    },
+    {
+      "start": 250.61,
+      "end": 254.59,
+      "text": "So the distribution of the Zn's, in principle, you can"
+    },
+    {
+      "start": 254.59,
+      "end": 258.39,
+      "text": "calculate it by convolving the distribution of the X's with"
+    },
+    {
+      "start": 258.39,
+      "end": 260.03,
+      "text": "itself many, many times."
+    },
+    {
+      "start": 260.03,
+      "end": 261.57,
+      "text": "But this is tedious."
+    },
+    {
+      "start": 261.57,
+      "end": 264.31,
+      "text": "And if you try to do it analytically, it might be a"
+    },
+    {
+      "start": 264.31,
+      "end": 266.45,
+      "text": "very complicated expression."
+    },
+    {
+      "start": 266.45,
+      "end": 267.95,
+      "text": "Whereas by just appealing to the standard limit theorem, it"
+    },
+    {
+      "start": 267.95,
+      "end": 270.05,
+      "text": "might be appealing to the standard normal table for the"
+    },
+    {
+      "start": 270.05,
+      "end": 272.67,
+      "text": "standard normal random variable."
+    },
+    {
+      "start": 272.67,
+      "end": 275.35,
+      "text": "Things are done in a very quick way."
+    },
+    {
+      "start": 275.35,
+      "end": 279.07,
+      "text": "So it's a nice computational shortcut if you don't want to"
+    },
+    {
+      "start": 279.07,
+      "end": 282.19,
+      "text": "get an exact answer to a probability problem."
+    },
+    {
+      "start": 282.19,
+      "end": 287.39,
+      "text": "Now, at the more philosophical level, it justifies why we are"
+    },
+    {
+      "start": 287.39,
+      "end": 290.85,
+      "text": "really interested in normal random variables."
+    },
+    {
+      "start": 290.85,
+      "end": 295.21,
+      "text": "Whenever you have a phenomenon which is noisy, and the noise"
+    },
+    {
+      "start": 295.21,
+      "end": 297.47,
+      "text": "that you observe is creative."
+    },
+    {
+      "start": 297.47,
+      "end": 301.47,
+      "text": "Created by adding lots of little pieces of randomness"
+    },
+    {
+      "start": 301.47,
+      "end": 304.83,
+      "text": "that are independent of each other, the overall effect that"
+    },
+    {
+      "start": 304.83,
+      "end": 308.73,
+      "text": "you're going to observe can be described by a normal random"
+    },
+    {
+      "start": 308.73,
+      "end": 310.21,
+      "text": "variable."
+    },
+    {
+      "start": 310.21,
+      "end": 316.77,
+      "text": "So in a classic example that goes 100 years back or so,"
+    },
+    {
+      "start": 316.77,
+      "end": 318.31,
+      "text": "suppose that you have a fluid."
+    },
+    {
+      "start": 318.31,
+      "end": 321.97,
+      "text": "And inside that fluid, there's a little particle of dust or"
+    },
+    {
+      "start": 321.97,
+      "end": 324.93,
+      "text": "whatever that's suspended in there."
+    },
+    {
+      "start": 324.93,
+      "end": 327.45,
+      "text": "That little particle gets hit by"
+    },
+    {
+      "start": 327.47,
+      "end": 330.01,
+      "text": "molecules completely at random."
+    },
+    {
+      "start": 330.01,
+      "end": 332.73,
+      "text": "And so what you're going to see is that particle kind of"
+    },
+    {
+      "start": 332.73,
+      "end": 336.01,
+      "text": "moving randomly inside that liquid."
+    },
+    {
+      "start": 336.01,
+      "end": 340.27,
+      "text": "Now, that random motion, if you ask after one second, how"
+    },
+    {
+      "start": 340.27,
+      "end": 346.07,
+      "text": "much is my particle displaced, let's say, along the x"
+    },
+    {
+      "start": 346.07,
+      "end": 350.51,
+      "text": "direction, that displacement is very, very well modeled by a"
+    },
+    {
+      "start": 350.51,
+      "end": 351.95,
+      "text": "normal random variable."
+    },
+    {
+      "start": 351.95,
+      "end": 355.75,
+      "text": "And the reason is that the position of that particle is"
+    },
+    {
+      "start": 355.75,
+      "end": 357.21,
+      "text": "decided by the cumulative."
+    },
+    {
+      "start": 357.47,
+      "end": 362.77,
+      "text": "Effect of lots of random hits by molecules that hit that"
+    },
+    {
+      "start": 362.77,
+      "end": 364.47,
+      "text": "particle."
+    },
+    {
+      "start": 364.47,
+      "end": 371.63,
+      "text": "So that's a sort of celebrated physical model that goes under"
+    },
+    {
+      "start": 371.63,
+      "end": 374.99,
+      "text": "the name of Brownian motion."
+    },
+    {
+      "start": 374.99,
+      "end": 378.29,
+      "text": "And it's the same model that some people use to describe the"
+    },
+    {
+      "start": 378.29,
+      "end": 380.29,
+      "text": "movement in the financial markets."
+    },
+    {
+      "start": 380.29,
+      "end": 384.71,
+      "text": "The argument might go that the movement of prices has to do"
+    },
+    {
+      "start": 384.71,
+      "end": 387.43,
+      "text": "with lots of little decisions and lots of little"
+    },
+    {
+      "start": 387.47,
+      "end": 391.29,
+      "text": "events by many, many different actors that are"
+    },
+    {
+      "start": 391.29,
+      "end": 392.87,
+      "text": "involved in the market."
+    },
+    {
+      "start": 392.87,
+      "end": 397.39,
+      "text": "So the distribution of stock prices might be well described"
+    },
+    {
+      "start": 397.39,
+      "end": 399.71,
+      "text": "by normal random variables."
+    },
+    {
+      "start": 399.71,
+      "end": 403.79,
+      "text": "At least that's what people wanted to believe until"
+    },
+    {
+      "start": 403.79,
+      "end": 405.11,
+      "text": "somewhat recently."
+    },
+    {
+      "start": 405.11,
+      "end": 408.25,
+      "text": "Now the evidence is that actually these distributions"
+    },
+    {
+      "start": 408.25,
+      "end": 412.19,
+      "text": "are a little more heavy-tailed in the sense that extreme"
+    },
+    {
+      "start": 412.19,
+      "end": 415.59,
+      "text": "events are a little more likely to occur than what"
+    },
+    {
+      "start": 415.59,
+      "end": 417.47,
+      "text": "normal random variables would seem to indicate."
+    },
+    {
+      "start": 417.47,
+      "end": 423.09,
+      "text": "But as a first model, again, it could be a plausible"
+    },
+    {
+      "start": 423.09,
+      "end": 427.11,
+      "text": "argument why to start have, at least as a starting model, one"
+    },
+    {
+      "start": 427.11,
+      "end": 430.17,
+      "text": "that involves normal random variables."
+    },
+    {
+      "start": 430.17,
+      "end": 433.09,
+      "text": "So this is the philosophical side of things."
+    },
+    {
+      "start": 433.09,
+      "end": 435.79,
+      "text": "On the more accurate mathematical side, it's"
+    },
+    {
+      "start": 435.79,
+      "end": 438.93,
+      "text": "important to appreciate exactly what kind of statement the"
+    },
+    {
+      "start": 438.93,
+      "end": 441.27,
+      "text": "central limit theorem is."
+    },
+    {
+      "start": 441.27,
+      "end": 445.43,
+      "text": "It's a statement about the convergence of the CDF of"
+    },
+    {
+      "start": 445.43,
+      "end": 447.47,
+      "text": "these standardized random variables."
+    },
+    {
+      "start": 447.47,
+      "end": 449.85,
+      "text": "To the CDF of a normal."
+    },
+    {
+      "start": 449.85,
+      "end": 452.47,
+      "text": "So it's a statement about convergence of CDFs."
+    },
+    {
+      "start": 452.47,
+      "end": 456.55,
+      "text": "It's not a statement about convergence of PMFs or"
+    },
+    {
+      "start": 456.55,
+      "end": 459.09,
+      "text": "convergence of PDFs."
+    },
+    {
+      "start": 459.09,
+      "end": 462.15,
+      "text": "Now if one makes additional mathematical assumptions,"
+    },
+    {
+      "start": 462.15,
+      "end": 464.87,
+      "text": "there are variations of the central limit theorem that"
+    },
+    {
+      "start": 464.87,
+      "end": 467.23,
+      "text": "talk about PDFs and PMFs."
+    },
+    {
+      "start": 467.23,
+      "end": 471.93,
+      "text": "But in general, that's not necessarily the case."
+    },
+    {
+      "start": 471.93,
+      "end": 477.15,
+      "text": "And I'm going to illustrate this with, I have a plot here,"
+    },
+    {
+      "start": 477.15,
+      "end": 478.89,
+      "text": "which is not in your slides."
+    },
+    {
+      "start": 478.89,
+      "end": 485.37,
+      "text": "But just to make the point, consider two different discrete"
+    },
+    {
+      "start": 485.37,
+      "end": 486.71,
+      "text": "distributions."
+    },
+    {
+      "start": 486.71,
+      "end": 493.65,
+      "text": "This discrete distribution takes values 1, 4, 7."
+    },
+    {
+      "start": 493.65,
+      "end": 498.71,
+      "text": "This discrete distribution can take values 1, 2, 4, 6, and 7."
+    },
+    {
+      "start": 498.71,
+      "end": 502.15,
+      "text": "So this one has sort of a periodicity of 3."
+    },
+    {
+      "start": 502.15,
+      "end": 506.03,
+      "text": "This one is a little more, the range of values is a little"
+    },
+    {
+      "start": 506.03,
+      "end": 507.15,
+      "text": "more interesting."
+    },
+    {
+      "start": 507.15,
+      "end": 510.91,
+      "text": "The numbers in these two distributions are cooked up so"
+    },
+    {
+      "start": 510.91,
+      "end": 514.35,
+      "text": "that they have the same mean and the same variance."
+    },
+    {
+      "start": 514.35,
+      "end": 519.55,
+      "text": "Now what I'm going to do is to take eight independent copies"
+    },
+    {
+      "start": 519.55,
+      "end": 524.09,
+      "text": "of the random variable and plot the PMF of the sum of"
+    },
+    {
+      "start": 524.09,
+      "end": 525.97,
+      "text": "eight random variables."
+    },
+    {
+      "start": 525.97,
+      "end": 531.39,
+      "text": "Now if I plot the PMF of the sum of eight of these, I get"
+    },
+    {
+      "start": 531.39,
+      "end": 537.07,
+      "text": "the plot which corresponds to the blue, to the, to these"
+    },
+    {
+      "start": 537.07,
+      "end": 539.67,
+      "text": "bullets in this diagram."
+    },
+    {
+      "start": 539.67,
+      "end": 543.03,
+      "text": "If I take eight random variables according to this"
+    },
+    {
+      "start": 543.03,
+      "end": 547.27,
+      "text": "distribution and add them up and compute their PMF, the PMF"
+    },
+    {
+      "start": 547.27,
+      "end": 550.33,
+      "text": "I get is the one denoted here by the Xs."
+    },
+    {
+      "start": 550.33,
+      "end": 554.23,
+      "text": "The two PMFs look really different, at least when you"
+    },
+    {
+      "start": 554.23,
+      "end": 556.83,
+      "text": "look at them, when you eyeball them."
+    },
+    {
+      "start": 556.83,
+      "end": 563.47,
+      "text": "On the other hand, if you are to plot the CDFs of them, then"
+    },
+    {
+      "start": 563.47,
+      "end": 564.77,
+      "text": "the CDFs."
+    },
+    {
+      "start": 567.07,
+      "end": 574.31,
+      "text": "If you compare them with the normal CDF, which is this"
+    },
+    {
+      "start": 574.31,
+      "end": 578.87,
+      "text": "continuous curve, the CDF, of course, it goes up in steps"
+    },
+    {
+      "start": 578.87,
+      "end": 581.97,
+      "text": "because we're looking at discrete random variables."
+    },
+    {
+      "start": 581.97,
+      "end": 587.57,
+      "text": "But it's very close to the normal CDF."
+    },
+    {
+      "start": 587.57,
+      "end": 592.01,
+      "text": "And if instead of n equal to 18, we were to take 16, then"
+    },
+    {
+      "start": 592.01,
+      "end": 594.47,
+      "text": "the coincidence would be even better."
+    },
+    {
+      "start": 594.47,
+      "end": 595.67,
+      "text": "So in terms of CDFs."
+    },
+    {
+      "start": 597.07,
+      "end": 600.59,
+      "text": "When we add eight or 16 of these, we get very close to the"
+    },
+    {
+      "start": 600.59,
+      "end": 601.97,
+      "text": "normal CDF."
+    },
+    {
+      "start": 601.97,
+      "end": 605.07,
+      "text": "We would get essentially the same picture if I were to take"
+    },
+    {
+      "start": 605.07,
+      "end": 606.83,
+      "text": "eight or 16 of these."
+    },
+    {
+      "start": 606.83,
+      "end": 611.73,
+      "text": "So the CDFs sit essentially on top of each other, although"
+    },
+    {
+      "start": 611.73,
+      "end": 614.39,
+      "text": "the two PMFs look quite different."
+    },
+    {
+      "start": 614.39,
+      "end": 617.23,
+      "text": "So this is to appreciate that, formally speaking, we only"
+    },
+    {
+      "start": 617.23,
+      "end": 622.45,
+      "text": "have a statement about CDFs, not about PMFs."
+    },
+    {
+      "start": 622.45,
+      "end": 626.95,
+      "text": "Now in practice, how do you use the central limit theorem?"
+    },
+    {
+      "start": 626.95,
+      "end": 630.53,
+      "text": "Well, it tells us that we can calculate probabilities by"
+    },
+    {
+      "start": 630.53,
+      "end": 632.75,
+      "text": "treating Zn as if it were a standard"
+    },
+    {
+      "start": 632.75,
+      "end": 634.49,
+      "text": "normal random variable."
+    },
+    {
+      "start": 634.49,
+      "end": 638.23,
+      "text": "Now Zn is a linear function of Sn."
+    },
+    {
+      "start": 638.23,
+      "end": 643.05,
+      "text": "Conversely, Sn is a linear function of Zn."
+    },
+    {
+      "start": 643.05,
+      "end": 645.65,
+      "text": "Linear functions of normals are normal."
+    },
+    {
+      "start": 645.65,
+      "end": 649.41,
+      "text": "So if I pretend that Zn is normal, it's essentially the"
+    },
+    {
+      "start": 649.41,
+      "end": 653.19,
+      "text": "same as if we pretend that Sn is normal."
+    },
+    {
+      "start": 653.19,
+      "end": 655.57,
+      "text": "And so we can calculate probabilities that have to do"
+    },
+    {
+      "start": 655.57,
+      "end": 656.95,
+      "text": "with Sn."
+    },
+    {
+      "start": 656.95,
+      "end": 659.81,
+      "text": "As if Sn were normal."
+    },
+    {
+      "start": 659.81,
+      "end": 663.85,
+      "text": "Now the central limit theorem does not tell us that Sn is"
+    },
+    {
+      "start": 663.85,
+      "end": 665.13,
+      "text": "approximately normal."
+    },
+    {
+      "start": 665.13,
+      "end": 667.51,
+      "text": "The formal statement is about Zn."
+    },
+    {
+      "start": 667.51,
+      "end": 670.87,
+      "text": "But practically speaking, when you use the result, you can"
+    },
+    {
+      "start": 670.87,
+      "end": 674.61,
+      "text": "just pretend that Sn is normal."
+    },
+    {
+      "start": 674.61,
+      "end": 677.29,
+      "text": "Finally, it's a limit theorem."
+    },
+    {
+      "start": 677.29,
+      "end": 679.25,
+      "text": "So it tells us about what happens when"
+    },
+    {
+      "start": 679.25,
+      "end": 681.23,
+      "text": "n goes to infinity."
+    },
+    {
+      "start": 681.23,
+      "end": 683.87,
+      "text": "If we are to use it in practice, of course, n is not"
+    },
+    {
+      "start": 683.87,
+      "end": 685.11,
+      "text": "going to be infinity."
+    },
+    {
+      "start": 685.11,
+      "end": 686.53,
+      "text": "Maybe n is equal to Zn."
+    },
+    {
+      "start": 686.95,
+      "end": 689.19,
+      "text": "Maybe n is equal to 15."
+    },
+    {
+      "start": 689.19,
+      "end": 693.05,
+      "text": "Can we use a limit theorem when n is a small number as"
+    },
+    {
+      "start": 693.05,
+      "end": 694.89,
+      "text": "small as 15?"
+    },
+    {
+      "start": 694.89,
+      "end": 697.81,
+      "text": "Well, it turns out that it's a very good approximation."
+    },
+    {
+      "start": 697.81,
+      "end": 703.71,
+      "text": "Even for quite small values of n, it gives us very accurate"
+    },
+    {
+      "start": 703.71,
+      "end": 704.71,
+      "text": "answers."
+    },
+    {
+      "start": 704.71,
+      "end": 710.49,
+      "text": "So n over the order of 15 or 20 or so give us very good"
+    },
+    {
+      "start": 710.49,
+      "end": 712.71,
+      "text": "results in practice."
+    },
+    {
+      "start": 712.71,
+      "end": 715.69,
+      "text": "There are no good theorems that will give us hard"
+    },
+    {
+      "start": 715.69,
+      "end": 716.85,
+      "text": "guarantees."
+    },
+    {
+      "start": 716.85,
+      "end": 721.07,
+      "text": "The value of the approximation does depend on the details of"
+    },
+    {
+      "start": 721.07,
+      "end": 723.45,
+      "text": "the distribution of the x's."
+    },
+    {
+      "start": 723.45,
+      "end": 727.47,
+      "text": "If the x's have a distribution that from the outset looks a"
+    },
+    {
+      "start": 727.47,
+      "end": 733.15,
+      "text": "little bit like the normal, then for small values of n,"
+    },
+    {
+      "start": 733.15,
+      "end": 735.65,
+      "text": "you are going to see essentially a normal"
+    },
+    {
+      "start": 735.65,
+      "end": 737.35,
+      "text": "distribution for the sum."
+    },
+    {
+      "start": 737.35,
+      "end": 739.99,
+      "text": "If the distribution of the x's is very different from the"
+    },
+    {
+      "start": 739.99,
+      "end": 743.33,
+      "text": "normal, it's going to take a larger value of n for the"
+    },
+    {
+      "start": 743.33,
+      "end": 745.73,
+      "text": "central limit theorem to take effect."
+    },
+    {
+      "start": 745.73,
+      "end": 746.69,
+      "text": "So let's illustrate."
+    },
+    {
+      "start": 746.85,
+      "end": 752.59,
+      "text": "Let's illustrate this with a few representative plots."
+    },
+    {
+      "start": 752.59,
+      "end": 756.47,
+      "text": "So here we're starting with a discrete uniform distribution"
+    },
+    {
+      "start": 756.47,
+      "end": 759.57,
+      "text": "that goes from 1 to 8."
+    },
+    {
+      "start": 759.57,
+      "end": 764.21,
+      "text": "Let's add two of these random variables, two random variables"
+    },
+    {
+      "start": 764.21,
+      "end": 767.85,
+      "text": "with this PMF, and find the PMF of the sum."
+    },
+    {
+      "start": 767.85,
+      "end": 772.03,
+      "text": "This is a convolution of two discrete uniforms."
+    },
+    {
+      "start": 772.03,
+      "end": 774.99,
+      "text": "And I believe you have seen this exercise before."
+    },
+    {
+      "start": 774.99,
+      "end": 778.11,
+      "text": "When you convolve this with itself, you get a triangle."
+    },
+    {
+      "start": 778.23,
+      "end": 784.37,
+      "text": "So this is the PMF for the sum of two discrete uniforms."
+    },
+    {
+      "start": 784.37,
+      "end": 785.37,
+      "text": "Now let's continue."
+    },
+    {
+      "start": 785.37,
+      "end": 788.23,
+      "text": "Let's convolve this with itself."
+    },
+    {
+      "start": 788.23,
+      "end": 792.61,
+      "text": "This was going to give us the PMF of a sum of four discrete"
+    },
+    {
+      "start": 792.61,
+      "end": 795.29,
+      "text": "uniforms, and we get this, which"
+    },
+    {
+      "start": 795.29,
+      "end": 797.93,
+      "text": "starts looking like a normal."
+    },
+    {
+      "start": 797.93,
+      "end": 803.45,
+      "text": "If we go to n equal to 32, then it looks essentially"
+    },
+    {
+      "start": 803.45,
+      "end": 805.27,
+      "text": "exactly like a normal."
+    },
+    {
+      "start": 805.27,
+      "end": 807.83,
+      "text": "And it's an excellent approximation."
+    },
+    {
+      "start": 807.83,
+      "end": 812.25,
+      "text": "So this is the PMF of the sum of 32 discrete random"
+    },
+    {
+      "start": 812.25,
+      "end": 816.51,
+      "text": "variables with this uniform distribution."
+    },
+    {
+      "start": 816.51,
+      "end": 822.43,
+      "text": "If we start with the PMF, which is not symmetric, this"
+    },
+    {
+      "start": 822.43,
+      "end": 824.61,
+      "text": "one is symmetric around the mean."
+    },
+    {
+      "start": 824.61,
+      "end": 827.61,
+      "text": "But if we start with the PMF, which is non-symmetric, so"
+    },
+    {
+      "start": 827.61,
+      "end": 833.75,
+      "text": "this here is a truncated geometric PMF, then things do"
+    },
+    {
+      "start": 833.75,
+      "end": 836.63,
+      "text": "not work out as nicely."
+    },
+    {
+      "start": 836.63,
+      "end": 836.97,
+      "text": "When I add n equal to 32."
+    },
+    {
+      "start": 836.97,
+      "end": 840.89,
+      "text": "When I add 8 of these, that is, if I convolve this with"
+    },
+    {
+      "start": 840.89,
+      "end": 847.55,
+      "text": "itself eight times, I get this PMF, which maybe resembles a"
+    },
+    {
+      "start": 847.55,
+      "end": 849.79,
+      "text": "little bit to the normal one."
+    },
+    {
+      "start": 849.79,
+      "end": 853.03,
+      "text": "But you can really tell that it's different from the normal"
+    },
+    {
+      "start": 853.03,
+      "end": 856.63,
+      "text": "if you focus on the details here and there."
+    },
+    {
+      "start": 856.63,
+      "end": 859.91,
+      "text": "Here it sort of rises sharply."
+    },
+    {
+      "start": 859.91,
+      "end": 863.43,
+      "text": "Here it tails off a bit slower."
+    },
+    {
+      "start": 863.43,
+      "end": 866.53,
+      "text": "So there's an asymmetry here that's present."
+    },
+    {
+      "start": 866.53,
+      "end": 869.33,
+      "text": "And which is a consequence of the asymmetry of the"
+    },
+    {
+      "start": 869.33,
+      "end": 871.71,
+      "text": "distribution we started with."
+    },
+    {
+      "start": 871.71,
+      "end": 875.31,
+      "text": "If we go to 16, it looks a little better, but still you"
+    },
+    {
+      "start": 875.31,
+      "end": 879.61,
+      "text": "can see the asymmetry between this tail and that tail."
+    },
+    {
+      "start": 879.61,
+      "end": 883.25,
+      "text": "If we get to 32, there's still a little bit of asymmetry, but"
+    },
+    {
+      "start": 883.25,
+      "end": 888.51,
+      "text": "at least now it started looking like a normal distribution."
+    },
+    {
+      "start": 888.51,
+      "end": 894.61,
+      "text": "So the moral from these plots is that it might vary a little"
+    },
+    {
+      "start": 894.61,
+      "end": 894.91,
+      "text": "bit."
+    },
+    {
+      "start": 894.91,
+      "end": 896.49,
+      "text": "What kind of values of n?"
+    },
+    {
+      "start": 896.49,
+      "end": 900.07,
+      "text": "You need before you get a really good approximation."
+    },
+    {
+      "start": 900.07,
+      "end": 904.51,
+      "text": "But for values of n in the range 20 to 30 or so, usually"
+    },
+    {
+      "start": 904.51,
+      "end": 907.33,
+      "text": "you expect to get a pretty good approximation."
+    },
+    {
+      "start": 907.33,
+      "end": 910.15,
+      "text": "At least that's what the visual inspection of these"
+    },
+    {
+      "start": 910.15,
+      "end": 913.34,
+      "text": "graphs tells us."
+    },
+    {
+      "start": 913.34,
+      "end": 916.52,
+      "text": "So now that we know that we have a good approximation in"
+    },
+    {
+      "start": 916.52,
+      "end": 918.44,
+      "text": "our hands, let's use it."
+    },
+    {
+      "start": 918.44,
+      "end": 921.9,
+      "text": "Let's use it by revisiting an example from last time."
+    },
+    {
+      "start": 921.9,
+      "end": 924.74,
+      "text": "This is the polling problem."
+    },
+    {
+      "start": 924.74,
+      "end": 927.74,
+      "text": "We're interested in the fraction of population that"
+    },
+    {
+      "start": 927.74,
+      "end": 930.22,
+      "text": "has a certain habit."
+    },
+    {
+      "start": 930.22,
+      "end": 933.68,
+      "text": "And we try to find what f is."
+    },
+    {
+      "start": 933.68,
+      "end": 938.12,
+      "text": "And the way we do it is by polling people at random and"
+    },
+    {
+      "start": 938.12,
+      "end": 940.6,
+      "text": "recording the answers that they give, whether they have"
+    },
+    {
+      "start": 940.6,
+      "end": 942.34,
+      "text": "the habit or not."
+    },
+    {
+      "start": 942.34,
+      "end": 945.24,
+      "text": "So for each person, we get the Bernoulli random variable."
+    },
+    {
+      "start": 945.24,
+      "end": 952.04,
+      "text": "With probability f, a person is going to respond 1 or yes."
+    },
+    {
+      "start": 952.04,
+      "end": 955.08,
+      "text": "So this is with probability f."
+    },
+    {
+      "start": 955.08,
+      "end": 957.72,
+      "text": "And with the remaining probability 1 minus f, a"
+    },
+    {
+      "start": 957.74,
+      "end": 960.38,
+      "text": "person responds no."
+    },
+    {
+      "start": 960.38,
+      "end": 965.04,
+      "text": "We record this number, which is how many people answered yes"
+    },
+    {
+      "start": 965.04,
+      "end": 966.78,
+      "text": "divided by the total number of people."
+    },
+    {
+      "start": 966.78,
+      "end": 970.74,
+      "text": "That's the fraction of the population that we asked."
+    },
+    {
+      "start": 970.74,
+      "end": 976.96,
+      "text": "This is the fraction inside our sample that answered yes."
+    },
+    {
+      "start": 976.96,
+      "end": 982.06,
+      "text": "And as we discussed last time, you might start with some specs"
+    },
+    {
+      "start": 982.06,
+      "end": 983.22,
+      "text": "for the poll."
+    },
+    {
+      "start": 983.22,
+      "end": 986.68,
+      "text": "And the specs have two parameters, the accuracy that"
+    },
+    {
+      "start": 986.68,
+      "end": 987.44,
+      "text": "you want."
+    },
+    {
+      "start": 987.44,
+      "end": 991.2,
+      "text": "And the confidence that you want to have that you did"
+    },
+    {
+      "start": 991.2,
+      "end": 993.62,
+      "text": "really obtain the desired accuracy."
+    },
+    {
+      "start": 993.62,
+      "end": 1000.54,
+      "text": "So the specs here is that we want probability 95% that our"
+    },
+    {
+      "start": 1000.54,
+      "end": 1004.04,
+      "text": "estimate is within 1 percentage point from the"
+    },
+    {
+      "start": 1004.04,
+      "end": 1006.38,
+      "text": "true answer."
+    },
+    {
+      "start": 1006.38,
+      "end": 1011.08,
+      "text": "So the event of interest is this, that the result of the"
+    },
+    {
+      "start": 1011.08,
+      "end": 1016.24,
+      "text": "poll minus distance from the true answer is less or bigger"
+    },
+    {
+      "start": 1016.24,
+      "end": 1017.12,
+      "text": "than 1%."
+    },
+    {
+      "start": 1017.12,
+      "end": 1022.04,
+      "text": "And we're interested in calculating or approximating"
+    },
+    {
+      "start": 1022.04,
+      "end": 1024.14,
+      "text": "this particular probability."
+    },
+    {
+      "start": 1024.14,
+      "end": 1028.0,
+      "text": "So we want to do it using the central limit theorem."
+    },
+    {
+      "start": 1028.0,
+      "end": 1033.06,
+      "text": "And one way of arranging the mechanics of this calculation"
+    },
+    {
+      "start": 1033.06,
+      "end": 1037.88,
+      "text": "is to take the event of interest and massage it by"
+    },
+    {
+      "start": 1037.88,
+      "end": 1041.4,
+      "text": "subtracting and dividing things from both sides of this"
+    },
+    {
+      "start": 1041.4,
+      "end": 1045.28,
+      "text": "inequality so that you bring into the picture the"
+    },
+    {
+      "start": 1045.28,
+      "end": 1046.48,
+      "text": "standardized norm."
+    },
+    {
+      "start": 1046.48,
+      "end": 1046.96,
+      "text": "OK."
+    },
+    {
+      "start": 1046.96,
+      "end": 1050.68,
+      "text": "The standardized random variable, the Zn."
+    },
+    {
+      "start": 1050.68,
+      "end": 1053.9,
+      "text": "And then apply the central limit theorem."
+    },
+    {
+      "start": 1053.9,
+      "end": 1057.22,
+      "text": "So the event of interest, let me write it in full."
+    },
+    {
+      "start": 1057.22,
+      "end": 1059.52,
+      "text": "Mn is this quantity."
+    },
+    {
+      "start": 1059.52,
+      "end": 1060.96,
+      "text": "So I'm putting it here."
+    },
+    {
+      "start": 1060.96,
+      "end": 1064.44,
+      "text": "Minus f, which is the same as nf divided by n."
+    },
+    {
+      "start": 1064.44,
+      "end": 1067.0,
+      "text": "So this is the same as that event."
+    },
+    {
+      "start": 1067.0,
+      "end": 1069.84,
+      "text": "We want to calculate the probability of this."
+    },
+    {
+      "start": 1069.84,
+      "end": 1072.46,
+      "text": "This is not exactly in the form in which we apply the"
+    },
+    {
+      "start": 1072.46,
+      "end": 1073.44,
+      "text": "central limit theorem."
+    },
+    {
+      "start": 1073.44,
+      "end": 1076.32,
+      "text": "To apply the central limit theorem, we need down here to"
+    },
+    {
+      "start": 1076.32,
+      "end": 1079.66,
+      "text": "have sigma square root n."
+    },
+    {
+      "start": 1079.66,
+      "end": 1083.1,
+      "text": "So how can I put sigma square root n here?"
+    },
+    {
+      "start": 1083.1,
+      "end": 1087.36,
+      "text": "I can divide both sides of this inequality by sigma."
+    },
+    {
+      "start": 1087.36,
+      "end": 1090.98,
+      "text": "And then I can take a factor of square root n from here and"
+    },
+    {
+      "start": 1090.98,
+      "end": 1093.24,
+      "text": "send it to the other side."
+    },
+    {
+      "start": 1093.24,
+      "end": 1095.64,
+      "text": "So this event is the same as that event."
+    },
+    {
+      "start": 1095.64,
+      "end": 1099.18,
+      "text": "This will happen if and only if that will happen."
+    },
+    {
+      "start": 1099.18,
+      "end": 1103.64,
+      "text": "So calculating the probability of this event here is the same"
+    },
+    {
+      "start": 1103.64,
+      "end": 1106.32,
+      "text": "as calculating the probability that this event happens."
+    },
+    {
+      "start": 1106.32,
+      "end": 1110.84,
+      "text": "And now we are in business, because the random variable"
+    },
+    {
+      "start": 1110.84,
+      "end": 1116.28,
+      "text": "that we got in here is Zn, or the absolute value of Zn."
+    },
+    {
+      "start": 1116.28,
+      "end": 1121.48,
+      "text": "And we're talking about the probability that Zn, absolute"
+    },
+    {
+      "start": 1121.48,
+      "end": 1125.64,
+      "text": "value of Zn, is bigger than a certain number."
+    },
+    {
+      "start": 1125.64,
+      "end": 1130.28,
+      "text": "Since Zn is to be approximated by a standard normal random"
+    },
+    {
+      "start": 1130.28,
+      "end": 1134.52,
+      "text": "variable, our approximation is going to be, instead of asking"
+    },
+    {
+      "start": 1134.52,
+      "end": 1136.3,
+      "text": "for Zn being bigger than the"
+    },
+    {
+      "start": 1136.32,
+      "end": 1140.5,
+      "text": "number, we will ask for Z, absolute value of Z, being"
+    },
+    {
+      "start": 1140.5,
+      "end": 1142.46,
+      "text": "bigger than this number."
+    },
+    {
+      "start": 1142.46,
+      "end": 1145.6,
+      "text": "So this is the probability that we want to calculate."
+    },
+    {
+      "start": 1145.6,
+      "end": 1149.66,
+      "text": "And now Z is a standard normal random variable."
+    },
+    {
+      "start": 1149.66,
+      "end": 1152.72,
+      "text": "There's a small difficulty here, the one that we also"
+    },
+    {
+      "start": 1152.72,
+      "end": 1154.26,
+      "text": "encountered last time."
+    },
+    {
+      "start": 1154.26,
+      "end": 1158.24,
+      "text": "And the difficulty is that the standard deviation sigma of the"
+    },
+    {
+      "start": 1158.24,
+      "end": 1160.7,
+      "text": "X i's is not known."
+    },
+    {
+      "start": 1160.7,
+      "end": 1164.52,
+      "text": "Sigma is equal to F times."
+    },
+    {
+      "start": 1164.52,
+      "end": 1170.04,
+      "text": "Sigma in this example is F times 1 minus F. And the only"
+    },
+    {
+      "start": 1170.04,
+      "end": 1172.64,
+      "text": "thing that we know about sigma is that it's going to be a"
+    },
+    {
+      "start": 1172.64,
+      "end": 1179.74,
+      "text": "number less than 1 half."
+    },
+    {
+      "start": 1179.74,
+      "end": 1185.12,
+      "text": "OK, so we're going to have to use an inequality here."
+    },
+    {
+      "start": 1185.12,
+      "end": 1188.84,
+      "text": "We're going to use a conservative value of sigma,"
+    },
+    {
+      "start": 1188.84,
+      "end": 1194.06,
+      "text": "the value of sigma equal to 1 half, and use that instead of"
+    },
+    {
+      "start": 1194.06,
+      "end": 1195.72,
+      "text": "the exact value of sigma."
+    },
+    {
+      "start": 1195.72,
+      "end": 1198.02,
+      "text": "And this gives us an inequality going this way."
+    },
+    {
+      "start": 1198.16,
+      "end": 1203.78,
+      "text": "Let's just make sure why the inequality goes this way."
+    },
+    {
+      "start": 1203.78,
+      "end": 1206.7,
+      "text": "We got on our axis two numbers."
+    },
+    {
+      "start": 1212.36,
+      "end": 1221.62,
+      "text": "One number is 0.01 square root n divided by sigma."
+    },
+    {
+      "start": 1221.62,
+      "end": 1227.84,
+      "text": "And the other number is 0.02 square root of n."
+    },
+    {
+      "start": 1227.84,
+      "end": 1230.44,
+      "text": "And my claim is that the numbers are related to the"
+    },
+    {
+      "start": 1230.44,
+      "end": 1232.82,
+      "text": "other in this particular way."
+    },
+    {
+      "start": 1232.82,
+      "end": 1233.46,
+      "text": "Why is this?"
+    },
+    {
+      "start": 1233.46,
+      "end": 1235.28,
+      "text": "Sigma is less than 2."
+    },
+    {
+      "start": 1235.28,
+      "end": 1239.56,
+      "text": "So 1 over sigma is bigger than 2."
+    },
+    {
+      "start": 1239.56,
+      "end": 1243.76,
+      "text": "So since 1 over sigma is bigger than 2, this means that"
+    },
+    {
+      "start": 1243.76,
+      "end": 1247.7,
+      "text": "this number sits to the right of that number."
+    },
+    {
+      "start": 1247.7,
+      "end": 1251.92,
+      "text": "So here we have the probability that Z is bigger"
+    },
+    {
+      "start": 1251.92,
+      "end": 1254.82,
+      "text": "than this number."
+    },
+    {
+      "start": 1254.82,
+      "end": 1259.04,
+      "text": "The probability of falling out there is less than the"
+    },
+    {
+      "start": 1259.04,
+      "end": 1260.26,
+      "text": "probability of falling out."
+    },
+    {
+      "start": 1260.26,
+      "end": 1263.08,
+      "text": "Falling in this interval."
+    },
+    {
+      "start": 1263.08,
+      "end": 1266.16,
+      "text": "So that's what that last inequality is saying."
+    },
+    {
+      "start": 1266.16,
+      "end": 1269.34,
+      "text": "This probability is smaller than that probability."
+    },
+    {
+      "start": 1269.34,
+      "end": 1271.6,
+      "text": "This is the probability that we're interested in."
+    },
+    {
+      "start": 1271.6,
+      "end": 1275.18,
+      "text": "But since we don't know sigma, we take the conservative value"
+    },
+    {
+      "start": 1275.18,
+      "end": 1281.38,
+      "text": "and we use an upper bound in terms of the probability of"
+    },
+    {
+      "start": 1281.38,
+      "end": 1283.74,
+      "text": "this interval here."
+    },
+    {
+      "start": 1283.74,
+      "end": 1286.86,
+      "text": "And now we are in business."
+    },
+    {
+      "start": 1286.86,
+      "end": 1290.08,
+      "text": "We can start using our normal tables to"
+    },
+    {
+      "start": 1290.08,
+      "end": 1293.12,
+      "text": "calculate probabilities of interest."
+    },
+    {
+      "start": 1293.12,
+      "end": 1300.28,
+      "text": "So for example, let's say that we take n to be 10,000."
+    },
+    {
+      "start": 1300.28,
+      "end": 1302.36,
+      "text": "How's the calculation going to go?"
+    },
+    {
+      "start": 1302.36,
+      "end": 1305.88,
+      "text": "We want to calculate the probability that the absolute"
+    },
+    {
+      "start": 1305.88,
+      "end": 1312.92,
+      "text": "value of Z is bigger than 0.2 times 1,000, which is the"
+    },
+    {
+      "start": 1312.92,
+      "end": 1316.52,
+      "text": "probability that the absolute value of Z is larger than or"
+    },
+    {
+      "start": 1316.52,
+      "end": 1318.48,
+      "text": "equal to 2."
+    },
+    {
+      "start": 1318.48,
+      "end": 1319.88,
+      "text": "And here, let's do some"
+    },
+    {
+      "start": 1319.88,
+      "end": 1323.32,
+      "text": "mechanics just to stay in shape."
+    },
+    {
+      "start": 1323.32,
+      "end": 1325.84,
+      "text": "Probability that you are larger than or equal to 2 in"
+    },
+    {
+      "start": 1325.84,
+      "end": 1327.02,
+      "text": "absolute value."
+    },
+    {
+      "start": 1327.02,
+      "end": 1330.44,
+      "text": "Since the normal is symmetric around the mean, this is going"
+    },
+    {
+      "start": 1330.44,
+      "end": 1334.24,
+      "text": "to be twice the probability that Z is larger"
+    },
+    {
+      "start": 1334.24,
+      "end": 1336.5,
+      "text": "than or equal to 2."
+    },
+    {
+      "start": 1336.5,
+      "end": 1342.32,
+      "text": "Can we use the cumulative distribution function of Z to"
+    },
+    {
+      "start": 1342.32,
+      "end": 1343.3,
+      "text": "calculate this?"
+    },
+    {
+      "start": 1343.3,
+      "end": 1344.36,
+      "text": "Well, almost."
+    },
+    {
+      "start": 1344.36,
+      "end": 1346.62,
+      "text": "The cumulative gives us probabilities of being less"
+    },
+    {
+      "start": 1346.62,
+      "end": 1348.92,
+      "text": "than something, not bigger than something."
+    },
+    {
+      "start": 1348.92,
+      "end": 1350.86,
+      "text": "So we need one more step."
+    },
+    {
+      "start": 1350.86,
+      "end": 1355.34,
+      "text": "And write this as one minus probability that Z is less"
+    },
+    {
+      "start": 1355.34,
+      "end": 1358.42,
+      "text": "than or equal to 2."
+    },
+    {
+      "start": 1358.42,
+      "end": 1362.66,
+      "text": "And this probability, now you can read off from the normal"
+    },
+    {
+      "start": 1362.66,
+      "end": 1366.46,
+      "text": "tables, and the normal tables will tell you that this"
+    },
+    {
+      "start": 1366.46,
+      "end": 1372.84,
+      "text": "probability is 0.9772."
+    },
+    {
+      "start": 1372.84,
+      "end": 1374.6,
+      "text": "And you do get an answer."
+    },
+    {
+      "start": 1374.6,
+      "end": 1376.4,
+      "text": "And the answer is 0.0457."
+    },
+    {
+      "start": 1376.4,
+      "end": 1377.24,
+      "text": "All right."
+    },
+    {
+      "start": 1377.24,
+      "end": 1377.48,
+      "text": "Thank you."
+    },
+    {
+      "start": 1377.48,
+      "end": 1377.68,
+      "text": "Bye."
+    },
+    {
+      "start": 1377.68,
+      "end": 1377.7,
+      "text": "Bye."
+    },
+    {
+      "start": 1377.7,
+      "end": 1377.76,
+      "text": "Bye."
+    },
+    {
+      "start": 1377.76,
+      "end": 1377.8,
+      "text": "Bye."
+    },
+    {
+      "start": 1377.8,
+      "end": 1377.88,
+      "text": "Bye."
+    },
+    {
+      "start": 1377.88,
+      "end": 1378.18,
+      "text": "Bye."
+    },
+    {
+      "start": 1378.18,
+      "end": 1378.2,
+      "text": "Bye."
+    },
+    {
+      "start": 1378.2,
+      "end": 1378.28,
+      "text": "Bye."
+    },
+    {
+      "start": 1378.28,
+      "end": 1378.38,
+      "text": "Bye."
+    },
+    {
+      "start": 1378.38,
+      "end": 1378.58,
+      "text": "Bye."
+    },
+    {
+      "start": 1378.58,
+      "end": 1378.72,
+      "text": "Bye."
+    },
+    {
+      "start": 1378.72,
+      "end": 1378.92,
+      "text": "Bye."
+    },
+    {
+      "start": 1378.92,
+      "end": 1385.21,
+      "text": "OK, so we tried 10,000."
+    },
+    {
+      "start": 1385.21,
+      "end": 1390.51,
+      "text": "And we find that our probability of error is 4.5%."
+    },
+    {
+      "start": 1390.51,
+      "end": 1395.71,
+      "text": "So we're doing better than the spec that we had."
+    },
+    {
+      "start": 1395.71,
+      "end": 1399.49,
+      "text": "So this tells us that maybe we have some leeway."
+    },
+    {
+      "start": 1399.49,
+      "end": 1404.15,
+      "text": "Maybe we can use a smaller sample size and still stay"
+    },
+    {
+      "start": 1404.15,
+      "end": 1406.03,
+      "text": "without our specs."
+    },
+    {
+      "start": 1406.03,
+      "end": 1409.83,
+      "text": "Let's try to find how much we can push the envelope, how"
+    },
+    {
+      "start": 1409.83,
+      "end": 1414.97,
+      "text": "much smaller can we take m."
+    },
+    {
+      "start": 1414.97,
+      "end": 1417.87,
+      "text": "To answer that question, we need to do this kind of"
+    },
+    {
+      "start": 1417.87,
+      "end": 1420.81,
+      "text": "calculation, essentially going backwards."
+    },
+    {
+      "start": 1420.81,
+      "end": 1426.45,
+      "text": "We're going to fix this number to be 0.05 and work backwards"
+    },
+    {
+      "start": 1426.45,
+      "end": 1430.75,
+      "text": "here to find, did I do a mistake here?"
+    },
+    {
+      "start": 1430.75,
+      "end": 1431.79,
+      "text": "10,000."
+    },
+    {
+      "start": 1431.79,
+      "end": 1437.49,
+      "text": "So I'm missing a 0 here."
+    },
+    {
+      "start": 1437.49,
+      "end": 1447.91,
+      "text": "But I'm taking the square root, so it's 100."
+    },
+    {
+      "start": 1447.91,
+      "end": 1451.03,
+      "text": "Where did the 0.02 come in from?"
+    },
+    {
+      "start": 1451.03,
+      "end": 1452.01,
+      "text": "Ah, from here."
+    },
+    {
+      "start": 1452.01,
+      "end": 1456.26,
+      "text": "OK, all right."
+    },
+    {
+      "start": 1456.26,
+      "end": 1459.34,
+      "text": "0.02 times 100, that gives us 2."
+    },
+    {
+      "start": 1459.34,
+      "end": 1463.18,
+      "text": "OK, all right, very good."
+    },
+    {
+      "start": 1463.18,
+      "end": 1467.56,
+      "text": "OK, so we'll have to do this calculation now backwards."
+    },
+    {
+      "start": 1467.56,
+      "end": 1473.48,
+      "text": "Figure out if this is 0.05, what kind of number we're"
+    },
+    {
+      "start": 1473.48,
+      "end": 1477.84,
+      "text": "going to need here and then here."
+    },
+    {
+      "start": 1477.84,
+      "end": 1479.4,
+      "text": "And then here."
+    },
+    {
+      "start": 1479.4,
+      "end": 1483.28,
+      "text": "And from this, we will be able to tell what value of n do we"
+    },
+    {
+      "start": 1483.28,
+      "end": 1485.18,
+      "text": "need."
+    },
+    {
+      "start": 1485.18,
+      "end": 1493.64,
+      "text": "OK, so we want to find n such that the probability that z is"
+    },
+    {
+      "start": 1493.64,
+      "end": 1504.85,
+      "text": "bigger than 0.02 square root n is 0.05."
+    },
+    {
+      "start": 1504.85,
+      "end": 1509.27,
+      "text": "OK, so z is a standard normal random variable."
+    },
+    {
+      "start": 1509.27,
+      "end": 1513.71,
+      "text": "And we want the probability that we are."
+    },
+    {
+      "start": 1514.01,
+      "end": 1519.07,
+      "text": "So let's say that just outside this range, we want the"
+    },
+    {
+      "start": 1519.07,
+      "end": 1524.92,
+      "text": "probability of those two tails together."
+    },
+    {
+      "start": 1524.92,
+      "end": 1526.88,
+      "text": "Those two tails together should have"
+    },
+    {
+      "start": 1526.88,
+      "end": 1529.98,
+      "text": "probability of 0.05."
+    },
+    {
+      "start": 1529.98,
+      "end": 1533.28,
+      "text": "This means that this tail, by itself, should have"
+    },
+    {
+      "start": 1533.28,
+      "end": 1536.86,
+      "text": "probability 0.025."
+    },
+    {
+      "start": 1536.86,
+      "end": 1545.92,
+      "text": "And this means that this probability should be 0.975."
+    },
+    {
+      "start": 1545.92,
+      "end": 1546.5,
+      "text": "Now."
+    },
+    {
+      "start": 1546.5,
+      "end": 1547.26,
+      "text": "If this probability."
+    },
+    {
+      "start": 1547.26,
+      "end": 1547.54,
+      "text": "If this probability."
+    },
+    {
+      "start": 1547.54,
+      "end": 1547.8,
+      "text": "If this probability."
+    },
+    {
+      "start": 1547.8,
+      "end": 1547.84,
+      "text": "If this probability."
+    },
+    {
+      "start": 1547.84,
+      "end": 1554.98,
+      "text": "is to be 0.975, what should that number be?"
+    },
+    {
+      "start": 1554.98,
+      "end": 1559.98,
+      "text": "You go to the normal tables, and you find which is the"
+    },
+    {
+      "start": 1559.98,
+      "end": 1563.32,
+      "text": "entry that corresponds to that number."
+    },
+    {
+      "start": 1563.32,
+      "end": 1567.04,
+      "text": "I actually brought a normal table with me."
+    },
+    {
+      "start": 1567.04,
+      "end": 1575.42,
+      "text": "And 0.975 is down here, and it tells you that the number that"
+    },
+    {
+      "start": 1575.42,
+      "end": 1579.82,
+      "text": "corresponds to it is 1.96."
+    },
+    {
+      "start": 1579.82,
+      "end": 1584.9,
+      "text": "So this tells us that this number"
+    },
+    {
+      "start": 1584.9,
+      "end": 1591.78,
+      "text": "should be equal to 1.96."
+    },
+    {
+      "start": 1591.78,
+      "end": 1597.1,
+      "text": "And now, from here, you do the calculations, and you find"
+    },
+    {
+      "start": 1597.1,
+      "end": 1607.56,
+      "text": "that n is 9604."
+    },
+    {
+      "start": 1607.56,
+      "end": 1610.62,
+      "text": "So with a sample of 10,000, we got probability of"
+    },
+    {
+      "start": 1610.62,
+      "end": 1613.16,
+      "text": "error of 4.5%."
+    },
+    {
+      "start": 1613.16,
+      "end": 1617.86,
+      "text": "With a slightly smaller sample size of 9,600, we can get the"
+    },
+    {
+      "start": 1617.86,
+      "end": 1621.84,
+      "text": "probability of a mistake to be 0.05, which"
+    },
+    {
+      "start": 1621.84,
+      "end": 1624.02,
+      "text": "was exactly our spec."
+    },
+    {
+      "start": 1624.02,
+      "end": 1627.44,
+      "text": "So these are essentially the two ways that you're going to"
+    },
+    {
+      "start": 1627.44,
+      "end": 1629.82,
+      "text": "be using the central limit theorem."
+    },
+    {
+      "start": 1629.82,
+      "end": 1633.56,
+      "text": "Either you're given n, and you try to calculate probabilities,"
+    },
+    {
+      "start": 1633.56,
+      "end": 1635.58,
+      "text": "or you're given the probabilities, and you want to"
+    },
+    {
+      "start": 1635.58,
+      "end": 1640.56,
+      "text": "work backwards to find n itself."
+    },
+    {
+      "start": 1640.56,
+      "end": 1642.0,
+      "text": "So in this example, we're going to use the"
+    },
+    {
+      "start": 1642.0,
+      "end": 1647.98,
+      "text": "random variable M. The random variable that we dealt with was,"
+    },
+    {
+      "start": 1647.98,
+      "end": 1651.06,
+      "text": "of course, a binomial random variable."
+    },
+    {
+      "start": 1651.06,
+      "end": 1660.9,
+      "text": "The Xi's were Bernoulli, so the sum of the Xi's was binomial."
+    },
+    {
+      "start": 1660.9,
+      "end": 1664.06,
+      "text": "So the central limit theorem certainly applies to the"
+    },
+    {
+      "start": 1664.06,
+      "end": 1665.9,
+      "text": "binomial distribution."
+    },
+    {
+      "start": 1665.9,
+      "end": 1669.44,
+      "text": "To be more precise, of course, it applies to the standardized"
+    },
+    {
+      "start": 1669.44,
+      "end": 1671.58,
+      "text": "version of the binomial random variable."
+    },
+    {
+      "start": 1672.0,
+      "end": 1675.04,
+      "text": "So here's what we did, essentially,"
+    },
+    {
+      "start": 1675.04,
+      "end": 1677.3,
+      "text": "in the previous example."
+    },
+    {
+      "start": 1677.3,
+      "end": 1680.8,
+      "text": "We fixed the number P, which is the probability of success in"
+    },
+    {
+      "start": 1680.8,
+      "end": 1682.08,
+      "text": "our experiments."
+    },
+    {
+      "start": 1682.08,
+      "end": 1686.54,
+      "text": "P corresponds to F in the previous example."
+    },
+    {
+      "start": 1686.54,
+      "end": 1690.04,
+      "text": "Let every Xi be a Bernoulli random variable."
+    },
+    {
+      "start": 1690.04,
+      "end": 1693.38,
+      "text": "And our standing assumption is that these random variables"
+    },
+    {
+      "start": 1693.38,
+      "end": 1697.54,
+      "text": "are independent."
+    },
+    {
+      "start": 1697.54,
+      "end": 1700.74,
+      "text": "When we add them, we get a random variable that has a"
+    },
+    {
+      "start": 1700.74,
+      "end": 1702.02,
+      "text": "binomial distribution."
+    },
+    {
+      "start": 1702.02,
+      "end": 1703.94,
+      "text": "We know the mean and the variance of the"
+    },
+    {
+      "start": 1703.94,
+      "end": 1705.02,
+      "text": "binomial."
+    },
+    {
+      "start": 1705.02,
+      "end": 1709.14,
+      "text": "So we take Sn, we subtract the mean, which is this, divide by"
+    },
+    {
+      "start": 1709.14,
+      "end": 1710.46,
+      "text": "the standard deviation."
+    },
+    {
+      "start": 1710.46,
+      "end": 1712.8,
+      "text": "The central limit theorem tells us that the cumulative"
+    },
+    {
+      "start": 1712.8,
+      "end": 1716.12,
+      "text": "distribution function of this random variable is a standard"
+    },
+    {
+      "start": 1716.12,
+      "end": 1719.88,
+      "text": "normal random variable in the limit."
+    },
+    {
+      "start": 1719.88,
+      "end": 1723.72,
+      "text": "So let's do one more example of a calculation."
+    },
+    {
+      "start": 1723.72,
+      "end": 1729.26,
+      "text": "Let's take n to be, let's choose some specific numbers"
+    },
+    {
+      "start": 1729.26,
+      "end": 1732.97,
+      "text": "to work with."
+    },
+    {
+      "start": 1732.97,
+      "end": 1736.05,
+      "text": "So in this example, we find that the number P is a"
+    },
+    {
+      "start": 1736.09,
+      "end": 1738.85,
+      "text": "binomial, and the first thing to do is to find the expected"
+    },
+    {
+      "start": 1738.85,
+      "end": 1744.21,
+      "text": "value of Sn, which is n times P. It's 18."
+    },
+    {
+      "start": 1744.21,
+      "end": 1747.99,
+      "text": "Then we need to write down the standard deviation."
+    },
+    {
+      "start": 1752.43,
+      "end": 1756.49,
+      "text": "The variance of Sn is the sum of the variances."
+    },
+    {
+      "start": 1756.49,
+      "end": 1764.33,
+      "text": "It's np 1 minus P. And in this particular example, P times 1"
+    },
+    {
+      "start": 1764.33,
+      "end": 1765.87,
+      "text": "minus P is 1 fourth."
+    },
+    {
+      "start": 1765.87,
+      "end": 1768.75,
+      "text": "n is 36, so this is 9."
+    },
+    {
+      "start": 1768.75,
+      "end": 1773.49,
+      "text": "That tells us that the standard deviation of Sn is"
+    },
+    {
+      "start": 1773.49,
+      "end": 1775.31,
+      "text": "equal to 3."
+    },
+    {
+      "start": 1775.31,
+      "end": 1779.35,
+      "text": "Therefore, the random, so what we're going to do is to take"
+    },
+    {
+      "start": 1779.35,
+      "end": 1785.07,
+      "text": "the event of interest, which is Sn less than 21, and rewrite"
+    },
+    {
+      "start": 1785.07,
+      "end": 1788.81,
+      "text": "it in a way that involves the standardized random variable."
+    },
+    {
+      "start": 1788.81,
+      "end": 1791.69,
+      "text": "So to do that, we need to subtract the mean."
+    },
+    {
+      "start": 1791.69,
+      "end": 1795.85,
+      "text": "So we write this as Sn minus 3 should be less than or"
+    },
+    {
+      "start": 1795.85,
+      "end": 1798.43,
+      "text": "equal to 21 minus 3."
+    },
+    {
+      "start": 1798.43,
+      "end": 1800.33,
+      "text": "This is the same event."
+    },
+    {
+      "start": 1800.33,
+      "end": 1803.95,
+      "text": "And then divide by the standard deviation, which is 3."
+    },
+    {
+      "start": 1803.95,
+      "end": 1806.41,
+      "text": "And we end up with this."
+    },
+    {
+      "start": 1806.41,
+      "end": 1817.28,
+      "text": "So the event of interest should subtract 18, which is"
+    },
+    {
+      "start": 1817.28,
+      "end": 1826.62,
+      "text": "going to give me a much nicer number out here, which is 1."
+    },
+    {
+      "start": 1826.62,
+      "end": 1832.0,
+      "text": "So the event of interest that Sn is less than 21 is the same"
+    },
+    {
+      "start": 1832.0,
+      "end": 1834.08,
+      "text": "as the event that Sn is less than 21."
+    },
+    {
+      "start": 1834.08,
+      "end": 1839.96,
+      "text": "So this is a standard normal random variable, is less than"
+    },
+    {
+      "start": 1839.96,
+      "end": 1841.58,
+      "text": "or equal to 1."
+    },
+    {
+      "start": 1841.58,
+      "end": 1844.64,
+      "text": "And once more, you can look this up at the normal tables."
+    },
+    {
+      "start": 1844.64,
+      "end": 1850.66,
+      "text": "And you find that the answer that you get is 0.43."
+    },
+    {
+      "start": 1850.66,
+      "end": 1853.38,
+      "text": "Now it's interesting to compare this answer that we"
+    },
+    {
+      "start": 1853.38,
+      "end": 1857.22,
+      "text": "got through the central limit theorem with the exact answer."
+    },
+    {
+      "start": 1857.22,
+      "end": 1861.82,
+      "text": "The exact answer involves the exact binomial distribution."
+    },
+    {
+      "start": 1861.82,
+      "end": 1864.06,
+      "text": "What we have here is the"
+    },
+    {
+      "start": 1864.08,
+      "end": 1870.98,
+      "text": "binomial probability that Sn is equal to k."
+    },
+    {
+      "start": 1870.98,
+      "end": 1875.24,
+      "text": "Sn being equal to k is given by this formula."
+    },
+    {
+      "start": 1875.24,
+      "end": 1882.5,
+      "text": "And we add over all values for k going from 0 up to 21."
+    },
+    {
+      "start": 1882.5,
+      "end": 1887.9,
+      "text": "We write a two-line code to calculate the sum."
+    },
+    {
+      "start": 1887.9,
+      "end": 1892.54,
+      "text": "And we get the exact answer, which is 0.8785."
+    },
+    {
+      "start": 1892.54,
+      "end": 1893.98,
+      "text": "So there's pretty good"
+    },
+    {
+      "start": 1893.98,
+      "end": 1898.6,
+      "text": "agreement between the two, although you wouldn't call that"
+    },
+    {
+      "start": 1898.6,
+      "end": 1905.02,
+      "text": "necessarily excellent agreement."
+    },
+    {
+      "start": 1905.02,
+      "end": 1911.59,
+      "text": "Can we do a little better than that?"
+    },
+    {
+      "start": 1911.59,
+      "end": 1913.77,
+      "text": "OK."
+    },
+    {
+      "start": 1913.77,
+      "end": 1916.51,
+      "text": "It turns out that we can."
+    },
+    {
+      "start": 1916.51,
+      "end": 1922.31,
+      "text": "And here's the idea."
+    },
+    {
+      "start": 1922.31,
+      "end": 1927.77,
+      "text": "So our random variable Sn has a mean of 18."
+    },
+    {
+      "start": 1927.77,
+      "end": 1929.53,
+      "text": "It has a binomial distribution."
+    },
+    {
+      "start": 1929.53,
+      "end": 1931.57,
+      "text": "It's described by a PMF."
+    },
+    {
+      "start": 1931.57,
+      "end": 1936.63,
+      "text": "That has a shape roughly like this, and which keeps going on."
+    },
+    {
+      "start": 1936.63,
+      "end": 1940.97,
+      "text": "Using the central limit theorem is basically"
+    },
+    {
+      "start": 1940.97,
+      "end": 1947.57,
+      "text": "pretending that Sn is normal with the right mean and"
+    },
+    {
+      "start": 1947.57,
+      "end": 1948.67,
+      "text": "variance."
+    },
+    {
+      "start": 1948.67,
+      "end": 1955.19,
+      "text": "So pretending that Zn has zero mean unit variance, we"
+    },
+    {
+      "start": 1955.19,
+      "end": 1958.95,
+      "text": "approximate it with Z that has zero mean unit variance."
+    },
+    {
+      "start": 1958.95,
+      "end": 1962.83,
+      "text": "If you were to pretend that Sn is normal, you would approximate"
+    },
+    {
+      "start": 1962.83,
+      "end": 1962.87,
+      "text": "it with Zn."
+    },
+    {
+      "start": 1962.87,
+      "end": 1962.93,
+      "text": "And you would get the answer that Sn is normal."
+    },
+    {
+      "start": 1962.93,
+      "end": 1965.77,
+      "text": "So we have a normal that has the correct mean and correct"
+    },
+    {
+      "start": 1965.77,
+      "end": 1966.29,
+      "text": "variance."
+    },
+    {
+      "start": 1966.29,
+      "end": 1969.39,
+      "text": "So it would still be centered at 18."
+    },
+    {
+      "start": 1969.39,
+      "end": 1973.79,
+      "text": "And it would have the same variance as the binomial PMF."
+    },
+    {
+      "start": 1973.79,
+      "end": 1977.31,
+      "text": "So using the central limit theorem essentially means that"
+    },
+    {
+      "start": 1977.31,
+      "end": 1980.41,
+      "text": "we keep the mean and the variance what they are, but we"
+    },
+    {
+      "start": 1980.41,
+      "end": 1983.93,
+      "text": "pretend that our distribution is normal."
+    },
+    {
+      "start": 1983.93,
+      "end": 1986.77,
+      "text": "We want to calculate the probability that Sn is less"
+    },
+    {
+      "start": 1986.77,
+      "end": 1989.55,
+      "text": "than or equal to 21."
+    },
+    {
+      "start": 1989.55,
+      "end": 1992.85,
+      "text": "I pretend that my random variable is normal."
+    },
+    {
+      "start": 1992.85,
+      "end": 1995.83,
+      "text": "So I draw a line here."
+    },
+    {
+      "start": 1995.83,
+      "end": 2001.99,
+      "text": "And I calculate the area under the normal curve going up to 21."
+    },
+    {
+      "start": 2001.99,
+      "end": 2006.24,
+      "text": "That's essentially what we did."
+    },
+    {
+      "start": 2006.24,
+      "end": 2009.68,
+      "text": "Now a smart person comes around and says Sn is a"
+    },
+    {
+      "start": 2009.68,
+      "end": 2011.36,
+      "text": "discrete random variable."
+    },
+    {
+      "start": 2011.36,
+      "end": 2014.74,
+      "text": "So the event that Sn is less than or equal to 21 is the"
+    },
+    {
+      "start": 2014.74,
+      "end": 2018.5,
+      "text": "same as Sn being strictly less than 22, because nothing in"
+    },
+    {
+      "start": 2018.5,
+      "end": 2021.24,
+      "text": "between can happen."
+    },
+    {
+      "start": 2021.24,
+      "end": 2023.7,
+      "text": "So I'm going to use the central limit theorem"
+    },
+    {
+      "start": 2023.7,
+      "end": 2024.0,
+      "text": "approximation."
+    },
+    {
+      "start": 2024.0,
+      "end": 2028.96,
+      "text": "By pretending again that Sn is normal and finding the"
+    },
+    {
+      "start": 2028.96,
+      "end": 2032.8,
+      "text": "probability of this event while pretending that Sn is"
+    },
+    {
+      "start": 2032.8,
+      "end": 2033.72,
+      "text": "normal."
+    },
+    {
+      "start": 2033.72,
+      "end": 2037.88,
+      "text": "So what this person would do would be to draw a line here"
+    },
+    {
+      "start": 2037.88,
+      "end": 2043.12,
+      "text": "at 22 and calculate the area under the normal curve all the"
+    },
+    {
+      "start": 2043.12,
+      "end": 2045.48,
+      "text": "way to 22."
+    },
+    {
+      "start": 2045.48,
+      "end": 2046.76,
+      "text": "Who is right?"
+    },
+    {
+      "start": 2046.76,
+      "end": 2048.88,
+      "text": "Which one is better?"
+    },
+    {
+      "start": 2048.88,
+      "end": 2052.16,
+      "text": "Well, neither."
+    },
+    {
+      "start": 2052.16,
+      "end": 2053.56,
+      "text": "But we can do better than 22."
+    },
+    {
+      "start": 2053.56,
+      "end": 2054.0,
+      "text": "OK."
+    },
+    {
+      "start": 2054.0,
+      "end": 2057.96,
+      "text": "We can do better than both if we sort of split the difference."
+    },
+    {
+      "start": 2057.96,
+      "end": 2061.94,
+      "text": "So another way of writing the same event for Sn is to write"
+    },
+    {
+      "start": 2061.94,
+      "end": 2065.94,
+      "text": "it as Sn being less than 21.5."
+    },
+    {
+      "start": 2065.94,
+      "end": 2069.58,
+      "text": "In terms of the discrete random variable Sn, all three"
+    },
+    {
+      "start": 2069.58,
+      "end": 2072.24,
+      "text": "of these are exactly the same event."
+    },
+    {
+      "start": 2072.24,
+      "end": 2075.1,
+      "text": "But when you do the continuous approximation, they give you"
+    },
+    {
+      "start": 2075.1,
+      "end": 2076.24,
+      "text": "different probabilities."
+    },
+    {
+      "start": 2076.24,
+      "end": 2079.76,
+      "text": "It's a matter of whether you integrate the area under the"
+    },
+    {
+      "start": 2079.76,
+      "end": 2083.96,
+      "text": "normal curve up to here, up to the midway point, or up to"
+    },
+    {
+      "start": 2083.96,
+      "end": 2086.14,
+      "text": "22."
+    },
+    {
+      "start": 2086.14,
+      "end": 2090.66,
+      "text": "It turns out that integrating up to the midpoint is what"
+    },
+    {
+      "start": 2090.66,
+      "end": 2094.46,
+      "text": "gives us the better numerical results."
+    },
+    {
+      "start": 2094.46,
+      "end": 2099.54,
+      "text": "So we take here 21.5, and we integrate the area under the"
+    },
+    {
+      "start": 2099.54,
+      "end": 2101.3,
+      "text": "normal curve up to here."
+    },
+    {
+      "start": 2114.08,
+      "end": 2118.5,
+      "text": "So let's do this calculation and see what we get."
+    },
+    {
+      "start": 2118.5,
+      "end": 2121.32,
+      "text": "What would we change here?"
+    },
+    {
+      "start": 2121.32,
+      "end": 2127.74,
+      "text": "Instead of 21, we now write 21.5."
+    },
+    {
+      "start": 2127.74,
+      "end": 2132.82,
+      "text": "This 18 becomes, no, that 18 stays what it is."
+    },
+    {
+      "start": 2132.82,
+      "end": 2136.88,
+      "text": "But this 21 becomes 21.5."
+    },
+    {
+      "start": 2136.88,
+      "end": 2144.8,
+      "text": "And so this 1 becomes 1 plus 0.5 by 3."
+    },
+    {
+      "start": 2144.8,
+      "end": 2148.2,
+      "text": "This is 117."
+    },
+    {
+      "start": 2148.2,
+      "end": 2151.98,
+      "text": "So we now look up at the normal tables and ask for the"
+    },
+    {
+      "start": 2151.98,
+      "end": 2152.7,
+      "text": "probability."
+    },
+    {
+      "start": 2152.7,
+      "end": 2159.96,
+      "text": "That Z is less than 1.17."
+    },
+    {
+      "start": 2159.96,
+      "end": 2166.04,
+      "text": "So this here gets approximated by the probability that the"
+    },
+    {
+      "start": 2166.04,
+      "end": 2169.2,
+      "text": "standard normal is less than 1.17."
+    },
+    {
+      "start": 2169.2,
+      "end": 2175.9,
+      "text": "And the normal tables will tell us that this is 0.879."
+    },
+    {
+      "start": 2175.9,
+      "end": 2183.52,
+      "text": "Going back to the previous slide, what we got this time"
+    },
+    {
+      "start": 2183.52,
+      "end": 2184.6,
+      "text": "with this improvement."
+    },
+    {
+      "start": 2184.6,
+      "end": 2190.32,
+      "text": "The approximate is 0.879."
+    },
+    {
+      "start": 2190.32,
+      "end": 2193.98,
+      "text": "This is a really good approximation of"
+    },
+    {
+      "start": 2193.98,
+      "end": 2195.74,
+      "text": "the correct number."
+    },
+    {
+      "start": 2195.74,
+      "end": 2199.16,
+      "text": "This is what we got using the 21."
+    },
+    {
+      "start": 2199.16,
+      "end": 2202.36,
+      "text": "This is what we get using the 21.5."
+    },
+    {
+      "start": 2202.36,
+      "end": 2206.32,
+      "text": "And it's an approximation that's sort of right on, a"
+    },
+    {
+      "start": 2206.32,
+      "end": 2208.36,
+      "text": "very good one."
+    },
+    {
+      "start": 2208.36,
+      "end": 2213.94,
+      "text": "The moral from this numerical example is that doing this 1.5"
+    },
+    {
+      "start": 2214.6,
+      "end": 2226.03,
+      "text": "correction actually does give us better approximations."
+    },
+    {
+      "start": 2226.03,
+      "end": 2231.99,
+      "text": "In fact, we can use this 1.5 idea to even calculate"
+    },
+    {
+      "start": 2231.99,
+      "end": 2234.29,
+      "text": "individual probabilities."
+    },
+    {
+      "start": 2234.29,
+      "end": 2237.11,
+      "text": "So suppose you want to approximate the probability"
+    },
+    {
+      "start": 2237.11,
+      "end": 2240.97,
+      "text": "that Sn equal to 19."
+    },
+    {
+      "start": 2240.97,
+      "end": 2245.57,
+      "text": "If you were to pretend that Sn is normal and calculate this"
+    },
+    {
+      "start": 2245.57,
+      "end": 2248.11,
+      "text": "probability, the probability that the normal"
+    },
+    {
+      "start": 2248.11,
+      "end": 2251.65,
+      "text": "random variable is equal to 19 is 0."
+    },
+    {
+      "start": 2251.65,
+      "end": 2254.11,
+      "text": "So you don't get an interesting answer."
+    },
+    {
+      "start": 2254.11,
+      "end": 2257.57,
+      "text": "You get a more interesting answer by writing this event,"
+    },
+    {
+      "start": 2257.57,
+      "end": 2262.03,
+      "text": "19, as being the same as the event of falling between 18.5"
+    },
+    {
+      "start": 2262.03,
+      "end": 2266.85,
+      "text": "and 19.5, and using the normal approximation to calculate this"
+    },
+    {
+      "start": 2266.85,
+      "end": 2268.19,
+      "text": "probability."
+    },
+    {
+      "start": 2268.19,
+      "end": 2271.87,
+      "text": "In terms of our previous picture, this corresponds to"
+    },
+    {
+      "start": 2271.87,
+      "end": 2279.43,
+      "text": "the following."
+    },
+    {
+      "start": 2279.43,
+      "end": 2283.87,
+      "text": "We are interested in the probability that Sn equal to"
+    },
+    {
+      "start": 2283.87,
+      "end": 2291.25,
+      "text": "19, so we're interested in the height of this bar."
+    },
+    {
+      "start": 2291.25,
+      "end": 2295.69,
+      "text": "We're going to consider the area under the normal curve"
+    },
+    {
+      "start": 2295.69,
+      "end": 2301.47,
+      "text": "going from here to here, and use this area as an"
+    },
+    {
+      "start": 2301.47,
+      "end": 2305.09,
+      "text": "approximation for the height of that particular bar."
+    },
+    {
+      "start": 2305.09,
+      "end": 2310.67,
+      "text": "So what we're basically doing is we take the probability"
+    },
+    {
+      "start": 2310.67,
+      "end": 2313.87,
+      "text": "under the normal curve that's assigned over a continuum of"
+    },
+    {
+      "start": 2313.87,
+      "end": 2318.17,
+      "text": "values and attribute it to different discrete values."
+    },
+    {
+      "start": 2318.17,
+      "end": 2323.41,
+      "text": "Whatever is above the midpoint gets attributed to 19."
+    },
+    {
+      "start": 2323.41,
+      "end": 2327.21,
+      "text": "Whatever is below that midpoint gets attributed to 18."
+    },
+    {
+      "start": 2327.21,
+      "end": 2333.65,
+      "text": "So this green area is our approximation of the height of"
+    },
+    {
+      "start": 2333.65,
+      "end": 2336.45,
+      "text": "the value of the PMF at 19."
+    },
+    {
+      "start": 2336.45,
+      "end": 2340.71,
+      "text": "So similarly, if you wanted to approximate the value of the"
+    },
+    {
+      "start": 2340.71,
+      "end": 2343.79,
+      "text": "PMF at this point, you would take this interval."
+    },
+    {
+      "start": 2343.79,
+      "end": 2347.97,
+      "text": "And integrate the area under the normal curve over that"
+    },
+    {
+      "start": 2347.97,
+      "end": 2349.37,
+      "text": "interval."
+    },
+    {
+      "start": 2349.37,
+      "end": 2353.41,
+      "text": "It turns out that this gives a very good approximation of the"
+    },
+    {
+      "start": 2353.41,
+      "end": 2355.67,
+      "text": "PMF of the binomial."
+    },
+    {
+      "start": 2355.67,
+      "end": 2360.23,
+      "text": "And actually, this is how the central limit theorem was."
+    },
+    {
+      "start": 2360.23,
+      "end": 2363.69,
+      "text": "This was the context in which the central limit theorem was"
+    },
+    {
+      "start": 2363.69,
+      "end": 2367.97,
+      "text": "proved in the first place, when this business started."
+    },
+    {
+      "start": 2367.97,
+      "end": 2373.07,
+      "text": "So this business goes back a few hundred years."
+    },
+    {
+      "start": 2373.07,
+      "end": 2376.49,
+      "text": "And the central limit theorem was first proved by considering"
+    },
+    {
+      "start": 2376.49,
+      "end": 2379.33,
+      "text": "the PMF of a binomial random variable when"
+    },
+    {
+      "start": 2379.33,
+      "end": 2381.91,
+      "text": "P is equal to 1 half."
+    },
+    {
+      "start": 2381.91,
+      "end": 2383.43,
+      "text": "People did the algebra."
+    },
+    {
+      "start": 2383.43,
+      "end": 2387.39,
+      "text": "And they found out that the exact expression for the PMF"
+    },
+    {
+      "start": 2387.39,
+      "end": 2391.07,
+      "text": "is quite well approximated by that expression that you would"
+    },
+    {
+      "start": 2391.07,
+      "end": 2393.39,
+      "text": "get from a normal distribution."
+    },
+    {
+      "start": 2393.39,
+      "end": 2397.49,
+      "text": "Then the proof was extended to binomials for more general"
+    },
+    {
+      "start": 2397.49,
+      "end": 2403.05,
+      "text": "values of P. So here we talk about this as a refined,"
+    },
+    {
+      "start": 2403.07,
+      "end": 2405.59,
+      "text": "refinement of the general central limit theorem."
+    },
+    {
+      "start": 2405.59,
+      "end": 2408.75,
+      "text": "But historically, that refinement was where the whole"
+    },
+    {
+      "start": 2408.75,
+      "end": 2411.83,
+      "text": "business got started in the first place."
+    },
+    {
+      "start": 2411.83,
+      "end": 2418.7,
+      "text": "All right, so let's go through the mechanics of approximating"
+    },
+    {
+      "start": 2418.7,
+      "end": 2423.8,
+      "text": "the probability that Sn is equal to 19, exactly 19."
+    },
+    {
+      "start": 2423.8,
+      "end": 2427.32,
+      "text": "As we said, we're going to write this event as an event"
+    },
+    {
+      "start": 2427.32,
+      "end": 2430.46,
+      "text": "that covers an interval of unit length from 18 and a half"
+    },
+    {
+      "start": 2430.46,
+      "end": 2431.98,
+      "text": "to 19 and a half."
+    },
+    {
+      "start": 2431.98,
+      "end": 2433.72,
+      "text": "This is the event of interest."
+    },
+    {
+      "start": 2433.72,
+      "end": 2435.98,
+      "text": "First step is to massage the event of"
+    },
+    {
+      "start": 2435.98,
+      "end": 2439.98,
+      "text": "interest so that it involves our Zn random variable."
+    },
+    {
+      "start": 2439.98,
+      "end": 2443.22,
+      "text": "So subtract 18 from all sides."
+    },
+    {
+      "start": 2443.22,
+      "end": 2446.82,
+      "text": "Divide by the standard deviation of 3 from all sides."
+    },
+    {
+      "start": 2446.82,
+      "end": 2450.8,
+      "text": "That's an equivalent representation of the event."
+    },
+    {
+      "start": 2450.8,
+      "end": 2453.98,
+      "text": "This is our standardized random variable Zn."
+    },
+    {
+      "start": 2453.98,
+      "end": 2456.92,
+      "text": "These are just these numbers."
+    },
+    {
+      "start": 2456.92,
+      "end": 2460.5,
+      "text": "And to do an approximation, we want to find the probability"
+    },
+    {
+      "start": 2460.5,
+      "end": 2461.48,
+      "text": "of this event."
+    },
+    {
+      "start": 2461.48,
+      "end": 2463.92,
+      "text": "But Zn is approximately normal."
+    },
+    {
+      "start": 2463.92,
+      "end": 2465.66,
+      "text": "So we plug in here the Zn."
+    },
+    {
+      "start": 2465.98,
+      "end": 2468.0,
+      "text": "Which is the standard normal."
+    },
+    {
+      "start": 2468.0,
+      "end": 2470.08,
+      "text": "So we want to find the probability that the standard"
+    },
+    {
+      "start": 2470.08,
+      "end": 2472.84,
+      "text": "normal falls inside this interval."
+    },
+    {
+      "start": 2472.84,
+      "end": 2475.58,
+      "text": "You find this using CDFs, because this is the"
+    },
+    {
+      "start": 2475.58,
+      "end": 2480.94,
+      "text": "probability that you're less than this, but not less than"
+    },
+    {
+      "start": 2480.94,
+      "end": 2482.34,
+      "text": "that."
+    },
+    {
+      "start": 2482.34,
+      "end": 2485.34,
+      "text": "So it's a difference between two cumulative probabilities."
+    },
+    {
+      "start": 2485.34,
+      "end": 2487.38,
+      "text": "Then you look up your normal tables."
+    },
+    {
+      "start": 2487.38,
+      "end": 2489.76,
+      "text": "You find numbers for these quantities."
+    },
+    {
+      "start": 2489.76,
+      "end": 2492.64,
+      "text": "And finally, you get a numerical answer for an"
+    },
+    {
+      "start": 2492.64,
+      "end": 2495.46,
+      "text": "individual entry of the PMF of the binomial."
+    },
+    {
+      "start": 2495.98,
+      "end": 2499.36,
+      "text": "This is a pretty good approximation, it turns out."
+    },
+    {
+      "start": 2499.36,
+      "end": 2502.9,
+      "text": "If you were to do the calculations using the exact"
+    },
+    {
+      "start": 2502.9,
+      "end": 2508.1,
+      "text": "formula, you would get something which is pretty"
+    },
+    {
+      "start": 2508.1,
+      "end": 2513.74,
+      "text": "close, meaning an error in the third digit."
+    },
+    {
+      "start": 2513.74,
+      "end": 2516.98,
+      "text": "This is pretty good."
+    },
+    {
+      "start": 2516.98,
+      "end": 2519.64,
+      "text": "So I guess what we did here with our discussion of the"
+    },
+    {
+      "start": 2519.64,
+      "end": 2524.88,
+      "text": "binomial slightly contradicts what I said before."
+    },
+    {
+      "start": 2524.88,
+      "end": 2527.42,
+      "text": "That the central limit theorem is a statement about Q, and the"
+    },
+    {
+      "start": 2527.42,
+      "end": 2529.28,
+      "text": "cumulative distribution functions."
+    },
+    {
+      "start": 2529.28,
+      "end": 2533.2,
+      "text": "In general, it doesn't tell you what to do to approximate"
+    },
+    {
+      "start": 2533.2,
+      "end": 2535.24,
+      "text": "PMFs themselves."
+    },
+    {
+      "start": 2535.24,
+      "end": 2537.38,
+      "text": "And that's indeed the case in general."
+    },
+    {
+      "start": 2537.38,
+      "end": 2540.18,
+      "text": "On the other hand, for the special case of a binomial"
+    },
+    {
+      "start": 2540.18,
+      "end": 2543.62,
+      "text": "distribution, the central limit theorem approximation"
+    },
+    {
+      "start": 2543.62,
+      "end": 2547.82,
+      "text": "with this 1 half correction is a very good approximation,"
+    },
+    {
+      "start": 2547.82,
+      "end": 2553.22,
+      "text": "even for the individual PMF."
+    },
+    {
+      "start": 2553.22,
+      "end": 2560.19,
+      "text": "All right, so we spent quite a bit of time on mechanics."
+    },
+    {
+      "start": 2560.19,
+      "end": 2561.71,
+      "text": "So let's spend the last few minutes."
+    },
+    {
+      "start": 2561.71,
+      "end": 2571.42,
+      "text": "A few minutes today thinking a bit, and look at a small puzzle."
+    },
+    {
+      "start": 2571.42,
+      "end": 2574.22,
+      "text": "So the puzzle is the following."
+    },
+    {
+      "start": 2574.22,
+      "end": 2580.8,
+      "text": "Consider a Poisson process that runs over a unit"
+    },
+    {
+      "start": 2580.8,
+      "end": 2587.76,
+      "text": "interval, and where the arrival rate is equal to 1."
+    },
+    {
+      "start": 2587.76,
+      "end": 2589.8,
+      "text": "So this is the unit interval."
+    },
+    {
+      "start": 2589.8,
+      "end": 2595.43,
+      "text": "And let X be the number of arrivals."
+    },
+    {
+      "start": 2595.43,
+      "end": 2604.99,
+      "text": "And this is Poisson with mean 1."
+    },
+    {
+      "start": 2604.99,
+      "end": 2608.15,
+      "text": "Now let me take this interval and divide it"
+    },
+    {
+      "start": 2608.15,
+      "end": 2610.65,
+      "text": "into n little pieces."
+    },
+    {
+      "start": 2610.65,
+      "end": 2614.27,
+      "text": "So each piece has length 1 over n."
+    },
+    {
+      "start": 2614.27,
+      "end": 2622.81,
+      "text": "And let Xi be the number of arrivals during the i-th"
+    },
+    {
+      "start": 2622.81,
+      "end": 2627.99,
+      "text": "little interval."
+    },
+    {
+      "start": 2627.99,
+      "end": 2632.61,
+      "text": "OK, what do we know about the random variables Xi?"
+    },
+    {
+      "start": 2632.61,
+      "end": 2634.17,
+      "text": "They are themselves Poisson."
+    },
+    {
+      "start": 2634.49,
+      "end": 2638.55,
+      "text": "It's a number of arrivals during a small interval."
+    },
+    {
+      "start": 2638.55,
+      "end": 2642.31,
+      "text": "We also know that when n is big, so the length of the"
+    },
+    {
+      "start": 2642.31,
+      "end": 2648.37,
+      "text": "interval is small, these Xi's are approximately Bernoulli"
+    },
+    {
+      "start": 2648.37,
+      "end": 2651.63,
+      "text": "with mean 1 over n."
+    },
+    {
+      "start": 2651.63,
+      "end": 2653.95,
+      "text": "I guess it doesn't matter whether we model them as"
+    },
+    {
+      "start": 2653.95,
+      "end": 2655.63,
+      "text": "Bernoulli or not."
+    },
+    {
+      "start": 2655.63,
+      "end": 2659.53,
+      "text": "What matters is that the Xi's are independent."
+    },
+    {
+      "start": 2659.53,
+      "end": 2660.97,
+      "text": "Why are they independent?"
+    },
+    {
+      "start": 2660.97,
+      "end": 2664.41,
+      "text": "Because in a Poisson process, these joint intervals are"
+    },
+    {
+      "start": 2664.41,
+      "end": 2666.77,
+      "text": "independent of each other."
+    },
+    {
+      "start": 2666.77,
+      "end": 2671.84,
+      "text": "So the Xi's are independent."
+    },
+    {
+      "start": 2671.84,
+      "end": 2675.56,
+      "text": "And they also have the same distribution."
+    },
+    {
+      "start": 2675.56,
+      "end": 2680.36,
+      "text": "And we have that X, the total number of arrivals, is the sum"
+    },
+    {
+      "start": 2680.36,
+      "end": 2684.48,
+      "text": "of the Xn's."
+    },
+    {
+      "start": 2684.48,
+      "end": 2689.52,
+      "text": "So the central limit theorem tells us that approximately"
+    },
+    {
+      "start": 2689.52,
+      "end": 2693.66,
+      "text": "the sum of independent, identically distributed random"
+    },
+    {
+      "start": 2693.66,
+      "end": 2697.72,
+      "text": "variables, when we have lots of these random variables,"
+    },
+    {
+      "start": 2697.72,
+      "end": 2701.54,
+      "text": "behaves like a normal random variable."
+    },
+    {
+      "start": 2701.54,
+      "end": 2708.12,
+      "text": "So by using this decomposition of X into a sum of iid random"
+    },
+    {
+      "start": 2708.12,
+      "end": 2711.7,
+      "text": "variables, and by using values of n that are bigger and"
+    },
+    {
+      "start": 2711.7,
+      "end": 2717.34,
+      "text": "bigger, by taking the limit, it should follow that X has a"
+    },
+    {
+      "start": 2717.34,
+      "end": 2719.5,
+      "text": "normal distribution."
+    },
+    {
+      "start": 2719.5,
+      "end": 2721.64,
+      "text": "On the other hand, we know that X has a"
+    },
+    {
+      "start": 2721.64,
+      "end": 2725.29,
+      "text": "Poisson distribution."
+    },
+    {
+      "start": 2725.29,
+      "end": 2727.81,
+      "text": "So something must be."
+    },
+    {
+      "start": 2727.81,
+      "end": 2728.75,
+      "text": "."
+    },
+    {
+      "start": 2728.75,
+      "end": 2732.57,
+      "text": "Something must be wrong in this argument here."
+    },
+    {
+      "start": 2732.57,
+      "end": 2734.87,
+      "text": "Can we really use the central limit"
+    },
+    {
+      "start": 2734.87,
+      "end": 2738.33,
+      "text": "theorem in this situation?"
+    },
+    {
+      "start": 2738.33,
+      "end": 2741.29,
+      "text": "So what do we need for the central limit theorem?"
+    },
+    {
+      "start": 2741.29,
+      "end": 2745.55,
+      "text": "We need to have independent, identically distributed random"
+    },
+    {
+      "start": 2745.55,
+      "end": 2746.75,
+      "text": "variables."
+    },
+    {
+      "start": 2746.75,
+      "end": 2749.19,
+      "text": "We have it here."
+    },
+    {
+      "start": 2749.19,
+      "end": 2753.39,
+      "text": "We want them to have a finite mean and finite variance."
+    },
+    {
+      "start": 2753.39,
+      "end": 2754.89,
+      "text": "We also have it here."
+    },
+    {
+      "start": 2754.89,
+      "end": 2757.99,
+      "text": "Means variances are finite."
+    },
+    {
+      "start": 2757.99,
+      "end": 2762.05,
+      "text": "What is another assumption that was never made explicit"
+    },
+    {
+      "start": 2762.05,
+      "end": 2767.69,
+      "text": "but essentially was there?"
+    },
+    {
+      "start": 2767.69,
+      "end": 2773.27,
+      "text": "Or, in other words, what is the flaw in this argument that"
+    },
+    {
+      "start": 2773.27,
+      "end": 2775.19,
+      "text": "uses the central limit theorem here?"
+    },
+    {
+      "start": 2775.19,
+      "end": 2776.75,
+      "text": "Any thoughts?"
+    },
+    {
+      "start": 2776.75,
+      "end": 2790.28,
+      "text": "In the central limit theorem, we said consider fix a"
+    },
+    {
+      "start": 2790.28,
+      "end": 2795.86,
+      "text": "probability distribution, and let the x i's be distributed"
+    },
+    {
+      "start": 2795.86,
+      "end": 2797.54,
+      "text": "according to that probability distribution."
+    },
+    {
+      "start": 2797.68,
+      "end": 2803.14,
+      "text": "distribution and add a larger and larger number of Xi's."
+    },
+    {
+      "start": 2803.14,
+      "end": 2807.4,
+      "text": "But the underlying unstated assumption is that we fix the"
+    },
+    {
+      "start": 2807.4,
+      "end": 2809.48,
+      "text": "distribution of the Xi's."
+    },
+    {
+      "start": 2809.48,
+      "end": 2813.1,
+      "text": "As we let n increase, the statistics of each"
+    },
+    {
+      "start": 2813.1,
+      "end": 2815.86,
+      "text": "Xi do not change."
+    },
+    {
+      "start": 2815.86,
+      "end": 2819.0,
+      "text": "Whereas here, I'm playing a trick on you."
+    },
+    {
+      "start": 2819.0,
+      "end": 2823.7,
+      "text": "As I'm taking more and more random variables, I'm actually"
+    },
+    {
+      "start": 2823.7,
+      "end": 2827.78,
+      "text": "changing what those random variables are."
+    },
+    {
+      "start": 2827.78,
+      "end": 2832.76,
+      "text": "When I take a larger n, the Xi's are random variables"
+    },
+    {
+      "start": 2832.76,
+      "end": 2835.72,
+      "text": "with a different mean and a different variance."
+    },
+    {
+      "start": 2835.72,
+      "end": 2839.8,
+      "text": "So I'm adding more of these, but at the same time, in this"
+    },
+    {
+      "start": 2839.8,
+      "end": 2843.42,
+      "text": "example, I'm changing their distributions."
+    },
+    {
+      "start": 2843.42,
+      "end": 2846.0,
+      "text": "That's something that doesn't fit the setting of the"
+    },
+    {
+      "start": 2846.0,
+      "end": 2847.0,
+      "text": "central limit theorem."
+    },
+    {
+      "start": 2847.0,
+      "end": 2850.04,
+      "text": "The central limit theorem, you first fix the distribution of"
+    },
+    {
+      "start": 2850.04,
+      "end": 2853.18,
+      "text": "the X's, you keep it fixed."
+    },
+    {
+      "start": 2853.18,
+      "end": 2856.8,
+      "text": "And then you consider adding more and more according to"
+    },
+    {
+      "start": 2856.8,
+      "end": 2859.02,
+      "text": "that particular fixed distribution."
+    },
+    {
+      "start": 2859.02,
+      "end": 2860.0,
+      "text": "So that's the catch."
+    },
+    {
+      "start": 2860.0,
+      "end": 2862.9,
+      "text": "That's why the central limit theorem does not apply to this"
+    },
+    {
+      "start": 2862.9,
+      "end": 2863.98,
+      "text": "situation."
+    },
+    {
+      "start": 2863.98,
+      "end": 2866.24,
+      "text": "And we're lucky that it doesn't apply, because"
+    },
+    {
+      "start": 2866.24,
+      "end": 2870.22,
+      "text": "otherwise we would have a huge contradiction destroying"
+    },
+    {
+      "start": 2870.22,
+      "end": 2871.48,
+      "text": "probability theory."
+    },
+    {
+      "start": 2880.35,
+      "end": 2882.25,
+      "text": "But now that still leaves us with a"
+    },
+    {
+      "start": 2882.25,
+      "end": 2885.05,
+      "text": "little bit of a dilemma."
+    },
+    {
+      "start": 2885.05,
+      "end": 2886.19,
+      "text": "Suppose that's it."
+    },
+    {
+      "start": 2886.19,
+      "end": 2892.03,
+      "text": "Here, essentially, we're adding independent Bernoulli"
+    },
+    {
+      "start": 2892.03,
+      "end": 2897.06,
+      "text": "random variables."
+    },
+    {
+      "start": 2897.06,
+      "end": 2904.99,
+      "text": "And if I tell you the issue is that the central limit theorem"
+    },
+    {
+      "start": 2904.99,
+      "end": 2908.91,
+      "text": "has to do with asymptotics as n goes to infinity."
+    },
+    {
+      "start": 2908.91,
+      "end": 2914.27,
+      "text": "And if we consider a binomial, and somebody gives us specific"
+    },
+    {
+      "start": 2914.27,
+      "end": 2918.89,
+      "text": "numbers about the parameters of that binomial, it might not"
+    },
+    {
+      "start": 2918.89,
+      "end": 2920.83,
+      "text": "necessarily be obvious what kind of"
+    },
+    {
+      "start": 2920.83,
+      "end": 2922.77,
+      "text": "approximation do we use."
+    },
+    {
+      "start": 2922.77,
+      "end": 2925.67,
+      "text": "In particular, we do have two different approximations for"
+    },
+    {
+      "start": 2925.67,
+      "end": 2927.09,
+      "text": "the binomial."
+    },
+    {
+      "start": 2927.09,
+      "end": 2931.61,
+      "text": "If we fix P, then the binomial is the sum of Bernoullis that"
+    },
+    {
+      "start": 2931.61,
+      "end": 2933.81,
+      "text": "come from a fixed distribution."
+    },
+    {
+      "start": 2933.81,
+      "end": 2936.39,
+      "text": "We consider more and more of these."
+    },
+    {
+      "start": 2936.39,
+      "end": 2938.99,
+      "text": "When we add them, the central limit theorem tells us that we"
+    },
+    {
+      "start": 2938.99,
+      "end": 2941.21,
+      "text": "get the normal distribution."
+    },
+    {
+      "start": 2941.21,
+      "end": 2944.45,
+      "text": "There's another sort of limit, which has the flavor of this"
+    },
+    {
+      "start": 2944.45,
+      "end": 2950.75,
+      "text": "example, in which we still deal with a binomial, sum of n, b,"
+    },
+    {
+      "start": 2950.75,
+      "end": 2951.93,
+      "text": "bernoullis."
+    },
+    {
+      "start": 2951.93,
+      "end": 2956.05,
+      "text": "We let the number of the bernoullis go to infinity."
+    },
+    {
+      "start": 2956.05,
+      "end": 2958.89,
+      "text": "But each bernoulli has a probability of success that"
+    },
+    {
+      "start": 2958.89,
+      "end": 2960.25,
+      "text": "goes to 0."
+    },
+    {
+      "start": 2960.25,
+      "end": 2964.23,
+      "text": "And we do this in a way so that np, the expected number of"
+    },
+    {
+      "start": 2964.23,
+      "end": 2967.03,
+      "text": "successes, stays finite."
+    },
+    {
+      "start": 2967.03,
+      "end": 2970.63,
+      "text": "This is the situation that we dealt with when we first"
+    },
+    {
+      "start": 2970.63,
+      "end": 2972.93,
+      "text": "defined our Poisson process."
+    },
+    {
+      "start": 2972.93,
+      "end": 2977.55,
+      "text": "We have a very, very large number of time slots."
+    },
+    {
+      "start": 2977.55,
+      "end": 2980.75,
+      "text": "But during each time slot, there's a tiny probability of"
+    },
+    {
+      "start": 2980.75,
+      "end": 2982.59,
+      "text": "obtaining an arrival."
+    },
+    {
+      "start": 2982.59,
+      "end": 2988.43,
+      "text": "Under that setting, in discrete time, we have a"
+    },
+    {
+      "start": 2988.43,
+      "end": 2991.05,
+      "text": "binomial distribution, or a Bernoulli process."
+    },
+    {
+      "start": 2991.05,
+      "end": 2994.43,
+      "text": "But when we take the limit, we obtain the Poisson process and"
+    },
+    {
+      "start": 2994.43,
+      "end": 2996.43,
+      "text": "the Poisson approximation."
+    },
+    {
+      "start": 2996.43,
+      "end": 2999.43,
+      "text": "So these are two equally valid approximations of the"
+    },
+    {
+      "start": 2999.43,
+      "end": 3003.25,
+      "text": "binomial, but they're valid in different asymptotic regimes."
+    },
+    {
+      "start": 3003.25,
+      "end": 3006.13,
+      "text": "In one regime, we fix P, let n go to infinity."
+    },
+    {
+      "start": 3006.13,
+      "end": 3008.71,
+      "text": "In the other regime, we let both n and"
+    },
+    {
+      "start": 3008.71,
+      "end": 3009.89,
+      "text": "P change simultaneously."
+    },
+    {
+      "start": 3010.75,
+      "end": 3014.67,
+      "text": "Now, in real life, you're never dealing with the limiting"
+    },
+    {
+      "start": 3014.67,
+      "end": 3015.31,
+      "text": "situations."
+    },
+    {
+      "start": 3015.31,
+      "end": 3017.87,
+      "text": "You're dealing with actual numbers."
+    },
+    {
+      "start": 3017.87,
+      "end": 3021.87,
+      "text": "So if somebody tells you that the numbers are like this,"
+    },
+    {
+      "start": 3021.87,
+      "end": 3025.17,
+      "text": "then you should probably say that this is the situation"
+    },
+    {
+      "start": 3025.17,
+      "end": 3027.37,
+      "text": "that fits the Poisson description."
+    },
+    {
+      "start": 3027.37,
+      "end": 3030.17,
+      "text": "Large number of slots, with each slot having a tiny"
+    },
+    {
+      "start": 3030.17,
+      "end": 3032.35,
+      "text": "probability of success."
+    },
+    {
+      "start": 3032.35,
+      "end": 3036.81,
+      "text": "On the other hand, if P is something like this and n is"
+    },
+    {
+      "start": 3036.81,
+      "end": 3040.75,
+      "text": "500, then you expect to get a distribution for the number"
+    },
+    {
+      "start": 3040.75,
+      "end": 3041.63,
+      "text": "of successes."
+    },
+    {
+      "start": 3041.63,
+      "end": 3045.69,
+      "text": "It's going to have a mean of 50, and to have a fair amount"
+    },
+    {
+      "start": 3045.69,
+      "end": 3048.59,
+      "text": "of spread around there, it turns out that the normal"
+    },
+    {
+      "start": 3048.59,
+      "end": 3051.45,
+      "text": "approximation would be better in this context."
+    },
+    {
+      "start": 3051.45,
+      "end": 3057.07,
+      "text": "As a rule of thumb, if n times P is bigger than 10 or 20, you"
+    },
+    {
+      "start": 3057.07,
+      "end": 3059.27,
+      "text": "can start using the normal approximation."
+    },
+    {
+      "start": 3059.27,
+      "end": 3064.37,
+      "text": "If n times P is a small number, then you prefer to use the"
+    },
+    {
+      "start": 3064.37,
+      "end": 3066.03,
+      "text": "Poisson approximation."
+    },
+    {
+      "start": 3066.03,
+      "end": 3068.83,
+      "text": "But there's no hard theorems or rules about"
+    },
+    {
+      "start": 3068.83,
+      "end": 3070.03,
+      "text": "how to go about this."
+    },
+    {
+      "start": 3070.75,
+      "end": 3072.21,
+      "text": "OK."
+    },
+    {
+      "start": 3072.21,
+      "end": 3075.69,
+      "text": "So from next time, we're going to switch pace again, and"
+    },
+    {
+      "start": 3075.69,
+      "end": 3078.11,
+      "text": "we're going to put together everything we learned in this"
+    },
+    {
+      "start": 3078.11,
+      "end": 3080.63,
+      "text": "class to start solving inference problems."
+    }
+  ]
+}

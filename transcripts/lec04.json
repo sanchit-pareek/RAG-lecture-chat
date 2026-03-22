@@ -1,0 +1,4607 @@
+{
+  "lecture": "lec04",
+  "language": "en",
+  "duration": 3093.9733125,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.44,
+      "text": "The following content is provided under a Creative"
+    },
+    {
+      "start": 2.44,
+      "end": 3.96,
+      "text": "Commons license."
+    },
+    {
+      "start": 3.96,
+      "end": 6.28,
+      "text": "Your support will help MIT OpenCourseWare"
+    },
+    {
+      "start": 6.28,
+      "end": 10.64,
+      "text": "continue to offer high quality educational resources for free."
+    },
+    {
+      "start": 10.64,
+      "end": 13.26,
+      "text": "To make a donation or view additional materials"
+    },
+    {
+      "start": 13.26,
+      "end": 17.2,
+      "text": "from hundreds of MIT courses, visit MIT OpenCourseWare"
+    },
+    {
+      "start": 17.2,
+      "end": 22.19,
+      "text": "at ocw.mit.edu."
+    },
+    {
+      "start": 22.19,
+      "end": 26.35,
+      "text": "OK, so today's lecture will be on the subject of counting."
+    },
+    {
+      "start": 26.35,
+      "end": 29.55,
+      "text": "So counting, I guess, is a pretty simple affair"
+    },
+    {
+      "start": 29.55,
+      "end": 32.73,
+      "text": "conceptually, but it's a topic that can also"
+    },
+    {
+      "start": 32.73,
+      "end": 34.37,
+      "text": "get to be pretty tricky."
+    },
+    {
+      "start": 34.37,
+      "end": 37.81,
+      "text": "The reason we're going to talk about counting is that there's"
+    },
+    {
+      "start": 37.81,
+      "end": 40.97,
+      "text": "a lot of probability problems whose solution actually"
+    },
+    {
+      "start": 40.97,
+      "end": 44.99,
+      "text": "reduces to successfully counting the cardinalities of"
+    },
+    {
+      "start": 44.99,
+      "end": 46.07,
+      "text": "various sets."
+    },
+    {
+      "start": 46.07,
+      "end": 49.21,
+      "text": "So we're going to see the basic, simplest methods that"
+    },
+    {
+      "start": 49.21,
+      "end": 52.05,
+      "text": "one can use to count systematically in"
+    },
+    {
+      "start": 52.05,
+      "end": 53.61,
+      "text": "various situations."
+    },
+    {
+      "start": 53.61,
+      "end": 56.57,
+      "text": "So in contrast to previous lectures, we're not going to"
+    },
+    {
+      "start": 56.57,
+      "end": 59.43,
+      "text": "introduce any significant new concepts"
+    },
+    {
+      "start": 59.43,
+      "end": 61.45,
+      "text": "of a probabilistic nature."
+    },
+    {
+      "start": 61.45,
+      "end": 64.29,
+      "text": "We're just going to use the probability tools that we"
+    },
+    {
+      "start": 64.29,
+      "end": 67.77,
+      "text": "already know, and we're going to apply them in situations"
+    },
+    {
+      "start": 67.77,
+      "end": 70.81,
+      "text": "where there's also some counting involved."
+    },
+    {
+      "start": 70.81,
+      "end": 72.95,
+      "text": "Now today, we're going to just touch the"
+    },
+    {
+      "start": 72.95,
+      "end": 74.45,
+      "text": "surface of this subject."
+    },
+    {
+      "start": 74.45,
+      "end": 76.61,
+      "text": "There's a whole field of mathematics called"
+    },
+    {
+      "start": 76.61,
+      "end": 79.91,
+      "text": "combinatorics, where people actually spend their whole"
+    },
+    {
+      "start": 79.91,
+      "end": 84.19,
+      "text": "lives counting more and more complicated sets."
+    },
+    {
+      "start": 84.19,
+      "end": 87.53,
+      "text": "We were not going to get anywhere close to the full"
+    },
+    {
+      "start": 87.53,
+      "end": 89.25,
+      "text": "complexity of the field."
+    },
+    {
+      "start": 89.25,
+      "end": 93.29,
+      "text": "But we'll get just enough tools that allow us to address"
+    },
+    {
+      "start": 93.29,
+      "end": 97.03,
+      "text": "problems of the type that one encounters in"
+    },
+    {
+      "start": 97.03,
+      "end": 99.71,
+      "text": "most common situations."
+    },
+    {
+      "start": 99.71,
+      "end": 103.25,
+      "text": "So the basic idea, the basic principle, is something that"
+    },
+    {
+      "start": 103.25,
+      "end": 105.39,
+      "text": "we've already discussed."
+    },
+    {
+      "start": 105.39,
+      "end": 109.85,
+      "text": "So counting methods apply in situations where we have"
+    },
+    {
+      "start": 109.85,
+      "end": 113.65,
+      "text": "probabilistic experiments with a finite number of outcomes,"
+    },
+    {
+      "start": 113.65,
+      "end": 117.97,
+      "text": "and where every outcome has, every possible outcome, has"
+    },
+    {
+      "start": 117.97,
+      "end": 119.15,
+      "text": "the same probability of"
+    },
+    {
+      "start": 119.15,
+      "end": 120.25,
+      "text": "occurring."
+    },
+    {
+      "start": 120.25,
+      "end": 123.13,
+      "text": "So we have our sample space omega."
+    },
+    {
+      "start": 123.13,
+      "end": 126.53,
+      "text": "And it's got a bunch of discrete points in there."
+    },
+    {
+      "start": 126.53,
+      "end": 130.69,
+      "text": "And the cardinality of the set omega is some capital N. So in"
+    },
+    {
+      "start": 130.69,
+      "end": 134.97,
+      "text": "particular, we assume that the sample points are equally"
+    },
+    {
+      "start": 134.97,
+      "end": 138.75,
+      "text": "likely, which means that every element of the sample space has"
+    },
+    {
+      "start": 138.75,
+      "end": 143.83,
+      "text": "the same probability, equal to 1 over N. And then we're"
+    },
+    {
+      "start": 143.83,
+      "end": 148.43,
+      "text": "interested in a subset of the sample space, call it A. And"
+    },
+    {
+      "start": 148.43,
+      "end": 149.15,
+      "text": "that subset, we're going to call it A. And that subset is"
+    },
+    {
+      "start": 149.15,
+      "end": 151.37,
+      "text": "a set of a number of elements."
+    },
+    {
+      "start": 151.37,
+      "end": 156.09,
+      "text": "Let the cardinality of that subset be equal to little n."
+    },
+    {
+      "start": 156.09,
+      "end": 159.49,
+      "text": "And then to find the probability of that set, all we"
+    },
+    {
+      "start": 159.49,
+      "end": 162.07,
+      "text": "need to do is to add the probabilities of the"
+    },
+    {
+      "start": 162.07,
+      "end": 163.61,
+      "text": "individual elements."
+    },
+    {
+      "start": 163.61,
+      "end": 167.29,
+      "text": "There's little n elements, and each one has probability 1 over"
+    },
+    {
+      "start": 167.29,
+      "end": 170.37,
+      "text": "capital N. And that's the answer."
+    },
+    {
+      "start": 170.37,
+      "end": 173.25,
+      "text": "So this means that to solve problems in this context, all"
+    },
+    {
+      "start": 173.25,
+      "end": 176.55,
+      "text": "that we need to be able to do is to figure out the number"
+    },
+    {
+      "start": 176.55,
+      "end": 178.63,
+      "text": "capital N and to figure out the"
+    },
+    {
+      "start": 178.63,
+      "end": 178.95,
+      "text": "."
+    },
+    {
+      "start": 178.95,
+      "end": 179.05,
+      "text": "."
+    },
+    {
+      "start": 179.05,
+      "end": 180.79,
+      "text": "little n."
+    },
+    {
+      "start": 180.79,
+      "end": 184.33,
+      "text": "Now if somebody gives you a set by just giving you a list"
+    },
+    {
+      "start": 184.33,
+      "end": 187.67,
+      "text": "and gives you another set, again giving you a list, it's"
+    },
+    {
+      "start": 187.67,
+      "end": 189.11,
+      "text": "easy to count their elements."
+    },
+    {
+      "start": 189.11,
+      "end": 191.53,
+      "text": "You just count how much there is on the list."
+    },
+    {
+      "start": 191.53,
+      "end": 195.03,
+      "text": "But sometimes the sets are described in some more"
+    },
+    {
+      "start": 195.03,
+      "end": 200.91,
+      "text": "implicit way, and we may have to do a little bit more work."
+    },
+    {
+      "start": 200.91,
+      "end": 202.85,
+      "text": "There's various tricks that are involved"
+    },
+    {
+      "start": 202.85,
+      "end": 204.41,
+      "text": "in counting properly."
+    },
+    {
+      "start": 204.41,
+      "end": 209.03,
+      "text": "And the most common one is when you consider a set of"
+    },
+    {
+      "start": 209.03,
+      "end": 212.55,
+      "text": "possible outcomes to describe the construction of those"
+    },
+    {
+      "start": 212.55,
+      "end": 215.43,
+      "text": "possible outcomes through a sequential process."
+    },
+    {
+      "start": 215.43,
+      "end": 218.11,
+      "text": "So think of a probabilistic experiment that involves a"
+    },
+    {
+      "start": 218.11,
+      "end": 219.75,
+      "text": "number of stages."
+    },
+    {
+      "start": 219.75,
+      "end": 223.63,
+      "text": "And in each one of the stages, there's a number of possible"
+    },
+    {
+      "start": 223.63,
+      "end": 225.91,
+      "text": "choices that there may be."
+    },
+    {
+      "start": 225.91,
+      "end": 228.63,
+      "text": "The overall experiment consists of carrying out all"
+    },
+    {
+      "start": 228.63,
+      "end": 230.17,
+      "text": "the stages to the end."
+    },
+    {
+      "start": 230.17,
+      "end": 235.83,
+      "text": "And the number of points in the sample space is how many"
+    },
+    {
+      "start": 235.83,
+      "end": 238.21,
+      "text": "final outcomes there can be in this"
+    },
+    {
+      "start": 238.21,
+      "end": 239.03,
+      "text": "multi-stage experiment."
+    },
+    {
+      "start": 239.03,
+      "end": 242.91,
+      "text": "So in this picture, we have an experiment in which at the"
+    },
+    {
+      "start": 242.91,
+      "end": 247.23,
+      "text": "first stage, we have four choices."
+    },
+    {
+      "start": 247.23,
+      "end": 251.61,
+      "text": "In the second stage, no matter what happened in the first"
+    },
+    {
+      "start": 251.61,
+      "end": 255.99,
+      "text": "stage, the way this is drawn, we have three choices."
+    },
+    {
+      "start": 255.99,
+      "end": 259.65,
+      "text": "No matter whether we ended up here, there, or there, we have"
+    },
+    {
+      "start": 259.65,
+      "end": 262.87,
+      "text": "three choices in the second stage."
+    },
+    {
+      "start": 262.87,
+      "end": 266.75,
+      "text": "And then there's a third stage, and at least in this"
+    },
+    {
+      "start": 266.75,
+      "end": 267.79,
+      "text": "picture."
+    },
+    {
+      "start": 267.79,
+      "end": 268.87,
+      "text": "No matter what happened."
+    },
+    {
+      "start": 268.87,
+      "end": 271.21,
+      "text": "No matter what happened in the first two stages, in the"
+    },
+    {
+      "start": 271.21,
+      "end": 275.93,
+      "text": "third stage, we're going to have two possible choices."
+    },
+    {
+      "start": 275.93,
+      "end": 281.25,
+      "text": "So how many leaves are there at the end of this tree?"
+    },
+    {
+      "start": 281.25,
+      "end": 282.19,
+      "text": "That's simple."
+    },
+    {
+      "start": 282.19,
+      "end": 285.43,
+      "text": "It's just the product of these three numbers."
+    },
+    {
+      "start": 285.43,
+      "end": 288.49,
+      "text": "The number of possible leaves that we have out there is four"
+    },
+    {
+      "start": 288.49,
+      "end": 290.41,
+      "text": "times three times two."
+    },
+    {
+      "start": 290.41,
+      "end": 294.03,
+      "text": "Number of choices at each stage gets multiplied, and"
+    },
+    {
+      "start": 294.03,
+      "end": 297.67,
+      "text": "that gives us the number of overall choices."
+    },
+    {
+      "start": 297.67,
+      "end": 298.55,
+      "text": "So this is the general"
+    },
+    {
+      "start": 298.55,
+      "end": 302.79,
+      "text": "rule, the general trick that we're going to use over and"
+    },
+    {
+      "start": 302.79,
+      "end": 303.51,
+      "text": "over."
+    },
+    {
+      "start": 303.51,
+      "end": 307.63,
+      "text": "So let's apply it to some very simple problems as a warm-up."
+    },
+    {
+      "start": 307.63,
+      "end": 310.49,
+      "text": "How many license plates can you make if you're allowed to"
+    },
+    {
+      "start": 310.49,
+      "end": 315.99,
+      "text": "use three letters, and then followed by four digits?"
+    },
+    {
+      "start": 315.99,
+      "end": 319.21,
+      "text": "You have, at least if you're dealing with the English"
+    },
+    {
+      "start": 319.21,
+      "end": 323.43,
+      "text": "alphabet, you have 26 choices for the first letter."
+    },
+    {
+      "start": 323.43,
+      "end": 328.27,
+      "text": "Then you have 26 choices for the second letter, and then 26"
+    },
+    {
+      "start": 328.27,
+      "end": 330.31,
+      "text": "choices for the third letter."
+    },
+    {
+      "start": 330.31,
+      "end": 331.75,
+      "text": "And then we start the digits."
+    },
+    {
+      "start": 331.75,
+      "end": 335.09,
+      "text": "We have 10 choices for the first digit, 10 choices for the"
+    },
+    {
+      "start": 335.09,
+      "end": 337.17,
+      "text": "second digit, 10 choices for the third, 10"
+    },
+    {
+      "start": 337.17,
+      "end": 340.03,
+      "text": "choices for the last one."
+    },
+    {
+      "start": 340.03,
+      "end": 341.83,
+      "text": "Let's make it a little more complicated."
+    },
+    {
+      "start": 341.83,
+      "end": 345.51,
+      "text": "Suppose that we're interested in license plates where no"
+    },
+    {
+      "start": 345.51,
+      "end": 350.21,
+      "text": "letter can be repeated, and no digit can be repeated."
+    },
+    {
+      "start": 350.21,
+      "end": 353.03,
+      "text": "So you have to use different letters, different digits."
+    },
+    {
+      "start": 353.03,
+      "end": 355.43,
+      "text": "How many license plates can you make?"
+    },
+    {
+      "start": 355.43,
+      "end": 358.13,
+      "text": "Let's choose the first letter, and we have 26 choices."
+    },
+    {
+      "start": 358.13,
+      "end": 361.89,
+      "text": "Now, I'm ready to choose my second letter."
+    },
+    {
+      "start": 361.89,
+      "end": 364.61,
+      "text": "How many choices do I have?"
+    },
+    {
+      "start": 364.61,
+      "end": 368.09,
+      "text": "I have 25, because I already used one letter."
+    },
+    {
+      "start": 368.09,
+      "end": 371.89,
+      "text": "I have the 25 remaining letters to choose from."
+    },
+    {
+      "start": 371.89,
+      "end": 374.33,
+      "text": "For the next letter, how many choices?"
+    },
+    {
+      "start": 374.33,
+      "end": 377.29,
+      "text": "Well, I used up two of my letters, so I only"
+    },
+    {
+      "start": 377.29,
+      "end": 379.83,
+      "text": "have 24 available."
+    },
+    {
+      "start": 379.83,
+      "end": 382.11,
+      "text": "And then we start with the digits."
+    },
+    {
+      "start": 382.11,
+      "end": 384.71,
+      "text": "10 choices for the first digit, 9 choices for the"
+    },
+    {
+      "start": 384.71,
+      "end": 387.57,
+      "text": "second, 8 for the third, 7 for the last one."
+    },
+    {
+      "start": 390.31,
+      "end": 391.75,
+      "text": "All right."
+    },
+    {
+      "start": 391.75,
+      "end": 398.71,
+      "text": "So now let's bring some symbols in, a related problem."
+    },
+    {
+      "start": 398.71,
+      "end": 403.93,
+      "text": "You are given a set that consists of n elements."
+    },
+    {
+      "start": 403.93,
+      "end": 407.51,
+      "text": "And you're supposed to take those n elements and put them"
+    },
+    {
+      "start": 407.51,
+      "end": 409.87,
+      "text": "in a sequence."
+    },
+    {
+      "start": 409.87,
+      "end": 412.29,
+      "text": "That is, to order them."
+    },
+    {
+      "start": 412.29,
+      "end": 415.83,
+      "text": "Any possible ordering of those elements is"
+    },
+    {
+      "start": 415.83,
+      "end": 417.55,
+      "text": "called a permutation."
+    },
+    {
+      "start": 417.55,
+      "end": 420.07,
+      "text": "So for example, if we have the set one, two,"
+    },
+    {
+      "start": 420.07,
+      "end": 424.05,
+      "text": "three, four, a possible permutation is the"
+    },
+    {
+      "start": 424.05,
+      "end": 428.55,
+      "text": "list two, three, four, one."
+    },
+    {
+      "start": 428.55,
+      "end": 430.69,
+      "text": "That's one possible permutation."
+    },
+    {
+      "start": 430.69,
+      "end": 432.67,
+      "text": "And there's lots of possible permutations."
+    },
+    {
+      "start": 432.67,
+      "end": 435.55,
+      "text": "Of course, the question is, how many are there?"
+    },
+    {
+      "start": 435.55,
+      "end": 436.29,
+      "text": "OK."
+    },
+    {
+      "start": 436.29,
+      "end": 440.39,
+      "text": "Let's think about building this permutation by choosing"
+    },
+    {
+      "start": 440.39,
+      "end": 445.23,
+      "text": "one at a time which of these elements goes into each one of"
+    },
+    {
+      "start": 445.23,
+      "end": 446.31,
+      "text": "these slots."
+    },
+    {
+      "start": 446.31,
+      "end": 448.43,
+      "text": "How many choices for the number that goes"
+    },
+    {
+      "start": 448.43,
+      "end": 449.55,
+      "text": "into the first slot?"
+    },
+    {
+      "start": 450.07,
+      "end": 451.17,
+      "text": "Or the elements?"
+    },
+    {
+      "start": 451.17,
+      "end": 454.15,
+      "text": "Well, we can choose any one of the available elements."
+    },
+    {
+      "start": 454.15,
+      "end": 456.59,
+      "text": "So we have n choices."
+    },
+    {
+      "start": 456.59,
+      "end": 460.99,
+      "text": "Having used up, let's say, this element goes here."
+    },
+    {
+      "start": 460.99,
+      "end": 464.35,
+      "text": "Having used up that element, we're left with n minus 1"
+    },
+    {
+      "start": 464.35,
+      "end": 465.25,
+      "text": "elements."
+    },
+    {
+      "start": 465.25,
+      "end": 468.73,
+      "text": "And we can pick any one of these and bring it into the"
+    },
+    {
+      "start": 468.73,
+      "end": 469.57,
+      "text": "second slot."
+    },
+    {
+      "start": 469.57,
+      "end": 471.17,
+      "text": "So here we have n choices."
+    },
+    {
+      "start": 471.17,
+      "end": 474.07,
+      "text": "Here we're going to have n minus 1 choices."
+    },
+    {
+      "start": 474.07,
+      "end": 478.07,
+      "text": "Then how many we put there, we'll have n minus 2 choices."
+    },
+    {
+      "start": 478.07,
+      "end": 479.85,
+      "text": "And you go down until the end."
+    },
+    {
+      "start": 480.07,
+      "end": 482.87,
+      "text": "What happens at this point when you are to pick the last"
+    },
+    {
+      "start": 482.87,
+      "end": 483.89,
+      "text": "element?"
+    },
+    {
+      "start": 483.89,
+      "end": 485.91,
+      "text": "Well, you've used n minus 1 of them."
+    },
+    {
+      "start": 485.91,
+      "end": 488.09,
+      "text": "There's only one left in your bag."
+    },
+    {
+      "start": 488.09,
+      "end": 489.75,
+      "text": "You're forced to use that one."
+    },
+    {
+      "start": 489.75,
+      "end": 493.93,
+      "text": "So at the last stage, you're going to have only one choice."
+    },
+    {
+      "start": 493.93,
+      "end": 498.05,
+      "text": "So basically, the number of possible permutations is the"
+    },
+    {
+      "start": 498.05,
+      "end": 504.03,
+      "text": "product of all integers from n down to 1 or from 1 up to n."
+    },
+    {
+      "start": 504.03,
+      "end": 506.35,
+      "text": "And there's a symbol that we use for this number."
+    },
+    {
+      "start": 506.35,
+      "end": 509.21,
+      "text": "It's called n factorial."
+    },
+    {
+      "start": 509.21,
+      "end": 512.99,
+      "text": "So n factorial is the number of permutations of n objects,"
+    },
+    {
+      "start": 512.99,
+      "end": 517.33,
+      "text": "the number of ways that you can order n objects that are"
+    },
+    {
+      "start": 517.33,
+      "end": 519.09,
+      "text": "given to you."
+    },
+    {
+      "start": 519.09,
+      "end": 522.11,
+      "text": "Now, a different question."
+    },
+    {
+      "start": 522.11,
+      "end": 524.33,
+      "text": "We have n elements."
+    },
+    {
+      "start": 524.33,
+      "end": 528.67,
+      "text": "Let's say the elements are 1, 2, 3, up to n."
+    },
+    {
+      "start": 528.67,
+      "end": 531.31,
+      "text": "And it's a set."
+    },
+    {
+      "start": 531.31,
+      "end": 534.49,
+      "text": "And we want to create a subset."
+    },
+    {
+      "start": 534.49,
+      "end": 538.47,
+      "text": "How many possible subsets are there?"
+    },
+    {
+      "start": 538.47,
+      "end": 538.83,
+      "text": "So."
+    },
+    {
+      "start": 538.83,
+      "end": 544.37,
+      "text": "Picking a subset means looking at each one of the elements and"
+    },
+    {
+      "start": 544.37,
+      "end": 548.45,
+      "text": "deciding whether you're going to put it in the subset or not."
+    },
+    {
+      "start": 548.45,
+      "end": 553.27,
+      "text": "For example, I could choose to put 1 in, but 2, I'm not"
+    },
+    {
+      "start": 553.27,
+      "end": 554.05,
+      "text": "putting it in."
+    },
+    {
+      "start": 554.05,
+      "end": 555.91,
+      "text": "3, I'm not putting it in."
+    },
+    {
+      "start": 555.91,
+      "end": 559.07,
+      "text": "4, I'm putting it in, and so on."
+    },
+    {
+      "start": 559.07,
+      "end": 561.19,
+      "text": "And that's how you create a subset."
+    },
+    {
+      "start": 561.19,
+      "end": 563.69,
+      "text": "You look at each one of the elements, and you say, OK, I'm"
+    },
+    {
+      "start": 563.69,
+      "end": 567.31,
+      "text": "going to put it in the subset, or I'm not going to put it."
+    },
+    {
+      "start": 567.31,
+      "end": 568.33,
+      "text": "So."
+    },
+    {
+      "start": 568.33,
+      "end": 570.91,
+      "text": "Think of this as consisting of stages."
+    },
+    {
+      "start": 570.91,
+      "end": 574.19,
+      "text": "At each stage, you look at one element, and you make a binary"
+    },
+    {
+      "start": 574.19,
+      "end": 575.05,
+      "text": "decision."
+    },
+    {
+      "start": 575.05,
+      "end": 578.43,
+      "text": "Do I put it in the subset or not?"
+    },
+    {
+      "start": 578.43,
+      "end": 581.67,
+      "text": "So therefore, how many subsets are there?"
+    },
+    {
+      "start": 581.67,
+      "end": 585.05,
+      "text": "Well, I have two choices for the first element."
+    },
+    {
+      "start": 585.05,
+      "end": 587.73,
+      "text": "Am I going to put it in the subset or not?"
+    },
+    {
+      "start": 587.73,
+      "end": 590.91,
+      "text": "I have two choices for the next element, and so on."
+    },
+    {
+      "start": 590.91,
+      "end": 595.25,
+      "text": "For all elements, we have, for each one of the elements, we"
+    },
+    {
+      "start": 595.25,
+      "end": 597.37,
+      "text": "have two choices."
+    },
+    {
+      "start": 597.37,
+      "end": 597.61,
+      "text": "So."
+    },
+    {
+      "start": 597.61,
+      "end": 602.09,
+      "text": "The overall number of choices is 2 to the power n."
+    },
+    {
+      "start": 602.09,
+      "end": 609.43,
+      "text": "So conclusion, the number of subsets of an n element set is"
+    },
+    {
+      "start": 609.43,
+      "end": 615.06,
+      "text": "2 to the n."
+    },
+    {
+      "start": 615.06,
+      "end": 619.6,
+      "text": "So in particular, if we start with, if we take n equal to 1,"
+    },
+    {
+      "start": 619.6,
+      "end": 622.2,
+      "text": "let's check that our answer makes sense."
+    },
+    {
+      "start": 622.2,
+      "end": 626.42,
+      "text": "If we have n equal to 1, how many subsets does it have?"
+    },
+    {
+      "start": 626.42,
+      "end": 629.64,
+      "text": "So we're dealing with the set of just 1."
+    },
+    {
+      "start": 629.64,
+      "end": 630.82,
+      "text": "What are the subsets?"
+    },
+    {
+      "start": 630.82,
+      "end": 631.32,
+      "text": "2."
+    },
+    {
+      "start": 633.85,
+      "end": 637.31,
+      "text": "One subset is this one."
+    },
+    {
+      "start": 637.31,
+      "end": 641.55,
+      "text": "Do we have other subsets of the one element set?"
+    },
+    {
+      "start": 641.55,
+      "end": 643.89,
+      "text": "Yes, we have the empty set."
+    },
+    {
+      "start": 643.89,
+      "end": 644.89,
+      "text": "That's the second one."
+    },
+    {
+      "start": 644.89,
+      "end": 650.85,
+      "text": "These are the two possible subsets of this particular set."
+    },
+    {
+      "start": 650.85,
+      "end": 656.81,
+      "text": "So two subsets when n is equal to 1, that checks the answer."
+    },
+    {
+      "start": 656.81,
+      "end": 660.3,
+      "text": "All right."
+    },
+    {
+      "start": 660.3,
+      "end": 666.18,
+      "text": "OK, so having gone so far, we can do our first example now."
+    },
+    {
+      "start": 666.18,
+      "end": 672.06,
+      "text": "So we are given a die."
+    },
+    {
+      "start": 672.06,
+      "end": 676.6,
+      "text": "And we're going to roll it six times."
+    },
+    {
+      "start": 676.6,
+      "end": 680.04,
+      "text": "OK, let's make some assumptions about the rolls."
+    },
+    {
+      "start": 680.04,
+      "end": 689.54,
+      "text": "Let's assume that the rolls are independent, and that the"
+    },
+    {
+      "start": 689.54,
+      "end": 694.19,
+      "text": "die is also fair."
+    },
+    {
+      "start": 694.19,
+      "end": 698.11,
+      "text": "So this means that the probability of any particular"
+    },
+    {
+      "start": 698.11,
+      "end": 702.57,
+      "text": "outcome of the die rolls, for example, so we have six rolls."
+    },
+    {
+      "start": 702.57,
+      "end": 708.77,
+      "text": "One particular outcome could be 3, 3, 1, 6, 5."
+    },
+    {
+      "start": 708.77,
+      "end": 711.13,
+      "text": "So that's one possible outcome."
+    },
+    {
+      "start": 711.13,
+      "end": 714.05,
+      "text": "What's the probability of this outcome?"
+    },
+    {
+      "start": 714.05,
+      "end": 716.95,
+      "text": "There's probability 1 sixth that this happens, 1 sixth"
+    },
+    {
+      "start": 716.95,
+      "end": 720.53,
+      "text": "that this happens, 1 sixth that this happens, and so on."
+    },
+    {
+      "start": 720.53,
+      "end": 725.35,
+      "text": "So the probability that the outcome is this one is 1 over"
+    },
+    {
+      "start": 725.35,
+      "end": 729.85,
+      "text": "6 to the sixth."
+    },
+    {
+      "start": 729.85,
+      "end": 731.01,
+      "text": "What do I eat?"
+    },
+    {
+      "start": 731.01,
+      "end": 732.57,
+      "text": "What did I use to come up with?"
+    },
+    {
+      "start": 732.57,
+      "end": 733.69,
+      "text": "This answer."
+    },
+    {
+      "start": 733.69,
+      "end": 735.43,
+      "text": "I used independence."
+    },
+    {
+      "start": 735.43,
+      "end": 738.39,
+      "text": "So I multiplied the probability that the first roll"
+    },
+    {
+      "start": 738.39,
+      "end": 740.77,
+      "text": "gives me a 2 times the probability that the second"
+    },
+    {
+      "start": 740.77,
+      "end": 742.99,
+      "text": "roll gives me a 3, and so on."
+    },
+    {
+      "start": 742.99,
+      "end": 746.81,
+      "text": "And then I used the assumption that the die is fair, so that"
+    },
+    {
+      "start": 746.81,
+      "end": 750.29,
+      "text": "the probability of a 2 is 1 sixth, the probability of a 3"
+    },
+    {
+      "start": 750.29,
+      "end": 752.23,
+      "text": "is 1 sixth, and so on."
+    },
+    {
+      "start": 752.23,
+      "end": 754.81,
+      "text": "So if I were to spell it out, it's the probability that we"
+    },
+    {
+      "start": 754.81,
+      "end": 757.77,
+      "text": "get a 2 in the first roll times the probability of a 3 in"
+    },
+    {
+      "start": 757.77,
+      "end": 762.05,
+      "text": "the second roll times the probability of a 5 in the last"
+    },
+    {
+      "start": 762.05,
+      "end": 762.49,
+      "text": "roll."
+    },
+    {
+      "start": 762.57,
+      "end": 766.51,
+      "text": "So by independence, I can multiply probabilities."
+    },
+    {
+      "start": 766.51,
+      "end": 769.51,
+      "text": "And because the die is fair, each one of these numbers is"
+    },
+    {
+      "start": 769.51,
+      "end": 773.91,
+      "text": "1 over 6 to the sixth."
+    },
+    {
+      "start": 773.91,
+      "end": 778.13,
+      "text": "And so the same calculation would apply no matter what"
+    },
+    {
+      "start": 778.13,
+      "end": 780.63,
+      "text": "numbers I would put in here."
+    },
+    {
+      "start": 780.63,
+      "end": 786.92,
+      "text": "So all possible outcomes are equally likely."
+    },
+    {
+      "start": 786.92,
+      "end": 788.34,
+      "text": "Let's start with this."
+    },
+    {
+      "start": 788.34,
+      "end": 792.64,
+      "text": "So since all possible outcomes are equally likely, to find an"
+    },
+    {
+      "start": 792.64,
+      "end": 793.64,
+      "text": "answer to a probability question, I'm going to use the"
+    },
+    {
+      "start": 793.64,
+      "end": 793.84,
+      "text": "probability equation."
+    },
+    {
+      "start": 793.84,
+      "end": 794.34,
+      "text": "So I'm going to use the probability equation, and I'm"
+    },
+    {
+      "start": 794.34,
+      "end": 797.36,
+      "text": "going to use the probability equation if we're dealing with"
+    },
+    {
+      "start": 797.36,
+      "end": 799.24,
+      "text": "some particular event."
+    },
+    {
+      "start": 799.24,
+      "end": 802.9,
+      "text": "So the event is that all rolls give different numbers."
+    },
+    {
+      "start": 802.9,
+      "end": 811.16,
+      "text": "That's our event A. And our sample space is some set"
+    },
+    {
+      "start": 811.16,
+      "end": 812.8,
+      "text": "capital Omega."
+    },
+    {
+      "start": 812.8,
+      "end": 815.88,
+      "text": "We know that the answer is going to be the cardinality of"
+    },
+    {
+      "start": 815.88,
+      "end": 820.2,
+      "text": "the set A divided by the cardinality of the set Omega."
+    },
+    {
+      "start": 820.2,
+      "end": 822.82,
+      "text": "So let's deal with the easy one first."
+    },
+    {
+      "start": 822.82,
+      "end": 823.66,
+      "text": "How many elements are there?"
+    },
+    {
+      "start": 823.66,
+      "end": 825.98,
+      "text": "How many elements are there in the sample space?"
+    },
+    {
+      "start": 825.98,
+      "end": 829.8,
+      "text": "How many possible outcomes are there when you roll a die six"
+    },
+    {
+      "start": 829.8,
+      "end": 831.56,
+      "text": "times?"
+    },
+    {
+      "start": 831.56,
+      "end": 834.6,
+      "text": "You have six choices for the first roll."
+    },
+    {
+      "start": 834.6,
+      "end": 837.82,
+      "text": "You have six choices for the second roll, and so on."
+    },
+    {
+      "start": 837.82,
+      "end": 841.48,
+      "text": "So the overall number of outcomes is going to be 6 to"
+    },
+    {
+      "start": 841.48,
+      "end": 843.96,
+      "text": "the sixth."
+    },
+    {
+      "start": 843.96,
+      "end": 848.5,
+      "text": "So the number of elements in the sample space is 6 to the"
+    },
+    {
+      "start": 848.5,
+      "end": 850.5,
+      "text": "sixth power."
+    },
+    {
+      "start": 850.5,
+      "end": 853.0,
+      "text": "And I guess this checks with this."
+    },
+    {
+      "start": 853.66,
+      "end": 857.46,
+      "text": "We have 6 to the sixth outcomes."
+    },
+    {
+      "start": 857.46,
+      "end": 859.8,
+      "text": "Each one has this much probability."
+    },
+    {
+      "start": 859.8,
+      "end": 864.48,
+      "text": "So the overall probability is equal to 1."
+    },
+    {
+      "start": 864.48,
+      "end": 868.7,
+      "text": "So the probability of an individual outcome is 1 over"
+    },
+    {
+      "start": 868.7,
+      "end": 873.8,
+      "text": "how many possible outcomes we have, which is this."
+    },
+    {
+      "start": 873.8,
+      "end": 876.56,
+      "text": "So how about the numerator?"
+    },
+    {
+      "start": 876.56,
+      "end": 883.34,
+      "text": "We're interested in outcomes in which the numbers that we get"
+    },
+    {
+      "start": 883.34,
+      "end": 883.64,
+      "text": "are"
+    },
+    {
+      "start": 883.66,
+      "end": 888.8,
+      "text": "all different."
+    },
+    {
+      "start": 888.8,
+      "end": 894.12,
+      "text": "So what is an outcome in which the numbers are all different?"
+    },
+    {
+      "start": 894.12,
+      "end": 896.32,
+      "text": "So the die has six faces."
+    },
+    {
+      "start": 896.32,
+      "end": 898.22,
+      "text": "We roll it six times."
+    },
+    {
+      "start": 898.22,
+      "end": 900.32,
+      "text": "We're going to get six different numbers."
+    },
+    {
+      "start": 900.32,
+      "end": 903.76,
+      "text": "This means that we're going to exhaust all the possible"
+    },
+    {
+      "start": 903.76,
+      "end": 907.64,
+      "text": "numbers, but they can appear in any possible sequence."
+    },
+    {
+      "start": 907.64,
+      "end": 913.18,
+      "text": "So an outcome that makes this event happen is a list of the"
+    },
+    {
+      "start": 913.18,
+      "end": 915.2,
+      "text": "numbers from 1 to 6."
+    },
+    {
+      "start": 915.2,
+      "end": 918.2,
+      "text": "But arranged in some arbitrary order."
+    },
+    {
+      "start": 918.2,
+      "end": 923.24,
+      "text": "So the possible outcomes that make event A happen are just"
+    },
+    {
+      "start": 923.24,
+      "end": 927.06,
+      "text": "the permutations of the numbers from 1 to 6."
+    },
+    {
+      "start": 927.06,
+      "end": 934.64,
+      "text": "So one possible outcome that makes our event to happen would"
+    },
+    {
+      "start": 934.64,
+      "end": 939.03,
+      "text": "be this."
+    },
+    {
+      "start": 939.03,
+      "end": 940.71,
+      "text": "Here we have six possible numbers."
+    },
+    {
+      "start": 940.71,
+      "end": 943.45,
+      "text": "But any other list of this kind in which none of the"
+    },
+    {
+      "start": 943.45,
+      "end": 946.67,
+      "text": "numbers is repeated would also do."
+    },
+    {
+      "start": 946.67,
+      "end": 947.53,
+      "text": "So number of outcomes."
+    },
+    {
+      "start": 947.53,
+      "end": 951.65,
+      "text": "The number of outcomes that make the event happen is the"
+    },
+    {
+      "start": 951.65,
+      "end": 953.89,
+      "text": "number of permutations of six elements."
+    },
+    {
+      "start": 953.89,
+      "end": 956.07,
+      "text": "So it's 6 factorial."
+    },
+    {
+      "start": 956.07,
+      "end": 959.83,
+      "text": "And so the final answer is going to be 6 factorial divided"
+    },
+    {
+      "start": 959.83,
+      "end": 962.83,
+      "text": "by 6 to the sixth."
+    },
+    {
+      "start": 962.83,
+      "end": 963.25,
+      "text": "All right."
+    },
+    {
+      "start": 963.25,
+      "end": 966.09,
+      "text": "So that's a typical way that one solves"
+    },
+    {
+      "start": 966.09,
+      "end": 967.79,
+      "text": "problems of this kind."
+    },
+    {
+      "start": 967.79,
+      "end": 970.65,
+      "text": "We know how to count certain things."
+    },
+    {
+      "start": 970.65,
+      "end": 973.63,
+      "text": "For example, here we knew how to count permutations."
+    },
+    {
+      "start": 973.63,
+      "end": 976.63,
+      "text": "And we use our knowledge to count the elements of the set"
+    },
+    {
+      "start": 976.63,
+      "end": 977.53,
+      "text": "that we need to do."
+    },
+    {
+      "start": 977.53,
+      "end": 990.98,
+      "text": "So now let's get to a slightly more difficult problem."
+    },
+    {
+      "start": 990.98,
+      "end": 1000.62,
+      "text": "We're given once more a set with n elements."
+    },
+    {
+      "start": 1000.62,
+      "end": 1005.02,
+      "text": "We already know how many subsets that set has."
+    },
+    {
+      "start": 1005.02,
+      "end": 1010.94,
+      "text": "But now we will be interested in subsets that have exactly k"
+    },
+    {
+      "start": 1010.94,
+      "end": 1014.49,
+      "text": "elements in them."
+    },
+    {
+      "start": 1014.49,
+      "end": 1021.8,
+      "text": "So we start with our big set."
+    },
+    {
+      "start": 1021.8,
+      "end": 1025.28,
+      "text": "We have a subset that has n elements."
+    },
+    {
+      "start": 1025.28,
+      "end": 1031.86,
+      "text": "And we want to construct a subset that has k elements."
+    },
+    {
+      "start": 1031.86,
+      "end": 1036.06,
+      "text": "Out of those n, I'm going to choose k and put them in there."
+    },
+    {
+      "start": 1036.06,
+      "end": 1038.16,
+      "text": "In how many ways can I do this?"
+    },
+    {
+      "start": 1038.16,
+      "end": 1041.94,
+      "text": "More concrete way of thinking about this problem, you have"
+    },
+    {
+      "start": 1041.94,
+      "end": 1043.96,
+      "text": "n people in some group."
+    },
+    {
+      "start": 1043.96,
+      "end": 1047.02,
+      "text": "And you want to form a committee by picking people"
+    },
+    {
+      "start": 1047.02,
+      "end": 1047.8,
+      "text": "from that group."
+    },
+    {
+      "start": 1047.8,
+      "end": 1051.28,
+      "text": "And you want to form a committee with k people, where"
+    },
+    {
+      "start": 1051.28,
+      "end": 1051.68,
+      "text": "k is a given."
+    },
+    {
+      "start": 1051.68,
+      "end": 1054.68,
+      "text": "For example, a five-person committee."
+    },
+    {
+      "start": 1054.68,
+      "end": 1057.36,
+      "text": "How many five-person committees are possible if"
+    },
+    {
+      "start": 1057.36,
+      "end": 1059.44,
+      "text": "you're starting with 100 people?"
+    },
+    {
+      "start": 1059.44,
+      "end": 1060.96,
+      "text": "So that's what we want to count."
+    },
+    {
+      "start": 1060.96,
+      "end": 1064.2,
+      "text": "How many k element subsets are there?"
+    },
+    {
+      "start": 1064.2,
+      "end": 1068.02,
+      "text": "We don't yet know the answer, but let's give a name to it."
+    },
+    {
+      "start": 1068.02,
+      "end": 1072.2,
+      "text": "And the name is going to be this particular symbol, which"
+    },
+    {
+      "start": 1072.2,
+      "end": 1075.5,
+      "text": "we read as n choose k."
+    },
+    {
+      "start": 1075.5,
+      "end": 1081.98,
+      "text": "Out of n elements, we want to choose k of them."
+    },
+    {
+      "start": 1081.98,
+      "end": 1083.72,
+      "text": "That may be a little tricky."
+    },
+    {
+      "start": 1083.92,
+      "end": 1089.6,
+      "text": "So what we're going to do is to instead figure out a"
+    },
+    {
+      "start": 1089.6,
+      "end": 1096.34,
+      "text": "somewhat easier problem, which is going to be, in how many"
+    },
+    {
+      "start": 1096.34,
+      "end": 1103.24,
+      "text": "ways can I pick k out of these people and put them in a"
+    },
+    {
+      "start": 1103.24,
+      "end": 1105.42,
+      "text": "particular order?"
+    },
+    {
+      "start": 1105.42,
+      "end": 1110.4,
+      "text": "So how many possible ordered lists can I make that consist"
+    },
+    {
+      "start": 1110.4,
+      "end": 1111.78,
+      "text": "of k people?"
+    },
+    {
+      "start": 1111.78,
+      "end": 1113.92,
+      "text": "By ordered, I mean that we take"
+    },
+    {
+      "start": 1113.92,
+      "end": 1117.18,
+      "text": "those k people and we say this is the first person in the"
+    },
+    {
+      "start": 1117.18,
+      "end": 1119.6,
+      "text": "committee, that's the second person in the committee,"
+    },
+    {
+      "start": 1119.6,
+      "end": 1122.04,
+      "text": "that's the third person in the committee, and so on."
+    },
+    {
+      "start": 1122.04,
+      "end": 1126.08,
+      "text": "So in how many ways can we do this?"
+    },
+    {
+      "start": 1126.08,
+      "end": 1130.84,
+      "text": "Out of these n, we want to choose just k of them and put"
+    },
+    {
+      "start": 1130.84,
+      "end": 1133.96,
+      "text": "them in slots, one after the other."
+    },
+    {
+      "start": 1133.96,
+      "end": 1137.48,
+      "text": "So this is pretty much like the license plate problem we"
+    },
+    {
+      "start": 1137.48,
+      "end": 1140.68,
+      "text": "solved just a little bit earlier."
+    },
+    {
+      "start": 1140.68,
+      "end": 1145.64,
+      "text": "So we have n choices for who we put as the top"
+    },
+    {
+      "start": 1145.64,
+      "end": 1147.34,
+      "text": "person in the committee."
+    },
+    {
+      "start": 1147.34,
+      "end": 1151.5,
+      "text": "We can pick anyone and have them be the first person."
+    },
+    {
+      "start": 1151.5,
+      "end": 1153.02,
+      "text": "Then I'm going to choose the second"
+    },
+    {
+      "start": 1153.02,
+      "end": 1154.62,
+      "text": "person in the committee."
+    },
+    {
+      "start": 1154.62,
+      "end": 1156.68,
+      "text": "I've used up one person."
+    },
+    {
+      "start": 1156.68,
+      "end": 1161.52,
+      "text": "So I'm going to have n minus 1 choices here."
+    },
+    {
+      "start": 1161.52,
+      "end": 1164.9,
+      "text": "And now at this stage, I've used up two people."
+    },
+    {
+      "start": 1164.9,
+      "end": 1168.64,
+      "text": "So I have n minus 2 choices here."
+    },
+    {
+      "start": 1168.64,
+      "end": 1170.48,
+      "text": "And this keeps going on."
+    },
+    {
+      "start": 1170.68,
+      "end": 1174.08,
+      "text": "Well, what is going to be the last number?"
+    },
+    {
+      "start": 1174.08,
+      "end": 1176.32,
+      "text": "Is it n minus k?"
+    },
+    {
+      "start": 1176.32,
+      "end": 1179.96,
+      "text": "Well, not really."
+    },
+    {
+      "start": 1179.96,
+      "end": 1184.08,
+      "text": "I'm starting subtracting numbers after the second one."
+    },
+    {
+      "start": 1184.08,
+      "end": 1188.24,
+      "text": "So by the end, I will have subtracted k minus 1."
+    },
+    {
+      "start": 1188.24,
+      "end": 1194.8,
+      "text": "So that's how many choices I will have for the last person."
+    },
+    {
+      "start": 1194.8,
+      "end": 1200.68,
+      "text": "So this is the number of ways the product of these numbers"
+    },
+    {
+      "start": 1200.68,
+      "end": 1205.18,
+      "text": "there gives me the number of ways that I can create ordered"
+    },
+    {
+      "start": 1205.18,
+      "end": 1209.3,
+      "text": "lists consisting of k people out of the n"
+    },
+    {
+      "start": 1209.3,
+      "end": 1211.6,
+      "text": "that we started with."
+    },
+    {
+      "start": 1211.6,
+      "end": 1215.12,
+      "text": "Now you can do a little bit of algebra and check that this"
+    },
+    {
+      "start": 1215.12,
+      "end": 1217.92,
+      "text": "expression here is the same as that expression."
+    },
+    {
+      "start": 1217.92,
+      "end": 1219.18,
+      "text": "Why is this?"
+    },
+    {
+      "start": 1219.18,
+      "end": 1222.52,
+      "text": "This factorial has all the products from 1 up to n."
+    },
+    {
+      "start": 1222.52,
+      "end": 1226.0,
+      "text": "This factorial has all the products from 1 up to n minus"
+    },
+    {
+      "start": 1226.0,
+      "end": 1226.72,
+      "text": "k."
+    },
+    {
+      "start": 1226.72,
+      "end": 1228.28,
+      "text": "So you get cancellations."
+    },
+    {
+      "start": 1228.28,
+      "end": 1230.16,
+      "text": "And what's left is all the"
+    },
+    {
+      "start": 1230.16,
+      "end": 1234.24,
+      "text": "products starting from the next number after here, which"
+    },
+    {
+      "start": 1234.24,
+      "end": 1237.6,
+      "text": "is this particular number."
+    },
+    {
+      "start": 1237.6,
+      "end": 1242.3,
+      "text": "So the number of possible ways of creating such ordered lists"
+    },
+    {
+      "start": 1242.3,
+      "end": 1249.46,
+      "text": "is n factorial divided by n minus k factorial."
+    },
+    {
+      "start": 1249.46,
+      "end": 1253.18,
+      "text": "Now, a different way that I could make an ordered list."
+    },
+    {
+      "start": 1253.18,
+      "end": 1257.94,
+      "text": "Instead of picking the people one at a time, I could first"
+    },
+    {
+      "start": 1257.94,
+      "end": 1261.7,
+      "text": "choose my k people who are going to be in the committee,"
+    },
+    {
+      "start": 1261.7,
+      "end": 1266.52,
+      "text": "and then put them in order and tell them, out of these k,"
+    },
+    {
+      "start": 1266.52,
+      "end": 1270.02,
+      "text": "you're the first, you're the second, you're the third."
+    },
+    {
+      "start": 1270.02,
+      "end": 1273.94,
+      "text": "Starting with these k people, in how many ways can I order"
+    },
+    {
+      "start": 1273.94,
+      "end": 1275.58,
+      "text": "them?"
+    },
+    {
+      "start": 1275.58,
+      "end": 1279.24,
+      "text": "That's the number of permutations."
+    },
+    {
+      "start": 1279.24,
+      "end": 1282.5,
+      "text": "Starting with k objects, starting with a set with k"
+    },
+    {
+      "start": 1282.5,
+      "end": 1288.34,
+      "text": "objects, in how many ways can I put them in a specific order?"
+    },
+    {
+      "start": 1288.34,
+      "end": 1291.14,
+      "text": "How many specific orders are there?"
+    },
+    {
+      "start": 1291.14,
+      "end": 1292.3,
+      "text": "That's basically the question."
+    },
+    {
+      "start": 1292.3,
+      "end": 1295.76,
+      "text": "In how many ways can I permute these k people and arrange"
+    },
+    {
+      "start": 1295.76,
+      "end": 1296.28,
+      "text": "them?"
+    },
+    {
+      "start": 1296.28,
+      "end": 1302.65,
+      "text": "So the number of ways that you can do this step is k factorial."
+    },
+    {
+      "start": 1302.65,
+      "end": 1308.35,
+      "text": "So in how many ways can I start with a set with n"
+    },
+    {
+      "start": 1308.35,
+      "end": 1312.01,
+      "text": "elements, go through this process, and end up with a"
+    },
+    {
+      "start": 1312.01,
+      "end": 1315.55,
+      "text": "sorted list with k elements?"
+    },
+    {
+      "start": 1315.55,
+      "end": 1320.29,
+      "text": "By the rule that when we have stages, the total number of"
+    },
+    {
+      "start": 1320.29,
+      "end": 1322.53,
+      "text": "stages is how many choices?"
+    },
+    {
+      "start": 1322.53,
+      "end": 1325.77,
+      "text": "We had in the first stage times how many choices we had"
+    },
+    {
+      "start": 1325.77,
+      "end": 1328.51,
+      "text": "in the second stage."
+    },
+    {
+      "start": 1328.51,
+      "end": 1332.67,
+      "text": "The number of ways that this process can happen is this"
+    },
+    {
+      "start": 1332.67,
+      "end": 1334.89,
+      "text": "times that."
+    },
+    {
+      "start": 1334.89,
+      "end": 1338.33,
+      "text": "This is a different way that that process could happen."
+    },
+    {
+      "start": 1338.33,
+      "end": 1342.61,
+      "text": "And the number of possible ways is this number."
+    },
+    {
+      "start": 1342.61,
+      "end": 1347.15,
+      "text": "No matter which way we carry out that process, in the end"
+    },
+    {
+      "start": 1347.15,
+      "end": 1351.83,
+      "text": "we have the possible ways of arranging k people."
+    },
+    {
+      "start": 1352.53,
+      "end": 1356.77,
+      "text": "So we start out of the n that we started with."
+    },
+    {
+      "start": 1356.77,
+      "end": 1360.73,
+      "text": "So the final answer that we get when we count should be"
+    },
+    {
+      "start": 1360.73,
+      "end": 1364.21,
+      "text": "either this or this times that."
+    },
+    {
+      "start": 1364.21,
+      "end": 1367.61,
+      "text": "Both are equally valid ways of counting, so both should give"
+    },
+    {
+      "start": 1367.61,
+      "end": 1369.05,
+      "text": "us the same answer."
+    },
+    {
+      "start": 1369.05,
+      "end": 1372.85,
+      "text": "So we get this equality here."
+    },
+    {
+      "start": 1372.85,
+      "end": 1376.41,
+      "text": "So these two expressions correspond to two different"
+    },
+    {
+      "start": 1376.41,
+      "end": 1381.69,
+      "text": "ways of constructing ordered lists of k people, starting"
+    },
+    {
+      "start": 1381.69,
+      "end": 1382.33,
+      "text": "with n."
+    },
+    {
+      "start": 1382.53,
+      "end": 1385.59,
+      "text": "n people initially."
+    },
+    {
+      "start": 1385.59,
+      "end": 1389.11,
+      "text": "And now that we have this relation, we can send the k"
+    },
+    {
+      "start": 1389.11,
+      "end": 1391.53,
+      "text": "factorial to the denominator."
+    },
+    {
+      "start": 1391.53,
+      "end": 1394.85,
+      "text": "And that tells us what that number n choose k is going to"
+    },
+    {
+      "start": 1394.85,
+      "end": 1396.27,
+      "text": "be."
+    },
+    {
+      "start": 1396.27,
+      "end": 1400.07,
+      "text": "So this formula, it's written here in red because you're"
+    },
+    {
+      "start": 1400.07,
+      "end": 1402.27,
+      "text": "going to see it a zillion times until the"
+    },
+    {
+      "start": 1402.27,
+      "end": 1403.75,
+      "text": "end of the semester."
+    },
+    {
+      "start": 1403.75,
+      "end": 1411.17,
+      "text": "They are called the binomial coefficients."
+    },
+    {
+      "start": 1411.17,
+      "end": 1414.59,
+      "text": "And they tell us the number of possible ways that we can"
+    },
+    {
+      "start": 1414.59,
+      "end": 1415.53,
+      "text": "create a k element."
+    },
+    {
+      "start": 1415.53,
+      "end": 1419.51,
+      "text": "So this is a k element subset, starting with a set that has n"
+    },
+    {
+      "start": 1419.51,
+      "end": 1421.27,
+      "text": "elements."
+    },
+    {
+      "start": 1421.27,
+      "end": 1424.45,
+      "text": "It's always good to do a sanity check to formulas by"
+    },
+    {
+      "start": 1424.45,
+      "end": 1426.71,
+      "text": "considering extreme cases."
+    },
+    {
+      "start": 1426.71,
+      "end": 1437.02,
+      "text": "So let's take the case where k is equal to n."
+    },
+    {
+      "start": 1437.02,
+      "end": 1439.42,
+      "text": "What's the right answer in this case?"
+    },
+    {
+      "start": 1439.42,
+      "end": 1444.94,
+      "text": "How many n element subsets are there out of an element set?"
+    },
+    {
+      "start": 1444.94,
+      "end": 1447.6,
+      "text": "Well, your subset needs to include everyone."
+    },
+    {
+      "start": 1447.6,
+      "end": 1449.4,
+      "text": "You don't have any choices."
+    },
+    {
+      "start": 1449.4,
+      "end": 1450.74,
+      "text": "There's only one choice."
+    },
+    {
+      "start": 1450.74,
+      "end": 1452.62,
+      "text": "It's the set itself."
+    },
+    {
+      "start": 1452.62,
+      "end": 1455.66,
+      "text": "So the answer should be equal to 1."
+    },
+    {
+      "start": 1455.66,
+      "end": 1459.98,
+      "text": "That's the number of n element subsets, starting with a set"
+    },
+    {
+      "start": 1459.98,
+      "end": 1461.34,
+      "text": "with n elements."
+    },
+    {
+      "start": 1461.34,
+      "end": 1465.24,
+      "text": "Let's see if the formula gives us the right answer."
+    },
+    {
+      "start": 1465.24,
+      "end": 1471.92,
+      "text": "We have n factorial divided by k, which is n in our case, n"
+    },
+    {
+      "start": 1471.92,
+      "end": 1475.38,
+      "text": "factorial, and then n minus k is 0 factorial."
+    },
+    {
+      "start": 1475.38,
+      "end": 1476.42,
+      "text": "So k is equal to n factorial."
+    },
+    {
+      "start": 1476.42,
+      "end": 1477.38,
+      "text": "And then n minus k is 0 factorial."
+    },
+    {
+      "start": 1477.38,
+      "end": 1477.58,
+      "text": "So k is equal to n factorial. And then n minus k is 0 factorial."
+    },
+    {
+      "start": 1477.6,
+      "end": 1482.06,
+      "text": "If our formula is correct, we should have this equality."
+    },
+    {
+      "start": 1482.06,
+      "end": 1485.62,
+      "text": "And what's the way to make that correct?"
+    },
+    {
+      "start": 1485.62,
+      "end": 1487.88,
+      "text": "Well, it depends what kind of meaning do we"
+    },
+    {
+      "start": 1487.88,
+      "end": 1489.44,
+      "text": "give to this symbol."
+    },
+    {
+      "start": 1489.44,
+      "end": 1493.5,
+      "text": "How do we define 0 factorial?"
+    },
+    {
+      "start": 1493.5,
+      "end": 1495.78,
+      "text": "I guess in some ways it's arbitrary."
+    },
+    {
+      "start": 1495.78,
+      "end": 1497.8,
+      "text": "We're going to define it in a way that"
+    },
+    {
+      "start": 1497.8,
+      "end": 1499.64,
+      "text": "makes this formula right."
+    },
+    {
+      "start": 1499.64,
+      "end": 1503.82,
+      "text": "So the definition that we will be using is that whenever you"
+    },
+    {
+      "start": 1503.82,
+      "end": 1507.38,
+      "text": "have 0 factorial, it's going to stand for the number"
+    },
+    {
+      "start": 1507.38,
+      "end": 1508.78,
+      "text": "1."
+    },
+    {
+      "start": 1508.78,
+      "end": 1512.04,
+      "text": "So let's check that this is also correct at the other"
+    },
+    {
+      "start": 1512.04,
+      "end": 1513.36,
+      "text": "extreme case."
+    },
+    {
+      "start": 1513.36,
+      "end": 1517.66,
+      "text": "If we let k equal to 0, what does the formula give us?"
+    },
+    {
+      "start": 1517.66,
+      "end": 1521.96,
+      "text": "It gives us, again, n factorial divided by 0 factorial times n"
+    },
+    {
+      "start": 1521.96,
+      "end": 1523.08,
+      "text": "factorial."
+    },
+    {
+      "start": 1523.08,
+      "end": 1527.56,
+      "text": "According to our convention, this again is equal to 1."
+    },
+    {
+      "start": 1527.56,
+      "end": 1533.76,
+      "text": "So there's one subset of our set that we started with that"
+    },
+    {
+      "start": 1533.76,
+      "end": 1535.34,
+      "text": "has 0 elements."
+    },
+    {
+      "start": 1535.34,
+      "end": 1536.54,
+      "text": "Which subset is it?"
+    },
+    {
+      "start": 1537.38,
+      "end": 1539.98,
+      "text": "It's the empty set."
+    },
+    {
+      "start": 1539.98,
+      "end": 1545.2,
+      "text": "So the empty set is the single subset of the set that we"
+    },
+    {
+      "start": 1545.2,
+      "end": 1549.36,
+      "text": "started with that happens to have exactly 0 elements."
+    },
+    {
+      "start": 1549.36,
+      "end": 1552.5,
+      "text": "So the formula checks in this extreme case as well."
+    },
+    {
+      "start": 1552.5,
+      "end": 1555.82,
+      "text": "So we're comfortable using it."
+    },
+    {
+      "start": 1555.82,
+      "end": 1561.28,
+      "text": "Now these factorials and these coefficients are really messy"
+    },
+    {
+      "start": 1561.28,
+      "end": 1563.1,
+      "text": "algebraic objects."
+    },
+    {
+      "start": 1563.1,
+      "end": 1566.7,
+      "text": "There's lots of beautiful identities that they satisfy."
+    },
+    {
+      "start": 1566.7,
+      "end": 1566.78,
+      "text": "It's true."
+    },
+    {
+      "start": 1566.78,
+      "end": 1566.86,
+      "text": "It's true."
+    },
+    {
+      "start": 1566.86,
+      "end": 1566.94,
+      "text": "It's true."
+    },
+    {
+      "start": 1566.94,
+      "end": 1566.98,
+      "text": "It's true."
+    },
+    {
+      "start": 1566.98,
+      "end": 1567.06,
+      "text": "It's true."
+    },
+    {
+      "start": 1567.06,
+      "end": 1567.18,
+      "text": "It's true."
+    },
+    {
+      "start": 1567.18,
+      "end": 1567.22,
+      "text": "It's true."
+    },
+    {
+      "start": 1567.22,
+      "end": 1567.3,
+      "text": "It's true."
+    },
+    {
+      "start": 1567.3,
+      "end": 1567.34,
+      "text": "It's true."
+    },
+    {
+      "start": 1567.34,
+      "end": 1567.36,
+      "text": "It's true."
+    },
+    {
+      "start": 1567.36,
+      "end": 1567.38,
+      "text": "It's true."
+    },
+    {
+      "start": 1567.38,
+      "end": 1570.38,
+      "text": "which you can prove algebraically, sometimes by"
+    },
+    {
+      "start": 1570.38,
+      "end": 1574.42,
+      "text": "using induction and having cancellations happen all over"
+    },
+    {
+      "start": 1574.42,
+      "end": 1577.8,
+      "text": "the place, but it's really messy."
+    },
+    {
+      "start": 1577.8,
+      "end": 1582.56,
+      "text": "Sometimes you can bypass those calculations by being clever"
+    },
+    {
+      "start": 1582.56,
+      "end": 1584.62,
+      "text": "and using your understanding of what these"
+    },
+    {
+      "start": 1584.62,
+      "end": 1586.62,
+      "text": "coefficients stand for."
+    },
+    {
+      "start": 1586.62,
+      "end": 1591.76,
+      "text": "So here's a typical example."
+    },
+    {
+      "start": 1591.76,
+      "end": 1595.46,
+      "text": "What is the sum of those binomial coefficients?"
+    },
+    {
+      "start": 1595.46,
+      "end": 1600.14,
+      "text": "I fix n, and I sum over all possible k's."
+    },
+    {
+      "start": 1600.14,
+      "end": 1604.12,
+      "text": "So if you're an algebra genius, you're going to take"
+    },
+    {
+      "start": 1604.12,
+      "end": 1609.82,
+      "text": "this expression here, plug it in here, and then start doing"
+    },
+    {
+      "start": 1609.82,
+      "end": 1611.48,
+      "text": "algebra furiously."
+    },
+    {
+      "start": 1611.48,
+      "end": 1614.98,
+      "text": "And half an hour later, you may get the right answer."
+    },
+    {
+      "start": 1614.98,
+      "end": 1616.46,
+      "text": "But now let's try to be clever."
+    },
+    {
+      "start": 1619.54,
+      "end": 1621.42,
+      "text": "What does this really do?"
+    },
+    {
+      "start": 1621.42,
+      "end": 1624.22,
+      "text": "What does that formula count?"
+    },
+    {
+      "start": 1624.22,
+      "end": 1625.46,
+      "text": "We're considering k's."
+    },
+    {
+      "start": 1625.46,
+      "end": 1627.28,
+      "text": "k element subsets."
+    },
+    {
+      "start": 1627.28,
+      "end": 1629.04,
+      "text": "That's this number."
+    },
+    {
+      "start": 1629.04,
+      "end": 1632.36,
+      "text": "And we're considering the number of k element subsets"
+    },
+    {
+      "start": 1632.36,
+      "end": 1634.84,
+      "text": "for different choices of k."
+    },
+    {
+      "start": 1634.84,
+      "end": 1638.82,
+      "text": "The first term in this sum counts how many 0 element"
+    },
+    {
+      "start": 1638.82,
+      "end": 1640.46,
+      "text": "subsets we have."
+    },
+    {
+      "start": 1640.46,
+      "end": 1643.66,
+      "text": "The next term in this sum counts how many 1 element"
+    },
+    {
+      "start": 1643.66,
+      "end": 1644.68,
+      "text": "subsets we have."
+    },
+    {
+      "start": 1644.68,
+      "end": 1650.02,
+      "text": "The next term counts how many 2 element subsets we have."
+    },
+    {
+      "start": 1650.02,
+      "end": 1653.12,
+      "text": "So in the end, what have we counted?"
+    },
+    {
+      "start": 1653.12,
+      "end": 1655.3,
+      "text": "We've counted the total number."
+    },
+    {
+      "start": 1655.3,
+      "end": 1656.66,
+      "text": "Of subsets."
+    },
+    {
+      "start": 1656.66,
+      "end": 1659.66,
+      "text": "We've considered all possible cardinalities."
+    },
+    {
+      "start": 1659.66,
+      "end": 1663.42,
+      "text": "We've added the cardinalities of how many."
+    },
+    {
+      "start": 1663.42,
+      "end": 1666.82,
+      "text": "We've counted the number of subsets of size k."
+    },
+    {
+      "start": 1666.82,
+      "end": 1669.76,
+      "text": "We've considered all possible sizes k."
+    },
+    {
+      "start": 1669.76,
+      "end": 1677.88,
+      "text": "The overall count is going to be the total number of subsets."
+    },
+    {
+      "start": 1677.88,
+      "end": 1680.8,
+      "text": "And we know what this is."
+    },
+    {
+      "start": 1680.8,
+      "end": 1683.74,
+      "text": "A couple of slides ago, we discussed that this number is"
+    },
+    {
+      "start": 1683.74,
+      "end": 1685.48,
+      "text": "equal to 2 to the n."
+    },
+    {
+      "start": 1685.48,
+      "end": 1687.26,
+      "text": "So nice, clean, and simple."
+    },
+    {
+      "start": 1687.26,
+      "end": 1692.7,
+      "text": "Answer, which is easy to get, easy to guess, once you give an"
+    },
+    {
+      "start": 1692.7,
+      "end": 1696.5,
+      "text": "interpretation to the algebraic expression that you"
+    },
+    {
+      "start": 1696.5,
+      "end": 1701.59,
+      "text": "have in front of you."
+    },
+    {
+      "start": 1701.59,
+      "end": 1707.15,
+      "text": "All right, so let's move again to sort of an example in which"
+    },
+    {
+      "start": 1707.15,
+      "end": 1711.96,
+      "text": "those binomial coefficients are going to show up."
+    },
+    {
+      "start": 1711.96,
+      "end": 1714.72,
+      "text": "So here's the setting."
+    },
+    {
+      "start": 1714.72,
+      "end": 1719.1,
+      "text": "n independent coin tosses."
+    },
+    {
+      "start": 1719.1,
+      "end": 1722.14,
+      "text": "And each coin toss has a probability."
+    },
+    {
+      "start": 1722.14,
+      "end": 1725.78,
+      "text": "p of resulting in heads."
+    },
+    {
+      "start": 1725.78,
+      "end": 1728.32,
+      "text": "So this is our probabilistic experiment."
+    },
+    {
+      "start": 1728.32,
+      "end": 1731.22,
+      "text": "Suppose we do six tosses."
+    },
+    {
+      "start": 1731.22,
+      "end": 1734.14,
+      "text": "What's the probability that we get this particular sequence of"
+    },
+    {
+      "start": 1734.14,
+      "end": 1736.32,
+      "text": "outcomes?"
+    },
+    {
+      "start": 1736.32,
+      "end": 1739.82,
+      "text": "Because of independence, we can multiply probabilities."
+    },
+    {
+      "start": 1739.82,
+      "end": 1742.42,
+      "text": "So it's going to be the probability that the first"
+    },
+    {
+      "start": 1742.42,
+      "end": 1745.58,
+      "text": "toss results in heads, times the probability that the"
+    },
+    {
+      "start": 1745.58,
+      "end": 1748.76,
+      "text": "second toss results in tails, times the probability that the"
+    },
+    {
+      "start": 1748.76,
+      "end": 1752.1,
+      "text": "third one results in tails, times probability of heads,"
+    },
+    {
+      "start": 1752.1,
+      "end": 1754.6,
+      "text": "times probability of heads, times probability of heads,"
+    },
+    {
+      "start": 1754.6,
+      "end": 1760.96,
+      "text": "which is just p to the fourth times 1 minus p squared."
+    },
+    {
+      "start": 1760.96,
+      "end": 1764.36,
+      "text": "So that's the probability of this particular sequence."
+    },
+    {
+      "start": 1764.36,
+      "end": 1767.0,
+      "text": "How about a different sequence?"
+    },
+    {
+      "start": 1767.0,
+      "end": 1772.5,
+      "text": "If I had four tails and two heads, but in a different"
+    },
+    {
+      "start": 1772.5,
+      "end": 1781.81,
+      "text": "order, let's say if we considered this particular"
+    },
+    {
+      "start": 1781.81,
+      "end": 1785.49,
+      "text": "outcome, would the answer be different?"
+    },
+    {
+      "start": 1785.49,
+      "end": 1789.35,
+      "text": "We would still have p times p times p times p times 1 minus"
+    },
+    {
+      "start": 1789.35,
+      "end": 1791.09,
+      "text": "p times 1 minus p."
+    },
+    {
+      "start": 1791.09,
+      "end": 1794.67,
+      "text": "We would get, again, the same answer."
+    },
+    {
+      "start": 1794.67,
+      "end": 1799.53,
+      "text": "So what you observe from just this example is that, more"
+    },
+    {
+      "start": 1799.53,
+      "end": 1803.23,
+      "text": "generally, the probability of obtaining a particular"
+    },
+    {
+      "start": 1803.23,
+      "end": 1808.93,
+      "text": "sequence of heads and tails is p to a power equal to the"
+    },
+    {
+      "start": 1808.93,
+      "end": 1810.31,
+      "text": "number of heads."
+    },
+    {
+      "start": 1810.31,
+      "end": 1812.25,
+      "text": "So here we had four heads."
+    },
+    {
+      "start": 1812.25,
+      "end": 1815.11,
+      "text": "So there's p to the fourth showing up."
+    },
+    {
+      "start": 1815.11,
+      "end": 1820.91,
+      "text": "And then 1 minus p to the power number of tails."
+    },
+    {
+      "start": 1820.91,
+      "end": 1829.29,
+      "text": "So every k-head sequence, every outcome in which we have"
+    },
+    {
+      "start": 1829.29,
+      "end": 1834.35,
+      "text": "exactly k heads, has the same probability, which is going to"
+    },
+    {
+      "start": 1834.35,
+      "end": 1838.93,
+      "text": "be p to the k, 1 minus p to the n minus k."
+    },
+    {
+      "start": 1838.93,
+      "end": 1843.33,
+      "text": "This is the probability of any particular sequence that has"
+    },
+    {
+      "start": 1843.33,
+      "end": 1844.97,
+      "text": "exactly k heads."
+    },
+    {
+      "start": 1844.97,
+      "end": 1846.97,
+      "text": "So that's the probability of a particular"
+    },
+    {
+      "start": 1846.97,
+      "end": 1848.91,
+      "text": "sequence with k heads."
+    },
+    {
+      "start": 1848.91,
+      "end": 1853.35,
+      "text": "So now let's ask the question, what is the probability that my"
+    },
+    {
+      "start": 1853.35,
+      "end": 1857.47,
+      "text": "experiment results in exactly k heads, but"
+    },
+    {
+      "start": 1857.47,
+      "end": 1859.91,
+      "text": "in some arbitrary order?"
+    },
+    {
+      "start": 1859.91,
+      "end": 1862.47,
+      "text": "So the heads could show up anywhere."
+    },
+    {
+      "start": 1862.47,
+      "end": 1864.21,
+      "text": "So there's a number of different ways that"
+    },
+    {
+      "start": 1864.21,
+      "end": 1865.47,
+      "text": "this can happen."
+    },
+    {
+      "start": 1865.47,
+      "end": 1871.19,
+      "text": "What's the overall probability that this event takes place?"
+    },
+    {
+      "start": 1871.19,
+      "end": 1874.81,
+      "text": "So the probability of an event taking place is the"
+    },
+    {
+      "start": 1874.97,
+      "end": 1879.41,
+      "text": "sum of the probabilities of all the individual ways that"
+    },
+    {
+      "start": 1879.41,
+      "end": 1882.03,
+      "text": "the event can occur."
+    },
+    {
+      "start": 1882.03,
+      "end": 1884.41,
+      "text": "So it's the sum of the probabilities of all the"
+    },
+    {
+      "start": 1884.41,
+      "end": 1887.69,
+      "text": "outcomes that make the event happen."
+    },
+    {
+      "start": 1887.69,
+      "end": 1891.31,
+      "text": "The different ways that we can obtain k heads are the"
+    },
+    {
+      "start": 1891.31,
+      "end": 1897.95,
+      "text": "different sequences that contain exactly k heads."
+    },
+    {
+      "start": 1897.95,
+      "end": 1904.43,
+      "text": "We just figured out that any sequence with exactly k heads"
+    },
+    {
+      "start": 1904.43,
+      "end": 1907.11,
+      "text": "has this probability."
+    },
+    {
+      "start": 1907.11,
+      "end": 1911.11,
+      "text": "So to do this summation, we just need to take the common"
+    },
+    {
+      "start": 1911.11,
+      "end": 1916.41,
+      "text": "probability of each individual k head sequence times how many"
+    },
+    {
+      "start": 1916.41,
+      "end": 1921.31,
+      "text": "terms we have in this sum."
+    },
+    {
+      "start": 1921.31,
+      "end": 1928.17,
+      "text": "So what we're left to do now is to figure out how many k head"
+    },
+    {
+      "start": 1928.17,
+      "end": 1933.27,
+      "text": "sequences are there, how many outcomes are there in which we"
+    },
+    {
+      "start": 1933.27,
+      "end": 1938.68,
+      "text": "have exactly k heads."
+    },
+    {
+      "start": 1938.68,
+      "end": 1938.98,
+      "text": "OK."
+    },
+    {
+      "start": 1939.58,
+      "end": 1947.59,
+      "text": "So what are the ways that I can describe to you a sequence"
+    },
+    {
+      "start": 1947.59,
+      "end": 1950.53,
+      "text": "with k heads?"
+    },
+    {
+      "start": 1950.53,
+      "end": 1954.99,
+      "text": "I can take my n slots that correspond to"
+    },
+    {
+      "start": 1954.99,
+      "end": 1962.91,
+      "text": "the different tosses."
+    },
+    {
+      "start": 1962.91,
+      "end": 1966.77,
+      "text": "I'm interested in particular sequences that have exactly k"
+    },
+    {
+      "start": 1966.77,
+      "end": 1973.59,
+      "text": "heads, so what I need to do is to choose k slots and assign"
+    },
+    {
+      "start": 1973.59,
+      "end": 1985.52,
+      "text": "heads to them."
+    },
+    {
+      "start": 1985.52,
+      "end": 1986.52,
+      "text": "So to specify."
+    },
+    {
+      "start": 1986.52,
+      "end": 1992.12,
+      "text": "To specify a sequence that has exactly k heads is the same"
+    },
+    {
+      "start": 1992.12,
+      "end": 1997.8,
+      "text": "thing as drawing this picture and telling you which are the"
+    },
+    {
+      "start": 1997.8,
+      "end": 2003.64,
+      "text": "k slots that happen to have heads."
+    },
+    {
+      "start": 2003.64,
+      "end": 2010.12,
+      "text": "So I need to choose out of those n slots, k of them, and"
+    },
+    {
+      "start": 2010.12,
+      "end": 2011.76,
+      "text": "assign them heads."
+    },
+    {
+      "start": 2011.76,
+      "end": 2015.4,
+      "text": "In how many ways can I choose these k slots?"
+    },
+    {
+      "start": 2015.4,
+      "end": 2021.66,
+      "text": "Well, it's the question of starting with a set of n slots"
+    },
+    {
+      "start": 2021.66,
+      "end": 2027.08,
+      "text": "and choosing k slots out of the n available."
+    },
+    {
+      "start": 2027.08,
+      "end": 2037.26,
+      "text": "So number of k head sequences is the same as the number of k"
+    },
+    {
+      "start": 2037.26,
+      "end": 2045.06,
+      "text": "element subsets of the set of slots that we started with."
+    },
+    {
+      "start": 2045.4,
+      "end": 2050.52,
+      "text": "Which are the n slots, 1 up to n."
+    },
+    {
+      "start": 2050.52,
+      "end": 2052.82,
+      "text": "We know what that number is."
+    },
+    {
+      "start": 2052.82,
+      "end": 2058.76,
+      "text": "We counted before the number of k element subsets, starting"
+    },
+    {
+      "start": 2058.76,
+      "end": 2061.7,
+      "text": "with a set with n elements, and we gave a symbol to that"
+    },
+    {
+      "start": 2061.7,
+      "end": 2064.86,
+      "text": "number, which is that thing, and choose k."
+    },
+    {
+      "start": 2064.86,
+      "end": 2068.12,
+      "text": "So this is the final answer that we obtain."
+    },
+    {
+      "start": 2068.12,
+      "end": 2072.46,
+      "text": "So these are the so-called binomial probabilities."
+    },
+    {
+      "start": 2072.46,
+      "end": 2075.18,
+      "text": "And they give us the probabilities for different"
+    },
+    {
+      "start": 2075.18,
+      "end": 2076.3,
+      "text": "numbers of heads."
+    },
+    {
+      "start": 2076.64,
+      "end": 2080.88,
+      "text": "Starting with a fair coin that's being tossed a number of"
+    },
+    {
+      "start": 2080.88,
+      "end": 2082.06,
+      "text": "times."
+    },
+    {
+      "start": 2082.06,
+      "end": 2086.16,
+      "text": "This formula is correct, of course, for reasonable values"
+    },
+    {
+      "start": 2086.16,
+      "end": 2092.4,
+      "text": "of k, meaning it's correct for k equals 0, 1 up to n."
+    },
+    {
+      "start": 2092.4,
+      "end": 2097.64,
+      "text": "If k is bigger than n, what's the probability of k heads?"
+    },
+    {
+      "start": 2097.64,
+      "end": 2101.34,
+      "text": "If k is bigger than n, there's no way to obtain k heads, so"
+    },
+    {
+      "start": 2101.34,
+      "end": 2103.48,
+      "text": "that probability is, of course, 0."
+    },
+    {
+      "start": 2103.48,
+      "end": 2106.52,
+      "text": "So these probabilities only make sense for the"
+    },
+    {
+      "start": 2106.52,
+      "end": 2113.2,
+      "text": "numbers k that are possible, given that we have n tosses."
+    },
+    {
+      "start": 2113.2,
+      "end": 2117.46,
+      "text": "And now a question similar to the one we had in the previous"
+    },
+    {
+      "start": 2117.46,
+      "end": 2118.48,
+      "text": "slide."
+    },
+    {
+      "start": 2118.48,
+      "end": 2124.46,
+      "text": "If I write down this summation, even worse algebra"
+    },
+    {
+      "start": 2124.46,
+      "end": 2131.68,
+      "text": "than the one in the previous slide, what do you think this"
+    },
+    {
+      "start": 2131.68,
+      "end": 2135.84,
+      "text": "number will turn out to be?"
+    },
+    {
+      "start": 2135.84,
+      "end": 2137.44,
+      "text": "It should be 1."
+    },
+    {
+      "start": 2137.44,
+      "end": 2138.86,
+      "text": "Because?"
+    },
+    {
+      "start": 2138.86,
+      "end": 2142.84,
+      "text": "This is the probability of obtaining k heads."
+    },
+    {
+      "start": 2142.84,
+      "end": 2145.46,
+      "text": "When we do the summation, what we're doing is we're"
+    },
+    {
+      "start": 2145.46,
+      "end": 2148.68,
+      "text": "considering the probability of 0 heads plus the probability of"
+    },
+    {
+      "start": 2148.68,
+      "end": 2150.86,
+      "text": "1 head, plus the probability of 2 heads, plus the"
+    },
+    {
+      "start": 2150.86,
+      "end": 2152.42,
+      "text": "probability of n heads."
+    },
+    {
+      "start": 2152.42,
+      "end": 2154.48,
+      "text": "We've exhausted all the possibilities"
+    },
+    {
+      "start": 2154.48,
+      "end": 2155.72,
+      "text": "in our experiment."
+    },
+    {
+      "start": 2155.72,
+      "end": 2158.72,
+      "text": "So the overall probability, when you exhaust all"
+    },
+    {
+      "start": 2158.72,
+      "end": 2161.16,
+      "text": "possibilities, must be equal to 1."
+    },
+    {
+      "start": 2161.16,
+      "end": 2164.18,
+      "text": "So that's yet another beautiful formula that"
+    },
+    {
+      "start": 2164.18,
+      "end": 2166.92,
+      "text": "evaluates into something really simple."
+    },
+    {
+      "start": 2166.92,
+      "end": 2168.14,
+      "text": "And it's great."
+    },
+    {
+      "start": 2168.14,
+      "end": 2168.82,
+      "text": "You try."
+    },
+    {
+      "start": 2168.82,
+      "end": 2168.86,
+      "text": "Thank you."
+    },
+    {
+      "start": 2168.86,
+      "end": 2172.74,
+      "text": "to prove this identity algebraically, of course, you"
+    },
+    {
+      "start": 2172.74,
+      "end": 2176.06,
+      "text": "would have to suffer quite a bit."
+    },
+    {
+      "start": 2176.06,
+      "end": 2180.1,
+      "text": "So now armed with the binomial probabilities, we can do the"
+    },
+    {
+      "start": 2180.1,
+      "end": 2183.5,
+      "text": "harder problems."
+    },
+    {
+      "start": 2183.5,
+      "end": 2187.38,
+      "text": "So let's take the same experiment again."
+    },
+    {
+      "start": 2187.38,
+      "end": 2192.62,
+      "text": "We flip a coin independently 10 times."
+    },
+    {
+      "start": 2192.62,
+      "end": 2197.28,
+      "text": "So these 10 tosses are independent."
+    },
+    {
+      "start": 2197.28,
+      "end": 2200.0,
+      "text": "We flip it 10 times."
+    },
+    {
+      "start": 2200.0,
+      "end": 2203.62,
+      "text": "We don't see the result, but somebody comes and tells us,"
+    },
+    {
+      "start": 2203.62,
+      "end": 2208.32,
+      "text": "you know there were exactly three heads in the 10 tosses"
+    },
+    {
+      "start": 2208.32,
+      "end": 2210.94,
+      "text": "that you had."
+    },
+    {
+      "start": 2210.94,
+      "end": 2213.28,
+      "text": "So a certain event happened."
+    },
+    {
+      "start": 2213.28,
+      "end": 2217.44,
+      "text": "And now you're asked to find the probability of another"
+    },
+    {
+      "start": 2217.44,
+      "end": 2221.38,
+      "text": "event, which is that the first two tosses were heads."
+    },
+    {
+      "start": 2221.38,
+      "end": 2227.57,
+      "text": "Let's call that event A."
+    },
+    {
+      "start": 2227.57,
+      "end": 2233.37,
+      "text": "OK, so are we in the setting of"
+    },
+    {
+      "start": 2233.37,
+      "end": 2236.93,
+      "text": "discrete uniform probability laws?"
+    },
+    {
+      "start": 2236.93,
+      "end": 2241.77,
+      "text": "When we toss a coin multiple times, is it the case that all"
+    },
+    {
+      "start": 2241.77,
+      "end": 2244.13,
+      "text": "outcomes are equally likely?"
+    },
+    {
+      "start": 2244.13,
+      "end": 2247.87,
+      "text": "All sequences are equally likely?"
+    },
+    {
+      "start": 2247.87,
+      "end": 2251.67,
+      "text": "That's the case if you have a fair coin, that all sequences"
+    },
+    {
+      "start": 2251.67,
+      "end": 2252.65,
+      "text": "are equally likely."
+    },
+    {
+      "start": 2252.65,
+      "end": 2257.35,
+      "text": "But if your coin is not fair, of course heads-heads is going"
+    },
+    {
+      "start": 2257.35,
+      "end": 2259.73,
+      "text": "to have a different probability than tails-tails."
+    },
+    {
+      "start": 2259.73,
+      "end": 2263.35,
+      "text": "If your coin is biased towards heads, then heads-heads"
+    },
+    {
+      "start": 2263.37,
+      "end": 2265.33,
+      "text": "is going to be more likely."
+    },
+    {
+      "start": 2265.33,
+      "end": 2269.61,
+      "text": "So we're not quite in the uniform setting."
+    },
+    {
+      "start": 2269.61,
+      "end": 2273.45,
+      "text": "Our overall sample space, omega, does not have equally"
+    },
+    {
+      "start": 2273.45,
+      "end": 2275.61,
+      "text": "likely elements."
+    },
+    {
+      "start": 2275.61,
+      "end": 2277.87,
+      "text": "Do we care about that?"
+    },
+    {
+      "start": 2277.87,
+      "end": 2279.69,
+      "text": "Not necessarily."
+    },
+    {
+      "start": 2279.69,
+      "end": 2284.55,
+      "text": "All the action now happens inside the event B that we're"
+    },
+    {
+      "start": 2284.55,
+      "end": 2286.51,
+      "text": "told has occurred."
+    },
+    {
+      "start": 2286.51,
+      "end": 2289.99,
+      "text": "So we have our big sample space, omega."
+    },
+    {
+      "start": 2289.99,
+      "end": 2293.37,
+      "text": "Elements of that sample space are not equally likely."
+    },
+    {
+      "start": 2293.37,
+      "end": 2297.39,
+      "text": "We are told that a certain event B occurred."
+    },
+    {
+      "start": 2297.39,
+      "end": 2301.81,
+      "text": "And inside that event B, we're asked to find the conditional"
+    },
+    {
+      "start": 2301.81,
+      "end": 2306.07,
+      "text": "probability that A has also occurred."
+    },
+    {
+      "start": 2306.07,
+      "end": 2307.93,
+      "text": "Now here's the lucky thing."
+    },
+    {
+      "start": 2307.93,
+      "end": 2315.92,
+      "text": "Inside the event B, all outcomes are equally likely."
+    },
+    {
+      "start": 2315.92,
+      "end": 2320.72,
+      "text": "The outcomes inside B are the sequences of 10 tosses that"
+    },
+    {
+      "start": 2320.72,
+      "end": 2322.96,
+      "text": "have exactly three heads."
+    },
+    {
+      "start": 2322.96,
+      "end": 2327.36,
+      "text": "Every three-head sequence has this probability."
+    },
+    {
+      "start": 2327.36,
+      "end": 2335.81,
+      "text": "So the elements of B are equally likely with each other."
+    },
+    {
+      "start": 2335.81,
+      "end": 2341.05,
+      "text": "Once we condition on the event B having occurred, what"
+    },
+    {
+      "start": 2341.05,
+      "end": 2343.73,
+      "text": "happens to the probabilities of the different outcomes"
+    },
+    {
+      "start": 2343.73,
+      "end": 2345.43,
+      "text": "inside here?"
+    },
+    {
+      "start": 2345.43,
+      "end": 2349.79,
+      "text": "Well, conditional probability laws keep the same proportions"
+    },
+    {
+      "start": 2349.79,
+      "end": 2351.71,
+      "text": "as the unconditional ones."
+    },
+    {
+      "start": 2351.71,
+      "end": 2355.07,
+      "text": "The elements of B were equally likely when we started."
+    },
+    {
+      "start": 2355.27,
+      "end": 2361.63,
+      "text": "So they're equally likely once we are told that B has occurred."
+    },
+    {
+      "start": 2361.63,
+      "end": 2366.49,
+      "text": "So to deal with this problem, we need to just transport us to"
+    },
+    {
+      "start": 2366.49,
+      "end": 2370.79,
+      "text": "this smaller universe and think about what's happening in"
+    },
+    {
+      "start": 2370.79,
+      "end": 2372.93,
+      "text": "that little universe."
+    },
+    {
+      "start": 2372.93,
+      "end": 2377.23,
+      "text": "In that little universe, all elements of B are equally"
+    },
+    {
+      "start": 2377.23,
+      "end": 2381.43,
+      "text": "likely, so to find the number, to find the probability of"
+    },
+    {
+      "start": 2381.43,
+      "end": 2385.21,
+      "text": "some subset of that set, we only need to count the"
+    },
+    {
+      "start": 2385.21,
+      "end": 2389.39,
+      "text": "cardinality of B and count the cardinality of A."
+    },
+    {
+      "start": 2389.39,
+      "end": 2391.09,
+      "text": "So let's do that."
+    },
+    {
+      "start": 2391.09,
+      "end": 2397.69,
+      "text": "Number of outcomes in B. In how many ways can we get three"
+    },
+    {
+      "start": 2397.69,
+      "end": 2400.29,
+      "text": "heads out of 10 tosses?"
+    },
+    {
+      "start": 2400.29,
+      "end": 2403.01,
+      "text": "That's the number we considered before."
+    },
+    {
+      "start": 2403.01,
+      "end": 2406.27,
+      "text": "And it's 10 choose 3."
+    },
+    {
+      "start": 2406.27,
+      "end": 2411.39,
+      "text": "This is the number of three-head sequences when you"
+    },
+    {
+      "start": 2411.39,
+      "end": 2413.83,
+      "text": "have 10 tosses."
+    },
+    {
+      "start": 2413.83,
+      "end": 2414.85,
+      "text": "Now let's look at the"
+    },
+    {
+      "start": 2414.85,
+      "end": 2423.39,
+      "text": "event A. The event A is that the first two tosses were heads,"
+    },
+    {
+      "start": 2423.39,
+      "end": 2429.03,
+      "text": "but we're living now inside this universe B. Given that B"
+    },
+    {
+      "start": 2429.03,
+      "end": 2434.75,
+      "text": "occurred, how many elements does A have in there?"
+    },
+    {
+      "start": 2434.75,
+      "end": 2441.76,
+      "text": "In how many ways can A happen inside the B universe?"
+    },
+    {
+      "start": 2441.76,
+      "end": 2446.08,
+      "text": "If you're told that the first two were heads, how many"
+    },
+    {
+      "start": 2446.1,
+      "end": 2446.72,
+      "text": "are heads?"
+    },
+    {
+      "start": 2446.72,
+      "end": 2449.48,
+      "text": "Sorry."
+    },
+    {
+      "start": 2449.48,
+      "end": 2454.56,
+      "text": "So out of the outcomes in B that have three heads, how many"
+    },
+    {
+      "start": 2454.56,
+      "end": 2456.62,
+      "text": "start with heads, heads?"
+    },
+    {
+      "start": 2456.62,
+      "end": 2460.3,
+      "text": "Well, if it starts with heads, heads, then the only"
+    },
+    {
+      "start": 2460.3,
+      "end": 2464.84,
+      "text": "uncertainty is the location of the third head."
+    },
+    {
+      "start": 2464.84,
+      "end": 2467.34,
+      "text": "So we started with heads, heads."
+    },
+    {
+      "start": 2467.34,
+      "end": 2470.52,
+      "text": "We're going to have three heads."
+    },
+    {
+      "start": 2470.52,
+      "end": 2474.1,
+      "text": "The question is, where is that third head going to be?"
+    },
+    {
+      "start": 2474.1,
+      "end": 2476.54,
+      "text": "It has eight possibilities."
+    },
+    {
+      "start": 2476.54,
+      "end": 2477.38,
+      "text": "So slot one is heads."
+    },
+    {
+      "start": 2477.38,
+      "end": 2477.54,
+      "text": "."
+    },
+    {
+      "start": 2477.54,
+      "end": 2479.44,
+      "text": "head, slot two is heads."
+    },
+    {
+      "start": 2479.44,
+      "end": 2482.14,
+      "text": "The third head can be anywhere else."
+    },
+    {
+      "start": 2482.14,
+      "end": 2485.68,
+      "text": "So there's eight possibilities for where the third head is"
+    },
+    {
+      "start": 2485.68,
+      "end": 2491.66,
+      "text": "going to be."
+    },
+    {
+      "start": 2491.66,
+      "end": 2496.74,
+      "text": "So what we have counted here is really the cardinality of A"
+    },
+    {
+      "start": 2496.74,
+      "end": 2503.47,
+      "text": "intersection B, which is out of the elements in B, how many"
+    },
+    {
+      "start": 2503.47,
+      "end": 2509.41,
+      "text": "of them make A happen, divided by the cardinality of B. And"
+    },
+    {
+      "start": 2509.41,
+      "end": 2513.41,
+      "text": "that gives us the answer, which is going to be 10"
+    },
+    {
+      "start": 2513.41,
+      "end": 2517.53,
+      "text": "choose 3 divided by 8."
+    },
+    {
+      "start": 2517.53,
+      "end": 2521.17,
+      "text": "And I should probably redraw a little bit of the picture"
+    },
+    {
+      "start": 2521.17,
+      "end": 2522.51,
+      "text": "that I have here."
+    },
+    {
+      "start": 2522.51,
+      "end": 2526.69,
+      "text": "The set A is not necessarily contained in B. It could also"
+    },
+    {
+      "start": 2526.69,
+      "end": 2534.19,
+      "text": "have stuff outside B. So the event that the first two"
+    },
+    {
+      "start": 2534.19,
+      "end": 2538.17,
+      "text": "tosses are heads can happen with a total of three heads,"
+    },
+    {
+      "start": 2538.17,
+      "end": 2540.35,
+      "text": "but it can also happen with a different"
+    },
+    {
+      "start": 2540.35,
+      "end": 2542.65,
+      "text": "total number of heads."
+    },
+    {
+      "start": 2542.65,
+      "end": 2547.41,
+      "text": "But once we are transported inside the set B, what we need"
+    },
+    {
+      "start": 2547.41,
+      "end": 2552.47,
+      "text": "to count is just this part of A. It's A intersection B. And"
+    },
+    {
+      "start": 2552.47,
+      "end": 2553.99,
+      "text": "compare it with the total number of"
+    },
+    {
+      "start": 2553.99,
+      "end": 2556.05,
+      "text": "elements in the set B."
+    },
+    {
+      "start": 2556.05,
+      "end": 2560.39,
+      "text": "Did I write it the opposite way?"
+    },
+    {
+      "start": 2560.39,
+      "end": 2561.69,
+      "text": "Yes."
+    },
+    {
+      "start": 2561.69,
+      "end": 2569.65,
+      "text": "So this is 8 over 10 choose 3."
+    },
+    {
+      "start": 2569.65,
+      "end": 2572.81,
+      "text": "So we're going to close with a more difficult problem now."
+    },
+    {
+      "start": 2579.44,
+      "end": 2585.48,
+      "text": "This business of n choose k has to do with starting with a"
+    },
+    {
+      "start": 2585.48,
+      "end": 2591.36,
+      "text": "set and picking a subset of k elements."
+    },
+    {
+      "start": 2591.36,
+      "end": 2594.98,
+      "text": "Another way of thinking of that is that we start with a"
+    },
+    {
+      "start": 2594.98,
+      "end": 2600.8,
+      "text": "set with n elements, and you choose a subset that has k,"
+    },
+    {
+      "start": 2600.8,
+      "end": 2604.38,
+      "text": "which means that there's n minus k that are left."
+    },
+    {
+      "start": 2604.38,
+      "end": 2609.24,
+      "text": "Picking a subset is the same as partitioning our set."
+    },
+    {
+      "start": 2609.44,
+      "end": 2612.48,
+      "text": "Into two pieces."
+    },
+    {
+      "start": 2612.48,
+      "end": 2616.02,
+      "text": "Now let's generalize this question and start counting"
+    },
+    {
+      "start": 2616.02,
+      "end": 2618.16,
+      "text": "partitions in general."
+    },
+    {
+      "start": 2618.16,
+      "end": 2622.58,
+      "text": "Somebody gives you a set that has n elements."
+    },
+    {
+      "start": 2622.58,
+      "end": 2626.94,
+      "text": "Somebody gives you also certain numbers, n1, n2, n3,"
+    },
+    {
+      "start": 2626.94,
+      "end": 2633.74,
+      "text": "let's say n4, where these numbers add up to n."
+    },
+    {
+      "start": 2633.74,
+      "end": 2638.84,
+      "text": "And you're asked to partition this set into four subsets,"
+    },
+    {
+      "start": 2638.84,
+      "end": 2639.4,
+      "text": "where each one has a set of n elements."
+    },
+    {
+      "start": 2639.4,
+      "end": 2642.58,
+      "text": "Each one of the subsets has this particular cardinality."
+    },
+    {
+      "start": 2642.58,
+      "end": 2648.9,
+      "text": "So you're asking to cut it into four pieces, each one having"
+    },
+    {
+      "start": 2648.9,
+      "end": 2651.12,
+      "text": "the prescribed cardinality."
+    },
+    {
+      "start": 2651.12,
+      "end": 2655.1,
+      "text": "In how many ways can we do this partitioning?"
+    },
+    {
+      "start": 2655.1,
+      "end": 2659.4,
+      "text": "n choose k was the answer when we partition in two pieces."
+    },
+    {
+      "start": 2659.4,
+      "end": 2661.9,
+      "text": "What's the answer more generally?"
+    },
+    {
+      "start": 2661.9,
+      "end": 2666.24,
+      "text": "For a concrete example of a partition, you have your 52"
+    },
+    {
+      "start": 2666.24,
+      "end": 2667.54,
+      "text": "card deck."
+    },
+    {
+      "start": 2667.54,
+      "end": 2668.74,
+      "text": "And you deal."
+    },
+    {
+      "start": 2668.74,
+      "end": 2670.22,
+      "text": "As in bridge."
+    },
+    {
+      "start": 2670.22,
+      "end": 2673.98,
+      "text": "By giving 13 cards to each one of the players."
+    },
+    {
+      "start": 2673.98,
+      "end": 2678.06,
+      "text": "Assuming that the dealing is done fairly and with a well"
+    },
+    {
+      "start": 2678.06,
+      "end": 2683.74,
+      "text": "shuffled deck of cards, every particular partition of the 52"
+    },
+    {
+      "start": 2683.74,
+      "end": 2690.58,
+      "text": "cards into four hands, that is four subsets of 13 each,"
+    },
+    {
+      "start": 2690.58,
+      "end": 2692.36,
+      "text": "should be equally likely."
+    },
+    {
+      "start": 2692.36,
+      "end": 2696.12,
+      "text": "So we take the 52 cards and we partition them into subsets of"
+    },
+    {
+      "start": 2696.12,
+      "end": 2698.52,
+      "text": "13, 13, 13, and 13."
+    },
+    {
+      "start": 2698.52,
+      "end": 2701.02,
+      "text": "And we assume that all possible partitions, all"
+    },
+    {
+      "start": 2701.02,
+      "end": 2704.24,
+      "text": "possible ways of dealing the cards are equally likely."
+    },
+    {
+      "start": 2704.24,
+      "end": 2707.58,
+      "text": "So we are again in a setting where we can use counting,"
+    },
+    {
+      "start": 2707.58,
+      "end": 2710.42,
+      "text": "because all the possible outcomes are equally likely."
+    },
+    {
+      "start": 2710.42,
+      "end": 2714.04,
+      "text": "So an outcome of the experiment is the hands that"
+    },
+    {
+      "start": 2714.04,
+      "end": 2717.06,
+      "text": "each player ends up getting."
+    },
+    {
+      "start": 2717.06,
+      "end": 2720.02,
+      "text": "And when you get the cards in your hands, it doesn't matter"
+    },
+    {
+      "start": 2720.02,
+      "end": 2722.0,
+      "text": "in which order you got them."
+    },
+    {
+      "start": 2722.0,
+      "end": 2725.46,
+      "text": "It only matters what cards you have on you."
+    },
+    {
+      "start": 2725.46,
+      "end": 2728.0,
+      "text": "So it only matters which subset of the cards."
+    },
+    {
+      "start": 2728.0,
+      "end": 2731.14,
+      "text": "cards you got."
+    },
+    {
+      "start": 2731.14,
+      "end": 2734.06,
+      "text": "All right, so what's the cardinality of the sample"
+    },
+    {
+      "start": 2734.06,
+      "end": 2737.14,
+      "text": "space in this experiment?"
+    },
+    {
+      "start": 2737.14,
+      "end": 2741.8,
+      "text": "So let's do it for the concrete numbers that we have"
+    },
+    {
+      "start": 2741.8,
+      "end": 2749.41,
+      "text": "for the problem of partitioning 52 cards."
+    },
+    {
+      "start": 2749.41,
+      "end": 2751.49,
+      "text": "So think of dealing as follows."
+    },
+    {
+      "start": 2751.49,
+      "end": 2754.57,
+      "text": "You shuffle the deck perfectly, and then you take"
+    },
+    {
+      "start": 2754.57,
+      "end": 2757.75,
+      "text": "the top 13 cards and give them to one person."
+    },
+    {
+      "start": 2757.75,
+      "end": 2763.19,
+      "text": "And how many possible hands are there for that person?"
+    },
+    {
+      "start": 2763.19,
+      "end": 2768.97,
+      "text": "Out of the 52 cards, I choose 13 at random and give them to"
+    },
+    {
+      "start": 2768.97,
+      "end": 2770.63,
+      "text": "the first person."
+    },
+    {
+      "start": 2770.63,
+      "end": 2773.25,
+      "text": "Having done that, what happens next?"
+    },
+    {
+      "start": 2773.25,
+      "end": 2776.25,
+      "text": "I'm left with 39 cards."
+    },
+    {
+      "start": 2776.25,
+      "end": 2780.59,
+      "text": "And out of those 39 cards, I pick 13 of them and give them"
+    },
+    {
+      "start": 2780.59,
+      "end": 2782.23,
+      "text": "to the second person."
+    },
+    {
+      "start": 2782.23,
+      "end": 2785.75,
+      "text": "Now I'm left with 26 cards."
+    },
+    {
+      "start": 2785.75,
+      "end": 2787.67,
+      "text": "Out of those 26, I choose"
+    },
+    {
+      "start": 2787.67,
+      "end": 2787.75,
+      "text": "13."
+    },
+    {
+      "start": 2787.75,
+      "end": 2790.91,
+      "text": "Give them to the third person."
+    },
+    {
+      "start": 2790.91,
+      "end": 2794.05,
+      "text": "And for the last person, there isn't really any choice."
+    },
+    {
+      "start": 2794.05,
+      "end": 2797.89,
+      "text": "Out of the 13, I have to give that person all 13."
+    },
+    {
+      "start": 2797.89,
+      "end": 2800.23,
+      "text": "And that number is just equal to 1."
+    },
+    {
+      "start": 2800.23,
+      "end": 2803.51,
+      "text": "So we don't care about it."
+    },
+    {
+      "start": 2803.51,
+      "end": 2807.47,
+      "text": "All right, so next thing you do is to write down the"
+    },
+    {
+      "start": 2807.47,
+      "end": 2809.43,
+      "text": "formulas for these numbers."
+    },
+    {
+      "start": 2809.43,
+      "end": 2813.29,
+      "text": "So for example, here you would have 52 factorial divided by"
+    },
+    {
+      "start": 2813.29,
+      "end": 2817.55,
+      "text": "13 factorial times 39 factorial."
+    },
+    {
+      "start": 2817.55,
+      "end": 2819.05,
+      "text": "And you continue."
+    },
+    {
+      "start": 2819.05,
+      "end": 2821.35,
+      "text": "And then there are nice cancellations that happen."
+    },
+    {
+      "start": 2821.35,
+      "end": 2825.13,
+      "text": "This 39 factorial is going to cancel the 39 factorial that"
+    },
+    {
+      "start": 2825.13,
+      "end": 2827.03,
+      "text": "comes from there, and so on."
+    },
+    {
+      "start": 2827.03,
+      "end": 2830.19,
+      "text": "After you do the cancellations and all the algebra, you're"
+    },
+    {
+      "start": 2830.19,
+      "end": 2833.39,
+      "text": "left with this particular answer, which is the number of"
+    },
+    {
+      "start": 2833.39,
+      "end": 2838.11,
+      "text": "possible partitions of 52 cards into four players, where"
+    },
+    {
+      "start": 2838.11,
+      "end": 2841.71,
+      "text": "each player gets exactly 13 hands."
+    },
+    {
+      "start": 2841.71,
+      "end": 2845.05,
+      "text": "If you were to generalize this formula to the setting that we"
+    },
+    {
+      "start": 2845.05,
+      "end": 2848.21,
+      "text": "have here, the more general formula is."
+    },
+    {
+      "start": 2848.21,
+      "end": 2853.85,
+      "text": "You have n factorial, where n is the number of objects that"
+    },
+    {
+      "start": 2853.85,
+      "end": 2859.77,
+      "text": "you are distributing, divided by the product of the"
+    },
+    {
+      "start": 2859.77,
+      "end": 2863.97,
+      "text": "factorials of the case."
+    },
+    {
+      "start": 2863.97,
+      "end": 2866.85,
+      "text": "Here I'm doing it for the case where we split it into three"
+    },
+    {
+      "start": 2866.85,
+      "end": 2869.27,
+      "text": "sets, into four sets."
+    },
+    {
+      "start": 2869.27,
+      "end": 2873.73,
+      "text": "So that would be the answer when we partition a set into"
+    },
+    {
+      "start": 2873.73,
+      "end": 2877.77,
+      "text": "four subsets of prescribed cardinalities."
+    },
+    {
+      "start": 2877.77,
+      "end": 2878.05,
+      "text": "And you can use that."
+    },
+    {
+      "start": 2878.05,
+      "end": 2878.13,
+      "text": "."
+    },
+    {
+      "start": 2878.13,
+      "end": 2880.55,
+      "text": "You can guess how that formula would generalize if you want to"
+    },
+    {
+      "start": 2880.55,
+      "end": 2883.57,
+      "text": "split it into five sets or six sets."
+    },
+    {
+      "start": 2883.57,
+      "end": 2890.17,
+      "text": "OK, so far we just figured out the size of the sample space."
+    },
+    {
+      "start": 2890.17,
+      "end": 2894.65,
+      "text": "Now we need to look at our event, which is the event that"
+    },
+    {
+      "start": 2894.65,
+      "end": 2897.03,
+      "text": "each player gets an ace."
+    },
+    {
+      "start": 2897.03,
+      "end": 2901.03,
+      "text": "Let's call that event A. In how many ways"
+    },
+    {
+      "start": 2901.03,
+      "end": 2902.79,
+      "text": "can that event happen?"
+    },
+    {
+      "start": 2902.79,
+      "end": 2906.95,
+      "text": "How many possible hands are there in which every player"
+    },
+    {
+      "start": 2906.95,
+      "end": 2907.97,
+      "text": "has exactly one ace?"
+    },
+    {
+      "start": 2907.97,
+      "end": 2913.11,
+      "text": "So I need to think about the sequential process by which I"
+    },
+    {
+      "start": 2913.11,
+      "end": 2917.61,
+      "text": "distribute the cards so that everybody gets exactly one ace."
+    },
+    {
+      "start": 2917.61,
+      "end": 2920.93,
+      "text": "And then try to think in how many ways can that sequential"
+    },
+    {
+      "start": 2920.93,
+      "end": 2922.21,
+      "text": "process happen."
+    },
+    {
+      "start": 2922.21,
+      "end": 2925.65,
+      "text": "So one way of making sure that everybody gets exactly one ace"
+    },
+    {
+      "start": 2925.65,
+      "end": 2926.73,
+      "text": "is the following."
+    },
+    {
+      "start": 2926.73,
+      "end": 2931.23,
+      "text": "I take the four aces, and I distribute them randomly to"
+    },
+    {
+      "start": 2931.23,
+      "end": 2933.97,
+      "text": "the four players, but making sure that each one gets"
+    },
+    {
+      "start": 2933.97,
+      "end": 2935.57,
+      "text": "exactly one ace."
+    },
+    {
+      "start": 2935.57,
+      "end": 2937.51,
+      "text": "In how many ways can that happen?"
+    },
+    {
+      "start": 2937.51,
+      "end": 2942.03,
+      "text": "I take the ace of spades, and I send it to a random person"
+    },
+    {
+      "start": 2942.03,
+      "end": 2943.19,
+      "text": "out of the four."
+    },
+    {
+      "start": 2943.19,
+      "end": 2947.35,
+      "text": "So there's four choices for this."
+    },
+    {
+      "start": 2947.35,
+      "end": 2950.27,
+      "text": "Then I'm left with three aces to distribute."
+    },
+    {
+      "start": 2950.27,
+      "end": 2952.69,
+      "text": "That person already got an ace."
+    },
+    {
+      "start": 2952.69,
+      "end": 2957.69,
+      "text": "So I take the next ace, and I give it to one of the three"
+    },
+    {
+      "start": 2957.69,
+      "end": 2959.57,
+      "text": "people remaining."
+    },
+    {
+      "start": 2959.57,
+      "end": 2962.47,
+      "text": "So there's three choices for how to do that."
+    },
+    {
+      "start": 2962.47,
+      "end": 2966.75,
+      "text": "And then for the next ace, there's two people who have"
+    },
+    {
+      "start": 2966.75,
+      "end": 2968.75,
+      "text": "not yet gotten an ace, and they give it"
+    },
+    {
+      "start": 2968.75,
+      "end": 2970.79,
+      "text": "randomly to one of them."
+    },
+    {
+      "start": 2970.79,
+      "end": 2977.65,
+      "text": "So these are the possible ways of distributing the four aces"
+    },
+    {
+      "start": 2977.65,
+      "end": 2982.03,
+      "text": "so that each person gets exactly one."
+    },
+    {
+      "start": 2982.03,
+      "end": 2985.45,
+      "text": "It's actually the same as this problem, starting with a set"
+    },
+    {
+      "start": 2985.45,
+      "end": 2987.25,
+      "text": "of four things."
+    },
+    {
+      "start": 2987.25,
+      "end": 2990.59,
+      "text": "In how many ways can I partition them into four"
+    },
+    {
+      "start": 2990.59,
+      "end": 2994.73,
+      "text": "subsets where the first set has one element, the second"
+    },
+    {
+      "start": 2994.73,
+      "end": 2996.75,
+      "text": "has one element, the third one has another element?"
+    },
+    {
+      "start": 2996.75,
+      "end": 2998.27,
+      "text": "And so on."
+    },
+    {
+      "start": 2998.27,
+      "end": 3006.04,
+      "text": "So it agrees with that formula by giving us four factorial."
+    },
+    {
+      "start": 3006.04,
+      "end": 3009.4,
+      "text": "So there are different ways of distributing the aces."
+    },
+    {
+      "start": 3009.4,
+      "end": 3011.78,
+      "text": "And then there's different ways of distributing the"
+    },
+    {
+      "start": 3011.78,
+      "end": 3013.48,
+      "text": "remaining 48 cards."
+    },
+    {
+      "start": 3013.48,
+      "end": 3015.1,
+      "text": "How many ways are there?"
+    },
+    {
+      "start": 3015.1,
+      "end": 3018.92,
+      "text": "Well, I have 48 cards that I'm going to distribute to four"
+    },
+    {
+      "start": 3018.92,
+      "end": 3022.76,
+      "text": "players by giving 12 cards to each one."
+    },
+    {
+      "start": 3022.76,
+      "end": 3026.44,
+      "text": "It's exactly the same question as the one we had here, except"
+    },
+    {
+      "start": 3026.44,
+      "end": 3027.86,
+      "text": "that now it's 48 cards."
+    },
+    {
+      "start": 3027.86,
+      "end": 3030.22,
+      "text": "12 to each person."
+    },
+    {
+      "start": 3030.22,
+      "end": 3033.38,
+      "text": "And that gives us this particular count."
+    },
+    {
+      "start": 3033.38,
+      "end": 3038.94,
+      "text": "So putting all that together gives us the different ways"
+    },
+    {
+      "start": 3038.94,
+      "end": 3043.34,
+      "text": "that we can distribute the cards to the four players so"
+    },
+    {
+      "start": 3043.34,
+      "end": 3045.92,
+      "text": "that each one gets exactly one ace."
+    },
+    {
+      "start": 3045.92,
+      "end": 3050.88,
+      "text": "The number of possible ways is going to be this 4 factorial,"
+    },
+    {
+      "start": 3050.88,
+      "end": 3054.6,
+      "text": "coming from here, times this number."
+    },
+    {
+      "start": 3054.6,
+      "end": 3057.38,
+      "text": "This gives us the number of ways that the event of interest"
+    },
+    {
+      "start": 3057.38,
+      "end": 3058.76,
+      "text": "can happen."
+    },
+    {
+      "start": 3058.76,
+      "end": 3062.74,
+      "text": "And then the denominator is the cardinality of our sample"
+    },
+    {
+      "start": 3062.74,
+      "end": 3064.92,
+      "text": "space, which is this number."
+    },
+    {
+      "start": 3064.92,
+      "end": 3067.56,
+      "text": "So this looks like a horrible mess."
+    },
+    {
+      "start": 3067.56,
+      "end": 3070.52,
+      "text": "It turns out that this expression does simplify to"
+    },
+    {
+      "start": 3070.52,
+      "end": 3073.18,
+      "text": "something really, really simple."
+    },
+    {
+      "start": 3073.18,
+      "end": 3076.42,
+      "text": "And if you look at the textbook for this problem, you"
+    },
+    {
+      "start": 3076.42,
+      "end": 3078.76,
+      "text": "will see an alternative derivation that gives you a"
+    },
+    {
+      "start": 3078.76,
+      "end": 3082.7,
+      "text": "shortcut to the same numerical answer."
+    },
+    {
+      "start": 3082.7,
+      "end": 3083.14,
+      "text": "All right."
+    },
+    {
+      "start": 3083.14,
+      "end": 3085.22,
+      "text": "So that basically concludes chapter one."
+    },
+    {
+      "start": 3085.22,
+      "end": 3086.78,
+      "text": "From next time, we're going to go to the next chapter."
+    },
+    {
+      "start": 3086.78,
+      "end": 3086.86,
+      "text": "Thank you very much."
+    },
+    {
+      "start": 3087.38,
+      "end": 3092.18,
+      "text": "To consider, introduce random variables and make the subject"
+    },
+    {
+      "start": 3092.18,
+      "end": 3093.42,
+      "text": "even more interesting."
+    }
+  ]
+}

@@ -1,0 +1,5082 @@
+{
+  "lecture": "lec25",
+  "language": "en",
+  "duration": 3126.0373125,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.44,
+      "text": "The following content is provided under a Creative"
+    },
+    {
+      "start": 2.44,
+      "end": 3.96,
+      "text": "Commons license."
+    },
+    {
+      "start": 3.96,
+      "end": 6.28,
+      "text": "Your support will help MIT OpenCourseWare"
+    },
+    {
+      "start": 6.28,
+      "end": 10.64,
+      "text": "continue to offer high quality educational resources for free."
+    },
+    {
+      "start": 10.64,
+      "end": 13.26,
+      "text": "To make a donation or view additional materials"
+    },
+    {
+      "start": 13.26,
+      "end": 17.2,
+      "text": "from hundreds of MIT courses, visit MIT OpenCourseWare"
+    },
+    {
+      "start": 17.2,
+      "end": 22.55,
+      "text": "at ocw.mit.edu."
+    },
+    {
+      "start": 22.55,
+      "end": 25.79,
+      "text": "OK, if you have not yet done it,"
+    },
+    {
+      "start": 25.79,
+      "end": 28.79,
+      "text": "please take a moment to go through the course evaluation"
+    },
+    {
+      "start": 28.79,
+      "end": 32.85,
+      "text": "website and enter your comments for the class."
+    },
+    {
+      "start": 32.85,
+      "end": 36.37,
+      "text": "So what we're going to do today to wrap things up is we're"
+    },
+    {
+      "start": 36.37,
+      "end": 39.93,
+      "text": "going to go through a tour of the world of hypothesis"
+    },
+    {
+      "start": 39.93,
+      "end": 44.45,
+      "text": "testing, see a few examples of hypothesis tests, starting"
+    },
+    {
+      "start": 44.45,
+      "end": 48.23,
+      "text": "from a simple one, such as the one, the setting that we"
+    },
+    {
+      "start": 48.23,
+      "end": 51.17,
+      "text": "discussed last time, in which you just have two hypotheses"
+    },
+    {
+      "start": 51.17,
+      "end": 54.11,
+      "text": "you are trying to choose between them, but also look at"
+    },
+    {
+      "start": 54.11,
+      "end": 58.77,
+      "text": "more complicated situations in which you have one sort of"
+    },
+    {
+      "start": 58.77,
+      "end": 60.61,
+      "text": "a basic hypothesis."
+    },
+    {
+      "start": 60.61,
+      "end": 63.69,
+      "text": "Let's say that you have a fair coin, and you want to test it"
+    },
+    {
+      "start": 63.69,
+      "end": 66.17,
+      "text": "against the hypothesis that your coin is not fair."
+    },
+    {
+      "start": 66.17,
+      "end": 69.31,
+      "text": "But that alternative hypothesis is really lots of"
+    },
+    {
+      "start": 69.31,
+      "end": 70.99,
+      "text": "different hypotheses."
+    },
+    {
+      "start": 70.99,
+      "end": 72.31,
+      "text": "So is my coin fair?"
+    },
+    {
+      "start": 72.31,
+      "end": 73.79,
+      "text": "Is my die fair?"
+    },
+    {
+      "start": 73.79,
+      "end": 75.97,
+      "text": "Do I have the correct distribution for a random"
+    },
+    {
+      "start": 75.97,
+      "end": 77.53,
+      "text": "variable, and so on?"
+    },
+    {
+      "start": 77.53,
+      "end": 80.97,
+      "text": "And I'm going to end up with a few general comments about"
+    },
+    {
+      "start": 80.97,
+      "end": 83.19,
+      "text": "this whole business."
+    },
+    {
+      "start": 83.19,
+      "end": 88.35,
+      "text": "So the setting in simple hypothesis testing problems is"
+    },
+    {
+      "start": 88.35,
+      "end": 89.03,
+      "text": "the following."
+    },
+    {
+      "start": 89.03,
+      "end": 92.17,
+      "text": "We have two possible models."
+    },
+    {
+      "start": 92.17,
+      "end": 95.15,
+      "text": "And this is the classical world, so we do not have any"
+    },
+    {
+      "start": 95.15,
+      "end": 97.85,
+      "text": "prior probabilities on the two hypotheses."
+    },
+    {
+      "start": 97.85,
+      "end": 101.33,
+      "text": "Usually, we want to think of these hypotheses as not being"
+    },
+    {
+      "start": 101.33,
+      "end": 104.73,
+      "text": "completely symmetrical, but rather one is the default"
+    },
+    {
+      "start": 104.73,
+      "end": 105.95,
+      "text": "hypothesis."
+    },
+    {
+      "start": 105.95,
+      "end": 109.63,
+      "text": "And usually, it's referred to as the null hypothesis."
+    },
+    {
+      "start": 109.63,
+      "end": 113.41,
+      "text": "And you want to check whether the null hypothesis is true,"
+    },
+    {
+      "start": 113.41,
+      "end": 116.45,
+      "text": "whether things are sort of normal, as you would have"
+    },
+    {
+      "start": 116.45,
+      "end": 117.91,
+      "text": "expected them to be."
+    },
+    {
+      "start": 117.91,
+      "end": 120.85,
+      "text": "Or whether it turns out to be false, in which case an"
+    },
+    {
+      "start": 120.85,
+      "end": 123.69,
+      "text": "alternative hypothesis would be correct."
+    },
+    {
+      "start": 123.69,
+      "end": 128.74,
+      "text": "So how does one go about it?"
+    },
+    {
+      "start": 128.74,
+      "end": 132.68,
+      "text": "No matter what approach you use, in the end, you're going"
+    },
+    {
+      "start": 132.68,
+      "end": 134.18,
+      "text": "to end up doing the following."
+    },
+    {
+      "start": 134.18,
+      "end": 137.28,
+      "text": "You have the space of possible observations"
+    },
+    {
+      "start": 137.28,
+      "end": 138.94,
+      "text": "that you may obtain."
+    },
+    {
+      "start": 138.94,
+      "end": 141.58,
+      "text": "So when you do the experiment, you're going to get an x"
+    },
+    {
+      "start": 141.58,
+      "end": 145.02,
+      "text": "vector, a vector of data that's somewhere."
+    },
+    {
+      "start": 145.02,
+      "end": 147.72,
+      "text": "And for some vectors, you're going to decide that you"
+    },
+    {
+      "start": 147.72,
+      "end": 148.98,
+      "text": "accept H0."
+    },
+    {
+      "start": 148.98,
+      "end": 150.02,
+      "text": "For some vectors, that you"
+    },
+    {
+      "start": 150.02,
+      "end": 153.12,
+      "text": "reject H0, and you accept H1."
+    },
+    {
+      "start": 153.12,
+      "end": 157.06,
+      "text": "So what you will end up doing is that you're going to have"
+    },
+    {
+      "start": 157.06,
+      "end": 161.64,
+      "text": "some division of the space of all x's into two parts."
+    },
+    {
+      "start": 161.64,
+      "end": 165.62,
+      "text": "And one part is the rejection region, and one part is the"
+    },
+    {
+      "start": 165.62,
+      "end": 167.02,
+      "text": "acceptance region."
+    },
+    {
+      "start": 167.02,
+      "end": 169.66,
+      "text": "So if you fall in here, you accept H0."
+    },
+    {
+      "start": 169.66,
+      "end": 173.2,
+      "text": "If you fall here, you reject H0."
+    },
+    {
+      "start": 173.2,
+      "end": 177.16,
+      "text": "So to design a hypothesis test, basically, you need to"
+    },
+    {
+      "start": 177.16,
+      "end": 180.02,
+      "text": "come up with a division of your x space."
+    },
+    {
+      "start": 180.02,
+      "end": 183.36,
+      "text": "And you have to divide it into two pieces."
+    },
+    {
+      "start": 183.36,
+      "end": 188.74,
+      "text": "So figuring out how to do this involves two elements."
+    },
+    {
+      "start": 188.74,
+      "end": 192.64,
+      "text": "One element is to decide what kind of shape do I want for my"
+    },
+    {
+      "start": 192.64,
+      "end": 194.7,
+      "text": "dividing curve?"
+    },
+    {
+      "start": 194.7,
+      "end": 198.2,
+      "text": "And having chosen the shape of the dividing curve, where"
+    },
+    {
+      "start": 198.2,
+      "end": 200.5,
+      "text": "exactly do I put it?"
+    },
+    {
+      "start": 200.5,
+      "end": 203.96,
+      "text": "So if you were to cut this space using, let's say, a"
+    },
+    {
+      "start": 203.96,
+      "end": 207.34,
+      "text": "straight cut, you might put it here, or you might put it"
+    },
+    {
+      "start": 207.34,
+      "end": 208.92,
+      "text": "there, or you might put it there."
+    },
+    {
+      "start": 208.92,
+      "end": 211.72,
+      "text": "Where exactly are you going to put it?"
+    },
+    {
+      "start": 211.72,
+      "end": 213.52,
+      "text": "So let's look at those two steps."
+    },
+    {
+      "start": 213.52,
+      "end": 218.68,
+      "text": "The first issue is to decide the general shape of your"
+    },
+    {
+      "start": 218.68,
+      "end": 221.54,
+      "text": "rejection region, which is sort of the"
+    },
+    {
+      "start": 221.54,
+      "end": 223.42,
+      "text": "structure of your test."
+    },
+    {
+      "start": 223.42,
+      "end": 227.38,
+      "text": "And the way this is done for the case of two hypotheses is"
+    },
+    {
+      "start": 227.38,
+      "end": 231.98,
+      "text": "by writing down the likelihood ratio between the two"
+    },
+    {
+      "start": 231.98,
+      "end": 232.82,
+      "text": "hypotheses."
+    },
+    {
+      "start": 232.82,
+      "end": 235.82,
+      "text": "So let's call that quantity L of x."
+    },
+    {
+      "start": 235.82,
+      "end": 238.92,
+      "text": "It's something that you can compute, given the data that"
+    },
+    {
+      "start": 238.92,
+      "end": 240.58,
+      "text": "you have."
+    },
+    {
+      "start": 240.58,
+      "end": 244.64,
+      "text": "A high value of L of x basically means that this"
+    },
+    {
+      "start": 244.64,
+      "end": 248.1,
+      "text": "probability here tends to be bigger than this probability."
+    },
+    {
+      "start": 248.1,
+      "end": 252.14,
+      "text": "It means that the data that you have seen are quite likely"
+    },
+    {
+      "start": 252.14,
+      "end": 256.26,
+      "text": "to have occurred under H1, but less likely to have occurred"
+    },
+    {
+      "start": 256.26,
+      "end": 258.38,
+      "text": "under H0."
+    },
+    {
+      "start": 258.38,
+      "end": 262.72,
+      "text": "So if you see data that are more plausible, can be better"
+    },
+    {
+      "start": 262.72,
+      "end": 266.46,
+      "text": "explained under H1, then this ratio is big."
+    },
+    {
+      "start": 266.46,
+      "end": 268.76,
+      "text": "And you're going to choose in favor of H1."
+    },
+    {
+      "start": 268.76,
+      "end": 271.0,
+      "text": "Or reject H0."
+    },
+    {
+      "start": 271.0,
+      "end": 272.94,
+      "text": "That's what you do if you have discrete data."
+    },
+    {
+      "start": 272.94,
+      "end": 274.38,
+      "text": "You use the PMFs."
+    },
+    {
+      "start": 274.38,
+      "end": 277.46,
+      "text": "If you have densities, in the case of continuous data, again"
+    },
+    {
+      "start": 277.46,
+      "end": 282.72,
+      "text": "you consider the ratio of the two densities."
+    },
+    {
+      "start": 282.72,
+      "end": 286.88,
+      "text": "So a big L of x is sort of evidence that your data are"
+    },
+    {
+      "start": 286.88,
+      "end": 291.6,
+      "text": "more compatible with H1 rather than H0."
+    },
+    {
+      "start": 291.6,
+      "end": 298.52,
+      "text": "Once you accept this kind of structure, then your decision"
+    },
+    {
+      "start": 298.52,
+      "end": 302.04,
+      "text": "is really made in terms of that single number."
+    },
+    {
+      "start": 302.04,
+      "end": 305.44,
+      "text": "That is, you had your data that was some kind of vector."
+    },
+    {
+      "start": 305.44,
+      "end": 309.44,
+      "text": "And you condense your data into a single number, a"
+    },
+    {
+      "start": 309.44,
+      "end": 311.36,
+      "text": "statistic as it's called."
+    },
+    {
+      "start": 311.36,
+      "end": 313.54,
+      "text": "In this case, the likelihood ratio."
+    },
+    {
+      "start": 313.54,
+      "end": 317.66,
+      "text": "And you put a dividing point somewhere here."
+    },
+    {
+      "start": 317.66,
+      "end": 319.18,
+      "text": "Call it xi."
+    },
+    {
+      "start": 319.18,
+      "end": 321.56,
+      "text": "And in this region, you accept H1."
+    },
+    {
+      "start": 321.56,
+      "end": 325.22,
+      "text": "In this region, you accept H0."
+    },
+    {
+      "start": 325.22,
+      "end": 327.82,
+      "text": "So by committing ourselves to using this kind of"
+    },
+    {
+      "start": 327.82,
+      "end": 328.36,
+      "text": "distribution."
+    },
+    {
+      "start": 328.36,
+      "end": 332.34,
+      "text": "Using the likelihood ratio in order to carry out the test,"
+    },
+    {
+      "start": 332.34,
+      "end": 335.64,
+      "text": "we have gone from this complicated picture of finding"
+    },
+    {
+      "start": 335.64,
+      "end": 339.32,
+      "text": "a dividing line in x space to a simpler problem of just"
+    },
+    {
+      "start": 339.32,
+      "end": 345.24,
+      "text": "finding a dividing point on the real line."
+    },
+    {
+      "start": 345.24,
+      "end": 346.92,
+      "text": "OK."
+    },
+    {
+      "start": 346.92,
+      "end": 351.62,
+      "text": "So what's left to do is to choose this threshold xi, or"
+    },
+    {
+      "start": 351.62,
+      "end": 356.52,
+      "text": "as it's called, the critical value for making our decision."
+    },
+    {
+      "start": 356.52,
+      "end": 358.36,
+      "text": "And you can place it."
+    },
+    {
+      "start": 358.36,
+      "end": 359.48,
+      "text": "Anywhere."
+    },
+    {
+      "start": 359.48,
+      "end": 363.22,
+      "text": "But one way of deciding where to place it is the following."
+    },
+    {
+      "start": 363.22,
+      "end": 367.72,
+      "text": "Look at the distribution of this random variable, L of x."
+    },
+    {
+      "start": 367.72,
+      "end": 371.4,
+      "text": "It has a certain distribution under H0."
+    },
+    {
+      "start": 371.4,
+      "end": 376.2,
+      "text": "And it has some other distribution under H1."
+    },
+    {
+      "start": 376.2,
+      "end": 379.64,
+      "text": "If I put my threshold here, here's what's going to happen."
+    },
+    {
+      "start": 379.64,
+      "end": 384.6,
+      "text": "When H0 is true, there is this much probability that I'm going"
+    },
+    {
+      "start": 384.6,
+      "end": 387.34,
+      "text": "to end up making an incorrect decision."
+    },
+    {
+      "start": 387.34,
+      "end": 388.12,
+      "text": "If H0 is true."
+    },
+    {
+      "start": 388.12,
+      "end": 388.36,
+      "text": "."
+    },
+    {
+      "start": 388.36,
+      "end": 390.46,
+      "text": "If H0 is true, there's still a probability that my"
+    },
+    {
+      "start": 390.46,
+      "end": 393.94,
+      "text": "likelihood ratio will be bigger than xi."
+    },
+    {
+      "start": 393.94,
+      "end": 396.96,
+      "text": "And that's the probability of making an incorrect decision of"
+    },
+    {
+      "start": 396.96,
+      "end": 398.58,
+      "text": "this particular type."
+    },
+    {
+      "start": 398.58,
+      "end": 402.72,
+      "text": "That is, of making a false rejection of H0."
+    },
+    {
+      "start": 402.72,
+      "end": 406.32,
+      "text": "Usually one sets this probability to a certain"
+    },
+    {
+      "start": 406.32,
+      "end": 408.22,
+      "text": "number, alpha."
+    },
+    {
+      "start": 408.22,
+      "end": 411.76,
+      "text": "For example, alpha being 5%."
+    },
+    {
+      "start": 411.76,
+      "end": 415.68,
+      "text": "And once you decide that you want this to be 5%, that"
+    },
+    {
+      "start": 415.68,
+      "end": 418.12,
+      "text": "determines where this number xi is going to be."
+    },
+    {
+      "start": 418.12,
+      "end": 427.56,
+      "text": "So the idea here is that I'm going to reject H0 if the data"
+    },
+    {
+      "start": 427.56,
+      "end": 432.6,
+      "text": "that I have seen are quite incompatible with H0, if"
+    },
+    {
+      "start": 432.6,
+      "end": 436.84,
+      "text": "they're quite unlikely to have occurred under H0."
+    },
+    {
+      "start": 436.84,
+      "end": 439.68,
+      "text": "And I take this level, 5%."
+    },
+    {
+      "start": 439.68,
+      "end": 441.78,
+      "text": "So I see my data."
+    },
+    {
+      "start": 441.78,
+      "end": 446.48,
+      "text": "And then I say, well, if H0 was true, the probability that I"
+    },
+    {
+      "start": 446.48,
+      "end": 447.98,
+      "text": "would have seen data of this kind of probability would be 5%."
+    },
+    {
+      "start": 447.98,
+      "end": 455.38,
+      "text": "Given that I saw those data, that suggests that H0 is not"
+    },
+    {
+      "start": 455.38,
+      "end": 460.75,
+      "text": "true, and I end up rejecting H0."
+    },
+    {
+      "start": 460.75,
+      "end": 464.11,
+      "text": "Now, of course, there's the other type of error"
+    },
+    {
+      "start": 464.11,
+      "end": 465.21,
+      "text": "probability."
+    },
+    {
+      "start": 465.21,
+      "end": 470.03,
+      "text": "If I put my threshold here, if H1 is true, but my"
+    },
+    {
+      "start": 470.03,
+      "end": 473.47,
+      "text": "likelihood ratio falls here, I'm going to make a mistake of"
+    },
+    {
+      "start": 473.47,
+      "end": 474.53,
+      "text": "the opposite kind."
+    },
+    {
+      "start": 474.53,
+      "end": 479.47,
+      "text": "H1 is true, but my likelihood ratio turned out to be small."
+    },
+    {
+      "start": 479.47,
+      "end": 482.37,
+      "text": "And I decided in favor of H0."
+    },
+    {
+      "start": 482.37,
+      "end": 484.75,
+      "text": "This is an error of the other kind."
+    },
+    {
+      "start": 484.75,
+      "end": 488.03,
+      "text": "This probability of error, we call it beta."
+    },
+    {
+      "start": 488.03,
+      "end": 490.09,
+      "text": "And you can see that there's a trade-off"
+    },
+    {
+      "start": 490.09,
+      "end": 492.31,
+      "text": "between alpha and beta."
+    },
+    {
+      "start": 492.31,
+      "end": 495.71,
+      "text": "If you move your threshold this way, alpha becomes smaller,"
+    },
+    {
+      "start": 495.71,
+      "end": 498.33,
+      "text": "but beta becomes larger."
+    },
+    {
+      "start": 498.33,
+      "end": 502.05,
+      "text": "And the general picture is, in your trade-off, depending on"
+    },
+    {
+      "start": 502.05,
+      "end": 505.97,
+      "text": "where you put your threshold, is as follows."
+    },
+    {
+      "start": 505.97,
+      "end": 508.97,
+      "text": "You can make this beta to be 0."
+    },
+    {
+      "start": 508.97,
+      "end": 512.41,
+      "text": "0 if you put your threshold out here."
+    },
+    {
+      "start": 512.41,
+      "end": 514.79,
+      "text": "But in that case, you're certain that you're going to"
+    },
+    {
+      "start": 514.79,
+      "end": 516.97,
+      "text": "make a mistake of the opposite kind."
+    },
+    {
+      "start": 516.97,
+      "end": 522.29,
+      "text": "So beta equals 0, alpha equals 1 is one possibility."
+    },
+    {
+      "start": 522.29,
+      "end": 526.41,
+      "text": "Beta equals 1, alpha equals 0 is the other possibility if"
+    },
+    {
+      "start": 526.41,
+      "end": 529.61,
+      "text": "you send your threshold complete to the other side."
+    },
+    {
+      "start": 529.61,
+      "end": 531.93,
+      "text": "And in general, you're going to get a trade-off"
+    },
+    {
+      "start": 531.93,
+      "end": 534.91,
+      "text": "curve of some sort."
+    },
+    {
+      "start": 534.91,
+      "end": 538.69,
+      "text": "And if you want to use a specific value of alpha, for"
+    },
+    {
+      "start": 538.69,
+      "end": 543.79,
+      "text": "example, alpha being 0.05, then that's going to determine"
+    },
+    {
+      "start": 543.79,
+      "end": 547.79,
+      "text": "for you the probability for beta."
+    },
+    {
+      "start": 547.79,
+      "end": 551.41,
+      "text": "Now, there's a general and quite important theorem in"
+    },
+    {
+      "start": 551.41,
+      "end": 554.71,
+      "text": "statistics, which we're not proving, and which tells us"
+    },
+    {
+      "start": 554.71,
+      "end": 559.21,
+      "text": "that when we use likelihood ratio tests, we get the best"
+    },
+    {
+      "start": 559.21,
+      "end": 561.67,
+      "text": "possible trade-off curve."
+    },
+    {
+      "start": 561.67,
+      "end": 566.59,
+      "text": "You could think of other ways of making your decisions,"
+    },
+    {
+      "start": 566.59,
+      "end": 568.65,
+      "text": "other ways of cutting off"
+    },
+    {
+      "start": 568.69,
+      "end": 572.09,
+      "text": "your X space into a rejection and acceptance region."
+    },
+    {
+      "start": 572.09,
+      "end": 576.59,
+      "text": "But any other way that you do it is going to end up with some"
+    },
+    {
+      "start": 576.59,
+      "end": 579.91,
+      "text": "probabilities of error that are going to be above"
+    },
+    {
+      "start": 579.91,
+      "end": 581.99,
+      "text": "this particular curve."
+    },
+    {
+      "start": 581.99,
+      "end": 586.57,
+      "text": "So the likelihood ratio test turns out to give you the best"
+    },
+    {
+      "start": 586.57,
+      "end": 589.21,
+      "text": "possible way of dealing with this trade-off"
+    },
+    {
+      "start": 589.21,
+      "end": 590.75,
+      "text": "between alpha and beta."
+    },
+    {
+      "start": 590.75,
+      "end": 593.79,
+      "text": "We cannot minimize alpha and beta simultaneously."
+    },
+    {
+      "start": 593.79,
+      "end": 598.49,
+      "text": "There's a trade-off between them, but at least we would"
+    },
+    {
+      "start": 598.49,
+      "end": 603.19,
+      "text": "like to have a test that deals with this trade-off in"
+    },
+    {
+      "start": 603.19,
+      "end": 604.37,
+      "text": "the best possible way."
+    },
+    {
+      "start": 604.37,
+      "end": 607.75,
+      "text": "For a given value of alpha, we want to have the smallest"
+    },
+    {
+      "start": 607.75,
+      "end": 609.49,
+      "text": "possible value of beta."
+    },
+    {
+      "start": 609.49,
+      "end": 613.89,
+      "text": "And the theorem is that likelihood ratio tests do have"
+    },
+    {
+      "start": 613.89,
+      "end": 615.25,
+      "text": "this optimality property."
+    },
+    {
+      "start": 615.25,
+      "end": 618.27,
+      "text": "For a given value of alpha, they minimize the probability"
+    },
+    {
+      "start": 618.27,
+      "end": 620.59,
+      "text": "of error of a different kind."
+    },
+    {
+      "start": 620.59,
+      "end": 623.01,
+      "text": "So let's make all this concrete and look"
+    },
+    {
+      "start": 623.01,
+      "end": 624.69,
+      "text": "at a simple example."
+    },
+    {
+      "start": 624.69,
+      "end": 628.25,
+      "text": "We have two normal distributions with"
+    },
+    {
+      "start": 628.25,
+      "end": 629.59,
+      "text": "different means."
+    },
+    {
+      "start": 629.59,
+      "end": 632.83,
+      "text": "So under H0, you have a mean of 0."
+    },
+    {
+      "start": 632.83,
+      "end": 636.79,
+      "text": "Under H1, you have a mean of 1."
+    },
+    {
+      "start": 636.79,
+      "end": 638.69,
+      "text": "You get your data."
+    },
+    {
+      "start": 638.69,
+      "end": 642.93,
+      "text": "You actually get several data drawn from one of the two"
+    },
+    {
+      "start": 642.93,
+      "end": 645.65,
+      "text": "distributions, and you want to make a decision which one of"
+    },
+    {
+      "start": 645.65,
+      "end": 647.03,
+      "text": "the two is true."
+    },
+    {
+      "start": 647.03,
+      "end": 650.39,
+      "text": "So what you do is you write down the likelihood ratio."
+    },
+    {
+      "start": 650.39,
+      "end": 654.69,
+      "text": "The density for a vector of data, if that vector was"
+    },
+    {
+      "start": 654.69,
+      "end": 658.13,
+      "text": "generated according to H0, which is this one."
+    },
+    {
+      "start": 658.25,
+      "end": 662.83,
+      "text": "And the density if it was generated according to H1."
+    },
+    {
+      "start": 662.83,
+      "end": 666.51,
+      "text": "Since we have multiple data, the density of a vector is the"
+    },
+    {
+      "start": 666.51,
+      "end": 669.85,
+      "text": "product of the densities of the individual elements."
+    },
+    {
+      "start": 669.85,
+      "end": 671.79,
+      "text": "Since we're dealing with normals, we have those"
+    },
+    {
+      "start": 671.79,
+      "end": 673.47,
+      "text": "exponential factors."
+    },
+    {
+      "start": 673.47,
+      "end": 675.53,
+      "text": "A product of exponentials gives us an"
+    },
+    {
+      "start": 675.53,
+      "end": 677.31,
+      "text": "exponential of the sum."
+    },
+    {
+      "start": 677.31,
+      "end": 680.13,
+      "text": "I'll spare you the details, but this is the form of the"
+    },
+    {
+      "start": 680.13,
+      "end": 681.13,
+      "text": "likelihood ratio."
+    },
+    {
+      "start": 681.13,
+      "end": 683.95,
+      "text": "And the likelihood ratio test tells us that we should"
+    },
+    {
+      "start": 683.95,
+      "end": 687.75,
+      "text": "calculate this quantity after we get your data, and the"
+    },
+    {
+      "start": 687.75,
+      "end": 690.69,
+      "text": "compare with the threshold."
+    },
+    {
+      "start": 690.69,
+      "end": 695.31,
+      "text": "Now you can do some algebra here and simplify."
+    },
+    {
+      "start": 695.31,
+      "end": 699.09,
+      "text": "And by tracing down the inequalities, you're taking"
+    },
+    {
+      "start": 699.09,
+      "end": 703.05,
+      "text": "logarithms of both sides and so on, one comes to the"
+    },
+    {
+      "start": 703.05,
+      "end": 708.51,
+      "text": "conclusion that using a test that has a threshold on this"
+    },
+    {
+      "start": 708.51,
+      "end": 713.21,
+      "text": "ratio is equivalent to calculating this quantity and"
+    },
+    {
+      "start": 713.21,
+      "end": 716.87,
+      "text": "comparing it with a threshold."
+    },
+    {
+      "start": 716.87,
+      "end": 717.39,
+      "text": "Basically."
+    },
+    {
+      "start": 717.39,
+      "end": 721.21,
+      "text": "This quantity here is monotonic in that quantity."
+    },
+    {
+      "start": 721.21,
+      "end": 724.49,
+      "text": "This being larger than the threshold is equivalent to"
+    },
+    {
+      "start": 724.49,
+      "end": 727.35,
+      "text": "this being larger than the threshold."
+    },
+    {
+      "start": 727.35,
+      "end": 730.27,
+      "text": "So this tells us the general structure of a likelihood"
+    },
+    {
+      "start": 730.27,
+      "end": 732.73,
+      "text": "ratio test in this particular case."
+    },
+    {
+      "start": 732.73,
+      "end": 735.61,
+      "text": "And it's nice because it tells us that we can make our"
+    },
+    {
+      "start": 735.61,
+      "end": 740.31,
+      "text": "decisions by looking at this simple summary of the data."
+    },
+    {
+      "start": 740.31,
+      "end": 743.77,
+      "text": "This quantity, this summary of the data on the basis of which"
+    },
+    {
+      "start": 743.77,
+      "end": 746.51,
+      "text": "we make our decision, is called a statistic."
+    },
+    {
+      "start": 747.39,
+      "end": 752.85,
+      "text": "So you take your data, which is a multidimensional vector,"
+    },
+    {
+      "start": 752.85,
+      "end": 757.11,
+      "text": "and you condense it to a single number."
+    },
+    {
+      "start": 757.11,
+      "end": 760.63,
+      "text": "And then you make a decision on the basis of that number."
+    },
+    {
+      "start": 760.63,
+      "end": 762.77,
+      "text": "So this is the structure of the test."
+    },
+    {
+      "start": 762.77,
+      "end": 767.43,
+      "text": "If I get a large sum of Xi's, this is evidence in favor of"
+    },
+    {
+      "start": 767.43,
+      "end": 770.43,
+      "text": "H1, because here the mean is larger."
+    },
+    {
+      "start": 770.43,
+      "end": 774.99,
+      "text": "And so I'm going to decide in favor of H1, or reject H0, if"
+    },
+    {
+      "start": 774.99,
+      "end": 776.67,
+      "text": "this sum is bigger than the threshold."
+    },
+    {
+      "start": 776.67,
+      "end": 777.87,
+      "text": "How do I choose my threshold?"
+    },
+    {
+      "start": 778.67,
+      "end": 781.03,
+      "text": "Well, I would like to choose my threshold so that the"
+    },
+    {
+      "start": 781.03,
+      "end": 784.95,
+      "text": "probability of an incorrect decision, when H0 is true, the"
+    },
+    {
+      "start": 784.95,
+      "end": 790.51,
+      "text": "probability of a false rejection equals to a certain"
+    },
+    {
+      "start": 790.51,
+      "end": 794.35,
+      "text": "number alpha, such as, for example, 5%."
+    },
+    {
+      "start": 794.35,
+      "end": 798.73,
+      "text": "So you're given here that this is 5%."
+    },
+    {
+      "start": 798.73,
+      "end": 801.13,
+      "text": "You know the distribution of this random variable."
+    },
+    {
+      "start": 801.13,
+      "end": 802.21,
+      "text": "It's normal."
+    },
+    {
+      "start": 802.21,
+      "end": 804.97,
+      "text": "And you want to find the threshold value that makes"
+    },
+    {
+      "start": 804.97,
+      "end": 806.39,
+      "text": "this to be true."
+    },
+    {
+      "start": 806.39,
+      "end": 808.55,
+      "text": "So this is a type of problem that you have seen"
+    },
+    {
+      "start": 808.67,
+      "end": 809.37,
+      "text": "several times."
+    },
+    {
+      "start": 809.37,
+      "end": 812.91,
+      "text": "You go to the normal tables, and you figure it out."
+    },
+    {
+      "start": 812.91,
+      "end": 816.57,
+      "text": "So the sum of the Xi's has some distribution."
+    },
+    {
+      "start": 816.57,
+      "end": 818.15,
+      "text": "It's normal."
+    },
+    {
+      "start": 818.15,
+      "end": 821.07,
+      "text": "So that's the distribution of the sum of the Xi's."
+    },
+    {
+      "start": 821.07,
+      "end": 824.61,
+      "text": "And you want this probability here to be alpha."
+    },
+    {
+      "start": 824.61,
+      "end": 829.53,
+      "text": "For this to happen, what is the threshold value that makes"
+    },
+    {
+      "start": 829.53,
+      "end": 831.09,
+      "text": "this to be true?"
+    },
+    {
+      "start": 831.09,
+      "end": 835.57,
+      "text": "So you know how to solve problems of these kinds using"
+    },
+    {
+      "start": 835.57,
+      "end": 838.41,
+      "text": "the normal tables."
+    },
+    {
+      "start": 838.67,
+      "end": 842.71,
+      "text": "A slightly different example is one in which you have two"
+    },
+    {
+      "start": 842.71,
+      "end": 845.89,
+      "text": "normal distributions that have the same mean."
+    },
+    {
+      "start": 845.89,
+      "end": 847.53,
+      "text": "Let's take it to be 0."
+    },
+    {
+      "start": 847.53,
+      "end": 850.57,
+      "text": "But they have a different variance."
+    },
+    {
+      "start": 850.57,
+      "end": 855.05,
+      "text": "So it's sort of natural that here, if your X's that you see"
+    },
+    {
+      "start": 855.05,
+      "end": 859.87,
+      "text": "are kind of big on either side, you would choose H1."
+    },
+    {
+      "start": 859.87,
+      "end": 863.49,
+      "text": "If your X's are near 0, then that's evidence for the"
+    },
+    {
+      "start": 863.49,
+      "end": 864.29,
+      "text": "smaller variance."
+    },
+    {
+      "start": 864.29,
+      "end": 867.11,
+      "text": "You would choose H0."
+    },
+    {
+      "start": 867.11,
+      "end": 868.65,
+      "text": "So to proceed formally."
+    },
+    {
+      "start": 868.67,
+      "end": 873.17,
+      "text": "You again write down the form of the likelihood ratio."
+    },
+    {
+      "start": 873.17,
+      "end": 879.75,
+      "text": "So again, the density of an X vector under H0 is this one."
+    },
+    {
+      "start": 879.75,
+      "end": 882.57,
+      "text": "It's the product of the densities of each one of the"
+    },
+    {
+      "start": 882.57,
+      "end": 883.39,
+      "text": "Xi's."
+    },
+    {
+      "start": 883.39,
+      "end": 886.99,
+      "text": "Product of normal densities gives you a product of"
+    },
+    {
+      "start": 886.99,
+      "end": 889.87,
+      "text": "exponentials, which is exponential of a sum."
+    },
+    {
+      "start": 889.87,
+      "end": 892.03,
+      "text": "And that's the expression that you get."
+    },
+    {
+      "start": 892.03,
+      "end": 895.27,
+      "text": "Under the other hypothesis, the only thing that changes is"
+    },
+    {
+      "start": 895.27,
+      "end": 896.51,
+      "text": "the variance."
+    },
+    {
+      "start": 896.51,
+      "end": 898.67,
+      "text": "And the variance in the normal distribution"
+    },
+    {
+      "start": 898.67,
+      "end": 902.99,
+      "text": "shows up here in the denominator of the exponent."
+    },
+    {
+      "start": 902.99,
+      "end": 904.55,
+      "text": "So you put it there."
+    },
+    {
+      "start": 904.55,
+      "end": 906.83,
+      "text": "So this is the general structure of the"
+    },
+    {
+      "start": 906.83,
+      "end": 908.65,
+      "text": "likelihood ratio test."
+    },
+    {
+      "start": 908.65,
+      "end": 910.33,
+      "text": "And now you do some algebra."
+    },
+    {
+      "start": 910.33,
+      "end": 911.79,
+      "text": "These terms are constants."
+    },
+    {
+      "start": 911.79,
+      "end": 916.05,
+      "text": "Comparing this ratio to a constant is the same as just"
+    },
+    {
+      "start": 916.05,
+      "end": 919.05,
+      "text": "comparing the ratio of the exponentials to a constant."
+    },
+    {
+      "start": 919.05,
+      "end": 920.91,
+      "text": "Then you take logarithms."
+    },
+    {
+      "start": 920.91,
+      "end": 924.21,
+      "text": "You want to compare the logarithm of this"
+    },
+    {
+      "start": 924.21,
+      "end": 925.65,
+      "text": "thing to a constant."
+    },
+    {
+      "start": 925.65,
+      "end": 928.59,
+      "text": "You do a little bit of algebra, and in the end, you find"
+    },
+    {
+      "start": 928.59,
+      "end": 932.47,
+      "text": "that the structure of the test is to reject H0 if the sum"
+    },
+    {
+      "start": 932.47,
+      "end": 937.75,
+      "text": "of the squares of the Xi's is bigger than the threshold."
+    },
+    {
+      "start": 937.75,
+      "end": 941.41,
+      "text": "So by committing to a likelihood ratio test, you are"
+    },
+    {
+      "start": 941.41,
+      "end": 945.15,
+      "text": "told that you should be making your decision according to a"
+    },
+    {
+      "start": 945.15,
+      "end": 946.93,
+      "text": "rule of this type."
+    },
+    {
+      "start": 946.93,
+      "end": 951.43,
+      "text": "So this fixes the shape or the structure of the decision"
+    },
+    {
+      "start": 951.43,
+      "end": 953.67,
+      "text": "region, of the rejection region."
+    },
+    {
+      "start": 953.67,
+      "end": 956.65,
+      "text": "And the only thing that's left, once more, is to pick"
+    },
+    {
+      "start": 956.65,
+      "end": 958.05,
+      "text": "this threshold."
+    },
+    {
+      "start": 958.05,
+      "end": 961.59,
+      "text": "In order to have the property that the probability of a false"
+    },
+    {
+      "start": 961.59,
+      "end": 965.33,
+      "text": "rejection is equal to, say, 5%."
+    },
+    {
+      "start": 965.33,
+      "end": 969.49,
+      "text": "So that's the probability that H0 is true, but the sum of the"
+    },
+    {
+      "start": 969.49,
+      "end": 973.07,
+      "text": "squares accidentally happens to be bigger than my threshold,"
+    },
+    {
+      "start": 973.07,
+      "end": 977.33,
+      "text": "in which case I end up deciding H1."
+    },
+    {
+      "start": 977.33,
+      "end": 981.69,
+      "text": "How do I find the value of Xi prime?"
+    },
+    {
+      "start": 981.69,
+      "end": 985.13,
+      "text": "Well, what I need to do is to look at the picture more or"
+    },
+    {
+      "start": 985.13,
+      "end": 987.09,
+      "text": "less of this kind."
+    },
+    {
+      "start": 987.09,
+      "end": 988.05,
+      "text": "But now I do this."
+    },
+    {
+      "start": 988.05,
+      "end": 990.63,
+      "text": "I need to look at the distribution of the sum of"
+    },
+    {
+      "start": 990.63,
+      "end": 992.81,
+      "text": "the Xi's squared."
+    },
+    {
+      "start": 992.81,
+      "end": 996.17,
+      "text": "Actually, the sum of the Xi's squared is a non-negative"
+    },
+    {
+      "start": 996.17,
+      "end": 997.53,
+      "text": "random variable."
+    },
+    {
+      "start": 997.53,
+      "end": 1001.27,
+      "text": "So it's going to have a distribution that's something"
+    },
+    {
+      "start": 1001.27,
+      "end": 1004.87,
+      "text": "like this."
+    },
+    {
+      "start": 1004.87,
+      "end": 1007.03,
+      "text": "I look at that distribution."
+    },
+    {
+      "start": 1007.03,
+      "end": 1012.55,
+      "text": "And once more, I want this tail probability to be alpha."
+    },
+    {
+      "start": 1012.55,
+      "end": 1016.33,
+      "text": "And that determines where my threshold is going to be."
+    },
+    {
+      "start": 1016.33,
+      "end": 1017.75,
+      "text": "So that's, again, a simple"
+    },
+    {
+      "start": 1018.05,
+      "end": 1021.25,
+      "text": "exercise, provided that you know the"
+    },
+    {
+      "start": 1021.25,
+      "end": 1023.61,
+      "text": "distribution of this quantity."
+    },
+    {
+      "start": 1023.61,
+      "end": 1025.55,
+      "text": "Do you know it?"
+    },
+    {
+      "start": 1025.55,
+      "end": 1027.65,
+      "text": "Well, we don't really know it."
+    },
+    {
+      "start": 1027.65,
+      "end": 1030.25,
+      "text": "We have not dealt with this particular distribution in"
+    },
+    {
+      "start": 1030.25,
+      "end": 1031.87,
+      "text": "this class."
+    },
+    {
+      "start": 1031.87,
+      "end": 1035.73,
+      "text": "But in principle, you should be able to find what it is."
+    },
+    {
+      "start": 1035.73,
+      "end": 1038.37,
+      "text": "It's a derived distribution problem."
+    },
+    {
+      "start": 1038.37,
+      "end": 1040.83,
+      "text": "You know the distribution of Xi."
+    },
+    {
+      "start": 1040.83,
+      "end": 1042.91,
+      "text": "It's normal."
+    },
+    {
+      "start": 1042.91,
+      "end": 1046.39,
+      "text": "Therefore, by solving a derived distribution problem,"
+    },
+    {
+      "start": 1046.39,
+      "end": 1047.89,
+      "text": "you can find the distribution of"
+    },
+    {
+      "start": 1047.89,
+      "end": 1050.37,
+      "text": "Xi squared."
+    },
+    {
+      "start": 1050.37,
+      "end": 1054.13,
+      "text": "And the Xi squareds are independent of each other,"
+    },
+    {
+      "start": 1054.13,
+      "end": 1056.33,
+      "text": "because the Xi's are independent."
+    },
+    {
+      "start": 1056.33,
+      "end": 1059.13,
+      "text": "So you want to find the distribution of the sum of"
+    },
+    {
+      "start": 1059.13,
+      "end": 1061.71,
+      "text": "random variables with known distributions."
+    },
+    {
+      "start": 1061.71,
+      "end": 1064.39,
+      "text": "And since they're independent, in principle, you can do this"
+    },
+    {
+      "start": 1064.39,
+      "end": 1066.43,
+      "text": "using the convolution formula."
+    },
+    {
+      "start": 1066.43,
+      "end": 1069.65,
+      "text": "So in principle, and if you're patient enough, you will be"
+    },
+    {
+      "start": 1069.65,
+      "end": 1072.79,
+      "text": "able to find the distribution of this random variable."
+    },
+    {
+      "start": 1072.79,
+      "end": 1077.39,
+      "text": "And then you sort of plot it or tabulate it, and find where"
+    },
+    {
+      "start": 1077.39,
+      "end": 1082.51,
+      "text": "exactly is the 95th percentile of that distribution."
+    },
+    {
+      "start": 1082.51,
+      "end": 1085.29,
+      "text": "And that determines your threshold."
+    },
+    {
+      "start": 1085.29,
+      "end": 1088.29,
+      "text": "So this distribution actually turns out to have a nice and"
+    },
+    {
+      "start": 1088.29,
+      "end": 1091.81,
+      "text": "simple closed-form formula, because this is a"
+    },
+    {
+      "start": 1091.81,
+      "end": 1092.99,
+      "text": "pretty common test."
+    },
+    {
+      "start": 1092.99,
+      "end": 1095.21,
+      "text": "People have tabulated that distribution."
+    },
+    {
+      "start": 1095.21,
+      "end": 1097.37,
+      "text": "It's called the chi-squared distribution."
+    },
+    {
+      "start": 1097.37,
+      "end": 1099.55,
+      "text": "There's tables available for it."
+    },
+    {
+      "start": 1099.55,
+      "end": 1101.57,
+      "text": "And you look up in the tables."
+    },
+    {
+      "start": 1101.57,
+      "end": 1105.05,
+      "text": "You find the 95th percentile of the distribution."
+    },
+    {
+      "start": 1105.05,
+      "end": 1106.91,
+      "text": "And this way, you determine your threshold."
+    },
+    {
+      "start": 1107.39,
+      "end": 1111.13,
+      "text": "So what's the moral of this story?"
+    },
+    {
+      "start": 1111.13,
+      "end": 1115.69,
+      "text": "The structure of the likelihood ratio test tells you"
+    },
+    {
+      "start": 1115.69,
+      "end": 1120.45,
+      "text": "what kind of decision region you're going to have."
+    },
+    {
+      "start": 1120.45,
+      "end": 1122.89,
+      "text": "It tells you that for this particular test, you should be"
+    },
+    {
+      "start": 1122.89,
+      "end": 1126.49,
+      "text": "using the sum of the Xi squareds as your statistic, as"
+    },
+    {
+      "start": 1126.49,
+      "end": 1128.45,
+      "text": "the basis for making your decision."
+    },
+    {
+      "start": 1128.45,
+      "end": 1131.83,
+      "text": "And then you need to solve a derived distribution problem"
+    },
+    {
+      "start": 1131.83,
+      "end": 1134.25,
+      "text": "to find the probability distribution of your"
+    },
+    {
+      "start": 1134.25,
+      "end": 1137.15,
+      "text": "statistic, find the distribution of this"
+    },
+    {
+      "start": 1137.15,
+      "end": 1139.37,
+      "text": "quantity under H0."
+    },
+    {
+      "start": 1139.37,
+      "end": 1142.97,
+      "text": "And finally, based on that distribution, after you have"
+    },
+    {
+      "start": 1142.97,
+      "end": 1148.23,
+      "text": "derived it, then determine your threshold."
+    },
+    {
+      "start": 1148.23,
+      "end": 1150.57,
+      "text": "So now let's move on to a somewhat more"
+    },
+    {
+      "start": 1150.57,
+      "end": 1153.07,
+      "text": "complicated situation."
+    },
+    {
+      "start": 1153.07,
+      "end": 1155.23,
+      "text": "You have a coin."
+    },
+    {
+      "start": 1155.23,
+      "end": 1161.03,
+      "text": "And you are told that I tried to make a fair coin."
+    },
+    {
+      "start": 1161.03,
+      "end": 1162.41,
+      "text": "Is it fair?"
+    },
+    {
+      "start": 1162.41,
+      "end": 1165.57,
+      "text": "So you have the hypothesis, which is the default, the null"
+    },
+    {
+      "start": 1165.57,
+      "end": 1167.87,
+      "text": "hypothesis, that the coin is fair."
+    },
+    {
+      "start": 1167.87,
+      "end": 1168.91,
+      "text": "But maybe it is."
+    },
+    {
+      "start": 1168.91,
+      "end": 1169.67,
+      "text": "It isn't."
+    },
+    {
+      "start": 1169.67,
+      "end": 1172.65,
+      "text": "So you have the alternative hypothesis that your coin is"
+    },
+    {
+      "start": 1172.65,
+      "end": 1174.01,
+      "text": "not fair."
+    },
+    {
+      "start": 1174.01,
+      "end": 1176.67,
+      "text": "Now what's different in this context is that your"
+    },
+    {
+      "start": 1176.67,
+      "end": 1181.83,
+      "text": "alternative hypothesis is not just one specific hypothesis."
+    },
+    {
+      "start": 1181.83,
+      "end": 1185.99,
+      "text": "Your alternative hypothesis consists of many alternatives."
+    },
+    {
+      "start": 1185.99,
+      "end": 1189.25,
+      "text": "It includes the hypothesis that P is 0.6."
+    },
+    {
+      "start": 1189.25,
+      "end": 1193.93,
+      "text": "It includes the hypothesis that P is 0.51."
+    },
+    {
+      "start": 1193.93,
+      "end": 1198.83,
+      "text": "It includes the hypothesis that P is 0.48, and so on."
+    },
+    {
+      "start": 1198.83,
+      "end": 1205.01,
+      "text": "So you're testing this hypothesis versus all this"
+    },
+    {
+      "start": 1205.01,
+      "end": 1208.05,
+      "text": "family of alternative hypothesis."
+    },
+    {
+      "start": 1208.05,
+      "end": 1211.07,
+      "text": "What you will end up doing is essentially the following."
+    },
+    {
+      "start": 1211.07,
+      "end": 1212.47,
+      "text": "You get some data."
+    },
+    {
+      "start": 1212.47,
+      "end": 1215.07,
+      "text": "That is, you flip the coin a number of times."
+    },
+    {
+      "start": 1215.07,
+      "end": 1217.65,
+      "text": "Let's say you flip it 1,000 times."
+    },
+    {
+      "start": 1217.65,
+      "end": 1220.27,
+      "text": "You observe some outcome."
+    },
+    {
+      "start": 1220.27,
+      "end": 1224.59,
+      "text": "Let's say you saw 472 heads."
+    },
+    {
+      "start": 1224.59,
+      "end": 1226.59,
+      "text": "And you ask the question."
+    },
+    {
+      "start": 1226.59,
+      "end": 1227.65,
+      "text": "If this hypothesis is 0.51."
+    },
+    {
+      "start": 1227.65,
+      "end": 1228.59,
+      "text": "You can say, well, we can do this."
+    },
+    {
+      "start": 1228.59,
+      "end": 1235.77,
+      "text": "is true, is this value really possible under that hypothesis,"
+    },
+    {
+      "start": 1235.77,
+      "end": 1239.41,
+      "text": "or would it be very much of an outlier?"
+    },
+    {
+      "start": 1239.41,
+      "end": 1244.19,
+      "text": "If it looks like an extreme outlier under this hypothesis,"
+    },
+    {
+      "start": 1244.19,
+      "end": 1247.75,
+      "text": "then I reject it, and I accept the alternative."
+    },
+    {
+      "start": 1247.75,
+      "end": 1250.77,
+      "text": "If this number turns out to be something within the range"
+    },
+    {
+      "start": 1250.77,
+      "end": 1256.65,
+      "text": "that you would have expected, then you keep or accept your"
+    },
+    {
+      "start": 1256.65,
+      "end": 1259.05,
+      "text": "null hypothesis."
+    },
+    {
+      "start": 1259.05,
+      "end": 1263.19,
+      "text": "OK, so what does it mean to be an outlier or not?"
+    },
+    {
+      "start": 1263.19,
+      "end": 1265.41,
+      "text": "First, you take your data and you condense"
+    },
+    {
+      "start": 1265.41,
+      "end": 1267.21,
+      "text": "them to a single number."
+    },
+    {
+      "start": 1267.21,
+      "end": 1270.25,
+      "text": "So your detailed data actually would have been a sequence of"
+    },
+    {
+      "start": 1270.25,
+      "end": 1272.41,
+      "text": "heads, tails, heads, tails, and all that."
+    },
+    {
+      "start": 1272.41,
+      "end": 1276.33,
+      "text": "Any reasonable person would tell you that you shouldn't"
+    },
+    {
+      "start": 1276.33,
+      "end": 1279.41,
+      "text": "really care about the exact sequence of heads and tails."
+    },
+    {
+      "start": 1279.41,
+      "end": 1282.55,
+      "text": "Let's just base our decision on the number of heads that we"
+    },
+    {
+      "start": 1282.55,
+      "end": 1284.35,
+      "text": "have observed."
+    },
+    {
+      "start": 1284.35,
+      "end": 1288.71,
+      "text": "So you somehow, using some kind of reasoning, which could"
+    },
+    {
+      "start": 1288.71,
+      "end": 1293.65,
+      "text": "be mathematical, or intuitive, or involving artistry, you"
+    },
+    {
+      "start": 1293.65,
+      "end": 1298.41,
+      "text": "pick a one-dimensional, or scalar, summary of the data"
+    },
+    {
+      "start": 1298.41,
+      "end": 1299.51,
+      "text": "that you have seen."
+    },
+    {
+      "start": 1299.51,
+      "end": 1302.23,
+      "text": "In this case, the summary of the data is just the number of"
+    },
+    {
+      "start": 1302.23,
+      "end": 1304.33,
+      "text": "heads, that's a quite reasonable one."
+    },
+    {
+      "start": 1304.33,
+      "end": 1307.87,
+      "text": "And so you commit yourself to make a decision on the basis"
+    },
+    {
+      "start": 1307.87,
+      "end": 1309.07,
+      "text": "of this quantity."
+    },
+    {
+      "start": 1309.07,
+      "end": 1312.67,
+      "text": "And you ask, the quantity that I'm seeing, does it look like"
+    },
+    {
+      "start": 1312.67,
+      "end": 1313.67,
+      "text": "an outlier?"
+    },
+    {
+      "start": 1313.67,
+      "end": 1314.29,
+      "text": "Or does it"
+    },
+    {
+      "start": 1314.29,
+      "end": 1317.43,
+      "text": "look more or less OK?"
+    },
+    {
+      "start": 1317.43,
+      "end": 1320.51,
+      "text": "OK, what does it mean to be an outlier?"
+    },
+    {
+      "start": 1320.51,
+      "end": 1324.87,
+      "text": "You want to choose the shape of this rejection region, but"
+    },
+    {
+      "start": 1324.87,
+      "end": 1328.73,
+      "text": "on the basis of that single number s."
+    },
+    {
+      "start": 1328.73,
+      "end": 1331.61,
+      "text": "And again, a reasonable thing to do in this context would be"
+    },
+    {
+      "start": 1331.61,
+      "end": 1332.69,
+      "text": "to argue as follows."
+    },
+    {
+      "start": 1332.69,
+      "end": 1336.81,
+      "text": "If my coin is fair, I expect to see n over two heads."
+    },
+    {
+      "start": 1336.81,
+      "end": 1338.53,
+      "text": "That's the expected value."
+    },
+    {
+      "start": 1338.53,
+      "end": 1343.29,
+      "text": "If the number of heads I see is far from the expected"
+    },
+    {
+      "start": 1343.29,
+      "end": 1344.29,
+      "text": "number of heads."
+    },
+    {
+      "start": 1344.29,
+      "end": 1347.75,
+      "text": "Then I consider this to be an outlier."
+    },
+    {
+      "start": 1347.75,
+      "end": 1350.59,
+      "text": "So if this number is bigger than some threshold xi, I"
+    },
+    {
+      "start": 1350.59,
+      "end": 1352.39,
+      "text": "consider it to be an outlier."
+    },
+    {
+      "start": 1352.39,
+      "end": 1356.09,
+      "text": "And then I'm going to reject my hypothesis."
+    },
+    {
+      "start": 1356.09,
+      "end": 1358.95,
+      "text": "So we picked our statistic."
+    },
+    {
+      "start": 1358.95,
+      "end": 1364.49,
+      "text": "We picked the general form of how we're going"
+    },
+    {
+      "start": 1364.49,
+      "end": 1366.27,
+      "text": "to make our decision."
+    },
+    {
+      "start": 1366.27,
+      "end": 1370.59,
+      "text": "And then we pick a certain significance or confidence"
+    },
+    {
+      "start": 1370.59,
+      "end": 1371.73,
+      "text": "level that we want."
+    },
+    {
+      "start": 1371.73,
+      "end": 1373.43,
+      "text": "Again, this famous 5% number."
+    },
+    {
+      "start": 1373.43,
+      "end": 1378.29,
+      "text": "And we're going to declare something to be an outlier if"
+    },
+    {
+      "start": 1378.29,
+      "end": 1381.33,
+      "text": "it lies in a region that has 5% or less"
+    },
+    {
+      "start": 1381.33,
+      "end": 1383.23,
+      "text": "probability of occurring."
+    },
+    {
+      "start": 1383.23,
+      "end": 1386.83,
+      "text": "That is, I'm picking my rejection region so that if"
+    },
+    {
+      "start": 1386.83,
+      "end": 1391.23,
+      "text": "H0 is true under the default or null hypothesis, there's"
+    },
+    {
+      "start": 1391.23,
+      "end": 1395.17,
+      "text": "only 5% chance that by accident I fall there."
+    },
+    {
+      "start": 1395.17,
+      "end": 1402.97,
+      "text": "And the thing makes me think that H1 is going to be true."
+    },
+    {
+      "start": 1402.97,
+      "end": 1408.74,
+      "text": "So now, what's left to do is to pick the"
+    },
+    {
+      "start": 1408.74,
+      "end": 1410.88,
+      "text": "value of this threshold."
+    },
+    {
+      "start": 1410.88,
+      "end": 1414.38,
+      "text": "This is a calculation of the usual kind."
+    },
+    {
+      "start": 1414.38,
+      "end": 1418.74,
+      "text": "I want to pick my threshold, my xi number"
+    },
+    {
+      "start": 1418.74,
+      "end": 1423.5,
+      "text": "so that the probability that S is further from the mean by an"
+    },
+    {
+      "start": 1423.5,
+      "end": 1428.56,
+      "text": "amount of xi is less than 5% or that the probability of"
+    },
+    {
+      "start": 1428.56,
+      "end": 1433.72,
+      "text": "being inside the acceptance region so that the distance"
+    },
+    {
+      "start": 1433.72,
+      "end": 1434.22,
+      "text": "from the"
+    },
+    {
+      "start": 1434.22,
+      "end": 1437.28,
+      "text": "default is less than my threshold, I want that to be"
+    },
+    {
+      "start": 1437.28,
+      "end": 1439.88,
+      "text": "95%."
+    },
+    {
+      "start": 1439.88,
+      "end": 1444.36,
+      "text": "So this is an equality that you can get using the central"
+    },
+    {
+      "start": 1444.36,
+      "end": 1446.7,
+      "text": "limit theorem and the normal tables."
+    },
+    {
+      "start": 1446.7,
+      "end": 1450.22,
+      "text": "There's 95% probability that the number of heads is going"
+    },
+    {
+      "start": 1450.22,
+      "end": 1454.92,
+      "text": "to be within 31 from the correct mean."
+    },
+    {
+      "start": 1454.92,
+      "end": 1457.9,
+      "text": "So the way the exercise is done, of course, is that we"
+    },
+    {
+      "start": 1457.9,
+      "end": 1461.86,
+      "text": "start with this number, 5%, which translates to this"
+    },
+    {
+      "start": 1461.86,
+      "end": 1464.42,
+      "text": "number, 95%."
+    },
+    {
+      "start": 1464.42,
+      "end": 1467.92,
+      "text": "And once we have fixed that number, then you ask the"
+    },
+    {
+      "start": 1467.92,
+      "end": 1474.36,
+      "text": "question, what number should we have here to make this"
+    },
+    {
+      "start": 1474.36,
+      "end": 1476.48,
+      "text": "equality to be true?"
+    },
+    {
+      "start": 1476.48,
+      "end": 1479.34,
+      "text": "It's again a problem of this kind."
+    },
+    {
+      "start": 1479.34,
+      "end": 1482.76,
+      "text": "You have a quantity whose distribution you know."
+    },
+    {
+      "start": 1482.76,
+      "end": 1483.94,
+      "text": "Why do you know it?"
+    },
+    {
+      "start": 1483.94,
+      "end": 1486.38,
+      "text": "The number of heads by the central limit theorem is"
+    },
+    {
+      "start": 1486.38,
+      "end": 1487.96,
+      "text": "approximately normal."
+    },
+    {
+      "start": 1487.96,
+      "end": 1491.54,
+      "text": "So this here talks about a normal distribution."
+    },
+    {
+      "start": 1491.54,
+      "end": 1494.88,
+      "text": "You set your alpha to be 5%."
+    },
+    {
+      "start": 1494.88,
+      "end": 1497.92,
+      "text": "And you ask, where should I put my threshold so that this"
+    },
+    {
+      "start": 1497.92,
+      "end": 1501.5,
+      "text": "probability of being out there is only 5%."
+    },
+    {
+      "start": 1501.5,
+      "end": 1503.72,
+      "text": "Now, in our particular example, the threshold"
+    },
+    {
+      "start": 1503.72,
+      "end": 1505.96,
+      "text": "turned out to be 31."
+    },
+    {
+      "start": 1505.96,
+      "end": 1509.14,
+      "text": "This number turned out was just 28 away"
+    },
+    {
+      "start": 1509.14,
+      "end": 1510.94,
+      "text": "from the correct mean."
+    },
+    {
+      "start": 1510.94,
+      "end": 1514.14,
+      "text": "So this distance was less than the threshold."
+    },
+    {
+      "start": 1514.14,
+      "end": 1520.56,
+      "text": "So we end up not rejecting H0."
+    },
+    {
+      "start": 1520.56,
+      "end": 1522.78,
+      "text": "So we have our rejection."
+    },
+    {
+      "start": 1522.78,
+      "end": 1526.92,
+      "text": "Rejection region, the way we designed it is that when H0 is"
+    },
+    {
+      "start": 1526.92,
+      "end": 1531.9,
+      "text": "true, there's only a small chance, 5%, that we get data"
+    },
+    {
+      "start": 1531.9,
+      "end": 1535.44,
+      "text": "out there, data that we would call an outlier."
+    },
+    {
+      "start": 1535.44,
+      "end": 1539.34,
+      "text": "If we see such an outlier, we reject H0."
+    },
+    {
+      "start": 1539.34,
+      "end": 1543.76,
+      "text": "If what we see is not an outlier, as in this case,"
+    },
+    {
+      "start": 1543.76,
+      "end": 1547.28,
+      "text": "where that distance turned out to be kind of small, then we do"
+    },
+    {
+      "start": 1547.28,
+      "end": 1551.0,
+      "text": "not reject H0."
+    },
+    {
+      "start": 1551.0,
+      "end": 1552.44,
+      "text": "An interesting little piece of"
+    },
+    {
+      "start": 1552.44,
+      "end": 1554.36,
+      "text": "language here."
+    },
+    {
+      "start": 1554.36,
+      "end": 1558.18,
+      "text": "People generally prefer to use this terminology, to say that"
+    },
+    {
+      "start": 1558.18,
+      "end": 1563.14,
+      "text": "H0 is not rejected by the data, instead of saying that"
+    },
+    {
+      "start": 1563.14,
+      "end": 1566.44,
+      "text": "H0 is accepted."
+    },
+    {
+      "start": 1566.44,
+      "end": 1568.92,
+      "text": "In some sense, they're both saying the same thing."
+    },
+    {
+      "start": 1568.92,
+      "end": 1571.88,
+      "text": "But the difference is sort of subtle."
+    },
+    {
+      "start": 1571.88,
+      "end": 1577.24,
+      "text": "When I say not rejected, what I mean is that I got some data"
+    },
+    {
+      "start": 1577.24,
+      "end": 1581.62,
+      "text": "that are compatible with my hypothesis, that is, the data"
+    },
+    {
+      "start": 1581.62,
+      "end": 1582.44,
+      "text": "that I got."
+    },
+    {
+      "start": 1582.44,
+      "end": 1589.5,
+      "text": "Do not falsify the hypothesis that I had, my null hypothesis."
+    },
+    {
+      "start": 1589.5,
+      "end": 1594.5,
+      "text": "So my null hypothesis is still alive and may be true."
+    },
+    {
+      "start": 1594.5,
+      "end": 1598.72,
+      "text": "But from data, you can never really prove that the"
+    },
+    {
+      "start": 1598.72,
+      "end": 1601.32,
+      "text": "hypothesis is correct."
+    },
+    {
+      "start": 1601.32,
+      "end": 1606.2,
+      "text": "Perhaps my coin is not fair in some other complicated way."
+    },
+    {
+      "start": 1606.2,
+      "end": 1607.48,
+      "text": "Perhaps my..."
+    },
+    {
+      "start": 1609.32,
+      "end": 1610.36,
+      "text": "Perhaps my..."
+    },
+    {
+      "start": 1610.36,
+      "end": 1611.24,
+      "text": "Perhaps I was wrong."
+    },
+    {
+      "start": 1611.24,
+      "end": 1612.44,
+      "text": "Perhaps I was wrong."
+    },
+    {
+      "start": 1612.44,
+      "end": 1614.2,
+      "text": "Perhaps I was just lucky."
+    },
+    {
+      "start": 1614.2,
+      "end": 1618.74,
+      "text": "And even though my coin is not fair, I ended up with an outcome"
+    },
+    {
+      "start": 1618.74,
+      "end": 1621.32,
+      "text": "that suggests that it's fair."
+    },
+    {
+      "start": 1621.32,
+      "end": 1625.28,
+      "text": "Perhaps my coin flips are not independent, as I assumed in my"
+    },
+    {
+      "start": 1625.28,
+      "end": 1626.02,
+      "text": "model."
+    },
+    {
+      "start": 1626.02,
+      "end": 1630.64,
+      "text": "So there's many ways that my hypothesis could be wrong."
+    },
+    {
+      "start": 1630.64,
+      "end": 1632.14,
+      "text": "My null hypothesis could be wrong."
+    },
+    {
+      "start": 1632.14,
+      "end": 1637.0,
+      "text": "And still, I got data that tell me that my hypothesis is OK."
+    },
+    {
+      "start": 1637.0,
+      "end": 1638.94,
+      "text": "So this is sort of the general way that"
+    },
+    {
+      "start": 1638.94,
+      "end": 1640.98,
+      "text": "things work in science."
+    },
+    {
+      "start": 1640.98,
+      "end": 1642.44,
+      "text": "One comes up with a model."
+    },
+    {
+      "start": 1642.44,
+      "end": 1644.32,
+      "text": "Or a theory."
+    },
+    {
+      "start": 1644.32,
+      "end": 1646.3,
+      "text": "This is the default theory."
+    },
+    {
+      "start": 1646.3,
+      "end": 1650.26,
+      "text": "And we sort of work with that theory, trying to find whether"
+    },
+    {
+      "start": 1650.26,
+      "end": 1652.44,
+      "text": "there are examples that violate the theory."
+    },
+    {
+      "start": 1652.44,
+      "end": 1655.52,
+      "text": "If you find data and examples that violate the theory, your"
+    },
+    {
+      "start": 1655.52,
+      "end": 1656.68,
+      "text": "theory is falsified."
+    },
+    {
+      "start": 1656.68,
+      "end": 1658.5,
+      "text": "And you need to look for a new one."
+    },
+    {
+      "start": 1658.5,
+      "end": 1663.06,
+      "text": "But when you have your theory, really no amount of data can"
+    },
+    {
+      "start": 1663.06,
+      "end": 1665.82,
+      "text": "prove that your theory is correct."
+    },
+    {
+      "start": 1665.82,
+      "end": 1669.9,
+      "text": "So we have the default theory that the speed of light is"
+    },
+    {
+      "start": 1669.9,
+      "end": 1671.62,
+      "text": "constant."
+    },
+    {
+      "start": 1671.62,
+      "end": 1676.38,
+      "text": "As long as we do not find any data that run counter to it, we"
+    },
+    {
+      "start": 1676.38,
+      "end": 1677.34,
+      "text": "stay with that theory."
+    },
+    {
+      "start": 1677.34,
+      "end": 1681.62,
+      "text": "But there's no way of really proving this, no matter how"
+    },
+    {
+      "start": 1681.62,
+      "end": 1683.62,
+      "text": "many experiments we do."
+    },
+    {
+      "start": 1683.62,
+      "end": 1686.5,
+      "text": "But there could be experiments that falsify that theory, in"
+    },
+    {
+      "start": 1686.5,
+      "end": 1690.52,
+      "text": "which case we need to look for a new one."
+    },
+    {
+      "start": 1690.52,
+      "end": 1693.94,
+      "text": "So there's a bit of an unsymmetry here in how we"
+    },
+    {
+      "start": 1693.94,
+      "end": 1696.46,
+      "text": "treat the alternative hypothesis."
+    },
+    {
+      "start": 1696.46,
+      "end": 1700.62,
+      "text": "H0 is sort of the default, which we'll accept."
+    },
+    {
+      "start": 1700.62,
+      "end": 1700.86,
+      "text": "."
+    },
+    {
+      "start": 1700.86,
+      "end": 1701.08,
+      "text": "."
+    },
+    {
+      "start": 1701.08,
+      "end": 1701.18,
+      "text": "."
+    },
+    {
+      "start": 1701.18,
+      "end": 1701.48,
+      "text": "."
+    },
+    {
+      "start": 1701.48,
+      "end": 1705.34,
+      "text": "Until we see some evidence to the contrary."
+    },
+    {
+      "start": 1705.34,
+      "end": 1710.16,
+      "text": "And if we see some evidence to the contrary, we reject it."
+    },
+    {
+      "start": 1710.16,
+      "end": 1713.56,
+      "text": "As long as we do not see evidence to the contrary, then"
+    },
+    {
+      "start": 1713.56,
+      "end": 1715.92,
+      "text": "we keep working with it, but always take it"
+    },
+    {
+      "start": 1715.92,
+      "end": 1718.52,
+      "text": "with a grain of salt."
+    },
+    {
+      "start": 1718.52,
+      "end": 1721.58,
+      "text": "You can never really prove that the coin has a bias"
+    },
+    {
+      "start": 1721.58,
+      "end": 1723.84,
+      "text": "exactly equal to 1 half."
+    },
+    {
+      "start": 1723.84,
+      "end": 1731.04,
+      "text": "Maybe the bias is equal to 0.50001, so the bias is not 1."
+    },
+    {
+      "start": 1731.04,
+      "end": 1736.16,
+      "text": "But with an experiment with 1,000 coin tosses, you wouldn't"
+    },
+    {
+      "start": 1736.16,
+      "end": 1744.64,
+      "text": "be able to see this effect."
+    },
+    {
+      "start": 1744.64,
+      "end": 1747.84,
+      "text": "So that's how you go about testing about whether your"
+    },
+    {
+      "start": 1747.84,
+      "end": 1749.14,
+      "text": "coin is fair."
+    },
+    {
+      "start": 1749.14,
+      "end": 1753.14,
+      "text": "You can also think about testing whether a die is fair."
+    },
+    {
+      "start": 1753.14,
+      "end": 1757.1,
+      "text": "So for a die, the null hypothesis would be that every"
+    },
+    {
+      "start": 1757.1,
+      "end": 1761.8,
+      "text": "possible result, when you roll the die, has equal probability"
+    },
+    {
+      "start": 1761.8,
+      "end": 1763.84,
+      "text": "and equal to 1 sixth."
+    },
+    {
+      "start": 1763.84,
+      "end": 1767.68,
+      "text": "And you also make the hypothesis that your die rolls"
+    },
+    {
+      "start": 1767.68,
+      "end": 1770.86,
+      "text": "are statistically independent from each other."
+    },
+    {
+      "start": 1770.86,
+      "end": 1776.06,
+      "text": "So I take my die, I roll it a number of times, little n, and"
+    },
+    {
+      "start": 1776.06,
+      "end": 1780.22,
+      "text": "I count how many 1's I got, how many 2's I got, how many"
+    },
+    {
+      "start": 1780.22,
+      "end": 1783.38,
+      "text": "3's I got, and these are my data."
+    },
+    {
+      "start": 1783.38,
+      "end": 1788.36,
+      "text": "I count how many times I observed a specific result in"
+    },
+    {
+      "start": 1788.36,
+      "end": 1791.62,
+      "text": "my die roll that was equal to some i."
+    },
+    {
+      "start": 1791.62,
+      "end": 1793.4,
+      "text": "And now I ask the question."
+    },
+    {
+      "start": 1793.4,
+      "end": 1798.0,
+      "text": "The n i's that I observed, are they compatible with my"
+    },
+    {
+      "start": 1798.0,
+      "end": 1800.88,
+      "text": "hypothesis or not?"
+    },
+    {
+      "start": 1800.88,
+      "end": 1805.52,
+      "text": "What does compatible to my hypothesis mean?"
+    },
+    {
+      "start": 1805.52,
+      "end": 1812.56,
+      "text": "Under the null hypothesis, n i should be approximately equal"
+    },
+    {
+      "start": 1812.56,
+      "end": 1817.7,
+      "text": "or is equal in expectation to n times little pi."
+    },
+    {
+      "start": 1817.7,
+      "end": 1823.12,
+      "text": "And in our example, this little pi is, of course, 1 sixth."
+    },
+    {
+      "start": 1823.12,
+      "end": 1824.76,
+      "text": "So if my die is fair."
+    },
+    {
+      "start": 1824.88,
+      "end": 1829.48,
+      "text": "The number of 1's I expect to see is equal to the number of"
+    },
+    {
+      "start": 1829.48,
+      "end": 1831.12,
+      "text": "rolls times 1 sixth."
+    },
+    {
+      "start": 1831.12,
+      "end": 1835.06,
+      "text": "The number of 2's I expect to see is again that same number."
+    },
+    {
+      "start": 1835.06,
+      "end": 1837.98,
+      "text": "Of course, there's randomness, so I do not expect to get"
+    },
+    {
+      "start": 1837.98,
+      "end": 1839.42,
+      "text": "exactly that number."
+    },
+    {
+      "start": 1839.42,
+      "end": 1845.38,
+      "text": "But I can ask how far away from the expected values was i."
+    },
+    {
+      "start": 1845.38,
+      "end": 1851.24,
+      "text": "If my capital N i's turn to be very different from n over 6,"
+    },
+    {
+      "start": 1851.24,
+      "end": 1854.44,
+      "text": "this is evidence that my die is not fair."
+    },
+    {
+      "start": 1854.88,
+      "end": 1860.38,
+      "text": "If those numbers turn out to be close to n times 1 sixth,"
+    },
+    {
+      "start": 1860.38,
+      "end": 1865.04,
+      "text": "then I'm going to say there's no evidence that would lead me"
+    },
+    {
+      "start": 1865.04,
+      "end": 1866.82,
+      "text": "to reject this hypothesis."
+    },
+    {
+      "start": 1866.82,
+      "end": 1870.84,
+      "text": "So this hypothesis remains alive."
+    },
+    {
+      "start": 1870.84,
+      "end": 1876.38,
+      "text": "So someone has come up with this thought that maybe the"
+    },
+    {
+      "start": 1876.38,
+      "end": 1880.74,
+      "text": "right statistic to use, or the right way of quantifying how"
+    },
+    {
+      "start": 1880.74,
+      "end": 1884.66,
+      "text": "far away are the n i's from their mean, is to look at this"
+    },
+    {
+      "start": 1884.66,
+      "end": 1885.58,
+      "text": "quantity."
+    },
+    {
+      "start": 1885.58,
+      "end": 1889.52,
+      "text": "So I'm looking at the expected value of n i under the null"
+    },
+    {
+      "start": 1889.52,
+      "end": 1894.34,
+      "text": "hypothesis, see what I got, take the square of this, and"
+    },
+    {
+      "start": 1894.34,
+      "end": 1896.02,
+      "text": "add it over all i's."
+    },
+    {
+      "start": 1896.02,
+      "end": 1900.92,
+      "text": "But also throw in this term in the denominator."
+    },
+    {
+      "start": 1900.92,
+      "end": 1905.98,
+      "text": "And why that term is there, that's a longer story."
+    },
+    {
+      "start": 1905.98,
+      "end": 1909.7,
+      "text": "One can write down certain likelihood ratios, do certain"
+    },
+    {
+      "start": 1909.7,
+      "end": 1912.98,
+      "text": "Taylor series approximations, and there's a heuristic"
+    },
+    {
+      "start": 1912.98,
+      "end": 1914.5,
+      "text": "argument that justifies it."
+    },
+    {
+      "start": 1914.5,
+      "end": 1919.78,
+      "text": "It justifies why this would be a good form for the test to use."
+    },
+    {
+      "start": 1919.78,
+      "end": 1922.62,
+      "text": "So there's a certain art that's involved in this step"
+    },
+    {
+      "start": 1922.62,
+      "end": 1926.36,
+      "text": "that some people somehow decided that it's a reasonable"
+    },
+    {
+      "start": 1926.36,
+      "end": 1930.46,
+      "text": "thing to do to calculate, once you get your results, to"
+    },
+    {
+      "start": 1930.46,
+      "end": 1934.58,
+      "text": "calculate this one-dimensional summary of your result."
+    },
+    {
+      "start": 1934.58,
+      "end": 1936.74,
+      "text": "This is going to be your statistic."
+    },
+    {
+      "start": 1936.74,
+      "end": 1939.54,
+      "text": "And compare that statistic to a threshold."
+    },
+    {
+      "start": 1939.54,
+      "end": 1941.66,
+      "text": "And that's how you make your decision."
+    },
+    {
+      "start": 1941.66,
+      "end": 1943.46,
+      "text": "So by this point."
+    },
+    {
+      "start": 1943.46,
+      "end": 1943.86,
+      "text": ". ."
+    },
+    {
+      "start": 1943.86,
+      "end": 1948.1,
+      "text": "We have fixed the type of the rejection region that we're"
+    },
+    {
+      "start": 1948.1,
+      "end": 1949.7,
+      "text": "going to have."
+    },
+    {
+      "start": 1949.7,
+      "end": 1952.74,
+      "text": "So we've chosen the qualitative structure of our"
+    },
+    {
+      "start": 1952.74,
+      "end": 1956.2,
+      "text": "test, and the only thing that's now left is to choose"
+    },
+    {
+      "start": 1956.2,
+      "end": 1958.8,
+      "text": "the particular threshold we're going to use."
+    },
+    {
+      "start": 1958.8,
+      "end": 1961.52,
+      "text": "And the recipe, once more, is the same."
+    },
+    {
+      "start": 1961.52,
+      "end": 1964.8,
+      "text": "We want to set our threshold so that the probability of a"
+    },
+    {
+      "start": 1964.8,
+      "end": 1967.3,
+      "text": "false rejection is 5%."
+    },
+    {
+      "start": 1967.3,
+      "end": 1971.64,
+      "text": "We want the probability that our data fall in here is only"
+    },
+    {
+      "start": 1971.64,
+      "end": 1972.98,
+      "text": "5%."
+    },
+    {
+      "start": 1972.98,
+      "end": 1973.48,
+      "text": ". ."
+    },
+    {
+      "start": 1973.48,
+      "end": 1975.98,
+      "text": "The null hypothesis is true."
+    },
+    {
+      "start": 1975.98,
+      "end": 1981.04,
+      "text": "So that's the same as setting our threshold, xi, so that the"
+    },
+    {
+      "start": 1981.04,
+      "end": 1985.1,
+      "text": "probability that our test statistic is bigger than that"
+    },
+    {
+      "start": 1985.1,
+      "end": 1991.46,
+      "text": "threshold, we want that probability to be only 0.05."
+    },
+    {
+      "start": 1991.46,
+      "end": 1995.14,
+      "text": "So to solve a problem of this kind, what is it"
+    },
+    {
+      "start": 1995.14,
+      "end": 1996.82,
+      "text": "that you need to do?"
+    },
+    {
+      "start": 1996.82,
+      "end": 1998.54,
+      "text": "You need to find the probability"
+    },
+    {
+      "start": 1998.54,
+      "end": 2003.32,
+      "text": "distribution of capital T. So once more, it's the same. . ."
+    },
+    {
+      "start": 2003.48,
+      "end": 2006.35,
+      "text": "picture."
+    },
+    {
+      "start": 2006.35,
+      "end": 2012.33,
+      "text": "You need to do some calculations of some sort, and"
+    },
+    {
+      "start": 2012.33,
+      "end": 2016.79,
+      "text": "come up with the distribution of the random variable T, where"
+    },
+    {
+      "start": 2016.79,
+      "end": 2019.03,
+      "text": "T is defined this way."
+    },
+    {
+      "start": 2019.03,
+      "end": 2021.25,
+      "text": "You want to find this distribution"
+    },
+    {
+      "start": 2021.25,
+      "end": 2028.85,
+      "text": "under hypothesis H0."
+    },
+    {
+      "start": 2028.85,
+      "end": 2033.75,
+      "text": "Once you find what that distribution is, then you can"
+    },
+    {
+      "start": 2033.75,
+      "end": 2035.47,
+      "text": "solve this usual problem."
+    },
+    {
+      "start": 2035.47,
+      "end": 2037.33,
+      "text": "I want this probability here to be 5%."
+    },
+    {
+      "start": 2037.33,
+      "end": 2037.83,
+      "text": ". ."
+    },
+    {
+      "start": 2037.83,
+      "end": 2038.33,
+      "text": ". ."
+    },
+    {
+      "start": 2038.33,
+      "end": 2038.87,
+      "text": ". . ."
+    },
+    {
+      "start": 2038.87,
+      "end": 2041.83,
+      "text": "What should my threshold be?"
+    },
+    {
+      "start": 2041.83,
+      "end": 2043.87,
+      "text": "So what does this boil down to?"
+    },
+    {
+      "start": 2043.87,
+      "end": 2048.51,
+      "text": "Finding the distribution of capital T is, in some sense, a"
+    },
+    {
+      "start": 2048.51,
+      "end": 2053.31,
+      "text": "messy, difficult derived distribution problem."
+    },
+    {
+      "start": 2053.31,
+      "end": 2057.17,
+      "text": "From this model, we know the distribution of the capital"
+    },
+    {
+      "start": 2057.17,
+      "end": 2060.25,
+      "text": "NIs."
+    },
+    {
+      "start": 2060.25,
+      "end": 2063.01,
+      "text": "And actually, we can even write down the joint"
+    },
+    {
+      "start": 2063.01,
+      "end": 2066.77,
+      "text": "distribution of the capital NIs."
+    },
+    {
+      "start": 2066.77,
+      "end": 2069.01,
+      "text": "In fact, we can make an approximation here."
+    },
+    {
+      "start": 2069.01,
+      "end": 2069.61,
+      "text": ". . ."
+    },
+    {
+      "start": 2069.61,
+      "end": 2073.17,
+      "text": "Capital NI is a binomial random variable."
+    },
+    {
+      "start": 2073.17,
+      "end": 2079.93,
+      "text": "Let's say the number of ones that I got in little n rolls of"
+    },
+    {
+      "start": 2079.93,
+      "end": 2081.03,
+      "text": "my die."
+    },
+    {
+      "start": 2081.03,
+      "end": 2083.27,
+      "text": "So that's a binomial random variable."
+    },
+    {
+      "start": 2083.27,
+      "end": 2085.79,
+      "text": "When little n is big, this is going to be"
+    },
+    {
+      "start": 2085.79,
+      "end": 2087.99,
+      "text": "approximately normal."
+    },
+    {
+      "start": 2087.99,
+      "end": 2092.01,
+      "text": "So we have normal random variables, or approximately"
+    },
+    {
+      "start": 2092.01,
+      "end": 2094.21,
+      "text": "normal, minus a constant."
+    },
+    {
+      "start": 2094.21,
+      "end": 2095.77,
+      "text": "They're still approximately normal."
+    },
+    {
+      "start": 2095.77,
+      "end": 2099.41,
+      "text": "We take the squares of these, scale them."
+    },
+    {
+      "start": 2099.41,
+      "end": 2102.87,
+      "text": "So you can solve the derived distribution problem to find"
+    },
+    {
+      "start": 2102.87,
+      "end": 2104.89,
+      "text": "the distribution of this quantity."
+    },
+    {
+      "start": 2104.89,
+      "end": 2108.51,
+      "text": "You can do more work, more derived distribution work, and"
+    },
+    {
+      "start": 2108.51,
+      "end": 2111.93,
+      "text": "find the distribution of capital T. So this is a"
+    },
+    {
+      "start": 2111.93,
+      "end": 2114.31,
+      "text": "tedious matter."
+    },
+    {
+      "start": 2114.31,
+      "end": 2118.21,
+      "text": "But because this test is used quite often, again, people"
+    },
+    {
+      "start": 2118.21,
+      "end": 2120.03,
+      "text": "have done those calculations."
+    },
+    {
+      "start": 2120.03,
+      "end": 2123.31,
+      "text": "They have found the distribution of capital T."
+    },
+    {
+      "start": 2123.31,
+      "end": 2125.17,
+      "text": "And it's available in tables."
+    },
+    {
+      "start": 2125.17,
+      "end": 2129.27,
+      "text": "And you go to those tables, and you find the appropriate threshold."
+    },
+    {
+      "start": 2129.41,
+      "end": 2136.14,
+      "text": "It's very simple for making a decision of this type."
+    },
+    {
+      "start": 2136.14,
+      "end": 2140.72,
+      "text": "Now to give you a sense of how complicated a hypothesis one"
+    },
+    {
+      "start": 2140.72,
+      "end": 2147.16,
+      "text": "might have to deal with, let's make things one level more"
+    },
+    {
+      "start": 2147.16,
+      "end": 2148.36,
+      "text": "complicated."
+    },
+    {
+      "start": 2148.36,
+      "end": 2155.2,
+      "text": "So here, you can think this x is a discrete random variable."
+    },
+    {
+      "start": 2155.2,
+      "end": 2157.78,
+      "text": "This is the outcome of my role."
+    },
+    {
+      "start": 2157.78,
+      "end": 2162.08,
+      "text": "And I had the model in which the possible values of"
+    },
+    {
+      "start": 2162.08,
+      "end": 2166.62,
+      "text": "my discrete random variable have probabilities all equal"
+    },
+    {
+      "start": 2166.62,
+      "end": 2167.84,
+      "text": "to 1 sixth."
+    },
+    {
+      "start": 2167.84,
+      "end": 2173.2,
+      "text": "So my null hypothesis here was a particular PMF for the"
+    },
+    {
+      "start": 2173.2,
+      "end": 2175.7,
+      "text": "random variable capital X."
+    },
+    {
+      "start": 2175.7,
+      "end": 2178.64,
+      "text": "So another way of phrasing what's happened in this"
+    },
+    {
+      "start": 2178.64,
+      "end": 2184.66,
+      "text": "problem was the question, is my PMF correct?"
+    },
+    {
+      "start": 2184.66,
+      "end": 2190.5,
+      "text": "So this is the PMF of the result of one die roll."
+    },
+    {
+      "start": 2190.5,
+      "end": 2191.46,
+      "text": "You're asking the question, is my PMF correct?"
+    },
+    {
+      "start": 2191.46,
+      "end": 2191.84,
+      "text": "Is my PMF correct?"
+    },
+    {
+      "start": 2191.84,
+      "end": 2192.08,
+      "text": "Is my PMF correct?"
+    },
+    {
+      "start": 2192.08,
+      "end": 2196.72,
+      "text": "Make it more complicated."
+    },
+    {
+      "start": 2196.72,
+      "end": 2201.42,
+      "text": "How about the question of the type, is my PDF correct when I"
+    },
+    {
+      "start": 2201.42,
+      "end": 2205.2,
+      "text": "have continuous data?"
+    },
+    {
+      "start": 2205.2,
+      "end": 2210.9,
+      "text": "So I have hypothesized that the probability distribution"
+    },
+    {
+      "start": 2210.9,
+      "end": 2214.76,
+      "text": "that I have is, let's say, a particular normal."
+    },
+    {
+      "start": 2214.76,
+      "end": 2218.96,
+      "text": "I get lots of results from that random variable."
+    },
+    {
+      "start": 2218.96,
+      "end": 2221.84,
+      "text": "Can I tell whether my results look"
+    },
+    {
+      "start": 2221.84,
+      "end": 2224.34,
+      "text": "like normal or not?"
+    },
+    {
+      "start": 2224.34,
+      "end": 2226.6,
+      "text": "What are some ways of going about it?"
+    },
+    {
+      "start": 2226.6,
+      "end": 2229.4,
+      "text": "Well, we saw in the previous slide that there is a"
+    },
+    {
+      "start": 2229.4,
+      "end": 2233.08,
+      "text": "methodology for deciding if your PMF is correct."
+    },
+    {
+      "start": 2233.08,
+      "end": 2238.3,
+      "text": "So you could take your normal results, the results, the"
+    },
+    {
+      "start": 2238.3,
+      "end": 2241.52,
+      "text": "data that you got from your experiment, and discretize"
+    },
+    {
+      "start": 2241.52,
+      "end": 2245.4,
+      "text": "them, and so now you're dealing with discrete data,"
+    },
+    {
+      "start": 2245.4,
+      "end": 2251.68,
+      "text": "and sort of use the previous methodology to solve a discrete"
+    },
+    {
+      "start": 2251.68,
+      "end": 2254.88,
+      "text": "problem of the type, is my PDF correct?"
+    },
+    {
+      "start": 2254.88,
+      "end": 2261.08,
+      "text": "So in practice, the way this is done is that you get all"
+    },
+    {
+      "start": 2261.08,
+      "end": 2269.9,
+      "text": "your data, let's say data points of this kind."
+    },
+    {
+      "start": 2269.9,
+      "end": 2276.38,
+      "text": "You split your space into bins, and you count how many"
+    },
+    {
+      "start": 2276.38,
+      "end": 2280.16,
+      "text": "you have in each bin."
+    },
+    {
+      "start": 2280.16,
+      "end": 2282.98,
+      "text": "So you get this."
+    },
+    {
+      "start": 2282.98,
+      "end": 2287.18,
+      "text": "And that, and that, and that, and nothing."
+    },
+    {
+      "start": 2287.18,
+      "end": 2290.66,
+      "text": "So that's a histogram that you get from the data that you"
+    },
+    {
+      "start": 2290.66,
+      "end": 2294.66,
+      "text": "have, like the very familiar histograms that you see after"
+    },
+    {
+      "start": 2294.66,
+      "end": 2296.86,
+      "text": "each one of our quizzes."
+    },
+    {
+      "start": 2296.86,
+      "end": 2301.52,
+      "text": "So if you look at this histogram, and you ask, does"
+    },
+    {
+      "start": 2301.52,
+      "end": 2304.06,
+      "text": "it look like normal?"
+    },
+    {
+      "start": 2304.06,
+      "end": 2307.74,
+      "text": "OK, we need a systematic way of going about it."
+    },
+    {
+      "start": 2307.74,
+      "end": 2312.98,
+      "text": "If it were normal, you can calculate the probability,"
+    },
+    {
+      "start": 2312.98,
+      "end": 2317.94,
+      "text": "of falling in this interval, the probability of falling in"
+    },
+    {
+      "start": 2317.94,
+      "end": 2320.86,
+      "text": "that interval, probability of falling at that interval."
+    },
+    {
+      "start": 2320.86,
+      "end": 2325.48,
+      "text": "So you would have expected values of how many results or"
+    },
+    {
+      "start": 2325.48,
+      "end": 2329.46,
+      "text": "data points you would have in this interval, and compare"
+    },
+    {
+      "start": 2329.46,
+      "end": 2333.4,
+      "text": "these expected values for each interval with the actual ones"
+    },
+    {
+      "start": 2333.4,
+      "end": 2334.8,
+      "text": "that you observed."
+    },
+    {
+      "start": 2334.8,
+      "end": 2338.26,
+      "text": "And then take the sum of squares and so on, exactly as"
+    },
+    {
+      "start": 2338.26,
+      "end": 2342.42,
+      "text": "in the previous slide, and this gives you a way of going"
+    },
+    {
+      "start": 2342.42,
+      "end": 2346.44,
+      "text": "about it."
+    },
+    {
+      "start": 2346.44,
+      "end": 2349.82,
+      "text": "This is a little messy."
+    },
+    {
+      "start": 2349.82,
+      "end": 2353.54,
+      "text": "It gets hard to do, because you have the difficult"
+    },
+    {
+      "start": 2353.54,
+      "end": 2359.16,
+      "text": "decision of how do you choose the bin size."
+    },
+    {
+      "start": 2359.16,
+      "end": 2362.14,
+      "text": "If you take your bins to be very narrow, you would get"
+    },
+    {
+      "start": 2362.14,
+      "end": 2365.68,
+      "text": "lots of bins with zeros, and a few bins that only have one"
+    },
+    {
+      "start": 2365.68,
+      "end": 2367.08,
+      "text": "outcome in them."
+    },
+    {
+      "start": 2367.08,
+      "end": 2369.12,
+      "text": "It probably wouldn't feel right."
+    },
+    {
+      "start": 2369.12,
+      "end": 2372.06,
+      "text": "If you choose your bins to be very wide, then you're losing"
+    },
+    {
+      "start": 2372.06,
+      "end": 2373.68,
+      "text": "a lot of information."
+    },
+    {
+      "start": 2373.68,
+      "end": 2375.26,
+      "text": "Is there some way of"
+    },
+    {
+      "start": 2375.26,
+      "end": 2379.24,
+      "text": "making a test without creating bins?"
+    },
+    {
+      "start": 2379.24,
+      "end": 2383.44,
+      "text": "This is just to illustrate the clever ideas of what"
+    },
+    {
+      "start": 2383.44,
+      "end": 2385.64,
+      "text": "statisticians have thought about."
+    },
+    {
+      "start": 2385.64,
+      "end": 2391.54,
+      "text": "And here's a really cute way of going about the test,"
+    },
+    {
+      "start": 2391.54,
+      "end": 2395.52,
+      "text": "whether my distribution is correct or not."
+    },
+    {
+      "start": 2395.52,
+      "end": 2400.6,
+      "text": "Instead of here, we're essentially plotting a PMF, or"
+    },
+    {
+      "start": 2400.6,
+      "end": 2404.46,
+      "text": "an approximation of a PDF, and we ask, does it look like the"
+    },
+    {
+      "start": 2404.46,
+      "end": 2405.16,
+      "text": "PDF we assigned?"
+    },
+    {
+      "start": 2405.16,
+      "end": 2406.02,
+      "text": "Does it look like what we assumed?"
+    },
+    {
+      "start": 2406.02,
+      "end": 2409.92,
+      "text": "Instead of working with PDFs, let's work with cumulative"
+    },
+    {
+      "start": 2409.92,
+      "end": 2411.78,
+      "text": "distribution functions."
+    },
+    {
+      "start": 2411.78,
+      "end": 2413.84,
+      "text": "So how does this go?"
+    },
+    {
+      "start": 2413.84,
+      "end": 2420.16,
+      "text": "The true normal distribution that I have hypothesized, the"
+    },
+    {
+      "start": 2420.16,
+      "end": 2422.3,
+      "text": "density that I'm hypothesizing, my null"
+    },
+    {
+      "start": 2422.3,
+      "end": 2426.94,
+      "text": "hypothesis, has a certain CDF that I can plot."
+    },
+    {
+      "start": 2426.94,
+      "end": 2433.2,
+      "text": "So suppose that my hypothesis, H0, is that the X is 0."
+    },
+    {
+      "start": 2433.2,
+      "end": 2433.98,
+      "text": "OK."
+    },
+    {
+      "start": 2433.98,
+      "end": 2434.14,
+      "text": "OK."
+    },
+    {
+      "start": 2434.14,
+      "end": 2434.2,
+      "text": "OK."
+    },
+    {
+      "start": 2434.2,
+      "end": 2434.22,
+      "text": "OK."
+    },
+    {
+      "start": 2434.22,
+      "end": 2434.28,
+      "text": "OK."
+    },
+    {
+      "start": 2434.28,
+      "end": 2434.34,
+      "text": "OK."
+    },
+    {
+      "start": 2434.34,
+      "end": 2434.38,
+      "text": "OK."
+    },
+    {
+      "start": 2434.38,
+      "end": 2434.44,
+      "text": "OK."
+    },
+    {
+      "start": 2434.44,
+      "end": 2434.48,
+      "text": "OK."
+    },
+    {
+      "start": 2434.48,
+      "end": 2434.54,
+      "text": "OK."
+    },
+    {
+      "start": 2434.54,
+      "end": 2434.58,
+      "text": "OK."
+    },
+    {
+      "start": 2434.58,
+      "end": 2434.62,
+      "text": "OK."
+    },
+    {
+      "start": 2434.62,
+      "end": 2434.68,
+      "text": "OK."
+    },
+    {
+      "start": 2434.68,
+      "end": 2434.78,
+      "text": "OK."
+    },
+    {
+      "start": 2434.78,
+      "end": 2434.8,
+      "text": "OK."
+    },
+    {
+      "start": 2434.8,
+      "end": 2434.86,
+      "text": "OK."
+    },
+    {
+      "start": 2434.86,
+      "end": 2434.92,
+      "text": "OK."
+    },
+    {
+      "start": 2434.92,
+      "end": 2435.02,
+      "text": "OK."
+    },
+    {
+      "start": 2435.02,
+      "end": 2435.16,
+      "text": "OK."
+    },
+    {
+      "start": 2435.16,
+      "end": 2435.26,
+      "text": "OK."
+    },
+    {
+      "start": 2435.26,
+      "end": 2435.28,
+      "text": "OK."
+    },
+    {
+      "start": 2435.28,
+      "end": 2435.32,
+      "text": "OK."
+    },
+    {
+      "start": 2435.32,
+      "end": 2435.36,
+      "text": "OK."
+    },
+    {
+      "start": 2435.36,
+      "end": 2435.4,
+      "text": "OK."
+    },
+    {
+      "start": 2435.4,
+      "end": 2435.42,
+      "text": "OK."
+    },
+    {
+      "start": 2435.42,
+      "end": 2435.44,
+      "text": "OK."
+    },
+    {
+      "start": 2435.44,
+      "end": 2435.46,
+      "text": "OK."
+    },
+    {
+      "start": 2435.46,
+      "end": 2435.66,
+      "text": "OK."
+    },
+    {
+      "start": 2435.66,
+      "end": 2435.78,
+      "text": "OK."
+    },
+    {
+      "start": 2435.78,
+      "end": 2435.84,
+      "text": "OK."
+    },
+    {
+      "start": 2435.84,
+      "end": 2435.9,
+      "text": "OK."
+    },
+    {
+      "start": 2435.9,
+      "end": 2435.92,
+      "text": "OK."
+    },
+    {
+      "start": 2435.92,
+      "end": 2438.16,
+      "text": "OK."
+    },
+    {
+      "start": 2438.16,
+      "end": 2438.96,
+      "text": "OK."
+    },
+    {
+      "start": 2438.96,
+      "end": 2440.1,
+      "text": "OK."
+    },
+    {
+      "start": 2440.1,
+      "end": 2443.46,
+      "text": "And I plot the CDF of the standard normal, which is the"
+    },
+    {
+      "start": 2443.46,
+      "end": 2446.34,
+      "text": "sort of continuous-looking curve here."
+    },
+    {
+      "start": 2446.34,
+      "end": 2453.34,
+      "text": "Now, I get my data, and I plot the empirical CDF."
+    },
+    {
+      "start": 2453.34,
+      "end": 2454.92,
+      "text": "What's the empirical CDF?"
+    },
+    {
+      "start": 2454.92,
+      "end": 2459.66,
+      "text": "In the empirical CDF, you ask the question, what fraction"
+    },
+    {
+      "start": 2459.66,
+      "end": 2462.98,
+      "text": "of the data fell below 0?"
+    },
+    {
+      "start": 2462.98,
+      "end": 2464.46,
+      "text": "You get the number."
+    },
+    {
+      "start": 2464.46,
+      "end": 2467.9,
+      "text": "What fraction of my data fell below 1?"
+    },
+    {
+      "start": 2467.9,
+      "end": 2468.72,
+      "text": "I get a number."
+    },
+    {
+      "start": 2468.72,
+      "end": 2471.52,
+      "text": "What fraction of my data fell below 2?"
+    },
+    {
+      "start": 2471.52,
+      "end": 2472.58,
+      "text": "And so on."
+    },
+    {
+      "start": 2472.58,
+      "end": 2475.64,
+      "text": "So you're talking about fractions of the data that"
+    },
+    {
+      "start": 2475.64,
+      "end": 2478.76,
+      "text": "fell below each particular number."
+    },
+    {
+      "start": 2478.76,
+      "end": 2481.62,
+      "text": "And by plotting those fractions as a function of"
+    },
+    {
+      "start": 2481.62,
+      "end": 2486.74,
+      "text": "this number, you get something that looks like a CDF."
+    },
+    {
+      "start": 2486.74,
+      "end": 2491.66,
+      "text": "And it's the sort of CDF suggested by the data."
+    },
+    {
+      "start": 2491.66,
+      "end": 2495.84,
+      "text": "Now, the fraction of the data that fall below 0 in my"
+    },
+    {
+      "start": 2495.84,
+      "end": 2501.64,
+      "text": "experiment is, if my hypothesis were true, that"
+    },
+    {
+      "start": 2501.64,
+      "end": 2506.48,
+      "text": "fraction is expected to be 1 half."
+    },
+    {
+      "start": 2506.48,
+      "end": 2509.26,
+      "text": "1 half is the value of the true CDF."
+    },
+    {
+      "start": 2509.26,
+      "end": 2511.54,
+      "text": "I look at the fraction that I got."
+    },
+    {
+      "start": 2511.54,
+      "end": 2514.48,
+      "text": "It's expected to be that number."
+    },
+    {
+      "start": 2514.48,
+      "end": 2516.78,
+      "text": "But there's randomness, so it might be a little"
+    },
+    {
+      "start": 2516.78,
+      "end": 2518.28,
+      "text": "different than that."
+    },
+    {
+      "start": 2518.28,
+      "end": 2521.66,
+      "text": "For any particular value, the fraction that"
+    },
+    {
+      "start": 2521.66,
+      "end": 2525.68,
+      "text": "I got below a certain number, the fraction of data that were"
+    },
+    {
+      "start": 2525.68,
+      "end": 2532.22,
+      "text": "below 2, is expected, its expectation, is the"
+    },
+    {
+      "start": 2532.22,
+      "end": 2536.72,
+      "text": "probability of falling below 2, which is the correct CDF."
+    },
+    {
+      "start": 2536.72,
+      "end": 2541.06,
+      "text": "So if my hypothesis is true, the empirical CDF that I get"
+    },
+    {
+      "start": 2541.06,
+      "end": 2545.6,
+      "text": "based on data should, when n is large, be very close to the"
+    },
+    {
+      "start": 2545.6,
+      "end": 2547.08,
+      "text": "true CDF."
+    },
+    {
+      "start": 2547.08,
+      "end": 2551.34,
+      "text": "So a way of judging whether my model is correct or not is to"
+    },
+    {
+      "start": 2551.34,
+      "end": 2558.72,
+      "text": "look at the assumed CDF, the CDF under hypothesis H0, look at"
+    },
+    {
+      "start": 2558.72,
+      "end": 2562.48,
+      "text": "the CDF that I constructed based on the data, and see"
+    },
+    {
+      "start": 2562.48,
+      "end": 2565.44,
+      "text": "whether they're close enough or not."
+    },
+    {
+      "start": 2565.44,
+      "end": 2568.14,
+      "text": "And by close enough, I mean I'm going to look at all the"
+    },
+    {
+      "start": 2568.14,
+      "end": 2572.0,
+      "text": "possible x's and look at the maximum distance between those"
+    },
+    {
+      "start": 2572.0,
+      "end": 2573.28,
+      "text": "two curves."
+    },
+    {
+      "start": 2573.28,
+      "end": 2579.24,
+      "text": "And I'm going to have a test that decides in favor of H0 if"
+    },
+    {
+      "start": 2579.24,
+      "end": 2581.16,
+      "text": "this distance is small."
+    },
+    {
+      "start": 2581.34,
+      "end": 2586.1,
+      "text": "And in favor of H1 if this distance is large."
+    },
+    {
+      "start": 2586.1,
+      "end": 2588.56,
+      "text": "That still leaves me the problem of coming up with a"
+    },
+    {
+      "start": 2588.56,
+      "end": 2589.56,
+      "text": "threshold."
+    },
+    {
+      "start": 2589.56,
+      "end": 2593.16,
+      "text": "Where exactly do I put my threshold?"
+    },
+    {
+      "start": 2593.16,
+      "end": 2596.58,
+      "text": "Because this test is important enough and is used"
+    },
+    {
+      "start": 2596.58,
+      "end": 2600.2,
+      "text": "frequently, people have made the effort to try to"
+    },
+    {
+      "start": 2600.2,
+      "end": 2603.22,
+      "text": "understand the probability distribution of this quite"
+    },
+    {
+      "start": 2603.22,
+      "end": 2605.26,
+      "text": "difficult random variable."
+    },
+    {
+      "start": 2605.26,
+      "end": 2608.18,
+      "text": "One needs to do lots of approximations and clever"
+    },
+    {
+      "start": 2608.18,
+      "end": 2609.46,
+      "text": "calculations."
+    },
+    {
+      "start": 2609.46,
+      "end": 2611.1,
+      "text": "But these have led to"
+    },
+    {
+      "start": 2611.1,
+      "end": 2613.88,
+      "text": "values and tabulated values for the probability"
+    },
+    {
+      "start": 2613.88,
+      "end": 2616.18,
+      "text": "distribution of this random variable."
+    },
+    {
+      "start": 2616.18,
+      "end": 2619.32,
+      "text": "And for example, those tabulated values tell us that"
+    },
+    {
+      "start": 2619.32,
+      "end": 2625.0,
+      "text": "if we want 5% false rejection probability, then our"
+    },
+    {
+      "start": 2625.0,
+      "end": 2629.78,
+      "text": "threshold should be 1.36 divided by the square root of"
+    },
+    {
+      "start": 2629.78,
+      "end": 2630.54,
+      "text": "n."
+    },
+    {
+      "start": 2630.54,
+      "end": 2634.54,
+      "text": "So we know where to put our threshold for this particular"
+    },
+    {
+      "start": 2634.54,
+      "end": 2639.64,
+      "text": "value if we want this particular error or error"
+    },
+    {
+      "start": 2639.64,
+      "end": 2640.78,
+      "text": "probability to occur."
+    },
+    {
+      "start": 2641.1,
+      "end": 2646.28,
+      "text": "So that's about as hard and sophisticated classical"
+    },
+    {
+      "start": 2646.28,
+      "end": 2648.04,
+      "text": "statistics gets."
+    },
+    {
+      "start": 2648.04,
+      "end": 2652.88,
+      "text": "You want to have tests for hypotheses that are not so"
+    },
+    {
+      "start": 2652.88,
+      "end": 2655.96,
+      "text": "easy to handle."
+    },
+    {
+      "start": 2655.96,
+      "end": 2661.84,
+      "text": "People somehow think of clever ways of doing tests of this"
+    },
+    {
+      "start": 2661.84,
+      "end": 2665.66,
+      "text": "kind, how to compare the theoretical predictions with"
+    },
+    {
+      "start": 2665.66,
+      "end": 2670.22,
+      "text": "the observed predictions, with the observed data, come up with"
+    },
+    {
+      "start": 2670.22,
+      "end": 2670.94,
+      "text": "some measure."
+    },
+    {
+      "start": 2670.94,
+      "end": 2674.86,
+      "text": "And if you're not sure of the difference between theory and"
+    },
+    {
+      "start": 2674.86,
+      "end": 2679.0,
+      "text": "data, and if that difference is big, then you reject your"
+    },
+    {
+      "start": 2679.0,
+      "end": 2682.15,
+      "text": "hypothesis."
+    },
+    {
+      "start": 2682.15,
+      "end": 2682.93,
+      "text": "OK."
+    },
+    {
+      "start": 2682.93,
+      "end": 2686.37,
+      "text": "Of course, that's not the end of the field of statistics."
+    },
+    {
+      "start": 2686.37,
+      "end": 2688.99,
+      "text": "There's a lot more."
+    },
+    {
+      "start": 2688.99,
+      "end": 2691.99,
+      "text": "In some ways, as we kept moving through today's"
+    },
+    {
+      "start": 2691.99,
+      "end": 2695.25,
+      "text": "lecture, the way that we constructed those rejection"
+    },
+    {
+      "start": 2695.25,
+      "end": 2697.67,
+      "text": "regions was more and more ad hoc."
+    },
+    {
+      "start": 2697.67,
+      "end": 2702.23,
+      "text": "I pulled out of a hat a particular measure of fit"
+    },
+    {
+      "start": 2702.23,
+      "end": 2704.97,
+      "text": "between data and the model."
+    },
+    {
+      "start": 2704.97,
+      "end": 2709.67,
+      "text": "And I said, let's just use a test based on this."
+    },
+    {
+      "start": 2709.67,
+      "end": 2713.89,
+      "text": "There are attempts at more or less systematic ways of coming"
+    },
+    {
+      "start": 2713.89,
+      "end": 2717.33,
+      "text": "up with the general shape of rejection regions that have at"
+    },
+    {
+      "start": 2717.33,
+      "end": 2719.81,
+      "text": "least some desirable or favorable"
+    },
+    {
+      "start": 2719.81,
+      "end": 2724.61,
+      "text": "theoretical properties."
+    },
+    {
+      "start": 2724.61,
+      "end": 2728.29,
+      "text": "Some more specific problems that people study."
+    },
+    {
+      "start": 2728.29,
+      "end": 2732.19,
+      "text": "Instead of having a test, is this the correct PDF, yes or"
+    },
+    {
+      "start": 2732.19,
+      "end": 2733.15,
+      "text": "no?"
+    },
+    {
+      "start": 2733.15,
+      "end": 2734.93,
+      "text": "I just give you data."
+    },
+    {
+      "start": 2734.93,
+      "end": 2741.27,
+      "text": "And I ask you, give me a model or a PDF for those data."
+    },
+    {
+      "start": 2741.27,
+      "end": 2741.75,
+      "text": "OK."
+    },
+    {
+      "start": 2741.75,
+      "end": 2745.01,
+      "text": "Methods of this kind are of many types."
+    },
+    {
+      "start": 2745.01,
+      "end": 2749.45,
+      "text": "One general method is you form a histogram."
+    },
+    {
+      "start": 2749.45,
+      "end": 2752.93,
+      "text": "And then you take your histogram and plot a smooth"
+    },
+    {
+      "start": 2752.93,
+      "end": 2755.67,
+      "text": "line that kind of fits the histogram."
+    },
+    {
+      "start": 2755.67,
+      "end": 2758.37,
+      "text": "This still leaves the question of, how do you choose the"
+    },
+    {
+      "start": 2758.37,
+      "end": 2760.87,
+      "text": "bins, the bin size in your histogram?"
+    },
+    {
+      "start": 2760.87,
+      "end": 2762.63,
+      "text": "How narrow do you take them?"
+    },
+    {
+      "start": 2762.63,
+      "end": 2765.39,
+      "text": "And that depends on how many data you have."
+    },
+    {
+      "start": 2765.39,
+      "end": 2768.35,
+      "text": "And there's a lot of theory that tells you about the best"
+    },
+    {
+      "start": 2768.35,
+      "end": 2772.45,
+      "text": "way of choosing the bin sizes and the best ways of smoothing"
+    },
+    {
+      "start": 2772.45,
+      "end": 2774.61,
+      "text": "the data that you have."
+    },
+    {
+      "start": 2774.61,
+      "end": 2778.27,
+      "text": "A completely different topic is in signal processing, you"
+    },
+    {
+      "start": 2778.27,
+      "end": 2780.19,
+      "text": "want to do your inference."
+    },
+    {
+      "start": 2780.19,
+      "end": 2782.83,
+      "text": "Not only you want it to be good, but you also want it to"
+    },
+    {
+      "start": 2782.83,
+      "end": 2785.51,
+      "text": "be fast in a computational way."
+    },
+    {
+      "start": 2785.51,
+      "end": 2787.85,
+      "text": "You get data in real time, lots of data."
+    },
+    {
+      "start": 2787.85,
+      "end": 2791.51,
+      "text": "You want to keep processing and revising your estimates and"
+    },
+    {
+      "start": 2791.51,
+      "end": 2792.51,
+      "text": "your decisions."
+    },
+    {
+      "start": 2792.51,
+      "end": 2795.21,
+      "text": "data come and go."
+    },
+    {
+      "start": 2795.21,
+      "end": 2798.37,
+      "text": "Another topic that was sort of briefly touched upon in the"
+    },
+    {
+      "start": 2798.37,
+      "end": 2802.35,
+      "text": "last couple of lectures is that when you set up a model"
+    },
+    {
+      "start": 2802.35,
+      "end": 2805.05,
+      "text": "like a linear regression model, you choose some"
+    },
+    {
+      "start": 2805.05,
+      "end": 2806.53,
+      "text": "explanatory variables."
+    },
+    {
+      "start": 2806.53,
+      "end": 2810.23,
+      "text": "And you try to predict y from your x variables."
+    },
+    {
+      "start": 2810.23,
+      "end": 2812.95,
+      "text": "You have a choice of what to take as your"
+    },
+    {
+      "start": 2812.95,
+      "end": 2815.19,
+      "text": "explanatory variables."
+    },
+    {
+      "start": 2815.19,
+      "end": 2821.33,
+      "text": "Are there systematic ways of picking sort of the right"
+    },
+    {
+      "start": 2821.33,
+      "end": 2824.55,
+      "text": "x variables to try to estimate y?"
+    },
+    {
+      "start": 2824.55,
+      "end": 2828.35,
+      "text": "For example, should I try to estimate y on the basis of x,"
+    },
+    {
+      "start": 2828.35,
+      "end": 2830.33,
+      "text": "or on the basis of x squared?"
+    },
+    {
+      "start": 2830.33,
+      "end": 2832.95,
+      "text": "How do I decide between the two?"
+    },
+    {
+      "start": 2832.95,
+      "end": 2836.89,
+      "text": "Finally, the rage these days has to do with anything big,"
+    },
+    {
+      "start": 2836.89,
+      "end": 2838.47,
+      "text": "high dimensional."
+    },
+    {
+      "start": 2838.47,
+      "end": 2843.41,
+      "text": "Complicated models of complicated things, and tons"
+    },
+    {
+      "start": 2843.41,
+      "end": 2844.67,
+      "text": "and tons of data."
+    },
+    {
+      "start": 2844.67,
+      "end": 2848.09,
+      "text": "So these days, data are generated everywhere."
+    },
+    {
+      "start": 2848.09,
+      "end": 2851.33,
+      "text": "Amounts of data are humongous, also the problems that"
+    },
+    {
+      "start": 2851.33,
+      "end": 2854.27,
+      "text": "people are interested in tend to be very complicated with"
+    },
+    {
+      "start": 2854.27,
+      "end": 2855.51,
+      "text": "lots of parameters."
+    },
+    {
+      "start": 2855.51,
+      "end": 2859.81,
+      "text": "So I need specially tailored methods that can give you good"
+    },
+    {
+      "start": 2859.81,
+      "end": 2864.21,
+      "text": "results or decent results, even in the face of these huge"
+    },
+    {
+      "start": 2864.21,
+      "end": 2868.31,
+      "text": "amounts of data and possibly with computational constraints."
+    },
+    {
+      "start": 2868.31,
+      "end": 2870.73,
+      "text": "So with huge amounts of data, you want methods that are"
+    },
+    {
+      "start": 2870.73,
+      "end": 2876.45,
+      "text": "simple, but still can deliver for you meaningful answers."
+    },
+    {
+      "start": 2876.45,
+      "end": 2880.17,
+      "text": "Now, as I mentioned some time ago, this whole field of"
+    },
+    {
+      "start": 2880.17,
+      "end": 2881.31,
+      "text": "statistics is very simple."
+    },
+    {
+      "start": 2881.31,
+      "end": 2883.97,
+      "text": "It's very different from the field of probability."
+    },
+    {
+      "start": 2883.97,
+      "end": 2886.53,
+      "text": "In some sense, all that we're doing in statistics is"
+    },
+    {
+      "start": 2886.53,
+      "end": 2888.09,
+      "text": "probabilistic calculations."
+    },
+    {
+      "start": 2888.09,
+      "end": 2890.35,
+      "text": "That's what the theory kind of does."
+    },
+    {
+      "start": 2890.35,
+      "end": 2892.85,
+      "text": "But there's a big element of art."
+    },
+    {
+      "start": 2892.85,
+      "end": 2896.63,
+      "text": "You saw that we chose the shape of some decision regions or"
+    },
+    {
+      "start": 2896.63,
+      "end": 2900.09,
+      "text": "rejection regions in a somewhat ad hoc way."
+    },
+    {
+      "start": 2900.09,
+      "end": 2901.67,
+      "text": "There's even more basic things."
+    },
+    {
+      "start": 2901.67,
+      "end": 2903.25,
+      "text": "How do you organize your data?"
+    },
+    {
+      "start": 2903.25,
+      "end": 2906.69,
+      "text": "How do you think about which hypothesis you would like to"
+    },
+    {
+      "start": 2906.69,
+      "end": 2908.29,
+      "text": "test, and so on."
+    },
+    {
+      "start": 2908.29,
+      "end": 2911.05,
+      "text": "There's a lot of art that's involved here."
+    },
+    {
+      "start": 2911.05,
+      "end": 2913.51,
+      "text": "And there's a lot that can go wrong."
+    },
+    {
+      "start": 2913.51,
+      "end": 2916.63,
+      "text": "So I'm going to close with a note that you can take either"
+    },
+    {
+      "start": 2916.63,
+      "end": 2918.97,
+      "text": "as pessimistic or optimistic."
+    },
+    {
+      "start": 2918.97,
+      "end": 2922.73,
+      "text": "There's a famous paper that came up out a few years ago,"
+    },
+    {
+      "start": 2922.73,
+      "end": 2926.43,
+      "text": "and has been cited about 1,000 times or so."
+    },
+    {
+      "start": 2926.43,
+      "end": 2930.11,
+      "text": "And the title of the paper is, Why Most Published Research"
+    },
+    {
+      "start": 2930.11,
+      "end": 2931.85,
+      "text": "Findings Are False."
+    },
+    {
+      "start": 2931.85,
+      "end": 2936.05,
+      "text": "And it's actually a very good argument why, in fields like"
+    },
+    {
+      "start": 2936.05,
+      "end": 2939.93,
+      "text": "psychology or the medical science and all that, a lot of"
+    },
+    {
+      "start": 2939.93,
+      "end": 2941.05,
+      "text": "what you see published."
+    },
+    {
+      "start": 2941.05,
+      "end": 2944.11,
+      "text": "That yes, this drug has an effect on that particular"
+    },
+    {
+      "start": 2944.11,
+      "end": 2947.99,
+      "text": "disease is actually false, because people do not do their"
+    },
+    {
+      "start": 2947.99,
+      "end": 2949.73,
+      "text": "statistics correctly."
+    },
+    {
+      "start": 2949.73,
+      "end": 2952.55,
+      "text": "There's lots of biases in what people do."
+    },
+    {
+      "start": 2952.55,
+      "end": 2957.97,
+      "text": "An obvious bias is that you only publish a result when you"
+    },
+    {
+      "start": 2957.97,
+      "end": 2959.15,
+      "text": "see something."
+    },
+    {
+      "start": 2959.15,
+      "end": 2962.73,
+      "text": "So the null hypothesis is that the drug doesn't work."
+    },
+    {
+      "start": 2962.73,
+      "end": 2964.23,
+      "text": "You do your tests."
+    },
+    {
+      "start": 2964.23,
+      "end": 2966.17,
+      "text": "The drug didn't work."
+    },
+    {
+      "start": 2966.17,
+      "end": 2969.17,
+      "text": "You just go home and cry."
+    },
+    {
+      "start": 2969.17,
+      "end": 2970.67,
+      "text": "But if by accident."
+    },
+    {
+      "start": 2971.05,
+      "end": 2974.99,
+      "text": "5% happens, and even though the drug doesn't work, you've"
+    },
+    {
+      "start": 2974.99,
+      "end": 2978.97,
+      "text": "got some outlier data, and it seemed to be working, then"
+    },
+    {
+      "start": 2978.97,
+      "end": 2980.99,
+      "text": "you're excited, you publish it."
+    },
+    {
+      "start": 2980.99,
+      "end": 2985.99,
+      "text": "So that's clearly a bias that gets results to be published,"
+    },
+    {
+      "start": 2985.99,
+      "end": 2990.35,
+      "text": "even though they do not have a solid foundation behind them."
+    },
+    {
+      "start": 2990.35,
+      "end": 2991.93,
+      "text": "Then there's another thing."
+    },
+    {
+      "start": 2991.93,
+      "end": 2995.43,
+      "text": "OK, I'm picking my 5%."
+    },
+    {
+      "start": 2995.43,
+      "end": 2999.77,
+      "text": "So when H0 is true, there's a small probability that the data"
+    },
+    {
+      "start": 2999.77,
+      "end": 3000.93,
+      "text": "will look like an outlier."
+    },
+    {
+      "start": 3000.93,
+      "end": 3006.27,
+      "text": "And in that case, I publish my result."
+    },
+    {
+      "start": 3006.27,
+      "end": 3008.15,
+      "text": "OK, it's only 5%."
+    },
+    {
+      "start": 3008.15,
+      "end": 3010.27,
+      "text": "It's not going to happen too often."
+    },
+    {
+      "start": 3010.27,
+      "end": 3015.21,
+      "text": "But suppose that I go and do 1,000 different tests."
+    },
+    {
+      "start": 3015.21,
+      "end": 3017.45,
+      "text": "Test H0 against this hypothesis."
+    },
+    {
+      "start": 3017.45,
+      "end": 3019.17,
+      "text": "Test H0 against that hypothesis."
+    },
+    {
+      "start": 3019.17,
+      "end": 3022.01,
+      "text": "Test H0 against that hypothesis."
+    },
+    {
+      "start": 3022.01,
+      "end": 3026.25,
+      "text": "Some of these tests, just by accident, might turn out to be"
+    },
+    {
+      "start": 3026.25,
+      "end": 3028.33,
+      "text": "in favor of H1."
+    },
+    {
+      "start": 3028.33,
+      "end": 3030.93,
+      "text": "And again, these are selected to be published."
+    },
+    {
+      "start": 3030.93,
+      "end": 3035.71,
+      "text": "So if you do lots and lots of tests, and in each one you have"
+    },
+    {
+      "start": 3035.71,
+      "end": 3038.95,
+      "text": "a 5% probability of error, when you consider the"
+    },
+    {
+      "start": 3038.95,
+      "end": 3041.99,
+      "text": "collection of all those tests, actually the probability of"
+    },
+    {
+      "start": 3041.99,
+      "end": 3046.93,
+      "text": "making incorrect inferences is a lot more than 5%."
+    },
+    {
+      "start": 3046.93,
+      "end": 3051.39,
+      "text": "One basic principle in being systematic about such studies"
+    },
+    {
+      "start": 3051.39,
+      "end": 3055.93,
+      "text": "is that you should first pick your hypothesis that you're"
+    },
+    {
+      "start": 3055.93,
+      "end": 3060.09,
+      "text": "going to test, then get your data, and do your hypothesis"
+    },
+    {
+      "start": 3060.09,
+      "end": 3060.93,
+      "text": "testing."
+    },
+    {
+      "start": 3060.93,
+      "end": 3065.67,
+      "text": "What would be wrong is to get your data, look at them, and"
+    },
+    {
+      "start": 3065.67,
+      "end": 3068.43,
+      "text": "say, OK, I'm going now to test for these hundreds of"
+    },
+    {
+      "start": 3068.43,
+      "end": 3069.73,
+      "text": "different hypotheses."
+    },
+    {
+      "start": 3069.73,
+      "end": 3073.97,
+      "text": "And I'm going to choose my hypothesis to be for features"
+    },
+    {
+      "start": 3073.97,
+      "end": 3076.61,
+      "text": "that kind of look abnormal in my data."
+    },
+    {
+      "start": 3076.61,
+      "end": 3079.55,
+      "text": "Well, given enough data, you can always find some"
+    },
+    {
+      "start": 3079.55,
+      "end": 3081.67,
+      "text": "abnormalities just by chance."
+    },
+    {
+      "start": 3081.67,
+      "end": 3085.05,
+      "text": "And if you choose to make a statistical test, is this"
+    },
+    {
+      "start": 3085.05,
+      "end": 3086.73,
+      "text": "abnormality present?"
+    },
+    {
+      "start": 3086.73,
+      "end": 3090.01,
+      "text": "Yes, it will be present, because you first found the"
+    },
+    {
+      "start": 3090.01,
+      "end": 3090.63,
+      "text": "abnormality."
+    },
+    {
+      "start": 3090.63,
+      "end": 3092.13,
+      "text": "And then you tested for it."
+    },
+    {
+      "start": 3092.13,
+      "end": 3095.21,
+      "text": "So that's another way that things can go wrong."
+    },
+    {
+      "start": 3095.21,
+      "end": 3097.53,
+      "text": "So the moral of this story is that while the world of"
+    },
+    {
+      "start": 3097.53,
+      "end": 3100.21,
+      "text": "probability is really beautiful and solid, you have"
+    },
+    {
+      "start": 3100.21,
+      "end": 3100.95,
+      "text": "your axioms."
+    },
+    {
+      "start": 3100.95,
+      "end": 3105.19,
+      "text": "Every question has a unique answer that by now you can all"
+    },
+    {
+      "start": 3105.19,
+      "end": 3108.15,
+      "text": "of you find in a very reliable way."
+    },
+    {
+      "start": 3108.15,
+      "end": 3110.75,
+      "text": "Statistics is a dirty and difficult business."
+    },
+    {
+      "start": 3110.75,
+      "end": 3113.01,
+      "text": "And that's why the subject is not over."
+    },
+    {
+      "start": 3113.01,
+      "end": 3116.13,
+      "text": "And if you're interested in it, it's worth taking follow-on"
+    },
+    {
+      "start": 3116.13,
+      "end": 3118.91,
+      "text": "courses in that direction."
+    },
+    {
+      "start": 3118.91,
+      "end": 3119.27,
+      "text": "OK."
+    },
+    {
+      "start": 3119.27,
+      "end": 3119.79,
+      "text": "So."
+    },
+    {
+      "start": 3119.79,
+      "end": 3120.29,
+      "text": "Have."
+    },
+    {
+      "start": 3120.29,
+      "end": 3123.07,
+      "text": "Have good luck in the finals."
+    },
+    {
+      "start": 3123.07,
+      "end": 3125.71,
+      "text": "Do well, and have a nice vacation afterwards."
+    },
+    {
+      "start": 3125.71,
+      "end": 3126.97,
+      "text": "Thank you."
+    }
+  ]
+}

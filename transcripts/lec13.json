@@ -1,0 +1,4557 @@
+{
+  "lecture": "lec13",
+  "language": "en",
+  "duration": 3057.024,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.44,
+      "text": "The following content is provided under a Creative"
+    },
+    {
+      "start": 2.44,
+      "end": 3.96,
+      "text": "Commons license."
+    },
+    {
+      "start": 3.96,
+      "end": 6.28,
+      "text": "Your support will help MIT OpenCourseWare"
+    },
+    {
+      "start": 6.28,
+      "end": 10.64,
+      "text": "continue to offer high quality educational resources for free."
+    },
+    {
+      "start": 10.64,
+      "end": 13.26,
+      "text": "To make a donation or view additional materials"
+    },
+    {
+      "start": 13.26,
+      "end": 17.2,
+      "text": "from hundreds of MIT courses, visit MIT OpenCourseWare"
+    },
+    {
+      "start": 17.2,
+      "end": 20.4,
+      "text": "at ocw.mit.edu."
+    },
+    {
+      "start": 20.4,
+      "end": 27.63,
+      "text": "So by now, you have seen pretty much every possible trick"
+    },
+    {
+      "start": 27.63,
+      "end": 30.35,
+      "text": "there is in basic probability theory"
+    },
+    {
+      "start": 30.35,
+      "end": 33.11,
+      "text": "about how to calculate distributions and so on."
+    },
+    {
+      "start": 33.11,
+      "end": 37.23,
+      "text": "You have the basic tools to do pretty much anything."
+    },
+    {
+      "start": 37.23,
+      "end": 40.59,
+      "text": "So what's coming after this?"
+    },
+    {
+      "start": 40.59,
+      "end": 44.59,
+      "text": "Well, probability is useful for developing"
+    },
+    {
+      "start": 44.59,
+      "end": 46.35,
+      "text": "the science of inference."
+    },
+    {
+      "start": 46.35,
+      "end": 49.11,
+      "text": "And this is a subject to which we're going to come back at"
+    },
+    {
+      "start": 49.11,
+      "end": 51.29,
+      "text": "the end of the semester."
+    },
+    {
+      "start": 51.29,
+      "end": 54.81,
+      "text": "Another sort of chapter, which is what we will be doing over"
+    },
+    {
+      "start": 54.81,
+      "end": 57.73,
+      "text": "the next few weeks, is to deal with phenomena"
+    },
+    {
+      "start": 57.73,
+      "end": 59.21,
+      "text": "that evolve in time."
+    },
+    {
+      "start": 59.21,
+      "end": 60.33,
+      "text": "So so-called"
+    },
+    {
+      "start": 60.33,
+      "end": 63.29,
+      "text": "random processes or stochastic processes."
+    },
+    {
+      "start": 63.29,
+      "end": 65.05,
+      "text": "So what is this about?"
+    },
+    {
+      "start": 65.05,
+      "end": 68.09,
+      "text": "So in the real world, you don't just throw two random"
+    },
+    {
+      "start": 68.09,
+      "end": 69.53,
+      "text": "variables and go home."
+    },
+    {
+      "start": 69.53,
+      "end": 71.39,
+      "text": "Rather, the world goes on."
+    },
+    {
+      "start": 71.39,
+      "end": 74.85,
+      "text": "So you generate a random variable, then you get more"
+    },
+    {
+      "start": 74.85,
+      "end": 78.07,
+      "text": "random variables, and things evolve in time."
+    },
+    {
+      "start": 78.07,
+      "end": 81.51,
+      "text": "And random processes are supposed to be models that"
+    },
+    {
+      "start": 81.51,
+      "end": 85.65,
+      "text": "capture the evolution of random phenomena over time."
+    },
+    {
+      "start": 85.65,
+      "end": 87.57,
+      "text": "So that's what we will be doing."
+    },
+    {
+      "start": 87.57,
+      "end": 90.05,
+      "text": "Now, when we have evolution in time,"
+    },
+    {
+      "start": 90.05,
+      "end": 93.49,
+      "text": "mathematically speaking, you can use discrete time or"
+    },
+    {
+      "start": 93.49,
+      "end": 94.77,
+      "text": "continuous time."
+    },
+    {
+      "start": 94.77,
+      "end": 96.81,
+      "text": "Of course, discrete time is easier."
+    },
+    {
+      "start": 96.81,
+      "end": 99.25,
+      "text": "And that's where we're going to start from."
+    },
+    {
+      "start": 99.25,
+      "end": 102.97,
+      "text": "And we're going to start from the easiest, simplest random"
+    },
+    {
+      "start": 102.97,
+      "end": 106.65,
+      "text": "process, which is the so-called Bernoulli process,"
+    },
+    {
+      "start": 106.65,
+      "end": 110.27,
+      "text": "which is nothing but just a sequence of coin flips."
+    },
+    {
+      "start": 110.27,
+      "end": 114.63,
+      "text": "You keep flipping a coin and keep going forever."
+    },
+    {
+      "start": 114.63,
+      "end": 116.37,
+      "text": "That's what the Bernoulli process is."
+    },
+    {
+      "start": 116.37,
+      "end": 118.27,
+      "text": "So in some sense, it's something that you have"
+    },
+    {
+      "start": 118.27,
+      "end": 119.13,
+      "text": "already seen."
+    },
+    {
+      "start": 119.13,
+      "end": 120.01,
+      "text": "But we're going to introduce it."
+    },
+    {
+      "start": 120.01,
+      "end": 123.19,
+      "text": "We're going to introduce a few additional ideas here that"
+    },
+    {
+      "start": 123.19,
+      "end": 127.41,
+      "text": "will be useful and relevant as we go along and we move on to"
+    },
+    {
+      "start": 127.41,
+      "end": 129.95,
+      "text": "continuous time processes."
+    },
+    {
+      "start": 129.95,
+      "end": 132.63,
+      "text": "So we're going to define the Bernoulli process, talk about"
+    },
+    {
+      "start": 132.63,
+      "end": 137.79,
+      "text": "some basic properties that the process has, and derive a few"
+    },
+    {
+      "start": 137.79,
+      "end": 141.45,
+      "text": "formulas, and exploit the special structure that it has"
+    },
+    {
+      "start": 141.45,
+      "end": 144.89,
+      "text": "to do a few somewhat interesting things."
+    },
+    {
+      "start": 144.89,
+      "end": 149.69,
+      "text": "By the way, where does the word Bernoulli come from?"
+    },
+    {
+      "start": 149.69,
+      "end": 153.07,
+      "text": "Well, the Bernoullis were a family of mathematicians,"
+    },
+    {
+      "start": 153.07,
+      "end": 157.17,
+      "text": "Swiss mathematicians and scientists around the 1700s."
+    },
+    {
+      "start": 157.17,
+      "end": 160.93,
+      "text": "There were so many of them that actually some of them had the"
+    },
+    {
+      "start": 160.93,
+      "end": 161.83,
+      "text": "same first name."
+    },
+    {
+      "start": 161.83,
+      "end": 166.87,
+      "text": "So historians even have difficulty of figuring out who"
+    },
+    {
+      "start": 166.87,
+      "end": 168.67,
+      "text": "exactly did what."
+    },
+    {
+      "start": 168.67,
+      "end": 171.37,
+      "text": "But in any case, you can imagine that at the dinner"
+    },
+    {
+      "start": 171.37,
+      "end": 173.71,
+      "text": "table, they were probably flipping coins and doing"
+    },
+    {
+      "start": 173.71,
+      "end": 175.57,
+      "text": "Bernoulli trials."
+    },
+    {
+      "start": 175.57,
+      "end": 178.27,
+      "text": "Maybe that was their pastime."
+    },
+    {
+      "start": 178.27,
+      "end": 178.61,
+      "text": "OK."
+    },
+    {
+      "start": 178.61,
+      "end": 179.69,
+      "text": "So what's the Bernoulli process?"
+    },
+    {
+      "start": 179.69,
+      "end": 185.75,
+      "text": "The Bernoulli process is nothing but a sequence of"
+    },
+    {
+      "start": 185.75,
+      "end": 188.69,
+      "text": "independent Bernoulli trials that you can"
+    },
+    {
+      "start": 188.69,
+      "end": 191.11,
+      "text": "think of as coin flips."
+    },
+    {
+      "start": 191.11,
+      "end": 193.55,
+      "text": "So you can think the result of each trial"
+    },
+    {
+      "start": 193.55,
+      "end": 195.35,
+      "text": "being heads or tails."
+    },
+    {
+      "start": 195.35,
+      "end": 199.37,
+      "text": "It's a little more convenient maybe to talk about successes"
+    },
+    {
+      "start": 199.37,
+      "end": 202.47,
+      "text": "and failures instead of heads or tails, or if you wish"
+    },
+    {
+      "start": 202.47,
+      "end": 207.33,
+      "text": "numerical values to use a 1 for a success and 0 for a failure."
+    },
+    {
+      "start": 207.33,
+      "end": 209.57,
+      "text": "So the model is that each one of these"
+    },
+    {
+      "start": 209.57,
+      "end": 214.25,
+      "text": "trials has the same probability of success, p."
+    },
+    {
+      "start": 214.25,
+      "end": 217.05,
+      "text": "And the other assumption is that these trials are"
+    },
+    {
+      "start": 217.05,
+      "end": 220.89,
+      "text": "statistically independent of each other."
+    },
+    {
+      "start": 220.89,
+      "end": 223.53,
+      "text": "So what could be some examples of Bernoulli trials?"
+    },
+    {
+      "start": 223.53,
+      "end": 228.03,
+      "text": "You buy a lottery ticket every week, and you win or lose."
+    },
+    {
+      "start": 228.03,
+      "end": 230.07,
+      "text": "Presumably these are independent of each other."
+    },
+    {
+      "start": 230.07,
+      "end": 233.27,
+      "text": "And if it's the same kind of lottery, the probability of"
+    },
+    {
+      "start": 233.27,
+      "end": 235.93,
+      "text": "winning should be the same during every week."
+    },
+    {
+      "start": 235.93,
+      "end": 239.17,
+      "text": "Maybe you want to model the financial markets, and the"
+    },
+    {
+      "start": 239.17,
+      "end": 239.43,
+      "text": "crude model is the same."
+    },
+    {
+      "start": 239.43,
+      "end": 243.13,
+      "text": "The crude model could be that on any given day the Dow Jones"
+    },
+    {
+      "start": 243.13,
+      "end": 247.29,
+      "text": "is going to go up or down with a certain probability."
+    },
+    {
+      "start": 247.29,
+      "end": 251.75,
+      "text": "Well, that probability must be somewhere around 0.5 or so."
+    },
+    {
+      "start": 251.75,
+      "end": 254.89,
+      "text": "This is a crude model of financial markets."
+    },
+    {
+      "start": 254.89,
+      "end": 257.91,
+      "text": "You say probably there's more into them."
+    },
+    {
+      "start": 257.91,
+      "end": 259.67,
+      "text": "Life is not that simple."
+    },
+    {
+      "start": 259.67,
+      "end": 263.75,
+      "text": "But actually it's a pretty reasonable model."
+    },
+    {
+      "start": 263.75,
+      "end": 266.23,
+      "text": "It takes quite a bit of work to come up with more"
+    },
+    {
+      "start": 266.23,
+      "end": 269.03,
+      "text": "sophisticated models that can do better predictions than a"
+    },
+    {
+      "start": 269.03,
+      "end": 272.13,
+      "text": "few heads and tails."
+    },
+    {
+      "start": 272.13,
+      "end": 276.27,
+      "text": "Now, more interesting perhaps are the examples we will be"
+    },
+    {
+      "start": 276.27,
+      "end": 278.27,
+      "text": "dealing with in this class."
+    },
+    {
+      "start": 278.27,
+      "end": 283.75,
+      "text": "The Bernoulli process is a good model for streams of arrivals"
+    },
+    {
+      "start": 283.75,
+      "end": 285.93,
+      "text": "of any kind to a facility."
+    },
+    {
+      "start": 285.93,
+      "end": 290.39,
+      "text": "So it could be a bank, and you are sitting at the door of the"
+    },
+    {
+      "start": 290.39,
+      "end": 294.05,
+      "text": "bank, and every second you check whether a customer came"
+    },
+    {
+      "start": 294.05,
+      "end": 296.19,
+      "text": "in during that second or not."
+    },
+    {
+      "start": 296.19,
+      "end": 298.91,
+      "text": "Or you can think about arrivals of jobs to a certain"
+    },
+    {
+      "start": 298.91,
+      "end": 304.81,
+      "text": "server or any other kind of requests to a service system."
+    },
+    {
+      "start": 304.81,
+      "end": 309.15,
+      "text": "So requests or jobs arrive at random times."
+    },
+    {
+      "start": 309.15,
+      "end": 312.37,
+      "text": "You split the time into time slots."
+    },
+    {
+      "start": 312.37,
+      "end": 315.19,
+      "text": "And during each time slot, something comes or something"
+    },
+    {
+      "start": 315.19,
+      "end": 316.61,
+      "text": "does not come."
+    },
+    {
+      "start": 316.61,
+      "end": 320.21,
+      "text": "And for many applications, it's a reasonable assumption to"
+    },
+    {
+      "start": 320.21,
+      "end": 324.49,
+      "text": "make that arrivals on any given slot are independent of"
+    },
+    {
+      "start": 324.49,
+      "end": 327.53,
+      "text": "arrivals in any other time slot."
+    },
+    {
+      "start": 327.53,
+      "end": 328.91,
+      "text": "So each time slot can"
+    },
+    {
+      "start": 328.91,
+      "end": 332.11,
+      "text": "be viewed as a trial, where either something comes or"
+    },
+    {
+      "start": 332.11,
+      "end": 333.91,
+      "text": "doesn't come, and different trials are"
+    },
+    {
+      "start": 333.91,
+      "end": 335.83,
+      "text": "independent of each other."
+    },
+    {
+      "start": 335.83,
+      "end": 337.99,
+      "text": "Now, there's two assumptions that we're making here."
+    },
+    {
+      "start": 337.99,
+      "end": 340.03,
+      "text": "One is the independence assumption."
+    },
+    {
+      "start": 340.03,
+      "end": 343.03,
+      "text": "The other is that this number p, probability of success, is"
+    },
+    {
+      "start": 343.03,
+      "end": 344.51,
+      "text": "constant."
+    },
+    {
+      "start": 344.51,
+      "end": 347.83,
+      "text": "Now, if you think about the bank example, if you stand"
+    },
+    {
+      "start": 347.83,
+      "end": 353.29,
+      "text": "outside the bank at 9.30 in the morning, you'll see"
+    },
+    {
+      "start": 353.29,
+      "end": 355.81,
+      "text": "arrivals happening at a certain rate."
+    },
+    {
+      "start": 355.81,
+      "end": 358.73,
+      "text": "If you stand outside the bank at 12 noon,"
+    },
+    {
+      "start": 358.73,
+      "end": 362.01,
+      "text": "probably arrivals are more frequent, which means that a"
+    },
+    {
+      "start": 362.01,
+      "end": 365.69,
+      "text": "given time slot has a higher probability of seeing an"
+    },
+    {
+      "start": 365.69,
+      "end": 368.03,
+      "text": "arrival around noon time."
+    },
+    {
+      "start": 368.03,
+      "end": 372.13,
+      "text": "This means that the assumption of a constant p is probably not"
+    },
+    {
+      "start": 372.13,
+      "end": 374.71,
+      "text": "correct in that setting if you're"
+    },
+    {
+      "start": 374.71,
+      "end": 376.63,
+      "text": "talking about the whole day."
+    },
+    {
+      "start": 376.63,
+      "end": 379.65,
+      "text": "So the probability of successes or arrivals in the"
+    },
+    {
+      "start": 379.65,
+      "end": 384.33,
+      "text": "morning is going to be smaller than what it would be at noon."
+    },
+    {
+      "start": 384.33,
+      "end": 387.93,
+      "text": "But if you're talking about a time period, let's say 10 to 10.15,"
+    },
+    {
+      "start": 388.73,
+      "end": 392.45,
+      "text": "probably all slots have the same probability of seeing an"
+    },
+    {
+      "start": 392.45,
+      "end": 394.85,
+      "text": "arrival, and it's a good approximation."
+    },
+    {
+      "start": 394.85,
+      "end": 397.41,
+      "text": "So we're going to stick with the assumption that p is"
+    },
+    {
+      "start": 397.41,
+      "end": 401.09,
+      "text": "constant, doesn't change with time."
+    },
+    {
+      "start": 401.09,
+      "end": 404.49,
+      "text": "Now that we have our model, what do we do with it?"
+    },
+    {
+      "start": 404.49,
+      "end": 407.19,
+      "text": "Well, we start talking about the statistical properties"
+    },
+    {
+      "start": 407.19,
+      "end": 408.51,
+      "text": "that it has."
+    },
+    {
+      "start": 408.51,
+      "end": 412.35,
+      "text": "And here, there's two slightly different perspectives of"
+    },
+    {
+      "start": 412.35,
+      "end": 415.65,
+      "text": "thinking about what a random process is."
+    },
+    {
+      "start": 415.65,
+      "end": 418.51,
+      "text": "The simplest version is to think about a random process."
+    },
+    {
+      "start": 418.73,
+      "end": 421.49,
+      "text": "It's being just a sequence of random variables."
+    },
+    {
+      "start": 424.21,
+      "end": 426.87,
+      "text": "We know what random variables are."
+    },
+    {
+      "start": 426.87,
+      "end": 429.41,
+      "text": "We know what multiple random variables are."
+    },
+    {
+      "start": 429.41,
+      "end": 432.73,
+      "text": "So it's just an experiment that has associated with it a"
+    },
+    {
+      "start": 432.73,
+      "end": 434.69,
+      "text": "bunch of random variables."
+    },
+    {
+      "start": 434.69,
+      "end": 437.35,
+      "text": "So once you have random variables, what do you do"
+    },
+    {
+      "start": 437.35,
+      "end": 438.45,
+      "text": "instinctively?"
+    },
+    {
+      "start": 438.45,
+      "end": 441.57,
+      "text": "You talk about the distribution of these random variables."
+    },
+    {
+      "start": 441.57,
+      "end": 445.67,
+      "text": "We already specified for the Bernoulli process that each xi"
+    },
+    {
+      "start": 445.67,
+      "end": 448.25,
+      "text": "is a Bernoulli random variable with probability of success"
+    },
+    {
+      "start": 448.25,
+      "end": 449.47,
+      "text": "equal to p."
+    },
+    {
+      "start": 449.47,
+      "end": 451.61,
+      "text": "That specifies the distribution of the random"
+    },
+    {
+      "start": 451.61,
+      "end": 455.49,
+      "text": "variable X or Xt for a general time t."
+    },
+    {
+      "start": 455.49,
+      "end": 457.73,
+      "text": "Then you can calculate expected values and"
+    },
+    {
+      "start": 457.73,
+      "end": 459.41,
+      "text": "variances and so on."
+    },
+    {
+      "start": 459.41,
+      "end": 464.01,
+      "text": "So the expected value is with probability p, you get a 1."
+    },
+    {
+      "start": 464.01,
+      "end": 466.63,
+      "text": "And with probability 1 minus p, you get a 0."
+    },
+    {
+      "start": 466.63,
+      "end": 469.49,
+      "text": "So the expected value is equal to p."
+    },
+    {
+      "start": 469.49,
+      "end": 473.01,
+      "text": "And then we have seen before a formula for the variance of a"
+    },
+    {
+      "start": 473.01,
+      "end": 477.01,
+      "text": "Bernoulli random variable, which is p times 1 minus p."
+    },
+    {
+      "start": 477.01,
+      "end": 477.81,
+      "text": "So this way."
+    },
+    {
+      "start": 477.81,
+      "end": 482.07,
+      "text": "We basically now have all the statistical properties of the"
+    },
+    {
+      "start": 482.07,
+      "end": 483.89,
+      "text": "random variable Xt."
+    },
+    {
+      "start": 483.89,
+      "end": 486.65,
+      "text": "And we have those properties for every t."
+    },
+    {
+      "start": 486.65,
+      "end": 489.93,
+      "text": "Is this enough of a probabilistic description of"
+    },
+    {
+      "start": 489.93,
+      "end": 491.55,
+      "text": "our random process?"
+    },
+    {
+      "start": 491.55,
+      "end": 492.19,
+      "text": "Well, no."
+    },
+    {
+      "start": 492.19,
+      "end": 495.03,
+      "text": "You need to know how the different random variables"
+    },
+    {
+      "start": 495.03,
+      "end": 496.79,
+      "text": "relate to each other."
+    },
+    {
+      "start": 496.79,
+      "end": 500.87,
+      "text": "If you're talking about a general random process, you"
+    },
+    {
+      "start": 500.87,
+      "end": 504.81,
+      "text": "would like to know things such as, for example, the joint"
+    },
+    {
+      "start": 504.81,
+      "end": 506.85,
+      "text": "distribution of X2 with X5."
+    },
+    {
+      "start": 506.85,
+      "end": 507.81,
+      "text": "And X3 with X4."
+    },
+    {
+      "start": 507.81,
+      "end": 509.91,
+      "text": "And X7, for example."
+    },
+    {
+      "start": 509.91,
+      "end": 512.81,
+      "text": "That might be something that you're interested in."
+    },
+    {
+      "start": 512.81,
+      "end": 518.81,
+      "text": "And the way you specify it is by giving the joint PMF of"
+    },
+    {
+      "start": 518.81,
+      "end": 520.53,
+      "text": "these random variables."
+    },
+    {
+      "start": 520.53,
+      "end": 525.01,
+      "text": "And you have to do that for every collection or any subset"
+    },
+    {
+      "start": 525.01,
+      "end": 527.29,
+      "text": "of the random variables you're interested in."
+    },
+    {
+      "start": 527.29,
+      "end": 529.85,
+      "text": "So to have a complete description of a random"
+    },
+    {
+      "start": 529.85,
+      "end": 534.75,
+      "text": "process, you need to specify for me all the possible joint"
+    },
+    {
+      "start": 534.75,
+      "end": 535.95,
+      "text": "distributions."
+    },
+    {
+      "start": 535.95,
+      "end": 537.69,
+      "text": "And once you have all the possible"
+    },
+    {
+      "start": 537.69,
+      "end": 541.07,
+      "text": "joint distributions, then you can answer, in principle, any"
+    },
+    {
+      "start": 541.07,
+      "end": 543.29,
+      "text": "questions you might be interested in."
+    },
+    {
+      "start": 543.29,
+      "end": 545.51,
+      "text": "How did we get around this issue?"
+    },
+    {
+      "start": 545.51,
+      "end": 548.05,
+      "text": "For the Bernoulli process, I didn't give you the joint"
+    },
+    {
+      "start": 548.05,
+      "end": 549.97,
+      "text": "distributions explicitly."
+    },
+    {
+      "start": 549.97,
+      "end": 552.27,
+      "text": "But I gave them to you implicitly."
+    },
+    {
+      "start": 552.27,
+      "end": 555.31,
+      "text": "And this is because I told you that the different random"
+    },
+    {
+      "start": 555.31,
+      "end": 558.39,
+      "text": "variables are independent of each other."
+    },
+    {
+      "start": 558.39,
+      "end": 561.49,
+      "text": "So at least for the Bernoulli process, where we make the"
+    },
+    {
+      "start": 561.49,
+      "end": 564.33,
+      "text": "independence assumption, we know that this is going to be"
+    },
+    {
+      "start": 564.33,
+      "end": 566.19,
+      "text": "the product of the PMFs."
+    },
+    {
+      "start": 569.0,
+      "end": 573.84,
+      "text": "And since I have told you what the individual PMFs are, this"
+    },
+    {
+      "start": 573.84,
+      "end": 577.1,
+      "text": "means that you automatically know all the joint PMFs."
+    },
+    {
+      "start": 577.1,
+      "end": 581.32,
+      "text": "And we can go to business based on that."
+    },
+    {
+      "start": 581.32,
+      "end": 585.14,
+      "text": "So this is one view of what a random process is, just a"
+    },
+    {
+      "start": 585.14,
+      "end": 587.18,
+      "text": "collection of random variables."
+    },
+    {
+      "start": 587.18,
+      "end": 590.64,
+      "text": "There's another view that's a little more abstract, which is"
+    },
+    {
+      "start": 590.64,
+      "end": 592.06,
+      "text": "the following."
+    },
+    {
+      "start": 592.06,
+      "end": 595.5,
+      "text": "This process, the entire process, is to be thought of"
+    },
+    {
+      "start": 595.5,
+      "end": 597.52,
+      "text": "as one long experiment."
+    },
+    {
+      "start": 599.0,
+      "end": 603.56,
+      "text": "We go back to the chapter one view of probabilistic models."
+    },
+    {
+      "start": 603.56,
+      "end": 606.24,
+      "text": "So there must be a sample space involved."
+    },
+    {
+      "start": 606.24,
+      "end": 607.66,
+      "text": "What is the sample space?"
+    },
+    {
+      "start": 607.66,
+      "end": 611.76,
+      "text": "If I do my infinite long experiment of flipping an"
+    },
+    {
+      "start": 611.76,
+      "end": 615.32,
+      "text": "infinite number of coins, a typical outcome of the"
+    },
+    {
+      "start": 615.32,
+      "end": 621.2,
+      "text": "experiment would be a sequence of 0's and 1's."
+    },
+    {
+      "start": 621.2,
+      "end": 625.62,
+      "text": "So this could be one possible outcome of the experiment,"
+    },
+    {
+      "start": 625.62,
+      "end": 628.64,
+      "text": "just an infinite sequence of 0's and 1's."
+    },
+    {
+      "start": 628.64,
+      "end": 633.0,
+      "text": "My sample space is the set of all possible"
+    },
+    {
+      "start": 633.0,
+      "end": 634.96,
+      "text": "outcomes of this kind."
+    },
+    {
+      "start": 634.96,
+      "end": 640.66,
+      "text": "Here's another possible outcome, and so on."
+    },
+    {
+      "start": 640.66,
+      "end": 644.04,
+      "text": "And essentially, we're dealing with a sample space, which is"
+    },
+    {
+      "start": 644.04,
+      "end": 646.98,
+      "text": "the space of all sequences of 0's and 1's."
+    },
+    {
+      "start": 646.98,
+      "end": 650.54,
+      "text": "And we're making some sort of probabilistic assumption about"
+    },
+    {
+      "start": 650.54,
+      "end": 653.32,
+      "text": "what may happen in that experiment."
+    },
+    {
+      "start": 653.32,
+      "end": 656.32,
+      "text": "So one particular sequence that we may be interested in"
+    },
+    {
+      "start": 656.32,
+      "end": 658.4,
+      "text": "is the sequence of obtaining all 1's."
+    },
+    {
+      "start": 658.64,
+      "end": 665.52,
+      "text": "So this is the sequence that gives you 1's forever."
+    },
+    {
+      "start": 665.52,
+      "end": 668.32,
+      "text": "Once you take the point of view that this is our sample"
+    },
+    {
+      "start": 668.32,
+      "end": 671.26,
+      "text": "space, it's the space of all infinite sequences, you can"
+    },
+    {
+      "start": 671.26,
+      "end": 674.68,
+      "text": "start asking questions that have to do with infinite"
+    },
+    {
+      "start": 674.68,
+      "end": 677.66,
+      "text": "sequences, such as the question, what's the"
+    },
+    {
+      "start": 677.66,
+      "end": 680.3,
+      "text": "probability of obtaining the infinite sequence that"
+    },
+    {
+      "start": 680.3,
+      "end": 683.18,
+      "text": "consists of all 1's?"
+    },
+    {
+      "start": 683.18,
+      "end": 684.66,
+      "text": "So what is this probability?"
+    },
+    {
+      "start": 684.66,
+      "end": 687.22,
+      "text": "Let's see how we could calculate it."
+    },
+    {
+      "start": 687.22,
+      "end": 688.62,
+      "text": "So the probability of"
+    },
+    {
+      "start": 688.64,
+      "end": 697.0,
+      "text": "obtaining all 1's is certainly less than or equal to the"
+    },
+    {
+      "start": 697.0,
+      "end": 702.3,
+      "text": "probability of obtaining 1's just in the first 10 tosses."
+    },
+    {
+      "start": 707.06,
+      "end": 710.8,
+      "text": "This is asking for more things to happen than this."
+    },
+    {
+      "start": 710.8,
+      "end": 715.82,
+      "text": "If this event is true, then this is also true."
+    },
+    {
+      "start": 715.82,
+      "end": 718.64,
+      "text": "Therefore, the probability of this is smaller than the"
+    },
+    {
+      "start": 718.64,
+      "end": 719.58,
+      "text": "probability of that."
+    },
+    {
+      "start": 719.58,
+      "end": 723.42,
+      "text": "This event is contained in that event."
+    },
+    {
+      "start": 723.42,
+      "end": 724.86,
+      "text": "This implies this."
+    },
+    {
+      "start": 724.86,
+      "end": 726.86,
+      "text": "So we have this inequality."
+    },
+    {
+      "start": 726.86,
+      "end": 732.36,
+      "text": "Now, what's the probability of obtaining 1's in 10 of trials?"
+    },
+    {
+      "start": 732.36,
+      "end": 734.92,
+      "text": "This is just p to the 10th, because the"
+    },
+    {
+      "start": 734.92,
+      "end": 738.52,
+      "text": "trials are independent."
+    },
+    {
+      "start": 738.52,
+      "end": 742.82,
+      "text": "Now, of course, there's no reason why I chose 10 here."
+    },
+    {
+      "start": 742.82,
+      "end": 749.86,
+      "text": "The same argument goes through if I use an arbitrary number k."
+    },
+    {
+      "start": 749.86,
+      "end": 750.76,
+      "text": "And this has to be true."
+    },
+    {
+      "start": 750.76,
+      "end": 754.22,
+      "text": "It has to be true for all k."
+    },
+    {
+      "start": 754.22,
+      "end": 759.02,
+      "text": "So this probability is less than p to the k, no matter what"
+    },
+    {
+      "start": 759.02,
+      "end": 760.88,
+      "text": "k I choose."
+    },
+    {
+      "start": 760.88,
+      "end": 766.1,
+      "text": "Now, therefore, this must be less than or equal to the limit"
+    },
+    {
+      "start": 766.1,
+      "end": 768.68,
+      "text": "of this as k goes to infinity."
+    },
+    {
+      "start": 768.68,
+      "end": 771.22,
+      "text": "This is smaller than that for all k's."
+    },
+    {
+      "start": 771.22,
+      "end": 773.06,
+      "text": "Let k go to infinity."
+    },
+    {
+      "start": 773.06,
+      "end": 775.26,
+      "text": "Take k arbitrarily large."
+    },
+    {
+      "start": 775.26,
+      "end": 779.2,
+      "text": "This number is going to become arbitrarily small, goes to 0."
+    },
+    {
+      "start": 779.2,
+      "end": 780.64,
+      "text": "And that proves that the probability of obtaining 1's is"
+    },
+    {
+      "start": 780.64,
+      "end": 784.4,
+      "text": "that the probability of an infinite sequence of 1's is"
+    },
+    {
+      "start": 784.4,
+      "end": 786.08,
+      "text": "equal to 0."
+    },
+    {
+      "start": 786.08,
+      "end": 789.76,
+      "text": "So take limits of both sides."
+    },
+    {
+      "start": 793.26,
+      "end": 796.5,
+      "text": "It's going to be less than or equal to the limit."
+    },
+    {
+      "start": 796.5,
+      "end": 798.38,
+      "text": "I should make a limit here."
+    },
+    {
+      "start": 798.38,
+      "end": 801.86,
+      "text": "The probability is less than or equal to the limit of p to"
+    },
+    {
+      "start": 801.86,
+      "end": 806.0,
+      "text": "the k as k goes to infinity, which is 0."
+    },
+    {
+      "start": 806.0,
+      "end": 810.6,
+      "text": "So this proves in a formal way that the sequence of all 1's,"
+    },
+    {
+      "start": 810.64,
+      "end": 812.68,
+      "text": "has 0 probability."
+    },
+    {
+      "start": 812.68,
+      "end": 815.78,
+      "text": "If you have an infinite number of coin flips, what is the"
+    },
+    {
+      "start": 815.78,
+      "end": 820.62,
+      "text": "probability that all of the coin flips result in heads?"
+    },
+    {
+      "start": 820.62,
+      "end": 823.7,
+      "text": "The probability of this happening is equal to 0."
+    },
+    {
+      "start": 823.7,
+      "end": 828.3,
+      "text": "So this particular sequence has 0 probability."
+    },
+    {
+      "start": 828.3,
+      "end": 831.48,
+      "text": "Of course, I'm assuming here that p is less than 1,"
+    },
+    {
+      "start": 831.48,
+      "end": 833.42,
+      "text": "strictly less than 1."
+    },
+    {
+      "start": 833.42,
+      "end": 836.3,
+      "text": "Now, the interesting thing is that if you look at any other"
+    },
+    {
+      "start": 836.3,
+      "end": 839.7,
+      "text": "infinite sequence, and you try to calculate the probability"
+    },
+    {
+      "start": 839.7,
+      "end": 840.64,
+      "text": "of that infinite sequence."
+    },
+    {
+      "start": 840.64,
+      "end": 845.76,
+      "text": "You would get a product of 1 minus p times 1 minus p times 1"
+    },
+    {
+      "start": 845.76,
+      "end": 849.52,
+      "text": "minus p times p times p times 1 minus p, and so on."
+    },
+    {
+      "start": 849.52,
+      "end": 853.54,
+      "text": "You keep multiplying numbers that are less than 1."
+    },
+    {
+      "start": 853.54,
+      "end": 857.5,
+      "text": "Again, I'm making the assumption that p is between 0"
+    },
+    {
+      "start": 857.5,
+      "end": 861.14,
+      "text": "and 1, so 1 minus p is less than 1, p is less than 1."
+    },
+    {
+      "start": 861.14,
+      "end": 863.58,
+      "text": "You keep multiplying numbers less than 1."
+    },
+    {
+      "start": 863.58,
+      "end": 866.62,
+      "text": "If you multiply infinitely many such numbers, the infinite"
+    },
+    {
+      "start": 866.62,
+      "end": 868.48,
+      "text": "product becomes 0."
+    },
+    {
+      "start": 868.48,
+      "end": 870.28,
+      "text": "So any individual sequence."
+    },
+    {
+      "start": 870.64,
+      "end": 875.2,
+      "text": "In this sample space, actually has 0 probability."
+    },
+    {
+      "start": 875.2,
+      "end": 879.54,
+      "text": "And that is a little bit counter-intuitive, perhaps."
+    },
+    {
+      "start": 879.54,
+      "end": 882.6,
+      "text": "But the situation is more like the situation where we deal"
+    },
+    {
+      "start": 882.6,
+      "end": 884.64,
+      "text": "with continuous random variables."
+    },
+    {
+      "start": 884.64,
+      "end": 887.74,
+      "text": "So if you draw a continuous random variable, every"
+    },
+    {
+      "start": 887.74,
+      "end": 890.76,
+      "text": "possible outcome has 0 probability."
+    },
+    {
+      "start": 890.76,
+      "end": 892.34,
+      "text": "And that's fine."
+    },
+    {
+      "start": 892.34,
+      "end": 894.82,
+      "text": "But all the outcomes collectively still have"
+    },
+    {
+      "start": 894.82,
+      "end": 896.24,
+      "text": "positive probability."
+    },
+    {
+      "start": 896.24,
+      "end": 899.56,
+      "text": "So the situation here is very much similar."
+    },
+    {
+      "start": 899.56,
+      "end": 900.56,
+      "text": "So the space."
+    },
+    {
+      "start": 900.64,
+      "end": 904.96,
+      "text": "Of infinite sequences of 0's and 1's, that sample space is"
+    },
+    {
+      "start": 904.96,
+      "end": 907.34,
+      "text": "very much like a continuous space."
+    },
+    {
+      "start": 907.34,
+      "end": 910.32,
+      "text": "If you want to push that analogy further, you could"
+    },
+    {
+      "start": 910.32,
+      "end": 916.26,
+      "text": "think of this as the expansion of a real number, or the"
+    },
+    {
+      "start": 916.26,
+      "end": 918.94,
+      "text": "representation of a real number in binary."
+    },
+    {
+      "start": 918.94,
+      "end": 922.54,
+      "text": "Take a real number, write it down in binary, you're going"
+    },
+    {
+      "start": 922.54,
+      "end": 925.58,
+      "text": "to get an infinite sequence of 0's and 1's."
+    },
+    {
+      "start": 925.58,
+      "end": 928.74,
+      "text": "So you can think of each possible outcome here"
+    },
+    {
+      "start": 928.74,
+      "end": 930.64,
+      "text": "essentially as a real number."
+    },
+    {
+      "start": 930.64,
+      "end": 934.92,
+      "text": "So the experiment of flipping and doing an infinite number of"
+    },
+    {
+      "start": 934.92,
+      "end": 939.22,
+      "text": "coin flips is sort of similar to the experiment of picking a"
+    },
+    {
+      "start": 939.22,
+      "end": 941.08,
+      "text": "real number at random."
+    },
+    {
+      "start": 941.08,
+      "end": 944.98,
+      "text": "When you pick real numbers at random, any particular real"
+    },
+    {
+      "start": 944.98,
+      "end": 946.5,
+      "text": "number has 0 probability."
+    },
+    {
+      "start": 946.5,
+      "end": 950.08,
+      "text": "So similarly here, any particular infinite sequence"
+    },
+    {
+      "start": 950.08,
+      "end": 952.44,
+      "text": "has 0 probability."
+    },
+    {
+      "start": 952.44,
+      "end": 955.26,
+      "text": "So if we were to push that analogy further, there would"
+    },
+    {
+      "start": 955.26,
+      "end": 957.26,
+      "text": "be a few interesting things we could do."
+    },
+    {
+      "start": 957.26,
+      "end": 959.32,
+      "text": "But we will not push it further."
+    },
+    {
+      "start": 959.32,
+      "end": 960.52,
+      "text": "This is just a little bit more complicated."
+    },
+    {
+      "start": 960.52,
+      "end": 965.92,
+      "text": "Just to give you an indication that things can get pretty"
+    },
+    {
+      "start": 965.92,
+      "end": 969.1,
+      "text": "subtle and interesting once you start talking about random"
+    },
+    {
+      "start": 969.1,
+      "end": 973.9,
+      "text": "processes that evolve forever over the infinite time horizon."
+    },
+    {
+      "start": 973.9,
+      "end": 977.34,
+      "text": "So things get interesting, even in this context of the"
+    },
+    {
+      "start": 977.34,
+      "end": 979.74,
+      "text": "simple Bernoulli process."
+    },
+    {
+      "start": 979.74,
+      "end": 983.14,
+      "text": "Just to give you a preview of what's coming further, today"
+    },
+    {
+      "start": 983.14,
+      "end": 986.16,
+      "text": "we're going to talk just about the Bernoulli process."
+    },
+    {
+      "start": 986.16,
+      "end": 990.4,
+      "text": "And you should make sure, before the next lecture, that"
+    },
+    {
+      "start": 990.4,
+      "end": 993.34,
+      "text": "you understand what we're going to be doing today, because"
+    },
+    {
+      "start": 993.34,
+      "end": 996.3,
+      "text": "next time, we're going to do everything once more, but in"
+    },
+    {
+      "start": 996.3,
+      "end": 997.64,
+      "text": "continuous time."
+    },
+    {
+      "start": 997.64,
+      "end": 1001.72,
+      "text": "And in continuous time, things become more subtle and a"
+    },
+    {
+      "start": 1001.72,
+      "end": 1003.4,
+      "text": "little more difficult."
+    },
+    {
+      "start": 1003.4,
+      "end": 1005.96,
+      "text": "But we are going to build on what we understand for the"
+    },
+    {
+      "start": 1005.96,
+      "end": 1007.4,
+      "text": "discrete time case."
+    },
+    {
+      "start": 1007.4,
+      "end": 1010.64,
+      "text": "Now, both the Bernoulli process and its continuous time analog"
+    },
+    {
+      "start": 1010.64,
+      "end": 1013.28,
+      "text": "has a property that we call memorylessness."
+    },
+    {
+      "start": 1013.28,
+      "end": 1015.76,
+      "text": "Whatever happened in the past does not affect the"
+    },
+    {
+      "start": 1015.76,
+      "end": 1016.74,
+      "text": "memorylessness."
+    },
+    {
+      "start": 1016.74,
+      "end": 1018.3,
+      "text": "So we're going to build on that."
+    },
+    {
+      "start": 1018.3,
+      "end": 1019.8,
+      "text": "And we're going to build on that."
+    },
+    {
+      "start": 1019.8,
+      "end": 1020.2,
+      "text": "OK."
+    },
+    {
+      "start": 1020.2,
+      "end": 1021.58,
+      "text": "So that's going to affect the future."
+    },
+    {
+      "start": 1021.58,
+      "end": 1023.92,
+      "text": "Later on in this class, we're going to talk about more"
+    },
+    {
+      "start": 1023.92,
+      "end": 1027.26,
+      "text": "general random processes, so-called Markov chains, in"
+    },
+    {
+      "start": 1027.26,
+      "end": 1030.88,
+      "text": "which there are certain dependencies across time."
+    },
+    {
+      "start": 1030.88,
+      "end": 1035.4,
+      "text": "That is, what has happened in the past will have some"
+    },
+    {
+      "start": 1035.4,
+      "end": 1038.38,
+      "text": "bearing on what may happen in the future."
+    },
+    {
+      "start": 1038.38,
+      "end": 1042.0,
+      "text": "So it's like having coin flips, where the outcome of"
+    },
+    {
+      "start": 1042.0,
+      "end": 1045.12,
+      "text": "the next coin flip has some dependence on the previous"
+    },
+    {
+      "start": 1045.12,
+      "end": 1045.72,
+      "text": "coin flip."
+    },
+    {
+      "start": 1045.72,
+      "end": 1048.4,
+      "text": "And that gives us a richer class of models."
+    },
+    {
+      "start": 1048.4,
+      "end": 1050.18,
+      "text": "And once we get there, it's"
+    },
+    {
+      "start": 1050.2,
+      "end": 1054.64,
+      "text": "essentially we will have covered all possible models of"
+    },
+    {
+      "start": 1054.64,
+      "end": 1058.34,
+      "text": "random processes that are practically useful and which"
+    },
+    {
+      "start": 1058.34,
+      "end": 1059.8,
+      "text": "you can manipulate."
+    },
+    {
+      "start": 1059.8,
+      "end": 1063.26,
+      "text": "Markov chains are a pretty general class of models."
+    },
+    {
+      "start": 1063.26,
+      "end": 1067.24,
+      "text": "And almost any real world phenomenon that evolves in"
+    },
+    {
+      "start": 1067.24,
+      "end": 1072.2,
+      "text": "time can be approximately modeled using Markov chains."
+    },
+    {
+      "start": 1072.2,
+      "end": 1075.54,
+      "text": "So even though this is a first class in probability, we will"
+    },
+    {
+      "start": 1075.54,
+      "end": 1079.58,
+      "text": "get pretty far in that direction."
+    },
+    {
+      "start": 1079.58,
+      "end": 1083.68,
+      "text": "All right, so now let's start doing a few calculations and"
+    },
+    {
+      "start": 1083.68,
+      "end": 1086.72,
+      "text": "answer some questions about the Bernoulli process."
+    },
+    {
+      "start": 1086.72,
+      "end": 1091.02,
+      "text": "So again, the best way to think in terms of models that"
+    },
+    {
+      "start": 1091.02,
+      "end": 1093.32,
+      "text": "correspond to the Bernoulli process is in terms of"
+    },
+    {
+      "start": 1093.32,
+      "end": 1095.88,
+      "text": "arrivals of jobs to a facility."
+    },
+    {
+      "start": 1095.88,
+      "end": 1098.26,
+      "text": "And there's two types of questions that you can ask."
+    },
+    {
+      "start": 1098.26,
+      "end": 1102.0,
+      "text": "In a given amount of time, how many jobs arrived?"
+    },
+    {
+      "start": 1102.0,
+      "end": 1106.3,
+      "text": "Or conversely, for a given number of jobs, how much time"
+    },
+    {
+      "start": 1106.3,
+      "end": 1108.78,
+      "text": "did it take for them to arrive?"
+    },
+    {
+      "start": 1108.78,
+      "end": 1109.22,
+      "text": "So."
+    },
+    {
+      "start": 1109.22,
+      "end": 1111.42,
+      "text": "We're going to deal with these two questions, starting"
+    },
+    {
+      "start": 1111.42,
+      "end": 1112.46,
+      "text": "with the first."
+    },
+    {
+      "start": 1112.46,
+      "end": 1116.32,
+      "text": "For a given amount of time, that is for a given number of"
+    },
+    {
+      "start": 1116.32,
+      "end": 1120.16,
+      "text": "time periods, how many arrivals have we had?"
+    },
+    {
+      "start": 1120.16,
+      "end": 1124.18,
+      "text": "How many of those Xi's happened to be 1's?"
+    },
+    {
+      "start": 1124.18,
+      "end": 1127.98,
+      "text": "We fixed the number of time slots, let's say n time slots."
+    },
+    {
+      "start": 1127.98,
+      "end": 1130.92,
+      "text": "And you measure the number of successes."
+    },
+    {
+      "start": 1130.92,
+      "end": 1134.34,
+      "text": "Well, this is a very familiar random variable."
+    },
+    {
+      "start": 1134.34,
+      "end": 1139.18,
+      "text": "The number of successes in n independent coin flips, or"
+    },
+    {
+      "start": 1139.18,
+      "end": 1143.66,
+      "text": "in n independent trials, is a binomial random variable."
+    },
+    {
+      "start": 1143.66,
+      "end": 1146.5,
+      "text": "So we know its distribution."
+    },
+    {
+      "start": 1146.5,
+      "end": 1150.06,
+      "text": "It's given by the binomial PMF."
+    },
+    {
+      "start": 1150.06,
+      "end": 1155.82,
+      "text": "And it's just this, for k going from 0 up to n."
+    },
+    {
+      "start": 1155.82,
+      "end": 1158.9,
+      "text": "And we know everything by now about this random variable."
+    },
+    {
+      "start": 1158.9,
+      "end": 1160.48,
+      "text": "We know its expected value."
+    },
+    {
+      "start": 1160.48,
+      "end": 1161.98,
+      "text": "It's n times p."
+    },
+    {
+      "start": 1161.98,
+      "end": 1165.98,
+      "text": "And we know the variance, which is n times p times 1"
+    },
+    {
+      "start": 1165.98,
+      "end": 1167.98,
+      "text": "minus p."
+    },
+    {
+      "start": 1167.98,
+      "end": 1169.14,
+      "text": "So there's nothing."
+    },
+    {
+      "start": 1169.14,
+      "end": 1171.76,
+      "text": "Nothing new here."
+    },
+    {
+      "start": 1171.76,
+      "end": 1174.28,
+      "text": "That's the easy part."
+    },
+    {
+      "start": 1174.28,
+      "end": 1177.58,
+      "text": "So now let's look at the opposite kind of question."
+    },
+    {
+      "start": 1177.58,
+      "end": 1182.24,
+      "text": "Instead of fixing the time and asking how many arrivals, now"
+    },
+    {
+      "start": 1182.24,
+      "end": 1186.14,
+      "text": "let us fix the number of arrivals and ask how much time"
+    },
+    {
+      "start": 1186.14,
+      "end": 1187.8,
+      "text": "did it take."
+    },
+    {
+      "start": 1187.8,
+      "end": 1192.84,
+      "text": "And let's start with the time until the first arrival."
+    },
+    {
+      "start": 1192.84,
+      "end": 1197.66,
+      "text": "So the process starts."
+    },
+    {
+      "start": 1197.66,
+      "end": 1198.86,
+      "text": "The process starts."
+    },
+    {
+      "start": 1199.14,
+      "end": 1204.04,
+      "text": "We got our slots."
+    },
+    {
+      "start": 1204.04,
+      "end": 1207.72,
+      "text": "And we see, perhaps, a sequence of 0's."
+    },
+    {
+      "start": 1207.72,
+      "end": 1210.66,
+      "text": "And then at some point, we get a 1."
+    },
+    {
+      "start": 1210.66,
+      "end": 1214.82,
+      "text": "The number of trials it took until we get a 1, we're going"
+    },
+    {
+      "start": 1214.82,
+      "end": 1216.5,
+      "text": "to call it t1."
+    },
+    {
+      "start": 1216.5,
+      "end": 1222.84,
+      "text": "And it's the time of the first arrival."
+    },
+    {
+      "start": 1222.84,
+      "end": 1223.6,
+      "text": "OK."
+    },
+    {
+      "start": 1223.6,
+      "end": 1227.14,
+      "text": "What is the probability distribution of t1?"
+    },
+    {
+      "start": 1227.14,
+      "end": 1230.42,
+      "text": "What kind of random variable is it?"
+    },
+    {
+      "start": 1230.42,
+      "end": 1234.28,
+      "text": "We've gone through this before."
+    },
+    {
+      "start": 1234.28,
+      "end": 1235.48,
+      "text": "The event."
+    },
+    {
+      "start": 1235.48,
+      "end": 1242.32,
+      "text": "That the first arrival happens at time little t is the event"
+    },
+    {
+      "start": 1242.32,
+      "end": 1248.56,
+      "text": "that the first t minus 1 trials were failures, and the"
+    },
+    {
+      "start": 1248.56,
+      "end": 1252.84,
+      "text": "trial number t happens to be a success."
+    },
+    {
+      "start": 1252.84,
+      "end": 1257.98,
+      "text": "So for the first success to happen at time slot number 5,"
+    },
+    {
+      "start": 1257.98,
+      "end": 1261.94,
+      "text": "it means that the first four slots had failures, and the"
+    },
+    {
+      "start": 1261.94,
+      "end": 1264.78,
+      "text": "fifth slot had a success."
+    },
+    {
+      "start": 1264.78,
+      "end": 1268.44,
+      "text": "So the probability of this happening is the probability"
+    },
+    {
+      "start": 1268.44,
+      "end": 1273.2,
+      "text": "of having failures in the first t minus 1 trials, and"
+    },
+    {
+      "start": 1273.2,
+      "end": 1276.28,
+      "text": "having a success at trial number t."
+    },
+    {
+      "start": 1276.28,
+      "end": 1280.04,
+      "text": "And this is the formula for t equal 1, 2, and so on."
+    },
+    {
+      "start": 1280.04,
+      "end": 1282.44,
+      "text": "So we know what this distribution is."
+    },
+    {
+      "start": 1282.44,
+      "end": 1287.94,
+      "text": "It's the so-called geometric distribution."
+    },
+    {
+      "start": 1287.94,
+      "end": 1294.38,
+      "text": "And let me jump through this for a minute."
+    },
+    {
+      "start": 1294.38,
+      "end": 1296.22,
+      "text": "In the past, we did calculate the distribution of t."
+    },
+    {
+      "start": 1296.22,
+      "end": 1299.06,
+      "text": "We calculate the expected value of the geometric"
+    },
+    {
+      "start": 1299.06,
+      "end": 1303.92,
+      "text": "distribution, and it's 1 over p, which means that if p is"
+    },
+    {
+      "start": 1303.92,
+      "end": 1306.64,
+      "text": "small, you expect to take a long time"
+    },
+    {
+      "start": 1306.64,
+      "end": 1308.8,
+      "text": "until the first success."
+    },
+    {
+      "start": 1308.8,
+      "end": 1312.4,
+      "text": "And then there's a formula also for the variance of t1,"
+    },
+    {
+      "start": 1312.4,
+      "end": 1316.78,
+      "text": "which we never formally derived in class, but it was in your"
+    },
+    {
+      "start": 1316.78,
+      "end": 1321.58,
+      "text": "textbook, and it just happens to be this."
+    },
+    {
+      "start": 1321.58,
+      "end": 1322.28,
+      "text": "All right."
+    },
+    {
+      "start": 1322.28,
+      "end": 1325.9,
+      "text": "So nothing new until this point."
+    },
+    {
+      "start": 1325.9,
+      "end": 1328.68,
+      "text": "Now, let's talk about this property, the"
+    },
+    {
+      "start": 1328.68,
+      "end": 1330.2,
+      "text": "memorylessness property."
+    },
+    {
+      "start": 1330.2,
+      "end": 1333.96,
+      "text": "We kind of touched on this property when we did the"
+    },
+    {
+      "start": 1333.96,
+      "end": 1338.0,
+      "text": "derivation in class of the expected value of t1."
+    },
+    {
+      "start": 1338.0,
+      "end": 1340.02,
+      "text": "Now, what is the memoryless property?"
+    },
+    {
+      "start": 1340.02,
+      "end": 1343.0,
+      "text": "It's essentially a consequence of independence."
+    },
+    {
+      "start": 1343.0,
+      "end": 1346.7,
+      "text": "If I tell you the results of my coin flips up to a certain"
+    },
+    {
+      "start": 1346.7,
+      "end": 1350.82,
+      "text": "time, because of independence, this doesn't give you any"
+    },
+    {
+      "start": 1350.82,
+      "end": 1354.28,
+      "text": "information about the coin flips after that time."
+    },
+    {
+      "start": 1355.9,
+      "end": 1360.96,
+      "text": "So knowing that we had lots of zeros here does not change"
+    },
+    {
+      "start": 1360.96,
+      "end": 1364.5,
+      "text": "what I believe about the future coin flips, because the"
+    },
+    {
+      "start": 1364.5,
+      "end": 1367.56,
+      "text": "future coin flips are going to be just independent coin flips"
+    },
+    {
+      "start": 1367.56,
+      "end": 1372.36,
+      "text": "with a given probability p for obtaining tails."
+    },
+    {
+      "start": 1372.36,
+      "end": 1377.34,
+      "text": "But so this is a statement that I made about a specific"
+    },
+    {
+      "start": 1377.34,
+      "end": 1382.46,
+      "text": "time, that is, you do coin flips until 12 o'clock, and"
+    },
+    {
+      "start": 1382.46,
+      "end": 1385.2,
+      "text": "then at 12 o'clock, you start watching."
+    },
+    {
+      "start": 1385.2,
+      "end": 1390.06,
+      "text": "No matter what happens before 12 o'clock, after 12, what you're"
+    },
+    {
+      "start": 1390.06,
+      "end": 1393.34,
+      "text": "going to see is just a sequence of independent Bernoulli"
+    },
+    {
+      "start": 1393.34,
+      "end": 1395.56,
+      "text": "trials with the same probability p."
+    },
+    {
+      "start": 1395.56,
+      "end": 1398.44,
+      "text": "Whatever happened in the past is irrelevant."
+    },
+    {
+      "start": 1398.44,
+      "end": 1401.58,
+      "text": "Now, instead of talking about the fixed time at which you"
+    },
+    {
+      "start": 1401.58,
+      "end": 1406.5,
+      "text": "start watching, now let's think about the situation where"
+    },
+    {
+      "start": 1406.5,
+      "end": 1410.96,
+      "text": "your sister sits in the next room, flips the coins until"
+    },
+    {
+      "start": 1410.96,
+      "end": 1414.96,
+      "text": "she observes the first success, and then calls you inside."
+    },
+    {
+      "start": 1415.2,
+      "end": 1418.62,
+      "text": "And you start watching after this time."
+    },
+    {
+      "start": 1418.62,
+      "end": 1420.96,
+      "text": "What are you going to see?"
+    },
+    {
+      "start": 1420.96,
+      "end": 1424.14,
+      "text": "Well, you're going to see a coin flip with"
+    },
+    {
+      "start": 1424.14,
+      "end": 1426.84,
+      "text": "probability p of success."
+    },
+    {
+      "start": 1426.84,
+      "end": 1429.9,
+      "text": "You're going to see another trial that has probability p"
+    },
+    {
+      "start": 1429.9,
+      "end": 1433.24,
+      "text": "as a success, and these are all independent of each other."
+    },
+    {
+      "start": 1433.24,
+      "end": 1436.8,
+      "text": "So what you're going to see starting at that time is going"
+    },
+    {
+      "start": 1436.8,
+      "end": 1442.62,
+      "text": "to be just a sequence of independent Bernoulli trials,"
+    },
+    {
+      "start": 1442.62,
+      "end": 1444.98,
+      "text": "as if the process was starting at this time."
+    },
+    {
+      "start": 1445.2,
+      "end": 1450.88,
+      "text": "How long it took for the first success to occur doesn't have"
+    },
+    {
+      "start": 1450.88,
+      "end": 1455.96,
+      "text": "any bearing on what is going to happen afterwards."
+    },
+    {
+      "start": 1455.96,
+      "end": 1459.18,
+      "text": "What happens afterwards is still a sequence of"
+    },
+    {
+      "start": 1459.18,
+      "end": 1461.24,
+      "text": "independent coin flips."
+    },
+    {
+      "start": 1461.24,
+      "end": 1464.68,
+      "text": "And this story is actually even more general."
+    },
+    {
+      "start": 1464.68,
+      "end": 1468.96,
+      "text": "So your sister watches the coin flips, and at some point"
+    },
+    {
+      "start": 1468.96,
+      "end": 1471.54,
+      "text": "tells you, oh, something really interesting"
+    },
+    {
+      "start": 1471.54,
+      "end": 1472.42,
+      "text": "is happening here."
+    },
+    {
+      "start": 1472.42,
+      "end": 1475.2,
+      "text": "I got a string of 100 ones in a row."
+    },
+    {
+      "start": 1475.2,
+      "end": 1477.2,
+      "text": "Come and watch."
+    },
+    {
+      "start": 1477.2,
+      "end": 1480.2,
+      "text": "Now, when you go in there and you start watching, do you"
+    },
+    {
+      "start": 1480.2,
+      "end": 1483.84,
+      "text": "expect to see something unusual?"
+    },
+    {
+      "start": 1483.84,
+      "end": 1486.16,
+      "text": "There were unusual things that happened"
+    },
+    {
+      "start": 1486.16,
+      "end": 1488.14,
+      "text": "before you were called in."
+    },
+    {
+      "start": 1488.14,
+      "end": 1489.68,
+      "text": "Does this mean that you're going to see"
+    },
+    {
+      "start": 1489.68,
+      "end": 1491.72,
+      "text": "unusual things afterwards?"
+    },
+    {
+      "start": 1491.72,
+      "end": 1492.12,
+      "text": "No."
+    },
+    {
+      "start": 1492.12,
+      "end": 1495.02,
+      "text": "Afterwards, what you're going to see is, again, just a"
+    },
+    {
+      "start": 1495.02,
+      "end": 1497.66,
+      "text": "sequence of independent coin flips."
+    },
+    {
+      "start": 1497.66,
+      "end": 1500.6,
+      "text": "The fact that some strange things happened before doesn't"
+    },
+    {
+      "start": 1500.6,
+      "end": 1503.88,
+      "text": "have any bearing as to what is going to happen in the future."
+    },
+    {
+      "start": 1503.88,
+      "end": 1504.32,
+      "text": "So."
+    },
+    {
+      "start": 1504.32,
+      "end": 1505.16,
+      "text": "If the"
+    },
+    {
+      "start": 1505.2,
+      "end": 1508.98,
+      "text": "roulettes in the casino are properly made, the fact that"
+    },
+    {
+      "start": 1508.98,
+      "end": 1512.78,
+      "text": "there were three reds in a row doesn't affect the odds of"
+    },
+    {
+      "start": 1512.78,
+      "end": 1519.54,
+      "text": "whether in the next roll it's going to be a red or a black."
+    },
+    {
+      "start": 1519.54,
+      "end": 1524.08,
+      "text": "So whatever happens in the past, no matter how unusual it"
+    },
+    {
+      "start": 1524.08,
+      "end": 1528.44,
+      "text": "is, at the time when you're called in, what's going to"
+    },
+    {
+      "start": 1528.44,
+      "end": 1531.92,
+      "text": "happen in the future is going to be just independent Bernoulli"
+    },
+    {
+      "start": 1531.92,
+      "end": 1534.32,
+      "text": "trials with the same probability, p."
+    },
+    {
+      "start": 1534.32,
+      "end": 1536.74,
+      "text": "."
+    },
+    {
+      "start": 1536.74,
+      "end": 1541.58,
+      "text": "The only case where this story changes is if your sister"
+    },
+    {
+      "start": 1541.58,
+      "end": 1543.86,
+      "text": "has a little bit of foresight."
+    },
+    {
+      "start": 1543.86,
+      "end": 1548.48,
+      "text": "So your sister can look ahead into the future and knows that"
+    },
+    {
+      "start": 1548.48,
+      "end": 1554.12,
+      "text": "the next 10 coin flips will be heads and calls you before"
+    },
+    {
+      "start": 1554.12,
+      "end": 1556.48,
+      "text": "those 10 flips will happen."
+    },
+    {
+      "start": 1556.48,
+      "end": 1559.62,
+      "text": "If she calls you in, then what are you going to see?"
+    },
+    {
+      "start": 1559.62,
+      "end": 1562.3,
+      "text": "You're not going to see independent Bernoulli trials"
+    },
+    {
+      "start": 1562.3,
+      "end": 1565.48,
+      "text": "since she has psychic powers and she knows that the next"
+    },
+    {
+      "start": 1565.48,
+      "end": 1566.6,
+      "text": "ones will be ones."
+    },
+    {
+      "start": 1566.6,
+      "end": 1572.76,
+      "text": "She called you in, and you will see a sequence of ones."
+    },
+    {
+      "start": 1572.76,
+      "end": 1575.44,
+      "text": "So it's no more independent Bernoulli trial."
+    },
+    {
+      "start": 1575.44,
+      "end": 1579.42,
+      "text": "So what's the difference, the subtle difference here?"
+    },
+    {
+      "start": 1579.42,
+      "end": 1583.96,
+      "text": "The future is independent from the past, provided that the"
+    },
+    {
+      "start": 1583.96,
+      "end": 1588.3,
+      "text": "time that you are called and asked to start watching is"
+    },
+    {
+      "start": 1588.3,
+      "end": 1591.42,
+      "text": "determined by someone who doesn't have any foresight,"
+    },
+    {
+      "start": 1591.42,
+      "end": 1593.46,
+      "text": "who cannot see the future."
+    },
+    {
+      "start": 1593.46,
+      "end": 1596.96,
+      "text": "If you are called in just on the basis of what has happened"
+    },
+    {
+      "start": 1596.96,
+      "end": 1599.62,
+      "text": "so far, then you don't have any"
+    },
+    {
+      "start": 1599.62,
+      "end": 1601.42,
+      "text": "information about the future."
+    },
+    {
+      "start": 1601.42,
+      "end": 1604.78,
+      "text": "And one special case is the picture here."
+    },
+    {
+      "start": 1604.78,
+      "end": 1607.24,
+      "text": "You have your coin flips."
+    },
+    {
+      "start": 1607.24,
+      "end": 1611.06,
+      "text": "Once you see a one that happens, once you see a"
+    },
+    {
+      "start": 1611.06,
+      "end": 1613.32,
+      "text": "success, you are called in."
+    },
+    {
+      "start": 1613.32,
+      "end": 1617.72,
+      "text": "You are called in on the basis of what happened in the past,"
+    },
+    {
+      "start": 1617.72,
+      "end": 1623.14,
+      "text": "but without any foresight."
+    },
+    {
+      "start": 1623.14,
+      "end": 1625.6,
+      "text": "And this subtle distinction is what's"
+    },
+    {
+      "start": 1625.6,
+      "end": 1630.42,
+      "text": "going to make our next example interesting and subtle."
+    },
+    {
+      "start": 1630.42,
+      "end": 1633.3,
+      "text": "So here's the question."
+    },
+    {
+      "start": 1633.3,
+      "end": 1636.36,
+      "text": "You buy a lottery ticket every day."
+    },
+    {
+      "start": 1636.36,
+      "end": 1641.88,
+      "text": "So we have a Bernoulli process that's running in time."
+    },
+    {
+      "start": 1641.88,
+      "end": 1645.98,
+      "text": "And you're interested in the length of the first string of"
+    },
+    {
+      "start": 1645.98,
+      "end": 1646.96,
+      "text": "losing days."
+    },
+    {
+      "start": 1646.96,
+      "end": 1648.4,
+      "text": "What does that mean?"
+    },
+    {
+      "start": 1648.4,
+      "end": 1653.66,
+      "text": "So suppose that, let's see a typical sequence of events"
+    },
+    {
+      "start": 1653.66,
+      "end": 1654.94,
+      "text": "could be this one."
+    },
+    {
+      "start": 1655.6,
+      "end": 1660.94,
+      "text": "OK."
+    },
+    {
+      "start": 1660.94,
+      "end": 1663.42,
+      "text": "So what are we discussing here?"
+    },
+    {
+      "start": 1663.42,
+      "end": 1667.16,
+      "text": "We're looking at the first string of losing days, where"
+    },
+    {
+      "start": 1667.16,
+      "end": 1671.92,
+      "text": "losing days means 0's."
+    },
+    {
+      "start": 1671.92,
+      "end": 1676.88,
+      "text": "So the string of losing days is this string here."
+    },
+    {
+      "start": 1676.88,
+      "end": 1681.02,
+      "text": "Let's call the length of that string, let's call it l."
+    },
+    {
+      "start": 1681.02,
+      "end": 1685.1,
+      "text": "We're interested in the random variable, which is the length"
+    },
+    {
+      "start": 1685.1,
+      "end": 1686.44,
+      "text": "of this interval."
+    },
+    {
+      "start": 1686.44,
+      "end": 1691.19,
+      "text": "What kind of random variable is it?"
+    },
+    {
+      "start": 1691.19,
+      "end": 1691.59,
+      "text": "OK."
+    },
+    {
+      "start": 1691.59,
+      "end": 1696.15,
+      "text": "Here's one possible way you might think about the problem."
+    },
+    {
+      "start": 1696.15,
+      "end": 1696.55,
+      "text": "OK."
+    },
+    {
+      "start": 1696.55,
+      "end": 1704.07,
+      "text": "Starting from this time and looking until this time here,"
+    },
+    {
+      "start": 1704.07,
+      "end": 1707.43,
+      "text": "what are we looking at?"
+    },
+    {
+      "start": 1707.43,
+      "end": 1711.63,
+      "text": "We're looking at the time starting from here until the"
+    },
+    {
+      "start": 1711.63,
+      "end": 1713.55,
+      "text": "first success."
+    },
+    {
+      "start": 1713.55,
+      "end": 1720.56,
+      "text": "So the path doesn't matter."
+    },
+    {
+      "start": 1720.56,
+      "end": 1722.62,
+      "text": "Starting from here, we have coin flips."
+    },
+    {
+      "start": 1723.16,
+      "end": 1725.84,
+      "text": "We're looking at the time until the first success."
+    },
+    {
+      "start": 1725.84,
+      "end": 1730.26,
+      "text": "The time until the first success in a Bernoulli process,"
+    },
+    {
+      "start": 1730.26,
+      "end": 1734.64,
+      "text": "we just discussed that it's a geometric random variable."
+    },
+    {
+      "start": 1734.64,
+      "end": 1738.06,
+      "text": "So your first conjecture would be that this random variable"
+    },
+    {
+      "start": 1738.06,
+      "end": 1742.92,
+      "text": "here, which is one longer than the one we're interested in,"
+    },
+    {
+      "start": 1742.92,
+      "end": 1754.02,
+      "text": "that perhaps is a geometric random variable."
+    },
+    {
+      "start": 1754.02,
+      "end": 1758.42,
+      "text": "And if this were so, then you could say that the random"
+    },
+    {
+      "start": 1758.42,
+      "end": 1759.1,
+      "text": "variable, l, is 0."
+    },
+    {
+      "start": 1759.1,
+      "end": 1763.24,
+      "text": "l is a geometric minus 1."
+    },
+    {
+      "start": 1763.24,
+      "end": 1766.18,
+      "text": "Can that be the correct answer?"
+    },
+    {
+      "start": 1766.18,
+      "end": 1769.6,
+      "text": "A geometric random variable, what values does it take?"
+    },
+    {
+      "start": 1769.6,
+      "end": 1773.18,
+      "text": "It takes values 1, 2, 3, and so on."
+    },
+    {
+      "start": 1773.18,
+      "end": 1780.88,
+      "text": "1 minus a geometric would take values from 0, 1, 2, and so on."
+    },
+    {
+      "start": 1780.88,
+      "end": 1785.52,
+      "text": "Can the random variable, l, be 0?"
+    },
+    {
+      "start": 1785.52,
+      "end": 1785.94,
+      "text": "No."
+    },
+    {
+      "start": 1785.94,
+      "end": 1789.06,
+      "text": "The random variable, l, is the length of a string of"
+    },
+    {
+      "start": 1789.06,
+      "end": 1790.38,
+      "text": "losing days."
+    },
+    {
+      "start": 1790.38,
+      "end": 1796.18,
+      "text": "So the shortest that l could be would be just 1."
+    },
+    {
+      "start": 1796.18,
+      "end": 1799.74,
+      "text": "If you get just one losing day and then you start winning, l"
+    },
+    {
+      "start": 1799.74,
+      "end": 1801.5,
+      "text": "would be equal to 1."
+    },
+    {
+      "start": 1801.5,
+      "end": 1805.54,
+      "text": "So l cannot be 0 by definition, which means that l"
+    },
+    {
+      "start": 1805.54,
+      "end": 1809.78,
+      "text": "plus 1 cannot be 1 by definition."
+    },
+    {
+      "start": 1809.78,
+      "end": 1814.22,
+      "text": "But if l plus 1 were geometric, it could be equal to 1."
+    },
+    {
+      "start": 1814.22,
+      "end": 1818.46,
+      "text": "Therefore, this random variable, l plus 1, is not"
+    },
+    {
+      "start": 1818.46,
+      "end": 1818.96,
+      "text": "geometric."
+    },
+    {
+      "start": 1819.06,
+      "end": 1823.92,
+      "text": "OK."
+    },
+    {
+      "start": 1823.92,
+      "end": 1826.7,
+      "text": "Why is it not geometric?"
+    },
+    {
+      "start": 1826.7,
+      "end": 1829.1,
+      "text": "I started watching at this time."
+    },
+    {
+      "start": 1829.1,
+      "end": 1833.8,
+      "text": "From this time until the first success, that should be a"
+    },
+    {
+      "start": 1833.8,
+      "end": 1835.68,
+      "text": "geometric random variable."
+    },
+    {
+      "start": 1835.68,
+      "end": 1838.18,
+      "text": "Where's the catch?"
+    },
+    {
+      "start": 1838.18,
+      "end": 1842.76,
+      "text": "If I'm asked to start watching at this time, it's because my"
+    },
+    {
+      "start": 1842.76,
+      "end": 1848.26,
+      "text": "sister knows that the next one was a failure."
+    },
+    {
+      "start": 1848.26,
+      "end": 1852.38,
+      "text": "This is the time where the string of failures starts."
+    },
+    {
+      "start": 1852.38,
+      "end": 1856.06,
+      "text": "In order to know that I should start watching here,"
+    },
+    {
+      "start": 1856.06,
+      "end": 1861.26,
+      "text": "it's the same as if I'm told that the next one is a failure."
+    },
+    {
+      "start": 1861.26,
+      "end": 1865.18,
+      "text": "So to be asked to start watching at this time requires"
+    },
+    {
+      "start": 1865.18,
+      "end": 1868.06,
+      "text": "that someone looked in the future."
+    },
+    {
+      "start": 1868.06,
+      "end": 1873.2,
+      "text": "And if in that case, it's no longer true that these will be"
+    },
+    {
+      "start": 1873.2,
+      "end": 1874.84,
+      "text": "independent Bernoulli trials."
+    },
+    {
+      "start": 1874.84,
+      "end": 1876.0,
+      "text": "In fact, they're not."
+    },
+    {
+      "start": 1876.0,
+      "end": 1879.0,
+      "text": "If you start watching here, you're certain that the next"
+    },
+    {
+      "start": 1879.0,
+      "end": 1880.22,
+      "text": "one is a failure."
+    },
+    {
+      "start": 1880.22,
+      "end": 1882.22,
+      "text": "The next one is not an independent Bernoulli."
+    },
+    {
+      "start": 1882.22,
+      "end": 1883.5,
+      "text": "Bernoulli trial."
+    },
+    {
+      "start": 1883.5,
+      "end": 1886.76,
+      "text": "That's why the argument that would claim that this l plus 1"
+    },
+    {
+      "start": 1886.76,
+      "end": 1890.4,
+      "text": "is geometric would be incorrect."
+    },
+    {
+      "start": 1890.4,
+      "end": 1894.46,
+      "text": "So if this is not the correct answer, which is the correct"
+    },
+    {
+      "start": 1894.46,
+      "end": 1895.16,
+      "text": "answer?"
+    },
+    {
+      "start": 1895.16,
+      "end": 1897.74,
+      "text": "The correct answer goes as follows."
+    },
+    {
+      "start": 1897.74,
+      "end": 1899.4,
+      "text": "Your sister is watching."
+    },
+    {
+      "start": 1899.4,
+      "end": 1904.08,
+      "text": "Your sister sees the first failure, and then tells you,"
+    },
+    {
+      "start": 1904.08,
+      "end": 1907.78,
+      "text": "OK, the failures, or losing days, have started."
+    },
+    {
+      "start": 1907.78,
+      "end": 1909.26,
+      "text": "Come in and watch."
+    },
+    {
+      "start": 1909.26,
+      "end": 1911.82,
+      "text": "So you start watching at this time, and you"
+    },
+    {
+      "start": 1911.82,
+      "end": 1916.06,
+      "text": "start watching until the first success comes."
+    },
+    {
+      "start": 1916.06,
+      "end": 1919.28,
+      "text": "This will be a geometric random variable."
+    },
+    {
+      "start": 1919.28,
+      "end": 1929.44,
+      "text": "So from here to here, this will be geometric."
+    },
+    {
+      "start": 1929.44,
+      "end": 1931.56,
+      "text": "So things happen."
+    },
+    {
+      "start": 1931.56,
+      "end": 1934.26,
+      "text": "You're asked to start watching."
+    },
+    {
+      "start": 1934.26,
+      "end": 1938.66,
+      "text": "After you start watching, the future is just a sequence of"
+    },
+    {
+      "start": 1938.66,
+      "end": 1940.54,
+      "text": "independent Bernoulli trials."
+    },
+    {
+      "start": 1940.54,
+      "end": 1943.94,
+      "text": "And the time until the first failure occurs, this is going"
+    },
+    {
+      "start": 1943.94,
+      "end": 1946.52,
+      "text": "to be a geometric random variable with parameter p."
+    },
+    {
+      "start": 1946.62,
+      "end": 1950.72,
+      "text": "And then you notice that the length of the interval of"
+    },
+    {
+      "start": 1950.72,
+      "end": 1954.94,
+      "text": "interest is exactly the same as the length of this interval."
+    },
+    {
+      "start": 1954.94,
+      "end": 1957.54,
+      "text": "This starts one time step later, and ends"
+    },
+    {
+      "start": 1957.54,
+      "end": 1959.24,
+      "text": "one time step later."
+    },
+    {
+      "start": 1959.24,
+      "end": 1963.06,
+      "text": "So conclusion is that l is actually geometric"
+    },
+    {
+      "start": 1963.06,
+      "end": 1964.3,
+      "text": "with parameter p."
+    },
+    {
+      "start": 2013.87,
+      "end": 2016.07,
+      "text": "Looks like I'm missing one slide."
+    },
+    {
+      "start": 2016.07,
+      "end": 2026.8,
+      "text": "Can I cheat a little from here?"
+    },
+    {
+      "start": 2026.8,
+      "end": 2028.06,
+      "text": "OK."
+    },
+    {
+      "start": 2028.06,
+      "end": 2029.62,
+      "text": "So now that we've dealt with the"
+    },
+    {
+      "start": 2029.64,
+      "end": 2034.4,
+      "text": "time until the first arrival, we can start talking about the"
+    },
+    {
+      "start": 2034.4,
+      "end": 2037.24,
+      "text": "time until the second arrival, and so on."
+    },
+    {
+      "start": 2037.24,
+      "end": 2039.54,
+      "text": "How do we define these?"
+    },
+    {
+      "start": 2039.54,
+      "end": 2042.92,
+      "text": "After the first arrival happens, we're going to have a"
+    },
+    {
+      "start": 2042.92,
+      "end": 2046.1,
+      "text": "sequence of time slots with no arrivals, and then the next"
+    },
+    {
+      "start": 2046.1,
+      "end": 2048.18,
+      "text": "arrival is going to happen."
+    },
+    {
+      "start": 2048.18,
+      "end": 2053.22,
+      "text": "So we call this time that elapses, or number of time"
+    },
+    {
+      "start": 2053.22,
+      "end": 2057.5,
+      "text": "slots after the first arrival until the next one, we call it"
+    },
+    {
+      "start": 2057.5,
+      "end": 2058.52,
+      "text": "t2."
+    },
+    {
+      "start": 2058.52,
+      "end": 2061.66,
+      "text": "This is the second inter-arrival time."
+    },
+    {
+      "start": 2061.66,
+      "end": 2063.7,
+      "text": "That is, time between arrivals."
+    },
+    {
+      "start": 2063.7,
+      "end": 2068.8,
+      "text": "Once this arrival has happened, then we wait, and see how many"
+    },
+    {
+      "start": 2068.8,
+      "end": 2071.62,
+      "text": "more it takes until the third arrival."
+    },
+    {
+      "start": 2071.62,
+      "end": 2077.14,
+      "text": "And we call this time here, we call it t3."
+    },
+    {
+      "start": 2077.14,
+      "end": 2082.4,
+      "text": "We're interested in the time of the k-th arrival, which is"
+    },
+    {
+      "start": 2082.4,
+      "end": 2086.86,
+      "text": "going to be just the sum of the first k inter-arrival times."
+    },
+    {
+      "start": 2086.86,
+      "end": 2088.32,
+      "text": "So for example."
+    },
+    {
+      "start": 2088.32,
+      "end": 2093.52,
+      "text": "Let's say y3 is the time that the third arrival comes."
+    },
+    {
+      "start": 2093.52,
+      "end": 2101.84,
+      "text": "y3 is just the sum of t1 plus t2 plus t3."
+    },
+    {
+      "start": 2101.84,
+      "end": 2105.64,
+      "text": "So we're interested in this random variable y3."
+    },
+    {
+      "start": 2105.64,
+      "end": 2108.96,
+      "text": "And it's the sum of inter-arrival times."
+    },
+    {
+      "start": 2108.96,
+      "end": 2111.94,
+      "text": "To understand what kind of random variable it is, I"
+    },
+    {
+      "start": 2111.94,
+      "end": 2115.22,
+      "text": "guess we should understand what kind of random variables"
+    },
+    {
+      "start": 2115.22,
+      "end": 2118.24,
+      "text": "these are going to be."
+    },
+    {
+      "start": 2118.24,
+      "end": 2122.04,
+      "text": "So what kind of random variable is t2?"
+    },
+    {
+      "start": 2122.04,
+      "end": 2127.44,
+      "text": "Your sister is doing her coin flips until success is"
+    },
+    {
+      "start": 2127.44,
+      "end": 2129.76,
+      "text": "observed for the first time."
+    },
+    {
+      "start": 2129.76,
+      "end": 2132.54,
+      "text": "Based on that information about what has happened so"
+    },
+    {
+      "start": 2132.54,
+      "end": 2134.74,
+      "text": "far, you are called into the room."
+    },
+    {
+      "start": 2134.74,
+      "end": 2139.32,
+      "text": "And you start watching until a success is observed again."
+    },
+    {
+      "start": 2139.32,
+      "end": 2142.18,
+      "text": "So after you start watching, what you have is just a"
+    },
+    {
+      "start": 2142.18,
+      "end": 2145.2,
+      "text": "sequence of independent Bernoulli trials."
+    },
+    {
+      "start": 2145.2,
+      "end": 2148.04,
+      "text": "So each one of these has probability p of being a"
+    },
+    {
+      "start": 2148.04,
+      "end": 2149.42,
+      "text": "success."
+    },
+    {
+      "start": 2149.42,
+      "end": 2152.18,
+      "text": "The time it's going to take until the first success, this"
+    },
+    {
+      "start": 2152.18,
+      "end": 2157.6,
+      "text": "number t2, is going to be, again, just another geometric"
+    },
+    {
+      "start": 2157.6,
+      "end": 2158.84,
+      "text": "random variable."
+    },
+    {
+      "start": 2158.84,
+      "end": 2161.84,
+      "text": "It's as if the process just started."
+    },
+    {
+      "start": 2161.84,
+      "end": 2166.3,
+      "text": "After you're called into the room, you have no foresight."
+    },
+    {
+      "start": 2166.3,
+      "end": 2169.56,
+      "text": "You don't have any information about the future, other than"
+    },
+    {
+      "start": 2169.56,
+      "end": 2171.02,
+      "text": "the fact that these are going to be"
+    },
+    {
+      "start": 2171.02,
+      "end": 2173.3,
+      "text": "independent Bernoulli trials."
+    },
+    {
+      "start": 2173.3,
+      "end": 2177.64,
+      "text": "So t2 itself is going to be geometric."
+    },
+    {
+      "start": 2177.64,
+      "end": 2180.58,
+      "text": "With the same parameter, p."
+    },
+    {
+      "start": 2180.58,
+      "end": 2184.66,
+      "text": "And then you can continue the arguments, and argue that t3 is"
+    },
+    {
+      "start": 2184.66,
+      "end": 2187.84,
+      "text": "also geometric with the same parameter, p."
+    },
+    {
+      "start": 2187.84,
+      "end": 2190.84,
+      "text": "Furthermore, whatever happened, how long it took"
+    },
+    {
+      "start": 2190.84,
+      "end": 2194.3,
+      "text": "until you were called in, doesn't change the statistics"
+    },
+    {
+      "start": 2194.3,
+      "end": 2196.78,
+      "text": "about what's going to happen in the future."
+    },
+    {
+      "start": 2196.78,
+      "end": 2199.1,
+      "text": "So whatever happens in the future is"
+    },
+    {
+      "start": 2199.1,
+      "end": 2201.44,
+      "text": "independent from the past."
+    },
+    {
+      "start": 2201.44,
+      "end": 2207.32,
+      "text": "So t1, t2, and t3 are independent random variables."
+    },
+    {
+      "start": 2207.32,
+      "end": 2207.52,
+      "text": "So."
+    },
+    {
+      "start": 2207.52,
+      "end": 2214.2,
+      "text": "Conclusion is that the time until the third arrival is the"
+    },
+    {
+      "start": 2214.2,
+      "end": 2220.1,
+      "text": "sum of three independent geometric random variables"
+    },
+    {
+      "start": 2220.1,
+      "end": 2222.12,
+      "text": "with the same parameter."
+    },
+    {
+      "start": 2222.12,
+      "end": 2224.44,
+      "text": "And this is true more generally."
+    },
+    {
+      "start": 2224.44,
+      "end": 2228.78,
+      "text": "The time until the k-th arrival is going to be the sum"
+    },
+    {
+      "start": 2228.78,
+      "end": 2234.84,
+      "text": "of k independent random variables."
+    },
+    {
+      "start": 2234.84,
+      "end": 2237.2,
+      "text": "So in general, yk is going to be t1."
+    },
+    {
+      "start": 2237.52,
+      "end": 2245.04,
+      "text": "t1 plus tk, where the tei's are geometric with the same"
+    },
+    {
+      "start": 2245.04,
+      "end": 2250.47,
+      "text": "parameter, p, and independent."
+    },
+    {
+      "start": 2250.47,
+      "end": 2253.51,
+      "text": "So now what's more natural than trying to find the"
+    },
+    {
+      "start": 2253.51,
+      "end": 2257.05,
+      "text": "distribution of the random variable, yk?"
+    },
+    {
+      "start": 2257.05,
+      "end": 2258.35,
+      "text": "How can we find it?"
+    },
+    {
+      "start": 2258.35,
+      "end": 2260.25,
+      "text": "So I fixed k for you."
+    },
+    {
+      "start": 2260.25,
+      "end": 2261.65,
+      "text": "Let's say k is 100."
+    },
+    {
+      "start": 2261.65,
+      "end": 2263.55,
+      "text": "I'm interested in how long it takes until"
+    },
+    {
+      "start": 2263.55,
+      "end": 2266.17,
+      "text": "100 customers arrive."
+    },
+    {
+      "start": 2266.17,
+      "end": 2268.85,
+      "text": "How can we find the distribution of yk?"
+    },
+    {
+      "start": 2268.85,
+      "end": 2269.09,
+      "text": "Well."
+    },
+    {
+      "start": 2269.09,
+      "end": 2273.19,
+      "text": "One way of doing it is to use this lovely convolution"
+    },
+    {
+      "start": 2273.19,
+      "end": 2274.19,
+      "text": "formula."
+    },
+    {
+      "start": 2274.19,
+      "end": 2277.95,
+      "text": "Take a geometric, convolve it with another geometric, you"
+    },
+    {
+      "start": 2277.95,
+      "end": 2279.49,
+      "text": "get something."
+    },
+    {
+      "start": 2279.49,
+      "end": 2282.03,
+      "text": "Take that something that you got, convolve it with a"
+    },
+    {
+      "start": 2282.03,
+      "end": 2283.91,
+      "text": "geometric once more."
+    },
+    {
+      "start": 2283.91,
+      "end": 2286.27,
+      "text": "Do this 99 times."
+    },
+    {
+      "start": 2286.27,
+      "end": 2289.43,
+      "text": "And this gives you the distribution of yk."
+    },
+    {
+      "start": 2289.43,
+      "end": 2291.99,
+      "text": "So that's definitely doable."
+    },
+    {
+      "start": 2291.99,
+      "end": 2294.29,
+      "text": "And it's extremely tedious."
+    },
+    {
+      "start": 2294.29,
+      "end": 2298.77,
+      "text": "Let's try to find the distribution of yk."
+    },
+    {
+      "start": 2298.77,
+      "end": 2302.53,
+      "text": "Using sort of a shortcut."
+    },
+    {
+      "start": 2302.53,
+      "end": 2308.66,
+      "text": "So the probability that yk is equal to t."
+    },
+    {
+      "start": 2308.66,
+      "end": 2311.78,
+      "text": "So we're trying to find the PMF of yk."
+    },
+    {
+      "start": 2311.78,
+      "end": 2314.02,
+      "text": "k has been fixed for us."
+    },
+    {
+      "start": 2314.02,
+      "end": 2316.82,
+      "text": "And we want to calculate this probability for the various"
+    },
+    {
+      "start": 2316.82,
+      "end": 2318.24,
+      "text": "values of t."
+    },
+    {
+      "start": 2318.24,
+      "end": 2321.22,
+      "text": "Because this is going to give us the PMF of yk."
+    },
+    {
+      "start": 2325.76,
+      "end": 2327.58,
+      "text": "What is this event?"
+    },
+    {
+      "start": 2327.58,
+      "end": 2332.02,
+      "text": "What does it take for the kth arrival to be at the time t?"
+    },
+    {
+      "start": 2332.04,
+      "end": 2336.52,
+      "text": "For that to happen, we need two things."
+    },
+    {
+      "start": 2336.52,
+      "end": 2341.44,
+      "text": "In the first t minus 1 slot, how many arrivals should we"
+    },
+    {
+      "start": 2341.44,
+      "end": 2343.14,
+      "text": "have gotten?"
+    },
+    {
+      "start": 2343.14,
+      "end": 2344.8,
+      "text": "k minus 1."
+    },
+    {
+      "start": 2344.8,
+      "end": 2349.16,
+      "text": "And then in the last slot, we get one more arrival."
+    },
+    {
+      "start": 2349.16,
+      "end": 2351.4,
+      "text": "And that's the kth one."
+    },
+    {
+      "start": 2351.4,
+      "end": 2357.7,
+      "text": "So this is the probability that we have k minus 1"
+    },
+    {
+      "start": 2357.7,
+      "end": 2361.06,
+      "text": "arrivals in the time interval."
+    },
+    {
+      "start": 2361.06,
+      "end": 2361.58,
+      "text": "1."
+    },
+    {
+      "start": 2361.58,
+      "end": 2379.84,
+      "text": "from 1 up to t, and then an arrival at time t."
+    },
+    {
+      "start": 2379.84,
+      "end": 2383.08,
+      "text": "That's the only way that it can happen that the kth"
+    },
+    {
+      "start": 2383.08,
+      "end": 2385.56,
+      "text": "arrival happens at time t."
+    },
+    {
+      "start": 2385.56,
+      "end": 2389.52,
+      "text": "We need to have an arrival at time t, and before that time"
+    },
+    {
+      "start": 2389.52,
+      "end": 2393.36,
+      "text": "we need to have exactly k minus 1 arrivals."
+    },
+    {
+      "start": 2393.36,
+      "end": 2402.86,
+      "text": "Now, this is an event that refers t minus 1."
+    },
+    {
+      "start": 2402.86,
+      "end": 2405.54,
+      "text": "In the previous time slots, we had exactly k"
+    },
+    {
+      "start": 2405.54,
+      "end": 2407.46,
+      "text": "minus 1 arrivals."
+    },
+    {
+      "start": 2407.46,
+      "end": 2410.68,
+      "text": "And then at the last time slot, we get one more arrival."
+    },
+    {
+      "start": 2410.68,
+      "end": 2414.56,
+      "text": "Now, the interesting thing is that this event here has to do"
+    },
+    {
+      "start": 2414.56,
+      "end": 2418.64,
+      "text": "with what happens from time 1 up to time t minus 1."
+    },
+    {
+      "start": 2418.64,
+      "end": 2422.68,
+      "text": "This event has to do with what happened at time t."
+    },
+    {
+      "start": 2422.68,
+      "end": 2425.52,
+      "text": "Different time slots are independent of each other."
+    },
+    {
+      "start": 2425.52,
+      "end": 2431.14,
+      "text": "So this event and that event are independent."
+    },
+    {
+      "start": 2431.14,
+      "end": 2432.58,
+      "text": "So this means that we can"
+    },
+    {
+      "start": 2432.58,
+      "end": 2434.94,
+      "text": "multiply their probabilities."
+    },
+    {
+      "start": 2434.94,
+      "end": 2437.28,
+      "text": "So take the probability of this."
+    },
+    {
+      "start": 2437.28,
+      "end": 2438.6,
+      "text": "What is that?"
+    },
+    {
+      "start": 2438.6,
+      "end": 2441.6,
+      "text": "Well, probability of having a certain number of arrivals in"
+    },
+    {
+      "start": 2441.6,
+      "end": 2443.54,
+      "text": "a certain number of time slots."
+    },
+    {
+      "start": 2443.54,
+      "end": 2446.52,
+      "text": "These are just binomial probabilities."
+    },
+    {
+      "start": 2446.52,
+      "end": 2451.24,
+      "text": "So this is out of t minus 1 slots to get exactly k minus 1"
+    },
+    {
+      "start": 2451.24,
+      "end": 2460.96,
+      "text": "arrivals, p to the k minus 1, 1 minus p to the t minus 1"
+    },
+    {
+      "start": 2460.96,
+      "end": 2462.3,
+      "text": "minus k minus 1."
+    },
+    {
+      "start": 2462.3,
+      "end": 2465.46,
+      "text": "This gives us t minus k."
+    },
+    {
+      "start": 2465.46,
+      "end": 2467.48,
+      "text": "And then we multiply with this probability."
+    },
+    {
+      "start": 2467.48,
+      "end": 2474.3,
+      "text": "The probability of an arrival at time t is equal to p."
+    },
+    {
+      "start": 2474.3,
+      "end": 2482.62,
+      "text": "And so this is the formula for the PMF of the number of the"
+    },
+    {
+      "start": 2482.62,
+      "end": 2487.24,
+      "text": "time it takes until the k-th arrival happens."
+    },
+    {
+      "start": 2492.73,
+      "end": 2494.29,
+      "text": "Does it agree with the formula in your handout?"
+    },
+    {
+      "start": 2494.29,
+      "end": 2494.73,
+      "text": "Yes."
+    },
+    {
+      "start": 2494.73,
+      "end": 2497.85,
+      "text": "Or it's not there?"
+    },
+    {
+      "start": 2497.85,
+      "end": 2498.73,
+      "text": "It's not there."
+    },
+    {
+      "start": 2498.73,
+      "end": 2510.02,
+      "text": "OK."
+    },
+    {
+      "start": 2510.02,
+      "end": 2515.42,
+      "text": "So that's the formula for what values of t?"
+    },
+    {
+      "start": 2515.42,
+      "end": 2520.22,
+      "text": "Well, t can take some k."
+    },
+    {
+      "start": 2520.22,
+      "end": 2528.09,
+      "text": "It takes at least k time slots in order to get k arrivals."
+    },
+    {
+      "start": 2528.09,
+      "end": 2533.65,
+      "text": "So this formula should be true for k larger than or equal to"
+    },
+    {
+      "start": 2533.65,
+      "end": 2547.78,
+      "text": "t, for t larger than or equal to k."
+    },
+    {
+      "start": 2547.78,
+      "end": 2549.96,
+      "text": "OK."
+    },
+    {
+      "start": 2549.96,
+      "end": 2550.52,
+      "text": "All right."
+    },
+    {
+      "start": 2550.52,
+      "end": 2554.92,
+      "text": "So this gives us the PMF of the random variable yk."
+    },
+    {
+      "start": 2554.92,
+      "end": 2557.42,
+      "text": "Of course, we may also be interested in the mean and"
+    },
+    {
+      "start": 2557.42,
+      "end": 2562.14,
+      "text": "variance of yk, but this is a lot easier."
+    },
+    {
+      "start": 2562.14,
+      "end": 2566.38,
+      "text": "Since yk is the sum of independent random variables,"
+    },
+    {
+      "start": 2566.38,
+      "end": 2570.3,
+      "text": "the expected value of yk is going to be just k times the"
+    },
+    {
+      "start": 2570.3,
+      "end": 2572.98,
+      "text": "expected value of your typical t."
+    },
+    {
+      "start": 2572.98,
+      "end": 2578.34,
+      "text": "So the expected value of yk is going to be just k times the"
+    },
+    {
+      "start": 2578.34,
+      "end": 2579.44,
+      "text": "expected value of your typical t."
+    },
+    {
+      "start": 2579.44,
+      "end": 2580.36,
+      "text": "So the expected value of yk is going to be just k times the"
+    },
+    {
+      "start": 2580.36,
+      "end": 2586.6,
+      "text": "k times 1 over p, which is the mean of the geometric."
+    },
+    {
+      "start": 2586.6,
+      "end": 2589.46,
+      "text": "And similarly for the variance, it's going to be k"
+    },
+    {
+      "start": 2589.46,
+      "end": 2592.98,
+      "text": "times the variance of a geometric."
+    },
+    {
+      "start": 2592.98,
+      "end": 2596.22,
+      "text": "So we have everything there is to know about the"
+    },
+    {
+      "start": 2596.22,
+      "end": 2598.58,
+      "text": "distribution of how long it takes until the"
+    },
+    {
+      "start": 2598.58,
+      "end": 2603.76,
+      "text": "first arrival comes."
+    },
+    {
+      "start": 2603.76,
+      "end": 2605.52,
+      "text": "OK."
+    },
+    {
+      "start": 2605.52,
+      "end": 2607.84,
+      "text": "Finally, let's do a few more things about"
+    },
+    {
+      "start": 2607.84,
+      "end": 2610.66,
+      "text": "the Bernoulli process."
+    },
+    {
+      "start": 2610.66,
+      "end": 2612.78,
+      "text": "It's interesting to talk about several"
+    },
+    {
+      "start": 2612.78,
+      "end": 2614.98,
+      "text": "processes at the time."
+    },
+    {
+      "start": 2614.98,
+      "end": 2619.6,
+      "text": "So in the situation here of splitting a Bernoulli process"
+    },
+    {
+      "start": 2619.6,
+      "end": 2623.74,
+      "text": "is where you have arrivals that come to a server."
+    },
+    {
+      "start": 2623.74,
+      "end": 2626.38,
+      "text": "And that's a picture of which slots get arrivals."
+    },
+    {
+      "start": 2626.38,
+      "end": 2628.9,
+      "text": "But actually, maybe you have two servers."
+    },
+    {
+      "start": 2628.9,
+      "end": 2633.1,
+      "text": "And whenever an arrival comes to the system, you flip a coin"
+    },
+    {
+      "start": 2633.1,
+      "end": 2636.62,
+      "text": "and with some probability q, you send it to one server."
+    },
+    {
+      "start": 2636.62,
+      "end": 2639.54,
+      "text": "And with probability 1 minus q, you send it to another"
+    },
+    {
+      "start": 2639.54,
+      "end": 2640.38,
+      "text": "server."
+    },
+    {
+      "start": 2640.38,
+      "end": 2644.2,
+      "text": "So there's a single arrival stream but two possible"
+    },
+    {
+      "start": 2644.2,
+      "end": 2645.04,
+      "text": "servers."
+    },
+    {
+      "start": 2645.04,
+      "end": 2647.28,
+      "text": "And whenever there's an arrival, you either send it"
+    },
+    {
+      "start": 2647.28,
+      "end": 2649.26,
+      "text": "here or you send it there."
+    },
+    {
+      "start": 2649.26,
+      "end": 2653.76,
+      "text": "And each time you decide where you send it by flipping an"
+    },
+    {
+      "start": 2653.76,
+      "end": 2657.94,
+      "text": "independent coin that has its own bias q."
+    },
+    {
+      "start": 2657.94,
+      "end": 2662.46,
+      "text": "The coin flips that decide where do you send it are"
+    },
+    {
+      "start": 2662.46,
+      "end": 2667.44,
+      "text": "assumed to be independent from the arrival process itself."
+    },
+    {
+      "start": 2667.44,
+      "end": 2669.94,
+      "text": "So there's two coin flips that are happening."
+    },
+    {
+      "start": 2669.94,
+      "end": 2673.86,
+      "text": "At each time slot, there's a coin flip that decides whether"
+    },
+    {
+      "start": 2673.86,
+      "end": 2676.42,
+      "text": "you have an arrival in this process here."
+    },
+    {
+      "start": 2676.42,
+      "end": 2679.62,
+      "text": "And that coin flip is with parameter p."
+    },
+    {
+      "start": 2679.62,
+      "end": 2683.0,
+      "text": "And if you have something that arrives, you flip another coin"
+    },
+    {
+      "start": 2683.0,
+      "end": 2686.6,
+      "text": "with probabilities q and 1 minus q that decides whether"
+    },
+    {
+      "start": 2686.6,
+      "end": 2689.76,
+      "text": "you send it up there or you send it down there."
+    },
+    {
+      "start": 2689.76,
+      "end": 2695.46,
+      "text": "So what kind of arrival process does this server see?"
+    },
+    {
+      "start": 2695.46,
+      "end": 2699.8,
+      "text": "At any given time slot, there's probability p that there's an"
+    },
+    {
+      "start": 2699.8,
+      "end": 2701.46,
+      "text": "arrival here."
+    },
+    {
+      "start": 2701.46,
+      "end": 2704.26,
+      "text": "And there's a further probability q that this"
+    },
+    {
+      "start": 2704.26,
+      "end": 2707.3,
+      "text": "arrival gets sent up there."
+    },
+    {
+      "start": 2707.3,
+      "end": 2710.86,
+      "text": "So the probability that this server sees an arrival at any"
+    },
+    {
+      "start": 2710.86,
+      "end": 2714.08,
+      "text": "given time is p times q."
+    },
+    {
+      "start": 2714.08,
+      "end": 2718.88,
+      "text": "So this process here is going to be a Bernoulli process but"
+    },
+    {
+      "start": 2718.88,
+      "end": 2721.78,
+      "text": "with a different parameter, p times q."
+    },
+    {
+      "start": 2721.78,
+      "end": 2724.8,
+      "text": "And this one down here with the same argument is going to"
+    },
+    {
+      "start": 2724.8,
+      "end": 2728.68,
+      "text": "be Bernoulli with parameter p times 1 minus q."
+    },
+    {
+      "start": 2729.8,
+      "end": 2734.04,
+      "text": "So by taking a Bernoulli stream of arrivals and splitting"
+    },
+    {
+      "start": 2734.04,
+      "end": 2739.02,
+      "text": "it into two, you get two separate Bernoulli processes."
+    },
+    {
+      "start": 2739.02,
+      "end": 2740.66,
+      "text": "This is going to be a Bernoulli process."
+    },
+    {
+      "start": 2740.66,
+      "end": 2742.94,
+      "text": "That's going to be a Bernoulli process."
+    },
+    {
+      "start": 2742.94,
+      "end": 2745.62,
+      "text": "Well, actually, here I'm running a little too fast."
+    },
+    {
+      "start": 2745.62,
+      "end": 2749.28,
+      "text": "What does it take to verify that it's a Bernoulli process?"
+    },
+    {
+      "start": 2749.28,
+      "end": 2752.62,
+      "text": "At each time slot, it's a 0 or 1."
+    },
+    {
+      "start": 2752.62,
+      "end": 2753.82,
+      "text": "And it's going to be a 1."
+    },
+    {
+      "start": 2753.82,
+      "end": 2757.42,
+      "text": "You're going to see an arrival with probability p times q."
+    },
+    {
+      "start": 2757.42,
+      "end": 2759.46,
+      "text": "What else do we need to verify to be able to verify?"
+    },
+    {
+      "start": 2759.46,
+      "end": 2762.84,
+      "text": "To be able to say that it's a Bernoulli process?"
+    },
+    {
+      "start": 2762.84,
+      "end": 2765.6,
+      "text": "We need to make sure that whatever happens in this"
+    },
+    {
+      "start": 2765.6,
+      "end": 2769.34,
+      "text": "process in different time slots are statistically"
+    },
+    {
+      "start": 2769.34,
+      "end": 2771.22,
+      "text": "independent from each other."
+    },
+    {
+      "start": 2771.22,
+      "end": 2773.02,
+      "text": "Is that property true?"
+    },
+    {
+      "start": 2773.02,
+      "end": 2776.8,
+      "text": "For example, what happens in this time slot, whether you"
+    },
+    {
+      "start": 2776.8,
+      "end": 2780.08,
+      "text": "got an arrival or not, is it independent from what happened"
+    },
+    {
+      "start": 2780.08,
+      "end": 2782.66,
+      "text": "at that time slot?"
+    },
+    {
+      "start": 2782.66,
+      "end": 2786.78,
+      "text": "The answer is yes for the following reason."
+    },
+    {
+      "start": 2786.78,
+      "end": 2789.46,
+      "text": "What happens in this time slot has to do?"
+    },
+    {
+      "start": 2789.46,
+      "end": 2793.02,
+      "text": "With the coin flip associated with the original process at"
+    },
+    {
+      "start": 2793.02,
+      "end": 2796.24,
+      "text": "this time, and the coin flip that decides"
+    },
+    {
+      "start": 2796.24,
+      "end": 2798.34,
+      "text": "where to send things."
+    },
+    {
+      "start": 2798.34,
+      "end": 2801.36,
+      "text": "What happens at that time slot has to do with the coin flip"
+    },
+    {
+      "start": 2801.36,
+      "end": 2805.38,
+      "text": "here, and the additional coin flip that decides where to send"
+    },
+    {
+      "start": 2805.38,
+      "end": 2807.12,
+      "text": "it if something came."
+    },
+    {
+      "start": 2807.12,
+      "end": 2810.58,
+      "text": "Now, all these coin flips are independent of each other."
+    },
+    {
+      "start": 2810.58,
+      "end": 2813.46,
+      "text": "The coin flips that determine whether we have an arrival"
+    },
+    {
+      "start": 2813.46,
+      "end": 2816.84,
+      "text": "here is independent from the coin flips that determined"
+    },
+    {
+      "start": 2816.84,
+      "end": 2819.3,
+      "text": "whether we had an arrival there."
+    },
+    {
+      "start": 2819.46,
+      "end": 2822.64,
+      "text": "You can generalize these arguments and conclude that"
+    },
+    {
+      "start": 2822.64,
+      "end": 2827.96,
+      "text": "indeed, every time slot here is independent from any other"
+    },
+    {
+      "start": 2827.96,
+      "end": 2832.22,
+      "text": "time slot, and this does make it a Bernoulli process."
+    },
+    {
+      "start": 2832.22,
+      "end": 2835.56,
+      "text": "The reason is that in the original process, every time"
+    },
+    {
+      "start": 2835.56,
+      "end": 2838.68,
+      "text": "slot is independent from every other time slot, and the"
+    },
+    {
+      "start": 2838.68,
+      "end": 2842.04,
+      "text": "additional assumption that the coin flips that we're using to"
+    },
+    {
+      "start": 2842.04,
+      "end": 2845.06,
+      "text": "decide where to send things, these are also independent of"
+    },
+    {
+      "start": 2845.06,
+      "end": 2845.98,
+      "text": "each other."
+    },
+    {
+      "start": 2845.98,
+      "end": 2849.36,
+      "text": "So we're using here the basic property that"
+    },
+    {
+      "start": 2849.36,
+      "end": 2856.42,
+      "text": "functions of independent things remain independent."
+    },
+    {
+      "start": 2856.42,
+      "end": 2858.68,
+      "text": "There's a converse picture of this."
+    },
+    {
+      "start": 2858.68,
+      "end": 2861.96,
+      "text": "Instead of taking one stream and splitting it into two"
+    },
+    {
+      "start": 2861.96,
+      "end": 2864.72,
+      "text": "streams, you can do the opposite."
+    },
+    {
+      "start": 2864.72,
+      "end": 2868.06,
+      "text": "You could start from two streams of arrivals."
+    },
+    {
+      "start": 2868.06,
+      "end": 2871.3,
+      "text": "Let's say you have arrivals of men, and you have arrivals of"
+    },
+    {
+      "start": 2871.3,
+      "end": 2874.56,
+      "text": "women, but you don't care about gender, and the only"
+    },
+    {
+      "start": 2874.56,
+      "end": 2878.56,
+      "text": "thing you record is whether in a given time slot you had an"
+    },
+    {
+      "start": 2878.56,
+      "end": 2880.42,
+      "text": "arrival or not."
+    },
+    {
+      "start": 2880.42,
+      "end": 2884.3,
+      "text": "Notice that here we may have an arrival of a man and an"
+    },
+    {
+      "start": 2884.3,
+      "end": 2885.82,
+      "text": "arrival of a woman."
+    },
+    {
+      "start": 2885.82,
+      "end": 2891.18,
+      "text": "We just record it with a 1 by saying there was an arrival."
+    },
+    {
+      "start": 2891.18,
+      "end": 2894.66,
+      "text": "So in the merged process, we're not keeping track of how many"
+    },
+    {
+      "start": 2894.66,
+      "end": 2896.88,
+      "text": "arrivals we had total."
+    },
+    {
+      "start": 2896.88,
+      "end": 2900.56,
+      "text": "We just record whether there was an arrival or not an"
+    },
+    {
+      "start": 2900.56,
+      "end": 2901.4,
+      "text": "arrival."
+    },
+    {
+      "start": 2901.4,
+      "end": 2905.84,
+      "text": "So an arrival gets recorded here if and only if one or"
+    },
+    {
+      "start": 2905.84,
+      "end": 2908.8,
+      "text": "both of these streams had an arrival."
+    },
+    {
+      "start": 2908.8,
+      "end": 2910.26,
+      "text": "So that's what we call a merging."
+    },
+    {
+      "start": 2910.42,
+      "end": 2914.48,
+      "text": "Of two arrival processes."
+    },
+    {
+      "start": 2914.48,
+      "end": 2917.82,
+      "text": "So let's make the assumption that this arrival process is"
+    },
+    {
+      "start": 2917.82,
+      "end": 2921.42,
+      "text": "independent from that arrival process."
+    },
+    {
+      "start": 2921.42,
+      "end": 2924.32,
+      "text": "So what happens at the typical slot here?"
+    },
+    {
+      "start": 2924.32,
+      "end": 2929.66,
+      "text": "I'm going to see an arrival unless none of"
+    },
+    {
+      "start": 2929.66,
+      "end": 2931.94,
+      "text": "these had an arrival."
+    },
+    {
+      "start": 2931.94,
+      "end": 2936.36,
+      "text": "So the probability of an arrival in a typical time slot"
+    },
+    {
+      "start": 2936.36,
+      "end": 2940.4,
+      "text": "is going to be 1 minus the probability of no arrival."
+    },
+    {
+      "start": 2940.4,
+      "end": 2947.36,
+      "text": "And the event of no arrival corresponds to the first"
+    },
+    {
+      "start": 2947.36,
+      "end": 2950.32,
+      "text": "process having no arrival and the second"
+    },
+    {
+      "start": 2950.32,
+      "end": 2954.36,
+      "text": "process having no arrival."
+    },
+    {
+      "start": 2954.36,
+      "end": 2958.24,
+      "text": "So there's no arrival in the merged process if and only if"
+    },
+    {
+      "start": 2958.24,
+      "end": 2961.42,
+      "text": "there's no arrival in the first process and no arrival in"
+    },
+    {
+      "start": 2961.42,
+      "end": 2962.72,
+      "text": "the second process."
+    },
+    {
+      "start": 2962.72,
+      "end": 2965.9,
+      "text": "We're assuming that the two processes are independent."
+    },
+    {
+      "start": 2965.9,
+      "end": 2969.16,
+      "text": "And that's why we can multiply probabilities here."
+    },
+    {
+      "start": 2969.16,
+      "end": 2970.36,
+      "text": "And then you can take this."
+    },
+    {
+      "start": 2970.36,
+      "end": 2978.12,
+      "text": "formula and it simplifies to p plus q minus p times q."
+    },
+    {
+      "start": 2978.12,
+      "end": 2981.36,
+      "text": "So each time slot of the merged process has a certain"
+    },
+    {
+      "start": 2981.36,
+      "end": 2984.6,
+      "text": "probability of seeing an arrival."
+    },
+    {
+      "start": 2984.6,
+      "end": 2987.36,
+      "text": "Is the merged process a Bernoulli process?"
+    },
+    {
+      "start": 2987.36,
+      "end": 2991.24,
+      "text": "Yes, it is after you verify the additional property that"
+    },
+    {
+      "start": 2991.24,
+      "end": 2994.64,
+      "text": "different slots are independent of each other."
+    },
+    {
+      "start": 2994.64,
+      "end": 2996.54,
+      "text": "Why are they independent?"
+    },
+    {
+      "start": 2996.54,
+      "end": 3000.06,
+      "text": "What happens in this slot has to do with that"
+    },
+    {
+      "start": 3000.06,
+      "end": 3003.14,
+      "text": "slot and that slot down here."
+    },
+    {
+      "start": 3003.14,
+      "end": 3008.38,
+      "text": "And these two slots, so what happens here has to do with"
+    },
+    {
+      "start": 3008.38,
+      "end": 3011.36,
+      "text": "what happens here and there."
+    },
+    {
+      "start": 3011.36,
+      "end": 3016.68,
+      "text": "What happens in this slot has to do with whatever happened"
+    },
+    {
+      "start": 3016.68,
+      "end": 3019.18,
+      "text": "here and there."
+    },
+    {
+      "start": 3019.18,
+      "end": 3023.14,
+      "text": "Now, whatever happens here and there is independent from"
+    },
+    {
+      "start": 3023.14,
+      "end": 3025.3,
+      "text": "whatever happens here and there."
+    },
+    {
+      "start": 3025.3,
+      "end": 3028.92,
+      "text": "Therefore, what happens here is independent from"
+    },
+    {
+      "start": 3028.92,
+      "end": 3030.06,
+      "text": "what happens there."
+    },
+    {
+      "start": 3030.06,
+      "end": 3032.64,
+      "text": "So the independence property is preserved."
+    },
+    {
+      "start": 3033.34,
+      "end": 3037.26,
+      "text": "The different slots of this merged process are independent of each other."
+    },
+    {
+      "start": 3037.56,
+      "end": 3041.08,
+      "text": "So the merged process is itself a Bernoulli process."
+    },
+    {
+      "start": 3041.96,
+      "end": 3046.3,
+      "text": "So please digest these two pictures of merging and splitting"
+    },
+    {
+      "start": 3046.3,
+      "end": 3049.26,
+      "text": "because we're going to revisit them in continuous time"
+    },
+    {
+      "start": 3049.26,
+      "end": 3051.88,
+      "text": "where things are a little subtler than that."
+    },
+    {
+      "start": 3052.46,
+      "end": 3056.28,
+      "text": "Okay, good luck in the exam, and we'll see you in a week."
+    }
+  ]
+}

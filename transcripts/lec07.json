@@ -1,0 +1,4862 @@
+{
+  "lecture": "lec07",
+  "language": "en",
+  "duration": 3041.088,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.44,
+      "text": "The following content is provided under a Creative"
+    },
+    {
+      "start": 2.44,
+      "end": 3.96,
+      "text": "Commons license."
+    },
+    {
+      "start": 3.96,
+      "end": 6.28,
+      "text": "Your support will help MIT OpenCourseWare"
+    },
+    {
+      "start": 6.28,
+      "end": 10.64,
+      "text": "continue to offer high quality educational resources for free."
+    },
+    {
+      "start": 10.64,
+      "end": 13.26,
+      "text": "To make a donation or view additional materials"
+    },
+    {
+      "start": 13.26,
+      "end": 17.2,
+      "text": "from hundreds of MIT courses, visit MIT OpenCourseWare"
+    },
+    {
+      "start": 17.2,
+      "end": 22.34,
+      "text": "at ocw.mit.edu."
+    },
+    {
+      "start": 22.34,
+      "end": 25.3,
+      "text": "OK, good morning."
+    },
+    {
+      "start": 25.3,
+      "end": 30.89,
+      "text": "So today we're going to have a fairly packed lecture."
+    },
+    {
+      "start": 30.89,
+      "end": 34.95,
+      "text": "We are going to conclude with chapter two, discrete random"
+    },
+    {
+      "start": 34.95,
+      "end": 37.59,
+      "text": "variables, and we will be talking mostly about multiple"
+    },
+    {
+      "start": 37.59,
+      "end": 39.29,
+      "text": "random variables."
+    },
+    {
+      "start": 39.29,
+      "end": 43.27,
+      "text": "And this is also the last lecture as far as"
+    },
+    {
+      "start": 43.27,
+      "end": 44.67,
+      "text": "quiz one is concerned."
+    },
+    {
+      "start": 44.67,
+      "end": 48.31,
+      "text": "So it's going to cover the material until today, and of"
+    },
+    {
+      "start": 48.31,
+      "end": 52.51,
+      "text": "course, the next recitation and tutorial as well."
+    },
+    {
+      "start": 52.51,
+      "end": 57.15,
+      "text": "OK, so we're going to review quickly what we introduced at"
+    },
+    {
+      "start": 57.15,
+      "end": 60.47,
+      "text": "the end of last lecture, where we talked about the joint"
+    },
+    {
+      "start": 60.47,
+      "end": 62.29,
+      "text": "PMF of two random variables."
+    },
+    {
+      "start": 62.29,
+      "end": 65.07,
+      "text": "We're going to talk about the case of more than two random"
+    },
+    {
+      "start": 65.07,
+      "end": 67.47,
+      "text": "variables as well."
+    },
+    {
+      "start": 67.47,
+      "end": 69.89,
+      "text": "We're going to talk about our familiar concepts of"
+    },
+    {
+      "start": 69.89,
+      "end": 74.27,
+      "text": "conditioning and independence, but applied to random"
+    },
+    {
+      "start": 74.27,
+      "end": 76.47,
+      "text": "variables instead of events."
+    },
+    {
+      "start": 76.47,
+      "end": 79.31,
+      "text": "We're going to look at the expectations once more, talk"
+    },
+    {
+      "start": 79.31,
+      "end": 82.69,
+      "text": "about a few properties that they have, and then solve a"
+    },
+    {
+      "start": 82.69,
+      "end": 85.91,
+      "text": "couple of problems and calculate a few things in"
+    },
+    {
+      "start": 85.91,
+      "end": 88.17,
+      "text": "somewhat clever ways."
+    },
+    {
+      "start": 88.17,
+      "end": 89.81,
+      "text": "So the first point I want to make."
+    },
+    {
+      "start": 89.81,
+      "end": 92.99,
+      "text": "I want to make is that, to a large extent, whatever is"
+    },
+    {
+      "start": 92.99,
+      "end": 96.45,
+      "text": "happening in our chapter on discrete random variables is"
+    },
+    {
+      "start": 96.45,
+      "end": 99.13,
+      "text": "just an exercise in notation."
+    },
+    {
+      "start": 99.13,
+      "end": 102.79,
+      "text": "There is stuff and concepts that you are already familiar"
+    },
+    {
+      "start": 102.79,
+      "end": 105.21,
+      "text": "with, probabilities, probabilities of two things"
+    },
+    {
+      "start": 105.21,
+      "end": 107.47,
+      "text": "happening, conditional probabilities."
+    },
+    {
+      "start": 107.47,
+      "end": 111.73,
+      "text": "And all that we're doing, to some extent, is rewriting"
+    },
+    {
+      "start": 111.73,
+      "end": 114.81,
+      "text": "those familiar concepts in new notation."
+    },
+    {
+      "start": 114.81,
+      "end": 117.87,
+      "text": "So for example, this is the joint PMF of"
+    },
+    {
+      "start": 117.87,
+      "end": 119.03,
+      "text": "two random variables."
+    },
+    {
+      "start": 119.03,
+      "end": 119.63,
+      "text": "It gives us."
+    },
+    {
+      "start": 119.63,
+      "end": 122.37,
+      "text": "For any pair of possible values of those random"
+    },
+    {
+      "start": 122.37,
+      "end": 126.05,
+      "text": "variables, the probability that that pair occurs"
+    },
+    {
+      "start": 126.05,
+      "end": 127.27,
+      "text": "simultaneously."
+    },
+    {
+      "start": 127.27,
+      "end": 130.01,
+      "text": "So it's the probability that simultaneously, X takes that"
+    },
+    {
+      "start": 130.01,
+      "end": 133.57,
+      "text": "value and Y takes that other value."
+    },
+    {
+      "start": 133.57,
+      "end": 137.23,
+      "text": "And similarly, we have the notion of the conditional PMF,"
+    },
+    {
+      "start": 137.23,
+      "end": 141.51,
+      "text": "which is just a list of the various conditional"
+    },
+    {
+      "start": 141.51,
+      "end": 143.25,
+      "text": "probabilities of interest."
+    },
+    {
+      "start": 143.25,
+      "end": 146.11,
+      "text": "Conditional probability that one random variable takes this"
+    },
+    {
+      "start": 146.11,
+      "end": 147.77,
+      "text": "value, given that the other random"
+    },
+    {
+      "start": 147.77,
+      "end": 149.01,
+      "text": "variable takes that value."
+    },
+    {
+      "start": 149.63,
+      "end": 153.63,
+      "text": "Now a remark about conditional probabilities."
+    },
+    {
+      "start": 153.63,
+      "end": 156.63,
+      "text": "Conditional probabilities generally are like ordinary"
+    },
+    {
+      "start": 156.63,
+      "end": 157.39,
+      "text": "probabilities."
+    },
+    {
+      "start": 157.39,
+      "end": 160.13,
+      "text": "You condition on something particular."
+    },
+    {
+      "start": 160.13,
+      "end": 163.95,
+      "text": "So here we condition on a particular Y. So think of"
+    },
+    {
+      "start": 163.95,
+      "end": 166.57,
+      "text": "little y as a fixed quantity."
+    },
+    {
+      "start": 166.57,
+      "end": 171.59,
+      "text": "And then look at this as a function of X. So given that Y"
+    },
+    {
+      "start": 171.59,
+      "end": 175.81,
+      "text": "on which we conditioned on, given our new universe, we're"
+    },
+    {
+      "start": 175.81,
+      "end": 179.41,
+      "text": "considering the various possibilities for X and the"
+    },
+    {
+      "start": 179.41,
+      "end": 181.29,
+      "text": "probabilities that they have."
+    },
+    {
+      "start": 181.29,
+      "end": 184.95,
+      "text": "Now the probabilities over all Xs, of course, needs to add to"
+    },
+    {
+      "start": 184.95,
+      "end": 185.83,
+      "text": "one."
+    },
+    {
+      "start": 185.83,
+      "end": 191.53,
+      "text": "So we should have a relation of this kind."
+    },
+    {
+      "start": 191.53,
+      "end": 194.41,
+      "text": "So they're just like ordinary probabilities over the"
+    },
+    {
+      "start": 194.41,
+      "end": 198.23,
+      "text": "different Xs in a universe where we are told the value of"
+    },
+    {
+      "start": 198.23,
+      "end": 200.93,
+      "text": "the random variable Y."
+    },
+    {
+      "start": 200.93,
+      "end": 202.27,
+      "text": "Now how are these related?"
+    },
+    {
+      "start": 205.19,
+      "end": 208.17,
+      "text": "So we call these the marginal, this the joint, this the"
+    },
+    {
+      "start": 208.17,
+      "end": 209.17,
+      "text": "conditional."
+    },
+    {
+      "start": 209.17,
+      "end": 211.55,
+      "text": "And there are some relations between these."
+    },
+    {
+      "start": 211.55,
+      "end": 215.45,
+      "text": "For example, to find the marginal from the joint, it's"
+    },
+    {
+      "start": 215.45,
+      "end": 217.75,
+      "text": "pretty straightforward."
+    },
+    {
+      "start": 217.75,
+      "end": 221.69,
+      "text": "The probability that X takes a particular value is the sum of"
+    },
+    {
+      "start": 221.69,
+      "end": 224.89,
+      "text": "the probabilities of all the different ways that this"
+    },
+    {
+      "start": 224.89,
+      "end": 227.19,
+      "text": "particular value may occur."
+    },
+    {
+      "start": 227.19,
+      "end": 228.37,
+      "text": "What are the different ways?"
+    },
+    {
+      "start": 228.37,
+      "end": 231.95,
+      "text": "Well, it may occur together with a certain Y or together"
+    },
+    {
+      "start": 231.95,
+      "end": 235.13,
+      "text": "with some other Y or together with some other Y."
+    },
+    {
+      "start": 235.13,
+      "end": 238.75,
+      "text": "So you look at all the possible Ys that can go together with"
+    },
+    {
+      "start": 238.75,
+      "end": 242.07,
+      "text": "is x, and add the probabilities of all those"
+    },
+    {
+      "start": 242.07,
+      "end": 247.21,
+      "text": "pairs for which we get this particular value of x."
+    },
+    {
+      "start": 247.21,
+      "end": 253.43,
+      "text": "And then there's a relation that connects these two"
+    },
+    {
+      "start": 253.43,
+      "end": 256.45,
+      "text": "probabilities with the conditional probability, and"
+    },
+    {
+      "start": 256.45,
+      "end": 258.03,
+      "text": "it's this relation."
+    },
+    {
+      "start": 258.03,
+      "end": 260.27,
+      "text": "OK, it's nothing new."
+    },
+    {
+      "start": 260.27,
+      "end": 265.17,
+      "text": "It's just new notation for writing what we already know,"
+    },
+    {
+      "start": 265.17,
+      "end": 268.13,
+      "text": "that the probability of two things happening is the"
+    },
+    {
+      "start": 268.13,
+      "end": 271.47,
+      "text": "probability that the first thing happens, and then given"
+    },
+    {
+      "start": 271.47,
+      "end": 274.19,
+      "text": "that the first thing happens, the probability that the"
+    },
+    {
+      "start": 274.19,
+      "end": 276.15,
+      "text": "second one happened."
+    },
+    {
+      "start": 276.15,
+      "end": 278.97,
+      "text": "So how do we go from one to the other?"
+    },
+    {
+      "start": 278.97,
+      "end": 282.97,
+      "text": "Think of a as being the event that x takes the value little"
+    },
+    {
+      "start": 282.97,
+      "end": 289.15,
+      "text": "x, and b being the event that y takes the value little y."
+    },
+    {
+      "start": 289.15,
+      "end": 292.23,
+      "text": "So the joint probability is the probability that these two"
+    },
+    {
+      "start": 292.23,
+      "end": 294.23,
+      "text": "things happen simultaneously."
+    },
+    {
+      "start": 294.23,
+      "end": 298.11,
+      "text": "It's the probability that x takes this value times the"
+    },
+    {
+      "start": 298.11,
+      "end": 303.13,
+      "text": "conditional probability that y takes this value, given that x"
+    },
+    {
+      "start": 303.13,
+      "end": 304.65,
+      "text": "took that first value."
+    },
+    {
+      "start": 304.65,
+      "end": 308.45,
+      "text": "So it's the familiar multiplication rule, but just"
+    },
+    {
+      "start": 308.45,
+      "end": 311.01,
+      "text": "transcribed in our new notation."
+    },
+    {
+      "start": 311.01,
+      "end": 313.65,
+      "text": "So nothing new so far."
+    },
+    {
+      "start": 313.65,
+      "end": 317.45,
+      "text": "OK, why did we go through this exercise and this notation?"
+    },
+    {
+      "start": 317.45,
+      "end": 320.95,
+      "text": "It's because in experiments that we're interested in, in"
+    },
+    {
+      "start": 320.95,
+      "end": 323.57,
+      "text": "the real world, typically there's going to be lots of"
+    },
+    {
+      "start": 323.57,
+      "end": 324.61,
+      "text": "uncertain quantities."
+    },
+    {
+      "start": 324.61,
+      "end": 327.73,
+      "text": "There's going to be multiple random variables, and we want"
+    },
+    {
+      "start": 328.11,
+      "end": 331.13,
+      "text": "to be able to talk about them simultaneously."
+    },
+    {
+      "start": 331.13,
+      "end": 335.09,
+      "text": "OK, why two and not more than two?"
+    },
+    {
+      "start": 335.09,
+      "end": 337.61,
+      "text": "How about three random variables?"
+    },
+    {
+      "start": 337.61,
+      "end": 341.29,
+      "text": "Well, if you understand what's going on in this slide, you"
+    },
+    {
+      "start": 341.29,
+      "end": 345.85,
+      "text": "should be able to kind of automatically generalize this"
+    },
+    {
+      "start": 345.85,
+      "end": 348.25,
+      "text": "to the case of multiple random variables."
+    },
+    {
+      "start": 348.25,
+      "end": 351.63,
+      "text": "So for example, if we have three random variables, x, y,"
+    },
+    {
+      "start": 351.63,
+      "end": 356.73,
+      "text": "and z, and you see an expression like this, it"
+    },
+    {
+      "start": 356.73,
+      "end": 358.11,
+      "text": "should be clear what it means."
+    },
+    {
+      "start": 358.11,
+      "end": 362.05,
+      "text": "It's the probability that x takes this value, and"
+    },
+    {
+      "start": 362.05,
+      "end": 366.23,
+      "text": "simultaneously y takes that value, and simultaneously z"
+    },
+    {
+      "start": 366.23,
+      "end": 367.91,
+      "text": "takes that value."
+    },
+    {
+      "start": 367.91,
+      "end": 370.07,
+      "text": "I guess that's an uppercase Z here."
+    },
+    {
+      "start": 370.07,
+      "end": 372.45,
+      "text": "That's a lowercase z."
+    },
+    {
+      "start": 372.45,
+      "end": 379.91,
+      "text": "OK, and if I ask you to find the marginal of x, if I tell"
+    },
+    {
+      "start": 379.91,
+      "end": 384.27,
+      "text": "you the joint PMF of the three random variables, and I ask"
+    },
+    {
+      "start": 384.27,
+      "end": 387.41,
+      "text": "you for this value, how would you find it?"
+    },
+    {
+      "start": 387.41,
+      "end": 388.11,
+      "text": "Well?"
+    },
+    {
+      "start": 388.11,
+      "end": 391.33,
+      "text": "You will try to generalize this relation here."
+    },
+    {
+      "start": 391.33,
+      "end": 396.59,
+      "text": "The probability that x occurs is the sum of the probabilities"
+    },
+    {
+      "start": 396.59,
+      "end": 405.83,
+      "text": "of all events that make x to take that particular value."
+    },
+    {
+      "start": 405.83,
+      "end": 407.37,
+      "text": "So what are all the events?"
+    },
+    {
+      "start": 407.37,
+      "end": 411.49,
+      "text": "Well, this particular x can happen together with some y"
+    },
+    {
+      "start": 411.49,
+      "end": 412.71,
+      "text": "and some z."
+    },
+    {
+      "start": 412.71,
+      "end": 414.81,
+      "text": "We don't care which y and z."
+    },
+    {
+      "start": 414.81,
+      "end": 417.85,
+      "text": "Any y and z will do."
+    },
+    {
+      "start": 417.85,
+      "end": 421.17,
+      "text": "So when we consider all possibilities, we need to add"
+    },
+    {
+      "start": 421.17,
+      "end": 424.71,
+      "text": "here over all possible values of y's and z's."
+    },
+    {
+      "start": 424.71,
+      "end": 427.99,
+      "text": "So consider all triples, x, y, z."
+    },
+    {
+      "start": 427.99,
+      "end": 433.03,
+      "text": "Fix x, and consider all the possibilities for the remaining"
+    },
+    {
+      "start": 433.03,
+      "end": 435.01,
+      "text": "variables, y and z."
+    },
+    {
+      "start": 435.01,
+      "end": 443.07,
+      "text": "Add these up, and that gives you the marginal PMF of x."
+    },
+    {
+      "start": 443.07,
+      "end": 446.11,
+      "text": "And then there's other things that you can do."
+    },
+    {
+      "start": 446.11,
+      "end": 448.51,
+      "text": "This is the multiplication rule for two events."
+    },
+    {
+      "start": 449.13,
+      "end": 452.49,
+      "text": "We saw back in chapter one that there's a multiplication"
+    },
+    {
+      "start": 452.49,
+      "end": 455.59,
+      "text": "rule when you talk about more than two events, and you can"
+    },
+    {
+      "start": 455.59,
+      "end": 458.85,
+      "text": "write a chain of conditional probabilities."
+    },
+    {
+      "start": 458.85,
+      "end": 463.85,
+      "text": "We can certainly do the same in our new notation."
+    },
+    {
+      "start": 463.85,
+      "end": 468.7,
+      "text": "So let's look at this rule up here."
+    },
+    {
+      "start": 468.7,
+      "end": 471.22,
+      "text": "Multiplication rule for three random variables."
+    },
+    {
+      "start": 471.22,
+      "end": 473.0,
+      "text": "What does it say?"
+    },
+    {
+      "start": 473.0,
+      "end": 476.88,
+      "text": "The probability of three things happening simultaneously, x, y,"
+    },
+    {
+      "start": 476.88,
+      "end": 481.18,
+      "text": "z, taking specific values x, little x, little y, little z."
+    },
+    {
+      "start": 481.18,
+      "end": 483.74,
+      "text": "That probability is the probability that the first"
+    },
+    {
+      "start": 483.74,
+      "end": 487.18,
+      "text": "thing happens, that x takes that value."
+    },
+    {
+      "start": 487.18,
+      "end": 489.88,
+      "text": "Given that x takes that value, we multiply with the"
+    },
+    {
+      "start": 489.88,
+      "end": 494.64,
+      "text": "probability that y takes also a certain value."
+    },
+    {
+      "start": 494.64,
+      "end": 498.58,
+      "text": "And now, given that x and y have taken those particular"
+    },
+    {
+      "start": 498.58,
+      "end": 501.68,
+      "text": "values, we multiply with the conditional probability that"
+    },
+    {
+      "start": 501.68,
+      "end": 505.4,
+      "text": "the third thing happens, given that the first two"
+    },
+    {
+      "start": 505.4,
+      "end": 506.96,
+      "text": "things happened."
+    },
+    {
+      "start": 506.96,
+      "end": 510.06,
+      "text": "So this is just the multiplication rule for three"
+    },
+    {
+      "start": 510.06,
+      "end": 511.18,
+      "text": "events."
+    },
+    {
+      "start": 511.18,
+      "end": 514.9,
+      "text": "Which would be probability of A intersection B intersection C"
+    },
+    {
+      "start": 514.9,
+      "end": 517.9,
+      "text": "equals, you know the rest of the formula."
+    },
+    {
+      "start": 517.9,
+      "end": 522.38,
+      "text": "You just rewrite this formula in PMF notation."
+    },
+    {
+      "start": 522.38,
+      "end": 525.3,
+      "text": "Probability of A intersection B intersection C is the"
+    },
+    {
+      "start": 525.3,
+      "end": 529.46,
+      "text": "probability of A, which corresponds to this term,"
+    },
+    {
+      "start": 529.46,
+      "end": 534.06,
+      "text": "times the probability of B given A, times the probability"
+    },
+    {
+      "start": 534.06,
+      "end": 540.0,
+      "text": "of C given A and B."
+    },
+    {
+      "start": 540.0,
+      "end": 543.22,
+      "text": "OK, so what else is there that's left"
+    },
+    {
+      "start": 543.22,
+      "end": 549.22,
+      "text": "from chapter one that we can or should generalize to random"
+    },
+    {
+      "start": 549.22,
+      "end": 550.22,
+      "text": "variables?"
+    },
+    {
+      "start": 550.22,
+      "end": 552.54,
+      "text": "Well, there's the notion of independence."
+    },
+    {
+      "start": 552.54,
+      "end": 556.66,
+      "text": "So let's define what independence means."
+    },
+    {
+      "start": 556.66,
+      "end": 559.94,
+      "text": "Instead of talking about just two random variables, let's go"
+    },
+    {
+      "start": 559.94,
+      "end": 562.46,
+      "text": "directly to the case of multiple random variables."
+    },
+    {
+      "start": 562.46,
+      "end": 564.06,
+      "text": "When we talked about events, things were"
+    },
+    {
+      "start": 564.06,
+      "end": 565.08,
+      "text": "a little complicated."
+    },
+    {
+      "start": 565.08,
+      "end": 568.46,
+      "text": "We had a simple definition for independence of two events."
+    },
+    {
+      "start": 568.46,
+      "end": 571.92,
+      "text": "Two events are independent if the probability of both is"
+    },
+    {
+      "start": 571.92,
+      "end": 572.98,
+      "text": "equal to the product of the"
+    },
+    {
+      "start": 572.98,
+      "end": 573.72,
+      "text": "probabilities."
+    },
+    {
+      "start": 573.72,
+      "end": 575.82,
+      "text": "But for three events, it was kind of messy."
+    },
+    {
+      "start": 575.82,
+      "end": 578.42,
+      "text": "We needed to write down lots of conditions."
+    },
+    {
+      "start": 578.42,
+      "end": 581.54,
+      "text": "For random variables, things in some sense are a little"
+    },
+    {
+      "start": 581.54,
+      "end": 582.04,
+      "text": "simpler."
+    },
+    {
+      "start": 582.04,
+      "end": 586.34,
+      "text": "We only need to write down one formula and take this as the"
+    },
+    {
+      "start": 586.34,
+      "end": 588.78,
+      "text": "definition of independence."
+    },
+    {
+      "start": 588.78,
+      "end": 593.62,
+      "text": "Three random variables are independent if and only if, by"
+    },
+    {
+      "start": 593.62,
+      "end": 598.38,
+      "text": "definition, their joint probability mass function"
+    },
+    {
+      "start": 598.38,
+      "end": 602.54,
+      "text": "factors out into individual probability mass functions."
+    },
+    {
+      "start": 602.54,
+      "end": 608.18,
+      "text": "So the probability that all three things happen is the"
+    },
+    {
+      "start": 608.18,
+      "end": 611.78,
+      "text": "product of the individual probabilities that each one of"
+    },
+    {
+      "start": 611.78,
+      "end": 614.18,
+      "text": "these three things is happening."
+    },
+    {
+      "start": 614.18,
+      "end": 617.56,
+      "text": "So independence means, mathematically, that you can"
+    },
+    {
+      "start": 617.56,
+      "end": 621.48,
+      "text": "just multiply probabilities to get the probability of several"
+    },
+    {
+      "start": 621.48,
+      "end": 622.7,
+      "text": "things happening simultaneously."
+    },
+    {
+      "start": 627.9,
+      "end": 631.04,
+      "text": "With three events, we have to write a huge number of"
+    },
+    {
+      "start": 631.04,
+      "end": 631.44,
+      "text": "equations."
+    },
+    {
+      "start": 631.44,
+      "end": 631.74,
+      "text": "Equations."
+    },
+    {
+      "start": 631.74,
+      "end": 632.04,
+      "text": "Equations."
+    },
+    {
+      "start": 632.04,
+      "end": 632.4,
+      "text": "Equations."
+    },
+    {
+      "start": 632.4,
+      "end": 632.54,
+      "text": "Equations."
+    },
+    {
+      "start": 632.54,
+      "end": 634.54,
+      "text": "Equalities that had to hold."
+    },
+    {
+      "start": 634.54,
+      "end": 637.5,
+      "text": "How can it be that with random variables, we can only manage"
+    },
+    {
+      "start": 637.5,
+      "end": 639.38,
+      "text": "with one equality?"
+    },
+    {
+      "start": 639.38,
+      "end": 643.28,
+      "text": "Well, the catch is that this is not really just one equality."
+    },
+    {
+      "start": 643.28,
+      "end": 648.38,
+      "text": "We require this to be true for every little x, y, and z."
+    },
+    {
+      "start": 648.38,
+      "end": 652.6,
+      "text": "So in some sense, this is a bunch of conditions that are"
+    },
+    {
+      "start": 652.6,
+      "end": 656.3,
+      "text": "being put on the joint PMF, a bunch of conditions that we"
+    },
+    {
+      "start": 656.3,
+      "end": 658.14,
+      "text": "need to check."
+    },
+    {
+      "start": 658.14,
+      "end": 661.08,
+      "text": "So this is the mathematical definition."
+    },
+    {
+      "start": 661.08,
+      "end": 662.4,
+      "text": "What is the intuitive?"
+    },
+    {
+      "start": 662.4,
+      "end": 665.4,
+      "text": "What is the intuitive content of this definition?"
+    },
+    {
+      "start": 665.4,
+      "end": 671.12,
+      "text": "The intuitive content is the same as for events."
+    },
+    {
+      "start": 671.12,
+      "end": 675.02,
+      "text": "Random variables are independent if knowing"
+    },
+    {
+      "start": 675.02,
+      "end": 679.46,
+      "text": "something about the realized values of some of these random"
+    },
+    {
+      "start": 679.46,
+      "end": 685.7,
+      "text": "variables does not change our beliefs about the likelihood of"
+    },
+    {
+      "start": 685.7,
+      "end": 689.48,
+      "text": "various values for the remaining random variables."
+    },
+    {
+      "start": 689.48,
+      "end": 692.26,
+      "text": "So independence would translate, for example, to a random variable."
+    },
+    {
+      "start": 692.26,
+      "end": 699.2,
+      "text": "For example, to a condition such as the conditional PMF of x"
+    },
+    {
+      "start": 699.2,
+      "end": 706.02,
+      "text": "given y should be equal to the marginal PMF of x."
+    },
+    {
+      "start": 706.02,
+      "end": 707.48,
+      "text": "What is this saying?"
+    },
+    {
+      "start": 707.48,
+      "end": 713.16,
+      "text": "That you have some original beliefs about how likely it is"
+    },
+    {
+      "start": 713.16,
+      "end": 715.2,
+      "text": "for x to take this value."
+    },
+    {
+      "start": 715.2,
+      "end": 719.3,
+      "text": "Now, someone comes and tells you that y took on a certain"
+    },
+    {
+      "start": 719.3,
+      "end": 720.14,
+      "text": "value."
+    },
+    {
+      "start": 720.14,
+      "end": 722.02,
+      "text": "This causes you, in principle, to"
+    },
+    {
+      "start": 722.02,
+      "end": 723.46,
+      "text": "revise your beliefs."
+    },
+    {
+      "start": 723.46,
+      "end": 726.78,
+      "text": "And your new beliefs will be captured by the conditional PMF"
+    },
+    {
+      "start": 726.78,
+      "end": 728.74,
+      "text": "or the conditional probabilities."
+    },
+    {
+      "start": 728.74,
+      "end": 732.78,
+      "text": "Independence means that your revised beliefs actually will"
+    },
+    {
+      "start": 732.78,
+      "end": 735.4,
+      "text": "be the same as your original beliefs."
+    },
+    {
+      "start": 735.4,
+      "end": 739.94,
+      "text": "Telling you information about the value of y doesn't change"
+    },
+    {
+      "start": 739.94,
+      "end": 744.3,
+      "text": "what you expect for the random variable x."
+    },
+    {
+      "start": 744.3,
+      "end": 748.7,
+      "text": "Why didn't we use this definition of independence?"
+    },
+    {
+      "start": 748.7,
+      "end": 751.86,
+      "text": "Well, because this definition only makes sense when this"
+    },
+    {
+      "start": 751.86,
+      "end": 754.3,
+      "text": "conditional is well-defined."
+    },
+    {
+      "start": 754.3,
+      "end": 763.82,
+      "text": "And this conditional is only well-defined if the event that y"
+    },
+    {
+      "start": 763.82,
+      "end": 767.18,
+      "text": "takes on that particular value has positive probability."
+    },
+    {
+      "start": 767.18,
+      "end": 771.44,
+      "text": "We cannot condition on events that have zero probability."
+    },
+    {
+      "start": 771.44,
+      "end": 775.22,
+      "text": "So conditional probabilities are only defined for y's that"
+    },
+    {
+      "start": 775.22,
+      "end": 779.44,
+      "text": "are likely to occur that have a positive probability."
+    },
+    {
+      "start": 779.44,
+      "end": 781.22,
+      "text": "Now, similarly, with multiple random variables, we can also"
+    },
+    {
+      "start": 781.22,
+      "end": 782.76,
+      "text": "have random variables."
+    },
+    {
+      "start": 782.76,
+      "end": 787.78,
+      "text": "If they're independent, you would have relations such as"
+    },
+    {
+      "start": 787.78,
+      "end": 794.18,
+      "text": "the conditional of x given y and z should be the same as"
+    },
+    {
+      "start": 794.18,
+      "end": 796.3,
+      "text": "the marginal of x."
+    },
+    {
+      "start": 796.3,
+      "end": 797.32,
+      "text": "What is this saying?"
+    },
+    {
+      "start": 797.32,
+      "end": 801.2,
+      "text": "Again, that if I tell you the values, the realized values of"
+    },
+    {
+      "start": 801.2,
+      "end": 805.9,
+      "text": "random variables y and z, this is not going to change your"
+    },
+    {
+      "start": 805.9,
+      "end": 808.9,
+      "text": "beliefs about how likely x is to occur."
+    },
+    {
+      "start": 808.9,
+      "end": 811.06,
+      "text": "Whatever you believed in the beginning, you're going to be"
+    },
+    {
+      "start": 811.06,
+      "end": 813.0,
+      "text": "able to believe the same thing afterwards."
+    },
+    {
+      "start": 813.0,
+      "end": 816.14,
+      "text": "So it's important to keep that intuition in mind, because"
+    },
+    {
+      "start": 816.14,
+      "end": 819.3,
+      "text": "sometimes this way you can tell whether random variables are"
+    },
+    {
+      "start": 819.3,
+      "end": 823.1,
+      "text": "independent without having to do calculations and to check"
+    },
+    {
+      "start": 823.1,
+      "end": 824.9,
+      "text": "this formula."
+    },
+    {
+      "start": 824.9,
+      "end": 829.26,
+      "text": "OK, so let's check our concepts with a simple example."
+    },
+    {
+      "start": 829.26,
+      "end": 832.3,
+      "text": "Let's look at two random variables that are discrete,"
+    },
+    {
+      "start": 832.3,
+      "end": 835.1,
+      "text": "take values between 1 and 4 each."
+    },
+    {
+      "start": 835.1,
+      "end": 837.9,
+      "text": "And this is a table that gives us the joint PMF."
+    },
+    {
+      "start": 837.9,
+      "end": 840.9,
+      "text": "So it tells us the probability that the"
+    },
+    {
+      "start": 840.9,
+      "end": 846.72,
+      "text": "x equals to 1 and y equals x equals to 2, and y equals to 1"
+    },
+    {
+      "start": 846.72,
+      "end": 848.1,
+      "text": "happening simultaneously."
+    },
+    {
+      "start": 848.1,
+      "end": 850.78,
+      "text": "It's an event that has probability 1 over 20."
+    },
+    {
+      "start": 850.78,
+      "end": 854.5,
+      "text": "Are these two random variables independent?"
+    },
+    {
+      "start": 854.5,
+      "end": 858.02,
+      "text": "You can try to check a condition like this, but can"
+    },
+    {
+      "start": 858.02,
+      "end": 861.9,
+      "text": "we tell directly from the table?"
+    },
+    {
+      "start": 861.9,
+      "end": 868.42,
+      "text": "If I tell you a value of y, could that give you useful"
+    },
+    {
+      "start": 868.42,
+      "end": 872.14,
+      "text": "information about x?"
+    },
+    {
+      "start": 872.14,
+      "end": 872.82,
+      "text": "Certainly."
+    },
+    {
+      "start": 872.82,
+      "end": 873.8,
+      "text": "If I tell you that"
+    },
+    {
+      "start": 873.82,
+      "end": 880.98,
+      "text": "y is equal to 1, this tells you that x must be equal to 2."
+    },
+    {
+      "start": 880.98,
+      "end": 884.88,
+      "text": "But if I tell you that y was equal to 3, this tells you"
+    },
+    {
+      "start": 884.88,
+      "end": 887.54,
+      "text": "that still x could be anything."
+    },
+    {
+      "start": 887.54,
+      "end": 892.2,
+      "text": "So telling you the value of y kind of changes what you"
+    },
+    {
+      "start": 892.2,
+      "end": 897.22,
+      "text": "expect or what you consider possible for the values of the"
+    },
+    {
+      "start": 897.22,
+      "end": 899.04,
+      "text": "other random variable."
+    },
+    {
+      "start": 899.04,
+      "end": 903.06,
+      "text": "So by just inspecting here, we can tell that the random"
+    },
+    {
+      "start": 903.06,
+      "end": 907.84,
+      "text": "variables are not independent."
+    },
+    {
+      "start": 907.84,
+      "end": 911.0,
+      "text": "OK, what's the other concept we introduced in Chapter 1?"
+    },
+    {
+      "start": 911.0,
+      "end": 914.06,
+      "text": "We introduced the concept of conditional independence."
+    },
+    {
+      "start": 914.06,
+      "end": 917.12,
+      "text": "And conditional independence is like ordinary independence,"
+    },
+    {
+      "start": 917.12,
+      "end": 920.42,
+      "text": "but applied to a conditional universe where we're given"
+    },
+    {
+      "start": 920.42,
+      "end": 921.78,
+      "text": "some information."
+    },
+    {
+      "start": 921.78,
+      "end": 924.6,
+      "text": "So suppose someone tells you that the outcome of the"
+    },
+    {
+      "start": 924.6,
+      "end": 930.4,
+      "text": "experiment is such that x is less than or equal to 2, and y"
+    },
+    {
+      "start": 930.4,
+      "end": 933.9,
+      "text": "is larger than or equal to 3."
+    },
+    {
+      "start": 933.9,
+      "end": 934.94,
+      "text": "So we are"
+    },
+    {
+      "start": 934.94,
+      "end": 939.98,
+      "text": "given the information that we now live inside this universe."
+    },
+    {
+      "start": 939.98,
+      "end": 942.06,
+      "text": "So what happens inside this universe?"
+    },
+    {
+      "start": 942.06,
+      "end": 947.12,
+      "text": "Inside this universe, our random variables are going to"
+    },
+    {
+      "start": 947.12,
+      "end": 955.1,
+      "text": "have a new joint PMF, which is conditioned on the event that"
+    },
+    {
+      "start": 955.1,
+      "end": 958.62,
+      "text": "we were told that it has occurred."
+    },
+    {
+      "start": 958.62,
+      "end": 964.74,
+      "text": "So let A correspond to this sort of event here."
+    },
+    {
+      "start": 964.74,
+      "end": 966.86,
+      "text": "And now we're dealing with conditional probability."
+    },
+    {
+      "start": 966.86,
+      "end": 969.5,
+      "text": "What are those conditional probabilities?"
+    },
+    {
+      "start": 969.5,
+      "end": 971.5,
+      "text": "We can put them in a table."
+    },
+    {
+      "start": 971.5,
+      "end": 974.74,
+      "text": "So it's a 2 by 2 table, since we only have two possible"
+    },
+    {
+      "start": 974.74,
+      "end": 975.54,
+      "text": "values."
+    },
+    {
+      "start": 975.54,
+      "end": 978.16,
+      "text": "What are they going to be?"
+    },
+    {
+      "start": 978.16,
+      "end": 982.08,
+      "text": "Well, these probabilities show up in the ratios 1, 2, 2, and"
+    },
+    {
+      "start": 982.08,
+      "end": 982.9,
+      "text": "4."
+    },
+    {
+      "start": 982.9,
+      "end": 985.5,
+      "text": "Those ratios have to stay the same."
+    },
+    {
+      "start": 985.5,
+      "end": 989.72,
+      "text": "The probabilities need to add up to 1."
+    },
+    {
+      "start": 989.72,
+      "end": 993.44,
+      "text": "So what should the denominators be?"
+    },
+    {
+      "start": 993.44,
+      "end": 996.62,
+      "text": "Since these numbers add up to 9, these are the conditional"
+    },
+    {
+      "start": 996.62,
+      "end": 997.8,
+      "text": "probabilities."
+    },
+    {
+      "start": 997.8,
+      "end": 1002.52,
+      "text": "So this is the conditional PMF in this example."
+    },
+    {
+      "start": 1002.52,
+      "end": 1003.86,
+      "text": "OK."
+    },
+    {
+      "start": 1003.86,
+      "end": 1007.0,
+      "text": "Now, in this conditional universe, is x"
+    },
+    {
+      "start": 1007.0,
+      "end": 1011.22,
+      "text": "independent from y?"
+    },
+    {
+      "start": 1011.22,
+      "end": 1021.47,
+      "text": "If I tell you that y takes this value, so we live in this"
+    },
+    {
+      "start": 1021.47,
+      "end": 1024.91,
+      "text": "universe, what do you know about x?"
+    },
+    {
+      "start": 1024.91,
+      "end": 1028.09,
+      "text": "What you know about x is that this value is twice as likely"
+    },
+    {
+      "start": 1028.09,
+      "end": 1029.43,
+      "text": "as that value."
+    },
+    {
+      "start": 1029.85,
+      "end": 1033.87,
+      "text": "If I condition on y taking this value, so we're living"
+    },
+    {
+      "start": 1033.87,
+      "end": 1036.39,
+      "text": "here, what do you know about x?"
+    },
+    {
+      "start": 1036.39,
+      "end": 1041.63,
+      "text": "What you know about x is that this value is twice as likely"
+    },
+    {
+      "start": 1041.63,
+      "end": 1043.25,
+      "text": "as that value."
+    },
+    {
+      "start": 1043.25,
+      "end": 1044.49,
+      "text": "So it's the same."
+    },
+    {
+      "start": 1044.49,
+      "end": 1050.25,
+      "text": "Whether we live here or we live there, this x is twice as"
+    },
+    {
+      "start": 1050.25,
+      "end": 1053.67,
+      "text": "likely as that x."
+    },
+    {
+      "start": 1053.67,
+      "end": 1059.23,
+      "text": "So the conditional PMF in this new universe is twice as"
+    },
+    {
+      "start": 1059.23,
+      "end": 1067.69,
+      "text": "likely as the conditional PMF of x, given y in the new"
+    },
+    {
+      "start": 1067.69,
+      "end": 1078.92,
+      "text": "universe, is the same as the marginal PMF of x, but of"
+    },
+    {
+      "start": 1078.92,
+      "end": 1081.24,
+      "text": "course, in the new universe."
+    },
+    {
+      "start": 1081.24,
+      "end": 1085.96,
+      "text": "So no matter what y is, the conditional PMF of x is the"
+    },
+    {
+      "start": 1085.96,
+      "end": 1090.28,
+      "text": "same, and that conditional PMF is 1 third and 2 thirds."
+    },
+    {
+      "start": 1090.28,
+      "end": 1090.46,
+      "text": "OK."
+    },
+    {
+      "start": 1090.46,
+      "end": 1095.16,
+      "text": "This is the conditional PMF of x in the new universe, no"
+    },
+    {
+      "start": 1095.16,
+      "end": 1097.02,
+      "text": "matter what y occurs."
+    },
+    {
+      "start": 1097.02,
+      "end": 1100.32,
+      "text": "So y does not give us any information about x, doesn't"
+    },
+    {
+      "start": 1100.32,
+      "end": 1105.62,
+      "text": "cause us to change our beliefs inside this little universe."
+    },
+    {
+      "start": 1105.62,
+      "end": 1108.44,
+      "text": "And therefore, the two random variables are independent."
+    },
+    {
+      "start": 1108.44,
+      "end": 1111.18,
+      "text": "Now, the other way that you can verify that we have"
+    },
+    {
+      "start": 1111.18,
+      "end": 1115.0,
+      "text": "independence is to find the marginal PMFs of the two"
+    },
+    {
+      "start": 1115.0,
+      "end": 1116.28,
+      "text": "random variables."
+    },
+    {
+      "start": 1116.28,
+      "end": 1120.44,
+      "text": "The marginal PMF of x, you find it by adding those"
+    },
+    {
+      "start": 1120.46,
+      "end": 1122.56,
+      "text": "two terms, you get 1 third."
+    },
+    {
+      "start": 1122.56,
+      "end": 1124.64,
+      "text": "Adding those two terms, you get 2 thirds."
+    },
+    {
+      "start": 1124.64,
+      "end": 1128.54,
+      "text": "Marginal PMF of y, you find it, you add these two terms,"
+    },
+    {
+      "start": 1128.54,
+      "end": 1131.42,
+      "text": "and you get 1 third."
+    },
+    {
+      "start": 1131.42,
+      "end": 1136.46,
+      "text": "And the marginal PMF of y here is going to be 2 thirds."
+    },
+    {
+      "start": 1136.46,
+      "end": 1139.12,
+      "text": "And then you ask the question, is the joint the"
+    },
+    {
+      "start": 1139.12,
+      "end": 1140.86,
+      "text": "product of the marginals?"
+    },
+    {
+      "start": 1140.86,
+      "end": 1142.64,
+      "text": "And indeed it is."
+    },
+    {
+      "start": 1142.64,
+      "end": 1145.32,
+      "text": "This times this gives you 1 ninth."
+    },
+    {
+      "start": 1145.32,
+      "end": 1148.06,
+      "text": "This times this gives you 2 ninths."
+    },
+    {
+      "start": 1148.06,
+      "end": 1150.34,
+      "text": "So the values in the table with the"
+    },
+    {
+      "start": 1150.34,
+      "end": 1156.2,
+      "text": "joint PMFs is the product of the marginal PMFs of x and y in"
+    },
+    {
+      "start": 1156.2,
+      "end": 1157.26,
+      "text": "this universe."
+    },
+    {
+      "start": 1157.26,
+      "end": 1159.88,
+      "text": "So the two random variables are independent"
+    },
+    {
+      "start": 1159.88,
+      "end": 1161.84,
+      "text": "inside this universe."
+    },
+    {
+      "start": 1161.84,
+      "end": 1168.48,
+      "text": "So we say that they're conditionally independent."
+    },
+    {
+      "start": 1168.48,
+      "end": 1172.72,
+      "text": "Now let's move to the new topic, to the new concept that"
+    },
+    {
+      "start": 1172.72,
+      "end": 1174.64,
+      "text": "we introduced in this chapter, which is the"
+    },
+    {
+      "start": 1174.64,
+      "end": 1176.42,
+      "text": "concept of expectations."
+    },
+    {
+      "start": 1176.42,
+      "end": 1178.18,
+      "text": "So what are the things to know here?"
+    },
+    {
+      "start": 1178.18,
+      "end": 1180.12,
+      "text": "One is the general idea."
+    },
+    {
+      "start": 1180.12,
+      "end": 1181.24,
+      "text": "The way to think about"
+    },
+    {
+      "start": 1181.24,
+      "end": 1184.48,
+      "text": "expectations is that it's something like the average"
+    },
+    {
+      "start": 1184.48,
+      "end": 1187.7,
+      "text": "value of a random variable if you do an experiment over and"
+    },
+    {
+      "start": 1187.7,
+      "end": 1191.56,
+      "text": "over, and if you interpret probabilities as frequencies."
+    },
+    {
+      "start": 1191.56,
+      "end": 1195.1,
+      "text": "So you get x's over and over."
+    },
+    {
+      "start": 1195.1,
+      "end": 1200.32,
+      "text": "With a certain frequency, p of x, a particular value, little x,"
+    },
+    {
+      "start": 1200.32,
+      "end": 1201.14,
+      "text": "gets realized."
+    },
+    {
+      "start": 1201.14,
+      "end": 1203.94,
+      "text": "And each time that this happens, you get x dollars."
+    },
+    {
+      "start": 1203.94,
+      "end": 1206.0,
+      "text": "How many dollars do you get on the average?"
+    },
+    {
+      "start": 1206.0,
+      "end": 1209.32,
+      "text": "Well, this formula gives you that particular average."
+    },
+    {
+      "start": 1209.32,
+      "end": 1211.24,
+      "text": "So first thing we do is."
+    },
+    {
+      "start": 1211.24,
+      "end": 1215.48,
+      "text": "To write down a definition for this sort of concept."
+    },
+    {
+      "start": 1215.48,
+      "end": 1219.8,
+      "text": "But then the other things you need to know is how to"
+    },
+    {
+      "start": 1219.8,
+      "end": 1224.0,
+      "text": "calculate expectations using shortcuts sometimes, and what"
+    },
+    {
+      "start": 1224.0,
+      "end": 1225.42,
+      "text": "properties they have."
+    },
+    {
+      "start": 1225.42,
+      "end": 1228.5,
+      "text": "The most important shortcut there is, is that if you want"
+    },
+    {
+      "start": 1228.5,
+      "end": 1231.22,
+      "text": "to calculate the expected value, the average value of a"
+    },
+    {
+      "start": 1231.22,
+      "end": 1236.38,
+      "text": "random variable, you do not need to find the PMF of that"
+    },
+    {
+      "start": 1236.38,
+      "end": 1239.3,
+      "text": "random variable, but you can work directly with"
+    },
+    {
+      "start": 1239.3,
+      "end": 1241.12,
+      "text": "the x's and the y's."
+    },
+    {
+      "start": 1241.12,
+      "end": 1244.22,
+      "text": "So you do the experiment over and over."
+    },
+    {
+      "start": 1244.22,
+      "end": 1247.3,
+      "text": "The outcome of the experiment is a pair xy, and each time"
+    },
+    {
+      "start": 1247.3,
+      "end": 1251.24,
+      "text": "that a certain xy happens, you get so many dollars."
+    },
+    {
+      "start": 1251.24,
+      "end": 1255.3,
+      "text": "So this fraction of the time a certain xy happens, and that"
+    },
+    {
+      "start": 1255.3,
+      "end": 1257.78,
+      "text": "fraction of the time, you get so many dollars."
+    },
+    {
+      "start": 1257.78,
+      "end": 1260.8,
+      "text": "So this is the average number of dollars that you get."
+    },
+    {
+      "start": 1260.8,
+      "end": 1265.44,
+      "text": "So what you end up, since it is the average, then that means"
+    },
+    {
+      "start": 1265.44,
+      "end": 1267.78,
+      "text": "that it corresponds to the expected value."
+    },
+    {
+      "start": 1267.78,
+      "end": 1269.9,
+      "text": "Now this is something that, of course, needs a little bit of"
+    },
+    {
+      "start": 1269.9,
+      "end": 1270.84,
+      "text": "mathematical proof."
+    },
+    {
+      "start": 1270.84,
+      "end": 1273.86,
+      "text": "But it's just a different way of accounting."
+    },
+    {
+      "start": 1273.86,
+      "end": 1276.48,
+      "text": "And it turns out to give you the right answer."
+    },
+    {
+      "start": 1276.48,
+      "end": 1279.4,
+      "text": "And it's a very useful shortcut."
+    },
+    {
+      "start": 1279.4,
+      "end": 1282.06,
+      "text": "Now when we're talking about functions of random variables,"
+    },
+    {
+      "start": 1282.06,
+      "end": 1286.6,
+      "text": "in general, we cannot speak just about averages."
+    },
+    {
+      "start": 1286.6,
+      "end": 1289.68,
+      "text": "That is, the expected value of a function of a random"
+    },
+    {
+      "start": 1289.68,
+      "end": 1291.84,
+      "text": "variable is not the same as the function of"
+    },
+    {
+      "start": 1291.84,
+      "end": 1293.3,
+      "text": "the expected values."
+    },
+    {
+      "start": 1293.3,
+      "end": 1296.12,
+      "text": "A function of averages is not the same as the"
+    },
+    {
+      "start": 1296.12,
+      "end": 1298.38,
+      "text": "average of a function."
+    },
+    {
+      "start": 1298.38,
+      "end": 1300.6,
+      "text": "So in general, this is not true."
+    },
+    {
+      "start": 1300.6,
+      "end": 1303.3,
+      "text": "But what is important to know is to know the"
+    },
+    {
+      "start": 1303.3,
+      "end": 1305.36,
+      "text": "exceptions to this rule."
+    },
+    {
+      "start": 1305.36,
+      "end": 1308.58,
+      "text": "And the important exceptions are mainly two."
+    },
+    {
+      "start": 1308.58,
+      "end": 1312.62,
+      "text": "One is the case of linear functions of a random"
+    },
+    {
+      "start": 1312.62,
+      "end": 1313.04,
+      "text": "variable."
+    },
+    {
+      "start": 1313.04,
+      "end": 1314.8,
+      "text": "We discussed this last time."
+    },
+    {
+      "start": 1314.8,
+      "end": 1319.8,
+      "text": "So expected value of temperature in Celsius is you"
+    },
+    {
+      "start": 1319.8,
+      "end": 1323.32,
+      "text": "first find the expected value of temperature in Fahrenheit,"
+    },
+    {
+      "start": 1323.32,
+      "end": 1325.8,
+      "text": "and then you do the conversion to Celsius."
+    },
+    {
+      "start": 1325.8,
+      "end": 1328.58,
+      "text": "So whether you first average and then do the conversion to"
+    },
+    {
+      "start": 1328.58,
+      "end": 1329.76,
+      "text": "the new units or not."
+    },
+    {
+      "start": 1329.76,
+      "end": 1330.56,
+      "text": "It is about the same."
+    },
+    {
+      "start": 1330.56,
+      "end": 1333.7,
+      "text": "wouldn't matter when you get the result."
+    },
+    {
+      "start": 1333.7,
+      "end": 1336.74,
+      "text": "The other property that turns out to be true when you talk"
+    },
+    {
+      "start": 1336.74,
+      "end": 1339.28,
+      "text": "about multiple random variables is that expectation"
+    },
+    {
+      "start": 1339.28,
+      "end": 1341.06,
+      "text": "still behaves linearly."
+    },
+    {
+      "start": 1341.06,
+      "end": 1346.6,
+      "text": "So let X, Y, and Z be the score of a random student at"
+    },
+    {
+      "start": 1346.6,
+      "end": 1349.94,
+      "text": "each one of the three sections of the SAT."
+    },
+    {
+      "start": 1349.94,
+      "end": 1356.3,
+      "text": "So the overall SAT score is X plus Y plus Z. This is the"
+    },
+    {
+      "start": 1356.3,
+      "end": 1360.92,
+      "text": "average score, the average total SAT score."
+    },
+    {
+      "start": 1360.92,
+      "end": 1363.78,
+      "text": "Another way to calculate that average is to look at the"
+    },
+    {
+      "start": 1363.78,
+      "end": 1367.46,
+      "text": "first section of the SAT and see what was the average."
+    },
+    {
+      "start": 1367.46,
+      "end": 1370.7,
+      "text": "Look at the second section, look at what was the average,"
+    },
+    {
+      "start": 1370.7,
+      "end": 1373.46,
+      "text": "and so the third, and add the averages."
+    },
+    {
+      "start": 1373.46,
+      "end": 1376.92,
+      "text": "So you can do the averages for each section separately, add"
+    },
+    {
+      "start": 1376.92,
+      "end": 1380.48,
+      "text": "the averages, or you can find total scores for each student"
+    },
+    {
+      "start": 1380.48,
+      "end": 1381.7,
+      "text": "and average them."
+    },
+    {
+      "start": 1381.7,
+      "end": 1385.72,
+      "text": "So I guess you probably believe that this is correct"
+    },
+    {
+      "start": 1385.72,
+      "end": 1386.28,
+      "text": "if you talk"
+    },
+    {
+      "start": 1386.28,
+      "end": 1389.04,
+      "text": "just about averaging scores."
+    },
+    {
+      "start": 1389.04,
+      "end": 1392.58,
+      "text": "Since expectations are just a variation of averages, it"
+    },
+    {
+      "start": 1392.58,
+      "end": 1396.0,
+      "text": "turns out that this is also true in general."
+    },
+    {
+      "start": 1396.0,
+      "end": 1399.74,
+      "text": "And the derivation of this is very simple, based on the"
+    },
+    {
+      "start": 1399.74,
+      "end": 1401.3,
+      "text": "expected value rule."
+    },
+    {
+      "start": 1401.3,
+      "end": 1404.42,
+      "text": "And you can look at it in the notes."
+    },
+    {
+      "start": 1404.42,
+      "end": 1407.66,
+      "text": "So this is one exception, which is linearity."
+    },
+    {
+      "start": 1407.66,
+      "end": 1411.52,
+      "text": "The second important exception is the case of independent"
+    },
+    {
+      "start": 1411.52,
+      "end": 1414.5,
+      "text": "random variables, that the product of two random"
+    },
+    {
+      "start": 1414.5,
+      "end": 1416.28,
+      "text": "variables has an expectation, which"
+    },
+    {
+      "start": 1416.28,
+      "end": 1419.04,
+      "text": "is the product of the expectations."
+    },
+    {
+      "start": 1419.04,
+      "end": 1421.36,
+      "text": "In general, this is not true."
+    },
+    {
+      "start": 1421.36,
+      "end": 1427.0,
+      "text": "But for the case where we have independence, the expectation"
+    },
+    {
+      "start": 1427.0,
+      "end": 1428.08,
+      "text": "works out as follows."
+    },
+    {
+      "start": 1428.08,
+      "end": 1435.12,
+      "text": "Using the expected value rule, this is how you calculate the"
+    },
+    {
+      "start": 1435.12,
+      "end": 1439.16,
+      "text": "expected value of a function of a random variable."
+    },
+    {
+      "start": 1439.16,
+      "end": 1444.26,
+      "text": "So think of this as being your g of xy, and this being your g"
+    },
+    {
+      "start": 1444.26,
+      "end": 1446.14,
+      "text": "of little xy."
+    },
+    {
+      "start": 1446.14,
+      "end": 1447.78,
+      "text": "So this is something that's generally true."
+    },
+    {
+      "start": 1447.78,
+      "end": 1459.77,
+      "text": "Now, if we have independence, then the PMFs factor out."
+    },
+    {
+      "start": 1459.77,
+      "end": 1465.63,
+      "text": "And then you can separate this sum by bringing together the x"
+    },
+    {
+      "start": 1465.63,
+      "end": 1470.11,
+      "text": "terms, bring them outside the y summation."
+    },
+    {
+      "start": 1470.11,
+      "end": 1474.37,
+      "text": "And you find that this is the same as expected value of x"
+    },
+    {
+      "start": 1474.37,
+      "end": 1477.03,
+      "text": "times expected value of y."
+    },
+    {
+      "start": 1477.03,
+      "end": 1483.92,
+      "text": "So independence is used in this step here."
+    },
+    {
+      "start": 1483.92,
+      "end": 1484.64,
+      "text": "OK."
+    },
+    {
+      "start": 1484.64,
+      "end": 1488.64,
+      "text": "Now, what if x and y are independent, but instead of"
+    },
+    {
+      "start": 1488.64,
+      "end": 1491.74,
+      "text": "taking the expectation of x times y, we take expectation"
+    },
+    {
+      "start": 1491.74,
+      "end": 1496.6,
+      "text": "of the product of two functions of x and y?"
+    },
+    {
+      "start": 1496.6,
+      "end": 1499.56,
+      "text": "I claim that the expected value of the product is still"
+    },
+    {
+      "start": 1499.56,
+      "end": 1502.64,
+      "text": "going to be the product of the expected values."
+    },
+    {
+      "start": 1502.64,
+      "end": 1504.2,
+      "text": "How do we show that?"
+    },
+    {
+      "start": 1504.2,
+      "end": 1509.24,
+      "text": "We could show it by just redoing this derivation here."
+    },
+    {
+      "start": 1509.24,
+      "end": 1513.14,
+      "text": "Instead of x and y, we would have g of x and h of y."
+    },
+    {
+      "start": 1513.14,
+      "end": 1514.64,
+      "text": "So the algebra goes through."
+    },
+    {
+      "start": 1514.64,
+      "end": 1517.7,
+      "text": "But there's a better way to think about it, which is more"
+    },
+    {
+      "start": 1517.7,
+      "end": 1518.96,
+      "text": "conceptual."
+    },
+    {
+      "start": 1518.96,
+      "end": 1520.84,
+      "text": "And here's the idea."
+    },
+    {
+      "start": 1520.84,
+      "end": 1525.74,
+      "text": "If x and y are independent, what does it mean?"
+    },
+    {
+      "start": 1525.74,
+      "end": 1530.56,
+      "text": "x does not convey any information about y."
+    },
+    {
+      "start": 1530.56,
+      "end": 1535.36,
+      "text": "If x conveys no information about y, does x convey"
+    },
+    {
+      "start": 1535.36,
+      "end": 1540.5,
+      "text": "information about h of y?"
+    },
+    {
+      "start": 1540.5,
+      "end": 1541.96,
+      "text": "No."
+    },
+    {
+      "start": 1541.96,
+      "end": 1544.52,
+      "text": "If x tells me nothing about y, nothing new, then I'm going to"
+    },
+    {
+      "start": 1544.52,
+      "end": 1545.4,
+      "text": "be new."
+    },
+    {
+      "start": 1545.4,
+      "end": 1550.58,
+      "text": "It shouldn't tell me anything about h of y."
+    },
+    {
+      "start": 1550.58,
+      "end": 1559.28,
+      "text": "Now, if x tells me nothing about h of y, could g of x"
+    },
+    {
+      "start": 1559.28,
+      "end": 1561.46,
+      "text": "tell me something about h of y?"
+    },
+    {
+      "start": 1561.46,
+      "end": 1562.26,
+      "text": "No."
+    },
+    {
+      "start": 1562.26,
+      "end": 1566.78,
+      "text": "So the idea is that if x is unrelated to y, doesn't have"
+    },
+    {
+      "start": 1566.78,
+      "end": 1571.08,
+      "text": "any useful information, then g of x could not have any useful"
+    },
+    {
+      "start": 1571.08,
+      "end": 1573.26,
+      "text": "information for h of y."
+    },
+    {
+      "start": 1573.26,
+      "end": 1573.76,
+      "text": "So."
+    },
+    {
+      "start": 1573.76,
+      "end": 1579.92,
+      "text": "If x and y are independent, then g of x and h of y are"
+    },
+    {
+      "start": 1579.92,
+      "end": 1587.17,
+      "text": "also independent."
+    },
+    {
+      "start": 1587.17,
+      "end": 1589.45,
+      "text": "So this is something that one can try to prove"
+    },
+    {
+      "start": 1589.45,
+      "end": 1590.13,
+      "text": "mathematically."
+    },
+    {
+      "start": 1590.13,
+      "end": 1592.53,
+      "text": "But it's more important to understand conceptually why"
+    },
+    {
+      "start": 1592.53,
+      "end": 1594.23,
+      "text": "this is so."
+    },
+    {
+      "start": 1594.23,
+      "end": 1598.23,
+      "text": "It's in terms of conveying information."
+    },
+    {
+      "start": 1598.23,
+      "end": 1604.85,
+      "text": "So if x tells me nothing about y, x cannot tell me anything"
+    },
+    {
+      "start": 1604.85,
+      "end": 1606.33,
+      "text": "about y cubed."
+    },
+    {
+      "start": 1606.33,
+      "end": 1607.83,
+      "text": "Or x cannot tell me anything about y squared."
+    },
+    {
+      "start": 1607.83,
+      "end": 1611.01,
+      "text": "And so on."
+    },
+    {
+      "start": 1611.01,
+      "end": 1612.25,
+      "text": "That's the idea."
+    },
+    {
+      "start": 1612.25,
+      "end": 1616.07,
+      "text": "And once we are convinced that g of x and h of y are"
+    },
+    {
+      "start": 1616.07,
+      "end": 1619.99,
+      "text": "independent, then we can apply our previous rule, that for"
+    },
+    {
+      "start": 1619.99,
+      "end": 1623.73,
+      "text": "independent random variables, expectations multiply the right"
+    },
+    {
+      "start": 1623.73,
+      "end": 1628.63,
+      "text": "way, apply the previous rule, but apply it now to these two"
+    },
+    {
+      "start": 1628.63,
+      "end": 1630.77,
+      "text": "independent random variables."
+    },
+    {
+      "start": 1630.77,
+      "end": 1635.47,
+      "text": "And we get the conclusion that we wanted."
+    },
+    {
+      "start": 1635.47,
+      "end": 1639.05,
+      "text": "Now, besides expectations, we also introduced the concept of"
+    },
+    {
+      "start": 1639.05,
+      "end": 1643.56,
+      "text": "the variance."
+    },
+    {
+      "start": 1643.56,
+      "end": 1647.46,
+      "text": "And if you remember the definition of the variance,"
+    },
+    {
+      "start": 1647.46,
+      "end": 1651.18,
+      "text": "let me write down the formula for the variance of Ax."
+    },
+    {
+      "start": 1651.18,
+      "end": 1654.92,
+      "text": "It's the expected value of the random variable that we're"
+    },
+    {
+      "start": 1654.92,
+      "end": 1659.62,
+      "text": "looking at minus the expected value of the random variable"
+    },
+    {
+      "start": 1659.62,
+      "end": 1662.06,
+      "text": "that we're looking at."
+    },
+    {
+      "start": 1662.06,
+      "end": 1666.48,
+      "text": "So this is the difference of the random variable from its"
+    },
+    {
+      "start": 1666.48,
+      "end": 1667.84,
+      "text": "mean."
+    },
+    {
+      "start": 1667.84,
+      "end": 1670.9,
+      "text": "And we take that difference and square it, so it's the"
+    },
+    {
+      "start": 1670.9,
+      "end": 1671.84,
+      "text": "squared distance."
+    },
+    {
+      "start": 1671.84,
+      "end": 1672.42,
+      "text": "From the mean."
+    },
+    {
+      "start": 1672.42,
+      "end": 1675.24,
+      "text": "And then take expectations of the whole thing."
+    },
+    {
+      "start": 1675.24,
+      "end": 1679.54,
+      "text": "So when you look at that expression, you realize that a"
+    },
+    {
+      "start": 1679.54,
+      "end": 1681.7,
+      "text": "can be pulled out of those expressions."
+    },
+    {
+      "start": 1687.2,
+      "end": 1690.82,
+      "text": "And because there is a squared, when you pull out the a, it's"
+    },
+    {
+      "start": 1690.82,
+      "end": 1692.96,
+      "text": "going to come out as an a squared."
+    },
+    {
+      "start": 1692.96,
+      "end": 1695.96,
+      "text": "So that gives us the rule for finding the variance of a"
+    },
+    {
+      "start": 1695.96,
+      "end": 1699.0,
+      "text": "scalar product of a random variable."
+    },
+    {
+      "start": 1699.0,
+      "end": 1702.36,
+      "text": "The variance captures the idea of how wide, how spread out a"
+    },
+    {
+      "start": 1702.36,
+      "end": 1702.94,
+      "text": "certain distribution."
+    },
+    {
+      "start": 1702.94,
+      "end": 1706.62,
+      "text": "The bigger variance means it's more spread out."
+    },
+    {
+      "start": 1706.62,
+      "end": 1709.5,
+      "text": "Now, if you take a random variable and add a constant to"
+    },
+    {
+      "start": 1709.5,
+      "end": 1711.96,
+      "text": "it, what does it do to its distribution?"
+    },
+    {
+      "start": 1711.96,
+      "end": 1713.32,
+      "text": "It just shifts it."
+    },
+    {
+      "start": 1713.32,
+      "end": 1715.52,
+      "text": "But it doesn't change its width."
+    },
+    {
+      "start": 1715.52,
+      "end": 1719.04,
+      "text": "So intuitively, it means that the variance should not change."
+    },
+    {
+      "start": 1719.04,
+      "end": 1722.36,
+      "text": "You can check that mathematically, but it should"
+    },
+    {
+      "start": 1722.36,
+      "end": 1724.3,
+      "text": "also make sense intuitively."
+    },
+    {
+      "start": 1724.3,
+      "end": 1727.72,
+      "text": "So the variance, when you add the constant, does not change."
+    },
+    {
+      "start": 1727.72,
+      "end": 1731.7,
+      "text": "Now, can you add variances the way we added expectations?"
+    },
+    {
+      "start": 1731.7,
+      "end": 1732.78,
+      "text": "Does variance behave like this?"
+    },
+    {
+      "start": 1732.78,
+      "end": 1734.78,
+      "text": "Does it behave linearly?"
+    },
+    {
+      "start": 1734.78,
+      "end": 1737.8,
+      "text": "It turns out that not always."
+    },
+    {
+      "start": 1737.8,
+      "end": 1739.28,
+      "text": "Here, we need a condition."
+    },
+    {
+      "start": 1739.28,
+      "end": 1745.64,
+      "text": "It's only in special cases, for example, when the two random"
+    },
+    {
+      "start": 1745.64,
+      "end": 1749.3,
+      "text": "variables are independent, that you can add variances."
+    },
+    {
+      "start": 1749.3,
+      "end": 1753.32,
+      "text": "The variance of the sum is the sum of the variances if x and"
+    },
+    {
+      "start": 1753.32,
+      "end": 1755.36,
+      "text": "y are independent."
+    },
+    {
+      "start": 1755.36,
+      "end": 1758.84,
+      "text": "The derivation of this is, again, very short and simple."
+    },
+    {
+      "start": 1758.84,
+      "end": 1760.16,
+      "text": "We'll skip it."
+    },
+    {
+      "start": 1760.16,
+      "end": 1762.56,
+      "text": "But it's an important fact to remember."
+    },
+    {
+      "start": 1762.56,
+      "end": 1766.12,
+      "text": "Now, to appreciate why this equality is not true always,"
+    },
+    {
+      "start": 1766.12,
+      "end": 1768.94,
+      "text": "we can think of some extreme examples."
+    },
+    {
+      "start": 1768.94,
+      "end": 1771.38,
+      "text": "Suppose that x is the same as y."
+    },
+    {
+      "start": 1771.38,
+      "end": 1774.62,
+      "text": "What's going to be the variance of x plus y?"
+    },
+    {
+      "start": 1774.62,
+      "end": 1779.02,
+      "text": "Well, x plus y, in this case, is the same as 2x."
+    },
+    {
+      "start": 1779.02,
+      "end": 1784.56,
+      "text": "So we're going to get 4 times the variance of x, which is"
+    },
+    {
+      "start": 1784.56,
+      "end": 1789.74,
+      "text": "different than the variance of x plus the variance of x."
+    },
+    {
+      "start": 1789.74,
+      "end": 1792.56,
+      "text": "So that expression would give us twice the variance of"
+    },
+    {
+      "start": 1792.56,
+      "end": 1792.9,
+      "text": "x."
+    },
+    {
+      "start": 1792.9,
+      "end": 1796.0,
+      "text": "But actually, now it's 4 times the variance of x."
+    },
+    {
+      "start": 1796.0,
+      "end": 1800.18,
+      "text": "The other extreme would be if x is equal to minus y."
+    },
+    {
+      "start": 1800.18,
+      "end": 1803.26,
+      "text": "Then the variance is the variance of the random"
+    },
+    {
+      "start": 1803.26,
+      "end": 1806.96,
+      "text": "variable, which is always equal to 0."
+    },
+    {
+      "start": 1806.96,
+      "end": 1809.96,
+      "text": "Now, a random variable which is always equal to 0 has no"
+    },
+    {
+      "start": 1809.96,
+      "end": 1810.68,
+      "text": "uncertainty."
+    },
+    {
+      "start": 1810.68,
+      "end": 1813.58,
+      "text": "It is always equal to its mean value."
+    },
+    {
+      "start": 1813.58,
+      "end": 1817.06,
+      "text": "So the variance in this case turns out to be 0."
+    },
+    {
+      "start": 1817.06,
+      "end": 1819.92,
+      "text": "So in both of these cases, of course, we have random"
+    },
+    {
+      "start": 1819.92,
+      "end": 1822.12,
+      "text": "variables that are extremely dependent."
+    },
+    {
+      "start": 1822.56,
+      "end": 1824.72,
+      "text": "Why are they dependent?"
+    },
+    {
+      "start": 1824.72,
+      "end": 1828.06,
+      "text": "Because if I tell you something about y, it tells you"
+    },
+    {
+      "start": 1828.06,
+      "end": 1831.32,
+      "text": "an awful lot about the value of x."
+    },
+    {
+      "start": 1831.32,
+      "end": 1834.88,
+      "text": "There's a lot of information about x if I tell you y in this"
+    },
+    {
+      "start": 1834.88,
+      "end": 1837.02,
+      "text": "case or in that case."
+    },
+    {
+      "start": 1837.02,
+      "end": 1839.92,
+      "text": "And finally, a short drill."
+    },
+    {
+      "start": 1839.92,
+      "end": 1842.56,
+      "text": "If I tell you that the random variables are independent and"
+    },
+    {
+      "start": 1842.56,
+      "end": 1844.8,
+      "text": "you want to calculate the variance of a linear"
+    },
+    {
+      "start": 1844.8,
+      "end": 1848.32,
+      "text": "combination of this kind, then how do you argue?"
+    },
+    {
+      "start": 1848.32,
+      "end": 1851.92,
+      "text": "You argue that since x and y are independent, this means"
+    },
+    {
+      "start": 1851.92,
+      "end": 1855.66,
+      "text": "that x and 3y are also independent."
+    },
+    {
+      "start": 1855.66,
+      "end": 1858.14,
+      "text": "x has no information about y, so x has no"
+    },
+    {
+      "start": 1858.14,
+      "end": 1861.02,
+      "text": "information about minus y."
+    },
+    {
+      "start": 1861.02,
+      "end": 1864.74,
+      "text": "x has no information about minus y, so x should not have"
+    },
+    {
+      "start": 1864.74,
+      "end": 1870.28,
+      "text": "any information about minus 3y."
+    },
+    {
+      "start": 1870.28,
+      "end": 1874.42,
+      "text": "So x and minus 3y are independent."
+    },
+    {
+      "start": 1874.42,
+      "end": 1878.48,
+      "text": "So the variance of Z should be the variance of x plus the"
+    },
+    {
+      "start": 1878.48,
+      "end": 1880.8,
+      "text": "variance of minus 3y."
+    },
+    {
+      "start": 1881.92,
+      "end": 1889.38,
+      "text": "Which is the variance of x plus 9 times the variance of y."
+    },
+    {
+      "start": 1889.38,
+      "end": 1893.18,
+      "text": "Important thing to note here is that no matter what happens,"
+    },
+    {
+      "start": 1893.18,
+      "end": 1897.04,
+      "text": "you end up getting a plus here, not a minus."
+    },
+    {
+      "start": 1897.04,
+      "end": 1901.16,
+      "text": "So that's the sort of important thing to remember in"
+    },
+    {
+      "start": 1901.16,
+      "end": 1904.32,
+      "text": "this type of calculation."
+    },
+    {
+      "start": 1904.32,
+      "end": 1908.88,
+      "text": "All right, so this has been all concepts, reviews, new"
+    },
+    {
+      "start": 1908.88,
+      "end": 1910.46,
+      "text": "concepts, and all that."
+    },
+    {
+      "start": 1910.46,
+      "end": 1911.7,
+      "text": "It's the usual firehose."
+    },
+    {
+      "start": 1911.92,
+      "end": 1916.6,
+      "text": "Now let's use them to do something useful, finally."
+    },
+    {
+      "start": 1916.6,
+      "end": 1919.2,
+      "text": "So let's revisit our old example, the binomial"
+    },
+    {
+      "start": 1919.2,
+      "end": 1923.34,
+      "text": "distribution, which counts the number of successes in n"
+    },
+    {
+      "start": 1923.34,
+      "end": 1926.2,
+      "text": "independent trials of a coin."
+    },
+    {
+      "start": 1926.2,
+      "end": 1929.02,
+      "text": "It's a biased coin that has a probability of heads or"
+    },
+    {
+      "start": 1929.02,
+      "end": 1933.0,
+      "text": "probability of success equal to p at each trial."
+    },
+    {
+      "start": 1933.0,
+      "end": 1936.16,
+      "text": "Finally, we can go through the exercise of calculating the"
+    },
+    {
+      "start": 1936.16,
+      "end": 1938.82,
+      "text": "expected value of this random variable."
+    },
+    {
+      "start": 1938.82,
+      "end": 1941.8,
+      "text": "And there's the way of calculating that expectation"
+    },
+    {
+      "start": 1941.8,
+      "end": 1944.32,
+      "text": "that would be the favorite of those people who enjoy"
+    },
+    {
+      "start": 1944.32,
+      "end": 1947.5,
+      "text": "algebra, which is to write down the definition of the"
+    },
+    {
+      "start": 1947.5,
+      "end": 1948.74,
+      "text": "expected value."
+    },
+    {
+      "start": 1948.74,
+      "end": 1952.34,
+      "text": "We add over all possible values of the random variable, over"
+    },
+    {
+      "start": 1952.34,
+      "end": 1955.58,
+      "text": "all the possible k's, and weigh them according to the"
+    },
+    {
+      "start": 1955.58,
+      "end": 1958.44,
+      "text": "probabilities that this particular k occurs."
+    },
+    {
+      "start": 1958.44,
+      "end": 1962.24,
+      "text": "The probability that x takes on a particular value k is, of"
+    },
+    {
+      "start": 1962.24,
+      "end": 1966.78,
+      "text": "course, the binomial PMF, which is this familiar formula."
+    },
+    {
+      "start": 1966.78,
+      "end": 1969.3,
+      "text": "OK, clearly that would be a messy and"
+    },
+    {
+      "start": 1969.3,
+      "end": 1970.48,
+      "text": "challenging calculations."
+    },
+    {
+      "start": 1970.48,
+      "end": 1971.8,
+      "text": "Can we find a shortcut?"
+    },
+    {
+      "start": 1971.8,
+      "end": 1974.02,
+      "text": "There's a very clever trick."
+    },
+    {
+      "start": 1974.02,
+      "end": 1976.68,
+      "text": "There's lots of problems in probability that you can"
+    },
+    {
+      "start": 1976.68,
+      "end": 1980.42,
+      "text": "approach really nicely by breaking up a random variable"
+    },
+    {
+      "start": 1980.42,
+      "end": 1984.72,
+      "text": "of interest into a sum of simpler and more manageable"
+    },
+    {
+      "start": 1984.72,
+      "end": 1986.02,
+      "text": "random variables."
+    },
+    {
+      "start": 1986.02,
+      "end": 1989.74,
+      "text": "And if you can make it to be a sum of random variables that"
+    },
+    {
+      "start": 1989.74,
+      "end": 1992.6,
+      "text": "are just 0's or 1's, so much the better."
+    },
+    {
+      "start": 1992.6,
+      "end": 1994.04,
+      "text": "Life is easier."
+    },
+    {
+      "start": 1994.04,
+      "end": 1996.86,
+      "text": "Random variables that take values 0 or 1, we call them"
+    },
+    {
+      "start": 1996.86,
+      "end": 1998.4,
+      "text": "indicator variables."
+    },
+    {
+      "start": 1998.4,
+      "end": 2001.72,
+      "text": "They indicate whether an event has occurred or not."
+    },
+    {
+      "start": 2001.72,
+      "end": 2005.62,
+      "text": "In this case, we look at each coin flip one at a time."
+    },
+    {
+      "start": 2005.62,
+      "end": 2009.6,
+      "text": "For the ith flip, if it resulted in heads or a"
+    },
+    {
+      "start": 2009.6,
+      "end": 2012.12,
+      "text": "success, we record a 1."
+    },
+    {
+      "start": 2012.12,
+      "end": 2014.22,
+      "text": "If not, we record a 0."
+    },
+    {
+      "start": 2014.22,
+      "end": 2017.54,
+      "text": "And then we look at the random variable."
+    },
+    {
+      "start": 2017.54,
+      "end": 2022.62,
+      "text": "If we take the sum of the xi's, what is it going to be?"
+    },
+    {
+      "start": 2022.62,
+      "end": 2026.5,
+      "text": "We add 1 each time that we get a success."
+    },
+    {
+      "start": 2026.5,
+      "end": 2030.82,
+      "text": "So the sum is going to be the total number of successes."
+    },
+    {
+      "start": 2030.82,
+      "end": 2031.6,
+      "text": "So we break up."
+    },
+    {
+      "start": 2031.6,
+      "end": 2034.62,
+      "text": "The random variable of interest as a sum of really"
+    },
+    {
+      "start": 2034.62,
+      "end": 2037.64,
+      "text": "nice and simple random variables."
+    },
+    {
+      "start": 2037.64,
+      "end": 2040.38,
+      "text": "And now we can use the linearity of expectations."
+    },
+    {
+      "start": 2040.38,
+      "end": 2042.8,
+      "text": "We're going to find the expectation of x by finding"
+    },
+    {
+      "start": 2042.8,
+      "end": 2045.26,
+      "text": "the expectation of the xi's, and then"
+    },
+    {
+      "start": 2045.26,
+      "end": 2046.76,
+      "text": "adding the expectations."
+    },
+    {
+      "start": 2046.76,
+      "end": 2049.52,
+      "text": "What's the expected value of xi?"
+    },
+    {
+      "start": 2049.52,
+      "end": 2053.08,
+      "text": "Well, xi takes the value 1 with probability p, and takes"
+    },
+    {
+      "start": 2053.08,
+      "end": 2055.6,
+      "text": "the value 0 with probability 1 minus p."
+    },
+    {
+      "start": 2055.6,
+      "end": 2059.1,
+      "text": "So the expected value of xi is just p."
+    },
+    {
+      "start": 2059.1,
+      "end": 2061.54,
+      "text": "So the expected value of x is going to be,"
+    },
+    {
+      "start": 2061.54,
+      "end": 2064.88,
+      "text": "just n times p."
+    },
+    {
+      "start": 2064.88,
+      "end": 2069.56,
+      "text": "Because x is the sum of n terms, each one of which has"
+    },
+    {
+      "start": 2069.56,
+      "end": 2073.04,
+      "text": "expectation p, the expected value of the sum is the sum of"
+    },
+    {
+      "start": 2073.04,
+      "end": 2074.6,
+      "text": "the expected values."
+    },
+    {
+      "start": 2074.6,
+      "end": 2078.44,
+      "text": "So I guess that's a pretty good shortcut for doing this"
+    },
+    {
+      "start": 2078.44,
+      "end": 2080.78,
+      "text": "horrendous calculation up there."
+    },
+    {
+      "start": 2080.78,
+      "end": 2087.22,
+      "text": "So in case you didn't realize it, that's what we just"
+    },
+    {
+      "start": 2087.22,
+      "end": 2089.92,
+      "text": "established without doing any algebra."
+    },
+    {
+      "start": 2091.54,
+      "end": 2092.22,
+      "text": "Good."
+    },
+    {
+      "start": 2092.22,
+      "end": 2096.1,
+      "text": "How about the variance of xi?"
+    },
+    {
+      "start": 2096.1,
+      "end": 2097.58,
+      "text": "Two ways to calculate it."
+    },
+    {
+      "start": 2097.58,
+      "end": 2101.04,
+      "text": "One is by using directly the formula for the variance,"
+    },
+    {
+      "start": 2101.04,
+      "end": 2103.88,
+      "text": "which would be, let's see what it would be."
+    },
+    {
+      "start": 2103.88,
+      "end": 2106.78,
+      "text": "With probability p, you get a 1."
+    },
+    {
+      "start": 2106.78,
+      "end": 2111.84,
+      "text": "And in this case, you are so far from the mean, that's your"
+    },
+    {
+      "start": 2111.84,
+      "end": 2113.92,
+      "text": "squared distance from the mean."
+    },
+    {
+      "start": 2113.92,
+      "end": 2118.62,
+      "text": "With probability 1 minus p, you get a 0, which is so far"
+    },
+    {
+      "start": 2118.62,
+      "end": 2120.38,
+      "text": "away from the mean."
+    },
+    {
+      "start": 2120.38,
+      "end": 2121.46,
+      "text": "And then you can simplify."
+    },
+    {
+      "start": 2121.46,
+      "end": 2124.46,
+      "text": "That formula and get an answer."
+    },
+    {
+      "start": 2124.46,
+      "end": 2128.68,
+      "text": "How about a slightly easier way of doing it?"
+    },
+    {
+      "start": 2128.68,
+      "end": 2131.32,
+      "text": "Instead of doing the algebra here, let me indicate the"
+    },
+    {
+      "start": 2131.32,
+      "end": 2133.44,
+      "text": "slightly easier way."
+    },
+    {
+      "start": 2133.44,
+      "end": 2136.14,
+      "text": "We have a formula for the variance that tells us that we"
+    },
+    {
+      "start": 2136.14,
+      "end": 2142.3,
+      "text": "can find the variance by proceeding this way."
+    },
+    {
+      "start": 2142.3,
+      "end": 2145.98,
+      "text": "That's a formula that's generally true for variances."
+    },
+    {
+      "start": 2145.98,
+      "end": 2147.4,
+      "text": "Why is this easier?"
+    },
+    {
+      "start": 2147.4,
+      "end": 2149.64,
+      "text": "What's the expected value of xi squared?"
+    },
+    {
+      "start": 2151.46,
+      "end": 2153.22,
+      "text": "Backtrack."
+    },
+    {
+      "start": 2153.22,
+      "end": 2157.18,
+      "text": "What is xi squared, after all?"
+    },
+    {
+      "start": 2157.18,
+      "end": 2159.52,
+      "text": "It's the same thing as xi."
+    },
+    {
+      "start": 2159.52,
+      "end": 2164.22,
+      "text": "Since xi takes values 0 and 1, xi squared also takes the same"
+    },
+    {
+      "start": 2164.22,
+      "end": 2165.78,
+      "text": "values, 0 as 1."
+    },
+    {
+      "start": 2165.78,
+      "end": 2169.06,
+      "text": "So the expected value of xi squared is the same as the"
+    },
+    {
+      "start": 2169.06,
+      "end": 2175.1,
+      "text": "expected value of xi, which is equal to p."
+    },
+    {
+      "start": 2175.1,
+      "end": 2180.1,
+      "text": "And the expected value of xi squared is p squared."
+    },
+    {
+      "start": 2180.1,
+      "end": 2183.64,
+      "text": "So we get the final answer, p, 1 minus p."
+    },
+    {
+      "start": 2183.76,
+      "end": 2188.66,
+      "text": "If you were to work through and do the cancellations in"
+    },
+    {
+      "start": 2188.66,
+      "end": 2192.38,
+      "text": "this messy expression here, after one line, you would also"
+    },
+    {
+      "start": 2192.38,
+      "end": 2194.04,
+      "text": "get to the same formula."
+    },
+    {
+      "start": 2194.04,
+      "end": 2198.22,
+      "text": "But this sort of illustrates that working with this formula"
+    },
+    {
+      "start": 2198.22,
+      "end": 2200.52,
+      "text": "for the variance, sometimes things work"
+    },
+    {
+      "start": 2200.52,
+      "end": 2203.08,
+      "text": "out a little faster."
+    },
+    {
+      "start": 2203.08,
+      "end": 2205.38,
+      "text": "Finally, are we in business?"
+    },
+    {
+      "start": 2205.38,
+      "end": 2207.8,
+      "text": "Can we calculate the variance of the random"
+    },
+    {
+      "start": 2207.8,
+      "end": 2210.12,
+      "text": "variable x as well?"
+    },
+    {
+      "start": 2210.12,
+      "end": 2213.52,
+      "text": "Well, we have the rule that for independent random variables, the"
+    },
+    {
+      "start": 2213.52,
+      "end": 2217.86,
+      "text": "variance of the sum is the sum of the variances."
+    },
+    {
+      "start": 2217.86,
+      "end": 2220.9,
+      "text": "So to find the variance of x, we just need to add the"
+    },
+    {
+      "start": 2220.9,
+      "end": 2222.96,
+      "text": "variances of the xi's."
+    },
+    {
+      "start": 2222.96,
+      "end": 2229.16,
+      "text": "We have n xi's, and each one of them has variance p, 1 minus"
+    },
+    {
+      "start": 2229.16,
+      "end": 2232.26,
+      "text": "p, and we're done."
+    },
+    {
+      "start": 2232.26,
+      "end": 2237.76,
+      "text": "So this way, we have calculated both the mean and"
+    },
+    {
+      "start": 2237.76,
+      "end": 2241.62,
+      "text": "the variance of the binomial random variable."
+    },
+    {
+      "start": 2241.62,
+      "end": 2242.88,
+      "text": "It's interesting to"
+    },
+    {
+      "start": 2243.52,
+      "end": 2248.34,
+      "text": "look at this particular formula and see what it tells"
+    },
+    {
+      "start": 2248.34,
+      "end": 2249.18,
+      "text": "us."
+    },
+    {
+      "start": 2249.18,
+      "end": 2255.6,
+      "text": "If you are to plot the variance of x as a function of p, it has"
+    },
+    {
+      "start": 2255.6,
+      "end": 2271.28,
+      "text": "this shape, p, and the maximum is here at 1 half."
+    },
+    {
+      "start": 2271.28,
+      "end": 2275.48,
+      "text": "OK, p times 1 minus p is 0 when p is equal to 0, and when"
+    },
+    {
+      "start": 2275.48,
+      "end": 2278.7,
+      "text": "p equals to 1, it's a quadratic, so it must have this"
+    },
+    {
+      "start": 2278.7,
+      "end": 2280.22,
+      "text": "particular shape."
+    },
+    {
+      "start": 2280.22,
+      "end": 2280.78,
+      "text": "So what does"
+    },
+    {
+      "start": 2280.78,
+      "end": 2282.06,
+      "text": "it tell us?"
+    },
+    {
+      "start": 2282.06,
+      "end": 2285.84,
+      "text": "If you think about variance as a measure of uncertainty, it"
+    },
+    {
+      "start": 2285.84,
+      "end": 2291.26,
+      "text": "tells you that coin flips are most uncertain when your coin"
+    },
+    {
+      "start": 2291.26,
+      "end": 2292.6,
+      "text": "is fair."
+    },
+    {
+      "start": 2292.6,
+      "end": 2296.16,
+      "text": "When p is equal to 1 half, that's when you have the most"
+    },
+    {
+      "start": 2296.16,
+      "end": 2297.04,
+      "text": "randomness."
+    },
+    {
+      "start": 2297.04,
+      "end": 2298.78,
+      "text": "And this is kind of intuitive."
+    },
+    {
+      "start": 2298.78,
+      "end": 2301.46,
+      "text": "If, on the other hand, I tell you that the coin is extremely"
+    },
+    {
+      "start": 2301.46,
+      "end": 2306.46,
+      "text": "biased, p very close to 1, which means it almost always"
+    },
+    {
+      "start": 2306.46,
+      "end": 2309.96,
+      "text": "gives you heads, then that would be a case of low"
+    },
+    {
+      "start": 2309.96,
+      "end": 2310.64,
+      "text": "variance."
+    },
+    {
+      "start": 2310.64,
+      "end": 2312.84,
+      "text": "There's low variability in the results."
+    },
+    {
+      "start": 2312.84,
+      "end": 2315.26,
+      "text": "There's little uncertainty about what's going to happen."
+    },
+    {
+      "start": 2315.26,
+      "end": 2319.58,
+      "text": "It's going to be mostly heads with some occasional tails."
+    },
+    {
+      "start": 2319.58,
+      "end": 2322.16,
+      "text": "So p equals 1 half."
+    },
+    {
+      "start": 2322.16,
+      "end": 2325.36,
+      "text": "Fair coin, that's the coin which is the most uncertain of"
+    },
+    {
+      "start": 2325.36,
+      "end": 2327.24,
+      "text": "all coins, in some sense."
+    },
+    {
+      "start": 2327.24,
+      "end": 2329.24,
+      "text": "And it corresponds to the biggest variance."
+    },
+    {
+      "start": 2329.24,
+      "end": 2333.76,
+      "text": "It corresponds to an x that has the widest distribution."
+    },
+    {
+      "start": 2333.76,
+      "end": 2337.68,
+      "text": "Now that we're on a roll and we can calculate such hugely"
+    },
+    {
+      "start": 2337.68,
+      "end": 2338.92,
+      "text": "complicated sums in simple ways, let us try to calculate a"
+    },
+    {
+      "start": 2338.92,
+      "end": 2339.12,
+      "text": "very simple equation."
+    },
+    {
+      "start": 2339.12,
+      "end": 2339.32,
+      "text": "Let's do it."
+    },
+    {
+      "start": 2339.32,
+      "end": 2339.4,
+      "text": "Let's do it."
+    },
+    {
+      "start": 2339.4,
+      "end": 2339.52,
+      "text": "Let's do it."
+    },
+    {
+      "start": 2339.52,
+      "end": 2339.58,
+      "text": "Let's do it."
+    },
+    {
+      "start": 2339.58,
+      "end": 2339.7,
+      "text": "Let's do it."
+    },
+    {
+      "start": 2339.7,
+      "end": 2339.78,
+      "text": "Let's do it."
+    },
+    {
+      "start": 2339.78,
+      "end": 2339.88,
+      "text": "Let's do it."
+    },
+    {
+      "start": 2339.88,
+      "end": 2339.92,
+      "text": "Let's do it."
+    },
+    {
+      "start": 2339.92,
+      "end": 2339.98,
+      "text": "Let's do it."
+    },
+    {
+      "start": 2339.98,
+      "end": 2340.02,
+      "text": "Let's do it."
+    },
+    {
+      "start": 2340.02,
+      "end": 2340.08,
+      "text": "Let's do it."
+    },
+    {
+      "start": 2340.08,
+      "end": 2340.12,
+      "text": "Let's do it."
+    },
+    {
+      "start": 2340.12,
+      "end": 2340.4,
+      "text": "Let's do it."
+    },
+    {
+      "start": 2340.4,
+      "end": 2343.58,
+      "text": "Let's try to push our luck and do a problem with this"
+    },
+    {
+      "start": 2343.58,
+      "end": 2346.6,
+      "text": "flavor, but a little harder than that."
+    },
+    {
+      "start": 2346.6,
+      "end": 2349.94,
+      "text": "So you go to one of those old-fashioned cocktail parties."
+    },
+    {
+      "start": 2349.94,
+      "end": 2356.22,
+      "text": "All males, at least, have those standard big hats which look"
+    },
+    {
+      "start": 2356.22,
+      "end": 2356.98,
+      "text": "identical."
+    },
+    {
+      "start": 2356.98,
+      "end": 2359.7,
+      "text": "They check them in when they walk in."
+    },
+    {
+      "start": 2359.7,
+      "end": 2363.4,
+      "text": "And when they walk out, since they look pretty identical,"
+    },
+    {
+      "start": 2363.4,
+      "end": 2366.5,
+      "text": "they just pick a random hat and go home."
+    },
+    {
+      "start": 2366.5,
+      "end": 2369.84,
+      "text": "So n people, they pick their hats."
+    },
+    {
+      "start": 2369.84,
+      "end": 2373.96,
+      "text": "Completely at random, quote unquote, and then leave."
+    },
+    {
+      "start": 2373.96,
+      "end": 2377.0,
+      "text": "And the question is to say something about the number of"
+    },
+    {
+      "start": 2377.0,
+      "end": 2382.08,
+      "text": "people who end up, by accident or by luck, to get back their"
+    },
+    {
+      "start": 2382.08,
+      "end": 2385.16,
+      "text": "own hat, the exact same hat that they checked in."
+    },
+    {
+      "start": 2385.16,
+      "end": 2388.48,
+      "text": "OK, first, what do we mean completely at random?"
+    },
+    {
+      "start": 2388.48,
+      "end": 2391.08,
+      "text": "Completely at random, we basically mean that any"
+    },
+    {
+      "start": 2391.08,
+      "end": 2394.18,
+      "text": "permutation of the hats is equally likely."
+    },
+    {
+      "start": 2394.18,
+      "end": 2398.54,
+      "text": "Any way of distributing those n hats to the n people, any"
+    },
+    {
+      "start": 2398.54,
+      "end": 2399.72,
+      "text": "particular way, is as likely."
+    },
+    {
+      "start": 2399.72,
+      "end": 2401.34,
+      "text": "As likely as any other way."
+    },
+    {
+      "start": 2401.34,
+      "end": 2405.22,
+      "text": "So there's complete symmetry between hats and people."
+    },
+    {
+      "start": 2405.22,
+      "end": 2408.48,
+      "text": "So what we want to do is to calculate the expected value"
+    },
+    {
+      "start": 2408.48,
+      "end": 2411.04,
+      "text": "and the variance of this random variable, x."
+    },
+    {
+      "start": 2411.04,
+      "end": 2413.22,
+      "text": "Let's start with the expected value."
+    },
+    {
+      "start": 2413.22,
+      "end": 2417.8,
+      "text": "Let's reuse the trick from the binomial case."
+    },
+    {
+      "start": 2417.8,
+      "end": 2421.96,
+      "text": "So total number of hats picked, we're going to think of total"
+    },
+    {
+      "start": 2421.96,
+      "end": 2426.56,
+      "text": "number of hats picked as a sum of 0, 1 random variables."
+    },
+    {
+      "start": 2426.56,
+      "end": 2429.72,
+      "text": "x1 tells us whether person 1 got their own hat."
+    },
+    {
+      "start": 2429.72,
+      "end": 2432.9,
+      "text": "If they did, we record a 1."
+    },
+    {
+      "start": 2432.9,
+      "end": 2434.96,
+      "text": "x2, the same thing."
+    },
+    {
+      "start": 2434.96,
+      "end": 2441.2,
+      "text": "By adding all x is how many 1s did we get, which counts how"
+    },
+    {
+      "start": 2441.2,
+      "end": 2445.48,
+      "text": "many people selected their own hats."
+    },
+    {
+      "start": 2445.48,
+      "end": 2448.38,
+      "text": "So we broke down the random variable of interest, number"
+    },
+    {
+      "start": 2448.38,
+      "end": 2451.84,
+      "text": "of people who get their own hats back, as a sum of random"
+    },
+    {
+      "start": 2451.84,
+      "end": 2453.56,
+      "text": "variables."
+    },
+    {
+      "start": 2453.56,
+      "end": 2456.16,
+      "text": "And these random variables, again, are easy to handle"
+    },
+    {
+      "start": 2456.16,
+      "end": 2457.98,
+      "text": "because they are binary."
+    },
+    {
+      "start": 2457.98,
+      "end": 2459.22,
+      "text": "They only take two values."
+    },
+    {
+      "start": 2459.22,
+      "end": 2462.18,
+      "text": "What's the probability that xi is equal to 1?"
+    },
+    {
+      "start": 2462.18,
+      "end": 2464.34,
+      "text": "The i-th person, what's the probability that they get"
+    },
+    {
+      "start": 2464.34,
+      "end": 2466.7,
+      "text": "their own hat?"
+    },
+    {
+      "start": 2466.7,
+      "end": 2467.84,
+      "text": "There's n hats."
+    },
+    {
+      "start": 2467.84,
+      "end": 2471.16,
+      "text": "By symmetry, the chance that they ended up getting their"
+    },
+    {
+      "start": 2471.16,
+      "end": 2474.9,
+      "text": "own hat, as opposed to any one of the other n minus 1 hats,"
+    },
+    {
+      "start": 2474.9,
+      "end": 2477.98,
+      "text": "is going to be 1 over n."
+    },
+    {
+      "start": 2477.98,
+      "end": 2480.7,
+      "text": "So what's the expected value of xi?"
+    },
+    {
+      "start": 2480.7,
+      "end": 2483.06,
+      "text": "It's 1 times 1 over n."
+    },
+    {
+      "start": 2483.06,
+      "end": 2485.66,
+      "text": "With probability 1 over n, you get your own hat."
+    },
+    {
+      "start": 2485.66,
+      "end": 2488.28,
+      "text": "Or you get the value of 0 with probability 1"
+    },
+    {
+      "start": 2488.28,
+      "end": 2488.68,
+      "text": "minus 1."
+    },
+    {
+      "start": 2489.22,
+      "end": 2492.74,
+      "text": "1 over n, which is 1 over n."
+    },
+    {
+      "start": 2492.74,
+      "end": 2494.68,
+      "text": "OK."
+    },
+    {
+      "start": 2494.68,
+      "end": 2495.2,
+      "text": "All right."
+    },
+    {
+      "start": 2495.2,
+      "end": 2498.36,
+      "text": "So we've got the expected values of the xi's."
+    },
+    {
+      "start": 2498.36,
+      "end": 2501.0,
+      "text": "And remember, what we want to do is to calculate the"
+    },
+    {
+      "start": 2501.0,
+      "end": 2505.56,
+      "text": "expected value of x by using this decomposition."
+    },
+    {
+      "start": 2505.56,
+      "end": 2506.96,
+      "text": "OK."
+    },
+    {
+      "start": 2506.96,
+      "end": 2511.8,
+      "text": "Are the random variables xi independent of each other?"
+    },
+    {
+      "start": 2511.8,
+      "end": 2512.26,
+      "text": "OK."
+    },
+    {
+      "start": 2512.26,
+      "end": 2515.46,
+      "text": "You can try to answer that question by writing down a"
+    },
+    {
+      "start": 2515.46,
+      "end": 2519.06,
+      "text": "joint PMF for the x's, but I'm sure that you will not"
+    },
+    {
+      "start": 2519.22,
+      "end": 2520.04,
+      "text": "succeed."
+    },
+    {
+      "start": 2520.04,
+      "end": 2522.74,
+      "text": "But can you think intuitively?"
+    },
+    {
+      "start": 2522.74,
+      "end": 2525.92,
+      "text": "If I tell you information about some of the xi's, does"
+    },
+    {
+      "start": 2525.92,
+      "end": 2529.14,
+      "text": "it give you information about the remaining ones?"
+    },
+    {
+      "start": 2529.14,
+      "end": 2529.4,
+      "text": "Yeah."
+    },
+    {
+      "start": 2529.4,
+      "end": 2534.26,
+      "text": "If I tell you that out of 10 people, 9 of them got their own"
+    },
+    {
+      "start": 2534.26,
+      "end": 2537.52,
+      "text": "hat back, does that tell you something about the 10th"
+    },
+    {
+      "start": 2537.52,
+      "end": 2538.32,
+      "text": "person?"
+    },
+    {
+      "start": 2538.32,
+      "end": 2538.68,
+      "text": "Yes."
+    },
+    {
+      "start": 2538.68,
+      "end": 2542.18,
+      "text": "If the 9 got their own hat, then the 10th must also have"
+    },
+    {
+      "start": 2542.18,
+      "end": 2544.16,
+      "text": "gotten their own hat back."
+    },
+    {
+      "start": 2544.16,
+      "end": 2547.16,
+      "text": "So the first 9 random variables tell you something"
+    },
+    {
+      "start": 2547.16,
+      "end": 2548.76,
+      "text": "about the 10th one."
+    },
+    {
+      "start": 2548.76,
+      "end": 2552.94,
+      "text": "And conveying information of this sort, that's the case of"
+    },
+    {
+      "start": 2552.94,
+      "end": 2554.46,
+      "text": "dependence."
+    },
+    {
+      "start": 2554.46,
+      "end": 2554.8,
+      "text": "All right."
+    },
+    {
+      "start": 2554.8,
+      "end": 2558.06,
+      "text": "So the random variables are not independent."
+    },
+    {
+      "start": 2558.06,
+      "end": 2559.02,
+      "text": "Are we stuck?"
+    },
+    {
+      "start": 2559.02,
+      "end": 2563.18,
+      "text": "Can we still calculate the expected value of x?"
+    },
+    {
+      "start": 2563.18,
+      "end": 2565.18,
+      "text": "Yes, we can."
+    },
+    {
+      "start": 2565.18,
+      "end": 2566.48,
+      "text": "And why?"
+    },
+    {
+      "start": 2566.48,
+      "end": 2570.66,
+      "text": "The reason we can is that expectations are linear."
+    },
+    {
+      "start": 2570.66,
+      "end": 2573.9,
+      "text": "Expectation of a sum of random variables is the sum of the"
+    },
+    {
+      "start": 2573.9,
+      "end": 2577.46,
+      "text": "expectations, and that's always true."
+    },
+    {
+      "start": 2577.46,
+      "end": 2578.58,
+      "text": "There's no independence."
+    },
+    {
+      "start": 2578.58,
+      "end": 2580.86,
+      "text": "There's no independence assumption that's being used to"
+    },
+    {
+      "start": 2580.86,
+      "end": 2582.5,
+      "text": "apply that rule."
+    },
+    {
+      "start": 2582.5,
+      "end": 2586.96,
+      "text": "So we have that the expected value of x is the sum of the"
+    },
+    {
+      "start": 2586.96,
+      "end": 2589.56,
+      "text": "expected value of the xi's."
+    },
+    {
+      "start": 2589.56,
+      "end": 2592.96,
+      "text": "And this is a property that's always true."
+    },
+    {
+      "start": 2592.96,
+      "end": 2594.34,
+      "text": "You don't need independence."
+    },
+    {
+      "start": 2594.34,
+      "end": 2595.58,
+      "text": "You don't care."
+    },
+    {
+      "start": 2595.58,
+      "end": 2599.4,
+      "text": "So we're adding n terms, each one of which has expected value"
+    },
+    {
+      "start": 2599.4,
+      "end": 2602.64,
+      "text": "1 over n, and the final answer is 1."
+    },
+    {
+      "start": 2602.64,
+      "end": 2607.58,
+      "text": "So out of the 100 people who select hats at random, on the"
+    },
+    {
+      "start": 2607.58,
+      "end": 2608.32,
+      "text": "average, you expect them to get 1.0."
+    },
+    {
+      "start": 2608.32,
+      "end": 2615.82,
+      "text": "expect only one of them to end up getting their own hat back."
+    },
+    {
+      "start": 2615.82,
+      "end": 2616.6,
+      "text": "Very good."
+    },
+    {
+      "start": 2616.6,
+      "end": 2621.58,
+      "text": "So since we are succeeding so far, let's try to see if we"
+    },
+    {
+      "start": 2621.58,
+      "end": 2624.58,
+      "text": "can succeed in calculating the variance as well."
+    },
+    {
+      "start": 2624.58,
+      "end": 2626.56,
+      "text": "And of course we will."
+    },
+    {
+      "start": 2626.56,
+      "end": 2630.14,
+      "text": "But it's going to be a little more complicated."
+    },
+    {
+      "start": 2630.14,
+      "end": 2632.72,
+      "text": "The reason it's going to be a little more complicated is"
+    },
+    {
+      "start": 2632.72,
+      "end": 2636.46,
+      "text": "because the Xi's are not independent, so the variance"
+    },
+    {
+      "start": 2636.46,
+      "end": 2640.24,
+      "text": "of the sum is not the same as the sum of the variances."
+    },
+    {
+      "start": 2640.24,
+      "end": 2644.28,
+      "text": "So it's not enough to find the variances of the Xi's."
+    },
+    {
+      "start": 2644.28,
+      "end": 2646.9,
+      "text": "We'll have to do more work."
+    },
+    {
+      "start": 2646.9,
+      "end": 2648.5,
+      "text": "And here's what's involved."
+    },
+    {
+      "start": 2648.5,
+      "end": 2652.22,
+      "text": "Let's start with the general formula for the variance,"
+    },
+    {
+      "start": 2652.22,
+      "end": 2656.08,
+      "text": "which, as I mentioned before, is usually the simpler way to"
+    },
+    {
+      "start": 2656.08,
+      "end": 2658.4,
+      "text": "go about calculating variances."
+    },
+    {
+      "start": 2658.4,
+      "end": 2661.78,
+      "text": "So we need to calculate the expected value of X squared,"
+    },
+    {
+      "start": 2661.78,
+      "end": 2665.22,
+      "text": "and subtract from it the expectation squared."
+    },
+    {
+      "start": 2666.46,
+      "end": 2670.98,
+      "text": "Well, we already found the expected value of X. It's"
+    },
+    {
+      "start": 2670.98,
+      "end": 2674.56,
+      "text": "equal to 1, so 1 squared gives us just 1."
+    },
+    {
+      "start": 2674.56,
+      "end": 2677.9,
+      "text": "So we're left with the task of calculating the expected value"
+    },
+    {
+      "start": 2677.9,
+      "end": 2682.54,
+      "text": "of X squared, the random variable X squared."
+    },
+    {
+      "start": 2682.54,
+      "end": 2685.58,
+      "text": "OK, let's try to follow the same idea."
+    },
+    {
+      "start": 2685.58,
+      "end": 2689.76,
+      "text": "Write this messy random variable, X squared, as a sum"
+    },
+    {
+      "start": 2689.76,
+      "end": 2694.4,
+      "text": "of hopefully simpler random variables."
+    },
+    {
+      "start": 2694.4,
+      "end": 2696.24,
+      "text": "So X is the sum of X squared."
+    },
+    {
+      "start": 2696.24,
+      "end": 2698.42,
+      "text": "It's the sum of the Xi's."
+    },
+    {
+      "start": 2698.42,
+      "end": 2701.56,
+      "text": "So you square both sides of this."
+    },
+    {
+      "start": 2701.56,
+      "end": 2705.08,
+      "text": "And then you expand the right-hand side."
+    },
+    {
+      "start": 2705.08,
+      "end": 2709.36,
+      "text": "When you expand the right-hand side, you get the squares of"
+    },
+    {
+      "start": 2709.36,
+      "end": 2711.42,
+      "text": "the terms that appear here."
+    },
+    {
+      "start": 2711.42,
+      "end": 2714.18,
+      "text": "And then you get all the cross terms."
+    },
+    {
+      "start": 2714.18,
+      "end": 2719.04,
+      "text": "For every pair of i, j that are different, i different"
+    },
+    {
+      "start": 2719.04,
+      "end": 2724.02,
+      "text": "than j, you're going to have a cross term in the sum."
+    },
+    {
+      "start": 2724.02,
+      "end": 2725.98,
+      "text": "So now we need to work."
+    },
+    {
+      "start": 2726.24,
+      "end": 2730.06,
+      "text": "In order to calculate the expected value of X squared,"
+    },
+    {
+      "start": 2730.06,
+      "end": 2732.74,
+      "text": "what does our task reduce to?"
+    },
+    {
+      "start": 2732.74,
+      "end": 2736.22,
+      "text": "It reduces to calculating the expected value of this term"
+    },
+    {
+      "start": 2736.22,
+      "end": 2738.66,
+      "text": "and calculating the expected value of that term."
+    },
+    {
+      "start": 2738.66,
+      "end": 2741.0,
+      "text": "So let's do them one at a time."
+    },
+    {
+      "start": 2741.0,
+      "end": 2743.68,
+      "text": "Expected value of Xi squared."
+    },
+    {
+      "start": 2743.68,
+      "end": 2747.02,
+      "text": "What is it going to be?"
+    },
+    {
+      "start": 2747.02,
+      "end": 2748.6,
+      "text": "Same trick as before."
+    },
+    {
+      "start": 2748.6,
+      "end": 2750.9,
+      "text": "Xi takes value 0 or 1."
+    },
+    {
+      "start": 2750.9,
+      "end": 2755.26,
+      "text": "So Xi squared takes just the same values, 0 or 1."
+    },
+    {
+      "start": 2755.26,
+      "end": 2756.22,
+      "text": "So that's the easy way."
+    },
+    {
+      "start": 2756.24,
+      "end": 2760.64,
+      "text": "That's the same as expected value of Xi, which we already"
+    },
+    {
+      "start": 2760.64,
+      "end": 2763.32,
+      "text": "know to be 1 over n."
+    },
+    {
+      "start": 2763.32,
+      "end": 2764.4,
+      "text": "OK."
+    },
+    {
+      "start": 2764.4,
+      "end": 2768.4,
+      "text": "So this gives us a first contribution down here."
+    },
+    {
+      "start": 2768.4,
+      "end": 2774.2,
+      "text": "The expected value of this term is going to be what?"
+    },
+    {
+      "start": 2774.2,
+      "end": 2777.18,
+      "text": "We have n terms in the summation."
+    },
+    {
+      "start": 2777.18,
+      "end": 2778.96,
+      "text": "And each one of these terms has an"
+    },
+    {
+      "start": 2778.96,
+      "end": 2781.72,
+      "text": "expectation of 1 over n."
+    },
+    {
+      "start": 2781.72,
+      "end": 2784.68,
+      "text": "So we did a piece of the puzzle."
+    },
+    {
+      "start": 2784.68,
+      "end": 2786.22,
+      "text": "So now let's deal with the"
+    },
+    {
+      "start": 2786.24,
+      "end": 2788.48,
+      "text": "second piece of the puzzle."
+    },
+    {
+      "start": 2788.48,
+      "end": 2792.0,
+      "text": "Let's find the expected value of Xi, Xj."
+    },
+    {
+      "start": 2792.0,
+      "end": 2795.78,
+      "text": "Now, by symmetry, the expected value of Xi, Xj is going to be"
+    },
+    {
+      "start": 2795.78,
+      "end": 2799.9,
+      "text": "the same, no matter what i and j you see."
+    },
+    {
+      "start": 2799.9,
+      "end": 2804.92,
+      "text": "So let's just think about X1 and X2 and try to find the"
+    },
+    {
+      "start": 2804.92,
+      "end": 2808.0,
+      "text": "expected value of X1 and X2."
+    },
+    {
+      "start": 2808.0,
+      "end": 2811.76,
+      "text": "X1 times X2 is a random variable."
+    },
+    {
+      "start": 2811.76,
+      "end": 2813.94,
+      "text": "What values does it take?"
+    },
+    {
+      "start": 2813.94,
+      "end": 2815.98,
+      "text": "Only 0 or 1."
+    },
+    {
+      "start": 2815.98,
+      "end": 2820.1,
+      "text": "Since X1 and X2 are 0 or 1, their product can only take the"
+    },
+    {
+      "start": 2820.1,
+      "end": 2822.0,
+      "text": "values of 0 or 1."
+    },
+    {
+      "start": 2822.0,
+      "end": 2824.98,
+      "text": "So to find the probability distribution of this random"
+    },
+    {
+      "start": 2824.98,
+      "end": 2827.32,
+      "text": "variable, it's just sufficient to find the probability that"
+    },
+    {
+      "start": 2827.32,
+      "end": 2829.48,
+      "text": "it takes the value of 1."
+    },
+    {
+      "start": 2829.48,
+      "end": 2834.52,
+      "text": "Now, what does X1 times X2 equal to 1 mean?"
+    },
+    {
+      "start": 2834.52,
+      "end": 2839.48,
+      "text": "It means that X1 was 1 and X2 was 1."
+    },
+    {
+      "start": 2839.48,
+      "end": 2842.36,
+      "text": "The only way that you can get the product of 1 is if both of"
+    },
+    {
+      "start": 2842.36,
+      "end": 2844.32,
+      "text": "them turned out to be 1's."
+    },
+    {
+      "start": 2844.32,
+      "end": 2845.82,
+      "text": "So that's the same as saying."
+    },
+    {
+      "start": 2845.98,
+      "end": 2851.98,
+      "text": "Persons 1 and 2 both picked their own hats."
+    },
+    {
+      "start": 2851.98,
+      "end": 2855.48,
+      "text": "The probability that person 1 and person 2 both picked their"
+    },
+    {
+      "start": 2855.48,
+      "end": 2859.6,
+      "text": "own hats is the probability of two things happening, which is"
+    },
+    {
+      "start": 2859.6,
+      "end": 2862.3,
+      "text": "the product of the first thing happening times the"
+    },
+    {
+      "start": 2862.3,
+      "end": 2864.98,
+      "text": "conditional probability of the second, given that the first"
+    },
+    {
+      "start": 2864.98,
+      "end": 2866.16,
+      "text": "happened."
+    },
+    {
+      "start": 2866.16,
+      "end": 2868.72,
+      "text": "And in words, this is the probability that the first"
+    },
+    {
+      "start": 2868.72,
+      "end": 2871.82,
+      "text": "person picked their own hat times the probability that the"
+    },
+    {
+      "start": 2871.82,
+      "end": 2874.9,
+      "text": "second person picks their own hat, given that the first"
+    },
+    {
+      "start": 2874.9,
+      "end": 2875.86,
+      "text": "person already picked their own hat."
+    },
+    {
+      "start": 2875.86,
+      "end": 2877.0,
+      "text": "picked their own."
+    },
+    {
+      "start": 2877.0,
+      "end": 2878.82,
+      "text": "So what's the probability that the first person"
+    },
+    {
+      "start": 2878.82,
+      "end": 2880.76,
+      "text": "picks their own hat?"
+    },
+    {
+      "start": 2880.76,
+      "end": 2881.44,
+      "text": "We know that."
+    },
+    {
+      "start": 2881.44,
+      "end": 2883.04,
+      "text": "It's 1 over n."
+    },
+    {
+      "start": 2883.04,
+      "end": 2885.06,
+      "text": "Now, how about the second person?"
+    },
+    {
+      "start": 2885.06,
+      "end": 2889.54,
+      "text": "If I tell you that one person has their own hat, and that"
+    },
+    {
+      "start": 2889.54,
+      "end": 2893.24,
+      "text": "person takes their hat and goes away, from the point of"
+    },
+    {
+      "start": 2893.24,
+      "end": 2897.26,
+      "text": "view of the second person, there's n minus 1 people left"
+    },
+    {
+      "start": 2897.26,
+      "end": 2900.58,
+      "text": "looking at n minus 1 hats, and they're getting"
+    },
+    {
+      "start": 2900.58,
+      "end": 2902.18,
+      "text": "just hats at random."
+    },
+    {
+      "start": 2902.18,
+      "end": 2904.92,
+      "text": "What's the chance that I will get my own?"
+    },
+    {
+      "start": 2904.92,
+      "end": 2909.2,
+      "text": "It's 1 over n minus 1."
+    },
+    {
+      "start": 2909.2,
+      "end": 2913.7,
+      "text": "So think of them as person 1 goes, picks a hat at random."
+    },
+    {
+      "start": 2913.7,
+      "end": 2916.8,
+      "text": "It happens to be their own, and it leaves."
+    },
+    {
+      "start": 2916.8,
+      "end": 2920.26,
+      "text": "You're left with n minus 1 people, and their n minus 1"
+    },
+    {
+      "start": 2920.26,
+      "end": 2921.22,
+      "text": "hats out there."
+    },
+    {
+      "start": 2921.22,
+      "end": 2924.7,
+      "text": "Person 2 goes and picks a hat at random, with probability 1"
+    },
+    {
+      "start": 2924.7,
+      "end": 2928.8,
+      "text": "over n minus 1, is going to pick its own hat."
+    },
+    {
+      "start": 2928.8,
+      "end": 2932.78,
+      "text": "So the expected value now of this random variable is, again,"
+    },
+    {
+      "start": 2932.78,
+      "end": 2936.1,
+      "text": "that same number, because this is a 0, 1"
+    },
+    {
+      "start": 2936.1,
+      "end": 2937.48,
+      "text": "random variable."
+    },
+    {
+      "start": 2937.48,
+      "end": 2942.28,
+      "text": "So this is the same as expected value of xi xj, when"
+    },
+    {
+      "start": 2942.28,
+      "end": 2944.78,
+      "text": "i is different than j."
+    },
+    {
+      "start": 2944.78,
+      "end": 2949.8,
+      "text": "So here, all that's left to do is to add the expectations of"
+    },
+    {
+      "start": 2949.8,
+      "end": 2950.5,
+      "text": "these terms."
+    },
+    {
+      "start": 2950.5,
+      "end": 2954.46,
+      "text": "Each one of these terms has an expected value that's 1 over n"
+    },
+    {
+      "start": 2954.46,
+      "end": 2956.88,
+      "text": "times 1 over n minus 1."
+    },
+    {
+      "start": 2956.88,
+      "end": 2959.14,
+      "text": "And how many terms do we have?"
+    },
+    {
+      "start": 2959.14,
+      "end": 2964.84,
+      "text": "How many of these are we adding up?"
+    },
+    {
+      "start": 2964.84,
+      "end": 2968.06,
+      "text": "It's n squared minus n."
+    },
+    {
+      "start": 2968.66,
+      "end": 2972.9,
+      "text": "When you expand the quadratic, there's a total of n squared"
+    },
+    {
+      "start": 2972.9,
+      "end": 2973.86,
+      "text": "terms."
+    },
+    {
+      "start": 2973.86,
+      "end": 2977.84,
+      "text": "Some are self terms, n of them."
+    },
+    {
+      "start": 2977.84,
+      "end": 2982.12,
+      "text": "And the remaining number of terms is n squared minus n."
+    },
+    {
+      "start": 2982.12,
+      "end": 2988.28,
+      "text": "So here we got n squared minus n terms."
+    },
+    {
+      "start": 2988.28,
+      "end": 2993.78,
+      "text": "And so we need to multiply here with n squared minus n."
+    },
+    {
+      "start": 2993.78,
+      "end": 2997.0,
+      "text": "And after you realize that this number is n squared minus n,"
+    },
+    {
+      "start": 2997.0,
+      "end": 2998.04,
+      "text": "you can add up the rest."
+    },
+    {
+      "start": 2998.04,
+      "end": 2999.96,
+      "text": "So if you realize that this number here is 1, and you"
+    },
+    {
+      "start": 2999.96,
+      "end": 3003.5,
+      "text": "realize that this is the same as the denominator, you get"
+    },
+    {
+      "start": 3003.5,
+      "end": 3006.74,
+      "text": "the answer that the expected value of x squared equals 2."
+    },
+    {
+      "start": 3006.74,
+      "end": 3010.12,
+      "text": "And then finally, going up to the top formula, we get"
+    },
+    {
+      "start": 3010.12,
+      "end": 3014.32,
+      "text": "expected value of x squared, which is 2, minus 1."
+    },
+    {
+      "start": 3014.32,
+      "end": 3017.6,
+      "text": "And the variance is just equal to 1."
+    },
+    {
+      "start": 3017.6,
+      "end": 3021.66,
+      "text": "So the variance of this random variable, number of people who"
+    },
+    {
+      "start": 3021.66,
+      "end": 3025.12,
+      "text": "get their own hats back, is also equal to 1,"
+    },
+    {
+      "start": 3025.12,
+      "end": 3026.52,
+      "text": "equal to the mean."
+    },
+    {
+      "start": 3026.52,
+      "end": 3027.38,
+      "text": "Looks like magic."
+    },
+    {
+      "start": 3027.38,
+      "end": 3029.22,
+      "text": "Why is this the case?"
+    },
+    {
+      "start": 3029.22,
+      "end": 3031.56,
+      "text": "Well, there's a deeper explanation why these two"
+    },
+    {
+      "start": 3031.56,
+      "end": 3033.62,
+      "text": "numbers should come out to be the same."
+    },
+    {
+      "start": 3033.62,
+      "end": 3035.98,
+      "text": "But this is something that would probably have to wait a"
+    },
+    {
+      "start": 3035.98,
+      "end": 3039.42,
+      "text": "couple of chapters before we could actually explain it."
+    },
+    {
+      "start": 3039.42,
+      "end": 3040.78,
+      "text": "And so I'll stop here."
+    }
+  ]
+}

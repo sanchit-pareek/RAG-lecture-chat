@@ -1,0 +1,4932 @@
+{
+  "lecture": "lec05",
+  "language": "en",
+  "duration": 3034.048,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.44,
+      "text": "The following content is provided under a Creative"
+    },
+    {
+      "start": 2.44,
+      "end": 3.96,
+      "text": "Commons license."
+    },
+    {
+      "start": 3.96,
+      "end": 6.28,
+      "text": "Your support will help MIT OpenCourseWare"
+    },
+    {
+      "start": 6.28,
+      "end": 10.64,
+      "text": "continue to offer high quality educational resources for free."
+    },
+    {
+      "start": 10.64,
+      "end": 13.26,
+      "text": "To make a donation or view additional materials"
+    },
+    {
+      "start": 13.26,
+      "end": 17.2,
+      "text": "from hundreds of MIT courses, visit MIT OpenCourseWare"
+    },
+    {
+      "start": 17.2,
+      "end": 22.84,
+      "text": "at ocw.mit.edu."
+    },
+    {
+      "start": 22.84,
+      "end": 55.46,
+      "text": "OK, so let us start."
+    },
+    {
+      "start": 55.46,
+      "end": 58.06,
+      "text": "All right, so today we're starting"
+    },
+    {
+      "start": 58.06,
+      "end": 60.22,
+      "text": "a new unit in this class."
+    },
+    {
+      "start": 60.22,
+      "end": 63.38,
+      "text": "We have covered so far the basics of probability theory,"
+    },
+    {
+      "start": 63.38,
+      "end": 66.98,
+      "text": "the main concepts and tools as far as just probabilities are"
+    },
+    {
+      "start": 66.98,
+      "end": 68.14,
+      "text": "concerned."
+    },
+    {
+      "start": 68.14,
+      "end": 71.16,
+      "text": "But if that was all that there is in this subject, the"
+    },
+    {
+      "start": 71.16,
+      "end": 73.06,
+      "text": "subject would not be rich enough."
+    },
+    {
+      "start": 73.06,
+      "end": 76.04,
+      "text": "What makes probability theory a lot more interesting and"
+    },
+    {
+      "start": 76.04,
+      "end": 79.56,
+      "text": "richer is that we can also talk about random variables,"
+    },
+    {
+      "start": 79.56,
+      "end": 84.1,
+      "text": "which are ways of assigning numerical outcomes, numerical"
+    },
+    {
+      "start": 84.1,
+      "end": 87.4,
+      "text": "results, to the outcomes of an experiment."
+    },
+    {
+      "start": 87.4,
+      "end": 90.16,
+      "text": "So we're going to define what random variables"
+    },
+    {
+      "start": 90.16,
+      "end": 90.22,
+      "text": "are."
+    },
+    {
+      "start": 90.22,
+      "end": 95.04,
+      "text": "And then we're going to describe them using so-called"
+    },
+    {
+      "start": 95.04,
+      "end": 96.42,
+      "text": "probability mass functions."
+    },
+    {
+      "start": 96.42,
+      "end": 99.76,
+      "text": "Basically, some numerical values are more likely to"
+    },
+    {
+      "start": 99.76,
+      "end": 102.02,
+      "text": "occur than other numerical values."
+    },
+    {
+      "start": 102.02,
+      "end": 104.7,
+      "text": "And we capture this by assigning probabilities to"
+    },
+    {
+      "start": 104.7,
+      "end": 106.26,
+      "text": "them the usual way."
+    },
+    {
+      "start": 106.26,
+      "end": 110.3,
+      "text": "And we represent these in a compact way using the so-called"
+    },
+    {
+      "start": 110.3,
+      "end": 111.96,
+      "text": "probability mass functions."
+    },
+    {
+      "start": 111.96,
+      "end": 115.34,
+      "text": "We're going to see a couple of examples of random variables,"
+    },
+    {
+      "start": 115.34,
+      "end": 117.82,
+      "text": "some of which we have already seen but with"
+    },
+    {
+      "start": 117.82,
+      "end": 120.14,
+      "text": "different terminology."
+    },
+    {
+      "start": 120.14,
+      "end": 125.26,
+      "text": "And so far, it's going to be just a couple of definitions and"
+    },
+    {
+      "start": 125.26,
+      "end": 128.82,
+      "text": "calculations of the type that you already know how to do."
+    },
+    {
+      "start": 128.82,
+      "end": 131.46,
+      "text": "But then we're going to introduce the one new big"
+    },
+    {
+      "start": 131.46,
+      "end": 132.98,
+      "text": "concept of the day."
+    },
+    {
+      "start": 132.98,
+      "end": 137.04,
+      "text": "So up to here, it's going to be mostly an exercise in notation"
+    },
+    {
+      "start": 137.04,
+      "end": 138.18,
+      "text": "and definitions."
+    },
+    {
+      "start": 138.18,
+      "end": 140.82,
+      "text": "But then we got our big concept, which is the concept"
+    },
+    {
+      "start": 140.82,
+      "end": 144.18,
+      "text": "of the expected value of a random variable, which is some"
+    },
+    {
+      "start": 144.18,
+      "end": 147.3,
+      "text": "kind of average value of the random variable."
+    },
+    {
+      "start": 147.3,
+      "end": 150.02,
+      "text": "And then we're going to also talk very briefly about the, I"
+    },
+    {
+      "start": 150.02,
+      "end": 153.54,
+      "text": "guess, close distance of the expectation, which is the"
+    },
+    {
+      "start": 153.54,
+      "end": 157.9,
+      "text": "concept of the variance of a random variable."
+    },
+    {
+      "start": 157.9,
+      "end": 162.04,
+      "text": "So what is a random variable?"
+    },
+    {
+      "start": 162.04,
+      "end": 167.7,
+      "text": "So it's an assignment of a numerical value to every"
+    },
+    {
+      "start": 167.7,
+      "end": 169.96,
+      "text": "possible outcome of the experiment."
+    },
+    {
+      "start": 169.96,
+      "end": 171.42,
+      "text": "So here's the picture."
+    },
+    {
+      "start": 171.42,
+      "end": 173.8,
+      "text": "The sample space is this class."
+    },
+    {
+      "start": 173.8,
+      "end": 176.92,
+      "text": "And we've got lots of students in here."
+    },
+    {
+      "start": 176.92,
+      "end": 179.78,
+      "text": "This is our sample space, omega."
+    },
+    {
+      "start": 179.78,
+      "end": 184.22,
+      "text": "I am interested in the height of a random student."
+    },
+    {
+      "start": 184.22,
+      "end": 189.0,
+      "text": "So I'm going to use a real line where I record height."
+    },
+    {
+      "start": 189.0,
+      "end": 192.52,
+      "text": "And let's say this is height in inches."
+    },
+    {
+      "start": 192.52,
+      "end": 194.2,
+      "text": "And the experiment happens."
+    },
+    {
+      "start": 194.2,
+      "end": 196.4,
+      "text": "I pick a random student."
+    },
+    {
+      "start": 196.4,
+      "end": 199.52,
+      "text": "And I go and measure the height of that random student."
+    },
+    {
+      "start": 199.52,
+      "end": 202.22,
+      "text": "And that gives me a specific number."
+    },
+    {
+      "start": 202.22,
+      "end": 205.34,
+      "text": "So what's a good number in inches?"
+    },
+    {
+      "start": 205.34,
+      "end": 208.46,
+      "text": "Let's say 60."
+    },
+    {
+      "start": 208.46,
+      "end": 208.66,
+      "text": "OK."
+    },
+    {
+      "start": 208.66,
+      "end": 209.66,
+      "text": "Or I pick another number."
+    },
+    {
+      "start": 209.66,
+      "end": 209.78,
+      "text": "OK."
+    },
+    {
+      "start": 209.78,
+      "end": 210.78,
+      "text": "Another student."
+    },
+    {
+      "start": 210.78,
+      "end": 216.02,
+      "text": "And that student has a height of 71 inches and so on."
+    },
+    {
+      "start": 216.02,
+      "end": 217.44,
+      "text": "So this is the experiment."
+    },
+    {
+      "start": 217.44,
+      "end": 219.02,
+      "text": "These are the outcomes."
+    },
+    {
+      "start": 219.02,
+      "end": 223.04,
+      "text": "These are the numerical values of the random variable that we"
+    },
+    {
+      "start": 223.04,
+      "end": 226.34,
+      "text": "call height."
+    },
+    {
+      "start": 226.34,
+      "end": 226.68,
+      "text": "OK."
+    },
+    {
+      "start": 226.68,
+      "end": 229.78,
+      "text": "So mathematically, what are we dealing with here?"
+    },
+    {
+      "start": 229.78,
+      "end": 234.1,
+      "text": "We're basically dealing with a function from the sample space"
+    },
+    {
+      "start": 234.1,
+      "end": 236.2,
+      "text": "into the real numbers."
+    },
+    {
+      "start": 236.2,
+      "end": 239.66,
+      "text": "That function takes as argument."
+    },
+    {
+      "start": 239.66,
+      "end": 242.66,
+      "text": "It takes an outcome of the experiment that is a typical"
+    },
+    {
+      "start": 242.66,
+      "end": 246.48,
+      "text": "student and produces the value of that function, which is the"
+    },
+    {
+      "start": 246.48,
+      "end": 249.12,
+      "text": "height of that particular student."
+    },
+    {
+      "start": 249.12,
+      "end": 252.66,
+      "text": "So we think of an abstract object that we denote by a"
+    },
+    {
+      "start": 252.66,
+      "end": 257.5,
+      "text": "capital H, which is the random variable called height."
+    },
+    {
+      "start": 257.5,
+      "end": 261.28,
+      "text": "And that random variable is essentially this particular"
+    },
+    {
+      "start": 261.28,
+      "end": 265.86,
+      "text": "function that we talked about here."
+    },
+    {
+      "start": 265.86,
+      "end": 266.5,
+      "text": "OK."
+    },
+    {
+      "start": 266.5,
+      "end": 268.82,
+      "text": "So there's a distinction that we're making here."
+    },
+    {
+      "start": 268.82,
+      "end": 269.02,
+      "text": "H."
+    },
+    {
+      "start": 269.02,
+      "end": 272.16,
+      "text": "H is height in the abstract."
+    },
+    {
+      "start": 272.16,
+      "end": 273.54,
+      "text": "It's the function."
+    },
+    {
+      "start": 273.54,
+      "end": 276.4,
+      "text": "These numbers here are particular numerical values"
+    },
+    {
+      "start": 276.4,
+      "end": 279.54,
+      "text": "that this function takes when you choose one particular"
+    },
+    {
+      "start": 279.54,
+      "end": 281.34,
+      "text": "outcome of the experiment."
+    },
+    {
+      "start": 281.34,
+      "end": 284.86,
+      "text": "Now, when you have a single probability experiment, you"
+    },
+    {
+      "start": 284.86,
+      "end": 287.64,
+      "text": "can have multiple random variables."
+    },
+    {
+      "start": 287.64,
+      "end": 292.68,
+      "text": "So perhaps instead of just height, I'm also interested in"
+    },
+    {
+      "start": 292.68,
+      "end": 295.82,
+      "text": "the weight of a typical student."
+    },
+    {
+      "start": 295.82,
+      "end": 298.9,
+      "text": "And so when the experiment happens, I pick"
+    },
+    {
+      "start": 298.9,
+      "end": 300.66,
+      "text": "that random student."
+    },
+    {
+      "start": 300.66,
+      "end": 302.22,
+      "text": "This is the height of the student."
+    },
+    {
+      "start": 302.22,
+      "end": 304.74,
+      "text": "But that student will also have a weight."
+    },
+    {
+      "start": 304.74,
+      "end": 306.84,
+      "text": "And I could record it here."
+    },
+    {
+      "start": 306.84,
+      "end": 309.54,
+      "text": "And similarly, every student is going to have their own"
+    },
+    {
+      "start": 309.54,
+      "end": 310.88,
+      "text": "particular weight."
+    },
+    {
+      "start": 310.88,
+      "end": 313.82,
+      "text": "So the weight function is a different function from the"
+    },
+    {
+      "start": 313.82,
+      "end": 316.34,
+      "text": "sample space to the real numbers."
+    },
+    {
+      "start": 316.34,
+      "end": 318.64,
+      "text": "And it's a different random variable."
+    },
+    {
+      "start": 318.64,
+      "end": 321.02,
+      "text": "So the point I'm making here is that the single"
+    },
+    {
+      "start": 321.02,
+      "end": 326.02,
+      "text": "probabilistic experiment may involve several interesting"
+    },
+    {
+      "start": 326.02,
+      "end": 327.06,
+      "text": "random variables."
+    },
+    {
+      "start": 327.06,
+      "end": 328.78,
+      "text": "I may be interested in the height."
+    },
+    {
+      "start": 328.78,
+      "end": 331.02,
+      "text": "The height of a random student or the weight of the"
+    },
+    {
+      "start": 331.02,
+      "end": 331.78,
+      "text": "random student."
+    },
+    {
+      "start": 331.78,
+      "end": 333.44,
+      "text": "These are different random variables that"
+    },
+    {
+      "start": 333.44,
+      "end": 335.14,
+      "text": "could be of interest."
+    },
+    {
+      "start": 335.14,
+      "end": 337.6,
+      "text": "I can also do other things."
+    },
+    {
+      "start": 337.6,
+      "end": 343.92,
+      "text": "Suppose I define an object such as h bar, which is 2.5h."
+    },
+    {
+      "start": 343.92,
+      "end": 346.42,
+      "text": "What does that correspond to?"
+    },
+    {
+      "start": 346.42,
+      "end": 350.54,
+      "text": "Well, this is the height in centimeters."
+    },
+    {
+      "start": 350.54,
+      "end": 354.28,
+      "text": "Now, h bar is a function of h itself."
+    },
+    {
+      "start": 354.28,
+      "end": 357.2,
+      "text": "But if you were to draw the picture, the picture would go"
+    },
+    {
+      "start": 357.2,
+      "end": 357.74,
+      "text": "this way."
+    },
+    {
+      "start": 357.74,
+      "end": 358.64,
+      "text": "60 gets mapped."
+    },
+    {
+      "start": 358.64,
+      "end": 360.22,
+      "text": "250."
+    },
+    {
+      "start": 360.22,
+      "end": 364.74,
+      "text": "71 gets mapped to, oh, that's too hard for me."
+    },
+    {
+      "start": 364.74,
+      "end": 368.38,
+      "text": "OK, it gets mapped to something."
+    },
+    {
+      "start": 368.38,
+      "end": 370.04,
+      "text": "And so on."
+    },
+    {
+      "start": 370.04,
+      "end": 374.24,
+      "text": "So h bar is also a random variable."
+    },
+    {
+      "start": 374.24,
+      "end": 375.16,
+      "text": "Why?"
+    },
+    {
+      "start": 375.16,
+      "end": 379.14,
+      "text": "Once I pick a particular student, that particular"
+    },
+    {
+      "start": 379.14,
+      "end": 384.12,
+      "text": "outcome determines completely the numerical value of h bar,"
+    },
+    {
+      "start": 384.12,
+      "end": 388.08,
+      "text": "which is the height of that student, but measured in"
+    },
+    {
+      "start": 388.08,
+      "end": 388.64,
+      "text": "inches."
+    },
+    {
+      "start": 388.64,
+      "end": 392.3,
+      "text": "In centimeters."
+    },
+    {
+      "start": 392.3,
+      "end": 396.96,
+      "text": "What we have here is actually a random variable, which is"
+    },
+    {
+      "start": 396.96,
+      "end": 401.06,
+      "text": "defined as a function of another random variable."
+    },
+    {
+      "start": 401.06,
+      "end": 404.7,
+      "text": "And the point that this example is trying to make is"
+    },
+    {
+      "start": 404.7,
+      "end": 406.4,
+      "text": "that functions of random variables are"
+    },
+    {
+      "start": 406.4,
+      "end": 408.34,
+      "text": "also random variables."
+    },
+    {
+      "start": 408.34,
+      "end": 409.6,
+      "text": "The experiment happens."
+    },
+    {
+      "start": 409.6,
+      "end": 412.34,
+      "text": "The experiment determines a numerical value for this"
+    },
+    {
+      "start": 412.34,
+      "end": 415.18,
+      "text": "object and once you have the numerical value for this"
+    },
+    {
+      "start": 415.18,
+      "end": 417.76,
+      "text": "object, that determines also the numerical value"
+    },
+    {
+      "start": 417.76,
+      "end": 418.22,
+      "text": "for that object. So, given an outcome, the numerical value"
+    },
+    {
+      "start": 418.22,
+      "end": 420.76,
+      "text": "value of this particular object is determined."
+    },
+    {
+      "start": 420.76,
+      "end": 425.62,
+      "text": "So h-bar is itself a function from the sample space, from"
+    },
+    {
+      "start": 425.62,
+      "end": 428.22,
+      "text": "outcomes to numerical values."
+    },
+    {
+      "start": 428.22,
+      "end": 431.28,
+      "text": "And that makes it a random variable according to the"
+    },
+    {
+      "start": 431.28,
+      "end": 433.82,
+      "text": "formal definition that we have here."
+    },
+    {
+      "start": 433.82,
+      "end": 438.52,
+      "text": "So the formal definition is that the random variable is"
+    },
+    {
+      "start": 438.52,
+      "end": 441.48,
+      "text": "not random, it's not a variable, it's just a"
+    },
+    {
+      "start": 441.48,
+      "end": 444.9,
+      "text": "function from the sample space to the real numbers."
+    },
+    {
+      "start": 444.9,
+      "end": 449.16,
+      "text": "That's the abstract, the right way of thinking about them."
+    },
+    {
+      "start": 449.16,
+      "end": 451.96,
+      "text": "Now random variables can be of different types."
+    },
+    {
+      "start": 451.96,
+      "end": 454.4,
+      "text": "They can be discrete or continuous."
+    },
+    {
+      "start": 454.4,
+      "end": 458.46,
+      "text": "Suppose that I measure the height in inches, but I round"
+    },
+    {
+      "start": 458.46,
+      "end": 462.3,
+      "text": "to the nearest inch, then the numerical values I'm going to"
+    },
+    {
+      "start": 462.3,
+      "end": 464.96,
+      "text": "get here will be just integers."
+    },
+    {
+      "start": 464.96,
+      "end": 467.86,
+      "text": "So that would make it an integer-valued random"
+    },
+    {
+      "start": 467.86,
+      "end": 470.76,
+      "text": "variable, and this is a discrete random variable."
+    },
+    {
+      "start": 470.76,
+      "end": 474.9,
+      "text": "Or maybe I have a scale for measuring height, which is"
+    },
+    {
+      "start": 474.9,
+      "end": 477.98,
+      "text": "infinitely precise and records your height to an"
+    },
+    {
+      "start": 477.98,
+      "end": 480.84,
+      "text": "infinite number of digits of precision."
+    },
+    {
+      "start": 480.84,
+      "end": 483.34,
+      "text": "In that case, your height would be just a"
+    },
+    {
+      "start": 483.34,
+      "end": 485.42,
+      "text": "general real number."
+    },
+    {
+      "start": 485.42,
+      "end": 488.52,
+      "text": "So we would have a random variable that takes values in"
+    },
+    {
+      "start": 488.52,
+      "end": 490.76,
+      "text": "the entire set of real numbers."
+    },
+    {
+      "start": 490.76,
+      "end": 494.46,
+      "text": "Well, I guess not really negative numbers, but the set"
+    },
+    {
+      "start": 494.46,
+      "end": 496.34,
+      "text": "of non-negative numbers."
+    },
+    {
+      "start": 496.34,
+      "end": 499.86,
+      "text": "And that would be a continuous random variable."
+    },
+    {
+      "start": 499.86,
+      "end": 502.22,
+      "text": "It takes values in a continuous set."
+    },
+    {
+      "start": 502.22,
+      "end": 504.5,
+      "text": "So we will be talking about both discrete and"
+    },
+    {
+      "start": 504.5,
+      "end": 506.56,
+      "text": "continuous random variables."
+    },
+    {
+      "start": 506.56,
+      "end": 509.28,
+      "text": "The first thing we will do will be to devote a few lectures"
+    },
+    {
+      "start": 509.28,
+      "end": 512.52,
+      "text": "on discrete random variables, because discrete is always"
+    },
+    {
+      "start": 512.52,
+      "end": 513.38,
+      "text": "easier."
+    },
+    {
+      "start": 513.38,
+      "end": 515.66,
+      "text": "And then we're going to repeat everything in"
+    },
+    {
+      "start": 515.66,
+      "end": 517.72,
+      "text": "the continuous setting."
+    },
+    {
+      "start": 517.72,
+      "end": 521.76,
+      "text": "So discrete is easier, and it's the right place to"
+    },
+    {
+      "start": 521.76,
+      "end": 525.16,
+      "text": "understand all the concepts, even those who may appear to"
+    },
+    {
+      "start": 525.16,
+      "end": 527.18,
+      "text": "be elementary."
+    },
+    {
+      "start": 527.18,
+      "end": 530.1,
+      "text": "And then you will be set to understand what's going on"
+    },
+    {
+      "start": 530.1,
+      "end": 531.68,
+      "text": "when we go to the continuous case."
+    },
+    {
+      "start": 531.68,
+      "end": 534.26,
+      "text": "So in the continuous case, you get all the complications of"
+    },
+    {
+      "start": 534.26,
+      "end": 537.84,
+      "text": "calculus and some extra math that comes in there."
+    },
+    {
+      "start": 537.84,
+      "end": 540.58,
+      "text": "So it's important to have pinned down all the concepts"
+    },
+    {
+      "start": 540.58,
+      "end": 544.32,
+      "text": "very well in the easy discrete case, so that you don't have"
+    },
+    {
+      "start": 544.32,
+      "end": 548.72,
+      "text": "conceptual hurdles when you move on to the continuous case."
+    },
+    {
+      "start": 548.72,
+      "end": 553.62,
+      "text": "Now, one important remark that may seem trivial, but it's"
+    },
+    {
+      "start": 553.62,
+      "end": 557.96,
+      "text": "actually very important so that you don't get tangled up"
+    },
+    {
+      "start": 557.96,
+      "end": 560.56,
+      "text": "between different types of concepts."
+    },
+    {
+      "start": 560.56,
+      "end": 563.44,
+      "text": "There's a fundamental distinction between the random"
+    },
+    {
+      "start": 563.44,
+      "end": 569.06,
+      "text": "variable itself and the numerical values that it takes."
+    },
+    {
+      "start": 569.06,
+      "end": 571.68,
+      "text": "Abstractly speaking, or mathematically speaking, a"
+    },
+    {
+      "start": 571.68,
+      "end": 579.14,
+      "text": "random variable, x, or h in this example, is a function."
+    },
+    {
+      "start": 579.14,
+      "end": 583.74,
+      "text": "Maybe if you like programming, the word procedure or"
+    },
+    {
+      "start": 583.74,
+      "end": 585.82,
+      "text": "subroutine might be better."
+    },
+    {
+      "start": 585.82,
+      "end": 588.24,
+      "text": "So what's the subroutine height?"
+    },
+    {
+      "start": 588.24,
+      "end": 591.9,
+      "text": "Given a student, I take that student, force them on a scale,"
+    },
+    {
+      "start": 591.9,
+      "end": 593.1,
+      "text": "and measure them."
+    },
+    {
+      "start": 593.1,
+      "end": 596.62,
+      "text": "That's the subroutine that measures heights."
+    },
+    {
+      "start": 596.62,
+      "end": 600.28,
+      "text": "It's really a function that takes students as input and"
+    },
+    {
+      "start": 600.28,
+      "end": 602.74,
+      "text": "produces numbers as output."
+    },
+    {
+      "start": 602.74,
+      "end": 606.54,
+      "text": "The subroutine, we denote it by capital H. That's the random"
+    },
+    {
+      "start": 606.54,
+      "end": 607.46,
+      "text": "variable."
+    },
+    {
+      "start": 607.46,
+      "end": 610.48,
+      "text": "But once you plug in a particular student into that"
+    },
+    {
+      "start": 610.48,
+      "end": 614.46,
+      "text": "subroutine, you end up getting a particular number."
+    },
+    {
+      "start": 614.46,
+      "end": 617.6,
+      "text": "This is the numerical output of that subroutine, or the"
+    },
+    {
+      "start": 617.6,
+      "end": 619.9,
+      "text": "numerical value of that function."
+    },
+    {
+      "start": 619.9,
+      "end": 622.92,
+      "text": "And that numerical value is an element of the"
+    },
+    {
+      "start": 622.92,
+      "end": 624.38,
+      "text": "real numbers."
+    },
+    {
+      "start": 624.38,
+      "end": 629.58,
+      "text": "So the numerical value is a real number, where this capital"
+    },
+    {
+      "start": 629.58,
+      "end": 635.68,
+      "text": "X is a function from omega to the real numbers."
+    },
+    {
+      "start": 635.68,
+      "end": 638.4,
+      "text": "So there are very different types of objects."
+    },
+    {
+      "start": 638.4,
+      "end": 641.5,
+      "text": "And the way that we keep track of what we're talking about at"
+    },
+    {
+      "start": 641.5,
+      "end": 645.02,
+      "text": "any given time is by using capital letters for random"
+    },
+    {
+      "start": 645.02,
+      "end": 652.25,
+      "text": "variables and lowercase letters for numbers."
+    },
+    {
+      "start": 652.25,
+      "end": 652.69,
+      "text": "OK."
+    },
+    {
+      "start": 652.69,
+      "end": 653.29,
+      "text": "So now."
+    },
+    {
+      "start": 653.29,
+      "end": 660.48,
+      "text": "Once we have a random variable at hand, that random"
+    },
+    {
+      "start": 660.48,
+      "end": 664.38,
+      "text": "variable takes on different numerical values."
+    },
+    {
+      "start": 664.38,
+      "end": 668.38,
+      "text": "And we want to describe, to say something, about the"
+    },
+    {
+      "start": 668.38,
+      "end": 672.14,
+      "text": "relative likelihoods of the different numerical values"
+    },
+    {
+      "start": 672.14,
+      "end": 675.32,
+      "text": "that the random variable can take."
+    },
+    {
+      "start": 675.32,
+      "end": 679.2,
+      "text": "So here's our sample space."
+    },
+    {
+      "start": 679.2,
+      "end": 683.82,
+      "text": "And here's the real line."
+    },
+    {
+      "start": 683.82,
+      "end": 686.42,
+      "text": "And there's a bunch of outcomes."
+    },
+    {
+      "start": 686.42,
+      "end": 690.92,
+      "text": "That give rise to one particular numerical value."
+    },
+    {
+      "start": 690.92,
+      "end": 693.6,
+      "text": "There's another numerical value that arises if we have"
+    },
+    {
+      "start": 693.6,
+      "end": 694.24,
+      "text": "this outcome."
+    },
+    {
+      "start": 694.24,
+      "end": 697.58,
+      "text": "There's another numerical value that arises if we have"
+    },
+    {
+      "start": 697.58,
+      "end": 698.3,
+      "text": "this outcome."
+    },
+    {
+      "start": 698.3,
+      "end": 700.4,
+      "text": "So our sample space is here."
+    },
+    {
+      "start": 700.4,
+      "end": 702.5,
+      "text": "The real numbers are here."
+    },
+    {
+      "start": 702.5,
+      "end": 706.54,
+      "text": "And what we want to do is to ask the question, how likely"
+    },
+    {
+      "start": 706.54,
+      "end": 709.96,
+      "text": "is that particular numerical value to occur?"
+    },
+    {
+      "start": 709.96,
+      "end": 713.56,
+      "text": "So what we're essentially asking is, how likely is it"
+    },
+    {
+      "start": 713.56,
+      "end": 716.42,
+      "text": "that we obtain an outcome that leads"
+    },
+    {
+      "start": 716.42,
+      "end": 719.0,
+      "text": "to that particular numerical value?"
+    },
+    {
+      "start": 719.0,
+      "end": 721.66,
+      "text": "We calculate that overall probability"
+    },
+    {
+      "start": 721.66,
+      "end": 723.54,
+      "text": "of that numerical value."
+    },
+    {
+      "start": 723.54,
+      "end": 727.82,
+      "text": "And we represent that probability using a bar, so"
+    },
+    {
+      "start": 727.82,
+      "end": 733.29,
+      "text": "that we end up generating a bar graph."
+    },
+    {
+      "start": 733.29,
+      "end": 736.55,
+      "text": "So that could be a possible bar graph"
+    },
+    {
+      "start": 736.55,
+      "end": 739.23,
+      "text": "associated with this picture."
+    },
+    {
+      "start": 739.23,
+      "end": 742.83,
+      "text": "The size of this bar is the total probability that our"
+    },
+    {
+      "start": 742.83,
+      "end": 747.53,
+      "text": "random variable took on this numerical value, which is just"
+    },
+    {
+      "start": 747.53,
+      "end": 748.09,
+      "text": "the"
+    },
+    {
+      "start": 748.11,
+      "end": 752.59,
+      "text": "sum of the probabilities of the different outcomes that led"
+    },
+    {
+      "start": 752.59,
+      "end": 754.33,
+      "text": "to that numerical value."
+    },
+    {
+      "start": 754.33,
+      "end": 757.09,
+      "text": "So the thing that we're plotting here, the bar graph,"
+    },
+    {
+      "start": 757.09,
+      "end": 759.35,
+      "text": "we give a name to it."
+    },
+    {
+      "start": 759.35,
+      "end": 763.89,
+      "text": "It's a function, which we denote by lowercase p capital"
+    },
+    {
+      "start": 763.89,
+      "end": 767.69,
+      "text": "X. The capital X indicates which random variable we're"
+    },
+    {
+      "start": 767.69,
+      "end": 768.93,
+      "text": "talking about."
+    },
+    {
+      "start": 768.93,
+      "end": 774.73,
+      "text": "And it's a function of little x, which is the range of"
+    },
+    {
+      "start": 774.73,
+      "end": 777.53,
+      "text": "values that our random variable is taking."
+    },
+    {
+      "start": 777.53,
+      "end": 784.83,
+      "text": "So in mathematical notation, the value of the PMF at some"
+    },
+    {
+      "start": 784.83,
+      "end": 789.69,
+      "text": "particular number little x is the probability that our random"
+    },
+    {
+      "start": 789.69,
+      "end": 794.09,
+      "text": "variable takes on the numerical value little x."
+    },
+    {
+      "start": 794.09,
+      "end": 797.87,
+      "text": "And if you want to be precise about what this means, it's the"
+    },
+    {
+      "start": 797.87,
+      "end": 803.01,
+      "text": "overall probability of all outcomes for which the random"
+    },
+    {
+      "start": 803.01,
+      "end": 806.75,
+      "text": "variable ends up taking that value little x."
+    },
+    {
+      "start": 806.75,
+      "end": 814.13,
+      "text": "So this is the overall probability of all omegas that"
+    },
+    {
+      "start": 814.13,
+      "end": 819.23,
+      "text": "lead to that particular numerical value x of interest."
+    },
+    {
+      "start": 819.23,
+      "end": 824.61,
+      "text": "So what do we know about PMFs?"
+    },
+    {
+      "start": 824.61,
+      "end": 827.57,
+      "text": "Since there are probabilities, all these entries in the bar"
+    },
+    {
+      "start": 827.57,
+      "end": 829.87,
+      "text": "graph have to be non-negative."
+    },
+    {
+      "start": 829.87,
+      "end": 834.63,
+      "text": "Also, if you exhaust all the possible values of little x's,"
+    },
+    {
+      "start": 834.63,
+      "end": 836.67,
+      "text": "you will have exhausted all the possible"
+    },
+    {
+      "start": 836.67,
+      "end": 839.67,
+      "text": "outcomes here, because every outcome leads to some"
+    },
+    {
+      "start": 839.67,
+      "end": 841.03,
+      "text": "particular x."
+    },
+    {
+      "start": 841.03,
+      "end": 844.01,
+      "text": "So the sum of these probabilities should be equal"
+    },
+    {
+      "start": 844.01,
+      "end": 844.79,
+      "text": "to 1."
+    },
+    {
+      "start": 844.79,
+      "end": 846.91,
+      "text": "This is the second relation here."
+    },
+    {
+      "start": 846.91,
+      "end": 852.25,
+      "text": "So this relation tells us that some little x is going to"
+    },
+    {
+      "start": 852.25,
+      "end": 853.15,
+      "text": "happen."
+    },
+    {
+      "start": 853.15,
+      "end": 855.49,
+      "text": "They happen with different probabilities, but when you"
+    },
+    {
+      "start": 855.49,
+      "end": 859.39,
+      "text": "consider all the possible little x's together, one of"
+    },
+    {
+      "start": 859.39,
+      "end": 861.77,
+      "text": "those little x's is going to be realized."
+    },
+    {
+      "start": 861.77,
+      "end": 865.63,
+      "text": "Probabilities need to add to 1."
+    },
+    {
+      "start": 865.63,
+      "end": 866.09,
+      "text": "OK."
+    },
+    {
+      "start": 866.09,
+      "end": 869.85,
+      "text": "So let's get our first example of a non-trivial bar"
+    },
+    {
+      "start": 869.85,
+      "end": 871.19,
+      "text": "graph."
+    },
+    {
+      "start": 871.19,
+      "end": 875.77,
+      "text": "Consider the experiment where I start with a coin, and I"
+    },
+    {
+      "start": 875.77,
+      "end": 878.27,
+      "text": "start flipping it over and over."
+    },
+    {
+      "start": 878.27,
+      "end": 882.65,
+      "text": "And I do this until I obtain heads for the first time."
+    },
+    {
+      "start": 882.65,
+      "end": 885.63,
+      "text": "So what are possible outcomes of this experiment?"
+    },
+    {
+      "start": 885.63,
+      "end": 889.19,
+      "text": "One possible outcome is that I obtain heads at the first toss,"
+    },
+    {
+      "start": 889.19,
+      "end": 890.93,
+      "text": "and then I stop."
+    },
+    {
+      "start": 890.93,
+      "end": 895.05,
+      "text": "In this case, my random variable takes the value 1."
+    },
+    {
+      "start": 895.05,
+      "end": 899.37,
+      "text": "Or it's possible that I obtain tails and then heads."
+    },
+    {
+      "start": 899.37,
+      "end": 902.51,
+      "text": "How many tosses did it take until heads appeared?"
+    },
+    {
+      "start": 902.51,
+      "end": 904.49,
+      "text": "This would be x equals to 2."
+    },
+    {
+      "start": 904.49,
+      "end": 909.93,
+      "text": "Or more generally, I might obtain tails for k minus 1"
+    },
+    {
+      "start": 909.93,
+      "end": 915.29,
+      "text": "times, and then obtain heads at the kth time, in which case"
+    },
+    {
+      "start": 915.29,
+      "end": 919.95,
+      "text": "our random variable takes the value little k."
+    },
+    {
+      "start": 919.95,
+      "end": 921.11,
+      "text": "So that's the experiment."
+    },
+    {
+      "start": 921.11,
+      "end": 925.05,
+      "text": "So capital X is a well-defined random variable."
+    },
+    {
+      "start": 925.05,
+      "end": 929.19,
+      "text": "It's the number of tosses it takes until I see heads for the"
+    },
+    {
+      "start": 929.19,
+      "end": 930.73,
+      "text": "first time."
+    },
+    {
+      "start": 930.73,
+      "end": 932.31,
+      "text": "These are the possible outcomes."
+    },
+    {
+      "start": 932.31,
+      "end": 934.71,
+      "text": "These are elements of our sample space."
+    },
+    {
+      "start": 934.71,
+      "end": 938.73,
+      "text": "And these are the values of x, depending on the outcome."
+    },
+    {
+      "start": 938.73,
+      "end": 943.71,
+      "text": "Clearly, x is a function of the outcome."
+    },
+    {
+      "start": 943.71,
+      "end": 944.97,
+      "text": "You tell me the outcome."
+    },
+    {
+      "start": 944.97,
+      "end": 947.55,
+      "text": "I'm going to tell you what x is."
+    },
+    {
+      "start": 947.55,
+      "end": 953.61,
+      "text": "So what we want to do now is to calculate the PMF of x."
+    },
+    {
+      "start": 953.61,
+      "end": 954.61,
+      "text": "So Px of k."
+    },
+    {
+      "start": 955.05,
+      "end": 959.19,
+      "text": "Px of k is, by definition, the probability that our random"
+    },
+    {
+      "start": 959.19,
+      "end": 962.03,
+      "text": "variable takes the value k."
+    },
+    {
+      "start": 962.03,
+      "end": 965.77,
+      "text": "The number for the random variable to take the value k,"
+    },
+    {
+      "start": 965.77,
+      "end": 969.73,
+      "text": "the first head appears at toss number k."
+    },
+    {
+      "start": 969.73,
+      "end": 973.81,
+      "text": "The only way that this event can happen is if we obtain this"
+    },
+    {
+      "start": 973.81,
+      "end": 975.61,
+      "text": "sequence of events."
+    },
+    {
+      "start": 975.61,
+      "end": 978.71,
+      "text": "Ts, the first k minus 1 times, tails."
+    },
+    {
+      "start": 978.71,
+      "end": 981.81,
+      "text": "And heads at the kth flip."
+    },
+    {
+      "start": 981.81,
+      "end": 985.03,
+      "text": "So this event, that the random variable is equal"
+    },
+    {
+      "start": 985.05,
+      "end": 987.55,
+      "text": "to k, is the same as this event."
+    },
+    {
+      "start": 987.55,
+      "end": 990.51,
+      "text": "k minus 1 tails followed by 1 head."
+    },
+    {
+      "start": 990.51,
+      "end": 992.83,
+      "text": "What's the probability of that event?"
+    },
+    {
+      "start": 992.83,
+      "end": 996.45,
+      "text": "We're assuming that the coin tosses are independent."
+    },
+    {
+      "start": 996.45,
+      "end": 999.19,
+      "text": "So to find the probability of this event, we need to"
+    },
+    {
+      "start": 999.19,
+      "end": 1001.99,
+      "text": "multiply the probability of tails times the probability of"
+    },
+    {
+      "start": 1001.99,
+      "end": 1003.67,
+      "text": "tails times the probability of tails."
+    },
+    {
+      "start": 1003.67,
+      "end": 1008.05,
+      "text": "We multiply k minus 1 times, times the probability of heads,"
+    },
+    {
+      "start": 1008.05,
+      "end": 1010.65,
+      "text": "which puts an extra P at the end."
+    },
+    {
+      "start": 1010.65,
+      "end": 1014.25,
+      "text": "And this is the formula for the so-called geometric PMF."
+    },
+    {
+      "start": 1015.05,
+      "end": 1018.63,
+      "text": "And why do we call it geometric?"
+    },
+    {
+      "start": 1018.63,
+      "end": 1024.85,
+      "text": "Because if you go and plot the bar graph of this random"
+    },
+    {
+      "start": 1024.85,
+      "end": 1034.29,
+      "text": "variable x, we start at 1 with a certain number, which is P."
+    },
+    {
+      "start": 1034.29,
+      "end": 1041.65,
+      "text": "And then at 2, we get P times 1 minus P. At 3, we're going"
+    },
+    {
+      "start": 1041.65,
+      "end": 1043.01,
+      "text": "to get something smaller."
+    },
+    {
+      "start": 1043.01,
+      "end": 1044.91,
+      "text": "It's P times 1 minus P squared."
+    },
+    {
+      "start": 1045.05,
+      "end": 1048.87,
+      "text": "And the bars keep going down at the rate of"
+    },
+    {
+      "start": 1048.87,
+      "end": 1050.71,
+      "text": "a geometric progression."
+    },
+    {
+      "start": 1050.71,
+      "end": 1054.47,
+      "text": "Each bar is smaller than the previous bar, because each"
+    },
+    {
+      "start": 1054.47,
+      "end": 1058.37,
+      "text": "time we get an extra factor of 1 minus P involved."
+    },
+    {
+      "start": 1058.37,
+      "end": 1062.63,
+      "text": "So the shape of this PMF is the graph of"
+    },
+    {
+      "start": 1062.63,
+      "end": 1064.29,
+      "text": "a geometric sequence."
+    },
+    {
+      "start": 1064.29,
+      "end": 1067.61,
+      "text": "For that reason, we say that it's the geometric PMF."
+    },
+    {
+      "start": 1067.61,
+      "end": 1071.85,
+      "text": "And we call x also a geometric random variable."
+    },
+    {
+      "start": 1071.85,
+      "end": 1074.63,
+      "text": "So the number of coin tosses until the first head."
+    },
+    {
+      "start": 1075.05,
+      "end": 1078.29,
+      "text": "This is a geometric random variable."
+    },
+    {
+      "start": 1078.29,
+      "end": 1080.73,
+      "text": "So this was an example of how to compute the"
+    },
+    {
+      "start": 1080.73,
+      "end": 1082.61,
+      "text": "PMF of a random variable."
+    },
+    {
+      "start": 1082.61,
+      "end": 1086.49,
+      "text": "This was an easy example, because this event could be"
+    },
+    {
+      "start": 1086.49,
+      "end": 1089.51,
+      "text": "realized in one and only one way."
+    },
+    {
+      "start": 1089.51,
+      "end": 1092.63,
+      "text": "So to find the probability of this, we just needed to find"
+    },
+    {
+      "start": 1092.63,
+      "end": 1095.51,
+      "text": "the probability of this particular outcome."
+    },
+    {
+      "start": 1095.51,
+      "end": 1098.69,
+      "text": "More generally, there's going to be many outcomes that can"
+    },
+    {
+      "start": 1098.69,
+      "end": 1102.11,
+      "text": "lead to the same numerical value."
+    },
+    {
+      "start": 1102.11,
+      "end": 1105.05,
+      "text": "And we need to keep track of all of them."
+    },
+    {
+      "start": 1105.05,
+      "end": 1108.15,
+      "text": "For example, in this picture, if I want to find this value of"
+    },
+    {
+      "start": 1108.15,
+      "end": 1111.61,
+      "text": "the PMF, I need to add up the probabilities of all the"
+    },
+    {
+      "start": 1111.61,
+      "end": 1114.55,
+      "text": "outcomes that lead to that value."
+    },
+    {
+      "start": 1114.55,
+      "end": 1117.59,
+      "text": "So the general procedure is exactly what this picture"
+    },
+    {
+      "start": 1117.59,
+      "end": 1118.25,
+      "text": "suggests."
+    },
+    {
+      "start": 1118.25,
+      "end": 1123.03,
+      "text": "To find this probability, you go and identify which outcomes"
+    },
+    {
+      "start": 1123.03,
+      "end": 1127.77,
+      "text": "lead to this numerical value, and add their probabilities."
+    },
+    {
+      "start": 1127.77,
+      "end": 1129.63,
+      "text": "So let's do a simple example."
+    },
+    {
+      "start": 1129.63,
+      "end": 1134.31,
+      "text": "I take a tetrahedral die, I toss it twice, and there's"
+    },
+    {
+      "start": 1134.31,
+      "end": 1136.41,
+      "text": "lots of random variables that you can associate"
+    },
+    {
+      "start": 1136.41,
+      "end": 1137.83,
+      "text": "with the same experiment."
+    },
+    {
+      "start": 1137.83,
+      "end": 1141.45,
+      "text": "So the outcome of the first throw, we can call it F."
+    },
+    {
+      "start": 1141.45,
+      "end": 1145.31,
+      "text": "That's a random variable, because it's determined once"
+    },
+    {
+      "start": 1145.31,
+      "end": 1148.07,
+      "text": "you tell me what happens in the two, what"
+    },
+    {
+      "start": 1148.07,
+      "end": 1149.83,
+      "text": "happens in the experiment."
+    },
+    {
+      "start": 1149.83,
+      "end": 1153.47,
+      "text": "The outcome of the second throw is another random variable."
+    },
+    {
+      "start": 1153.47,
+      "end": 1156.89,
+      "text": "The minimum of the two throws is also a random variable."
+    },
+    {
+      "start": 1156.89,
+      "end": 1160.57,
+      "text": "Once I do the experiment, this random variable takes on a"
+    },
+    {
+      "start": 1160.57,
+      "end": 1162.59,
+      "text": "specific numerical value."
+    },
+    {
+      "start": 1162.59,
+      "end": 1164.23,
+      "text": "So suppose I do the experiment."
+    },
+    {
+      "start": 1164.23,
+      "end": 1166.85,
+      "text": "And I get a 2 and a 3."
+    },
+    {
+      "start": 1166.85,
+      "end": 1169.47,
+      "text": "So this random variable is going to take the numerical"
+    },
+    {
+      "start": 1169.47,
+      "end": 1170.41,
+      "text": "value of 2."
+    },
+    {
+      "start": 1170.41,
+      "end": 1172.43,
+      "text": "This is going to take the numerical value of 3."
+    },
+    {
+      "start": 1172.43,
+      "end": 1175.51,
+      "text": "This is going to take the numerical value of 2."
+    },
+    {
+      "start": 1175.51,
+      "end": 1178.83,
+      "text": "And now suppose that I want to calculate the PMF of this"
+    },
+    {
+      "start": 1178.83,
+      "end": 1180.51,
+      "text": "random variable."
+    },
+    {
+      "start": 1180.51,
+      "end": 1185.65,
+      "text": "What I will need to do is to calculate Px of 0, Px of 1, Px"
+    },
+    {
+      "start": 1185.65,
+      "end": 1187.99,
+      "text": "of 2, Px of 3, and so on."
+    },
+    {
+      "start": 1187.99,
+      "end": 1189.89,
+      "text": "Let's not do the entire calculation."
+    },
+    {
+      "start": 1189.89,
+      "end": 1194.13,
+      "text": "Then let's just calculate one of the entries of the PMF."
+    },
+    {
+      "start": 1194.23,
+      "end": 1197.85,
+      "text": "So Px of 2, that's the probability that the minimum"
+    },
+    {
+      "start": 1197.85,
+      "end": 1200.27,
+      "text": "of the two throws gives us a 2."
+    },
+    {
+      "start": 1200.27,
+      "end": 1204.07,
+      "text": "And this can happen in many ways."
+    },
+    {
+      "start": 1204.07,
+      "end": 1206.39,
+      "text": "There are five ways that it can happen."
+    },
+    {
+      "start": 1206.39,
+      "end": 1211.33,
+      "text": "Those are all the outcomes for which the smallest of the two"
+    },
+    {
+      "start": 1211.33,
+      "end": 1213.77,
+      "text": "is equal to 2."
+    },
+    {
+      "start": 1213.77,
+      "end": 1215.35,
+      "text": "That's five outcomes."
+    },
+    {
+      "start": 1215.35,
+      "end": 1219.87,
+      "text": "Assuming that the tetrahedral die is fair and the tosses are"
+    },
+    {
+      "start": 1219.87,
+      "end": 1222.23,
+      "text": "independent, each one of these outcomes has"
+    },
+    {
+      "start": 1222.23,
+      "end": 1223.89,
+      "text": "probability of 1 over 16."
+    },
+    {
+      "start": 1224.23,
+      "end": 1225.69,
+      "text": "There's five of them."
+    },
+    {
+      "start": 1225.69,
+      "end": 1229.23,
+      "text": "So we get an answer, 5 over 16."
+    },
+    {
+      "start": 1229.23,
+      "end": 1233.73,
+      "text": "So conceptually, this is just the procedure that you use to"
+    },
+    {
+      "start": 1233.73,
+      "end": 1237.81,
+      "text": "calculate PMFs the way that you construct this particular"
+    },
+    {
+      "start": 1237.81,
+      "end": 1238.73,
+      "text": "bar graph."
+    },
+    {
+      "start": 1238.73,
+      "end": 1241.83,
+      "text": "You consider all the possible values of your random variable."
+    },
+    {
+      "start": 1241.83,
+      "end": 1244.31,
+      "text": "And for each one of those random variables, you find the"
+    },
+    {
+      "start": 1244.31,
+      "end": 1247.83,
+      "text": "probability that the random variable takes on that value"
+    },
+    {
+      "start": 1247.83,
+      "end": 1250.99,
+      "text": "by adding the probabilities of all the possible outcomes that"
+    },
+    {
+      "start": 1250.99,
+      "end": 1254.09,
+      "text": "leads to that particular numerical value."
+    },
+    {
+      "start": 1254.09,
+      "end": 1257.59,
+      "text": "So let's do another more interesting one."
+    },
+    {
+      "start": 1257.59,
+      "end": 1262.47,
+      "text": "So let's revisit the coin tossing problem from last time."
+    },
+    {
+      "start": 1262.47,
+      "end": 1268.95,
+      "text": "Let us fix a number n."
+    },
+    {
+      "start": 1268.95,
+      "end": 1273.05,
+      "text": "And we decide to flip a coin n consecutive times."
+    },
+    {
+      "start": 1273.05,
+      "end": 1276.07,
+      "text": "Each time, the coin tosses are independent."
+    },
+    {
+      "start": 1276.07,
+      "end": 1279.15,
+      "text": "At each one of the tosses, we have a probability p of"
+    },
+    {
+      "start": 1279.15,
+      "end": 1280.93,
+      "text": "obtaining heads."
+    },
+    {
+      "start": 1280.93,
+      "end": 1283.55,
+      "text": "Let's consider the random variable, which is the total"
+    },
+    {
+      "start": 1283.55,
+      "end": 1286.43,
+      "text": "number of heads that have been obtained."
+    },
+    {
+      "start": 1286.43,
+      "end": 1287.55,
+      "text": "Well, that's something"
+    },
+    {
+      "start": 1287.55,
+      "end": 1289.67,
+      "text": "that we dealt with last time."
+    },
+    {
+      "start": 1289.67,
+      "end": 1293.37,
+      "text": "We know the probabilities for different numbers of heads."
+    },
+    {
+      "start": 1293.37,
+      "end": 1295.49,
+      "text": "But we're just going to do the same now"
+    },
+    {
+      "start": 1295.49,
+      "end": 1297.93,
+      "text": "using today's notation."
+    },
+    {
+      "start": 1297.93,
+      "end": 1301.57,
+      "text": "So let's, for concreteness, n equal to 4."
+    },
+    {
+      "start": 1301.57,
+      "end": 1305.27,
+      "text": "Px is the PMF of that random variable x."
+    },
+    {
+      "start": 1305.27,
+      "end": 1310.65,
+      "text": "Px of 2 is meant to be, by definition, it's the"
+    },
+    {
+      "start": 1310.65,
+      "end": 1314.45,
+      "text": "probability that our random variable takes the value of 2."
+    },
+    {
+      "start": 1314.45,
+      "end": 1317.37,
+      "text": "So this is the probability that we have exactly two"
+    },
+    {
+      "start": 1317.37,
+      "end": 1320.09,
+      "text": "heads in our four tosses."
+    },
+    {
+      "start": 1320.09,
+      "end": 1323.91,
+      "text": "The event of exactly two heads can happen in multiple ways."
+    },
+    {
+      "start": 1323.91,
+      "end": 1325.75,
+      "text": "And here I've written down the different"
+    },
+    {
+      "start": 1325.75,
+      "end": 1326.93,
+      "text": "ways that it can happen."
+    },
+    {
+      "start": 1326.93,
+      "end": 1329.25,
+      "text": "It turns out that there's exactly six"
+    },
+    {
+      "start": 1329.25,
+      "end": 1330.95,
+      "text": "ways that it can happen."
+    },
+    {
+      "start": 1330.95,
+      "end": 1335.03,
+      "text": "And each one of these ways, luckily enough, has the same"
+    },
+    {
+      "start": 1335.03,
+      "end": 1339.45,
+      "text": "probability, p squared times 1 minus p squared."
+    },
+    {
+      "start": 1339.45,
+      "end": 1344.69,
+      "text": "So that gives us the value for the PMF evaluated at 2."
+    },
+    {
+      "start": 1344.69,
+      "end": 1346.69,
+      "text": "So here we just counted explicitly."
+    },
+    {
+      "start": 1346.69,
+      "end": 1347.03,
+      "text": ". . ."
+    },
+    {
+      "start": 1347.03,
+      "end": 1349.73,
+      "text": "basically, that we have six possible ways that this can"
+    },
+    {
+      "start": 1349.73,
+      "end": 1352.91,
+      "text": "happen, and this gave rise to this factor of 6."
+    },
+    {
+      "start": 1352.91,
+      "end": 1357.59,
+      "text": "But this factor of 6 turns out to be the same as this"
+    },
+    {
+      "start": 1357.59,
+      "end": 1359.27,
+      "text": "4 choose 2."
+    },
+    {
+      "start": 1359.27,
+      "end": 1362.47,
+      "text": "If you remember the definition from last time, 4 choose 2 is"
+    },
+    {
+      "start": 1362.47,
+      "end": 1365.65,
+      "text": "4 factorial divided by 2 factorial divided by 2"
+    },
+    {
+      "start": 1365.65,
+      "end": 1369.93,
+      "text": "factorial, which is indeed equal to 6."
+    },
+    {
+      "start": 1369.93,
+      "end": 1372.37,
+      "text": "And this is the more general formula that"
+    },
+    {
+      "start": 1372.37,
+      "end": 1373.83,
+      "text": "you would be using."
+    },
+    {
+      "start": 1373.83,
+      "end": 1379.17,
+      "text": "In general, if you have n tosses and you're interested"
+    },
+    {
+      "start": 1379.17,
+      "end": 1382.55,
+      "text": "in the probability of obtaining k heads, the"
+    },
+    {
+      "start": 1382.55,
+      "end": 1385.59,
+      "text": "probability of that event is given by this formula."
+    },
+    {
+      "start": 1385.59,
+      "end": 1389.29,
+      "text": "So that's the formula that we derived last time, except that"
+    },
+    {
+      "start": 1389.29,
+      "end": 1391.23,
+      "text": "last time we didn't use this notation."
+    },
+    {
+      "start": 1391.23,
+      "end": 1395.15,
+      "text": "We just said the probability of k heads is equal to this."
+    },
+    {
+      "start": 1395.15,
+      "end": 1398.03,
+      "text": "Today we introduce the extra notation."
+    },
+    {
+      "start": 1398.03,
+      "end": 1402.43,
+      "text": "And also having that notation, we may be tempted to also plot"
+    },
+    {
+      "start": 1402.43,
+      "end": 1403.53,
+      "text": "a bar graph."
+    },
+    {
+      "start": 1403.53,
+      "end": 1409.17,
+      "text": "For the px, in this case, for the coin tossing problem."
+    },
+    {
+      "start": 1409.17,
+      "end": 1414.95,
+      "text": "And if you plot that bar graph as a function of k, when n is a"
+    },
+    {
+      "start": 1414.95,
+      "end": 1420.85,
+      "text": "fairly large number, what you will end up obtaining is a bar"
+    },
+    {
+      "start": 1420.85,
+      "end": 1433.83,
+      "text": "graph that has a shape of something like this."
+    },
+    {
+      "start": 1433.83,
+      "end": 1438.79,
+      "text": "So certain values of k are more likely than others, and"
+    },
+    {
+      "start": 1438.79,
+      "end": 1441.49,
+      "text": "the more likely values are somewhere in the middle of the"
+    },
+    {
+      "start": 1441.49,
+      "end": 1442.25,
+      "text": "range."
+    },
+    {
+      "start": 1442.25,
+      "end": 1446.11,
+      "text": "And extreme values, too few heads or too many heads, are"
+    },
+    {
+      "start": 1446.11,
+      "end": 1447.11,
+      "text": "unlikely."
+    },
+    {
+      "start": 1447.11,
+      "end": 1449.89,
+      "text": "Now the miraculous thing is that it turns out that this"
+    },
+    {
+      "start": 1449.89,
+      "end": 1455.51,
+      "text": "curve gets a pretty definite shape, like a so-called bell"
+    },
+    {
+      "start": 1455.51,
+      "end": 1461.04,
+      "text": "curve, when n is big."
+    },
+    {
+      "start": 1461.04,
+      "end": 1465.9,
+      "text": "This is a very deep and central fact from probability theory"
+    },
+    {
+      "start": 1465.9,
+      "end": 1468.9,
+      "text": "that we will get to in a couple of months."
+    },
+    {
+      "start": 1470.42,
+      "end": 1473.88,
+      "text": "For now, it could be a curious observation."
+    },
+    {
+      "start": 1473.88,
+      "end": 1478.74,
+      "text": "If you go into MATLAB and put this formula in and ask MATLAB"
+    },
+    {
+      "start": 1478.74,
+      "end": 1481.54,
+      "text": "to plot it for you, you're going to get an interesting"
+    },
+    {
+      "start": 1481.54,
+      "end": 1483.14,
+      "text": "shape of this form."
+    },
+    {
+      "start": 1483.14,
+      "end": 1486.7,
+      "text": "And later on, we will have to sort of understand where this"
+    },
+    {
+      "start": 1486.7,
+      "end": 1490.76,
+      "text": "is coming from and whether there's a nice, simple formula"
+    },
+    {
+      "start": 1490.76,
+      "end": 1494.9,
+      "text": "for the asymptotic form that we get."
+    },
+    {
+      "start": 1494.9,
+      "end": 1500.2,
+      "text": "All right, so far I've said essentially nothing new."
+    },
+    {
+      "start": 1500.2,
+      "end": 1504.16,
+      "text": "Just a little bit of notation, and this little"
+    },
+    {
+      "start": 1504.16,
+      "end": 1507.18,
+      "text": "conceptual thing that you have to think of random variables as"
+    },
+    {
+      "start": 1507.18,
+      "end": 1509.06,
+      "text": "functions on the sample space."
+    },
+    {
+      "start": 1509.06,
+      "end": 1511.64,
+      "text": "So now it's time to introduce something new."
+    },
+    {
+      "start": 1511.64,
+      "end": 1514.24,
+      "text": "This is the big concept of the day."
+    },
+    {
+      "start": 1514.24,
+      "end": 1516.9,
+      "text": "In some sense, it's an easy concept."
+    },
+    {
+      "start": 1516.9,
+      "end": 1523.08,
+      "text": "But it's the most central, most important concept there is"
+    },
+    {
+      "start": 1523.08,
+      "end": 1526.96,
+      "text": "that we have to deal with random variables."
+    },
+    {
+      "start": 1526.96,
+      "end": 1529.82,
+      "text": "It's the concept of the expected value of a random"
+    },
+    {
+      "start": 1529.82,
+      "end": 1530.86,
+      "text": "variable."
+    },
+    {
+      "start": 1530.86,
+      "end": 1534.58,
+      "text": "So the expected value is meant to be, let's speak loosely,"
+    },
+    {
+      "start": 1534.58,
+      "end": 1538.14,
+      "text": "something like an average, where you interpret"
+    },
+    {
+      "start": 1538.14,
+      "end": 1541.52,
+      "text": "probabilities as something like frequencies."
+    },
+    {
+      "start": 1541.52,
+      "end": 1546.1,
+      "text": "So you play a certain game, and your rewards are going to"
+    },
+    {
+      "start": 1546.1,
+      "end": 1552.0,
+      "text": "be, let me just use my standard numbers."
+    },
+    {
+      "start": 1552.0,
+      "end": 1558.04,
+      "text": "Your rewards are going to be $1 with probability 1 sixth."
+    },
+    {
+      "start": 1558.04,
+      "end": 1559.8,
+      "text": "It's going to be $2 with probability 1 sixth."
+    },
+    {
+      "start": 1559.8,
+      "end": 1568.68,
+      "text": "with probability 1 half, and $4 with probability 1 third."
+    },
+    {
+      "start": 1568.68,
+      "end": 1571.92,
+      "text": "So this is a plot of the PMF of some random variable."
+    },
+    {
+      "start": 1571.92,
+      "end": 1575.28,
+      "text": "If you play that game, and you get so many dollars with this"
+    },
+    {
+      "start": 1575.28,
+      "end": 1578.56,
+      "text": "probability and so on, how much do you expect to get on"
+    },
+    {
+      "start": 1578.56,
+      "end": 1581.66,
+      "text": "the average if you play the game a zillion times?"
+    },
+    {
+      "start": 1581.66,
+      "end": 1583.42,
+      "text": "Well, you can think as follows."
+    },
+    {
+      "start": 1583.42,
+      "end": 1587.72,
+      "text": "1 sixth of the time, I'm going to get $1."
+    },
+    {
+      "start": 1587.72,
+      "end": 1591.22,
+      "text": "1 half of the time, that outcome is going to happen,"
+    },
+    {
+      "start": 1591.22,
+      "end": 1594.12,
+      "text": "and I'm going to get $2."
+    },
+    {
+      "start": 1594.12,
+      "end": 1597.96,
+      "text": "And 1 third of the time, the other outcome happens, and I'm"
+    },
+    {
+      "start": 1597.96,
+      "end": 1600.66,
+      "text": "going to get $4."
+    },
+    {
+      "start": 1600.66,
+      "end": 1605.48,
+      "text": "And you evaluate that number, and it turns out to be 2.5."
+    },
+    {
+      "start": 1605.48,
+      "end": 1610.42,
+      "text": "So that's a reasonable way of calculating the average payoff"
+    },
+    {
+      "start": 1610.42,
+      "end": 1612.54,
+      "text": "if you think of these probabilities as the"
+    },
+    {
+      "start": 1612.54,
+      "end": 1616.38,
+      "text": "frequencies with which you obtain the different payoffs."
+    },
+    {
+      "start": 1616.38,
+      "end": 1617.72,
+      "text": "And loosely speaking,"
+    },
+    {
+      "start": 1617.72,
+      "end": 1620.86,
+      "text": "it doesn't hurt to think of probabilities as frequencies"
+    },
+    {
+      "start": 1620.86,
+      "end": 1623.52,
+      "text": "when you try to make sense of various things."
+    },
+    {
+      "start": 1623.52,
+      "end": 1625.06,
+      "text": "So what did we do now?"
+    },
+    {
+      "start": 1625.06,
+      "end": 1626.54,
+      "text": "What did we do here?"
+    },
+    {
+      "start": 1626.54,
+      "end": 1631.7,
+      "text": "We took the probabilities of the different outcomes, of the"
+    },
+    {
+      "start": 1631.7,
+      "end": 1635.34,
+      "text": "different numerical values, and multiplied them with the"
+    },
+    {
+      "start": 1635.34,
+      "end": 1637.6,
+      "text": "corresponding numerical value."
+    },
+    {
+      "start": 1637.6,
+      "end": 1639.9,
+      "text": "Similar here, we have a probability and the"
+    },
+    {
+      "start": 1639.9,
+      "end": 1641.76,
+      "text": "corresponding numerical value."
+    },
+    {
+      "start": 1641.76,
+      "end": 1644.88,
+      "text": "And we added up over all x's."
+    },
+    {
+      "start": 1644.88,
+      "end": 1646.56,
+      "text": "So that's what we did."
+    },
+    {
+      "start": 1646.56,
+      "end": 1647.2,
+      "text": "Looks like an"
+    },
+    {
+      "start": 1647.2,
+      "end": 1649.76,
+      "text": "interesting quantity to deal with."
+    },
+    {
+      "start": 1649.76,
+      "end": 1652.8,
+      "text": "So we're going to give a name to it, and we're going to call"
+    },
+    {
+      "start": 1652.8,
+      "end": 1655.76,
+      "text": "it the expected value of a random variable."
+    },
+    {
+      "start": 1655.76,
+      "end": 1659.64,
+      "text": "So this formula just captures the calculation that we did."
+    },
+    {
+      "start": 1659.64,
+      "end": 1663.54,
+      "text": "How do we interpret the expected value?"
+    },
+    {
+      "start": 1663.54,
+      "end": 1666.5,
+      "text": "So the one interpretation is the one that I"
+    },
+    {
+      "start": 1666.5,
+      "end": 1668.12,
+      "text": "used in this example."
+    },
+    {
+      "start": 1668.12,
+      "end": 1672.28,
+      "text": "You can think of it as the average that you get over a"
+    },
+    {
+      "start": 1672.28,
+      "end": 1676.22,
+      "text": "large number of repetitions of an experiment, where you"
+    },
+    {
+      "start": 1676.22,
+      "end": 1676.86,
+      "text": "interpret the"
+    },
+    {
+      "start": 1677.2,
+      "end": 1679.34,
+      "text": "probabilities as the frequencies with which the"
+    },
+    {
+      "start": 1679.34,
+      "end": 1682.14,
+      "text": "different numerical values can happen."
+    },
+    {
+      "start": 1682.14,
+      "end": 1684.88,
+      "text": "There's another interpretation that's a little more visual,"
+    },
+    {
+      "start": 1684.88,
+      "end": 1686.22,
+      "text": "and that's kind of insightful."
+    },
+    {
+      "start": 1686.22,
+      "end": 1689.74,
+      "text": "If you remember your freshman physics, this kind of formula"
+    },
+    {
+      "start": 1689.74,
+      "end": 1694.4,
+      "text": "gives you the center of gravity of an object of this kind."
+    },
+    {
+      "start": 1694.4,
+      "end": 1697.3,
+      "text": "If you take that picture literally and think of this as"
+    },
+    {
+      "start": 1697.3,
+      "end": 1700.72,
+      "text": "a mass of 1 sixth sitting here, and the mass of 1 half"
+    },
+    {
+      "start": 1700.72,
+      "end": 1704.04,
+      "text": "sixth in here, and 1 third sitting there, and you ask me"
+    },
+    {
+      "start": 1704.04,
+      "end": 1707.04,
+      "text": "what's the center of gravity of that structure, this is the"
+    },
+    {
+      "start": 1707.04,
+      "end": 1709.34,
+      "text": "formula that gives you the center of gravity."
+    },
+    {
+      "start": 1709.34,
+      "end": 1710.86,
+      "text": "Now what's the center of gravity?"
+    },
+    {
+      "start": 1710.86,
+      "end": 1714.98,
+      "text": "It's the place where if you put your pen right underneath,"
+    },
+    {
+      "start": 1714.98,
+      "end": 1718.06,
+      "text": "that diagram will stay in place and will not fall on one"
+    },
+    {
+      "start": 1718.06,
+      "end": 1720.46,
+      "text": "side and will not fall on the other side."
+    },
+    {
+      "start": 1720.46,
+      "end": 1725.08,
+      "text": "So in this thing by picture, since the 4 is a little more to"
+    },
+    {
+      "start": 1725.08,
+      "end": 1728.36,
+      "text": "the right and a little heavier, the center of gravity should be"
+    },
+    {
+      "start": 1728.36,
+      "end": 1730.22,
+      "text": "somewhere around here."
+    },
+    {
+      "start": 1730.22,
+      "end": 1732.32,
+      "text": "And that's what the math gave us."
+    },
+    {
+      "start": 1732.32,
+      "end": 1734.74,
+      "text": "It turns out to be 2 and 1 half."
+    },
+    {
+      "start": 1734.74,
+      "end": 1736.88,
+      "text": "Once you have this interpretation about centers of"
+    },
+    {
+      "start": 1736.88,
+      "end": 1740.0,
+      "text": "gravity, sometimes you can calculate expectations pretty"
+    },
+    {
+      "start": 1740.0,
+      "end": 1740.98,
+      "text": "fast."
+    },
+    {
+      "start": 1740.98,
+      "end": 1744.26,
+      "text": "So here's our new random variable."
+    },
+    {
+      "start": 1744.26,
+      "end": 1747.72,
+      "text": "It's the uniform random variable in which each one of"
+    },
+    {
+      "start": 1747.72,
+      "end": 1750.3,
+      "text": "the numerical values is equally likely."
+    },
+    {
+      "start": 1750.3,
+      "end": 1753.9,
+      "text": "Here there's a total of n plus 1 possible numerical values."
+    },
+    {
+      "start": 1753.9,
+      "end": 1757.48,
+      "text": "So each one of them has probability 1 over n plus 1."
+    },
+    {
+      "start": 1757.48,
+      "end": 1760.56,
+      "text": "Let's calculate the expected value of this random variable."
+    },
+    {
+      "start": 1760.56,
+      "end": 1764.48,
+      "text": "We can take the formula literally and consider all"
+    },
+    {
+      "start": 1764.48,
+      "end": 1766.16,
+      "text": "possible outcomes."
+    },
+    {
+      "start": 1766.88,
+      "end": 1769.44,
+      "text": "We can take all possible numerical values and weigh them"
+    },
+    {
+      "start": 1769.44,
+      "end": 1772.7,
+      "text": "by their corresponding probability and do this"
+    },
+    {
+      "start": 1772.7,
+      "end": 1775.2,
+      "text": "calculation and obtain an answer."
+    },
+    {
+      "start": 1775.2,
+      "end": 1778.52,
+      "text": "But I gave you the intuition of centers of gravity."
+    },
+    {
+      "start": 1778.52,
+      "end": 1782.02,
+      "text": "Can you use that intuition to guess the answer?"
+    },
+    {
+      "start": 1782.02,
+      "end": 1786.7,
+      "text": "What's the center of gravity of a structure of this kind?"
+    },
+    {
+      "start": 1786.7,
+      "end": 1787.86,
+      "text": "We have symmetry."
+    },
+    {
+      "start": 1787.86,
+      "end": 1790.7,
+      "text": "So it should be in the middle."
+    },
+    {
+      "start": 1790.7,
+      "end": 1791.98,
+      "text": "And what's the middle?"
+    },
+    {
+      "start": 1791.98,
+      "end": 1796.0,
+      "text": "It's the average of the two endpoints, so without having"
+    },
+    {
+      "start": 1796.0,
+      "end": 1796.58,
+      "text": "to do the algebra."
+    },
+    {
+      "start": 1796.58,
+      "end": 1801.2,
+      "text": "You know that the answer is going to be n over 2."
+    },
+    {
+      "start": 1801.2,
+      "end": 1805.96,
+      "text": "So this is a moral that you should keep whenever you have a"
+    },
+    {
+      "start": 1805.96,
+      "end": 1811.46,
+      "text": "PMF which is symmetric around a certain point."
+    },
+    {
+      "start": 1811.46,
+      "end": 1815.34,
+      "text": "That certain point is going to be the expected value"
+    },
+    {
+      "start": 1815.34,
+      "end": 1822.39,
+      "text": "associated with this particular PMF."
+    },
+    {
+      "start": 1822.39,
+      "end": 1829.62,
+      "text": "So having defined the expected value, what is there that's"
+    },
+    {
+      "start": 1829.62,
+      "end": 1831.08,
+      "text": "left for us to do?"
+    },
+    {
+      "start": 1831.48,
+      "end": 1837.3,
+      "text": "Well, we want to investigate how it behaves, what kind of"
+    },
+    {
+      "start": 1837.3,
+      "end": 1843.32,
+      "text": "properties does it have, and also how do you calculate"
+    },
+    {
+      "start": 1843.32,
+      "end": 1848.04,
+      "text": "expected values of complicated random variables."
+    },
+    {
+      "start": 1848.04,
+      "end": 1852.12,
+      "text": "So the first complication that we're going to start with is"
+    },
+    {
+      "start": 1852.12,
+      "end": 1859.7,
+      "text": "the case where we deal with a function of a random variable."
+    },
+    {
+      "start": 1859.7,
+      "end": 1864.68,
+      "text": "So let me redraw this same picture as before."
+    },
+    {
+      "start": 1864.68,
+      "end": 1867.1,
+      "text": "We have omega."
+    },
+    {
+      "start": 1867.1,
+      "end": 1869.54,
+      "text": "This is our sample space."
+    },
+    {
+      "start": 1869.54,
+      "end": 1872.32,
+      "text": "This is the real line."
+    },
+    {
+      "start": 1872.32,
+      "end": 1877.4,
+      "text": "And we have a random variable that gives rise to various"
+    },
+    {
+      "start": 1877.4,
+      "end": 1884.4,
+      "text": "values for X. So the random variable is capital X, and"
+    },
+    {
+      "start": 1884.4,
+      "end": 1888.98,
+      "text": "every outcome leads to a particular numerical value for"
+    },
+    {
+      "start": 1888.98,
+      "end": 1893.02,
+      "text": "our random variable X. So capital X is really the"
+    },
+    {
+      "start": 1893.02,
+      "end": 1896.62,
+      "text": "function that maps these points into the real line."
+    },
+    {
+      "start": 1897.04,
+      "end": 1902.46,
+      "text": "And then I consider a function of this random variable."
+    },
+    {
+      "start": 1902.46,
+      "end": 1907.98,
+      "text": "Call it capital Y. And it's a function of my previous random"
+    },
+    {
+      "start": 1907.98,
+      "end": 1909.98,
+      "text": "variable."
+    },
+    {
+      "start": 1909.98,
+      "end": 1914.34,
+      "text": "And this new random variable Y takes numerical values that are"
+    },
+    {
+      "start": 1914.34,
+      "end": 1918.12,
+      "text": "completely determined once I know the numerical value of"
+    },
+    {
+      "start": 1918.12,
+      "end": 1928.51,
+      "text": "capital X. And perhaps you get a diagram of this kind."
+    },
+    {
+      "start": 1928.51,
+      "end": 1931.11,
+      "text": "So X is a random variable."
+    },
+    {
+      "start": 1931.11,
+      "end": 1935.15,
+      "text": "Once you have an outcome, this determines the value of X. Y is"
+    },
+    {
+      "start": 1935.15,
+      "end": 1936.81,
+      "text": "also a random variable."
+    },
+    {
+      "start": 1936.81,
+      "end": 1941.99,
+      "text": "Once you have the outcome, that determines the value of Y. Y is"
+    },
+    {
+      "start": 1941.99,
+      "end": 1946.17,
+      "text": "completely determined once you know X."
+    },
+    {
+      "start": 1946.17,
+      "end": 1948.81,
+      "text": "We have a formula for how to calculate the"
+    },
+    {
+      "start": 1948.81,
+      "end": 1951.57,
+      "text": "expected value of X."
+    },
+    {
+      "start": 1951.57,
+      "end": 1954.35,
+      "text": "Suppose that you're interested in calculating the expected"
+    },
+    {
+      "start": 1954.35,
+      "end": 1960.05,
+      "text": "value of Y. How would you go about it?"
+    },
+    {
+      "start": 1960.05,
+      "end": 1960.71,
+      "text": "OK."
+    },
+    {
+      "start": 1960.71,
+      "end": 1963.59,
+      "text": "The only thing you have in your hands is the definition."
+    },
+    {
+      "start": 1963.59,
+      "end": 1967.75,
+      "text": "So you could start by just using the definition."
+    },
+    {
+      "start": 1967.75,
+      "end": 1970.11,
+      "text": "And what does this entail?"
+    },
+    {
+      "start": 1970.11,
+      "end": 1975.33,
+      "text": "It entails, for every particular value of Y, collect"
+    },
+    {
+      "start": 1975.33,
+      "end": 1979.69,
+      "text": "all the outcomes that lead to that value of Y, find their"
+    },
+    {
+      "start": 1979.69,
+      "end": 1984.03,
+      "text": "probability, do the same here for that value, collect those"
+    },
+    {
+      "start": 1984.03,
+      "end": 1987.71,
+      "text": "outcomes, find their probability, and weigh by Y."
+    },
+    {
+      "start": 1987.71,
+      "end": 1990.33,
+      "text": "So this formula does the"
+    },
+    {
+      "start": 1990.71,
+      "end": 1993.05,
+      "text": "addition over this line."
+    },
+    {
+      "start": 1993.05,
+      "end": 1997.07,
+      "text": "We consider the different outcomes and add things up."
+    },
+    {
+      "start": 1997.07,
+      "end": 2000.37,
+      "text": "There's an alternative way of doing the same accounting,"
+    },
+    {
+      "start": 2000.37,
+      "end": 2003.95,
+      "text": "where instead of doing the addition over those numbers,"
+    },
+    {
+      "start": 2003.95,
+      "end": 2006.53,
+      "text": "we do the addition up here."
+    },
+    {
+      "start": 2006.53,
+      "end": 2010.23,
+      "text": "We consider the different possible values of X. And we"
+    },
+    {
+      "start": 2010.23,
+      "end": 2011.47,
+      "text": "think as follows."
+    },
+    {
+      "start": 2014.51,
+      "end": 2018.89,
+      "text": "For each possible value of X, that value is going to occur"
+    },
+    {
+      "start": 2018.89,
+      "end": 2019.87,
+      "text": "with this probability."
+    },
+    {
+      "start": 2020.71,
+      "end": 2025.97,
+      "text": "And if that value has occurred, this is how much I'm"
+    },
+    {
+      "start": 2025.97,
+      "end": 2030.33,
+      "text": "getting, the G of X. So I'm considering the probability of"
+    },
+    {
+      "start": 2030.33,
+      "end": 2033.01,
+      "text": "this outcome."
+    },
+    {
+      "start": 2033.01,
+      "end": 2036.05,
+      "text": "And in that case, Y takes this value."
+    },
+    {
+      "start": 2036.05,
+      "end": 2040.23,
+      "text": "Then I'm considering the probabilities of this outcome."
+    },
+    {
+      "start": 2040.23,
+      "end": 2044.65,
+      "text": "And in that case, G of X takes, again, that value."
+    },
+    {
+      "start": 2044.65,
+      "end": 2048.09,
+      "text": "Then I consider this particular X. It happens with"
+    },
+    {
+      "start": 2048.09,
+      "end": 2049.31,
+      "text": "this much probability."
+    },
+    {
+      "start": 2049.31,
+      "end": 2050.11,
+      "text": "And in that case, G of X takes this value."
+    },
+    {
+      "start": 2050.11,
+      "end": 2050.71,
+      "text": "OK."
+    },
+    {
+      "start": 2050.71,
+      "end": 2054.29,
+      "text": "G of X takes that value, and similarly here."
+    },
+    {
+      "start": 2054.29,
+      "end": 2057.59,
+      "text": "We end up doing exactly the same arithmetic."
+    },
+    {
+      "start": 2057.59,
+      "end": 2061.77,
+      "text": "It's only a question whether we bundle things together."
+    },
+    {
+      "start": 2061.77,
+      "end": 2065.77,
+      "text": "That is, if we calculate the probability of this, then"
+    },
+    {
+      "start": 2065.77,
+      "end": 2068.31,
+      "text": "we're bundling these two cases together."
+    },
+    {
+      "start": 2068.31,
+      "end": 2072.09,
+      "text": "Whereas if we do the addition up here, we do a separate"
+    },
+    {
+      "start": 2072.09,
+      "end": 2075.39,
+      "text": "calculation, this probability times this number, and then"
+    },
+    {
+      "start": 2075.39,
+      "end": 2077.97,
+      "text": "this probability times that number."
+    },
+    {
+      "start": 2077.97,
+      "end": 2080.09,
+      "text": "So it's just a simple rearrangement."
+    },
+    {
+      "start": 2080.09,
+      "end": 2083.05,
+      "text": "Of the way that we do the calculations."
+    },
+    {
+      "start": 2083.05,
+      "end": 2086.29,
+      "text": "But it does make a big difference in practice if you"
+    },
+    {
+      "start": 2086.29,
+      "end": 2089.05,
+      "text": "actually want to calculate expectations."
+    },
+    {
+      "start": 2089.05,
+      "end": 2092.37,
+      "text": "So the second procedure that I mentioned, where you do the"
+    },
+    {
+      "start": 2092.37,
+      "end": 2097.39,
+      "text": "addition by running over the X-axis, corresponds"
+    },
+    {
+      "start": 2097.39,
+      "end": 2099.69,
+      "text": "to this formula."
+    },
+    {
+      "start": 2099.69,
+      "end": 2103.79,
+      "text": "Consider all possibilities for X, their probabilities."
+    },
+    {
+      "start": 2103.79,
+      "end": 2107.53,
+      "text": "And when that X happens, how much money are you getting?"
+    },
+    {
+      "start": 2107.53,
+      "end": 2110.09,
+      "text": "That gives you the average money that you are getting."
+    },
+    {
+      "start": 2110.09,
+      "end": 2111.33,
+      "text": "All right."
+    },
+    {
+      "start": 2111.33,
+      "end": 2114.85,
+      "text": "So I kind of hand-waved and argued that it's just a"
+    },
+    {
+      "start": 2114.85,
+      "end": 2116.25,
+      "text": "different way of accounting."
+    },
+    {
+      "start": 2116.25,
+      "end": 2119.07,
+      "text": "Of course, one needs to prove this formula."
+    },
+    {
+      "start": 2119.07,
+      "end": 2120.97,
+      "text": "And fortunately, it can be proved."
+    },
+    {
+      "start": 2120.97,
+      "end": 2123.47,
+      "text": "You're going to see that in recitation."
+    },
+    {
+      "start": 2123.47,
+      "end": 2125.71,
+      "text": "Most people, once they're a little comfortable with the"
+    },
+    {
+      "start": 2125.71,
+      "end": 2128.59,
+      "text": "concepts of probability, actually believe that this is"
+    },
+    {
+      "start": 2128.59,
+      "end": 2129.77,
+      "text": "true by definition."
+    },
+    {
+      "start": 2129.77,
+      "end": 2131.85,
+      "text": "In fact, it's not true by definition."
+    },
+    {
+      "start": 2131.85,
+      "end": 2134.61,
+      "text": "It's called the law of the unconscious statistician."
+    },
+    {
+      "start": 2134.61,
+      "end": 2137.97,
+      "text": "It's something that you always do, but it's something that"
+    },
+    {
+      "start": 2137.97,
+      "end": 2139.21,
+      "text": "does require justification."
+    },
+    {
+      "start": 2140.09,
+      "end": 2141.09,
+      "text": "All right."
+    },
+    {
+      "start": 2141.09,
+      "end": 2144.15,
+      "text": "So this gives us, basically, a shortcut for calculating"
+    },
+    {
+      "start": 2144.15,
+      "end": 2147.77,
+      "text": "expected values of functions of a random variable without"
+    },
+    {
+      "start": 2147.77,
+      "end": 2151.99,
+      "text": "having to find the PMF of that function."
+    },
+    {
+      "start": 2151.99,
+      "end": 2157.17,
+      "text": "We can work with the PMF of the original function."
+    },
+    {
+      "start": 2157.17,
+      "end": 2157.49,
+      "text": "All right."
+    },
+    {
+      "start": 2157.49,
+      "end": 2160.93,
+      "text": "So we're going to use this property over and over."
+    },
+    {
+      "start": 2160.93,
+      "end": 2166.5,
+      "text": "Before we start using it, one general word of caution."
+    },
+    {
+      "start": 2166.5,
+      "end": 2170.84,
+      "text": "The average of a function of a random variable, in general, is"
+    },
+    {
+      "start": 2170.84,
+      "end": 2172.38,
+      "text": "not the same as the function."
+    },
+    {
+      "start": 2172.94,
+      "end": 2176.44,
+      "text": "It's the same as the function of the average."
+    },
+    {
+      "start": 2176.44,
+      "end": 2180.8,
+      "text": "So these two operations of taking averages and taking"
+    },
+    {
+      "start": 2180.8,
+      "end": 2183.18,
+      "text": "functions do not commute."
+    },
+    {
+      "start": 2183.18,
+      "end": 2188.4,
+      "text": "What this inequality tells you is that, in general, you cannot"
+    },
+    {
+      "start": 2188.4,
+      "end": 2194.41,
+      "text": "reason on the average."
+    },
+    {
+      "start": 2194.41,
+      "end": 2197.43,
+      "text": "So we're going to see instances of where this"
+    },
+    {
+      "start": 2197.43,
+      "end": 2199.61,
+      "text": "property is not true."
+    },
+    {
+      "start": 2199.61,
+      "end": 2201.07,
+      "text": "You're going to see lots of them."
+    },
+    {
+      "start": 2201.07,
+      "end": 2203.93,
+      "text": "Let me just throw it here that it's something that's not true"
+    },
+    {
+      "start": 2203.93,
+      "end": 2204.89,
+      "text": "in general."
+    },
+    {
+      "start": 2204.89,
+      "end": 2208.87,
+      "text": "But we will be interested in the exceptions where a relation"
+    },
+    {
+      "start": 2208.87,
+      "end": 2211.47,
+      "text": "like this is true."
+    },
+    {
+      "start": 2211.47,
+      "end": 2213.35,
+      "text": "But these will be the exceptions."
+    },
+    {
+      "start": 2213.35,
+      "end": 2217.61,
+      "text": "So in general, expectations are average, something like"
+    },
+    {
+      "start": 2217.61,
+      "end": 2221.71,
+      "text": "averages, but the function of an average is not the same as"
+    },
+    {
+      "start": 2221.71,
+      "end": 2225.05,
+      "text": "the average of the function."
+    },
+    {
+      "start": 2225.05,
+      "end": 2225.45,
+      "text": "OK."
+    },
+    {
+      "start": 2225.45,
+      "end": 2229.53,
+      "text": "So now let's go to properties of expectations."
+    },
+    {
+      "start": 2229.53,
+      "end": 2233.33,
+      "text": "Suppose that alpha is a real number."
+    },
+    {
+      "start": 2233.33,
+      "end": 2234.89,
+      "text": "And I ask you."
+    },
+    {
+      "start": 2234.89,
+      "end": 2237.75,
+      "text": "What's the expected value of that real number?"
+    },
+    {
+      "start": 2237.75,
+      "end": 2241.55,
+      "text": "So for example, if I write down this expression, expected"
+    },
+    {
+      "start": 2241.55,
+      "end": 2245.75,
+      "text": "value of 2, what is this?"
+    },
+    {
+      "start": 2245.75,
+      "end": 2249.47,
+      "text": "Well, we defined random variables, and we defined"
+    },
+    {
+      "start": 2249.47,
+      "end": 2251.87,
+      "text": "expectations of random variables."
+    },
+    {
+      "start": 2251.87,
+      "end": 2255.89,
+      "text": "So for this to make syntactic sense, this thing inside here"
+    },
+    {
+      "start": 2255.89,
+      "end": 2257.65,
+      "text": "should be a random variable."
+    },
+    {
+      "start": 2257.65,
+      "end": 2264.75,
+      "text": "Is 2, the number 2, is it a random variable?"
+    },
+    {
+      "start": 2264.75,
+      "end": 2266.09,
+      "text": "In some sense, yes."
+    },
+    {
+      "start": 2267.51,
+      "end": 2275.73,
+      "text": "It's the random variable that takes always the value of 2."
+    },
+    {
+      "start": 2275.73,
+      "end": 2278.57,
+      "text": "So suppose that you have some experiments, and that"
+    },
+    {
+      "start": 2278.57,
+      "end": 2282.59,
+      "text": "experiment always outputs 2 whenever it happens."
+    },
+    {
+      "start": 2282.59,
+      "end": 2285.87,
+      "text": "Then you can say, yes, it's a random experiment, but it"
+    },
+    {
+      "start": 2285.87,
+      "end": 2287.05,
+      "text": "always gives me 2."
+    },
+    {
+      "start": 2287.05,
+      "end": 2289.45,
+      "text": "The value of the random variable is always 2, no"
+    },
+    {
+      "start": 2289.45,
+      "end": 2290.47,
+      "text": "matter what."
+    },
+    {
+      "start": 2290.47,
+      "end": 2293.19,
+      "text": "It's kind of a degenerate random variable that doesn't"
+    },
+    {
+      "start": 2293.19,
+      "end": 2297.45,
+      "text": "have any real randomness in it, but it's still useful to"
+    },
+    {
+      "start": 2297.45,
+      "end": 2300.13,
+      "text": "think of it as a special case."
+    },
+    {
+      "start": 2300.13,
+      "end": 2302.99,
+      "text": "So it corresponds to a function from the sample space"
+    },
+    {
+      "start": 2302.99,
+      "end": 2306.77,
+      "text": "to the real line that takes only one value."
+    },
+    {
+      "start": 2306.77,
+      "end": 2310.95,
+      "text": "No matter what the outcome is, it always gives me a 2."
+    },
+    {
+      "start": 2310.95,
+      "end": 2314.33,
+      "text": "If you have a random variable that always gives you a 2,"
+    },
+    {
+      "start": 2314.33,
+      "end": 2318.05,
+      "text": "what is the expected value going to be?"
+    },
+    {
+      "start": 2318.05,
+      "end": 2320.85,
+      "text": "The only entry that shows up in this summation is that"
+    },
+    {
+      "start": 2320.85,
+      "end": 2323.01,
+      "text": "number 2."
+    },
+    {
+      "start": 2323.01,
+      "end": 2326.19,
+      "text": "The probability of a 2 is equal to 1, and the value of"
+    },
+    {
+      "start": 2326.19,
+      "end": 2327.31,
+      "text": "that random variable is equal to 2."
+    },
+    {
+      "start": 2327.31,
+      "end": 2331.07,
+      "text": "So it's the number itself."
+    },
+    {
+      "start": 2331.07,
+      "end": 2333.93,
+      "text": "So the average value in an experiment that always gives"
+    },
+    {
+      "start": 2333.93,
+      "end": 2336.61,
+      "text": "you 2's is 2."
+    },
+    {
+      "start": 2336.61,
+      "end": 2339.43,
+      "text": "All right, so that's nice and simple."
+    },
+    {
+      "start": 2339.43,
+      "end": 2345.11,
+      "text": "Now, let's think of our experiment where h was your"
+    },
+    {
+      "start": 2345.11,
+      "end": 2347.31,
+      "text": "height in inches."
+    },
+    {
+      "start": 2347.31,
+      "end": 2351.17,
+      "text": "And I know your height in inches, but I'm interested in"
+    },
+    {
+      "start": 2351.17,
+      "end": 2355.81,
+      "text": "your height measured in centimeters."
+    },
+    {
+      "start": 2355.81,
+      "end": 2357.03,
+      "text": "How is that going to be?"
+    },
+    {
+      "start": 2357.31,
+      "end": 2362.67,
+      "text": "How is it going to be related to your height in inches?"
+    },
+    {
+      "start": 2362.67,
+      "end": 2367.43,
+      "text": "Well, if I take your height in inches and convert it to"
+    },
+    {
+      "start": 2367.43,
+      "end": 2370.67,
+      "text": "centimeters, I have another random variable, which is"
+    },
+    {
+      "start": 2370.67,
+      "end": 2374.37,
+      "text": "always, no matter what, 2 and 1 half times bigger than the"
+    },
+    {
+      "start": 2374.37,
+      "end": 2376.61,
+      "text": "random variable I started with."
+    },
+    {
+      "start": 2376.61,
+      "end": 2380.03,
+      "text": "If you take some quantity and always multiply it by 2 and 1"
+    },
+    {
+      "start": 2380.03,
+      "end": 2383.59,
+      "text": "half, what happens to the average of that quantity?"
+    },
+    {
+      "start": 2383.59,
+      "end": 2386.99,
+      "text": "It also gets multiplied by 2 and 1 half."
+    },
+    {
+      "start": 2387.31,
+      "end": 2392.03,
+      "text": "So you get a relation like this, which says that the"
+    },
+    {
+      "start": 2392.03,
+      "end": 2396.55,
+      "text": "average height of a student measured in centimeters is 2"
+    },
+    {
+      "start": 2396.55,
+      "end": 2400.23,
+      "text": "and 1 half times the average height of a student measured"
+    },
+    {
+      "start": 2400.23,
+      "end": 2401.65,
+      "text": "in inches."
+    },
+    {
+      "start": 2401.65,
+      "end": 2403.73,
+      "text": "So that makes perfect intuitive sense."
+    },
+    {
+      "start": 2403.73,
+      "end": 2407.43,
+      "text": "If you generalize it, it gives us this relation, that if you"
+    },
+    {
+      "start": 2407.43,
+      "end": 2413.75,
+      "text": "have a number, you can pull it outside the expectation, and"
+    },
+    {
+      "start": 2413.75,
+      "end": 2416.19,
+      "text": "you get the right result."
+    },
+    {
+      "start": 2416.19,
+      "end": 2417.31,
+      "text": "So this is a case."
+    },
+    {
+      "start": 2417.31,
+      "end": 2420.45,
+      "text": "This is a case where you can reason on the average."
+    },
+    {
+      "start": 2420.45,
+      "end": 2423.17,
+      "text": "If you take a number, such as height, and multiply it by a"
+    },
+    {
+      "start": 2423.17,
+      "end": 2425.49,
+      "text": "certain number, you can reason on the average."
+    },
+    {
+      "start": 2425.49,
+      "end": 2429.67,
+      "text": "I multiply the numbers by 2, the averages will go up by 2."
+    },
+    {
+      "start": 2429.67,
+      "end": 2433.77,
+      "text": "So this is an exception to this cautionary statement that"
+    },
+    {
+      "start": 2433.77,
+      "end": 2435.45,
+      "text": "I had up there."
+    },
+    {
+      "start": 2435.45,
+      "end": 2439.83,
+      "text": "How do we prove that this fact is true?"
+    },
+    {
+      "start": 2439.83,
+      "end": 2444.35,
+      "text": "Well, we can use the expected value rule here, which tells"
+    },
+    {
+      "start": 2444.35,
+      "end": 2446.85,
+      "text": "us that the expected value of alpha x."
+    },
+    {
+      "start": 2447.31,
+      "end": 2455.73,
+      "text": "This is our g of x, essentially."
+    },
+    {
+      "start": 2455.73,
+      "end": 2462.39,
+      "text": "It is going to be the sum over all x's of my function g of x"
+    },
+    {
+      "start": 2462.39,
+      "end": 2464.93,
+      "text": "times the probability of the x's."
+    },
+    {
+      "start": 2464.93,
+      "end": 2471.27,
+      "text": "In our particular case, g of x is alpha times x, and we have"
+    },
+    {
+      "start": 2471.27,
+      "end": 2472.47,
+      "text": "those probabilities."
+    },
+    {
+      "start": 2472.47,
+      "end": 2477.23,
+      "text": "And the alpha goes outside the summation, so we get alpha sum"
+    },
+    {
+      "start": 2477.23,
+      "end": 2477.89,
+      "text": "of x's over x."
+    },
+    {
+      "start": 2477.89,
+      "end": 2483.57,
+      "text": "This is over x's, x p x of x, which is alpha times the"
+    },
+    {
+      "start": 2483.57,
+      "end": 2486.75,
+      "text": "expected value of x."
+    },
+    {
+      "start": 2486.75,
+      "end": 2490.59,
+      "text": "So that's how you prove this relation formally, using this"
+    },
+    {
+      "start": 2490.59,
+      "end": 2492.49,
+      "text": "rule up here."
+    },
+    {
+      "start": 2492.49,
+      "end": 2495.79,
+      "text": "And the next formula that I have here also gets"
+    },
+    {
+      "start": 2495.79,
+      "end": 2497.29,
+      "text": "proved the same way."
+    },
+    {
+      "start": 2497.29,
+      "end": 2501.12,
+      "text": "What does this formula tell you?"
+    },
+    {
+      "start": 2501.12,
+      "end": 2507.14,
+      "text": "If I take everybody's height in centimeters, we already"
+    },
+    {
+      "start": 2507.14,
+      "end": 2509.02,
+      "text": "multiplied by alpha."
+    },
+    {
+      "start": 2509.02,
+      "end": 2514.58,
+      "text": "And the gods give everyone a bonus of 10 extra centimeters."
+    },
+    {
+      "start": 2514.58,
+      "end": 2518.1,
+      "text": "What's going to happen to the average height of the class?"
+    },
+    {
+      "start": 2518.1,
+      "end": 2522.8,
+      "text": "Well, it will just go up by an extra 10 centimeters."
+    },
+    {
+      "start": 2522.8,
+      "end": 2528.06,
+      "text": "So this expectation is going to be giving you the bonus of"
+    },
+    {
+      "start": 2528.06,
+      "end": 2534.36,
+      "text": "beta, just adds up, adds a beta to the average height in"
+    },
+    {
+      "start": 2534.36,
+      "end": 2537.18,
+      "text": "centimeters, which we also know to be."
+    },
+    {
+      "start": 2539.02,
+      "end": 2544.48,
+      "text": "So alpha times the expected value of x plus beta."
+    },
+    {
+      "start": 2544.48,
+      "end": 2549.4,
+      "text": "So this is a linearity property of expectations."
+    },
+    {
+      "start": 2549.4,
+      "end": 2554.14,
+      "text": "If you take a linear function of a single random variable,"
+    },
+    {
+      "start": 2554.14,
+      "end": 2558.4,
+      "text": "the expected value of that linear function is the linear"
+    },
+    {
+      "start": 2558.4,
+      "end": 2561.14,
+      "text": "function of the expected value."
+    },
+    {
+      "start": 2561.14,
+      "end": 2564.48,
+      "text": "So this is our big exception to this cautionary note that we"
+    },
+    {
+      "start": 2564.48,
+      "end": 2568.7,
+      "text": "have equal if g is linear."
+    },
+    {
+      "start": 2569.02,
+      "end": 2585.9,
+      "text": "All right, so let's get to the last concept of the day."
+    },
+    {
+      "start": 2585.9,
+      "end": 2588.08,
+      "text": "What kind of functions of random variables"
+    },
+    {
+      "start": 2588.08,
+      "end": 2591.02,
+      "text": "may be of interest?"
+    },
+    {
+      "start": 2591.02,
+      "end": 2598.78,
+      "text": "One possibility might be the average value of x squared."
+    },
+    {
+      "start": 2598.78,
+      "end": 2600.14,
+      "text": "Why is it interesting?"
+    },
+    {
+      "start": 2600.14,
+      "end": 2601.68,
+      "text": "Well, why not?"
+    },
+    {
+      "start": 2601.68,
+      "end": 2607.56,
+      "text": "It's the simplest function that you can think of."
+    },
+    {
+      "start": 2607.56,
+      "end": 2611.78,
+      "text": "So if you want to calculate the expected value of x squared,"
+    },
+    {
+      "start": 2611.78,
+      "end": 2616.52,
+      "text": "you would use this general rule for how you can calculate"
+    },
+    {
+      "start": 2616.52,
+      "end": 2619.46,
+      "text": "expected values of functions of random variables."
+    },
+    {
+      "start": 2619.46,
+      "end": 2623.96,
+      "text": "You consider all the possible x's for each x you see what's"
+    },
+    {
+      "start": 2623.96,
+      "end": 2625.54,
+      "text": "the probability that it occurs."
+    },
+    {
+      "start": 2625.54,
+      "end": 2630.46,
+      "text": "And if that x occurs, you consider and see how big x"
+    },
+    {
+      "start": 2630.46,
+      "end": 2632.06,
+      "text": "squared is."
+    },
+    {
+      "start": 2632.06,
+      "end": 2634.78,
+      "text": "Now, one more interesting quantity, and more interesting"
+    },
+    {
+      "start": 2634.78,
+      "end": 2638.94,
+      "text": "expectation that you can calculate has to do not with x"
+    },
+    {
+      "start": 2638.94,
+      "end": 2639.62,
+      "text": "squared."
+    },
+    {
+      "start": 2639.62,
+      "end": 2641.02,
+      "text": "But with the distance of x squared and x squared, which is"
+    },
+    {
+      "start": 2641.02,
+      "end": 2641.6,
+      "text": "just x square."
+    },
+    {
+      "start": 2641.6,
+      "end": 2641.78,
+      "text": "All right?"
+    },
+    {
+      "start": 2641.78,
+      "end": 2645.72,
+      "text": "X from the mean, and then squared."
+    },
+    {
+      "start": 2645.72,
+      "end": 2650.8,
+      "text": "So let's try to parse what we've got up here."
+    },
+    {
+      "start": 2650.8,
+      "end": 2654.98,
+      "text": "Let's look just at the quantity inside here."
+    },
+    {
+      "start": 2654.98,
+      "end": 2659.19,
+      "text": "What kind of quantity is it?"
+    },
+    {
+      "start": 2659.19,
+      "end": 2661.13,
+      "text": "It's a random variable."
+    },
+    {
+      "start": 2661.13,
+      "end": 2661.99,
+      "text": "Why?"
+    },
+    {
+      "start": 2661.99,
+      "end": 2664.55,
+      "text": "X is random, a random variable."
+    },
+    {
+      "start": 2664.55,
+      "end": 2669.53,
+      "text": "If expected value of X is a number, subtract a number from"
+    },
+    {
+      "start": 2669.53,
+      "end": 2672.45,
+      "text": "a random variable, you get another random variable."
+    },
+    {
+      "start": 2672.45,
+      "end": 2675.63,
+      "text": "Take a random variable and square it, you get another"
+    },
+    {
+      "start": 2675.63,
+      "end": 2676.83,
+      "text": "random variable."
+    },
+    {
+      "start": 2676.83,
+      "end": 2680.53,
+      "text": "So the thing inside here is a legitimate random variable."
+    },
+    {
+      "start": 2680.53,
+      "end": 2684.87,
+      "text": "What kind of random variable is it?"
+    },
+    {
+      "start": 2684.87,
+      "end": 2687.71,
+      "text": "So suppose that we have our experiment, and we have"
+    },
+    {
+      "start": 2687.71,
+      "end": 2692.32,
+      "text": "different X's that can happen."
+    },
+    {
+      "start": 2692.32,
+      "end": 2695.76,
+      "text": "And the mean of X in this picture might be"
+    },
+    {
+      "start": 2695.76,
+      "end": 2700.49,
+      "text": "somewhere around here."
+    },
+    {
+      "start": 2700.49,
+      "end": 2702.43,
+      "text": "I do the experiment."
+    },
+    {
+      "start": 2702.43,
+      "end": 2706.75,
+      "text": "I obtain some numerical value of X. Let's say I obtain this"
+    },
+    {
+      "start": 2706.75,
+      "end": 2709.33,
+      "text": "numerical value."
+    },
+    {
+      "start": 2709.33,
+      "end": 2715.61,
+      "text": "I look at the distance from the mean, which is this length."
+    },
+    {
+      "start": 2715.61,
+      "end": 2718.47,
+      "text": "And I take the square of that."
+    },
+    {
+      "start": 2718.47,
+      "end": 2722.75,
+      "text": "Each time that I do the experiment, I go and record my"
+    },
+    {
+      "start": 2722.75,
+      "end": 2725.81,
+      "text": "distance from the mean and square it."
+    },
+    {
+      "start": 2725.81,
+      "end": 2729.51,
+      "text": "So I give more emphasis to big distances."
+    },
+    {
+      "start": 2729.51,
+      "end": 2733.39,
+      "text": "And then I take the average over all possible outcomes,"
+    },
+    {
+      "start": 2733.39,
+      "end": 2735.53,
+      "text": "all possible numerical values."
+    },
+    {
+      "start": 2735.53,
+      "end": 2736.75,
+      "text": "So I'm trying to compute."
+    },
+    {
+      "start": 2736.75,
+      "end": 2742.99,
+      "text": "I compute the average squared distance from the mean."
+    },
+    {
+      "start": 2742.99,
+      "end": 2747.77,
+      "text": "This corresponds to this formula here."
+    },
+    {
+      "start": 2747.77,
+      "end": 2751.13,
+      "text": "So the picture that I drew corresponds to that."
+    },
+    {
+      "start": 2751.13,
+      "end": 2755.87,
+      "text": "For every possible numerical value of X, that numerical"
+    },
+    {
+      "start": 2755.87,
+      "end": 2760.27,
+      "text": "value corresponds to a certain distance from the mean squared."
+    },
+    {
+      "start": 2760.27,
+      "end": 2764.61,
+      "text": "And I weight according to how likely is that particular value"
+    },
+    {
+      "start": 2764.61,
+      "end": 2766.37,
+      "text": "of X to arise."
+    },
+    {
+      "start": 2766.75,
+      "end": 2773.27,
+      "text": "So this measures the average squared distance from the mean."
+    },
+    {
+      "start": 2773.27,
+      "end": 2777.17,
+      "text": "Now, because of that expected value rule, of course, this"
+    },
+    {
+      "start": 2777.17,
+      "end": 2780.03,
+      "text": "thing is the same as that expectation."
+    },
+    {
+      "start": 2780.03,
+      "end": 2783.87,
+      "text": "It's the average value of the random variable, which is the"
+    },
+    {
+      "start": 2783.87,
+      "end": 2786.33,
+      "text": "squared distance from the mean."
+    },
+    {
+      "start": 2786.33,
+      "end": 2789.83,
+      "text": "With this probability, the random variable takes on this"
+    },
+    {
+      "start": 2789.83,
+      "end": 2791.25,
+      "text": "numerical value."
+    },
+    {
+      "start": 2791.25,
+      "end": 2794.45,
+      "text": "And the squared distance from the mean ends up taking that"
+    },
+    {
+      "start": 2794.45,
+      "end": 2795.87,
+      "text": "particular numerical value."
+    },
+    {
+      "start": 2796.75,
+      "end": 2800.57,
+      "text": "OK, so why is the variance interesting?"
+    },
+    {
+      "start": 2800.57,
+      "end": 2805.59,
+      "text": "It tells us how far away from the mean we expect to be on the"
+    },
+    {
+      "start": 2805.59,
+      "end": 2806.91,
+      "text": "average."
+    },
+    {
+      "start": 2806.91,
+      "end": 2809.55,
+      "text": "Well, actually, we're not counting distances from the"
+    },
+    {
+      "start": 2809.55,
+      "end": 2811.63,
+      "text": "mean, it's distances squared."
+    },
+    {
+      "start": 2811.63,
+      "end": 2816.51,
+      "text": "So it gives more emphasis to the kind of outliers in here."
+    },
+    {
+      "start": 2816.51,
+      "end": 2821.11,
+      "text": "But it's a measure of how spread out a distribution is."
+    },
+    {
+      "start": 2821.11,
+      "end": 2825.63,
+      "text": "A big variance means that those bars go far to the left and the"
+    },
+    {
+      "start": 2825.63,
+      "end": 2826.75,
+      "text": "right, typically."
+    },
+    {
+      "start": 2826.75,
+      "end": 2830.41,
+      "text": "Whereas a small variance would mean that all those bars are"
+    },
+    {
+      "start": 2830.41,
+      "end": 2833.85,
+      "text": "tightly concentrated around the mean value."
+    },
+    {
+      "start": 2833.85,
+      "end": 2836.21,
+      "text": "It's the average squared deviation."
+    },
+    {
+      "start": 2836.21,
+      "end": 2838.97,
+      "text": "Small variance means that we generally have small"
+    },
+    {
+      "start": 2838.97,
+      "end": 2839.57,
+      "text": "deviations."
+    },
+    {
+      "start": 2839.57,
+      "end": 2842.51,
+      "text": "Large variances mean that we generally have large"
+    },
+    {
+      "start": 2842.51,
+      "end": 2844.21,
+      "text": "deviations."
+    },
+    {
+      "start": 2844.21,
+      "end": 2847.31,
+      "text": "Now, as a practical matter, when you want to calculate the"
+    },
+    {
+      "start": 2847.31,
+      "end": 2851.21,
+      "text": "variance, there's a handy formula, which I'm not proving."
+    },
+    {
+      "start": 2851.21,
+      "end": 2853.09,
+      "text": "But you will see it in recitation."
+    },
+    {
+      "start": 2853.09,
+      "end": 2854.91,
+      "text": "It's just two lines of algebra."
+    },
+    {
+      "start": 2854.91,
+      "end": 2855.07,
+      "text": "."
+    },
+    {
+      "start": 2855.07,
+      "end": 2855.17,
+      "text": "."
+    },
+    {
+      "start": 2855.17,
+      "end": 2855.23,
+      "text": "."
+    },
+    {
+      "start": 2855.23,
+      "end": 2855.29,
+      "text": "."
+    },
+    {
+      "start": 2855.29,
+      "end": 2855.35,
+      "text": "."
+    },
+    {
+      "start": 2855.35,
+      "end": 2855.45,
+      "text": "."
+    },
+    {
+      "start": 2855.45,
+      "end": 2855.51,
+      "text": "."
+    },
+    {
+      "start": 2855.51,
+      "end": 2855.61,
+      "text": "."
+    },
+    {
+      "start": 2855.61,
+      "end": 2855.71,
+      "text": "."
+    },
+    {
+      "start": 2855.71,
+      "end": 2855.81,
+      "text": "."
+    },
+    {
+      "start": 2855.81,
+      "end": 2855.91,
+      "text": "."
+    },
+    {
+      "start": 2855.91,
+      "end": 2856.01,
+      "text": "."
+    },
+    {
+      "start": 2856.01,
+      "end": 2856.11,
+      "text": "."
+    },
+    {
+      "start": 2856.11,
+      "end": 2856.21,
+      "text": "."
+    },
+    {
+      "start": 2856.21,
+      "end": 2856.29,
+      "text": "."
+    },
+    {
+      "start": 2856.29,
+      "end": 2856.31,
+      "text": "."
+    },
+    {
+      "start": 2856.31,
+      "end": 2856.41,
+      "text": "."
+    },
+    {
+      "start": 2856.41,
+      "end": 2856.45,
+      "text": "."
+    },
+    {
+      "start": 2856.45,
+      "end": 2856.51,
+      "text": "."
+    },
+    {
+      "start": 2856.51,
+      "end": 2856.61,
+      "text": "."
+    },
+    {
+      "start": 2856.61,
+      "end": 2856.71,
+      "text": "."
+    },
+    {
+      "start": 2856.71,
+      "end": 2856.75,
+      "text": "."
+    },
+    {
+      "start": 2856.75,
+      "end": 2856.89,
+      "text": "."
+    },
+    {
+      "start": 2856.89,
+      "end": 2857.27,
+      "text": "."
+    },
+    {
+      "start": 2857.27,
+      "end": 2857.29,
+      "text": "."
+    },
+    {
+      "start": 2857.29,
+      "end": 2857.33,
+      "text": "."
+    },
+    {
+      "start": 2857.33,
+      "end": 2857.39,
+      "text": "."
+    },
+    {
+      "start": 2857.39,
+      "end": 2857.49,
+      "text": "."
+    },
+    {
+      "start": 2857.49,
+      "end": 2857.69,
+      "text": "."
+    },
+    {
+      "start": 2857.69,
+      "end": 2858.39,
+      "text": "."
+    },
+    {
+      "start": 2858.39,
+      "end": 2858.41,
+      "text": "."
+    },
+    {
+      "start": 2858.41,
+      "end": 2858.59,
+      "text": "."
+    },
+    {
+      "start": 2858.59,
+      "end": 2858.61,
+      "text": "."
+    },
+    {
+      "start": 2858.61,
+      "end": 2858.63,
+      "text": "."
+    },
+    {
+      "start": 2858.63,
+      "end": 2858.65,
+      "text": "."
+    },
+    {
+      "start": 2858.65,
+      "end": 2858.81,
+      "text": "."
+    },
+    {
+      "start": 2858.81,
+      "end": 2858.89,
+      "text": "."
+    },
+    {
+      "start": 2858.89,
+      "end": 2858.95,
+      "text": "."
+    },
+    {
+      "start": 2858.95,
+      "end": 2858.99,
+      "text": "."
+    },
+    {
+      "start": 2858.99,
+      "end": 2859.13,
+      "text": "."
+    },
+    {
+      "start": 2859.13,
+      "end": 2859.19,
+      "text": "."
+    },
+    {
+      "start": 2859.19,
+      "end": 2859.25,
+      "text": "."
+    },
+    {
+      "start": 2859.25,
+      "end": 2859.29,
+      "text": "."
+    },
+    {
+      "start": 2859.29,
+      "end": 2859.39,
+      "text": "."
+    },
+    {
+      "start": 2859.39,
+      "end": 2859.45,
+      "text": "."
+    },
+    {
+      "start": 2859.45,
+      "end": 2859.51,
+      "text": "."
+    },
+    {
+      "start": 2859.51,
+      "end": 2859.57,
+      "text": "."
+    },
+    {
+      "start": 2859.57,
+      "end": 2859.59,
+      "text": "."
+    },
+    {
+      "start": 2859.59,
+      "end": 2859.65,
+      "text": "."
+    },
+    {
+      "start": 2859.65,
+      "end": 2859.69,
+      "text": "."
+    },
+    {
+      "start": 2859.69,
+      "end": 2859.71,
+      "text": "."
+    },
+    {
+      "start": 2859.71,
+      "end": 2859.93,
+      "text": "."
+    },
+    {
+      "start": 2859.93,
+      "end": 2859.97,
+      "text": "."
+    },
+    {
+      "start": 2859.97,
+      "end": 2860.01,
+      "text": "."
+    },
+    {
+      "start": 2860.01,
+      "end": 2860.15,
+      "text": "."
+    },
+    {
+      "start": 2860.15,
+      "end": 2860.21,
+      "text": "."
+    },
+    {
+      "start": 2860.21,
+      "end": 2860.27,
+      "text": "."
+    },
+    {
+      "start": 2860.27,
+      "end": 2860.33,
+      "text": "."
+    },
+    {
+      "start": 2860.33,
+      "end": 2860.35,
+      "text": "."
+    },
+    {
+      "start": 2860.35,
+      "end": 2860.73,
+      "text": "."
+    },
+    {
+      "start": 2860.73,
+      "end": 2860.75,
+      "text": "."
+    },
+    {
+      "start": 2860.75,
+      "end": 2863.13,
+      "text": "We need to calculate the expected value of the random"
+    },
+    {
+      "start": 2863.13,
+      "end": 2865.21,
+      "text": "variable and the expected value of the squared of the"
+    },
+    {
+      "start": 2865.21,
+      "end": 2866.37,
+      "text": "random variable."
+    },
+    {
+      "start": 2866.37,
+      "end": 2866.55,
+      "text": "."
+    },
+    {
+      "start": 2866.55,
+      "end": 2866.63,
+      "text": "."
+    },
+    {
+      "start": 2866.63,
+      "end": 2866.65,
+      "text": "."
+    },
+    {
+      "start": 2866.65,
+      "end": 2869.89,
+      "text": "These two are going to give us the variance."
+    },
+    {
+      "start": 2869.89,
+      "end": 2874.01,
+      "text": "To summarize what we did up here, the variance by"
+    },
+    {
+      "start": 2874.01,
+      "end": 2877.37,
+      "text": "definition is given by this formula."
+    },
+    {
+      "start": 2877.37,
+      "end": 2881.55,
+      "text": "It's the expected value of the squared deviation."
+    },
+    {
+      "start": 2881.55,
+      "end": 2886.41,
+      "text": "But we have the equivalent formula which comes from"
+    },
+    {
+      "start": 2886.41,
+      "end": 2893.95,
+      "text": "application of the expected value rule to the function g"
+    },
+    {
+      "start": 2893.95,
+      "end": 2906.32,
+      "text": "of x equals to x minus expected value of x squared."
+    },
+    {
+      "start": 2906.32,
+      "end": 2907.46,
+      "text": "So this is the definition."
+    },
+    {
+      "start": 2907.46,
+      "end": 2911.45,
+      "text": "This comes from the expected value rule."
+    },
+    {
+      "start": 2911.45,
+      "end": 2914.99,
+      "text": "What are some properties of the variance?"
+    },
+    {
+      "start": 2914.99,
+      "end": 2918.65,
+      "text": "Of course, variances are always non-negative."
+    },
+    {
+      "start": 2918.65,
+      "end": 2920.83,
+      "text": "Why is it always non-negative?"
+    },
+    {
+      "start": 2920.83,
+      "end": 2923.47,
+      "text": "Well, you look at the definition, and you're just"
+    },
+    {
+      "start": 2923.47,
+      "end": 2925.47,
+      "text": "adding up non-negative things."
+    },
+    {
+      "start": 2925.47,
+      "end": 2927.65,
+      "text": "We're adding squared deviations."
+    },
+    {
+      "start": 2927.65,
+      "end": 2929.65,
+      "text": "So when you add non-negative things, you get"
+    },
+    {
+      "start": 2929.65,
+      "end": 2931.47,
+      "text": "something non-negative."
+    },
+    {
+      "start": 2931.47,
+      "end": 2935.81,
+      "text": "The next question is, how do things scale if you take a"
+    },
+    {
+      "start": 2935.81,
+      "end": 2939.89,
+      "text": "linear function of a random variable?"
+    },
+    {
+      "start": 2939.89,
+      "end": 2942.35,
+      "text": "Let's think about the effect of beta."
+    },
+    {
+      "start": 2942.35,
+      "end": 2946.43,
+      "text": "If I take a random variable and add a constant to it, how"
+    },
+    {
+      "start": 2946.43,
+      "end": 2949.83,
+      "text": "does this affect the amount of spread that we have?"
+    },
+    {
+      "start": 2949.83,
+      "end": 2950.83,
+      "text": "It doesn't affect."
+    },
+    {
+      "start": 2950.83,
+      "end": 2954.89,
+      "text": "Whatever the spread of this thing is, if I add a constant"
+    },
+    {
+      "start": 2954.89,
+      "end": 2958.83,
+      "text": "beta, it just moves this diagram here, but the spread"
+    },
+    {
+      "start": 2958.83,
+      "end": 2961.93,
+      "text": "doesn't grow or get reduced."
+    },
+    {
+      "start": 2961.93,
+      "end": 2964.47,
+      "text": "The thing is that when I'm adding a constant to a random"
+    },
+    {
+      "start": 2964.47,
+      "end": 2968.17,
+      "text": "variable, all the x's that are going to appear are further to"
+    },
+    {
+      "start": 2968.17,
+      "end": 2972.91,
+      "text": "the right, but the expected value also moves to the right."
+    },
+    {
+      "start": 2972.91,
+      "end": 2976.03,
+      "text": "And since we're only interested in distances from"
+    },
+    {
+      "start": 2976.03,
+      "end": 2979.49,
+      "text": "the mean, these distances do not get affected."
+    },
+    {
+      "start": 2979.49,
+      "end": 2980.77,
+      "text": "x gets increased."
+    },
+    {
+      "start": 2980.77,
+      "end": 2983.95,
+      "text": "By something, the mean gets increased by that same"
+    },
+    {
+      "start": 2983.95,
+      "end": 2986.19,
+      "text": "something, the difference stays the same."
+    },
+    {
+      "start": 2986.19,
+      "end": 2989.35,
+      "text": "So adding a constant to a random variable doesn't do"
+    },
+    {
+      "start": 2989.35,
+      "end": 2991.09,
+      "text": "anything to its variance."
+    },
+    {
+      "start": 2991.09,
+      "end": 2994.89,
+      "text": "But if I multiply a random variable by a constant alpha,"
+    },
+    {
+      "start": 2994.89,
+      "end": 2998.71,
+      "text": "what is that going to do to its variance?"
+    },
+    {
+      "start": 2998.71,
+      "end": 3004.73,
+      "text": "Because we have a square here, when I multiply my random"
+    },
+    {
+      "start": 3004.73,
+      "end": 3008.45,
+      "text": "variable by a constant, this x gets multiplied by a constant."
+    },
+    {
+      "start": 3008.45,
+      "end": 3010.77,
+      "text": "The mean gets multiplied by a constant."
+    },
+    {
+      "start": 3010.77,
+      "end": 3015.63,
+      "text": "The square gets multiplied by the square of that constant."
+    },
+    {
+      "start": 3015.63,
+      "end": 3018.95,
+      "text": "And because of that reason, we get the square of alpha"
+    },
+    {
+      "start": 3018.95,
+      "end": 3020.15,
+      "text": "showing up here."
+    },
+    {
+      "start": 3020.15,
+      "end": 3022.81,
+      "text": "So that's how variances transform under linear"
+    },
+    {
+      "start": 3022.81,
+      "end": 3023.65,
+      "text": "transformations."
+    },
+    {
+      "start": 3023.65,
+      "end": 3026.63,
+      "text": "You multiply a random variable by a constant, the variance"
+    },
+    {
+      "start": 3026.63,
+      "end": 3030.53,
+      "text": "goes up by the square of that same constant."
+    },
+    {
+      "start": 3030.53,
+      "end": 3032.77,
+      "text": "OK, that's it for today."
+    },
+    {
+      "start": 3032.77,
+      "end": 3034.03,
+      "text": "See you Wednesday."
+    }
+  ]
+}

@@ -1,0 +1,4932 @@
+{
+  "lecture": "lec23",
+  "language": "en",
+  "duration": 2971.072,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.44,
+      "text": "The following content is provided under a Creative"
+    },
+    {
+      "start": 2.44,
+      "end": 3.96,
+      "text": "Commons license."
+    },
+    {
+      "start": 3.96,
+      "end": 6.28,
+      "text": "Your support will help MIT OpenCourseWare"
+    },
+    {
+      "start": 6.28,
+      "end": 10.64,
+      "text": "continue to offer high quality educational resources for free."
+    },
+    {
+      "start": 10.64,
+      "end": 13.26,
+      "text": "To make a donation or view additional materials"
+    },
+    {
+      "start": 13.26,
+      "end": 17.2,
+      "text": "from hundreds of MIT courses, visit MIT OpenCourseWare"
+    },
+    {
+      "start": 17.2,
+      "end": 22.15,
+      "text": "at ocw.mit.edu."
+    },
+    {
+      "start": 22.15,
+      "end": 24.07,
+      "text": "So for the last three lectures,"
+    },
+    {
+      "start": 24.07,
+      "end": 27.55,
+      "text": "we're going to talk about classical statistics, the way"
+    },
+    {
+      "start": 27.55,
+      "end": 29.39,
+      "text": "statistics can be done if you don't"
+    },
+    {
+      "start": 29.39,
+      "end": 32.37,
+      "text": "want to assume a prior distribution"
+    },
+    {
+      "start": 32.37,
+      "end": 34.85,
+      "text": "on the unknown parameters."
+    },
+    {
+      "start": 34.85,
+      "end": 38.27,
+      "text": "Today, we're going to focus mostly on the estimation side"
+    },
+    {
+      "start": 38.27,
+      "end": 41.91,
+      "text": "and leave hypothesis testing for the next two lectures."
+    },
+    {
+      "start": 41.91,
+      "end": 45.11,
+      "text": "So there's one generic method that one"
+    },
+    {
+      "start": 45.11,
+      "end": 50.07,
+      "text": "can use to carry out parameter estimation."
+    },
+    {
+      "start": 50.07,
+      "end": 51.83,
+      "text": "That's the maximum likelihood method."
+    },
+    {
+      "start": 51.83,
+      "end": 53.99,
+      "text": "We are going to define what it is."
+    },
+    {
+      "start": 53.99,
+      "end": 57.79,
+      "text": "Then we will look at the most common estimation"
+    },
+    {
+      "start": 57.79,
+      "end": 59.39,
+      "text": "problem there is, which is to estimate"
+    },
+    {
+      "start": 59.39,
+      "end": 62.13,
+      "text": "the mean of a given distribution."
+    },
+    {
+      "start": 62.13,
+      "end": 66.35,
+      "text": "And we're going to talk about confidence intervals, which"
+    },
+    {
+      "start": 66.35,
+      "end": 71.43,
+      "text": "refers to providing an interval around your estimate, which has"
+    },
+    {
+      "start": 71.43,
+      "end": 75.43,
+      "text": "some properties of the kind that the parameter is highly"
+    },
+    {
+      "start": 75.43,
+      "end": 77.63,
+      "text": "likely to be inside that interval."
+    },
+    {
+      "start": 77.63,
+      "end": 79.85,
+      "text": "But we will be careful about how to interpret"
+    },
+    {
+      "start": 79.85,
+      "end": 81.91,
+      "text": "that particular statement."
+    },
+    {
+      "start": 81.91,
+      "end": 85.91,
+      "text": "OK, so the big framework first."
+    },
+    {
+      "start": 85.91,
+      "end": 89.39,
+      "text": "The picture is almost the same as the one that we had in the case,"
+    },
+    {
+      "start": 89.39,
+      "end": 91.11,
+      "text": "of Bayesian statistics."
+    },
+    {
+      "start": 91.11,
+      "end": 93.55,
+      "text": "We have some unknown parameter."
+    },
+    {
+      "start": 93.55,
+      "end": 95.47,
+      "text": "And we have a measuring device."
+    },
+    {
+      "start": 95.47,
+      "end": 98.11,
+      "text": "There is some noise, some randomness."
+    },
+    {
+      "start": 98.11,
+      "end": 102.53,
+      "text": "And we get an observation, x, whose distribution depends on"
+    },
+    {
+      "start": 102.53,
+      "end": 104.53,
+      "text": "the value of the parameter."
+    },
+    {
+      "start": 104.53,
+      "end": 107.83,
+      "text": "However, the big change from the Bayesian setting is that"
+    },
+    {
+      "start": 107.83,
+      "end": 110.79,
+      "text": "here, this parameter is just a number."
+    },
+    {
+      "start": 110.79,
+      "end": 113.15,
+      "text": "It's not modeled as a random variable."
+    },
+    {
+      "start": 113.15,
+      "end": 115.85,
+      "text": "It does not have a probability distribution."
+    },
+    {
+      "start": 115.85,
+      "end": 117.41,
+      "text": "There's nothing random about it."
+    },
+    {
+      "start": 117.41,
+      "end": 118.69,
+      "text": "It's a constant."
+    },
+    {
+      "start": 118.69,
+      "end": 119.17,
+      "text": "It just happens to be a constant."
+    },
+    {
+      "start": 119.17,
+      "end": 119.39,
+      "text": "It just happens to be a constant."
+    },
+    {
+      "start": 119.39,
+      "end": 122.33,
+      "text": "It just happens that we don't know what that constant is."
+    },
+    {
+      "start": 122.33,
+      "end": 125.95,
+      "text": "And in particular, this probability distribution here,"
+    },
+    {
+      "start": 125.95,
+      "end": 130.29,
+      "text": "the distribution of x, depends on theta."
+    },
+    {
+      "start": 130.29,
+      "end": 134.17,
+      "text": "But this is not a conditional distribution in the usual sense"
+    },
+    {
+      "start": 134.17,
+      "end": 135.49,
+      "text": "of the word."
+    },
+    {
+      "start": 135.49,
+      "end": 138.49,
+      "text": "Conditional distributions were defined when we had two random"
+    },
+    {
+      "start": 138.49,
+      "end": 139.03,
+      "text": "variables."
+    },
+    {
+      "start": 139.03,
+      "end": 141.71,
+      "text": "We condition one random variable on the other."
+    },
+    {
+      "start": 141.71,
+      "end": 145.85,
+      "text": "And we use the bar to separate the x from the theta."
+    },
+    {
+      "start": 145.85,
+      "end": 147.83,
+      "text": "To make the point that this is not a conditional"
+    },
+    {
+      "start": 147.83,
+      "end": 149.17,
+      "text": "distribution, we use a different"
+    },
+    {
+      "start": 149.17,
+      "end": 149.81,
+      "text": "notation."
+    },
+    {
+      "start": 149.81,
+      "end": 151.73,
+      "text": "We put a semicolon here."
+    },
+    {
+      "start": 151.73,
+      "end": 155.75,
+      "text": "And what this is meant to say is that x has a distribution."
+    },
+    {
+      "start": 155.75,
+      "end": 159.61,
+      "text": "That distribution has a certain parameter."
+    },
+    {
+      "start": 159.61,
+      "end": 162.23,
+      "text": "And we don't know what that parameter is."
+    },
+    {
+      "start": 162.23,
+      "end": 166.23,
+      "text": "So for example, this might be a normal distribution with"
+    },
+    {
+      "start": 166.23,
+      "end": 169.05,
+      "text": "variance 1, but a mean theta."
+    },
+    {
+      "start": 169.05,
+      "end": 170.55,
+      "text": "We don't know what theta is."
+    },
+    {
+      "start": 170.55,
+      "end": 172.97,
+      "text": "And we want to estimate it."
+    },
+    {
+      "start": 172.97,
+      "end": 176.27,
+      "text": "Once we have this setting, then your job is to design this"
+    },
+    {
+      "start": 176.27,
+      "end": 177.61,
+      "text": "box, the estimator."
+    },
+    {
+      "start": 177.61,
+      "end": 178.95,
+      "text": "The estimator is some data."
+    },
+    {
+      "start": 178.95,
+      "end": 181.85,
+      "text": "It's a data processing box that takes the measurement and"
+    },
+    {
+      "start": 181.85,
+      "end": 186.27,
+      "text": "produces an estimate of the unknown parameter."
+    },
+    {
+      "start": 186.27,
+      "end": 190.57,
+      "text": "Now the notation that's used here is as if x and theta were"
+    },
+    {
+      "start": 190.57,
+      "end": 193.57,
+      "text": "single, one-dimensional quantities."
+    },
+    {
+      "start": 193.57,
+      "end": 196.61,
+      "text": "But actually, everything we say remains valid if you"
+    },
+    {
+      "start": 196.61,
+      "end": 200.07,
+      "text": "interpret x and theta as vectors of parameters."
+    },
+    {
+      "start": 200.07,
+      "end": 203.87,
+      "text": "So for example, you may obtain several measurements, x1 up to"
+    },
+    {
+      "start": 203.87,
+      "end": 205.01,
+      "text": "xn."
+    },
+    {
+      "start": 205.01,
+      "end": 207.95,
+      "text": "And there may be several unknown parameters in the"
+    },
+    {
+      "start": 207.95,
+      "end": 208.39,
+      "text": "background."
+    },
+    {
+      "start": 208.95,
+      "end": 214.19,
+      "text": "Once more, we do not have, and we do not want to assume a"
+    },
+    {
+      "start": 214.19,
+      "end": 215.73,
+      "text": "prior distribution on theta."
+    },
+    {
+      "start": 215.73,
+      "end": 217.07,
+      "text": "It's a constant."
+    },
+    {
+      "start": 217.07,
+      "end": 219.01,
+      "text": "And if you want to think mathematically about this"
+    },
+    {
+      "start": 219.01,
+      "end": 221.49,
+      "text": "situation, it's as if you have many different"
+    },
+    {
+      "start": 221.49,
+      "end": 223.33,
+      "text": "probabilistic models."
+    },
+    {
+      "start": 223.33,
+      "end": 226.35,
+      "text": "So a normal with this mean, or a normal with that mean, or a"
+    },
+    {
+      "start": 226.35,
+      "end": 227.35,
+      "text": "normal with that mean."
+    },
+    {
+      "start": 227.35,
+      "end": 229.75,
+      "text": "These are alternative candidate probabilistic"
+    },
+    {
+      "start": 229.75,
+      "end": 230.69,
+      "text": "models."
+    },
+    {
+      "start": 230.69,
+      "end": 235.07,
+      "text": "And we want to try to make a decision about which one is"
+    },
+    {
+      "start": 235.07,
+      "end": 236.45,
+      "text": "the correct model."
+    },
+    {
+      "start": 236.45,
+      "end": 238.95,
+      "text": "In some cases, we have to choose just between the two."
+    },
+    {
+      "start": 238.95,
+      "end": 240.37,
+      "text": "And you can choose between a small number of models."
+    },
+    {
+      "start": 240.37,
+      "end": 243.39,
+      "text": "For example, you have a coin with an unknown bias."
+    },
+    {
+      "start": 243.39,
+      "end": 246.41,
+      "text": "The bias is either 1 1⁄2 or 3⁄4."
+    },
+    {
+      "start": 246.41,
+      "end": 249.31,
+      "text": "You're going to flip the coin a few times, and you try to"
+    },
+    {
+      "start": 249.31,
+      "end": 254.15,
+      "text": "decide whether the true bias is this one or is that one."
+    },
+    {
+      "start": 254.15,
+      "end": 257.59,
+      "text": "So in this case, we have two specific alternative"
+    },
+    {
+      "start": 257.59,
+      "end": 260.81,
+      "text": "probabilistic models from which we want to distinguish."
+    },
+    {
+      "start": 260.81,
+      "end": 265.01,
+      "text": "But sometimes, things are a little more complicated."
+    },
+    {
+      "start": 265.01,
+      "end": 268.33,
+      "text": "For example, you have a coin, and you have one hypothesis"
+    },
+    {
+      "start": 268.33,
+      "end": 270.93,
+      "text": "that my coin is unbiased."
+    },
+    {
+      "start": 270.93,
+      "end": 274.57,
+      "text": "And the other hypothesis is that my coin is biased."
+    },
+    {
+      "start": 274.57,
+      "end": 277.33,
+      "text": "And you do your experiments, and you want to come up with a"
+    },
+    {
+      "start": 277.33,
+      "end": 282.99,
+      "text": "decision that decides whether this is true or this one is"
+    },
+    {
+      "start": 282.99,
+      "end": 283.95,
+      "text": "true."
+    },
+    {
+      "start": 283.95,
+      "end": 286.55,
+      "text": "In this case, we're not dealing with just two"
+    },
+    {
+      "start": 286.55,
+      "end": 288.71,
+      "text": "alternative probabilistic models."
+    },
+    {
+      "start": 288.71,
+      "end": 291.51,
+      "text": "This one is a specific model for the coin."
+    },
+    {
+      "start": 291.51,
+      "end": 294.29,
+      "text": "But this one actually corresponds to lots of"
+    },
+    {
+      "start": 294.29,
+      "end": 296.85,
+      "text": "possible alternative coin models."
+    },
+    {
+      "start": 296.85,
+      "end": 298.17,
+      "text": "So this includes the model"
+    },
+    {
+      "start": 298.17,
+      "end": 302.95,
+      "text": "where theta is 0.6, the model where theta is 0.7, theta 0.8,"
+    },
+    {
+      "start": 302.95,
+      "end": 303.89,
+      "text": "and so on."
+    },
+    {
+      "start": 303.89,
+      "end": 307.33,
+      "text": "So we're trying to discriminate between one model"
+    },
+    {
+      "start": 307.33,
+      "end": 309.47,
+      "text": "and lots of alternative models."
+    },
+    {
+      "start": 309.47,
+      "end": 311.57,
+      "text": "How does one go about this?"
+    },
+    {
+      "start": 311.57,
+      "end": 314.75,
+      "text": "Well, there's some systematic ways that one can approach"
+    },
+    {
+      "start": 314.75,
+      "end": 316.13,
+      "text": "problems of this kind."
+    },
+    {
+      "start": 316.13,
+      "end": 319.85,
+      "text": "And we will start talking about these next time."
+    },
+    {
+      "start": 319.85,
+      "end": 322.45,
+      "text": "So today, we're going to focus on estimation problems."
+    },
+    {
+      "start": 322.45,
+      "end": 327.05,
+      "text": "In estimation problems, theta is a quantity which is a real"
+    },
+    {
+      "start": 327.05,
+      "end": 327.45,
+      "text": "number."
+    },
+    {
+      "start": 327.45,
+      "end": 328.07,
+      "text": "A continuous"
+    },
+    {
+      "start": 328.07,
+      "end": 329.09,
+      "text": "parameter."
+    },
+    {
+      "start": 329.09,
+      "end": 331.81,
+      "text": "We are going to design this box."
+    },
+    {
+      "start": 331.81,
+      "end": 334.25,
+      "text": "So what we get out of this box is an estimate."
+    },
+    {
+      "start": 334.25,
+      "end": 337.87,
+      "text": "Now, notice that this estimate here is a random variable."
+    },
+    {
+      "start": 337.87,
+      "end": 342.01,
+      "text": "Even though theta is deterministic, this is random"
+    },
+    {
+      "start": 342.01,
+      "end": 345.11,
+      "text": "because it's a function of the data that we observe."
+    },
+    {
+      "start": 345.11,
+      "end": 346.41,
+      "text": "The data are random."
+    },
+    {
+      "start": 346.41,
+      "end": 348.95,
+      "text": "We are applying a function to the data to"
+    },
+    {
+      "start": 348.95,
+      "end": 350.21,
+      "text": "construct our estimate."
+    },
+    {
+      "start": 350.21,
+      "end": 352.83,
+      "text": "So since it's a function of random variables, it's a"
+    },
+    {
+      "start": 352.83,
+      "end": 354.61,
+      "text": "random variable itself."
+    },
+    {
+      "start": 354.61,
+      "end": 357.95,
+      "text": "The distribution of theta hat depends on the distribution of"
+    },
+    {
+      "start": 357.95,
+      "end": 358.71,
+      "text": "x."
+    },
+    {
+      "start": 358.71,
+      "end": 361.19,
+      "text": "The distribution of x is affected by theta."
+    },
+    {
+      "start": 361.19,
+      "end": 364.85,
+      "text": "So in the end, the distribution of your estimate theta hat will"
+    },
+    {
+      "start": 364.85,
+      "end": 369.87,
+      "text": "also be affected by whatever theta happens to be."
+    },
+    {
+      "start": 369.87,
+      "end": 373.09,
+      "text": "Our general objective when designing estimators is that we"
+    },
+    {
+      "start": 373.09,
+      "end": 378.09,
+      "text": "want to get, in the end, an estimation error which is not"
+    },
+    {
+      "start": 378.09,
+      "end": 379.13,
+      "text": "too large."
+    },
+    {
+      "start": 379.13,
+      "end": 381.79,
+      "text": "But we'll have to make that specific again."
+    },
+    {
+      "start": 381.79,
+      "end": 384.73,
+      "text": "It's what exactly we mean by that."
+    },
+    {
+      "start": 384.73,
+      "end": 386.99,
+      "text": "So how do we go about this problem?"
+    },
+    {
+      "start": 389.62,
+      "end": 400.12,
+      "text": "One general approach is to pick a theta under which the"
+    },
+    {
+      "start": 400.12,
+      "end": 405.54,
+      "text": "data that we observe, that is the X's, are most likely to"
+    },
+    {
+      "start": 405.54,
+      "end": 407.18,
+      "text": "have occurred."
+    },
+    {
+      "start": 407.18,
+      "end": 412.66,
+      "text": "So I observe X. For any given theta, I can calculate this"
+    },
+    {
+      "start": 412.66,
+      "end": 417.26,
+      "text": "quantity, which tells me under this particular theta, the X"
+    },
+    {
+      "start": 417.26,
+      "end": 420.6,
+      "text": "that you observed had this probability of occurring."
+    },
+    {
+      "start": 420.6,
+      "end": 423.24,
+      "text": "Under that theta, the X that you observed had that"
+    },
+    {
+      "start": 423.24,
+      "end": 424.72,
+      "text": "probability of occurring."
+    },
+    {
+      "start": 424.72,
+      "end": 428.54,
+      "text": "You just choose that theta, which makes the data that you"
+    },
+    {
+      "start": 428.54,
+      "end": 432.72,
+      "text": "observed most likely."
+    },
+    {
+      "start": 432.72,
+      "end": 435.76,
+      "text": "It's interesting to compare this maximum likelihood"
+    },
+    {
+      "start": 435.76,
+      "end": 439.08,
+      "text": "estimates with the estimate that you would have if you"
+    },
+    {
+      "start": 439.08,
+      "end": 441.98,
+      "text": "were in a Bayesian setting, and you were using maximum"
+    },
+    {
+      "start": 441.98,
+      "end": 444.96,
+      "text": "a posteriori probability estimation."
+    },
+    {
+      "start": 444.96,
+      "end": 448.5,
+      "text": "In the Bayesian setting, what we do is,"
+    },
+    {
+      "start": 448.5,
+      "end": 454.32,
+      "text": "given the data, we use the prior distribution on theta,"
+    },
+    {
+      "start": 454.32,
+      "end": 458.1,
+      "text": "and we calculate the posterior distribution of"
+    },
+    {
+      "start": 458.1,
+      "end": 461.6,
+      "text": "theta given X."
+    },
+    {
+      "start": 461.6,
+      "end": 464.28,
+      "text": "Notice that this is sort of the opposite from"
+    },
+    {
+      "start": 464.28,
+      "end": 466.0,
+      "text": "what we have here."
+    },
+    {
+      "start": 466.0,
+      "end": 469.12,
+      "text": "This is the probability of X for a particular value of"
+    },
+    {
+      "start": 469.12,
+      "end": 471.74,
+      "text": "theta, whereas this is the probability of theta for a"
+    },
+    {
+      "start": 471.74,
+      "end": 475.34,
+      "text": "particular X. So it's the opposite type of conditioning."
+    },
+    {
+      "start": 475.34,
+      "end": 478.2,
+      "text": "In the Bayesian setting, theta is a random variable."
+    },
+    {
+      "start": 478.2,
+      "end": 479.86,
+      "text": "So we can talk about the probability"
+    },
+    {
+      "start": 479.86,
+      "end": 481.52,
+      "text": "distribution of theta."
+    },
+    {
+      "start": 481.52,
+      "end": 484.72,
+      "text": "So how do these two compare, except for this syntactic"
+    },
+    {
+      "start": 484.72,
+      "end": 488.12,
+      "text": "difference that the order of X's and thetas are reversed?"
+    },
+    {
+      "start": 488.12,
+      "end": 491.38,
+      "text": "Let's write down in full detail what this posterior"
+    },
+    {
+      "start": 491.38,
+      "end": 493.26,
+      "text": "distribution of theta is."
+    },
+    {
+      "start": 493.26,
+      "end": 497.34,
+      "text": "By the Bayes rule, this conditional distribution is"
+    },
+    {
+      "start": 497.34,
+      "end": 500.38,
+      "text": "obtained from the prior and the model of the measurement"
+    },
+    {
+      "start": 500.38,
+      "end": 504.46,
+      "text": "process that we have, and we get this expression."
+    },
+    {
+      "start": 504.46,
+      "end": 507.9,
+      "text": "So in Bayesian estimation, we want to do to"
+    },
+    {
+      "start": 507.9,
+      "end": 510.84,
+      "text": "find the most likely value of theta."
+    },
+    {
+      "start": 510.84,
+      "end": 512.74,
+      "text": "And we need to maximize this quantity"
+    },
+    {
+      "start": 512.74,
+      "end": 514.52,
+      "text": "over all possible thetas."
+    },
+    {
+      "start": 514.52,
+      "end": 518.2,
+      "text": "First thing to notice is that the denominator is a constant."
+    },
+    {
+      "start": 518.2,
+      "end": 520.2,
+      "text": "It does not involve theta."
+    },
+    {
+      "start": 520.2,
+      "end": 523.24,
+      "text": "So when you maximize this quantity, you don't care about"
+    },
+    {
+      "start": 523.24,
+      "end": 524.5,
+      "text": "the denominator."
+    },
+    {
+      "start": 524.5,
+      "end": 527.76,
+      "text": "You just want to maximize the numerator."
+    },
+    {
+      "start": 527.76,
+      "end": 532.28,
+      "text": "Now here, things start to look a little more similar."
+    },
+    {
+      "start": 532.28,
+      "end": 536.52,
+      "text": "And they would be exactly of the same kind if that term"
+    },
+    {
+      "start": 536.52,
+      "end": 537.9,
+      "text": "here was absent."
+    },
+    {
+      "start": 537.9,
+      "end": 539.9,
+      "text": "If the prior was absent."
+    },
+    {
+      "start": 539.9,
+      "end": 542.88,
+      "text": "The two are going to become the same if that"
+    },
+    {
+      "start": 542.88,
+      "end": 545.82,
+      "text": "prior was just a constant."
+    },
+    {
+      "start": 545.82,
+      "end": 550.18,
+      "text": "So if that prior is a constant, then maximum"
+    },
+    {
+      "start": 550.18,
+      "end": 553.72,
+      "text": "likelihood estimation takes exactly the same form as"
+    },
+    {
+      "start": 553.72,
+      "end": 557.36,
+      "text": "Bayesian maximum posterior probability estimation."
+    },
+    {
+      "start": 557.36,
+      "end": 561.22,
+      "text": "So you can give this particular interpretation of"
+    },
+    {
+      "start": 561.22,
+      "end": 562.66,
+      "text": "maximum likelihood estimation."
+    },
+    {
+      "start": 562.66,
+      "end": 567.36,
+      "text": "Maximum likelihood estimation is essentially what you have"
+    },
+    {
+      "start": 567.36,
+      "end": 570.12,
+      "text": "done if you were in a Bayesian world."
+    },
+    {
+      "start": 570.12,
+      "end": 575.0,
+      "text": "And you had assumed a prior on the thetas that's uniform."
+    },
+    {
+      "start": 575.0,
+      "end": 582.64,
+      "text": "Or the thetas being equally likely."
+    },
+    {
+      "start": 582.64,
+      "end": 585.76,
+      "text": "So let's look at a simple example."
+    },
+    {
+      "start": 585.76,
+      "end": 588.52,
+      "text": "Suppose that the xi's are independent, identically"
+    },
+    {
+      "start": 588.52,
+      "end": 592.7,
+      "text": "distributed random variables with certain parameter theta."
+    },
+    {
+      "start": 592.7,
+      "end": 595.92,
+      "text": "So the distribution of each one of the xi's is this"
+    },
+    {
+      "start": 595.92,
+      "end": 597.96,
+      "text": "particular term."
+    },
+    {
+      "start": 597.96,
+      "end": 599.84,
+      "text": "So theta is one-dimensional."
+    },
+    {
+      "start": 599.84,
+      "end": 601.28,
+      "text": "It's a one-dimensional parameter."
+    },
+    {
+      "start": 601.28,
+      "end": 603.16,
+      "text": "But we have several data."
+    },
+    {
+      "start": 603.16,
+      "end": 607.72,
+      "text": "We write down the formula for the probability of a particular"
+    },
+    {
+      "start": 607.72,
+      "end": 612.34,
+      "text": "x vector given a particular value of theta."
+    },
+    {
+      "start": 612.34,
+      "end": 615.04,
+      "text": "But again, when I use the word given here, it's not in the"
+    },
+    {
+      "start": 615.04,
+      "end": 616.06,
+      "text": "conditioning sense."
+    },
+    {
+      "start": 616.06,
+      "end": 618.74,
+      "text": "It's the value of the density for a"
+    },
+    {
+      "start": 618.74,
+      "end": 621.64,
+      "text": "particular choice of theta."
+    },
+    {
+      "start": 621.64,
+      "end": 624.86,
+      "text": "Here I wrote down, I defined maximum likelihood estimation"
+    },
+    {
+      "start": 624.86,
+      "end": 626.16,
+      "text": "in terms of PMFs."
+    },
+    {
+      "start": 626.16,
+      "end": 628.04,
+      "text": "That's what you would do if the x's were"
+    },
+    {
+      "start": 628.04,
+      "end": 629.92,
+      "text": "discrete random variables."
+    },
+    {
+      "start": 629.92,
+      "end": 630.84,
+      "text": "Here the x's are"
+    },
+    {
+      "start": 630.84,
+      "end": 632.1,
+      "text": "continuous random variables."
+    },
+    {
+      "start": 632.1,
+      "end": 635.98,
+      "text": "So instead, I'm using the PDF instead of the PMF."
+    },
+    {
+      "start": 635.98,
+      "end": 639.52,
+      "text": "So this definition here generalizes to the case of"
+    },
+    {
+      "start": 639.52,
+      "end": 640.9,
+      "text": "continuous random variables."
+    },
+    {
+      "start": 640.9,
+      "end": 644.62,
+      "text": "And you use f's instead of x's, our usual recipe."
+    },
+    {
+      "start": 644.62,
+      "end": 647.56,
+      "text": "So the maximum likelihood estimate is defined."
+    },
+    {
+      "start": 647.56,
+      "end": 651.86,
+      "text": "Now since the xi's are independent, the joint density"
+    },
+    {
+      "start": 651.86,
+      "end": 654.4,
+      "text": "of all the x's together is the product of"
+    },
+    {
+      "start": 654.4,
+      "end": 657.68,
+      "text": "the individual densities."
+    },
+    {
+      "start": 657.68,
+      "end": 659.16,
+      "text": "So you look at this quantity."
+    },
+    {
+      "start": 659.16,
+      "end": 660.62,
+      "text": "This is the density."
+    },
+    {
+      "start": 660.84,
+      "end": 663.28,
+      "text": "Or a sort of probability of observing a"
+    },
+    {
+      "start": 663.28,
+      "end": 665.32,
+      "text": "particular sequence of x's."
+    },
+    {
+      "start": 665.32,
+      "end": 668.2,
+      "text": "And we ask the question, what's the value of theta that"
+    },
+    {
+      "start": 668.2,
+      "end": 670.92,
+      "text": "makes the x's that we observe most likely?"
+    },
+    {
+      "start": 670.92,
+      "end": 673.12,
+      "text": "So we want to carry out this maximization."
+    },
+    {
+      "start": 673.12,
+      "end": 677.4,
+      "text": "Now this maximization is just a calculational problem."
+    },
+    {
+      "start": 677.4,
+      "end": 679.88,
+      "text": "We're going to do this maximization by taking the"
+    },
+    {
+      "start": 679.88,
+      "end": 681.84,
+      "text": "logarithm of this expression."
+    },
+    {
+      "start": 681.84,
+      "end": 683.86,
+      "text": "Maximizing an expression is the same as"
+    },
+    {
+      "start": 683.86,
+      "end": 685.74,
+      "text": "maximizing the logarithm."
+    },
+    {
+      "start": 685.74,
+      "end": 688.76,
+      "text": "So the logarithm of this expression, logarithm of a"
+    },
+    {
+      "start": 688.76,
+      "end": 690.84,
+      "text": "product, is the sum of the logarithms."
+    },
+    {
+      "start": 690.84,
+      "end": 694.42,
+      "text": "You get contributions from this theta term."
+    },
+    {
+      "start": 694.42,
+      "end": 697.66,
+      "text": "There's n of these, so we get an n log theta."
+    },
+    {
+      "start": 697.66,
+      "end": 700.42,
+      "text": "And then we have the sum of the logarithms of these terms."
+    },
+    {
+      "start": 700.42,
+      "end": 705.02,
+      "text": "It gives us minus theta, and then the sum of the x's."
+    },
+    {
+      "start": 705.02,
+      "end": 707.04,
+      "text": "So we need to maximize this expression"
+    },
+    {
+      "start": 707.04,
+      "end": 708.64,
+      "text": "with respect to theta."
+    },
+    {
+      "start": 708.64,
+      "end": 711.12,
+      "text": "The way to do this maximization is you take the"
+    },
+    {
+      "start": 711.12,
+      "end": 713.34,
+      "text": "derivative with respect to theta."
+    },
+    {
+      "start": 713.34,
+      "end": 718.5,
+      "text": "And you get n over theta equals to the sum of the x's."
+    },
+    {
+      "start": 718.5,
+      "end": 720.28,
+      "text": "And then you solve for theta."
+    },
+    {
+      "start": 720.28,
+      "end": 722.94,
+      "text": "And you find that the maximum likelihood estimate"
+    },
+    {
+      "start": 722.94,
+      "end": 725.14,
+      "text": "is this quantity."
+    },
+    {
+      "start": 725.14,
+      "end": 732.34,
+      "text": "Which sort of makes sense, because this is the"
+    },
+    {
+      "start": 732.34,
+      "end": 736.7,
+      "text": "reciprocal of the sample mean of the x's."
+    },
+    {
+      "start": 736.7,
+      "end": 739.52,
+      "text": "Theta in an exponential distribution, we know that"
+    },
+    {
+      "start": 739.52,
+      "end": 743.38,
+      "text": "it's 1 over the mean of the exponential distribution."
+    },
+    {
+      "start": 743.38,
+      "end": 746.96,
+      "text": "So it kind of looks like a reasonable estimate."
+    },
+    {
+      "start": 746.96,
+      "end": 749.58,
+      "text": "So in any case, this is the estimate that the maximum"
+    },
+    {
+      "start": 749.58,
+      "end": 753.42,
+      "text": "likelihood estimation procedure tells us that we"
+    },
+    {
+      "start": 753.42,
+      "end": 755.78,
+      "text": "should report."
+    },
+    {
+      "start": 755.78,
+      "end": 760.52,
+      "text": "This formula here tells you what to do if you have already"
+    },
+    {
+      "start": 760.52,
+      "end": 762.64,
+      "text": "observed specific numbers."
+    },
+    {
+      "start": 762.64,
+      "end": 766.0,
+      "text": "If you have observed specific numbers, then you observe this"
+    },
+    {
+      "start": 766.0,
+      "end": 769.14,
+      "text": "particular number as your estimate of theta."
+    },
+    {
+      "start": 769.14,
+      "end": 771.96,
+      "text": "If you want to describe your estimation procedure more"
+    },
+    {
+      "start": 771.96,
+      "end": 775.88,
+      "text": "abstractly, what you have constructed is an estimator,"
+    },
+    {
+      "start": 775.88,
+      "end": 779.58,
+      "text": "which is a box that takes in the random variables, capital"
+    },
+    {
+      "start": 779.58,
+      "end": 785.48,
+      "text": "X1 up to capital Xn, and produces out your estimate,"
+    },
+    {
+      "start": 785.48,
+      "end": 787.98,
+      "text": "which is also a random variable, because it's a"
+    },
+    {
+      "start": 787.98,
+      "end": 791.48,
+      "text": "function of these random variables, and is denoted by"
+    },
+    {
+      "start": 791.48,
+      "end": 796.3,
+      "text": "an uppercase theta to indicate that this is now a random"
+    },
+    {
+      "start": 796.3,
+      "end": 797.46,
+      "text": "variable."
+    },
+    {
+      "start": 797.46,
+      "end": 801.02,
+      "text": "So this is an equality about numbers."
+    },
+    {
+      "start": 801.02,
+      "end": 803.86,
+      "text": "This is a description of the general procedure, which is an"
+    },
+    {
+      "start": 803.86,
+      "end": 805.72,
+      "text": "equality between two random variables."
+    },
+    {
+      "start": 808.34,
+      "end": 809.44,
+      "text": "And this gives you the"
+    },
+    {
+      "start": 809.44,
+      "end": 814.6,
+      "text": "sort of more abstract view of what we are doing here."
+    },
+    {
+      "start": 814.6,
+      "end": 818.0,
+      "text": "All right, so what can we tell about our estimate?"
+    },
+    {
+      "start": 818.0,
+      "end": 820.1,
+      "text": "Is it good or is it bad?"
+    },
+    {
+      "start": 820.1,
+      "end": 822.76,
+      "text": "So we should look at this particular random variable"
+    },
+    {
+      "start": 822.76,
+      "end": 826.22,
+      "text": "and talk about the statistical properties that it has."
+    },
+    {
+      "start": 826.22,
+      "end": 829.96,
+      "text": "What we would like is this random variable to be close to"
+    },
+    {
+      "start": 829.96,
+      "end": 835.94,
+      "text": "the true value of theta with high probability, no matter"
+    },
+    {
+      "start": 835.94,
+      "end": 839.4,
+      "text": "what theta is, since we don't know what theta is."
+    },
+    {
+      "start": 839.4,
+      "end": 841.4,
+      "text": "Let's make a little more specific the"
+    },
+    {
+      "start": 841.4,
+      "end": 845.07,
+      "text": "properties that we want."
+    },
+    {
+      "start": 845.07,
+      "end": 848.43,
+      "text": "So we cook up an estimator somehow."
+    },
+    {
+      "start": 848.43,
+      "end": 852.41,
+      "text": "So this estimator corresponds again to a box that takes data"
+    },
+    {
+      "start": 852.41,
+      "end": 857.43,
+      "text": "in the capital Xs and produces an estimate, theta hat."
+    },
+    {
+      "start": 857.43,
+      "end": 858.67,
+      "text": "This estimate is random."
+    },
+    {
+      "start": 858.67,
+      "end": 863.03,
+      "text": "Sometimes it will be above the true value of theta."
+    },
+    {
+      "start": 863.03,
+      "end": 865.61,
+      "text": "Sometimes it will be below."
+    },
+    {
+      "start": 865.61,
+      "end": 870.35,
+      "text": "Ideally, we would like it to not have a systematic error on"
+    },
+    {
+      "start": 870.35,
+      "end": 870.77,
+      "text": "the positive side."
+    },
+    {
+      "start": 870.77,
+      "end": 872.77,
+      "text": "Or the negative side."
+    },
+    {
+      "start": 872.77,
+      "end": 877.53,
+      "text": "So a reasonable wish to have for a good estimator is that on"
+    },
+    {
+      "start": 877.53,
+      "end": 881.65,
+      "text": "the average, it gives you the correct value."
+    },
+    {
+      "start": 881.65,
+      "end": 885.75,
+      "text": "Now here, let's be a little more specific about what that"
+    },
+    {
+      "start": 885.75,
+      "end": 887.69,
+      "text": "expectation is."
+    },
+    {
+      "start": 887.69,
+      "end": 891.23,
+      "text": "This is an expectation with respect to the probability"
+    },
+    {
+      "start": 891.23,
+      "end": 894.21,
+      "text": "distribution of theta hat."
+    },
+    {
+      "start": 894.21,
+      "end": 898.75,
+      "text": "The probability distribution of theta hat is affected by"
+    },
+    {
+      "start": 898.75,
+      "end": 900.33,
+      "text": "the probability distribution of the Xs."
+    },
+    {
+      "start": 900.77,
+      "end": 903.71,
+      "text": "Because theta hat is a function of the Xs."
+    },
+    {
+      "start": 903.71,
+      "end": 905.89,
+      "text": "And the probability distribution of the Xs is"
+    },
+    {
+      "start": 905.89,
+      "end": 909.17,
+      "text": "affected by the true value of theta."
+    },
+    {
+      "start": 909.17,
+      "end": 913.67,
+      "text": "So depending on which one is the true value of theta, this"
+    },
+    {
+      "start": 913.67,
+      "end": 916.59,
+      "text": "is going to be a different expectation."
+    },
+    {
+      "start": 916.59,
+      "end": 920.55,
+      "text": "So if you were to write this expectation out in more"
+    },
+    {
+      "start": 920.55,
+      "end": 925.79,
+      "text": "detail, it would look something like this."
+    },
+    {
+      "start": 925.79,
+      "end": 929.41,
+      "text": "You need to write down the probability distribution of"
+    },
+    {
+      "start": 929.41,
+      "end": 930.65,
+      "text": "theta hat."
+    },
+    {
+      "start": 930.77,
+      "end": 936.45,
+      "text": "And this is going to be some function."
+    },
+    {
+      "start": 936.45,
+      "end": 941.19,
+      "text": "But this function depends on the true theta, is affected by"
+    },
+    {
+      "start": 941.19,
+      "end": 942.77,
+      "text": "the true theta."
+    },
+    {
+      "start": 942.77,
+      "end": 948.27,
+      "text": "And then you integrate this with respect to theta hat."
+    },
+    {
+      "start": 948.27,
+      "end": 949.35,
+      "text": "What's the point here?"
+    },
+    {
+      "start": 949.35,
+      "end": 953.25,
+      "text": "Again, theta hat is a function of the Xs."
+    },
+    {
+      "start": 953.25,
+      "end": 956.85,
+      "text": "So the density of theta hat is affected by"
+    },
+    {
+      "start": 956.85,
+      "end": 958.37,
+      "text": "the density of the Xs."
+    },
+    {
+      "start": 958.37,
+      "end": 960.69,
+      "text": "The density of the Xs is affected by the"
+    },
+    {
+      "start": 960.69,
+      "end": 962.35,
+      "text": "true value of theta."
+    },
+    {
+      "start": 962.35,
+      "end": 965.73,
+      "text": "So the distribution of theta hat is affected by the true"
+    },
+    {
+      "start": 965.73,
+      "end": 967.63,
+      "text": "value of theta."
+    },
+    {
+      "start": 967.63,
+      "end": 971.59,
+      "text": "Another way to put it is, as I mentioned a few minutes ago, in"
+    },
+    {
+      "start": 971.59,
+      "end": 975.29,
+      "text": "this business, it's as if we are considering different"
+    },
+    {
+      "start": 975.29,
+      "end": 977.27,
+      "text": "possible probabilistic models."
+    },
+    {
+      "start": 977.27,
+      "end": 980.45,
+      "text": "One probabilistic model for each choice of theta."
+    },
+    {
+      "start": 980.45,
+      "end": 982.55,
+      "text": "And we're trying to guess which one of these"
+    },
+    {
+      "start": 982.55,
+      "end": 985.21,
+      "text": "probabilistic models is the true one."
+    },
+    {
+      "start": 985.21,
+      "end": 988.39,
+      "text": "One way of emphasizing the fact that this expression"
+    },
+    {
+      "start": 988.39,
+      "end": 992.35,
+      "text": "depends on the true theta is to put a little subscript here."
+    },
+    {
+      "start": 992.35,
+      "end": 996.81,
+      "text": "Expectation under the particular value of the"
+    },
+    {
+      "start": 996.81,
+      "end": 998.31,
+      "text": "parameter theta."
+    },
+    {
+      "start": 998.31,
+      "end": 1002.45,
+      "text": "So depending on what value the true parameter theta takes,"
+    },
+    {
+      "start": 1002.45,
+      "end": 1005.01,
+      "text": "this expectation will have a different value."
+    },
+    {
+      "start": 1005.01,
+      "end": 1009.73,
+      "text": "And what we would like is that no matter what the true value"
+    },
+    {
+      "start": 1009.73,
+      "end": 1015.33,
+      "text": "is, that our estimate will not have a bias on the positive or"
+    },
+    {
+      "start": 1015.33,
+      "end": 1017.17,
+      "text": "the negative sides."
+    },
+    {
+      "start": 1017.17,
+      "end": 1020.15,
+      "text": "So this is a property that's desirable."
+    },
+    {
+      "start": 1020.15,
+      "end": 1022.11,
+      "text": "Is it always going to be true?"
+    },
+    {
+      "start": 1022.11,
+      "end": 1022.35,
+      "text": "Not always."
+    },
+    {
+      "start": 1022.35,
+      "end": 1023.17,
+      "text": "Not necessarily."
+    },
+    {
+      "start": 1023.17,
+      "end": 1025.23,
+      "text": "Depends on what estimator we construct."
+    },
+    {
+      "start": 1029.17,
+      "end": 1032.37,
+      "text": "Is it true for our exponential example?"
+    },
+    {
+      "start": 1032.37,
+      "end": 1033.57,
+      "text": "Unfortunately not."
+    },
+    {
+      "start": 1033.57,
+      "end": 1036.59,
+      "text": "The estimate that we have in the exponential example turns"
+    },
+    {
+      "start": 1036.59,
+      "end": 1038.29,
+      "text": "out to be biased."
+    },
+    {
+      "start": 1038.29,
+      "end": 1042.89,
+      "text": "And one extreme way of seeing this is to consider the case"
+    },
+    {
+      "start": 1042.89,
+      "end": 1045.19,
+      "text": "where our sample size is 1."
+    },
+    {
+      "start": 1045.19,
+      "end": 1047.01,
+      "text": "We're trying to estimate theta."
+    },
+    {
+      "start": 1047.01,
+      "end": 1050.47,
+      "text": "And the estimator from the previous slide in that case is"
+    },
+    {
+      "start": 1050.47,
+      "end": 1052.11,
+      "text": "just 1 over x1."
+    },
+    {
+      "start": 1052.11,
+      "end": 1058.01,
+      "text": "Now x1 has a fair amount of density in the vicinity of 0,"
+    },
+    {
+      "start": 1058.01,
+      "end": 1061.39,
+      "text": "which means that 1 over x1 has significant probability of"
+    },
+    {
+      "start": 1061.39,
+      "end": 1062.81,
+      "text": "being very large."
+    },
+    {
+      "start": 1062.81,
+      "end": 1066.15,
+      "text": "And if you do the calculation, this ultimately makes the"
+    },
+    {
+      "start": 1066.15,
+      "end": 1069.15,
+      "text": "expected value of 1 over x1 to be infinite."
+    },
+    {
+      "start": 1069.15,
+      "end": 1072.87,
+      "text": "Now infinity is definitely not the correct value."
+    },
+    {
+      "start": 1072.87,
+      "end": 1076.33,
+      "text": "So our estimate is biased upwards."
+    },
+    {
+      "start": 1076.33,
+      "end": 1080.13,
+      "text": "And it's actually biased a lot upwards."
+    },
+    {
+      "start": 1080.13,
+      "end": 1081.99,
+      "text": "So that's how things are."
+    },
+    {
+      "start": 1081.99,
+      "end": 1086.69,
+      "text": "Maximum likelihood estimates, in general, will be biased."
+    },
+    {
+      "start": 1086.69,
+      "end": 1090.85,
+      "text": "But under some conditions, they will turn out to be"
+    },
+    {
+      "start": 1090.85,
+      "end": 1092.75,
+      "text": "asymptotically unbiased."
+    },
+    {
+      "start": 1092.75,
+      "end": 1096.79,
+      "text": "That is, as you get more and more data, as your x vector is"
+    },
+    {
+      "start": 1096.79,
+      "end": 1100.73,
+      "text": "longer and longer, with independent data, the"
+    },
+    {
+      "start": 1100.73,
+      "end": 1104.79,
+      "text": "estimates that you're going to have, the expected value of"
+    },
+    {
+      "start": 1104.79,
+      "end": 1106.87,
+      "text": "your estimator is going to get closer and"
+    },
+    {
+      "start": 1106.87,
+      "end": 1108.37,
+      "text": "closer to the true value."
+    },
+    {
+      "start": 1108.37,
+      "end": 1111.35,
+      "text": "So you do have some nice asymptotic properties, but"
+    },
+    {
+      "start": 1111.35,
+      "end": 1111.89,
+      "text": "we're not going to do that."
+    },
+    {
+      "start": 1111.89,
+      "end": 1113.99,
+      "text": "We're not going to prove anything like this."
+    },
+    {
+      "start": 1113.99,
+      "end": 1117.81,
+      "text": "Speaking of asymptotic properties, in general, what we"
+    },
+    {
+      "start": 1117.81,
+      "end": 1121.85,
+      "text": "would like to have is that as you collect more and more data,"
+    },
+    {
+      "start": 1121.85,
+      "end": 1126.53,
+      "text": "you get the correct answer in some sense."
+    },
+    {
+      "start": 1126.53,
+      "end": 1129.35,
+      "text": "And the sense that we're going to use here is the limiting"
+    },
+    {
+      "start": 1129.35,
+      "end": 1132.55,
+      "text": "sense of convergence in probability, since this is the"
+    },
+    {
+      "start": 1132.55,
+      "end": 1135.25,
+      "text": "only notion of convergence of random variables that we have"
+    },
+    {
+      "start": 1135.25,
+      "end": 1136.53,
+      "text": "in our hands."
+    },
+    {
+      "start": 1136.53,
+      "end": 1140.29,
+      "text": "This is similar to what we had in the Polster problem, for"
+    },
+    {
+      "start": 1140.29,
+      "end": 1141.17,
+      "text": "example."
+    },
+    {
+      "start": 1141.17,
+      "end": 1144.89,
+      "text": "If we had a bigger and bigger sample size, we would be more"
+    },
+    {
+      "start": 1144.89,
+      "end": 1148.35,
+      "text": "and more confident that the estimate that we obtain is"
+    },
+    {
+      "start": 1148.35,
+      "end": 1151.99,
+      "text": "close to the unknown true parameter of the distribution"
+    },
+    {
+      "start": 1151.99,
+      "end": 1153.33,
+      "text": "that we have."
+    },
+    {
+      "start": 1153.33,
+      "end": 1156.41,
+      "text": "So this is a desirable property."
+    },
+    {
+      "start": 1156.41,
+      "end": 1160.73,
+      "text": "If you have an infinitely large amount of data, you"
+    },
+    {
+      "start": 1160.73,
+      "end": 1165.97,
+      "text": "should be able to estimate an unknown parameter more or less"
+    },
+    {
+      "start": 1165.97,
+      "end": 1166.89,
+      "text": "exactly."
+    },
+    {
+      "start": 1166.89,
+      "end": 1171.09,
+      "text": "So this is a desirable property of"
+    },
+    {
+      "start": 1171.09,
+      "end": 1172.27,
+      "text": "estimators."
+    },
+    {
+      "start": 1172.27,
+      "end": 1175.55,
+      "text": "It turns out that maximum likelihood estimation given"
+    },
+    {
+      "start": 1175.55,
+      "end": 1179.31,
+      "text": "independent data does have this property under mild"
+    },
+    {
+      "start": 1179.31,
+      "end": 1180.29,
+      "text": "conditions."
+    },
+    {
+      "start": 1180.29,
+      "end": 1183.35,
+      "text": "So maximum likelihood estimation in this respect is"
+    },
+    {
+      "start": 1183.35,
+      "end": 1185.15,
+      "text": "a good approach."
+    },
+    {
+      "start": 1185.15,
+      "end": 1188.49,
+      "text": "So let's see, do we have this consistency property in our"
+    },
+    {
+      "start": 1188.49,
+      "end": 1190.15,
+      "text": "exponential example?"
+    },
+    {
+      "start": 1190.15,
+      "end": 1196.57,
+      "text": "In our exponential example, we used this quantity to estimate"
+    },
+    {
+      "start": 1196.57,
+      "end": 1199.05,
+      "text": "the unknown parameter theta."
+    },
+    {
+      "start": 1199.05,
+      "end": 1200.99,
+      "text": "What properties does this quantity have?"
+    },
+    {
+      "start": 1200.99,
+      "end": 1203.21,
+      "text": "As n goes to infinity."
+    },
+    {
+      "start": 1203.21,
+      "end": 1206.55,
+      "text": "Well, this quantity is the reciprocal of that quantity up"
+    },
+    {
+      "start": 1206.55,
+      "end": 1209.31,
+      "text": "here, which is the sample mean."
+    },
+    {
+      "start": 1209.31,
+      "end": 1212.95,
+      "text": "We know from the weak law of large numbers that the sample"
+    },
+    {
+      "start": 1212.95,
+      "end": 1216.31,
+      "text": "mean converges to the expectation."
+    },
+    {
+      "start": 1216.31,
+      "end": 1219.23,
+      "text": "So this property here comes from the weak"
+    },
+    {
+      "start": 1219.23,
+      "end": 1221.67,
+      "text": "law of large numbers."
+    },
+    {
+      "start": 1221.67,
+      "end": 1225.39,
+      "text": "In probability, this quantity converges to the expected value,"
+    },
+    {
+      "start": 1225.39,
+      "end": 1229.81,
+      "text": "which for exponential distributions is 1 over theta."
+    },
+    {
+      "start": 1229.81,
+      "end": 1230.21,
+      "text": "Now."
+    },
+    {
+      "start": 1230.21,
+      "end": 1233.53,
+      "text": "If something converges to something, then the reciprocal"
+    },
+    {
+      "start": 1233.53,
+      "end": 1237.67,
+      "text": "of that should converge to the reciprocal of that."
+    },
+    {
+      "start": 1237.67,
+      "end": 1241.53,
+      "text": "That's a property that's certainly correct for numbers."
+    },
+    {
+      "start": 1241.53,
+      "end": 1243.99,
+      "text": "But here we're not talking about convergence of numbers."
+    },
+    {
+      "start": 1243.99,
+      "end": 1246.37,
+      "text": "We're talking about convergence in probability,"
+    },
+    {
+      "start": 1246.37,
+      "end": 1248.79,
+      "text": "which is a more complicated notion."
+    },
+    {
+      "start": 1248.79,
+      "end": 1252.49,
+      "text": "Fortunately, it turns out that the same thing is true when we"
+    },
+    {
+      "start": 1252.49,
+      "end": 1254.63,
+      "text": "deal with convergence in probability."
+    },
+    {
+      "start": 1254.63,
+      "end": 1258.67,
+      "text": "One can show, although we will not bother doing this, that"
+    },
+    {
+      "start": 1258.67,
+      "end": 1259.03,
+      "text": "indeed."
+    },
+    {
+      "start": 1259.03,
+      "end": 1263.07,
+      "text": "The reciprocal of this, which is our estimate, converges in"
+    },
+    {
+      "start": 1263.07,
+      "end": 1265.85,
+      "text": "probability to the reciprocal of that."
+    },
+    {
+      "start": 1265.85,
+      "end": 1268.85,
+      "text": "And that reciprocal is the true parameter theta."
+    },
+    {
+      "start": 1268.85,
+      "end": 1271.47,
+      "text": "So for this particular exponential example, we do"
+    },
+    {
+      "start": 1271.47,
+      "end": 1275.21,
+      "text": "have the desirable property that as the number of data"
+    },
+    {
+      "start": 1275.21,
+      "end": 1278.19,
+      "text": "becomes larger and larger, the estimate that we have"
+    },
+    {
+      "start": 1278.19,
+      "end": 1280.95,
+      "text": "constructed will get closer and closer to the true"
+    },
+    {
+      "start": 1280.95,
+      "end": 1282.47,
+      "text": "parameter value."
+    },
+    {
+      "start": 1282.47,
+      "end": 1287.79,
+      "text": "And this is true no matter what theta is, no matter what"
+    },
+    {
+      "start": 1287.79,
+      "end": 1288.91,
+      "text": "the true parameter theta is."
+    },
+    {
+      "start": 1288.91,
+      "end": 1295.27,
+      "text": "We're going to get close to it as we collect more data."
+    },
+    {
+      "start": 1295.27,
+      "end": 1299.09,
+      "text": "OK, so these are two rough qualitative properties that"
+    },
+    {
+      "start": 1299.09,
+      "end": 1302.33,
+      "text": "would be nice to have."
+    },
+    {
+      "start": 1302.33,
+      "end": 1307.31,
+      "text": "If you want to get a little more quantitative, you can"
+    },
+    {
+      "start": 1307.31,
+      "end": 1310.19,
+      "text": "start looking at the mean squared error that your"
+    },
+    {
+      "start": 1310.19,
+      "end": 1311.95,
+      "text": "estimator gives."
+    },
+    {
+      "start": 1311.95,
+      "end": 1316.55,
+      "text": "Now once more, the comment I was making up there applies,"
+    },
+    {
+      "start": 1316.55,
+      "end": 1318.71,
+      "text": "namely that this expectation here."
+    },
+    {
+      "start": 1318.91,
+      "end": 1322.05,
+      "text": "This is an expectation with respect to the probability"
+    },
+    {
+      "start": 1322.05,
+      "end": 1325.79,
+      "text": "distribution of theta hat that corresponds to a particular"
+    },
+    {
+      "start": 1325.79,
+      "end": 1327.27,
+      "text": "value of little theta."
+    },
+    {
+      "start": 1327.27,
+      "end": 1329.83,
+      "text": "So fix a little theta."
+    },
+    {
+      "start": 1329.83,
+      "end": 1331.89,
+      "text": "Write down this expression."
+    },
+    {
+      "start": 1331.89,
+      "end": 1334.55,
+      "text": "Look at the probability distribution of theta hat"
+    },
+    {
+      "start": 1334.55,
+      "end": 1338.19,
+      "text": "under that little theta, and do this calculation."
+    },
+    {
+      "start": 1338.19,
+      "end": 1339.93,
+      "text": "You're going to get some quantity that"
+    },
+    {
+      "start": 1339.93,
+      "end": 1344.18,
+      "text": "depends on little theta."
+    },
+    {
+      "start": 1344.18,
+      "end": 1348.36,
+      "text": "And so all quantities in this equality here should be"
+    },
+    {
+      "start": 1348.36,
+      "end": 1349.78,
+      "text": "interpreted as quantities."
+    },
+    {
+      "start": 1350.86,
+      "end": 1354.48,
+      "text": "Under that particular value of little theta."
+    },
+    {
+      "start": 1354.48,
+      "end": 1358.62,
+      "text": "So if you wanted to make this more explicit, you could start"
+    },
+    {
+      "start": 1358.62,
+      "end": 1361.86,
+      "text": "throwing little subscripts everywhere in those"
+    },
+    {
+      "start": 1361.86,
+      "end": 1364.44,
+      "text": "expressions."
+    },
+    {
+      "start": 1364.44,
+      "end": 1369.19,
+      "text": "And let's see what those expressions tell us."
+    },
+    {
+      "start": 1369.19,
+      "end": 1375.43,
+      "text": "The expected value squared of a random variable, we know"
+    },
+    {
+      "start": 1375.43,
+      "end": 1379.21,
+      "text": "that it's always equal to the variance of this random"
+    },
+    {
+      "start": 1379.21,
+      "end": 1381.31,
+      "text": "variable."
+    },
+    {
+      "start": 1381.31,
+      "end": 1382.33,
+      "text": "Plus."
+    },
+    {
+      "start": 1382.33,
+      "end": 1385.87,
+      "text": "The expectation of the random variable squared."
+    },
+    {
+      "start": 1385.87,
+      "end": 1389.17,
+      "text": "So the expectation value of that random variable squared."
+    },
+    {
+      "start": 1389.17,
+      "end": 1394.87,
+      "text": "So we are just applying this equality here is just our"
+    },
+    {
+      "start": 1394.87,
+      "end": 1396.53,
+      "text": "familiar formula."
+    },
+    {
+      "start": 1396.53,
+      "end": 1402.85,
+      "text": "That the expected value of x squared is the variance of x"
+    },
+    {
+      "start": 1402.85,
+      "end": 1406.35,
+      "text": "plus the expected value of x squared."
+    },
+    {
+      "start": 1406.35,
+      "end": 1410.41,
+      "text": "So we apply this formula to x equal to theta hat minus x."
+    },
+    {
+      "start": 1412.33,
+      "end": 1415.63,
+      "text": "Minus theta."
+    },
+    {
+      "start": 1415.63,
+      "end": 1417.17,
+      "text": "OK."
+    },
+    {
+      "start": 1417.17,
+      "end": 1421.23,
+      "text": "Now, remember that in this classical setting, theta is"
+    },
+    {
+      "start": 1421.23,
+      "end": 1422.15,
+      "text": "just a constant."
+    },
+    {
+      "start": 1422.15,
+      "end": 1423.51,
+      "text": "We have fixed theta."
+    },
+    {
+      "start": 1423.51,
+      "end": 1425.87,
+      "text": "We want to calculate the variance of this quantity"
+    },
+    {
+      "start": 1425.87,
+      "end": 1427.79,
+      "text": "under that particular theta."
+    },
+    {
+      "start": 1427.79,
+      "end": 1430.99,
+      "text": "When you add or subtract a constant to a random variable,"
+    },
+    {
+      "start": 1430.99,
+      "end": 1432.59,
+      "text": "the variance doesn't change."
+    },
+    {
+      "start": 1432.59,
+      "end": 1435.73,
+      "text": "So we obtain this is the same as the variance of our"
+    },
+    {
+      "start": 1435.73,
+      "end": 1436.85,
+      "text": "estimator."
+    },
+    {
+      "start": 1436.85,
+      "end": 1440.33,
+      "text": "And what we got here is the bias of our estimate."
+    },
+    {
+      "start": 1440.33,
+      "end": 1442.07,
+      "text": "It tells us on the average."
+    },
+    {
+      "start": 1442.07,
+      "end": 1444.47,
+      "text": "Whether we fall above or below."
+    },
+    {
+      "start": 1444.47,
+      "end": 1446.85,
+      "text": "And we're taking the bias to be squared."
+    },
+    {
+      "start": 1446.85,
+      "end": 1450.79,
+      "text": "If we have an unbiased estimator, the bias term will"
+    },
+    {
+      "start": 1450.79,
+      "end": 1453.69,
+      "text": "be 0."
+    },
+    {
+      "start": 1453.69,
+      "end": 1458.27,
+      "text": "So ideally, we want theta hat to be very close to theta."
+    },
+    {
+      "start": 1458.27,
+      "end": 1461.83,
+      "text": "And since theta is a constant, if that happens, the variance"
+    },
+    {
+      "start": 1461.83,
+      "end": 1465.65,
+      "text": "of theta hat would be very small."
+    },
+    {
+      "start": 1465.65,
+      "end": 1466.85,
+      "text": "So theta is a constant."
+    },
+    {
+      "start": 1466.85,
+      "end": 1471.85,
+      "text": "If theta hat has a distribution that's concentrated just around"
+    },
+    {
+      "start": 1471.85,
+      "end": 1475.25,
+      "text": "little theta, then theta hat would have a small variance."
+    },
+    {
+      "start": 1475.25,
+      "end": 1477.71,
+      "text": "So this is one desire that we have."
+    },
+    {
+      "start": 1477.71,
+      "end": 1479.73,
+      "text": "We want to have a small variance."
+    },
+    {
+      "start": 1479.73,
+      "end": 1483.71,
+      "text": "But we also want to have a small bias at the same time."
+    },
+    {
+      "start": 1483.71,
+      "end": 1487.35,
+      "text": "So the general form of the mean squared error has two"
+    },
+    {
+      "start": 1487.35,
+      "end": 1488.23,
+      "text": "contributions."
+    },
+    {
+      "start": 1488.23,
+      "end": 1490.53,
+      "text": "One is the variance of our estimator."
+    },
+    {
+      "start": 1490.53,
+      "end": 1492.35,
+      "text": "The other is the bias."
+    },
+    {
+      "start": 1492.35,
+      "end": 1494.97,
+      "text": "And one usually wants to design an estimator that"
+    },
+    {
+      "start": 1494.97,
+      "end": 1498.89,
+      "text": "simultaneously keeps both of these terms small."
+    },
+    {
+      "start": 1498.89,
+      "end": 1501.43,
+      "text": "So here's an estimation method."
+    },
+    {
+      "start": 1501.43,
+      "end": 1504.49,
+      "text": "That would do very well with respect to this term, but"
+    },
+    {
+      "start": 1504.49,
+      "end": 1506.67,
+      "text": "badly with respect to that term."
+    },
+    {
+      "start": 1506.67,
+      "end": 1509.41,
+      "text": "So suppose that my distribution is, let's say,"
+    },
+    {
+      "start": 1509.41,
+      "end": 1513.67,
+      "text": "normal with an unknown mean theta and variance 1."
+    },
+    {
+      "start": 1513.67,
+      "end": 1517.55,
+      "text": "And I use as my estimator something very dumb."
+    },
+    {
+      "start": 1517.55,
+      "end": 1523.31,
+      "text": "I always produce an estimate that says my estimate is 100."
+    },
+    {
+      "start": 1523.31,
+      "end": 1526.39,
+      "text": "So I'm just ignoring the data and report 100."
+    },
+    {
+      "start": 1526.39,
+      "end": 1527.89,
+      "text": "What does this do?"
+    },
+    {
+      "start": 1527.89,
+      "end": 1530.91,
+      "text": "The variance of my estimator is 0."
+    },
+    {
+      "start": 1530.91,
+      "end": 1533.67,
+      "text": "There's no randomness in the estimate that I report."
+    },
+    {
+      "start": 1533.67,
+      "end": 1536.99,
+      "text": "But the bias is going to be pretty bad."
+    },
+    {
+      "start": 1536.99,
+      "end": 1544.13,
+      "text": "The bias is going to be theta hat, which is 100, minus the"
+    },
+    {
+      "start": 1544.13,
+      "end": 1546.73,
+      "text": "true value of theta."
+    },
+    {
+      "start": 1546.73,
+      "end": 1550.49,
+      "text": "And for some thetas, my bias is going to be horrible."
+    },
+    {
+      "start": 1550.49,
+      "end": 1555.79,
+      "text": "If my true theta happens to be 0, my bias squared is a huge"
+    },
+    {
+      "start": 1555.79,
+      "end": 1557.81,
+      "text": "term, and I get a large error."
+    },
+    {
+      "start": 1557.81,
+      "end": 1560.21,
+      "text": "So what's the moral of this example?"
+    },
+    {
+      "start": 1560.21,
+      "end": 1563.33,
+      "text": "There are ways of making that variance very small."
+    },
+    {
+      "start": 1563.33,
+      "end": 1567.37,
+      "text": "But in those cases, you pay a price on the bias."
+    },
+    {
+      "start": 1567.37,
+      "end": 1570.45,
+      "text": "So you want to do something a little more delicate, where you"
+    },
+    {
+      "start": 1570.45,
+      "end": 1574.61,
+      "text": "try to keep both terms small at the same time."
+    },
+    {
+      "start": 1574.61,
+      "end": 1576.69,
+      "text": "So these types of considerations become"
+    },
+    {
+      "start": 1576.69,
+      "end": 1580.25,
+      "text": "important when you start to try to design sophisticated"
+    },
+    {
+      "start": 1580.25,
+      "end": 1582.81,
+      "text": "estimators for more complicated problems."
+    },
+    {
+      "start": 1582.81,
+      "end": 1584.59,
+      "text": "But we will not do this in this class."
+    },
+    {
+      "start": 1584.59,
+      "end": 1588.73,
+      "text": "This belongs to further classes on statistics and inference."
+    },
+    {
+      "start": 1588.73,
+      "end": 1589.97,
+      "text": "For this class, for a"
+    },
+    {
+      "start": 1590.21,
+      "end": 1593.23,
+      "text": "parameter estimation, we will basically stick to two very"
+    },
+    {
+      "start": 1593.23,
+      "end": 1594.45,
+      "text": "simple methods."
+    },
+    {
+      "start": 1594.45,
+      "end": 1597.95,
+      "text": "One is the maximum likelihood method we've just discussed."
+    },
+    {
+      "start": 1597.95,
+      "end": 1601.29,
+      "text": "And the other method is what you would do if you were still"
+    },
+    {
+      "start": 1601.29,
+      "end": 1604.03,
+      "text": "in high school and didn't know any probability."
+    },
+    {
+      "start": 1604.03,
+      "end": 1610.45,
+      "text": "You get data, and these data come from some distribution"
+    },
+    {
+      "start": 1610.45,
+      "end": 1611.87,
+      "text": "with an unknown mean."
+    },
+    {
+      "start": 1611.87,
+      "end": 1613.97,
+      "text": "And you want to estimate that unknown mean."
+    },
+    {
+      "start": 1613.97,
+      "end": 1614.81,
+      "text": "What would you do?"
+    },
+    {
+      "start": 1614.81,
+      "end": 1617.99,
+      "text": "You would just take those data and average them out."
+    },
+    {
+      "start": 1617.99,
+      "end": 1619.57,
+      "text": "So let's make this a little more specific."
+    },
+    {
+      "start": 1620.21,
+      "end": 1624.59,
+      "text": "We have X's that come from a given distribution."
+    },
+    {
+      "start": 1624.59,
+      "end": 1627.81,
+      "text": "We know the general form of the distribution, perhaps."
+    },
+    {
+      "start": 1632.51,
+      "end": 1635.81,
+      "text": "Perhaps the variance of that distribution, or perhaps we"
+    },
+    {
+      "start": 1635.81,
+      "end": 1637.05,
+      "text": "don't know it."
+    },
+    {
+      "start": 1637.05,
+      "end": 1638.93,
+      "text": "But we do not know the mean."
+    },
+    {
+      "start": 1638.93,
+      "end": 1642.57,
+      "text": "And we want to estimate the mean of that distribution."
+    },
+    {
+      "start": 1642.57,
+      "end": 1646.25,
+      "text": "Now we can write this situation, we can represent"
+    },
+    {
+      "start": 1646.25,
+      "end": 1647.53,
+      "text": "it in a different form."
+    },
+    {
+      "start": 1647.53,
+      "end": 1650.01,
+      "text": "The X i's are equal to theta."
+    },
+    {
+      "start": 1650.01,
+      "end": 1654.27,
+      "text": "This is the mean, plus a 0 mean random variable that you"
+    },
+    {
+      "start": 1654.27,
+      "end": 1655.97,
+      "text": "can think of as noise."
+    },
+    {
+      "start": 1655.97,
+      "end": 1659.33,
+      "text": "So this corresponds to the usual situation you would have"
+    },
+    {
+      "start": 1659.33,
+      "end": 1662.43,
+      "text": "in a lab, where you'd go and try to measure"
+    },
+    {
+      "start": 1662.43,
+      "end": 1663.81,
+      "text": "an unknown quantity."
+    },
+    {
+      "start": 1663.81,
+      "end": 1665.23,
+      "text": "You get lots of measurements."
+    },
+    {
+      "start": 1665.23,
+      "end": 1669.45,
+      "text": "But each time that you measure them, your measurements have"
+    },
+    {
+      "start": 1669.45,
+      "end": 1671.87,
+      "text": "some extra noise in there."
+    },
+    {
+      "start": 1671.87,
+      "end": 1674.47,
+      "text": "And you want to kind of get rid of that noise."
+    },
+    {
+      "start": 1674.47,
+      "end": 1677.81,
+      "text": "The way to try to get rid of the measurement noise is to"
+    },
+    {
+      "start": 1677.81,
+      "end": 1681.13,
+      "text": "collect lots of data and average them out."
+    },
+    {
+      "start": 1681.13,
+      "end": 1682.91,
+      "text": "This is the sample mean."
+    },
+    {
+      "start": 1682.91,
+      "end": 1687.35,
+      "text": "And this is a very, very reasonable way of trying to"
+    },
+    {
+      "start": 1687.35,
+      "end": 1690.11,
+      "text": "estimate the unknown mean of the axis."
+    },
+    {
+      "start": 1690.11,
+      "end": 1692.67,
+      "text": "So this is the sample mean."
+    },
+    {
+      "start": 1692.67,
+      "end": 1697.83,
+      "text": "It's a reasonable, plausible, in general pretty good"
+    },
+    {
+      "start": 1697.83,
+      "end": 1702.43,
+      "text": "estimator of the unknown mean of a certain distribution."
+    },
+    {
+      "start": 1702.43,
+      "end": 1706.91,
+      "text": "We can apply this estimator without really knowing a lot"
+    },
+    {
+      "start": 1706.91,
+      "end": 1707.71,
+      "text": "about the distribution."
+    },
+    {
+      "start": 1707.71,
+      "end": 1708.81,
+      "text": "The distribution of the axis."
+    },
+    {
+      "start": 1708.81,
+      "end": 1711.03,
+      "text": "Actually, we don't need to know anything about the"
+    },
+    {
+      "start": 1711.03,
+      "end": 1712.33,
+      "text": "distribution."
+    },
+    {
+      "start": 1712.33,
+      "end": 1716.03,
+      "text": "We can still apply it, because the variance, for example, does"
+    },
+    {
+      "start": 1716.03,
+      "end": 1717.13,
+      "text": "not show up here."
+    },
+    {
+      "start": 1717.13,
+      "end": 1718.67,
+      "text": "We don't need to know the variance to"
+    },
+    {
+      "start": 1718.67,
+      "end": 1720.51,
+      "text": "calculate that quantity."
+    },
+    {
+      "start": 1720.51,
+      "end": 1723.53,
+      "text": "Does this estimator have good properties?"
+    },
+    {
+      "start": 1723.53,
+      "end": 1724.83,
+      "text": "Yes, it does."
+    },
+    {
+      "start": 1724.83,
+      "end": 1728.29,
+      "text": "What's the expected value of the sample mean?"
+    },
+    {
+      "start": 1728.29,
+      "end": 1732.25,
+      "text": "The expectation of this is the expectation of this sum"
+    },
+    {
+      "start": 1732.25,
+      "end": 1733.59,
+      "text": "divided by n."
+    },
+    {
+      "start": 1733.59,
+      "end": 1736.43,
+      "text": "The expected value of each one of the axes is theta."
+    },
+    {
+      "start": 1736.43,
+      "end": 1737.65,
+      "text": "So the expected value of the"
+    },
+    {
+      "start": 1737.65,
+      "end": 1740.03,
+      "text": "sample mean is just theta itself."
+    },
+    {
+      "start": 1740.03,
+      "end": 1743.31,
+      "text": "So our estimator is unbiased."
+    },
+    {
+      "start": 1743.31,
+      "end": 1746.41,
+      "text": "No matter what theta is, our estimator does not have a"
+    },
+    {
+      "start": 1746.41,
+      "end": 1751.11,
+      "text": "systematic error in either direction."
+    },
+    {
+      "start": 1751.11,
+      "end": 1753.87,
+      "text": "Furthermore, the weak law of large numbers tells us that"
+    },
+    {
+      "start": 1753.87,
+      "end": 1755.67,
+      "text": "this quantity converges to the true"
+    },
+    {
+      "start": 1755.67,
+      "end": 1758.11,
+      "text": "parameter in probability."
+    },
+    {
+      "start": 1758.11,
+      "end": 1760.69,
+      "text": "So it's a consistent estimator."
+    },
+    {
+      "start": 1760.69,
+      "end": 1761.93,
+      "text": "This is good."
+    },
+    {
+      "start": 1761.93,
+      "end": 1766.75,
+      "text": "And if you want to calculate the mean squared error"
+    },
+    {
+      "start": 1766.75,
+      "end": 1769.61,
+      "text": "corresponding to this estimator, remember how we"
+    },
+    {
+      "start": 1769.61,
+      "end": 1771.57,
+      "text": "defined the mean squared error."
+    },
+    {
+      "start": 1771.57,
+      "end": 1775.29,
+      "text": "It's this quantity."
+    },
+    {
+      "start": 1775.29,
+      "end": 1778.67,
+      "text": "Then it's a calculation that we have done a fair number of"
+    },
+    {
+      "start": 1778.67,
+      "end": 1780.09,
+      "text": "times by now."
+    },
+    {
+      "start": 1780.09,
+      "end": 1783.63,
+      "text": "The mean squared error is the variance of the distribution"
+    },
+    {
+      "start": 1783.63,
+      "end": 1785.99,
+      "text": "of the axes divided by n."
+    },
+    {
+      "start": 1785.99,
+      "end": 1789.37,
+      "text": "So as we get more and more data, the mean squared error"
+    },
+    {
+      "start": 1789.37,
+      "end": 1792.19,
+      "text": "goes down to 0."
+    },
+    {
+      "start": 1792.19,
+      "end": 1796.41,
+      "text": "In some examples, it turns out that the sample mean is also"
+    },
+    {
+      "start": 1796.41,
+      "end": 1798.95,
+      "text": "the same as the maximum likelihood estimate."
+    },
+    {
+      "start": 1798.95,
+      "end": 1802.79,
+      "text": "For example, if the axes are coming from a normal"
+    },
+    {
+      "start": 1802.79,
+      "end": 1807.69,
+      "text": "distribution, you can write down the likelihoods, do the"
+    },
+    {
+      "start": 1807.69,
+      "end": 1810.23,
+      "text": "maximization with respect to theta, you'll find that the"
+    },
+    {
+      "start": 1810.23,
+      "end": 1815.23,
+      "text": "maximum likelihood estimate is the same as the sample mean."
+    },
+    {
+      "start": 1815.23,
+      "end": 1818.75,
+      "text": "In other cases, the sample mean will be different from"
+    },
+    {
+      "start": 1818.75,
+      "end": 1820.85,
+      "text": "the maximum likelihood."
+    },
+    {
+      "start": 1820.85,
+      "end": 1824.33,
+      "text": "And then you have a choice about which one of the two you"
+    },
+    {
+      "start": 1824.33,
+      "end": 1824.87,
+      "text": "would use."
+    },
+    {
+      "start": 1824.87,
+      "end": 1826.31,
+      "text": "Probably, in most reasonable"
+    },
+    {
+      "start": 1826.31,
+      "end": 1829.25,
+      "text": "situations, you would just use the sample mean, because"
+    },
+    {
+      "start": 1829.25,
+      "end": 1833.81,
+      "text": "it's simple, easy to compute, and has nice properties."
+    },
+    {
+      "start": 1833.81,
+      "end": 1837.77,
+      "text": "So you go to your boss, and you report and say, OK, I did"
+    },
+    {
+      "start": 1837.77,
+      "end": 1842.77,
+      "text": "all my experiments in the lab, and the average value that I"
+    },
+    {
+      "start": 1842.77,
+      "end": 1849.81,
+      "text": "got is a certain value, is a certain number, 2.37."
+    },
+    {
+      "start": 1849.81,
+      "end": 1852.49,
+      "text": "So is that informative to your boss?"
+    },
+    {
+      "start": 1852.49,
+      "end": 1855.43,
+      "text": "Well, your boss would like to know how much they can trust"
+    },
+    {
+      "start": 1855.43,
+      "end": 1856.31,
+      "text": "this number."
+    },
+    {
+      "start": 1856.31,
+      "end": 1860.63,
+      "text": "2.37, well, I know that the true value is not going to be"
+    },
+    {
+      "start": 1860.63,
+      "end": 1867.43,
+      "text": "exactly that, but how close should it be?"
+    },
+    {
+      "start": 1867.43,
+      "end": 1869.77,
+      "text": "So give me a range of what you think are"
+    },
+    {
+      "start": 1869.77,
+      "end": 1872.09,
+      "text": "possible values of theta."
+    },
+    {
+      "start": 1872.09,
+      "end": 1876.17,
+      "text": "So the situation is like this."
+    },
+    {
+      "start": 1876.17,
+      "end": 1879.99,
+      "text": "So suppose that we observe axes that are coming from a"
+    },
+    {
+      "start": 1879.99,
+      "end": 1883.15,
+      "text": "certain distribution, and we're trying to"
+    },
+    {
+      "start": 1883.15,
+      "end": 1884.23,
+      "text": "estimate the mean."
+    },
+    {
+      "start": 1884.23,
+      "end": 1885.43,
+      "text": "We get our data."
+    },
+    {
+      "start": 1887.94,
+      "end": 1892.08,
+      "text": "Maybe our data looks something like this."
+    },
+    {
+      "start": 1892.08,
+      "end": 1894.1,
+      "text": "You calculate the mean."
+    },
+    {
+      "start": 1894.1,
+      "end": 1896.14,
+      "text": "You find the sample mean."
+    },
+    {
+      "start": 1896.14,
+      "end": 1900.0,
+      "text": "So let's suppose that the sample mean is a number."
+    },
+    {
+      "start": 1900.0,
+      "end": 1905.56,
+      "text": "For some reason, take it to be 2.37."
+    },
+    {
+      "start": 1905.56,
+      "end": 1908.32,
+      "text": "But you want to convey something to your boss about"
+    },
+    {
+      "start": 1908.32,
+      "end": 1911.2,
+      "text": "how spread out these data were."
+    },
+    {
+      "start": 1911.2,
+      "end": 1916.7,
+      "text": "So the boss asks you to give him or her some kind of"
+    },
+    {
+      "start": 1916.7,
+      "end": 1917.78,
+      "text": "interval."
+    },
+    {
+      "start": 1917.78,
+      "end": 1925.32,
+      "text": "That on which theta, the true parameter, might lie."
+    },
+    {
+      "start": 1925.32,
+      "end": 1927.52,
+      "text": "So the boss asks you for an interval."
+    },
+    {
+      "start": 1927.52,
+      "end": 1931.72,
+      "text": "So what you do is you end up reporting an interval."
+    },
+    {
+      "start": 1931.72,
+      "end": 1934.94,
+      "text": "And you somehow use the data that you have seen to"
+    },
+    {
+      "start": 1934.94,
+      "end": 1937.56,
+      "text": "construct this interval."
+    },
+    {
+      "start": 1937.56,
+      "end": 1940.1,
+      "text": "And you report to your boss also the end"
+    },
+    {
+      "start": 1940.1,
+      "end": 1941.4,
+      "text": "points of this interval."
+    },
+    {
+      "start": 1941.4,
+      "end": 1943.7,
+      "text": "Let's give names to these end points."
+    },
+    {
+      "start": 1943.7,
+      "end": 1947.34,
+      "text": "Theta n minus and theta n plus."
+    },
+    {
+      "start": 1947.34,
+      "end": 1947.66,
+      "text": "OK."
+    },
+    {
+      "start": 1947.66,
+      "end": 1951.02,
+      "text": "The ends here just play the role of keeping track of how"
+    },
+    {
+      "start": 1951.02,
+      "end": 1953.0,
+      "text": "many data we're using."
+    },
+    {
+      "start": 1953.0,
+      "end": 1959.32,
+      "text": "So what you report to your boss is this interval as well."
+    },
+    {
+      "start": 1959.32,
+      "end": 1962.34,
+      "text": "Are these thetas here, the end points of the interval,"
+    },
+    {
+      "start": 1962.34,
+      "end": 1964.22,
+      "text": "lowercase or uppercase?"
+    },
+    {
+      "start": 1964.22,
+      "end": 1965.84,
+      "text": "What should they be?"
+    },
+    {
+      "start": 1965.84,
+      "end": 1967.8,
+      "text": "Well, you construct these intervals"
+    },
+    {
+      "start": 1967.8,
+      "end": 1969.42,
+      "text": "after you see your data."
+    },
+    {
+      "start": 1969.42,
+      "end": 1973.84,
+      "text": "You take the data into account to construct the interval."
+    },
+    {
+      "start": 1973.84,
+      "end": 1977.02,
+      "text": "So these definitely should depend on the data."
+    },
+    {
+      "start": 1977.02,
+      "end": 1979.48,
+      "text": "And therefore, they're random variables."
+    },
+    {
+      "start": 1979.48,
+      "end": 1982.38,
+      "text": "Same thing with your estimator."
+    },
+    {
+      "start": 1982.38,
+      "end": 1984.84,
+      "text": "In general, it's going to be a random variable."
+    },
+    {
+      "start": 1984.84,
+      "end": 1987.92,
+      "text": "Although, when you go and report numbers to your boss,"
+    },
+    {
+      "start": 1987.92,
+      "end": 1990.56,
+      "text": "you give the specific realizations of the random"
+    },
+    {
+      "start": 1990.56,
+      "end": 1995.12,
+      "text": "variables, given the data that you got."
+    },
+    {
+      "start": 1995.12,
+      "end": 1995.46,
+      "text": "OK."
+    },
+    {
+      "start": 1995.46,
+      "end": 2001.9,
+      "text": "So instead of having just a single box that"
+    },
+    {
+      "start": 2001.9,
+      "end": 2005.06,
+      "text": "produces estimates."
+    },
+    {
+      "start": 2005.06,
+      "end": 2007.02,
+      "text": "So our previous picture was a random variable."
+    },
+    {
+      "start": 2007.02,
+      "end": 2011.74,
+      "text": "It was that you have your estimator that takes x's and"
+    },
+    {
+      "start": 2011.74,
+      "end": 2014.12,
+      "text": "produces theta hats."
+    },
+    {
+      "start": 2014.12,
+      "end": 2019.22,
+      "text": "Now, our box will also be producing theta hat minus and"
+    },
+    {
+      "start": 2019.22,
+      "end": 2022.56,
+      "text": "theta hat plus."
+    },
+    {
+      "start": 2022.56,
+      "end": 2025.26,
+      "text": "It's going to produce an interval as well."
+    },
+    {
+      "start": 2025.26,
+      "end": 2026.58,
+      "text": "The x's are random."
+    },
+    {
+      "start": 2026.58,
+      "end": 2028.64,
+      "text": "Therefore, these quantities are random."
+    },
+    {
+      "start": 2028.64,
+      "end": 2032.36,
+      "text": "Once you go and do the experiment and obtain your"
+    },
+    {
+      "start": 2032.36,
+      "end": 2036.58,
+      "text": "data, then your data will be some lowercase x."
+    },
+    {
+      "start": 2036.58,
+      "end": 2038.76,
+      "text": "Specific numbers."
+    },
+    {
+      "start": 2038.76,
+      "end": 2040.94,
+      "text": "And then your estimates and estimator"
+    },
+    {
+      "start": 2040.94,
+      "end": 2045.08,
+      "text": "become also lowercase."
+    },
+    {
+      "start": 2045.08,
+      "end": 2048.02,
+      "text": "What would we like this interval to do?"
+    },
+    {
+      "start": 2048.02,
+      "end": 2051.76,
+      "text": "We would like it to be highly likely to contain the true"
+    },
+    {
+      "start": 2051.76,
+      "end": 2053.8,
+      "text": "value of the parameter."
+    },
+    {
+      "start": 2053.8,
+      "end": 2057.76,
+      "text": "So we might impose some specs of the following kind."
+    },
+    {
+      "start": 2057.76,
+      "end": 2059.18,
+      "text": "I pick a number alpha."
+    },
+    {
+      "start": 2059.18,
+      "end": 2062.24,
+      "text": "Usually, that alpha, think of it as a probability of a large"
+    },
+    {
+      "start": 2062.24,
+      "end": 2063.0,
+      "text": "error."
+    },
+    {
+      "start": 2063.0,
+      "end": 2066.38,
+      "text": "Typical value of alpha might be 0.05."
+    },
+    {
+      "start": 2066.38,
+      "end": 2070.34,
+      "text": "In which case, this number here is 0.95."
+    },
+    {
+      "start": 2070.34,
+      "end": 2073.96,
+      "text": "And you're given specs that say something like this."
+    },
+    {
+      "start": 2073.96,
+      "end": 2079.66,
+      "text": "I would like, with probability at least 0.95, I would like"
+    },
+    {
+      "start": 2079.66,
+      "end": 2083.88,
+      "text": "this to happen, which says that the true parameter lies"
+    },
+    {
+      "start": 2083.88,
+      "end": 2086.88,
+      "text": "inside the confidence interval."
+    },
+    {
+      "start": 2086.88,
+      "end": 2090.7,
+      "text": "Now let's try to interpret this statement."
+    },
+    {
+      "start": 2090.7,
+      "end": 2093.52,
+      "text": "Suppose that you did the experiment and that you ended"
+    },
+    {
+      "start": 2093.52,
+      "end": 2096.36,
+      "text": "up reporting to your boss a confidence interval from a"
+    },
+    {
+      "start": 2096.36,
+      "end": 2101.5,
+      "text": "value from 197 to 2.56."
+    },
+    {
+      "start": 2101.5,
+      "end": 2106.84,
+      "text": "That's what you report to your boss."
+    },
+    {
+      "start": 2106.84,
+      "end": 2108.28,
+      "text": "And suppose that the confidence"
+    },
+    {
+      "start": 2108.28,
+      "end": 2110.22,
+      "text": "interval has this property."
+    },
+    {
+      "start": 2110.22,
+      "end": 2116.38,
+      "text": "Can you go to your boss and say, with probability 95%, the"
+    },
+    {
+      "start": 2116.38,
+      "end": 2120.08,
+      "text": "true value of theta is between these two numbers."
+    },
+    {
+      "start": 2120.08,
+      "end": 2122.6,
+      "text": "Is that a meaningful statement?"
+    },
+    {
+      "start": 2122.6,
+      "end": 2128.52,
+      "text": "So the tentative statement is, with probability 95%, the"
+    },
+    {
+      "start": 2128.52,
+      "end": 2135.14,
+      "text": "true value of theta is between 1.97 and 2.56."
+    },
+    {
+      "start": 2135.14,
+      "end": 2138.92,
+      "text": "Well, what is random in that statement?"
+    },
+    {
+      "start": 2138.92,
+      "end": 2140.48,
+      "text": "There's nothing random."
+    },
+    {
+      "start": 2140.48,
+      "end": 2143.08,
+      "text": "The true value of theta is a constant."
+    },
+    {
+      "start": 2143.08,
+      "end": 2144.7,
+      "text": "1.97 is a number."
+    },
+    {
+      "start": 2144.7,
+      "end": 2146.76,
+      "text": "256 is a number."
+    },
+    {
+      "start": 2146.76,
+      "end": 2152.98,
+      "text": "So it doesn't make any sense to talk about the probability"
+    },
+    {
+      "start": 2152.98,
+      "end": 2154.96,
+      "text": "that theta is in this interval."
+    },
+    {
+      "start": 2154.96,
+      "end": 2157.9,
+      "text": "Either theta happens to be in that interval, or it happens"
+    },
+    {
+      "start": 2157.9,
+      "end": 2158.52,
+      "text": "to not be."
+    },
+    {
+      "start": 2158.52,
+      "end": 2160.98,
+      "text": "But there are no probabilities associated with"
+    },
+    {
+      "start": 2160.98,
+      "end": 2164.7,
+      "text": "this, because theta is not random."
+    },
+    {
+      "start": 2164.7,
+      "end": 2168.08,
+      "text": "Syntactically, you can see this, because theta here is a"
+    },
+    {
+      "start": 2168.08,
+      "end": 2169.2,
+      "text": "lower case."
+    },
+    {
+      "start": 2169.2,
+      "end": 2172.02,
+      "text": "So what kind of probabilities are we talking about here?"
+    },
+    {
+      "start": 2172.02,
+      "end": 2173.48,
+      "text": "Where is the randomness?"
+    },
+    {
+      "start": 2173.48,
+      "end": 2175.9,
+      "text": "Well, the random thing is the interval."
+    },
+    {
+      "start": 2175.9,
+      "end": 2177.54,
+      "text": "It's not theta."
+    },
+    {
+      "start": 2177.54,
+      "end": 2181.7,
+      "text": "So the statement that is being made here is that the interval"
+    },
+    {
+      "start": 2181.7,
+      "end": 2185.1,
+      "text": "that's being constructed by our procedure should have the"
+    },
+    {
+      "start": 2185.1,
+      "end": 2188.4,
+      "text": "property that with probability 95%, it's"
+    },
+    {
+      "start": 2188.4,
+      "end": 2193.28,
+      "text": "going to fall on top of the true value of theta."
+    },
+    {
+      "start": 2193.28,
+      "end": 2197.68,
+      "text": "So the right way of interpreting what a 95%"
+    },
+    {
+      "start": 2197.68,
+      "end": 2202.3,
+      "text": "confidence interval is, is something like the following."
+    },
+    {
+      "start": 2202.3,
+      "end": 2205.4,
+      "text": "We have the true value of theta that we don't know."
+    },
+    {
+      "start": 2205.4,
+      "end": 2206.74,
+      "text": "I get data."
+    },
+    {
+      "start": 2206.74,
+      "end": 2210.14,
+      "text": "Based on the data, I construct the confidence interval."
+    },
+    {
+      "start": 2210.14,
+      "end": 2211.94,
+      "text": "I get my confidence interval."
+    },
+    {
+      "start": 2211.94,
+      "end": 2214.84,
+      "text": "I got lucky, and the true value of theta is in here."
+    },
+    {
+      "start": 2214.84,
+      "end": 2217.78,
+      "text": "Next day, I do the same experiment, take my data,"
+    },
+    {
+      "start": 2217.78,
+      "end": 2221.62,
+      "text": "construct a confidence interval, and I get this"
+    },
+    {
+      "start": 2221.62,
+      "end": 2222.7,
+      "text": "confidence interval."
+    },
+    {
+      "start": 2222.7,
+      "end": 2224.02,
+      "text": "Lucky once more."
+    },
+    {
+      "start": 2224.02,
+      "end": 2228.52,
+      "text": "Next day, I get data, use my data to come up with an"
+    },
+    {
+      "start": 2228.52,
+      "end": 2230.66,
+      "text": "estimate of theta and the confidence interval."
+    },
+    {
+      "start": 2230.66,
+      "end": 2233.4,
+      "text": "That day, I was unlucky, and I got a confidence"
+    },
+    {
+      "start": 2233.4,
+      "end": 2234.92,
+      "text": "interval out there."
+    },
+    {
+      "start": 2234.92,
+      "end": 2240.86,
+      "text": "What the requirement here is, is that 95% of the days where"
+    },
+    {
+      "start": 2240.86,
+      "end": 2244.76,
+      "text": "we use this as a certain procedure for constructing"
+    },
+    {
+      "start": 2244.76,
+      "end": 2246.32,
+      "text": "confidence intervals."
+    },
+    {
+      "start": 2246.32,
+      "end": 2247.6,
+      "text": "95% of those"
+    },
+    {
+      "start": 2247.6,
+      "end": 2252.76,
+      "text": "days, we will be lucky, and we will capture the correct value"
+    },
+    {
+      "start": 2252.76,
+      "end": 2255.16,
+      "text": "of theta by our confidence interval."
+    },
+    {
+      "start": 2255.16,
+      "end": 2259.36,
+      "text": "So it's a statement about the distribution of these random"
+    },
+    {
+      "start": 2259.36,
+      "end": 2260.74,
+      "text": "confidence intervals."
+    },
+    {
+      "start": 2260.74,
+      "end": 2264.08,
+      "text": "How likely are they to fall on top of the true theta, as"
+    },
+    {
+      "start": 2264.08,
+      "end": 2267.06,
+      "text": "opposed to how likely they are to fall outside?"
+    },
+    {
+      "start": 2267.06,
+      "end": 2270.72,
+      "text": "So it's a statement about probabilities associated with"
+    },
+    {
+      "start": 2270.72,
+      "end": 2272.4,
+      "text": "the confidence interval."
+    },
+    {
+      "start": 2272.4,
+      "end": 2275.04,
+      "text": "They're not probabilities about theta, because theta"
+    },
+    {
+      "start": 2275.04,
+      "end": 2276.48,
+      "text": "itself is not random."
+    },
+    {
+      "start": 2277.6,
+      "end": 2278.38,
+      "text": "Right."
+    },
+    {
+      "start": 2278.38,
+      "end": 2282.32,
+      "text": "So this is what the confidence interval is in general, and how"
+    },
+    {
+      "start": 2282.32,
+      "end": 2283.5,
+      "text": "we interpret it."
+    },
+    {
+      "start": 2283.5,
+      "end": 2287.48,
+      "text": "How do we construct a 95% confidence interval?"
+    },
+    {
+      "start": 2287.48,
+      "end": 2291.0,
+      "text": "Let's go through this exercise in a particular example."
+    },
+    {
+      "start": 2291.0,
+      "end": 2293.98,
+      "text": "The calculations are exactly the same as the ones that you"
+    },
+    {
+      "start": 2293.98,
+      "end": 2297.78,
+      "text": "did when we talked about the laws of large numbers and the"
+    },
+    {
+      "start": 2297.78,
+      "end": 2299.24,
+      "text": "central limit theorem."
+    },
+    {
+      "start": 2299.24,
+      "end": 2302.64,
+      "text": "So there's nothing new calculationally, but it's"
+    },
+    {
+      "start": 2302.64,
+      "end": 2305.42,
+      "text": "perhaps new in terms of the language that we use and the"
+    },
+    {
+      "start": 2305.42,
+      "end": 2306.82,
+      "text": "interpretation."
+    },
+    {
+      "start": 2306.82,
+      "end": 2307.58,
+      "text": "So we got our"
+    },
+    {
+      "start": 2307.6,
+      "end": 2311.38,
+      "text": "sample mean from some distribution, and we would"
+    },
+    {
+      "start": 2311.38,
+      "end": 2314.6,
+      "text": "like to calculate a 95% confidence interval."
+    },
+    {
+      "start": 2319.66,
+      "end": 2328.48,
+      "text": "We know from the normal tables that the standard normal has 2.5%"
+    },
+    {
+      "start": 2328.48,
+      "end": 2329.48,
+      "text": "on the tail."
+    },
+    {
+      "start": 2329.48,
+      "end": 2334.56,
+      "text": "That's after 1.96."
+    },
+    {
+      "start": 2334.56,
+      "end": 2338.56,
+      "text": "By this time, the number 1.96 should be"
+    },
+    {
+      "start": 2338.56,
+      "end": 2338.82,
+      "text": "."
+    },
+    {
+      "start": 2338.82,
+      "end": 2340.58,
+      "text": "It's familiar."
+    },
+    {
+      "start": 2340.58,
+      "end": 2349.5,
+      "text": "So if this probability here is 2.5%, this number here is 1.96."
+    },
+    {
+      "start": 2349.5,
+      "end": 2352.32,
+      "text": "Now look at this random variable here."
+    },
+    {
+      "start": 2352.32,
+      "end": 2356.58,
+      "text": "This is the sample mean, a difference from the true mean"
+    },
+    {
+      "start": 2356.58,
+      "end": 2358.96,
+      "text": "normalized by the usual normalizing factor."
+    },
+    {
+      "start": 2358.96,
+      "end": 2362.1,
+      "text": "By the central limit theorem, this is approximately normal."
+    },
+    {
+      "start": 2362.1,
+      "end": 2366.78,
+      "text": "So it has probability 0.95 of being less than 1.96."
+    },
+    {
+      "start": 2366.78,
+      "end": 2368.64,
+      "text": "Now take this event."
+    },
+    {
+      "start": 2368.64,
+      "end": 2369.66,
+      "text": "This is the event here."
+    },
+    {
+      "start": 2369.66,
+      "end": 2371.08,
+      "text": "And rewrite it."
+    },
+    {
+      "start": 2371.08,
+      "end": 2376.68,
+      "text": "This is the event, well, that theta hat minus theta is bigger"
+    },
+    {
+      "start": 2376.68,
+      "end": 2380.34,
+      "text": "than this number and smaller than that number."
+    },
+    {
+      "start": 2380.34,
+      "end": 2385.66,
+      "text": "This event here is equivalent to that event here."
+    },
+    {
+      "start": 2385.66,
+      "end": 2390.66,
+      "text": "And so this suggests a way of constructing our 95%"
+    },
+    {
+      "start": 2390.66,
+      "end": 2392.16,
+      "text": "confidence interval."
+    },
+    {
+      "start": 2392.16,
+      "end": 2396.32,
+      "text": "I'm going to report the interval, which gives this as"
+    },
+    {
+      "start": 2396.32,
+      "end": 2398.42,
+      "text": "the lower end of the confidence interval."
+    },
+    {
+      "start": 2398.64,
+      "end": 2403.64,
+      "text": "And gives this as the upper end of the confidence interval."
+    },
+    {
+      "start": 2403.64,
+      "end": 2409.2,
+      "text": "In other words, at the end of the experiment, we report the"
+    },
+    {
+      "start": 2409.2,
+      "end": 2412.18,
+      "text": "sample mean, which is our estimate."
+    },
+    {
+      "start": 2412.18,
+      "end": 2416.1,
+      "text": "And we report also an interval around the sample mean."
+    },
+    {
+      "start": 2416.1,
+      "end": 2420.76,
+      "text": "And this is our 95% confidence interval."
+    },
+    {
+      "start": 2420.76,
+      "end": 2425.02,
+      "text": "The confidence interval becomes smaller when n is"
+    },
+    {
+      "start": 2425.02,
+      "end": 2426.06,
+      "text": "larger."
+    },
+    {
+      "start": 2426.06,
+      "end": 2428.52,
+      "text": "In some sense, we're more certain that we're"
+    },
+    {
+      "start": 2428.52,
+      "end": 2430.48,
+      "text": "doing a good estimation job."
+    },
+    {
+      "start": 2430.48,
+      "end": 2433.34,
+      "text": "So we can have a small interval and still be quite"
+    },
+    {
+      "start": 2433.34,
+      "end": 2436.58,
+      "text": "confident that our interval captures the true value of the"
+    },
+    {
+      "start": 2436.58,
+      "end": 2437.48,
+      "text": "parameter."
+    },
+    {
+      "start": 2437.48,
+      "end": 2441.86,
+      "text": "Also, if our data have very little noise, when you have"
+    },
+    {
+      "start": 2441.86,
+      "end": 2445.04,
+      "text": "more accurate measurements, you're more confident that"
+    },
+    {
+      "start": 2445.04,
+      "end": 2447.2,
+      "text": "your estimate is pretty good."
+    },
+    {
+      "start": 2447.2,
+      "end": 2452.2,
+      "text": "And that results in a smaller length of the confidence"
+    },
+    {
+      "start": 2452.2,
+      "end": 2452.6,
+      "text": "interval."
+    },
+    {
+      "start": 2452.6,
+      "end": 2456.0,
+      "text": "And still, you have 95% probability of capturing the"
+    },
+    {
+      "start": 2456.0,
+      "end": 2457.62,
+      "text": "true value of theta."
+    },
+    {
+      "start": 2457.62,
+      "end": 2458.4,
+      "text": "So we did this."
+    },
+    {
+      "start": 2458.4,
+      "end": 2461.66,
+      "text": "So we did this exercise by taking 95% confidence"
+    },
+    {
+      "start": 2461.66,
+      "end": 2464.0,
+      "text": "intervals and the corresponding value from the"
+    },
+    {
+      "start": 2464.0,
+      "end": 2466.64,
+      "text": "normal tables, which is 1.96."
+    },
+    {
+      "start": 2466.64,
+      "end": 2470.56,
+      "text": "Of course, you can do it more generally."
+    },
+    {
+      "start": 2470.56,
+      "end": 2474.34,
+      "text": "If you set your alpha to be some other number, again, you"
+    },
+    {
+      "start": 2474.34,
+      "end": 2476.54,
+      "text": "look at the normal tables."
+    },
+    {
+      "start": 2476.54,
+      "end": 2480.44,
+      "text": "And you find the value here, so that the tail has"
+    },
+    {
+      "start": 2480.44,
+      "end": 2482.64,
+      "text": "probability alpha over 2."
+    },
+    {
+      "start": 2482.64,
+      "end": 2487.2,
+      "text": "And instead of using 1.96, you use whatever number you get"
+    },
+    {
+      "start": 2487.2,
+      "end": 2488.36,
+      "text": "from this."
+    },
+    {
+      "start": 2488.36,
+      "end": 2490.86,
+      "text": "So that's what we're doing in this example."
+    },
+    {
+      "start": 2490.86,
+      "end": 2494.44,
+      "text": "And this tells you how to construct a confidence"
+    },
+    {
+      "start": 2494.44,
+      "end": 2496.68,
+      "text": "interval."
+    },
+    {
+      "start": 2496.68,
+      "end": 2503.74,
+      "text": "Well, to be exact, this is not necessarily a 95% confidence"
+    },
+    {
+      "start": 2503.74,
+      "end": 2504.62,
+      "text": "interval."
+    },
+    {
+      "start": 2504.62,
+      "end": 2507.68,
+      "text": "It's approximately a 95% confidence interval."
+    },
+    {
+      "start": 2507.68,
+      "end": 2508.96,
+      "text": "Why is this?"
+    },
+    {
+      "start": 2508.96,
+      "end": 2511.02,
+      "text": "Because we've done an approximation."
+    },
+    {
+      "start": 2511.02,
+      "end": 2513.9,
+      "text": "We have used the central limit theorem."
+    },
+    {
+      "start": 2513.9,
+      "end": 2517.08,
+      "text": "So it might turn out to be a 95.5%."
+    },
+    {
+      "start": 2518.36,
+      "end": 2522.34,
+      "text": "percent confidence in the relative instead of 95, because"
+    },
+    {
+      "start": 2522.34,
+      "end": 2524.72,
+      "text": "our calculations are not entirely accurate."
+    },
+    {
+      "start": 2524.72,
+      "end": 2528.24,
+      "text": "But for reasonable values of n, using the central limit"
+    },
+    {
+      "start": 2528.24,
+      "end": 2530.18,
+      "text": "theorem is a good approximation."
+    },
+    {
+      "start": 2530.18,
+      "end": 2533.36,
+      "text": "And that's what people almost always do."
+    },
+    {
+      "start": 2533.36,
+      "end": 2537.0,
+      "text": "So just take the value from the normal tables."
+    },
+    {
+      "start": 2537.0,
+      "end": 2538.42,
+      "text": "OK, except for one catch."
+    },
+    {
+      "start": 2542.82,
+      "end": 2544.54,
+      "text": "I use the data."
+    },
+    {
+      "start": 2544.54,
+      "end": 2546.46,
+      "text": "I obtain my estimate."
+    },
+    {
+      "start": 2546.46,
+      "end": 2549.88,
+      "text": "And I want to go to my boss and report this theta minus"
+    },
+    {
+      "start": 2549.88,
+      "end": 2553.02,
+      "text": "and theta hat, which is the confidence interval."
+    },
+    {
+      "start": 2553.02,
+      "end": 2555.7,
+      "text": "What's the difficulty?"
+    },
+    {
+      "start": 2555.7,
+      "end": 2558.48,
+      "text": "I know what n is, but I don't know what"
+    },
+    {
+      "start": 2558.48,
+      "end": 2560.78,
+      "text": "sigma is in general."
+    },
+    {
+      "start": 2560.78,
+      "end": 2564.74,
+      "text": "So if I don't know sigma, what am I going to do?"
+    },
+    {
+      "start": 2564.74,
+      "end": 2568.98,
+      "text": "Here there's a few options for what you can do."
+    },
+    {
+      "start": 2568.98,
+      "end": 2572.9,
+      "text": "And the first option is familiar from what we did when"
+    },
+    {
+      "start": 2572.9,
+      "end": 2575.0,
+      "text": "we talked about the Polster problem."
+    },
+    {
+      "start": 2575.0,
+      "end": 2578.46,
+      "text": "We don't know what sigma is, but maybe we have an upper"
+    },
+    {
+      "start": 2578.46,
+      "end": 2579.88,
+      "text": "bound on sigma."
+    },
+    {
+      "start": 2579.88,
+      "end": 2583.52,
+      "text": "For example, if the Xi's are Bernoulli random variables, we"
+    },
+    {
+      "start": 2583.52,
+      "end": 2586.92,
+      "text": "have seen that the standard deviation is at most 1 half."
+    },
+    {
+      "start": 2586.92,
+      "end": 2590.2,
+      "text": "So use the most conservative value for sigma."
+    },
+    {
+      "start": 2590.2,
+      "end": 2593.5,
+      "text": "Using the most conservative value means that you take"
+    },
+    {
+      "start": 2593.5,
+      "end": 2597.9,
+      "text": "bigger confidence intervals than necessary."
+    },
+    {
+      "start": 2597.9,
+      "end": 2600.76,
+      "text": "So that's one option."
+    },
+    {
+      "start": 2600.76,
+      "end": 2605.48,
+      "text": "Another option is to try to estimate sigma from the data."
+    },
+    {
+      "start": 2605.48,
+      "end": 2607.62,
+      "text": "How do you do this estimation?"
+    },
+    {
+      "start": 2607.62,
+      "end": 2609.86,
+      "text": "In special cases, for special types of"
+    },
+    {
+      "start": 2609.88,
+      "end": 2613.54,
+      "text": "distributions, you can think of heuristic ways of doing this"
+    },
+    {
+      "start": 2613.54,
+      "end": 2614.16,
+      "text": "estimation."
+    },
+    {
+      "start": 2614.16,
+      "end": 2618.38,
+      "text": "For example, in the case of Bernoulli random variables, we"
+    },
+    {
+      "start": 2618.38,
+      "end": 2622.4,
+      "text": "know that the true value of sigma, the standard deviation"
+    },
+    {
+      "start": 2622.4,
+      "end": 2625.08,
+      "text": "of a Bernoulli random variable, is the square root"
+    },
+    {
+      "start": 2625.08,
+      "end": 2627.76,
+      "text": "of theta 1 minus theta, where theta is the"
+    },
+    {
+      "start": 2627.76,
+      "end": 2630.26,
+      "text": "mean of the Bernoulli."
+    },
+    {
+      "start": 2630.26,
+      "end": 2631.8,
+      "text": "Try to use this formula."
+    },
+    {
+      "start": 2631.8,
+      "end": 2634.1,
+      "text": "But theta is the thing we're trying to estimate in the"
+    },
+    {
+      "start": 2634.1,
+      "end": 2634.72,
+      "text": "first place."
+    },
+    {
+      "start": 2634.72,
+      "end": 2635.96,
+      "text": "We don't know it."
+    },
+    {
+      "start": 2635.96,
+      "end": 2637.1,
+      "text": "What do we do?"
+    },
+    {
+      "start": 2637.1,
+      "end": 2639.58,
+      "text": "Well, we have an estimate for theta."
+    },
+    {
+      "start": 2639.58,
+      "end": 2641.86,
+      "text": "The estimate produced by your estimation"
+    },
+    {
+      "start": 2641.86,
+      "end": 2644.08,
+      "text": "procedure, the sample mean."
+    },
+    {
+      "start": 2644.08,
+      "end": 2645.68,
+      "text": "So I obtain my data."
+    },
+    {
+      "start": 2645.68,
+      "end": 2646.62,
+      "text": "I get my data."
+    },
+    {
+      "start": 2646.62,
+      "end": 2648.96,
+      "text": "I produce the estimate theta hat."
+    },
+    {
+      "start": 2648.96,
+      "end": 2650.7,
+      "text": "It's an estimate of the mean."
+    },
+    {
+      "start": 2650.7,
+      "end": 2654.74,
+      "text": "Use that estimate in this formula to come up with an"
+    },
+    {
+      "start": 2654.74,
+      "end": 2658.28,
+      "text": "estimate of my standard deviation, and then use that"
+    },
+    {
+      "start": 2658.28,
+      "end": 2660.38,
+      "text": "standard deviation in the construction of the"
+    },
+    {
+      "start": 2660.38,
+      "end": 2664.12,
+      "text": "confidence interval, pretending that this is correct."
+    },
+    {
+      "start": 2664.12,
+      "end": 2668.8,
+      "text": "Well, if the number of your data is large, then we know"
+    },
+    {
+      "start": 2668.8,
+      "end": 2671.58,
+      "text": "from the law of large numbers that theta hat is a pretty"
+    },
+    {
+      "start": 2671.58,
+      "end": 2673.12,
+      "text": "good estimate of theta."
+    },
+    {
+      "start": 2673.12,
+      "end": 2676.66,
+      "text": "So sigma hat is going to be a pretty good estimate of sigma."
+    },
+    {
+      "start": 2676.66,
+      "end": 2682.3,
+      "text": "So we're not making large errors by using this approach."
+    },
+    {
+      "start": 2682.3,
+      "end": 2686.56,
+      "text": "So in this scenario here, things were simple."
+    },
+    {
+      "start": 2686.56,
+      "end": 2691.14,
+      "text": "Because we had an analytical formula, sigma was determined"
+    },
+    {
+      "start": 2691.14,
+      "end": 2692.2,
+      "text": "by theta."
+    },
+    {
+      "start": 2692.2,
+      "end": 2694.78,
+      "text": "So we could come up with a quick and dirty"
+    },
+    {
+      "start": 2694.78,
+      "end": 2697.34,
+      "text": "estimate of sigma."
+    },
+    {
+      "start": 2697.34,
+      "end": 2701.24,
+      "text": "In general, if you do not have any nice formulas of this kind,"
+    },
+    {
+      "start": 2701.24,
+      "end": 2703.14,
+      "text": "what could you do?"
+    },
+    {
+      "start": 2703.14,
+      "end": 2704.9,
+      "text": "Well, you still need to come up with an"
+    },
+    {
+      "start": 2704.9,
+      "end": 2707.1,
+      "text": "estimate of sigma somehow."
+    },
+    {
+      "start": 2707.1,
+      "end": 2710.14,
+      "text": "What is a generic method for estimating a standard"
+    },
+    {
+      "start": 2710.14,
+      "end": 2711.28,
+      "text": "deviation?"
+    },
+    {
+      "start": 2711.28,
+      "end": 2714.44,
+      "text": "Equivalently, what could be a generic method for estimating"
+    },
+    {
+      "start": 2714.44,
+      "end": 2716.68,
+      "text": "a variance?"
+    },
+    {
+      "start": 2716.68,
+      "end": 2720.12,
+      "text": "Well, the variance is an expected value of some random"
+    },
+    {
+      "start": 2720.12,
+      "end": 2720.94,
+      "text": "variable."
+    },
+    {
+      "start": 2720.94,
+      "end": 2725.58,
+      "text": "The variance is the mean of the random variable inside"
+    },
+    {
+      "start": 2725.58,
+      "end": 2727.34,
+      "text": "those brackets."
+    },
+    {
+      "start": 2727.34,
+      "end": 2733.16,
+      "text": "How does one estimate the mean of some random variable?"
+    },
+    {
+      "start": 2733.16,
+      "end": 2736.14,
+      "text": "You obtain lots of measurements of that random"
+    },
+    {
+      "start": 2736.14,
+      "end": 2740.2,
+      "text": "variable and average them out."
+    },
+    {
+      "start": 2740.2,
+      "end": 2745.18,
+      "text": "So this would be a reasonable way of estimating the variance"
+    },
+    {
+      "start": 2745.18,
+      "end": 2747.3,
+      "text": "of a distribution."
+    },
+    {
+      "start": 2747.3,
+      "end": 2750.58,
+      "text": "And again, the weak law of large numbers tells us that"
+    },
+    {
+      "start": 2750.58,
+      "end": 2755.34,
+      "text": "this average converges to the expected value of this, which"
+    },
+    {
+      "start": 2755.34,
+      "end": 2757.28,
+      "text": "is just the variance of the distribution."
+    },
+    {
+      "start": 2757.28,
+      "end": 2762.72,
+      "text": "So we got a nice and consistent way of estimating"
+    },
+    {
+      "start": 2762.72,
+      "end": 2763.98,
+      "text": "variances."
+    },
+    {
+      "start": 2763.98,
+      "end": 2768.16,
+      "text": "But now we seem to be getting in a vicious circle here,"
+    },
+    {
+      "start": 2768.16,
+      "end": 2771.82,
+      "text": "because to estimate the variance, we need to know the"
+    },
+    {
+      "start": 2771.82,
+      "end": 2775.24,
+      "text": "mean, and the mean is something we were trying to"
+    },
+    {
+      "start": 2775.24,
+      "end": 2778.3,
+      "text": "estimate in the first place."
+    },
+    {
+      "start": 2778.3,
+      "end": 2781.78,
+      "text": "But we do have an estimate from the mean, so a reasonable"
+    },
+    {
+      "start": 2781.78,
+      "end": 2785.6,
+      "text": "approximation, once more, is to plug in here, since we"
+    },
+    {
+      "start": 2785.6,
+      "end": 2786.72,
+      "text": "don't know the mean."
+    },
+    {
+      "start": 2786.72,
+      "end": 2789.26,
+      "text": "To plug in the estimate of the mean."
+    },
+    {
+      "start": 2789.26,
+      "end": 2792.48,
+      "text": "And so you get that expression, but with a theta"
+    },
+    {
+      "start": 2792.48,
+      "end": 2795.14,
+      "text": "hat instead of theta itself."
+    },
+    {
+      "start": 2795.14,
+      "end": 2800.18,
+      "text": "And this is another reasonable way of estimating the variance."
+    },
+    {
+      "start": 2800.18,
+      "end": 2802.84,
+      "text": "It does have the same consistency properties."
+    },
+    {
+      "start": 2802.84,
+      "end": 2803.96,
+      "text": "Why?"
+    },
+    {
+      "start": 2803.96,
+      "end": 2811.1,
+      "text": "When n is large, this is going to behave the same as that,"
+    },
+    {
+      "start": 2811.1,
+      "end": 2813.64,
+      "text": "because theta hat converges to theta."
+    },
+    {
+      "start": 2813.64,
+      "end": 2816.7,
+      "text": "And when n is large, this is"
+    },
+    {
+      "start": 2816.72,
+      "end": 2818.84,
+      "text": "approximately the same as sigma squared."
+    },
+    {
+      "start": 2818.84,
+      "end": 2822.62,
+      "text": "So for large n, this quantity also converges to sigma"
+    },
+    {
+      "start": 2822.62,
+      "end": 2825.64,
+      "text": "squared, and we have a consistent estimate of the"
+    },
+    {
+      "start": 2825.64,
+      "end": 2827.0,
+      "text": "variance as well."
+    },
+    {
+      "start": 2827.0,
+      "end": 2829.48,
+      "text": "And we can take that consistent estimate and use it"
+    },
+    {
+      "start": 2829.48,
+      "end": 2832.36,
+      "text": "back in the construction of confidence interval."
+    },
+    {
+      "start": 2832.36,
+      "end": 2834.04,
+      "text": "One little detail."
+    },
+    {
+      "start": 2834.04,
+      "end": 2836.32,
+      "text": "Here we're dividing by n."
+    },
+    {
+      "start": 2836.32,
+      "end": 2839.58,
+      "text": "Here we're dividing by n minus 1."
+    },
+    {
+      "start": 2839.58,
+      "end": 2841.02,
+      "text": "Why do we do this?"
+    },
+    {
+      "start": 2841.02,
+      "end": 2844.62,
+      "text": "Well, it turns out that's what you need to do for this"
+    },
+    {
+      "start": 2844.62,
+      "end": 2845.92,
+      "text": "estimate to be an unbiased variance."
+    },
+    {
+      "start": 2846.72,
+      "end": 2848.6,
+      "text": "The estimate of the variance."
+    },
+    {
+      "start": 2848.6,
+      "end": 2852.06,
+      "text": "One has to do a little bit of a calculation, and one finds"
+    },
+    {
+      "start": 2852.06,
+      "end": 2856.64,
+      "text": "that that's the factor that you need to have here in order"
+    },
+    {
+      "start": 2856.64,
+      "end": 2857.72,
+      "text": "to be unbiased."
+    },
+    {
+      "start": 2857.72,
+      "end": 2862.28,
+      "text": "Of course, if you get 100 data points, whether you divide by"
+    },
+    {
+      "start": 2862.28,
+      "end": 2866.96,
+      "text": "100 or divide by 99 is going to make only a tiny difference"
+    },
+    {
+      "start": 2866.96,
+      "end": 2868.6,
+      "text": "in your estimate of your variance."
+    },
+    {
+      "start": 2868.6,
+      "end": 2870.72,
+      "text": "So it's going to make only a tiny difference in your"
+    },
+    {
+      "start": 2870.72,
+      "end": 2872.64,
+      "text": "estimate of the standard deviation."
+    },
+    {
+      "start": 2872.64,
+      "end": 2876.52,
+      "text": "It's not a big deal, and it doesn't really matter."
+    },
+    {
+      "start": 2876.52,
+      "end": 2880.2,
+      "text": "But if you want to sort of show off about your deeper"
+    },
+    {
+      "start": 2880.2,
+      "end": 2883.82,
+      "text": "knowledge of statistics, you throw in the 1 over n minus 1"
+    },
+    {
+      "start": 2883.82,
+      "end": 2886.82,
+      "text": "factor in there."
+    },
+    {
+      "start": 2886.82,
+      "end": 2891.28,
+      "text": "So now one basically needs to put together this story here,"
+    },
+    {
+      "start": 2891.28,
+      "end": 2895.24,
+      "text": "how you estimate the variance."
+    },
+    {
+      "start": 2895.24,
+      "end": 2899.4,
+      "text": "You first estimate the sample mean, and then you do some"
+    },
+    {
+      "start": 2899.4,
+      "end": 2902.22,
+      "text": "extra work to come up with a reasonable estimate of the"
+    },
+    {
+      "start": 2902.22,
+      "end": 2904.62,
+      "text": "variance and the standard deviation."
+    },
+    {
+      "start": 2904.62,
+      "end": 2906.52,
+      "text": "And then you use your estimate."
+    },
+    {
+      "start": 2906.52,
+      "end": 2910.58,
+      "text": "of the standard deviation to come up with a confidence"
+    },
+    {
+      "start": 2910.58,
+      "end": 2915.14,
+      "text": "interval, which has these two endpoints."
+    },
+    {
+      "start": 2915.14,
+      "end": 2919.12,
+      "text": "In doing this procedure, there's basically a number of"
+    },
+    {
+      "start": 2919.12,
+      "end": 2921.8,
+      "text": "approximations that are involved."
+    },
+    {
+      "start": 2921.8,
+      "end": 2923.56,
+      "text": "There are two types of approximations."
+    },
+    {
+      "start": 2923.56,
+      "end": 2926.18,
+      "text": "One approximation is that we're pretending that the"
+    },
+    {
+      "start": 2926.18,
+      "end": 2929.28,
+      "text": "sample mean has a normal distribution, that something"
+    },
+    {
+      "start": 2929.28,
+      "end": 2932.44,
+      "text": "we're justified to do by the central limit theorem."
+    },
+    {
+      "start": 2932.44,
+      "end": 2933.52,
+      "text": "But it's not exact."
+    },
+    {
+      "start": 2933.52,
+      "end": 2934.9,
+      "text": "It's an approximation."
+    },
+    {
+      "start": 2934.9,
+      "end": 2936.48,
+      "text": "And the second approximation that"
+    },
+    {
+      "start": 2936.52,
+      "end": 2939.54,
+      "text": "comes in is that instead of using the correct standard"
+    },
+    {
+      "start": 2939.54,
+      "end": 2943.88,
+      "text": "deviation, in general, you will have to use some"
+    },
+    {
+      "start": 2943.88,
+      "end": 2947.9,
+      "text": "approximation of the standard deviation."
+    },
+    {
+      "start": 2947.9,
+      "end": 2948.4,
+      "text": "OK."
+    },
+    {
+      "start": 2948.4,
+      "end": 2951.2,
+      "text": "So you will be getting a little bit of practice with"
+    },
+    {
+      "start": 2951.2,
+      "end": 2954.54,
+      "text": "these concepts in recitation and tutorial."
+    },
+    {
+      "start": 2954.54,
+      "end": 2958.1,
+      "text": "And we will move on to new topics next week."
+    },
+    {
+      "start": 2958.1,
+      "end": 2960.94,
+      "text": "But the material that's going to be covered in the final"
+    },
+    {
+      "start": 2960.94,
+      "end": 2963.54,
+      "text": "exam is only up to this point."
+    },
+    {
+      "start": 2963.54,
+      "end": 2964.64,
+      "text": "So next week is just general."
+    },
+    {
+      "start": 2964.64,
+      "end": 2966.4,
+      "text": "."
+    },
+    {
+      "start": 2966.52,
+      "end": 2970.64,
+      "text": "General education, hopefully useful, but not in the exam."
+    }
+  ]
+}

@@ -1,0 +1,4542 @@
+{
+  "lecture": "lec03",
+  "language": "en",
+  "duration": 2789.0986875,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.44,
+      "text": "The following content is provided under a Creative"
+    },
+    {
+      "start": 2.44,
+      "end": 3.96,
+      "text": "Commons license."
+    },
+    {
+      "start": 3.96,
+      "end": 6.28,
+      "text": "Your support will help MIT OpenCourseWare"
+    },
+    {
+      "start": 6.28,
+      "end": 10.64,
+      "text": "continue to offer high quality educational resources for free."
+    },
+    {
+      "start": 10.64,
+      "end": 13.28,
+      "text": "To make a donation or view additional materials"
+    },
+    {
+      "start": 13.28,
+      "end": 17.2,
+      "text": "from hundreds of MIT courses, visit MIT OpenCourseWare"
+    },
+    {
+      "start": 17.2,
+      "end": 20.4,
+      "text": "at ocw.mit.edu."
+    },
+    {
+      "start": 20.4,
+      "end": 27.04,
+      "text": "All right, so let us start."
+    },
+    {
+      "start": 27.04,
+      "end": 29.96,
+      "text": "So as always, we're going to have a quick review of what"
+    },
+    {
+      "start": 29.96,
+      "end": 31.2,
+      "text": "we discussed last time."
+    },
+    {
+      "start": 31.2,
+      "end": 33.0,
+      "text": "And then today, we're going to introduce"
+    },
+    {
+      "start": 33.0,
+      "end": 36.02,
+      "text": "just one new concept, the notion of"
+    },
+    {
+      "start": 36.02,
+      "end": 38.1,
+      "text": "independence of two events."
+    },
+    {
+      "start": 38.1,
+      "end": 41.02,
+      "text": "And we will play with that concept."
+    },
+    {
+      "start": 41.02,
+      "end": 43.14,
+      "text": "So what did we talk about last time?"
+    },
+    {
+      "start": 43.14,
+      "end": 46.44,
+      "text": "The idea is that we have an experiment, and the experiment"
+    },
+    {
+      "start": 46.44,
+      "end": 48.8,
+      "text": "has a sample space, omega."
+    },
+    {
+      "start": 48.8,
+      "end": 51.74,
+      "text": "And then somebody comes and tells us that you know the"
+    },
+    {
+      "start": 51.74,
+      "end": 56.26,
+      "text": "outcome of the experiment happens to lie inside this"
+    },
+    {
+      "start": 56.26,
+      "end": 60.46,
+      "text": "particular event B. Given this information, it kind of"
+    },
+    {
+      "start": 60.46,
+      "end": 62.76,
+      "text": "changes what we know about the situation."
+    },
+    {
+      "start": 62.76,
+      "end": 64.9,
+      "text": "It tells us that the outcome is going to be"
+    },
+    {
+      "start": 64.9,
+      "end": 66.62,
+      "text": "somewhere inside here."
+    },
+    {
+      "start": 66.62,
+      "end": 69.8,
+      "text": "So this is essentially our new sample space."
+    },
+    {
+      "start": 69.8,
+      "end": 73.1,
+      "text": "And now we need to reassign probabilities to the various"
+    },
+    {
+      "start": 73.1,
+      "end": 74.68,
+      "text": "possible outcomes."
+    },
+    {
+      "start": 74.68,
+      "end": 77.52,
+      "text": "Because for example, these outcomes, even if they had"
+    },
+    {
+      "start": 77.52,
+      "end": 80.72,
+      "text": "positive probability beforehand, now that we're"
+    },
+    {
+      "start": 80.72,
+      "end": 83.34,
+      "text": "told that B occurred, those outcomes out there are going"
+    },
+    {
+      "start": 83.34,
+      "end": 85.22,
+      "text": "to have zero probability."
+    },
+    {
+      "start": 85.22,
+      "end": 87.68,
+      "text": "So we need to revise our probabilities."
+    },
+    {
+      "start": 87.68,
+      "end": 89.74,
+      "text": "The new probabilities are called conditional"
+    },
+    {
+      "start": 89.74,
+      "end": 92.76,
+      "text": "probabilities, and they're defined this way."
+    },
+    {
+      "start": 92.76,
+      "end": 96.9,
+      "text": "The conditional probability that A occurs, given that we're"
+    },
+    {
+      "start": 96.9,
+      "end": 100.76,
+      "text": "told that B occurred, is calculated by this formula,"
+    },
+    {
+      "start": 100.76,
+      "end": 102.86,
+      "text": "which tells us the following."
+    },
+    {
+      "start": 102.86,
+      "end": 105.76,
+      "text": "Out of the total probability that was initially assigned to"
+    },
+    {
+      "start": 105.76,
+      "end": 109.76,
+      "text": "the event B, what fraction of that probability is assigned"
+    },
+    {
+      "start": 109.76,
+      "end": 114.3,
+      "text": "to outcomes that also make A to happen?"
+    },
+    {
+      "start": 114.3,
+      "end": 118.66,
+      "text": "So out of the total probability assigned to B, we"
+    },
+    {
+      "start": 118.66,
+      "end": 122.58,
+      "text": "see what fraction of that total probability is assigned,"
+    },
+    {
+      "start": 122.76,
+      "end": 126.64,
+      "text": "to those elements here that will also make A happen."
+    },
+    {
+      "start": 126.64,
+      "end": 129.32,
+      "text": "Conditional probabilities are left undefined if the"
+    },
+    {
+      "start": 129.32,
+      "end": 132.84,
+      "text": "denominator here is 0."
+    },
+    {
+      "start": 132.84,
+      "end": 136.04,
+      "text": "Easy consequence of the definition is if we bring that"
+    },
+    {
+      "start": 136.04,
+      "end": 138.66,
+      "text": "term to the other side, that we can find the probability of"
+    },
+    {
+      "start": 138.66,
+      "end": 142.04,
+      "text": "two things happening by taking the probability that the first"
+    },
+    {
+      "start": 142.04,
+      "end": 145.14,
+      "text": "thing happens, and then given that the first thing happened,"
+    },
+    {
+      "start": 145.14,
+      "end": 148.28,
+      "text": "the conditional probability that the second one happens."
+    },
+    {
+      "start": 148.28,
+      "end": 151.66,
+      "text": "Then we saw last time that we can divide and conquer in"
+    },
+    {
+      "start": 151.66,
+      "end": 152.34,
+      "text": "calculating"
+    },
+    {
+      "start": 152.76,
+      "end": 156.52,
+      "text": "probabilities of a mildly complicated event by breaking"
+    },
+    {
+      "start": 156.52,
+      "end": 159.06,
+      "text": "it down into different scenarios."
+    },
+    {
+      "start": 159.06,
+      "end": 161.34,
+      "text": "So event B can happen in two ways."
+    },
+    {
+      "start": 161.34,
+      "end": 164.78,
+      "text": "It can happen either together with A, which is this"
+    },
+    {
+      "start": 164.78,
+      "end": 168.66,
+      "text": "probability, or it can happen together with A complement,"
+    },
+    {
+      "start": 168.66,
+      "end": 169.88,
+      "text": "which is this probability."
+    },
+    {
+      "start": 169.88,
+      "end": 173.06,
+      "text": "So basically, we're saying that the total probability of"
+    },
+    {
+      "start": 173.06,
+      "end": 178.18,
+      "text": "B is the probability of this, which is A intersection B,"
+    },
+    {
+      "start": 178.18,
+      "end": 182.6,
+      "text": "plus the probability of that, which is A complement,"
+    },
+    {
+      "start": 182.6,
+      "end": 187.47,
+      "text": "intersection B."
+    },
+    {
+      "start": 187.47,
+      "end": 191.17,
+      "text": "So these two facts here, the multiplication rule and the"
+    },
+    {
+      "start": 191.17,
+      "end": 194.77,
+      "text": "total probability theorem, are basic tools that one uses to"
+    },
+    {
+      "start": 194.77,
+      "end": 196.99,
+      "text": "break down probability calculations"
+    },
+    {
+      "start": 196.99,
+      "end": 198.93,
+      "text": "into simpler parts."
+    },
+    {
+      "start": 198.93,
+      "end": 201.99,
+      "text": "So we find probabilities of two things happening by looking"
+    },
+    {
+      "start": 201.99,
+      "end": 204.29,
+      "text": "at each one at a time."
+    },
+    {
+      "start": 204.29,
+      "end": 207.85,
+      "text": "And this is what we do to break up a situation into"
+    },
+    {
+      "start": 207.85,
+      "end": 209.81,
+      "text": "different possible scenarios."
+    },
+    {
+      "start": 209.81,
+      "end": 213.11,
+      "text": "Then we also have the Bayes rule, which does the"
+    },
+    {
+      "start": 213.11,
+      "end": 213.65,
+      "text": "following."
+    },
+    {
+      "start": 213.65,
+      "end": 215.45,
+      "text": "Given a model that has"
+    },
+    {
+      "start": 215.45,
+      "end": 217.83,
+      "text": "conditional probabilities of this kind, the Bayes rule"
+    },
+    {
+      "start": 217.83,
+      "end": 220.33,
+      "text": "allows us to calculate conditional probabilities in"
+    },
+    {
+      "start": 220.33,
+      "end": 223.01,
+      "text": "which the events appear in different order."
+    },
+    {
+      "start": 223.01,
+      "end": 225.69,
+      "text": "You can think of these probabilities as describing a"
+    },
+    {
+      "start": 225.69,
+      "end": 229.25,
+      "text": "causal model of a certain situation, whereas these are"
+    },
+    {
+      "start": 229.25,
+      "end": 232.67,
+      "text": "the probabilities that you get after you do some inference"
+    },
+    {
+      "start": 232.67,
+      "end": 235.47,
+      "text": "based on the information that you have available."
+    },
+    {
+      "start": 235.47,
+      "end": 239.11,
+      "text": "Now the Bayes rule, we derived it, and it's a trivial"
+    },
+    {
+      "start": 239.11,
+      "end": 241.05,
+      "text": "half-line calculation."
+    },
+    {
+      "start": 241.05,
+      "end": 243.97,
+      "text": "But it underlies lots and lots of useful things"
+    },
+    {
+      "start": 243.97,
+      "end": 245.27,
+      "text": "in the real world."
+    },
+    {
+      "start": 245.27,
+      "end": 247.67,
+      "text": "We had the radar example last time."
+    },
+    {
+      "start": 247.67,
+      "end": 250.39,
+      "text": "You can think of more complicated situations in"
+    },
+    {
+      "start": 250.39,
+      "end": 254.59,
+      "text": "which there's a bunch or lots of different hypotheses about"
+    },
+    {
+      "start": 254.59,
+      "end": 255.91,
+      "text": "the environment."
+    },
+    {
+      "start": 255.91,
+      "end": 258.89,
+      "text": "Given any particular setting in the environment, you have a"
+    },
+    {
+      "start": 258.89,
+      "end": 261.97,
+      "text": "measuring device that can produce many different"
+    },
+    {
+      "start": 261.97,
+      "end": 263.65,
+      "text": "outcomes."
+    },
+    {
+      "start": 263.65,
+      "end": 269.21,
+      "text": "And you observe the final outcome out of your measuring"
+    },
+    {
+      "start": 269.21,
+      "end": 271.89,
+      "text": "device, and you're trying to guess which"
+    },
+    {
+      "start": 271.89,
+      "end": 274.19,
+      "text": "particular branch occurred."
+    },
+    {
+      "start": 274.19,
+      "end": 275.07,
+      "text": "That is, you're trying to"
+    },
+    {
+      "start": 275.07,
+      "end": 277.09,
+      "text": "guess the state of the world based on a"
+    },
+    {
+      "start": 277.09,
+      "end": 278.51,
+      "text": "particular measurement."
+    },
+    {
+      "start": 278.51,
+      "end": 280.79,
+      "text": "That's what inference is all about."
+    },
+    {
+      "start": 280.79,
+      "end": 284.45,
+      "text": "So real world problems only differ from the simple example"
+    },
+    {
+      "start": 284.45,
+      "end": 288.61,
+      "text": "that we saw last time, in that this kind of tree is a little"
+    },
+    {
+      "start": 288.61,
+      "end": 290.05,
+      "text": "more complicated."
+    },
+    {
+      "start": 290.05,
+      "end": 292.13,
+      "text": "You might have infinitely many possible"
+    },
+    {
+      "start": 292.13,
+      "end": 294.45,
+      "text": "outcomes here, and so on."
+    },
+    {
+      "start": 294.45,
+      "end": 297.97,
+      "text": "So setting up the model may be more elaborate, but the basic"
+    },
+    {
+      "start": 297.97,
+      "end": 301.17,
+      "text": "calculation that's done based on the Bayes rule is"
+    },
+    {
+      "start": 301.17,
+      "end": 304.43,
+      "text": "essentially the same as the one that we saw."
+    },
+    {
+      "start": 304.43,
+      "end": 305.07,
+      "text": "Now, something"
+    },
+    {
+      "start": 305.07,
+      "end": 307.67,
+      "text": "that we discussed is that sometimes we use conditional"
+    },
+    {
+      "start": 307.67,
+      "end": 310.21,
+      "text": "probabilities to describe models."
+    },
+    {
+      "start": 310.21,
+      "end": 314.09,
+      "text": "And let's do this by looking at the model where we toss a"
+    },
+    {
+      "start": 314.09,
+      "end": 316.13,
+      "text": "coin three times."
+    },
+    {
+      "start": 316.13,
+      "end": 319.61,
+      "text": "And how do we use conditional probabilities to describe the"
+    },
+    {
+      "start": 319.61,
+      "end": 320.63,
+      "text": "situation?"
+    },
+    {
+      "start": 320.63,
+      "end": 325.23,
+      "text": "So we have one experiment, but that one experiment consists"
+    },
+    {
+      "start": 325.23,
+      "end": 327.89,
+      "text": "of three consecutive coin tosses."
+    },
+    {
+      "start": 327.89,
+      "end": 331.75,
+      "text": "So the outcomes, the possible outcomes, are sample space"
+    },
+    {
+      "start": 331.75,
+      "end": 334.71,
+      "text": "consists of strings of length three."
+    },
+    {
+      "start": 334.71,
+      "end": 337.65,
+      "text": "That tell us whether we had heads, tails,"
+    },
+    {
+      "start": 337.65,
+      "end": 339.21,
+      "text": "and in what sequence."
+    },
+    {
+      "start": 339.21,
+      "end": 343.09,
+      "text": "So three heads in a row is one particular outcome."
+    },
+    {
+      "start": 343.09,
+      "end": 346.47,
+      "text": "So what is the meaning of those labels in"
+    },
+    {
+      "start": 346.47,
+      "end": 348.01,
+      "text": "front of the branches?"
+    },
+    {
+      "start": 348.01,
+      "end": 351.85,
+      "text": "So this P here, of course, stands for the probability"
+    },
+    {
+      "start": 351.85,
+      "end": 355.65,
+      "text": "that the first toss resulted in heads."
+    },
+    {
+      "start": 355.65,
+      "end": 360.39,
+      "text": "And let me use this notation to denote that the first toss"
+    },
+    {
+      "start": 360.39,
+      "end": 361.17,
+      "text": "was heads."
+    },
+    {
+      "start": 361.17,
+      "end": 364.57,
+      "text": "I put an H in toss one."
+    },
+    {
+      "start": 364.57,
+      "end": 368.41,
+      "text": "How about the meaning of this probability here?"
+    },
+    {
+      "start": 368.41,
+      "end": 370.63,
+      "text": "Well, the meaning of this probability is a"
+    },
+    {
+      "start": 370.63,
+      "end": 371.67,
+      "text": "conditional one."
+    },
+    {
+      "start": 371.67,
+      "end": 374.15,
+      "text": "It's the conditional probability that the second"
+    },
+    {
+      "start": 374.15,
+      "end": 380.39,
+      "text": "toss resulted in heads, given that the first one resulted in"
+    },
+    {
+      "start": 380.39,
+      "end": 381.43,
+      "text": "heads."
+    },
+    {
+      "start": 381.43,
+      "end": 386.81,
+      "text": "And similarly, this label here corresponds to the probability"
+    },
+    {
+      "start": 386.81,
+      "end": 391.55,
+      "text": "that the third toss resulted in heads, given that the first"
+    },
+    {
+      "start": 391.55,
+      "end": 393.93,
+      "text": "one and the second one resulted in heads."
+    },
+    {
+      "start": 394.57,
+      "end": 399.65,
+      "text": "So in this particular model that I wrote down here, those"
+    },
+    {
+      "start": 399.65,
+      "end": 404.77,
+      "text": "probabilities P of obtaining heads remain the same no"
+    },
+    {
+      "start": 404.77,
+      "end": 407.57,
+      "text": "matter what happened in the previous toss."
+    },
+    {
+      "start": 407.57,
+      "end": 412.01,
+      "text": "For example, even if the first toss was tails, we still have"
+    },
+    {
+      "start": 412.01,
+      "end": 416.99,
+      "text": "the same probability P, that the second one is heads, given"
+    },
+    {
+      "start": 416.99,
+      "end": 419.11,
+      "text": "that the first one was tails."
+    },
+    {
+      "start": 419.11,
+      "end": 421.83,
+      "text": "So we're assuming that no matter what happened in the"
+    },
+    {
+      "start": 421.83,
+      "end": 424.37,
+      "text": "first toss, the second toss will"
+    },
+    {
+      "start": 424.37,
+      "end": 427.49,
+      "text": "still have a conditional probability equal to p."
+    },
+    {
+      "start": 427.49,
+      "end": 430.79,
+      "text": "So that conditional probability does not depend on"
+    },
+    {
+      "start": 430.79,
+      "end": 432.65,
+      "text": "what happened in the first toss."
+    },
+    {
+      "start": 432.65,
+      "end": 436.03,
+      "text": "And we'll see that this is a very special situation, and"
+    },
+    {
+      "start": 436.03,
+      "end": 439.25,
+      "text": "that's really the concept of independence that we're going"
+    },
+    {
+      "start": 439.25,
+      "end": 440.87,
+      "text": "to introduce shortly."
+    },
+    {
+      "start": 440.87,
+      "end": 445.53,
+      "text": "But before we get to independence, let's practice"
+    },
+    {
+      "start": 445.53,
+      "end": 449.09,
+      "text": "once more the three skills that we covered last time on"
+    },
+    {
+      "start": 449.09,
+      "end": 450.49,
+      "text": "this example."
+    },
+    {
+      "start": 450.49,
+      "end": 453.47,
+      "text": "So first skill was multiplication rule."
+    },
+    {
+      "start": 453.47,
+      "end": 456.25,
+      "text": "How do you find the probability of several"
+    },
+    {
+      "start": 456.25,
+      "end": 457.99,
+      "text": "things happening?"
+    },
+    {
+      "start": 457.99,
+      "end": 461.37,
+      "text": "That is, the probability that we have tails followed by"
+    },
+    {
+      "start": 461.37,
+      "end": 464.15,
+      "text": "heads followed by tails."
+    },
+    {
+      "start": 464.15,
+      "end": 470.37,
+      "text": "So here we're talking about this particular outcome here."
+    },
+    {
+      "start": 470.37,
+      "end": 473.15,
+      "text": "Tails followed by heads followed by tails."
+    },
+    {
+      "start": 473.15,
+      "end": 477.09,
+      "text": "And the way we calculate such a probability is by"
+    },
+    {
+      "start": 477.09,
+      "end": 481.57,
+      "text": "multiplying conditional probabilities along the path"
+    },
+    {
+      "start": 481.57,
+      "end": 483.47,
+      "text": "that takes us to this outcome."
+    },
+    {
+      "start": 483.47,
+      "end": 485.27,
+      "text": "And so these conditional probabilities are"
+    },
+    {
+      "start": 485.27,
+      "end": 486.23,
+      "text": "recorded here."
+    },
+    {
+      "start": 486.23,
+      "end": 491.83,
+      "text": "So it's going to be 1 minus p times p times 1 minus p."
+    },
+    {
+      "start": 491.83,
+      "end": 494.49,
+      "text": "So this is the multiplication rule."
+    },
+    {
+      "start": 494.49,
+      "end": 498.03,
+      "text": "Second question is, how do we find the probability of a"
+    },
+    {
+      "start": 498.03,
+      "end": 500.51,
+      "text": "mildly complicated event?"
+    },
+    {
+      "start": 500.51,
+      "end": 503.53,
+      "text": "So the event of interest here that I wrote down is the"
+    },
+    {
+      "start": 503.53,
+      "end": 507.05,
+      "text": "probability that in the three tosses we had a total of one"
+    },
+    {
+      "start": 507.05,
+      "end": 510.47,
+      "text": "head, exactly one head."
+    },
+    {
+      "start": 510.47,
+      "end": 513.47,
+      "text": "This is an event that can happen in multiple ways."
+    },
+    {
+      "start": 513.47,
+      "end": 521.37,
+      "text": "It happens here, it happens here, and it also happens here."
+    },
+    {
+      "start": 521.37,
+      "end": 524.47,
+      "text": "So we want to find the total probability of the event"
+    },
+    {
+      "start": 524.47,
+      "end": 526.31,
+      "text": "consisting of these three outcomes."
+    },
+    {
+      "start": 526.31,
+      "end": 527.41,
+      "text": "What do we do?"
+    },
+    {
+      "start": 527.41,
+      "end": 531.11,
+      "text": "We just add the probabilities of each individual outcome."
+    },
+    {
+      "start": 531.11,
+      "end": 533.85,
+      "text": "How do we find the probability of an individual outcome?"
+    },
+    {
+      "start": 533.85,
+      "end": 536.19,
+      "text": "Well, that's what we just did."
+    },
+    {
+      "start": 536.19,
+      "end": 540.29,
+      "text": "Now notice that this outcome has probability p times 1"
+    },
+    {
+      "start": 540.29,
+      "end": 544.25,
+      "text": "minus p squared."
+    },
+    {
+      "start": 544.25,
+      "end": 544.71,
+      "text": "That's 1."
+    },
+    {
+      "start": 544.71,
+      "end": 547.01,
+      "text": "1 should not be there."
+    },
+    {
+      "start": 547.01,
+      "end": 549.77,
+      "text": "So where is it?"
+    },
+    {
+      "start": 549.77,
+      "end": 554.78,
+      "text": "It's this one."
+    },
+    {
+      "start": 554.78,
+      "end": 558.6,
+      "text": "So the probability of this outcome is 1 minus p times p"
+    },
+    {
+      "start": 558.6,
+      "end": 560.98,
+      "text": "times 1 minus p, the same probability."
+    },
+    {
+      "start": 560.98,
+      "end": 565.48,
+      "text": "And finally, this one is again 1 minus p squared times p."
+    },
+    {
+      "start": 565.48,
+      "end": 569.78,
+      "text": "So this event of one head can happen in three ways, and each"
+    },
+    {
+      "start": 569.78,
+      "end": 571.7,
+      "text": "one of those three ways has the same"
+    },
+    {
+      "start": 571.7,
+      "end": 573.38,
+      "text": "probability of occurring."
+    },
+    {
+      "start": 573.38,
+      "end": 576.46,
+      "text": "And this is the answer."
+    },
+    {
+      "start": 576.46,
+      "end": 580.3,
+      "text": "And finally, the last thing that we learned how to do is to"
+    },
+    {
+      "start": 580.3,
+      "end": 584.22,
+      "text": "use the Bayes rule to make an inference."
+    },
+    {
+      "start": 584.22,
+      "end": 586.96,
+      "text": "So somebody tells you that there was exactly one head in"
+    },
+    {
+      "start": 586.96,
+      "end": 589.22,
+      "text": "your three tosses."
+    },
+    {
+      "start": 589.22,
+      "end": 593.72,
+      "text": "What is the probability that the first toss resulted in"
+    },
+    {
+      "start": 593.72,
+      "end": 595.1,
+      "text": "heads?"
+    },
+    {
+      "start": 595.1,
+      "end": 598.4,
+      "text": "OK, I guess you can guess the answer here."
+    },
+    {
+      "start": 598.4,
+      "end": 602.76,
+      "text": "If I tell you that there were three tosses, one of them was"
+    },
+    {
+      "start": 602.76,
+      "end": 605.02,
+      "text": "heads, where was that head?"
+    },
+    {
+      "start": 605.02,
+      "end": 605.6,
+      "text": "In the first?"
+    },
+    {
+      "start": 605.6,
+      "end": 605.82,
+      "text": "The second?"
+    },
+    {
+      "start": 605.82,
+      "end": 606.36,
+      "text": "Or the third?"
+    },
+    {
+      "start": 606.36,
+      "end": 607.32,
+      "text": "The third."
+    },
+    {
+      "start": 607.32,
+      "end": 610.42,
+      "text": "Well, by symmetry, they should all be equally likely."
+    },
+    {
+      "start": 610.42,
+      "end": 613.66,
+      "text": "So there should be probability just 1 third that that head"
+    },
+    {
+      "start": 613.66,
+      "end": 616.06,
+      "text": "occurred in the first toss."
+    },
+    {
+      "start": 616.06,
+      "end": 619.06,
+      "text": "Let's check our intuition using the definitions."
+    },
+    {
+      "start": 619.06,
+      "end": 622.62,
+      "text": "So definition of conditional probability tells us the"
+    },
+    {
+      "start": 622.62,
+      "end": 626.34,
+      "text": "conditional probability is the probability of both things"
+    },
+    {
+      "start": 626.34,
+      "end": 629.12,
+      "text": "happening, first toss is heads."
+    },
+    {
+      "start": 629.12,
+      "end": 634.52,
+      "text": "And we have exactly one head divided by the"
+    },
+    {
+      "start": 634.52,
+      "end": 635.72,
+      "text": "probability of one head."
+    },
+    {
+      "start": 635.72,
+      "end": 644.99,
+      "text": "What is the probability that the first toss is heads and we"
+    },
+    {
+      "start": 644.99,
+      "end": 647.35,
+      "text": "have exactly one head?"
+    },
+    {
+      "start": 647.35,
+      "end": 651.75,
+      "text": "This is the same as the event heads, tails, tails."
+    },
+    {
+      "start": 651.75,
+      "end": 654.29,
+      "text": "If I tell you that the first is heads and there's only one"
+    },
+    {
+      "start": 654.29,
+      "end": 657.01,
+      "text": "head, it means that the others are tails."
+    },
+    {
+      "start": 657.01,
+      "end": 663.07,
+      "text": "So this is the probability of heads, tails, tails divided by"
+    },
+    {
+      "start": 663.07,
+      "end": 666.07,
+      "text": "the probability of one head."
+    },
+    {
+      "start": 666.07,
+      "end": 667.75,
+      "text": "And we know all these quantities."
+    },
+    {
+      "start": 667.75,
+      "end": 668.15,
+      "text": "."
+    },
+    {
+      "start": 668.15,
+      "end": 672.11,
+      "text": "Probability of heads, tails, tails is p 1 minus p squared."
+    },
+    {
+      "start": 672.11,
+      "end": 677.69,
+      "text": "Probability of one head is 3 times p 1 minus p squared."
+    },
+    {
+      "start": 677.69,
+      "end": 682.63,
+      "text": "So the final answer is 1 third, which is what you should"
+    },
+    {
+      "start": 682.63,
+      "end": 687.26,
+      "text": "have guessed on intuitive grounds."
+    },
+    {
+      "start": 687.26,
+      "end": 687.72,
+      "text": "Very good."
+    },
+    {
+      "start": 687.72,
+      "end": 691.1,
+      "text": "So we got our practice on the material that we"
+    },
+    {
+      "start": 691.1,
+      "end": 693.04,
+      "text": "did cover last time."
+    },
+    {
+      "start": 693.04,
+      "end": 693.68,
+      "text": "Again, think."
+    },
+    {
+      "start": 693.68,
+      "end": 698.04,
+      "text": "There's basically three basic skills that we're practicing"
+    },
+    {
+      "start": 698.04,
+      "end": 699.44,
+      "text": "and exercising here."
+    },
+    {
+      "start": 699.52,
+      "end": 704.02,
+      "text": "In problems, quizzes, and in real life, you may have to"
+    },
+    {
+      "start": 704.02,
+      "end": 706.82,
+      "text": "apply those three skills in somewhat more"
+    },
+    {
+      "start": 706.82,
+      "end": 708.04,
+      "text": "complicated settings."
+    },
+    {
+      "start": 708.04,
+      "end": 711.84,
+      "text": "But in the end, that's what it boils down to, usually."
+    },
+    {
+      "start": 711.84,
+      "end": 715.22,
+      "text": "Now, let's focus on this special feature of this"
+    },
+    {
+      "start": 715.22,
+      "end": 719.64,
+      "text": "particular model that I discussed a little bit earlier."
+    },
+    {
+      "start": 719.64,
+      "end": 724.64,
+      "text": "Think of the event heads in the second toss."
+    },
+    {
+      "start": 724.64,
+      "end": 728.84,
+      "text": "If I tell, initially, the probability of heads in the"
+    },
+    {
+      "start": 728.84,
+      "end": 729.52,
+      "text": "second toss."
+    },
+    {
+      "start": 729.52,
+      "end": 731.7,
+      "text": "You know that it's p."
+    },
+    {
+      "start": 731.7,
+      "end": 734.28,
+      "text": "The probability of success of your coin."
+    },
+    {
+      "start": 734.28,
+      "end": 739.1,
+      "text": "If I tell you that the first toss resulted in heads, what's"
+    },
+    {
+      "start": 739.1,
+      "end": 741.24,
+      "text": "the probability that the second toss is heads?"
+    },
+    {
+      "start": 741.24,
+      "end": 742.72,
+      "text": "It's again p."
+    },
+    {
+      "start": 742.72,
+      "end": 745.4,
+      "text": "If I tell you that the first toss was tails, what's the"
+    },
+    {
+      "start": 745.4,
+      "end": 747.52,
+      "text": "probability that the second toss is heads?"
+    },
+    {
+      "start": 747.52,
+      "end": 748.94,
+      "text": "It's again p."
+    },
+    {
+      "start": 748.94,
+      "end": 754.82,
+      "text": "So whether I tell you the result of the first toss or I"
+    },
+    {
+      "start": 754.82,
+      "end": 757.28,
+      "text": "don't tell you, it doesn't really make any"
+    },
+    {
+      "start": 757.28,
+      "end": 758.32,
+      "text": "difference to you."
+    },
+    {
+      "start": 758.32,
+      "end": 759.52,
+      "text": "You will always say."
+    },
+    {
+      "start": 759.52,
+      "end": 762.28,
+      "text": "The probability of heads in the second toss is going to be"
+    },
+    {
+      "start": 762.28,
+      "end": 766.38,
+      "text": "p, no matter what happened in the first toss."
+    },
+    {
+      "start": 766.38,
+      "end": 769.52,
+      "text": "This is a special situation to which we're going to give a"
+    },
+    {
+      "start": 769.52,
+      "end": 773.52,
+      "text": "name, and we're going to call that property independence."
+    },
+    {
+      "start": 773.52,
+      "end": 777.92,
+      "text": "Basically, independence, between two things, stands for"
+    },
+    {
+      "start": 777.92,
+      "end": 781.94,
+      "text": "the fact that the first thing, whether it occurred or not,"
+    },
+    {
+      "start": 781.94,
+      "end": 784.92,
+      "text": "doesn't give you any information, does not cause you"
+    },
+    {
+      "start": 784.92,
+      "end": 787.52,
+      "text": "to change your beliefs about the second event."
+    },
+    {
+      "start": 787.52,
+      "end": 788.84,
+      "text": "This is the interesting part."
+    },
+    {
+      "start": 788.84,
+      "end": 791.58,
+      "text": "This is the intuition."
+    },
+    {
+      "start": 791.58,
+      "end": 796.12,
+      "text": "Let's try to translate this into mathematics."
+    },
+    {
+      "start": 796.12,
+      "end": 799.56,
+      "text": "We have two events, and we're going to say that they're"
+    },
+    {
+      "start": 799.56,
+      "end": 806.02,
+      "text": "independent if your initial beliefs about B are not going"
+    },
+    {
+      "start": 806.02,
+      "end": 810.12,
+      "text": "to change if I tell you that A occurred."
+    },
+    {
+      "start": 810.12,
+      "end": 814.7,
+      "text": "So you believe something, how likely B is."
+    },
+    {
+      "start": 814.7,
+      "end": 817.62,
+      "text": "Then somebody comes and tells you, you know A has happened."
+    },
+    {
+      "start": 817.62,
+      "end": 818.74,
+      "text": "Are you going to change your"
+    },
+    {
+      "start": 818.84,
+      "end": 819.76,
+      "text": "beliefs?"
+    },
+    {
+      "start": 819.76,
+      "end": 822.22,
+      "text": "No, I'm not going to change them."
+    },
+    {
+      "start": 822.22,
+      "end": 825.0,
+      "text": "Whenever you are in such a situation, then you say that"
+    },
+    {
+      "start": 825.0,
+      "end": 827.02,
+      "text": "the two events are independent."
+    },
+    {
+      "start": 827.02,
+      "end": 831.46,
+      "text": "Intuitively, the fact that A occurred does not convey any"
+    },
+    {
+      "start": 831.46,
+      "end": 835.72,
+      "text": "information to you about the likelihood of event B. The"
+    },
+    {
+      "start": 835.72,
+      "end": 840.76,
+      "text": "information that A provides is not useful, is not relevant."
+    },
+    {
+      "start": 840.76,
+      "end": 843.0,
+      "text": "A has to do with something else."
+    },
+    {
+      "start": 843.0,
+      "end": 846.06,
+      "text": "It's not useful for your guessing whether B is going to"
+    },
+    {
+      "start": 846.06,
+      "end": 847.78,
+      "text": "occur or not."
+    },
+    {
+      "start": 847.78,
+      "end": 848.62,
+      "text": "So we can."
+    },
+    {
+      "start": 848.62,
+      "end": 853.62,
+      "text": "We can take this as a first attempt into a definition of"
+    },
+    {
+      "start": 853.62,
+      "end": 855.84,
+      "text": "independence."
+    },
+    {
+      "start": 855.84,
+      "end": 862.38,
+      "text": "Now, remember that we have this property."
+    },
+    {
+      "start": 862.38,
+      "end": 864.86,
+      "text": "The probability of two things happening is the probability"
+    },
+    {
+      "start": 864.86,
+      "end": 866.22,
+      "text": "of the first times the conditional"
+    },
+    {
+      "start": 866.22,
+      "end": 867.9,
+      "text": "probability of the second."
+    },
+    {
+      "start": 867.9,
+      "end": 871.38,
+      "text": "If we have independence, this conditional probability is the"
+    },
+    {
+      "start": 871.38,
+      "end": 873.82,
+      "text": "same as the unconditional probability."
+    },
+    {
+      "start": 873.82,
+      "end": 878.04,
+      "text": "So if we have independence according to that definition,"
+    },
+    {
+      "start": 878.04,
+      "end": 881.2,
+      "text": "we get this property, that you can find the probability of"
+    },
+    {
+      "start": 881.2,
+      "end": 884.44,
+      "text": "two things happening by just multiplying their individual"
+    },
+    {
+      "start": 884.44,
+      "end": 885.66,
+      "text": "probabilities."
+    },
+    {
+      "start": 885.66,
+      "end": 888.08,
+      "text": "Probability of heads in the first toss is 1 half."
+    },
+    {
+      "start": 888.08,
+      "end": 890.9,
+      "text": "Probability of heads in the second toss is 1 half."
+    },
+    {
+      "start": 890.9,
+      "end": 894.2,
+      "text": "Probability of heads' heads is 1 fourth."
+    },
+    {
+      "start": 894.2,
+      "end": 896.78,
+      "text": "That's what happens if your two tosses are"
+    },
+    {
+      "start": 896.78,
+      "end": 898.72,
+      "text": "independent of each other."
+    },
+    {
+      "start": 898.72,
+      "end": 903.04,
+      "text": "So this property here is a consequence of this"
+    },
+    {
+      "start": 903.04,
+      "end": 904.52,
+      "text": "definition."
+    },
+    {
+      "start": 904.52,
+      "end": 907.34,
+      "text": "But it's actually nicer, better, simpler, and more"
+    },
+    {
+      "start": 907.34,
+      "end": 907.84,
+      "text": "efficient."
+    },
+    {
+      "start": 907.84,
+      "end": 912.12,
+      "text": "Simpler, cleaner, more beautiful to take this as our"
+    },
+    {
+      "start": 912.12,
+      "end": 914.38,
+      "text": "definition instead of that one."
+    },
+    {
+      "start": 914.38,
+      "end": 917.18,
+      "text": "Are the two definitions equivalent?"
+    },
+    {
+      "start": 917.18,
+      "end": 921.02,
+      "text": "Well, they're almost the same, except for one thing."
+    },
+    {
+      "start": 921.02,
+      "end": 924.24,
+      "text": "Conditional probabilities are only defined if you condition"
+    },
+    {
+      "start": 924.24,
+      "end": 926.88,
+      "text": "on an event that has positive probability."
+    },
+    {
+      "start": 926.88,
+      "end": 931.08,
+      "text": "So this definition would be limited to cases where event A"
+    },
+    {
+      "start": 931.08,
+      "end": 932.88,
+      "text": "has positive probability."
+    },
+    {
+      "start": 932.88,
+      "end": 935.46,
+      "text": "Whereas this definition is something that you can write"
+    },
+    {
+      "start": 935.46,
+      "end": 937.56,
+      "text": "down always."
+    },
+    {
+      "start": 937.56,
+      "end": 943.26,
+      "text": "We will say that two events are independent if and only if"
+    },
+    {
+      "start": 943.26,
+      "end": 946.94,
+      "text": "their probability of happening simultaneously is equal to the"
+    },
+    {
+      "start": 946.94,
+      "end": 950.46,
+      "text": "product of their two individual probabilities."
+    },
+    {
+      "start": 950.46,
+      "end": 954.68,
+      "text": "And in particular, we can have events of zero probability."
+    },
+    {
+      "start": 954.68,
+      "end": 956.24,
+      "text": "There's nothing wrong with that."
+    },
+    {
+      "start": 956.24,
+      "end": 960.8,
+      "text": "If A has zero probability, then A intersection B will"
+    },
+    {
+      "start": 960.8,
+      "end": 963.26,
+      "text": "also have zero probability, because it's an"
+    },
+    {
+      "start": 963.26,
+      "end": 964.96,
+      "text": "even smaller event."
+    },
+    {
+      "start": 964.96,
+      "end": 966.86,
+      "text": "And so we're going to get zero."
+    },
+    {
+      "start": 966.86,
+      "end": 969.88,
+      "text": "Zero equal to zero."
+    },
+    {
+      "start": 969.88,
+      "end": 973.94,
+      "text": "Corollary of what I just said, if an event A has zero"
+    },
+    {
+      "start": 973.94,
+      "end": 977.72,
+      "text": "probability, it's actually independent of any other event"
+    },
+    {
+      "start": 977.72,
+      "end": 979.0,
+      "text": "in our model."
+    },
+    {
+      "start": 979.0,
+      "end": 982.04,
+      "text": "Because we're going to get zero equals to zero, and the"
+    },
+    {
+      "start": 982.04,
+      "end": 984.14,
+      "text": "definition is going to be satisfied."
+    },
+    {
+      "start": 984.14,
+      "end": 987.38,
+      "text": "This is a little bit harder to reconcile with the intuition"
+    },
+    {
+      "start": 987.38,
+      "end": 990.26,
+      "text": "that we have about independence."
+    },
+    {
+      "start": 990.26,
+      "end": 995.62,
+      "text": "But again, it's part of the mathematical definition."
+    },
+    {
+      "start": 995.62,
+      "end": 996.76,
+      "text": "So what?"
+    },
+    {
+      "start": 996.76,
+      "end": 1001.88,
+      "text": "What I want you to retain is this notion that independence"
+    },
+    {
+      "start": 1001.88,
+      "end": 1006.52,
+      "text": "is something that you can check formally using this"
+    },
+    {
+      "start": 1006.52,
+      "end": 1010.58,
+      "text": "definition, but also you can check intuitively by, if in"
+    },
+    {
+      "start": 1010.58,
+      "end": 1014.26,
+      "text": "some cases, you can reason that whatever happens and"
+    },
+    {
+      "start": 1014.26,
+      "end": 1018.3,
+      "text": "determines whether A is going to occur or not, has nothing"
+    },
+    {
+      "start": 1018.3,
+      "end": 1021.84,
+      "text": "absolutely to do with whatever happens and determines whether"
+    },
+    {
+      "start": 1021.84,
+      "end": 1024.38,
+      "text": "B is going to occur or not."
+    },
+    {
+      "start": 1024.38,
+      "end": 1026.76,
+      "text": "So if I'm doing a science experiment in, let's say, a"
+    },
+    {
+      "start": 1026.76,
+      "end": 1032.54,
+      "text": "room, and it gets hit by some noise that causes randomness."
+    },
+    {
+      "start": 1032.54,
+      "end": 1036.04,
+      "text": "And then five years later, somebody somewhere else does"
+    },
+    {
+      "start": 1036.04,
+      "end": 1038.9,
+      "text": "the same science experiment somewhere else that gets hit"
+    },
+    {
+      "start": 1038.9,
+      "end": 1042.38,
+      "text": "by other noise, you will usually say that these two"
+    },
+    {
+      "start": 1042.38,
+      "end": 1043.92,
+      "text": "experiments are independent."
+    },
+    {
+      "start": 1043.92,
+      "end": 1048.18,
+      "text": "So what events that happened in one experiment are not going"
+    },
+    {
+      "start": 1048.18,
+      "end": 1052.08,
+      "text": "to give you, are not going to change your beliefs about what"
+    },
+    {
+      "start": 1052.08,
+      "end": 1053.74,
+      "text": "might be happening in the other."
+    },
+    {
+      "start": 1053.74,
+      "end": 1056.76,
+      "text": "Because the sources of noise in these two experiments are"
+    },
+    {
+      "start": 1056.76,
+      "end": 1058.24,
+      "text": "completely unrelated."
+    },
+    {
+      "start": 1058.24,
+      "end": 1060.08,
+      "text": "They have nothing to do with each other."
+    },
+    {
+      "start": 1060.08,
+      "end": 1063.44,
+      "text": "So if I flip a coin here today, and I flip a coin in my"
+    },
+    {
+      "start": 1063.44,
+      "end": 1067.84,
+      "text": "office tomorrow, one shouldn't affect the other."
+    },
+    {
+      "start": 1067.84,
+      "end": 1072.66,
+      "text": "So the events that I get from these should be independent."
+    },
+    {
+      "start": 1072.66,
+      "end": 1076.32,
+      "text": "So that's usually how independence arises, by having"
+    },
+    {
+      "start": 1076.32,
+      "end": 1079.86,
+      "text": "distinct physical phenomena that do not interact."
+    },
+    {
+      "start": 1079.86,
+      "end": 1083.58,
+      "text": "Sometimes you also get independence even though there"
+    },
+    {
+      "start": 1083.58,
+      "end": 1086.7,
+      "text": "is a physical interaction, but you just happen to have a new"
+    },
+    {
+      "start": 1086.7,
+      "end": 1088.92,
+      "text": "numerical accident."
+    },
+    {
+      "start": 1088.92,
+      "end": 1093.34,
+      "text": "A and B might be physically related very tightly, but the"
+    },
+    {
+      "start": 1093.34,
+      "end": 1096.58,
+      "text": "numerical accident happens, and you get equality here."
+    },
+    {
+      "start": 1096.58,
+      "end": 1100.06,
+      "text": "That's another case where we do get independence."
+    },
+    {
+      "start": 1100.06,
+      "end": 1104.34,
+      "text": "Now suppose that we have two events that are"
+    },
+    {
+      "start": 1104.34,
+      "end": 1107.38,
+      "text": "laid out like this."
+    },
+    {
+      "start": 1107.38,
+      "end": 1114.57,
+      "text": "Are these two events independent or not?"
+    },
+    {
+      "start": 1114.57,
+      "end": 1116.67,
+      "text": "The picture kind of tells you that one is"
+    },
+    {
+      "start": 1116.67,
+      "end": 1118.17,
+      "text": "separate from the other."
+    },
+    {
+      "start": 1118.17,
+      "end": 1118.97,
+      "text": "But separate?"
+    },
+    {
+      "start": 1118.97,
+      "end": 1121.17,
+      "text": "It has nothing to do with independent."
+    },
+    {
+      "start": 1121.17,
+      "end": 1125.31,
+      "text": "In fact, these two events are as dependent as Siamese twins."
+    },
+    {
+      "start": 1125.31,
+      "end": 1126.49,
+      "text": "Why is that?"
+    },
+    {
+      "start": 1126.49,
+      "end": 1131.83,
+      "text": "If I tell you that A occurred, then you're certain that B did"
+    },
+    {
+      "start": 1131.83,
+      "end": 1133.07,
+      "text": "not occur."
+    },
+    {
+      "start": 1133.07,
+      "end": 1137.77,
+      "text": "So information about the occurrence of A definitely"
+    },
+    {
+      "start": 1137.77,
+      "end": 1141.09,
+      "text": "affects your beliefs about the possible occurrence or"
+    },
+    {
+      "start": 1141.09,
+      "end": 1143.61,
+      "text": "non-occurrence of B."
+    },
+    {
+      "start": 1143.61,
+      "end": 1146.97,
+      "text": "When the picture is like that, knowing that A occurred will"
+    },
+    {
+      "start": 1146.97,
+      "end": 1148.61,
+      "text": "change drastically my beliefs."
+    },
+    {
+      "start": 1148.97,
+      "end": 1154.87,
+      "text": "Because now I suddenly become certain that B did not occur."
+    },
+    {
+      "start": 1154.87,
+      "end": 1157.55,
+      "text": "So a picture like this is a case actually of"
+    },
+    {
+      "start": 1157.55,
+      "end": 1159.37,
+      "text": "extreme dependence."
+    },
+    {
+      "start": 1159.37,
+      "end": 1163.47,
+      "text": "So don't confuse independence with disjointness."
+    },
+    {
+      "start": 1163.47,
+      "end": 1167.07,
+      "text": "There are very different types of properties."
+    },
+    {
+      "start": 1167.07,
+      "end": 1173.18,
+      "text": "Yes?"
+    },
+    {
+      "start": 1173.18,
+      "end": 1180.42,
+      "text": "Yes?"
+    },
+    {
+      "start": 1180.42,
+      "end": 1185.0,
+      "text": "Suppose that the probabilities are 1 third, 1 fourth, and the"
+    },
+    {
+      "start": 1185.0,
+      "end": 1186.62,
+      "text": "rest is out there."
+    },
+    {
+      "start": 1186.62,
+      "end": 1188.58,
+      "text": "You check the definition of independence."
+    },
+    {
+      "start": 1188.58,
+      "end": 1189.26,
+      "text": "Probability of A."
+    },
+    {
+      "start": 1189.26,
+      "end": 1192.4,
+      "text": "Intersection B is 0."
+    },
+    {
+      "start": 1192.4,
+      "end": 1198.5,
+      "text": "Probability of A times probability of B is 1 twelfth."
+    },
+    {
+      "start": 1198.5,
+      "end": 1200.6,
+      "text": "The two are not equal."
+    },
+    {
+      "start": 1200.6,
+      "end": 1212.4,
+      "text": "Therefore, we do not have independence."
+    },
+    {
+      "start": 1212.4,
+      "end": 1212.74,
+      "text": "No."
+    },
+    {
+      "start": 1212.74,
+      "end": 1219.24,
+      "text": "Probability of A given B is equal to 0."
+    },
+    {
+      "start": 1219.24,
+      "end": 1223.84,
+      "text": "Probability of A is equal to 1 third."
+    },
+    {
+      "start": 1223.84,
+      "end": 1226.62,
+      "text": "So again, these two are different."
+    },
+    {
+      "start": 1226.62,
+      "end": 1227.82,
+      "text": "So we had some initial"
+    },
+    {
+      "start": 1227.84,
+      "end": 1231.78,
+      "text": "beliefs about A. But as soon as we are told that B occurred,"
+    },
+    {
+      "start": 1231.78,
+      "end": 1234.44,
+      "text": "our beliefs about A change."
+    },
+    {
+      "start": 1234.44,
+      "end": 1237.76,
+      "text": "And so since our beliefs change, that means that B"
+    },
+    {
+      "start": 1237.76,
+      "end": 1244.39,
+      "text": "conveys information about A. Can I continue?"
+    },
+    {
+      "start": 1244.39,
+      "end": 1247.49,
+      "text": "No."
+    },
+    {
+      "start": 1247.49,
+      "end": 1251.31,
+      "text": "The Venn diagram is essentially never enough to"
+    },
+    {
+      "start": 1251.31,
+      "end": 1253.41,
+      "text": "decide on independence."
+    },
+    {
+      "start": 1253.41,
+      "end": 1256.35,
+      "text": "So the typical picture in which you are going to have"
+    },
+    {
+      "start": 1256.35,
+      "end": 1260.69,
+      "text": "independence will be one event this way, another event this"
+    },
+    {
+      "start": 1260.69,
+      "end": 1261.55,
+      "text": "way."
+    },
+    {
+      "start": 1261.55,
+      "end": 1262.39,
+      "text": "And you need to take the probability of this."
+    },
+    {
+      "start": 1262.39,
+      "end": 1263.79,
+      "text": "You need to take the probability of this times the"
+    },
+    {
+      "start": 1263.79,
+      "end": 1265.17,
+      "text": "probability of that."
+    },
+    {
+      "start": 1265.17,
+      "end": 1269.71,
+      "text": "And check that numerically is equal to the probability of"
+    },
+    {
+      "start": 1269.71,
+      "end": 1271.33,
+      "text": "this intersection."
+    },
+    {
+      "start": 1271.33,
+      "end": 1274.43,
+      "text": "So the numbers, it's more than a Venn diagram."
+    },
+    {
+      "start": 1274.43,
+      "end": 1279.68,
+      "text": "Numbers need to come out right."
+    },
+    {
+      "start": 1279.68,
+      "end": 1283.56,
+      "text": "Now we did say some time ago that conditional probabilities"
+    },
+    {
+      "start": 1283.56,
+      "end": 1286.86,
+      "text": "are just like ordinary probabilities."
+    },
+    {
+      "start": 1286.86,
+      "end": 1290.84,
+      "text": "And whatever we do in probability theory can also be"
+    },
+    {
+      "start": 1290.84,
+      "end": 1293.66,
+      "text": "done in conditional universes."
+    },
+    {
+      "start": 1293.66,
+      "end": 1294.64,
+      "text": "Speaking about, for example, the probability of life."
+    },
+    {
+      "start": 1294.64,
+      "end": 1297.64,
+      "text": "about conditional probabilities."
+    },
+    {
+      "start": 1297.64,
+      "end": 1302.82,
+      "text": "So since we have a notion of independence, then there"
+    },
+    {
+      "start": 1302.82,
+      "end": 1307.46,
+      "text": "should be also a notion of conditional independence."
+    },
+    {
+      "start": 1307.46,
+      "end": 1314.78,
+      "text": "So independence was defined by the equality that probability"
+    },
+    {
+      "start": 1314.78,
+      "end": 1319.02,
+      "text": "A intersection B is equal to the probability of A times the"
+    },
+    {
+      "start": 1319.02,
+      "end": 1324.6,
+      "text": "probability of B. What would be a reasonable definition"
+    },
+    {
+      "start": 1324.6,
+      "end": 1326.82,
+      "text": "of conditional independence?"
+    },
+    {
+      "start": 1326.82,
+      "end": 1329.1,
+      "text": "Conditional independence would mean that this same"
+    },
+    {
+      "start": 1329.1,
+      "end": 1333.2,
+      "text": "property be true, but in a conditional universe where we"
+    },
+    {
+      "start": 1333.2,
+      "end": 1335.66,
+      "text": "are told that a certain event happens."
+    },
+    {
+      "start": 1335.66,
+      "end": 1339.26,
+      "text": "So if we're told that event C has happened, then we're"
+    },
+    {
+      "start": 1339.26,
+      "end": 1342.7,
+      "text": "transported in a conditional universe where the only thing"
+    },
+    {
+      "start": 1342.7,
+      "end": 1346.44,
+      "text": "that matters are conditional probabilities."
+    },
+    {
+      "start": 1346.44,
+      "end": 1351.34,
+      "text": "And this is just the same plain previous definition of"
+    },
+    {
+      "start": 1351.34,
+      "end": 1354.6,
+      "text": "independence, but applied in a conditional universe."
+    },
+    {
+      "start": 1354.6,
+      "end": 1363.38,
+      "text": "So this is the definition of conditional independence."
+    },
+    {
+      "start": 1363.38,
+      "end": 1366.92,
+      "text": "So it's independence, but with reference to the conditional"
+    },
+    {
+      "start": 1366.92,
+      "end": 1368.82,
+      "text": "probabilities."
+    },
+    {
+      "start": 1368.82,
+      "end": 1371.8,
+      "text": "And intuitively, it has again the same meaning, that in the"
+    },
+    {
+      "start": 1371.8,
+      "end": 1376.4,
+      "text": "conditional world, if I tell you that A occurred, then that"
+    },
+    {
+      "start": 1376.4,
+      "end": 1378.92,
+      "text": "doesn't change your beliefs about B."
+    },
+    {
+      "start": 1378.92,
+      "end": 1382.18,
+      "text": "So suppose you had a picture like this, and somebody told"
+    },
+    {
+      "start": 1382.18,
+      "end": 1386.8,
+      "text": "you that events A and B are independent."
+    },
+    {
+      "start": 1386.8,
+      "end": 1389.58,
+      "text": "Unconditionally."
+    },
+    {
+      "start": 1389.58,
+      "end": 1393.52,
+      "text": "Then somebody comes and tells you that event C"
+    },
+    {
+      "start": 1393.52,
+      "end": 1395.2,
+      "text": "actually has occurred."
+    },
+    {
+      "start": 1395.2,
+      "end": 1398.1,
+      "text": "So we now live in this new universe."
+    },
+    {
+      "start": 1398.1,
+      "end": 1402.42,
+      "text": "In this new universe, is the independence of A and B going"
+    },
+    {
+      "start": 1402.42,
+      "end": 1405.12,
+      "text": "to be preserved or not?"
+    },
+    {
+      "start": 1405.12,
+      "end": 1409.26,
+      "text": "Are A and B independent in this new universe?"
+    },
+    {
+      "start": 1409.26,
+      "end": 1414.72,
+      "text": "The answer is no, because in the new universe, whatever is"
+    },
+    {
+      "start": 1414.72,
+      "end": 1416.7,
+      "text": "left of event A is this piece."
+    },
+    {
+      "start": 1416.7,
+      "end": 1419.64,
+      "text": "Whatever is left of event B is this piece."
+    },
+    {
+      "start": 1419.64,
+      "end": 1422.32,
+      "text": "And these two pieces are disjoint."
+    },
+    {
+      "start": 1422.32,
+      "end": 1425.46,
+      "text": "So we are back in a situation of this kind."
+    },
+    {
+      "start": 1425.46,
+      "end": 1429.62,
+      "text": "So in the conditional universe, A and B are disjoint."
+    },
+    {
+      "start": 1429.62,
+      "end": 1432.7,
+      "text": "And therefore, generically, they're not"
+    },
+    {
+      "start": 1432.7,
+      "end": 1434.74,
+      "text": "going to be independent."
+    },
+    {
+      "start": 1434.74,
+      "end": 1438.02,
+      "text": "What's the moral of this example?"
+    },
+    {
+      "start": 1438.02,
+      "end": 1441.88,
+      "text": "Having independence in the original model does not imply"
+    },
+    {
+      "start": 1441.88,
+      "end": 1445.94,
+      "text": "independence in a conditional model."
+    },
+    {
+      "start": 1445.94,
+      "end": 1446.52,
+      "text": "The opposite."
+    },
+    {
+      "start": 1446.52,
+      "end": 1448.48,
+      "text": "The opposite is also possible."
+    },
+    {
+      "start": 1448.48,
+      "end": 1452.16,
+      "text": "And let's illustrate it by another example."
+    },
+    {
+      "start": 1452.16,
+      "end": 1454.28,
+      "text": "So I have two coins."
+    },
+    {
+      "start": 1454.28,
+      "end": 1458.02,
+      "text": "And both of them are badly biased."
+    },
+    {
+      "start": 1458.02,
+      "end": 1461.66,
+      "text": "One coin is much biased in favor of heads."
+    },
+    {
+      "start": 1461.66,
+      "end": 1465.32,
+      "text": "The other coin is much biased in favor of tails."
+    },
+    {
+      "start": 1465.32,
+      "end": 1468.04,
+      "text": "So with probabilities being 90%."
+    },
+    {
+      "start": 1468.04,
+      "end": 1473.04,
+      "text": "Let's consider independent flips of coin A. This is the"
+    },
+    {
+      "start": 1473.04,
+      "end": 1474.98,
+      "text": "relevant model."
+    },
+    {
+      "start": 1474.98,
+      "end": 1476.52,
+      "text": "This is a model."
+    },
+    {
+      "start": 1476.52,
+      "end": 1481.24,
+      "text": "Of two independent flips of the first coin."
+    },
+    {
+      "start": 1481.24,
+      "end": 1482.62,
+      "text": "There's going to be two flips."
+    },
+    {
+      "start": 1482.62,
+      "end": 1486.06,
+      "text": "And each one has probability 0.9 of being heads."
+    },
+    {
+      "start": 1486.06,
+      "end": 1489.32,
+      "text": "So that's a model that describes coin A. You can"
+    },
+    {
+      "start": 1489.32,
+      "end": 1491.6,
+      "text": "think of this as a conditional model."
+    },
+    {
+      "start": 1491.6,
+      "end": 1494.52,
+      "text": "It's the model of the coin flips conditioned on the fact"
+    },
+    {
+      "start": 1494.52,
+      "end": 1499.38,
+      "text": "that they have chosen coin A. Alternatively, we could be"
+    },
+    {
+      "start": 1499.38,
+      "end": 1503.0,
+      "text": "dealing with coin B in a conditional world where we"
+    },
+    {
+      "start": 1503.0,
+      "end": 1506.08,
+      "text": "chose coin B and flip it twice."
+    },
+    {
+      "start": 1506.08,
+      "end": 1508.14,
+      "text": "This is the relevant model."
+    },
+    {
+      "start": 1508.14,
+      "end": 1511.12,
+      "text": "The probability of two heads, for example, is the probability"
+    },
+    {
+      "start": 1511.12,
+      "end": 1513.26,
+      "text": "of heads the first time, heads the second time."
+    },
+    {
+      "start": 1513.26,
+      "end": 1516.06,
+      "text": "And each one is 0.1."
+    },
+    {
+      "start": 1516.06,
+      "end": 1519.96,
+      "text": "Now I'm building this into a bigger experiment in which I"
+    },
+    {
+      "start": 1519.96,
+      "end": 1525.16,
+      "text": "first start by choosing one of the two coins at random."
+    },
+    {
+      "start": 1525.16,
+      "end": 1526.66,
+      "text": "So I have these two coins."
+    },
+    {
+      "start": 1526.66,
+      "end": 1528.6,
+      "text": "I blindly pick one of them."
+    },
+    {
+      "start": 1528.6,
+      "end": 1532.6,
+      "text": "And then I start flipping them."
+    },
+    {
+      "start": 1532.6,
+      "end": 1536.0,
+      "text": "So the question now is, are the coin flips?"
+    },
+    {
+      "start": 1536.0,
+      "end": 1537.1,
+      "text": "Or the coin tosses?"
+    },
+    {
+      "start": 1537.1,
+      "end": 1539.72,
+      "text": "Are they independent of each other?"
+    },
+    {
+      "start": 1539.72,
+      "end": 1546.36,
+      "text": "If we just stay inside this sub-model here, are the coin"
+    },
+    {
+      "start": 1546.36,
+      "end": 1552.24,
+      "text": "flips independent?"
+    },
+    {
+      "start": 1552.24,
+      "end": 1556.56,
+      "text": "They are independent because the probability of heads in"
+    },
+    {
+      "start": 1556.56,
+      "end": 1561.98,
+      "text": "the second toss is the same, 0.9, no matter what happens in"
+    },
+    {
+      "start": 1561.98,
+      "end": 1563.52,
+      "text": "the first toss."
+    },
+    {
+      "start": 1563.52,
+      "end": 1566.54,
+      "text": "So the conditional probabilities of what happens"
+    },
+    {
+      "start": 1566.54,
+      "end": 1569.64,
+      "text": "in the second toss are not affected by the outcome of"
+    },
+    {
+      "start": 1569.64,
+      "end": 1571.22,
+      "text": "the first toss."
+    },
+    {
+      "start": 1571.22,
+      "end": 1574.62,
+      "text": "So the second toss and the first toss are independent."
+    },
+    {
+      "start": 1574.62,
+      "end": 1577.78,
+      "text": "So here we're just dealing with plain,"
+    },
+    {
+      "start": 1577.78,
+      "end": 1580.0,
+      "text": "independent coin flips."
+    },
+    {
+      "start": 1580.0,
+      "end": 1584.04,
+      "text": "Similarly, the coin flips within this sub-model, they're"
+    },
+    {
+      "start": 1584.04,
+      "end": 1588.83,
+      "text": "also independent."
+    },
+    {
+      "start": 1588.83,
+      "end": 1593.41,
+      "text": "Now the question is, if we look at the big model as just"
+    },
+    {
+      "start": 1593.41,
+      "end": 1598.89,
+      "text": "one probability model, instead of looking at the conditional"
+    },
+    {
+      "start": 1598.89,
+      "end": 1600.17,
+      "text": "sub-models, are the coin flips independent?"
+    },
+    {
+      "start": 1600.17,
+      "end": 1601.17,
+      "text": "Are they independent?"
+    },
+    {
+      "start": 1601.17,
+      "end": 1601.27,
+      "text": "Yes."
+    },
+    {
+      "start": 1601.27,
+      "end": 1601.37,
+      "text": "They are independent."
+    },
+    {
+      "start": 1601.37,
+      "end": 1601.39,
+      "text": "Yes."
+    },
+    {
+      "start": 1601.39,
+      "end": 1601.45,
+      "text": "Yes."
+    },
+    {
+      "start": 1601.45,
+      "end": 1601.47,
+      "text": "Yes."
+    },
+    {
+      "start": 1601.47,
+      "end": 1601.51,
+      "text": "Yes."
+    },
+    {
+      "start": 1601.51,
+      "end": 1601.57,
+      "text": "Yes."
+    },
+    {
+      "start": 1601.57,
+      "end": 1601.67,
+      "text": "Yes."
+    },
+    {
+      "start": 1601.67,
+      "end": 1601.71,
+      "text": "Yes."
+    },
+    {
+      "start": 1601.71,
+      "end": 1601.77,
+      "text": "Yes."
+    },
+    {
+      "start": 1601.77,
+      "end": 1601.87,
+      "text": "Yes."
+    },
+    {
+      "start": 1601.87,
+      "end": 1601.93,
+      "text": "Yes."
+    },
+    {
+      "start": 1601.93,
+      "end": 1601.99,
+      "text": "Yes."
+    },
+    {
+      "start": 1601.99,
+      "end": 1602.03,
+      "text": "Yes."
+    },
+    {
+      "start": 1602.03,
+      "end": 1602.05,
+      "text": "Yes."
+    },
+    {
+      "start": 1602.07,
+      "end": 1602.73,
+      "text": "Yes."
+    },
+    {
+      "start": 1602.73,
+      "end": 1603.25,
+      "text": "Yes."
+    },
+    {
+      "start": 1603.25,
+      "end": 1603.35,
+      "text": "Yes."
+    },
+    {
+      "start": 1603.35,
+      "end": 1603.37,
+      "text": "Yes."
+    },
+    {
+      "start": 1603.37,
+      "end": 1603.55,
+      "text": "Yes."
+    },
+    {
+      "start": 1603.55,
+      "end": 1603.65,
+      "text": "Yes."
+    },
+    {
+      "start": 1603.65,
+      "end": 1603.73,
+      "text": "Yes."
+    },
+    {
+      "start": 1603.73,
+      "end": 1603.83,
+      "text": "Yes."
+    },
+    {
+      "start": 1603.83,
+      "end": 1603.87,
+      "text": "Yes."
+    },
+    {
+      "start": 1603.87,
+      "end": 1603.97,
+      "text": "Yes."
+    },
+    {
+      "start": 1603.97,
+      "end": 1604.05,
+      "text": "Yes."
+    },
+    {
+      "start": 1604.05,
+      "end": 1604.11,
+      "text": "Yes."
+    },
+    {
+      "start": 1604.11,
+      "end": 1604.13,
+      "text": "Yes."
+    },
+    {
+      "start": 1604.13,
+      "end": 1604.19,
+      "text": "Yes."
+    },
+    {
+      "start": 1604.19,
+      "end": 1604.23,
+      "text": "Yes."
+    },
+    {
+      "start": 1604.23,
+      "end": 1604.31,
+      "text": "Yes."
+    },
+    {
+      "start": 1604.31,
+      "end": 1604.37,
+      "text": "Yes."
+    },
+    {
+      "start": 1604.37,
+      "end": 1604.43,
+      "text": "Yes."
+    },
+    {
+      "start": 1604.43,
+      "end": 1609.59,
+      "text": "Is the outcome of a few coin flips give you information"
+    },
+    {
+      "start": 1609.59,
+      "end": 1613.63,
+      "text": "about subsequent coin flips?"
+    },
+    {
+      "start": 1613.63,
+      "end": 1624.12,
+      "text": "Well, if I observe 10 heads in a row, so instead of two coin"
+    },
+    {
+      "start": 1624.12,
+      "end": 1627.34,
+      "text": "flips, now let's think of doing more of them so that the tree"
+    },
+    {
+      "start": 1627.34,
+      "end": 1630.08,
+      "text": "gets expanded."
+    },
+    {
+      "start": 1630.08,
+      "end": 1633.8,
+      "text": "So let's start with this."
+    },
+    {
+      "start": 1633.8,
+      "end": 1634.72,
+      "text": "I don't know which coin flips."
+    },
+    {
+      "start": 1634.72,
+      "end": 1638.56,
+      "text": "coin it is, what's the probability that the 11th coin"
+    },
+    {
+      "start": 1638.56,
+      "end": 1645.58,
+      "text": "toss is going to be heads?"
+    },
+    {
+      "start": 1645.58,
+      "end": 1649.38,
+      "text": "There's complete symmetry here, so the answer could not"
+    },
+    {
+      "start": 1649.38,
+      "end": 1652.74,
+      "text": "be anything other than 1 half."
+    },
+    {
+      "start": 1652.74,
+      "end": 1653.94,
+      "text": "Let's justify it."
+    },
+    {
+      "start": 1653.94,
+      "end": 1656.98,
+      "text": "Why is it 1 half?"
+    },
+    {
+      "start": 1656.98,
+      "end": 1660.02,
+      "text": "Well, the probability that the 11th toss is heads."
+    },
+    {
+      "start": 1660.02,
+      "end": 1662.38,
+      "text": "How can that outcome happen?"
+    },
+    {
+      "start": 1662.38,
+      "end": 1663.84,
+      "text": "It can happen in two ways."
+    },
+    {
+      "start": 1663.84,
+      "end": 1668.98,
+      "text": "You can choose coin A, which happens with"
+    },
+    {
+      "start": 1668.98,
+      "end": 1670.5,
+      "text": "probability 1 half."
+    },
+    {
+      "start": 1670.5,
+      "end": 1674.28,
+      "text": "And having chosen coin A, there's probability 0.9 that"
+    },
+    {
+      "start": 1674.28,
+      "end": 1678.52,
+      "text": "it results in that you get heads in the 11th toss."
+    },
+    {
+      "start": 1678.52,
+      "end": 1683.56,
+      "text": "Or you can choose coin B. And if it's coin B, when you flip"
+    },
+    {
+      "start": 1683.56,
+      "end": 1686.7,
+      "text": "it, there's probability 0.1 that you have heads."
+    },
+    {
+      "start": 1686.7,
+      "end": 1691.36,
+      "text": "So the final answer is 1 half."
+    },
+    {
+      "start": 1691.36,
+      "end": 1693.6,
+      "text": "So each one of the coins is biased."
+    },
+    {
+      "start": 1693.84,
+      "end": 1696.16,
+      "text": "But they're biased in different ways."
+    },
+    {
+      "start": 1696.16,
+      "end": 1700.28,
+      "text": "If I don't know which coin it is, their two biases kind of"
+    },
+    {
+      "start": 1700.28,
+      "end": 1703.12,
+      "text": "cancel out, and the probability of obtaining"
+    },
+    {
+      "start": 1703.12,
+      "end": 1705.46,
+      "text": "heads is just in the middle."
+    },
+    {
+      "start": 1705.46,
+      "end": 1707.84,
+      "text": "It's 1 half."
+    },
+    {
+      "start": 1707.84,
+      "end": 1712.22,
+      "text": "Now, if someone tells you that the first 10 tosses were heads,"
+    },
+    {
+      "start": 1712.22,
+      "end": 1717.28,
+      "text": "is that going to change your beliefs about the 11th toss?"
+    },
+    {
+      "start": 1717.28,
+      "end": 1721.8,
+      "text": "Here's how a reasonable person would think about it."
+    },
+    {
+      "start": 1721.8,
+      "end": 1723.14,
+      "text": "If it's coin B."
+    },
+    {
+      "start": 1723.84,
+      "end": 1731.52,
+      "text": "The probability of obtaining 10 heads in a row is negligible."
+    },
+    {
+      "start": 1731.52,
+      "end": 1735.28,
+      "text": "It's going to be 0.1 to the 10th."
+    },
+    {
+      "start": 1735.28,
+      "end": 1739.02,
+      "text": "If it's coin A, the probability of 10 heads in a"
+    },
+    {
+      "start": 1739.02,
+      "end": 1741.34,
+      "text": "row is a more reasonable number."
+    },
+    {
+      "start": 1741.34,
+      "end": 1743.84,
+      "text": "It's 0.9 to the 10th."
+    },
+    {
+      "start": 1743.84,
+      "end": 1750.3,
+      "text": "So this event is a lot more likely to occur with coin A"
+    },
+    {
+      "start": 1750.3,
+      "end": 1754.91,
+      "text": "rather than coin B. The plausible explanation of the"
+    },
+    {
+      "start": 1754.91,
+      "end": 1760.47,
+      "text": "explanation of having seen 10 heads in a row is that I"
+    },
+    {
+      "start": 1760.47,
+      "end": 1766.33,
+      "text": "actually chose coin A. When you see 10 heads in a row,"
+    },
+    {
+      "start": 1766.33,
+      "end": 1769.69,
+      "text": "you're pretty certain that it's coin A that you're"
+    },
+    {
+      "start": 1769.69,
+      "end": 1770.93,
+      "text": "dealing with."
+    },
+    {
+      "start": 1770.93,
+      "end": 1773.81,
+      "text": "And once you're pretty certain that it's coin A that you're"
+    },
+    {
+      "start": 1773.81,
+      "end": 1776.63,
+      "text": "dealing with, what's the probability that the next"
+    },
+    {
+      "start": 1776.63,
+      "end": 1778.49,
+      "text": "toss is heads?"
+    },
+    {
+      "start": 1778.49,
+      "end": 1780.95,
+      "text": "It's going to be 0.9."
+    },
+    {
+      "start": 1780.95,
+      "end": 1784.35,
+      "text": "So essentially here, I'm doing an inference calculation."
+    },
+    {
+      "start": 1784.91,
+      "end": 1789.03,
+      "text": "Given this information, I'm making an inference about"
+    },
+    {
+      "start": 1789.03,
+      "end": 1791.83,
+      "text": "which coin I'm dealing with."
+    },
+    {
+      "start": 1791.83,
+      "end": 1797.23,
+      "text": "I become pretty certain that it is coin A. And given that"
+    },
+    {
+      "start": 1797.23,
+      "end": 1800.63,
+      "text": "it's coin A, this probability is going to be 0.9."
+    },
+    {
+      "start": 1800.63,
+      "end": 1804.05,
+      "text": "And I'm putting an approximate sign here, because the"
+    },
+    {
+      "start": 1804.05,
+      "end": 1806.23,
+      "text": "inference that I did is approximate."
+    },
+    {
+      "start": 1806.23,
+      "end": 1809.87,
+      "text": "I'm pretty certain it's coin A. I'm not 100% certain that"
+    },
+    {
+      "start": 1809.87,
+      "end": 1814.53,
+      "text": "it's coin A. But in any case, what happened here is that the"
+    },
+    {
+      "start": 1814.53,
+      "end": 1817.43,
+      "text": "unconditional probability is different from the"
+    },
+    {
+      "start": 1817.43,
+      "end": 1819.43,
+      "text": "conditional probability."
+    },
+    {
+      "start": 1819.43,
+      "end": 1824.29,
+      "text": "This information here makes me change my beliefs about the"
+    },
+    {
+      "start": 1824.29,
+      "end": 1825.59,
+      "text": "11th toss."
+    },
+    {
+      "start": 1825.59,
+      "end": 1830.55,
+      "text": "And this means that the 11th toss is dependent on the"
+    },
+    {
+      "start": 1830.55,
+      "end": 1831.69,
+      "text": "previous tosses."
+    },
+    {
+      "start": 1831.69,
+      "end": 1835.61,
+      "text": "So the coin tosses have now become dependent."
+    },
+    {
+      "start": 1835.61,
+      "end": 1838.81,
+      "text": "What is the physical link that causes this dependence?"
+    },
+    {
+      "start": 1838.81,
+      "end": 1842.69,
+      "text": "Well, the physical link is the choice of a coin."
+    },
+    {
+      "start": 1842.69,
+      "end": 1844.41,
+      "text": "By choosing a particular coin."
+    },
+    {
+      "start": 1844.53,
+      "end": 1848.19,
+      "text": "I'm introducing a pattern in the future coin tosses."
+    },
+    {
+      "start": 1848.19,
+      "end": 1853.05,
+      "text": "And that pattern is what causes a dependence."
+    },
+    {
+      "start": 1853.05,
+      "end": 1856.79,
+      "text": "So I've been playing a little bit loose with language here,"
+    },
+    {
+      "start": 1856.79,
+      "end": 1861.85,
+      "text": "because we defined the concept of independence of two events."
+    },
+    {
+      "start": 1861.85,
+      "end": 1865.17,
+      "text": "But here, I have been referring to independent coin"
+    },
+    {
+      "start": 1865.17,
+      "end": 1868.99,
+      "text": "tosses, where I'm thinking about many coin tosses, like"
+    },
+    {
+      "start": 1868.99,
+      "end": 1871.19,
+      "text": "10 or 11 of them."
+    },
+    {
+      "start": 1871.19,
+      "end": 1874.47,
+      "text": "So to be proper, I should have defined for"
+    },
+    {
+      "start": 1874.47,
+      "end": 1877.09,
+      "text": "you also the notion of independence of multiple"
+    },
+    {
+      "start": 1877.09,
+      "end": 1878.71,
+      "text": "events, not just two."
+    },
+    {
+      "start": 1878.71,
+      "end": 1881.97,
+      "text": "We don't want to just say coin toss one is independent from"
+    },
+    {
+      "start": 1881.97,
+      "end": 1883.15,
+      "text": "coin toss two."
+    },
+    {
+      "start": 1883.15,
+      "end": 1886.57,
+      "text": "We want to be able to say something like these 10 coin"
+    },
+    {
+      "start": 1886.57,
+      "end": 1889.67,
+      "text": "tosses are all independent of each other."
+    },
+    {
+      "start": 1889.67,
+      "end": 1893.79,
+      "text": "Intuitively, what that means should be the same thing."
+    },
+    {
+      "start": 1893.79,
+      "end": 1897.43,
+      "text": "That information about some of the coin tosses doesn't change"
+    },
+    {
+      "start": 1897.43,
+      "end": 1900.21,
+      "text": "your beliefs about the remaining coin tosses."
+    },
+    {
+      "start": 1900.21,
+      "end": 1902.59,
+      "text": "How do we translate that into a mathematical definition?"
+    },
+    {
+      "start": 1904.47,
+      "end": 1908.61,
+      "text": "Well, an ugly attempt would be to impose"
+    },
+    {
+      "start": 1908.61,
+      "end": 1911.81,
+      "text": "requirements such as this."
+    },
+    {
+      "start": 1911.81,
+      "end": 1916.51,
+      "text": "Think of A1 being the event that the first flip was heads,"
+    },
+    {
+      "start": 1916.51,
+      "end": 1922.03,
+      "text": "A2 is the event that the second flip was heads, A3 that the"
+    },
+    {
+      "start": 1922.03,
+      "end": 1924.33,
+      "text": "third flip was heads, and so on."
+    },
+    {
+      "start": 1924.33,
+      "end": 1927.79,
+      "text": "Here's an event whose occurrence or not is"
+    },
+    {
+      "start": 1927.79,
+      "end": 1930.85,
+      "text": "determined by the first three coin flips."
+    },
+    {
+      "start": 1930.85,
+      "end": 1934.01,
+      "text": "And here's an event whose occurrence or not is determined"
+    },
+    {
+      "start": 1934.01,
+      "end": 1934.47,
+      "text": "by the"
+    },
+    {
+      "start": 1934.47,
+      "end": 1936.61,
+      "text": "fifth and sixth coin flip."
+    },
+    {
+      "start": 1936.61,
+      "end": 1939.07,
+      "text": "If we think physically that all those coin flips have"
+    },
+    {
+      "start": 1939.07,
+      "end": 1942.23,
+      "text": "nothing to do with each other, information about the fifth"
+    },
+    {
+      "start": 1942.23,
+      "end": 1946.45,
+      "text": "and sixth coin flip are not going to change what we expect"
+    },
+    {
+      "start": 1946.45,
+      "end": 1947.97,
+      "text": "from the first three."
+    },
+    {
+      "start": 1947.97,
+      "end": 1950.77,
+      "text": "So the probability of this event, the conditional"
+    },
+    {
+      "start": 1950.77,
+      "end": 1952.33,
+      "text": "probability, should be the same as the"
+    },
+    {
+      "start": 1952.33,
+      "end": 1954.43,
+      "text": "unconditional probability."
+    },
+    {
+      "start": 1954.43,
+      "end": 1958.87,
+      "text": "And we would like a relation of this kind to be true, no"
+    },
+    {
+      "start": 1958.87,
+      "end": 1963.27,
+      "text": "matter what kind of formula you write down, as long as"
+    },
+    {
+      "start": 1963.27,
+      "end": 1967.05,
+      "text": "the events that show up here are different from the events"
+    },
+    {
+      "start": 1967.05,
+      "end": 1969.79,
+      "text": "that show up there."
+    },
+    {
+      "start": 1969.79,
+      "end": 1972.15,
+      "text": "That's sort of an ugly definition."
+    },
+    {
+      "start": 1972.15,
+      "end": 1977.55,
+      "text": "The mathematical definition that actually does the job and"
+    },
+    {
+      "start": 1977.55,
+      "end": 1981.13,
+      "text": "leads to all formulas of this kind is the following."
+    },
+    {
+      "start": 1981.13,
+      "end": 1983.59,
+      "text": "We're going to say that the collection of events are"
+    },
+    {
+      "start": 1983.59,
+      "end": 1987.09,
+      "text": "independent if we can find the probability of their joint"
+    },
+    {
+      "start": 1987.09,
+      "end": 1991.77,
+      "text": "occurrence by just multiplying probabilities."
+    },
+    {
+      "start": 1991.77,
+      "end": 1993.27,
+      "text": "And that will be true."
+    },
+    {
+      "start": 1993.27,
+      "end": 1997.71,
+      "text": "True, even if you look at sub-collections of these"
+    },
+    {
+      "start": 1997.71,
+      "end": 1998.63,
+      "text": "events."
+    },
+    {
+      "start": 1998.63,
+      "end": 2000.67,
+      "text": "Let's make that more precise."
+    },
+    {
+      "start": 2000.67,
+      "end": 2004.29,
+      "text": "If we have three events, the definition tells us that the"
+    },
+    {
+      "start": 2004.29,
+      "end": 2007.61,
+      "text": "three events are independent if the following are true."
+    },
+    {
+      "start": 2007.61,
+      "end": 2011.83,
+      "text": "Probability a1 and a2 and a3, you can calculate this"
+    },
+    {
+      "start": 2011.83,
+      "end": 2018.38,
+      "text": "probability by multiplying individual probabilities."
+    },
+    {
+      "start": 2018.38,
+      "end": 2024.8,
+      "text": "But the same is true even if you take fewer events, just a"
+    },
+    {
+      "start": 2024.8,
+      "end": 2025.3,
+      "text": "few indices."
+    },
+    {
+      "start": 2025.3,
+      "end": 2028.34,
+      "text": "Out of the indices that we have available."
+    },
+    {
+      "start": 2028.34,
+      "end": 2035.3,
+      "text": "So we also require Pa1 intersection a2 is Pa1 times"
+    },
+    {
+      "start": 2035.3,
+      "end": 2037.6,
+      "text": "Pa2."
+    },
+    {
+      "start": 2037.6,
+      "end": 2041.24,
+      "text": "And similarly for the other possibilities of"
+    },
+    {
+      "start": 2041.24,
+      "end": 2051.6,
+      "text": "choosing the indices."
+    },
+    {
+      "start": 2051.6,
+      "end": 2056.7,
+      "text": "So independence, mathematical definition, requires that"
+    },
+    {
+      "start": 2056.7,
+      "end": 2060.56,
+      "text": "calculating probabilities of any intersection of the events"
+    },
+    {
+      "start": 2060.56,
+      "end": 2062.1,
+      "text": "we have in our hands."
+    },
+    {
+      "start": 2062.1,
+      "end": 2062.5,
+      "text": "That calculation."
+    },
+    {
+      "start": 2062.5,
+      "end": 2064.9,
+      "text": "That calculation can be done by just multiplying"
+    },
+    {
+      "start": 2064.9,
+      "end": 2067.0,
+      "text": "individual probabilities."
+    },
+    {
+      "start": 2067.0,
+      "end": 2070.22,
+      "text": "And this has to apply to the case where we consider all of"
+    },
+    {
+      "start": 2070.22,
+      "end": 2074.76,
+      "text": "the events in our hands, or just sub-collections of those"
+    },
+    {
+      "start": 2074.76,
+      "end": 2076.88,
+      "text": "events."
+    },
+    {
+      "start": 2076.88,
+      "end": 2082.12,
+      "text": "Now these relations, just by themselves, are called pairwise"
+    },
+    {
+      "start": 2082.12,
+      "end": 2084.38,
+      "text": "independence."
+    },
+    {
+      "start": 2084.38,
+      "end": 2087.16,
+      "text": "So this relation, for example, tells us that a1 is"
+    },
+    {
+      "start": 2087.16,
+      "end": 2088.7,
+      "text": "independent from a2."
+    },
+    {
+      "start": 2088.7,
+      "end": 2091.52,
+      "text": "This tells us that a2 is independent from a3, this will"
+    },
+    {
+      "start": 2091.52,
+      "end": 2092.5,
+      "text": "tell us that a1 is independent from a3."
+    },
+    {
+      "start": 2092.5,
+      "end": 2098.96,
+      "text": "But independence of all the events together actually"
+    },
+    {
+      "start": 2098.96,
+      "end": 2103.46,
+      "text": "requires a little more, one more equality, that has to do"
+    },
+    {
+      "start": 2103.46,
+      "end": 2107.0,
+      "text": "with all three events being considered at the same time."
+    },
+    {
+      "start": 2107.0,
+      "end": 2110.62,
+      "text": "And this extra equality is not redundant."
+    },
+    {
+      "start": 2110.62,
+      "end": 2113.0,
+      "text": "It actually does make a difference."
+    },
+    {
+      "start": 2113.0,
+      "end": 2115.38,
+      "text": "Independence and pairwise independence"
+    },
+    {
+      "start": 2115.38,
+      "end": 2117.28,
+      "text": "are different things."
+    },
+    {
+      "start": 2117.28,
+      "end": 2120.28,
+      "text": "So let's illustrate the situation with an example."
+    },
+    {
+      "start": 2120.28,
+      "end": 2121.38,
+      "text": "Suppose we have two coin flips."
+    },
+    {
+      "start": 2121.38,
+      "end": 2122.38,
+      "text": "And we have two coin flips."
+    },
+    {
+      "start": 2122.38,
+      "end": 2126.38,
+      "text": "The coin tosses are independent."
+    },
+    {
+      "start": 2126.38,
+      "end": 2129.48,
+      "text": "So the bias is 1 half."
+    },
+    {
+      "start": 2129.48,
+      "end": 2133.3,
+      "text": "So all possible outcomes have a probability of 1 half times"
+    },
+    {
+      "start": 2133.3,
+      "end": 2136.08,
+      "text": "1 half, which is 1 4."
+    },
+    {
+      "start": 2136.08,
+      "end": 2140.52,
+      "text": "And let's consider now a bunch of different events."
+    },
+    {
+      "start": 2140.52,
+      "end": 2145.52,
+      "text": "One event is that the first toss is heads."
+    },
+    {
+      "start": 2145.52,
+      "end": 2148.88,
+      "text": "This is this blue set here."
+    },
+    {
+      "start": 2148.88,
+      "end": 2151.44,
+      "text": "Another event is that the"
+    },
+    {
+      "start": 2152.38,
+      "end": 2154.98,
+      "text": "second toss is heads."
+    },
+    {
+      "start": 2154.98,
+      "end": 2161.85,
+      "text": "And this is this black event here."
+    },
+    {
+      "start": 2161.85,
+      "end": 2164.41,
+      "text": "Are these two events independent?"
+    },
+    {
+      "start": 2164.41,
+      "end": 2166.65,
+      "text": "If you check it mathematically, yes."
+    },
+    {
+      "start": 2166.65,
+      "end": 2169.31,
+      "text": "Probability of A is probability of B is 1 half."
+    },
+    {
+      "start": 2169.31,
+      "end": 2172.87,
+      "text": "Probability of A times probability of B is 1 quarter,"
+    },
+    {
+      "start": 2172.87,
+      "end": 2176.13,
+      "text": "which is the same as the probability of A intersection"
+    },
+    {
+      "start": 2176.13,
+      "end": 2178.05,
+      "text": "B, which is this set."
+    },
+    {
+      "start": 2178.05,
+      "end": 2180.69,
+      "text": "So we have just checked mathematically that A and B"
+    },
+    {
+      "start": 2180.69,
+      "end": 2182.15,
+      "text": "are independent."
+    },
+    {
+      "start": 2182.15,
+      "end": 2184.37,
+      "text": "Now let's consider a third event."
+    },
+    {
+      "start": 2184.37,
+      "end": 2188.93,
+      "text": "Which is that the first and second toss give the same"
+    },
+    {
+      "start": 2188.93,
+      "end": 2189.93,
+      "text": "result."
+    },
+    {
+      "start": 2189.93,
+      "end": 2192.27,
+      "text": "We'll use a different color."
+    },
+    {
+      "start": 2192.27,
+      "end": 2195.41,
+      "text": "First and second toss give the same result."
+    },
+    {
+      "start": 2195.41,
+      "end": 2199.83,
+      "text": "This is the event that we obtain heads, heads, or tails,"
+    },
+    {
+      "start": 2199.83,
+      "end": 2200.69,
+      "text": "tails."
+    },
+    {
+      "start": 2200.69,
+      "end": 2207.81,
+      "text": "So this is the event C. What's the probability of C?"
+    },
+    {
+      "start": 2207.81,
+      "end": 2211.51,
+      "text": "Well, C is made up of two outcomes, each one of which"
+    },
+    {
+      "start": 2211.51,
+      "end": 2212.93,
+      "text": "has probability 1 fourth."
+    },
+    {
+      "start": 2212.93,
+      "end": 2215.47,
+      "text": "So the probability of C is 1 half."
+    },
+    {
+      "start": 2215.47,
+      "end": 2216.89,
+      "text": "What's the probability of C intersection?"
+    },
+    {
+      "start": 2216.89,
+      "end": 2221.59,
+      "text": "C intersection A. C intersection A is just this one"
+    },
+    {
+      "start": 2221.59,
+      "end": 2226.03,
+      "text": "outcome, and has probability 1 fourth."
+    },
+    {
+      "start": 2226.03,
+      "end": 2230.05,
+      "text": "What's the probability of A intersection B intersection C?"
+    },
+    {
+      "start": 2230.05,
+      "end": 2233.13,
+      "text": "The three events intersect just at this outcome."
+    },
+    {
+      "start": 2233.13,
+      "end": 2238.53,
+      "text": "So this probability is also 1 fourth."
+    },
+    {
+      "start": 2238.53,
+      "end": 2240.63,
+      "text": "OK."
+    },
+    {
+      "start": 2240.63,
+      "end": 2250.75,
+      "text": "So what's the probability of C given A and B? If A has a"
+    },
+    {
+      "start": 2250.75,
+      "end": 2255.31,
+      "text": "occurred, and B has occurred, you are certain that this"
+    },
+    {
+      "start": 2255.31,
+      "end": 2256.97,
+      "text": "outcome here happened."
+    },
+    {
+      "start": 2256.97,
+      "end": 2260.17,
+      "text": "If the first toss is H and the second is H, then you're"
+    },
+    {
+      "start": 2260.17,
+      "end": 2261.93,
+      "text": "certain that the first and second toss"
+    },
+    {
+      "start": 2261.93,
+      "end": 2263.67,
+      "text": "gave the same result."
+    },
+    {
+      "start": 2263.67,
+      "end": 2267.51,
+      "text": "So the conditional probability of C, given A and B, is equal"
+    },
+    {
+      "start": 2267.51,
+      "end": 2269.03,
+      "text": "to 1."
+    },
+    {
+      "start": 2269.03,
+      "end": 2274.32,
+      "text": "So do we have independence in this example?"
+    },
+    {
+      "start": 2274.32,
+      "end": 2275.96,
+      "text": "We don't."
+    },
+    {
+      "start": 2275.96,
+      "end": 2280.2,
+      "text": "C, that we obtain the same result in the first and the"
+    },
+    {
+      "start": 2280.2,
+      "end": 2284.02,
+      "text": "second toss, has probability 1 half."
+    },
+    {
+      "start": 2284.02,
+      "end": 2288.44,
+      "text": "Half of the possible outcomes give us two coin flips with"
+    },
+    {
+      "start": 2288.44,
+      "end": 2290.7,
+      "text": "the same result, heads-heads or tails-tails."
+    },
+    {
+      "start": 2290.7,
+      "end": 2292.96,
+      "text": "So the probability of C is 1 half."
+    },
+    {
+      "start": 2292.96,
+      "end": 2298.08,
+      "text": "But if I tell you that events A and B both occurred, then"
+    },
+    {
+      "start": 2298.08,
+      "end": 2300.86,
+      "text": "you're certain that C occurred."
+    },
+    {
+      "start": 2300.86,
+      "end": 2303.16,
+      "text": "If I tell you that we had heads and heads, then you're"
+    },
+    {
+      "start": 2303.16,
+      "end": 2305.42,
+      "text": "certain that the two outcomes were the same."
+    },
+    {
+      "start": 2305.42,
+      "end": 2308.8,
+      "text": "So the conditional probability is different from the"
+    },
+    {
+      "start": 2308.8,
+      "end": 2310.2,
+      "text": "unconditional probability."
+    },
+    {
+      "start": 2310.2,
+      "end": 2316.84,
+      "text": "So by combining these two relations together, we get"
+    },
+    {
+      "start": 2316.84,
+      "end": 2322.27,
+      "text": "that the three events are not independent."
+    },
+    {
+      "start": 2322.27,
+      "end": 2325.55,
+      "text": "But are they pairwise independent?"
+    },
+    {
+      "start": 2325.55,
+      "end": 2328.99,
+      "text": "Is A independent from B?"
+    },
+    {
+      "start": 2328.99,
+      "end": 2332.49,
+      "text": "Yes, because probability of A times probability of B is 1"
+    },
+    {
+      "start": 2332.49,
+      "end": 2338.69,
+      "text": "fourth, which is probability of A intersection B. Is C"
+    },
+    {
+      "start": 2338.69,
+      "end": 2342.37,
+      "text": "independent from A?"
+    },
+    {
+      "start": 2342.37,
+      "end": 2342.71,
+      "text": "Well."
+    },
+    {
+      "start": 2342.71,
+      "end": 2345.77,
+      "text": "Probability of C and A is 1 fourth."
+    },
+    {
+      "start": 2345.77,
+      "end": 2347.63,
+      "text": "The probability of C is 1 half."
+    },
+    {
+      "start": 2347.63,
+      "end": 2349.83,
+      "text": "The probability of A is 1 half."
+    },
+    {
+      "start": 2349.83,
+      "end": 2351.15,
+      "text": "So it checks."
+    },
+    {
+      "start": 2351.15,
+      "end": 2354.59,
+      "text": "1 fourth is equal to 1 half and 1 half."
+    },
+    {
+      "start": 2354.59,
+      "end": 2359.39,
+      "text": "So event C and event A are independent."
+    },
+    {
+      "start": 2359.39,
+      "end": 2364.49,
+      "text": "Knowing that the first toss was heads does not change your"
+    },
+    {
+      "start": 2364.49,
+      "end": 2368.59,
+      "text": "beliefs about whether the two tosses are going to have the"
+    },
+    {
+      "start": 2368.59,
+      "end": 2371.39,
+      "text": "same outcome or not."
+    },
+    {
+      "start": 2371.39,
+      "end": 2374.21,
+      "text": "Knowing that the first was heads, well, the second is"
+    },
+    {
+      "start": 2374.21,
+      "end": 2376.53,
+      "text": "equally likely to be heads or tails."
+    },
+    {
+      "start": 2376.53,
+      "end": 2381.29,
+      "text": "So event C has just the same probability, again, 1 half to"
+    },
+    {
+      "start": 2381.29,
+      "end": 2383.79,
+      "text": "occur, to put it the opposite way."
+    },
+    {
+      "start": 2383.79,
+      "end": 2388.21,
+      "text": "If I tell you that the two results were the same, so it's"
+    },
+    {
+      "start": 2388.21,
+      "end": 2391.97,
+      "text": "either heads, heads, or tails, tails, what does that tell you"
+    },
+    {
+      "start": 2391.97,
+      "end": 2393.11,
+      "text": "about the first toss?"
+    },
+    {
+      "start": 2393.11,
+      "end": 2394.79,
+      "text": "Is it heads or is it tails?"
+    },
+    {
+      "start": 2394.79,
+      "end": 2396.57,
+      "text": "Well, it doesn't tell you anything."
+    },
+    {
+      "start": 2396.57,
+      "end": 2398.77,
+      "text": "It could be either of the two."
+    },
+    {
+      "start": 2398.77,
+      "end": 2400.33,
+      "text": "So the probability of heads in the first toss is 1 half."
+    },
+    {
+      "start": 2400.33,
+      "end": 2403.77,
+      "text": "The first toss is equal to 1 half."
+    },
+    {
+      "start": 2403.77,
+      "end": 2406.41,
+      "text": "And telling you that C occurred does not change"
+    },
+    {
+      "start": 2406.41,
+      "end": 2407.47,
+      "text": "anything."
+    },
+    {
+      "start": 2407.47,
+      "end": 2410.81,
+      "text": "So this is an example that illustrates the case where we"
+    },
+    {
+      "start": 2410.81,
+      "end": 2414.65,
+      "text": "have three events in which we check that pairwise"
+    },
+    {
+      "start": 2414.65,
+      "end": 2416.33,
+      "text": "independence holds."
+    },
+    {
+      "start": 2416.33,
+      "end": 2419.85,
+      "text": "For any combination of two of these events, we have that"
+    },
+    {
+      "start": 2419.85,
+      "end": 2421.99,
+      "text": "probability of their intersection is equal to the"
+    },
+    {
+      "start": 2421.99,
+      "end": 2423.77,
+      "text": "product of their probabilities."
+    },
+    {
+      "start": 2423.77,
+      "end": 2427.93,
+      "text": "On the other hand, the three events taken all together are"
+    },
+    {
+      "start": 2427.93,
+      "end": 2429.47,
+      "text": "not independent."
+    },
+    {
+      "start": 2429.47,
+      "end": 2432.77,
+      "text": "A doesn't tell me anything useful whether C is going to"
+    },
+    {
+      "start": 2432.77,
+      "end": 2434.69,
+      "text": "occur or not."
+    },
+    {
+      "start": 2434.69,
+      "end": 2436.79,
+      "text": "B doesn't tell me anything useful."
+    },
+    {
+      "start": 2436.79,
+      "end": 2440.81,
+      "text": "But if I tell you that both A and B occurred, the two of"
+    },
+    {
+      "start": 2440.81,
+      "end": 2444.13,
+      "text": "them together tell me something useful about C."
+    },
+    {
+      "start": 2444.13,
+      "end": 2449.74,
+      "text": "Namely, they tell me that C certainly has occurred."
+    },
+    {
+      "start": 2449.74,
+      "end": 2453.91,
+      "text": "Very good."
+    },
+    {
+      "start": 2453.91,
+      "end": 2456.89,
+      "text": "So independence is a somewhat subtle concept."
+    },
+    {
+      "start": 2456.89,
+      "end": 2459.69,
+      "text": "Once you grasp the intuition of what it really means, then"
+    },
+    {
+      "start": 2459.69,
+      "end": 2462.39,
+      "text": "things perhaps fall in place."
+    },
+    {
+      "start": 2462.57,
+      "end": 2466.59,
+      "text": "But it's a concept where it's easy to get some"
+    },
+    {
+      "start": 2466.59,
+      "end": 2467.51,
+      "text": "misunderstandings."
+    },
+    {
+      "start": 2467.51,
+      "end": 2471.39,
+      "text": "It does take some time to digest it."
+    },
+    {
+      "start": 2471.39,
+      "end": 2474.81,
+      "text": "So to lighten things up, I'm going to spend the remaining"
+    },
+    {
+      "start": 2474.81,
+      "end": 2478.81,
+      "text": "four minutes talking about a very nice, simple problem that"
+    },
+    {
+      "start": 2478.81,
+      "end": 2483.23,
+      "text": "involves conditional probabilities and the like."
+    },
+    {
+      "start": 2483.23,
+      "end": 2488.13,
+      "text": "So here's the problem formulated exactly as it shows"
+    },
+    {
+      "start": 2488.13,
+      "end": 2490.21,
+      "text": "up in various textbooks."
+    },
+    {
+      "start": 2490.21,
+      "end": 2491.75,
+      "text": "And the formulation says the following."
+    },
+    {
+      "start": 2491.75,
+      "end": 2491.95,
+      "text": "Well."
+    },
+    {
+      "start": 2491.95,
+      "end": 2495.31,
+      "text": "Consider one of those anachronistic places where"
+    },
+    {
+      "start": 2495.31,
+      "end": 2500.53,
+      "text": "they still have kings or queens and where actually boys"
+    },
+    {
+      "start": 2500.53,
+      "end": 2503.09,
+      "text": "take precedence over girls."
+    },
+    {
+      "start": 2503.09,
+      "end": 2511.41,
+      "text": "So if the royal family has a boy, then he will become a"
+    },
+    {
+      "start": 2511.41,
+      "end": 2518.07,
+      "text": "king, even if he has an older sister who might be the queen."
+    },
+    {
+      "start": 2518.07,
+      "end": 2521.75,
+      "text": "So there we have one of those royal"
+    },
+    {
+      "start": 2521.75,
+      "end": 2521.95,
+      "text": "families."
+    },
+    {
+      "start": 2521.95,
+      "end": 2525.35,
+      "text": "That royal family had two children."
+    },
+    {
+      "start": 2525.35,
+      "end": 2533.56,
+      "text": "And we know that there is a king, which means that at least"
+    },
+    {
+      "start": 2533.56,
+      "end": 2536.02,
+      "text": "one of the two children was a boy."
+    },
+    {
+      "start": 2536.02,
+      "end": 2538.98,
+      "text": "Otherwise, we wouldn't have a king."
+    },
+    {
+      "start": 2538.98,
+      "end": 2541.88,
+      "text": "What's the probability that the king's sibling is female?"
+    },
+    {
+      "start": 2547.98,
+      "end": 2549.34,
+      "text": "OK, I guess we need to make some"
+    },
+    {
+      "start": 2549.34,
+      "end": 2550.82,
+      "text": "assumptions about genetics."
+    },
+    {
+      "start": 2550.82,
+      "end": 2553.9,
+      "text": "Let's assume that every child is a boy or girl with"
+    },
+    {
+      "start": 2553.9,
+      "end": 2555.1,
+      "text": "probability 1 half."
+    },
+    {
+      "start": 2555.22,
+      "end": 2560.02,
+      "text": "And that different children are what they are is"
+    },
+    {
+      "start": 2560.02,
+      "end": 2562.92,
+      "text": "independent from what the other children were."
+    },
+    {
+      "start": 2562.92,
+      "end": 2567.66,
+      "text": "So every childbirth is basically a coin flip."
+    },
+    {
+      "start": 2567.66,
+      "end": 2571.64,
+      "text": "OK, so if you take that, you'll say, well, the king is"
+    },
+    {
+      "start": 2571.64,
+      "end": 2572.98,
+      "text": "a child."
+    },
+    {
+      "start": 2572.98,
+      "end": 2575.9,
+      "text": "His sibling is another child."
+    },
+    {
+      "start": 2575.9,
+      "end": 2578.46,
+      "text": "Children are independent of each other."
+    },
+    {
+      "start": 2578.46,
+      "end": 2585.1,
+      "text": "So the probability that the sibling is a girl is 1 half."
+    },
+    {
+      "start": 2585.1,
+      "end": 2587.62,
+      "text": "That's the naive answer."
+    },
+    {
+      "start": 2587.62,
+      "end": 2589.3,
+      "text": "Now let's try to do it formally."
+    },
+    {
+      "start": 2589.3,
+      "end": 2592.42,
+      "text": "Let's set up a model of the experiment."
+    },
+    {
+      "start": 2592.42,
+      "end": 2595.34,
+      "text": "The royal family had two children, as we are told."
+    },
+    {
+      "start": 2595.34,
+      "end": 2597.0,
+      "text": "So there's four outcomes."
+    },
+    {
+      "start": 2597.0,
+      "end": 2602.04,
+      "text": "Boy, boy, boy, girl, girl, boy, and girl, girl."
+    },
+    {
+      "start": 2602.04,
+      "end": 2606.5,
+      "text": "Now we are told that there is a king, which means what?"
+    },
+    {
+      "start": 2606.5,
+      "end": 2610.76,
+      "text": "This outcome here did not happen, is not possible."
+    },
+    {
+      "start": 2610.76,
+      "end": 2614.94,
+      "text": "There are three outcomes that remain possible, so this is"
+    },
+    {
+      "start": 2614.94,
+      "end": 2620.42,
+      "text": "our conditional sample space, given that there is a king."
+    },
+    {
+      "start": 2620.42,
+      "end": 2623.28,
+      "text": "What are the probabilities for the original model?"
+    },
+    {
+      "start": 2623.28,
+      "end": 2626.38,
+      "text": "Well, with the model that we assume that every child is a"
+    },
+    {
+      "start": 2626.38,
+      "end": 2630.68,
+      "text": "boy or a girl independently with probability 1 half, then"
+    },
+    {
+      "start": 2630.68,
+      "end": 2633.2,
+      "text": "the four outcomes would be equally likely, and they're"
+    },
+    {
+      "start": 2633.2,
+      "end": 2634.94,
+      "text": "like this."
+    },
+    {
+      "start": 2634.94,
+      "end": 2637.12,
+      "text": "These are the original probabilities."
+    },
+    {
+      "start": 2637.12,
+      "end": 2641.2,
+      "text": "But once we are told that this outcome did not happen because"
+    },
+    {
+      "start": 2641.2,
+      "end": 2644.54,
+      "text": "we have a king, then we are transported to this smaller"
+    },
+    {
+      "start": 2644.54,
+      "end": 2645.92,
+      "text": "sample space."
+    },
+    {
+      "start": 2645.92,
+      "end": 2648.38,
+      "text": "In this sample space, what's the probability that the"
+    },
+    {
+      "start": 2648.38,
+      "end": 2650.36,
+      "text": "sibling is a girl?"
+    },
+    {
+      "start": 2650.36,
+      "end": 2655.14,
+      "text": "Well, the sibling is a girl in two out of the three outcomes."
+    },
+    {
+      "start": 2655.14,
+      "end": 2659.76,
+      "text": "So the probability that the sibling is a girl is actually"
+    },
+    {
+      "start": 2659.76,
+      "end": 2661.9,
+      "text": "2 thirds."
+    },
+    {
+      "start": 2661.9,
+      "end": 2668.26,
+      "text": "So that's supposed to be the right answer, maybe a little"
+    },
+    {
+      "start": 2668.26,
+      "end": 2669.62,
+      "text": "counterintuitive."
+    },
+    {
+      "start": 2669.62,
+      "end": 2672.96,
+      "text": "So you can play smart and say, oh, I understand such problems"
+    },
+    {
+      "start": 2672.96,
+      "end": 2673.86,
+      "text": "better than you."
+    },
+    {
+      "start": 2673.86,
+      "end": 2674.54,
+      "text": "Here's a trick."
+    },
+    {
+      "start": 2674.54,
+      "end": 2675.1,
+      "text": "Here's a big problem."
+    },
+    {
+      "start": 2675.1,
+      "end": 2677.86,
+      "text": "And here's why the answer is 2 thirds."
+    },
+    {
+      "start": 2677.86,
+      "end": 2681.3,
+      "text": "But actually, I'm not fully justified in saying that the"
+    },
+    {
+      "start": 2681.3,
+      "end": 2682.92,
+      "text": "answer is 2 thirds."
+    },
+    {
+      "start": 2682.92,
+      "end": 2686.5,
+      "text": "I made lots of hidden assumptions when I put this"
+    },
+    {
+      "start": 2686.5,
+      "end": 2690.04,
+      "text": "model down, which I didn't yet state."
+    },
+    {
+      "start": 2690.04,
+      "end": 2695.14,
+      "text": "So to reverse engineer this answer, let's actually think of"
+    },
+    {
+      "start": 2695.14,
+      "end": 2698.0,
+      "text": "what's the probability model for which this would have been"
+    },
+    {
+      "start": 2698.0,
+      "end": 2699.32,
+      "text": "the right answer."
+    },
+    {
+      "start": 2699.32,
+      "end": 2701.3,
+      "text": "And here's the probability model."
+    },
+    {
+      "start": 2701.3,
+      "end": 2704.42,
+      "text": "The royal family decide, the royal parents, decided to"
+    },
+    {
+      "start": 2704.42,
+      "end": 2707.04,
+      "text": "have exactly two children."
+    },
+    {
+      "start": 2707.04,
+      "end": 2708.96,
+      "text": "They went and had them."
+    },
+    {
+      "start": 2708.96,
+      "end": 2712.42,
+      "text": "It turned out that at least one was a boy and became a"
+    },
+    {
+      "start": 2712.42,
+      "end": 2713.38,
+      "text": "king."
+    },
+    {
+      "start": 2713.38,
+      "end": 2717.4,
+      "text": "Under this scenario, that they decide to have exactly two"
+    },
+    {
+      "start": 2717.4,
+      "end": 2720.86,
+      "text": "children, then this is the big sample space."
+    },
+    {
+      "start": 2720.86,
+      "end": 2723.36,
+      "text": "It turned out that one was a boy."
+    },
+    {
+      "start": 2723.36,
+      "end": 2725.56,
+      "text": "That eliminates this outcome."
+    },
+    {
+      "start": 2725.56,
+      "end": 2727.92,
+      "text": "And then this picture is correct, and this is the right"
+    },
+    {
+      "start": 2727.92,
+      "end": 2728.78,
+      "text": "answer."
+    },
+    {
+      "start": 2728.78,
+      "end": 2731.68,
+      "text": "But there's hidden assumptions being there."
+    },
+    {
+      "start": 2731.68,
+      "end": 2734.28,
+      "text": "How about if the royal family is a boy?"
+    },
+    {
+      "start": 2734.28,
+      "end": 2737.24,
+      "text": "The royal family had followed the following strategy."
+    },
+    {
+      "start": 2737.24,
+      "end": 2741.78,
+      "text": "We're going to have children until we get a boy, so that we"
+    },
+    {
+      "start": 2741.78,
+      "end": 2744.98,
+      "text": "get a king, and then we stop."
+    },
+    {
+      "start": 2744.98,
+      "end": 2745.42,
+      "text": "OK."
+    },
+    {
+      "start": 2745.42,
+      "end": 2747.52,
+      "text": "Given that they had two children, what's the"
+    },
+    {
+      "start": 2747.52,
+      "end": 2750.7,
+      "text": "probability that the sibling is a girl?"
+    },
+    {
+      "start": 2750.7,
+      "end": 2751.88,
+      "text": "It's 1."
+    },
+    {
+      "start": 2751.88,
+      "end": 2755.24,
+      "text": "The reason that they had two children was because the first"
+    },
+    {
+      "start": 2755.24,
+      "end": 2757.82,
+      "text": "was a girl, so they had to have a second."
+    },
+    {
+      "start": 2757.82,
+      "end": 2761.2,
+      "text": "So assumptions about reproductive practices actually"
+    },
+    {
+      "start": 2761.2,
+      "end": 2764.24,
+      "text": "need to come in, and they're going to affect the decision."
+    },
+    {
+      "start": 2764.28,
+      "end": 2768.02,
+      "text": "Or if it's one of those ancient kingdoms where a king"
+    },
+    {
+      "start": 2768.02,
+      "end": 2771.78,
+      "text": "would always make sure to strangle any of his brothers,"
+    },
+    {
+      "start": 2771.78,
+      "end": 2775.6,
+      "text": "then the probability that the sibling is a girl is actually"
+    },
+    {
+      "start": 2775.6,
+      "end": 2777.58,
+      "text": "1 again, and so on."
+    },
+    {
+      "start": 2777.58,
+      "end": 2780.64,
+      "text": "So it means that one needs to be careful when you start with"
+    },
+    {
+      "start": 2780.64,
+      "end": 2784.34,
+      "text": "loosely worded problems to make sure exactly what it"
+    },
+    {
+      "start": 2784.34,
+      "end": 2787.32,
+      "text": "means and what assumptions you're making."
+    },
+    {
+      "start": 2787.32,
+      "end": 2787.78,
+      "text": "All right."
+    },
+    {
+      "start": 2787.78,
+      "end": 2789.04,
+      "text": "See you next week."
+    }
+  ]
+}

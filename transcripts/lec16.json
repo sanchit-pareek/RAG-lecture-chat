@@ -1,0 +1,4952 @@
+{
+  "lecture": "lec16",
+  "language": "en",
+  "duration": 3125.0346875,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.44,
+      "text": "The following content is provided under a Creative"
+    },
+    {
+      "start": 2.44,
+      "end": 3.96,
+      "text": "Commons license."
+    },
+    {
+      "start": 3.96,
+      "end": 6.28,
+      "text": "Your support will help MIT OpenCourseWare"
+    },
+    {
+      "start": 6.28,
+      "end": 10.64,
+      "text": "continue to offer high quality educational resources for free."
+    },
+    {
+      "start": 10.64,
+      "end": 13.26,
+      "text": "To make a donation or view additional materials"
+    },
+    {
+      "start": 13.26,
+      "end": 17.2,
+      "text": "from hundreds of MIT courses, visit MIT OpenCourseWare"
+    },
+    {
+      "start": 17.2,
+      "end": 22.31,
+      "text": "at ocw.mit.edu."
+    },
+    {
+      "start": 22.31,
+      "end": 24.97,
+      "text": "So we're going to start now with a new chapter."
+    },
+    {
+      "start": 24.97,
+      "end": 28.71,
+      "text": "We're going to talk about Markov processes."
+    },
+    {
+      "start": 28.71,
+      "end": 30.87,
+      "text": "The good news is that this is a subject"
+    },
+    {
+      "start": 30.87,
+      "end": 35.25,
+      "text": "that is a lot more intuitive and simple in many ways"
+    },
+    {
+      "start": 35.25,
+      "end": 38.41,
+      "text": "than, let's say, the Poisson processes."
+    },
+    {
+      "start": 38.41,
+      "end": 40.31,
+      "text": "So hopefully this will be enjoyable."
+    },
+    {
+      "start": 40.31,
+      "end": 43.03,
+      "text": "So Markov processes is a general class"
+    },
+    {
+      "start": 43.03,
+      "end": 46.45,
+      "text": "of random processes."
+    },
+    {
+      "start": 46.45,
+      "end": 49.77,
+      "text": "In some sense, it's more elaborate than the Bernoulli"
+    },
+    {
+      "start": 49.77,
+      "end": 51.81,
+      "text": "and Poisson processes, because now we're"
+    },
+    {
+      "start": 51.81,
+      "end": 55.29,
+      "text": "going to have dependencies between different times,"
+    },
+    {
+      "start": 55.29,
+      "end": 57.97,
+      "text": "instead of having memoryless processes."
+    },
+    {
+      "start": 57.97,
+      "end": 60.19,
+      "text": "So the basic idea is the following."
+    },
+    {
+      "start": 60.19,
+      "end": 65.07,
+      "text": "In physics, for example, you write down equations for how a"
+    },
+    {
+      "start": 65.07,
+      "end": 68.23,
+      "text": "system evolves that have the general form."
+    },
+    {
+      "start": 68.23,
+      "end": 71.77,
+      "text": "The new state of a system one second later is some function"
+    },
+    {
+      "start": 71.77,
+      "end": 74.97,
+      "text": "of the old state."
+    },
+    {
+      "start": 74.97,
+      "end": 80.03,
+      "text": "So Newton's equations and all that in physics allow you to"
+    },
+    {
+      "start": 80.03,
+      "end": 81.61,
+      "text": "write equations of this kind."
+    },
+    {
+      "start": 81.61,
+      "end": 85.19,
+      "text": "And so if you know that a particle is moving at a"
+    },
+    {
+      "start": 85.19,
+      "end": 88.13,
+      "text": "certain velocity and it's at some location, you can predict"
+    },
+    {
+      "start": 88.13,
+      "end": 90.49,
+      "text": "when it's going to be a little later."
+    },
+    {
+      "start": 90.49,
+      "end": 91.19,
+      "text": "Markov processes."
+    },
+    {
+      "start": 91.19,
+      "end": 94.57,
+      "text": "Markov processes have the same flavor, except that there"
+    },
+    {
+      "start": 94.57,
+      "end": 98.81,
+      "text": "is also some randomness that's thrown inside the equation."
+    },
+    {
+      "start": 98.81,
+      "end": 102.73,
+      "text": "So that's what Markov process essentially is."
+    },
+    {
+      "start": 102.73,
+      "end": 107.75,
+      "text": "It describes the evolution of a system or of some variables,"
+    },
+    {
+      "start": 107.75,
+      "end": 111.43,
+      "text": "but in the presence of some noise so that the motion"
+    },
+    {
+      "start": 111.43,
+      "end": 115.11,
+      "text": "itself is a bit random."
+    },
+    {
+      "start": 115.11,
+      "end": 120.11,
+      "text": "So this is a pretty general framework, so pretty much any"
+    },
+    {
+      "start": 120.11,
+      "end": 120.95,
+      "text": "useful or"
+    },
+    {
+      "start": 120.95,
+      "end": 124.55,
+      "text": "interesting random process that you can think about, you"
+    },
+    {
+      "start": 124.55,
+      "end": 127.85,
+      "text": "can always describe it as a Markov process if you define"
+    },
+    {
+      "start": 127.85,
+      "end": 130.71,
+      "text": "properly the notion of the state."
+    },
+    {
+      "start": 130.71,
+      "end": 133.95,
+      "text": "So what we're going to do is we're going to introduce the"
+    },
+    {
+      "start": 133.95,
+      "end": 137.61,
+      "text": "class of Markov processes by example, by talking about the"
+    },
+    {
+      "start": 137.61,
+      "end": 139.89,
+      "text": "checkout counter in a supermarket."
+    },
+    {
+      "start": 139.89,
+      "end": 142.65,
+      "text": "Then we're going to abstract from our example so that we"
+    },
+    {
+      "start": 142.65,
+      "end": 145.57,
+      "text": "get a more general definition."
+    },
+    {
+      "start": 145.57,
+      "end": 148.41,
+      "text": "And then we're going to do a few things, such as how to"
+    },
+    {
+      "start": 148.41,
+      "end": 150.95,
+      "text": "predict what's going to happen n times n."
+    },
+    {
+      "start": 150.95,
+      "end": 154.21,
+      "text": "Steps later, if we start at a particular state."
+    },
+    {
+      "start": 154.21,
+      "end": 156.45,
+      "text": "And then talk a little bit about some structural"
+    },
+    {
+      "start": 156.45,
+      "end": 160.63,
+      "text": "properties of Markov processes, or Markov chains."
+    },
+    {
+      "start": 160.63,
+      "end": 164.79,
+      "text": "So here's our example."
+    },
+    {
+      "start": 164.79,
+      "end": 169.23,
+      "text": "You go to the checkout counter at the supermarket."
+    },
+    {
+      "start": 169.23,
+      "end": 174.51,
+      "text": "And you stand there and watch the customers who come."
+    },
+    {
+      "start": 174.51,
+      "end": 179.09,
+      "text": "So customers come, they get in queue, and customers get"
+    },
+    {
+      "start": 179.09,
+      "end": 181.23,
+      "text": "served one at a time."
+    },
+    {
+      "start": 181.23,
+      "end": 182.55,
+      "text": "So the discussion is going to be."
+    },
+    {
+      "start": 182.55,
+      "end": 184.77,
+      "text": "in terms of supermarket checkout counters."
+    },
+    {
+      "start": 184.77,
+      "end": 188.41,
+      "text": "But the same story applies to any service system."
+    },
+    {
+      "start": 188.41,
+      "end": 190.15,
+      "text": "You may have a server."
+    },
+    {
+      "start": 190.15,
+      "end": 192.11,
+      "text": "Jobs arrive to that server."
+    },
+    {
+      "start": 192.11,
+      "end": 193.91,
+      "text": "They get put in a queue."
+    },
+    {
+      "start": 193.91,
+      "end": 197.73,
+      "text": "And the server processes those jobs one at a time."
+    },
+    {
+      "start": 197.73,
+      "end": 200.47,
+      "text": "Now to make a probabilistic model, we need to make some"
+    },
+    {
+      "start": 200.47,
+      "end": 202.79,
+      "text": "assumption about the customer arrivals and the"
+    },
+    {
+      "start": 202.79,
+      "end": 204.29,
+      "text": "customer departures."
+    },
+    {
+      "start": 204.29,
+      "end": 206.13,
+      "text": "And we want to keep things as simple as"
+    },
+    {
+      "start": 206.13,
+      "end": 208.15,
+      "text": "possible to get started."
+    },
+    {
+      "start": 208.15,
+      "end": 211.73,
+      "text": "So let's assume that customers arrive according to a Bernoulli"
+    },
+    {
+      "start": 211.73,
+      "end": 212.33,
+      "text": "process."
+    },
+    {
+      "start": 212.33,
+      "end": 214.21,
+      "text": "With some parameter p."
+    },
+    {
+      "start": 214.21,
+      "end": 217.37,
+      "text": "So essentially, that's the same as the assumption that"
+    },
+    {
+      "start": 217.37,
+      "end": 220.57,
+      "text": "the time between consecutive customer arrivals is a"
+    },
+    {
+      "start": 220.57,
+      "end": 225.17,
+      "text": "geometric random variable with parameter p."
+    },
+    {
+      "start": 225.17,
+      "end": 230.31,
+      "text": "Another way of thinking about the arrival process, that's not"
+    },
+    {
+      "start": 230.31,
+      "end": 234.83,
+      "text": "how it happens, but it's helpful mathematically, is to"
+    },
+    {
+      "start": 234.83,
+      "end": 238.33,
+      "text": "think of someone who's flipping a coin with bias"
+    },
+    {
+      "start": 238.33,
+      "end": 239.51,
+      "text": "equal to p."
+    },
+    {
+      "start": 239.51,
+      "end": 242.33,
+      "text": "And whenever the coin lands heads, it's going to be a"
+    },
+    {
+      "start": 242.33,
+      "end": 242.75,
+      "text": "customer."
+    },
+    {
+      "start": 242.75,
+      "end": 245.05,
+      "text": "Then a customer arrives."
+    },
+    {
+      "start": 245.05,
+      "end": 248.95,
+      "text": "So it's as if there's a coin flipping done by nature that"
+    },
+    {
+      "start": 248.95,
+      "end": 251.57,
+      "text": "decides the arrivals of the customers."
+    },
+    {
+      "start": 251.57,
+      "end": 256.09,
+      "text": "So we know that coin flipping to determine the customer"
+    },
+    {
+      "start": 256.09,
+      "end": 259.55,
+      "text": "arrivals is the same as having geometric inter-arrival times."
+    },
+    {
+      "start": 259.55,
+      "end": 263.63,
+      "text": "We know that from our study of the Bernoulli process."
+    },
+    {
+      "start": 263.63,
+      "end": 267.73,
+      "text": "And now how about the customer service times?"
+    },
+    {
+      "start": 267.73,
+      "end": 272.29,
+      "text": "We're going to assume that, OK, if there is no customer in"
+    },
+    {
+      "start": 272.29,
+      "end": 276.93,
+      "text": "queue, no one being served, then of course no one is going"
+    },
+    {
+      "start": 276.93,
+      "end": 278.53,
+      "text": "to depart from the queue."
+    },
+    {
+      "start": 278.53,
+      "end": 282.25,
+      "text": "But if there is a customer in queue, then that customer"
+    },
+    {
+      "start": 282.25,
+      "end": 285.19,
+      "text": "starts being served and is going to be served for a"
+    },
+    {
+      "start": 285.19,
+      "end": 286.87,
+      "text": "random amount of time."
+    },
+    {
+      "start": 286.87,
+      "end": 290.81,
+      "text": "And we make the assumption that the time it takes for the"
+    },
+    {
+      "start": 290.81,
+      "end": 294.47,
+      "text": "clerk to serve the customer has a geometric distribution"
+    },
+    {
+      "start": 294.47,
+      "end": 297.27,
+      "text": "with some known parameter q."
+    },
+    {
+      "start": 297.27,
+      "end": 300.63,
+      "text": "So the time it takes to serve a customer is random because"
+    },
+    {
+      "start": 300.63,
+      "end": 302.29,
+      "text": "it's random how many items they've got."
+    },
+    {
+      "start": 302.29,
+      "end": 306.05,
+      "text": "in their cart, and how many coupons they have to unload,"
+    },
+    {
+      "start": 306.05,
+      "end": 306.99,
+      "text": "and so on."
+    },
+    {
+      "start": 306.99,
+      "end": 309.71,
+      "text": "So it's random."
+    },
+    {
+      "start": 309.71,
+      "end": 313.23,
+      "text": "In the real world, it has some probability distribution."
+    },
+    {
+      "start": 313.23,
+      "end": 316.05,
+      "text": "Let's not care exactly about what it would be in the real"
+    },
+    {
+      "start": 316.05,
+      "end": 318.81,
+      "text": "world, but as a modeling approximation, or just to get"
+    },
+    {
+      "start": 318.81,
+      "end": 321.91,
+      "text": "started, let's pretend that customer service times are"
+    },
+    {
+      "start": 321.91,
+      "end": 325.15,
+      "text": "well-described by a geometric distribution"
+    },
+    {
+      "start": 325.15,
+      "end": 327.49,
+      "text": "with a parameter q."
+    },
+    {
+      "start": 327.49,
+      "end": 331.03,
+      "text": "An equivalent way of thinking about the customer services"
+    },
+    {
+      "start": 331.03,
+      "end": 332.27,
+      "text": "mathematically would be, again, a"
+    },
+    {
+      "start": 332.29,
+      "end": 334.31,
+      "text": "in terms of coin flipping."
+    },
+    {
+      "start": 334.31,
+      "end": 337.65,
+      "text": "That is, the clerk has a coin with a bias q."
+    },
+    {
+      "start": 337.65,
+      "end": 340.61,
+      "text": "And at each time slot, the clerk flips the coin."
+    },
+    {
+      "start": 340.61,
+      "end": 343.59,
+      "text": "With probability q, service is over."
+    },
+    {
+      "start": 343.59,
+      "end": 347.07,
+      "text": "With probability 1 minus q, you continue the service"
+    },
+    {
+      "start": 347.07,
+      "end": 349.11,
+      "text": "process."
+    },
+    {
+      "start": 349.11,
+      "end": 352.35,
+      "text": "An assumption that we're going to make is that the coin flips"
+    },
+    {
+      "start": 352.35,
+      "end": 356.23,
+      "text": "that happen here to determine the arrivals, they're all"
+    },
+    {
+      "start": 356.23,
+      "end": 357.85,
+      "text": "independent of each other."
+    },
+    {
+      "start": 357.85,
+      "end": 362.19,
+      "text": "The coin flips that determine the end of service are"
+    },
+    {
+      "start": 362.19,
+      "end": 363.93,
+      "text": "also independent from each other."
+    },
+    {
+      "start": 363.93,
+      "end": 367.15,
+      "text": "But also, the coin flips involved here are independent"
+    },
+    {
+      "start": 367.15,
+      "end": 369.75,
+      "text": "from the coin flips that happen there."
+    },
+    {
+      "start": 369.75,
+      "end": 375.19,
+      "text": "So how arrivals happen is independent with what happens"
+    },
+    {
+      "start": 375.19,
+      "end": 377.49,
+      "text": "in the service process."
+    },
+    {
+      "start": 377.49,
+      "end": 378.29,
+      "text": "OK."
+    },
+    {
+      "start": 378.29,
+      "end": 381.23,
+      "text": "So suppose now you want to answer a"
+    },
+    {
+      "start": 381.23,
+      "end": 383.31,
+      "text": "question such as the following."
+    },
+    {
+      "start": 383.31,
+      "end": 384.91,
+      "text": "The time is 7 PM."
+    },
+    {
+      "start": 384.91,
+      "end": 388.63,
+      "text": "What's the probability that the customer will be departing"
+    },
+    {
+      "start": 388.63,
+      "end": 391.07,
+      "text": "at this particular time?"
+    },
+    {
+      "start": 391.07,
+      "end": 392.03,
+      "text": "Well, you'll say."
+    },
+    {
+      "start": 392.03,
+      "end": 393.65,
+      "text": "It depends."
+    },
+    {
+      "start": 393.65,
+      "end": 397.77,
+      "text": "If the queue is empty at that time, then you're certain that"
+    },
+    {
+      "start": 397.77,
+      "end": 400.21,
+      "text": "you're not going to have a customer departure."
+    },
+    {
+      "start": 400.21,
+      "end": 404.97,
+      "text": "But if the queue is non-empty, then there is probability q"
+    },
+    {
+      "start": 404.97,
+      "end": 407.87,
+      "text": "that a departure will happen at that time."
+    },
+    {
+      "start": 407.87,
+      "end": 412.21,
+      "text": "So the answer to a question like this has something to do"
+    },
+    {
+      "start": 412.21,
+      "end": 414.45,
+      "text": "with the state of the system at that time."
+    },
+    {
+      "start": 414.45,
+      "end": 416.77,
+      "text": "It depends what the queue is."
+    },
+    {
+      "start": 416.77,
+      "end": 421.89,
+      "text": "And if I ask you, will the queue be empty at 7 PM?"
+    },
+    {
+      "start": 421.89,
+      "end": 422.81,
+      "text": "10?"
+    },
+    {
+      "start": 422.81,
+      "end": 425.99,
+      "text": "Well, the answer to that question depends on whether at"
+    },
+    {
+      "start": 425.99,
+      "end": 430.65,
+      "text": "time at 7 o'clock, whether the queue was huge or not."
+    },
+    {
+      "start": 430.65,
+      "end": 434.77,
+      "text": "So knowing something about the state of the queue right now"
+    },
+    {
+      "start": 434.77,
+      "end": 437.47,
+      "text": "gives me relevant information about what may"
+    },
+    {
+      "start": 437.47,
+      "end": 439.79,
+      "text": "happen in the future."
+    },
+    {
+      "start": 439.79,
+      "end": 442.87,
+      "text": "So what is the state of the system?"
+    },
+    {
+      "start": 442.87,
+      "end": 446.07,
+      "text": "Therefore, we're brought to start using this term."
+    },
+    {
+      "start": 446.07,
+      "end": 450.69,
+      "text": "So the state basically corresponds to anything that's"
+    },
+    {
+      "start": 450.69,
+      "end": 451.01,
+      "text": "relevant."
+    },
+    {
+      "start": 451.01,
+      "end": 451.39,
+      "text": "OK."
+    },
+    {
+      "start": 451.39,
+      "end": 451.51,
+      "text": "OK."
+    },
+    {
+      "start": 451.51,
+      "end": 454.89,
+      "text": "And anything that's happening right now, that's kind of"
+    },
+    {
+      "start": 454.89,
+      "end": 458.11,
+      "text": "relevant to what may happen in the future."
+    },
+    {
+      "start": 458.11,
+      "end": 461.35,
+      "text": "Knowing the size of the queue right now is useful"
+    },
+    {
+      "start": 461.35,
+      "end": 465.69,
+      "text": "information for me to make predictions about what may"
+    },
+    {
+      "start": 465.69,
+      "end": 469.07,
+      "text": "happen two minutes later from now."
+    },
+    {
+      "start": 469.07,
+      "end": 472.51,
+      "text": "So in this particular example, a reasonable choice for the"
+    },
+    {
+      "start": 472.51,
+      "end": 476.67,
+      "text": "state is to just count how many customers we"
+    },
+    {
+      "start": 476.67,
+      "end": 478.95,
+      "text": "have in the queue."
+    },
+    {
+      "start": 478.95,
+      "end": 481.01,
+      "text": "And let's assume that there are supermarkets."
+    },
+    {
+      "start": 481.01,
+      "end": 482.51,
+      "text": "And let's assume that the supermarket building is not too"
+    },
+    {
+      "start": 482.51,
+      "end": 485.23,
+      "text": "big, so it can only hold 10 people."
+    },
+    {
+      "start": 485.23,
+      "end": 487.49,
+      "text": "So we're going to limit the state."
+    },
+    {
+      "start": 487.49,
+      "end": 491.35,
+      "text": "Instead of going from 0 to infinity, we're going to"
+    },
+    {
+      "start": 491.35,
+      "end": 493.57,
+      "text": "truncate our model at 10."
+    },
+    {
+      "start": 493.57,
+      "end": 498.25,
+      "text": "So we have 11 possible states corresponding to 0 customers"
+    },
+    {
+      "start": 498.25,
+      "end": 502.61,
+      "text": "in queue, 1 customer in queue, 2 customers, and so on, all"
+    },
+    {
+      "start": 502.61,
+      "end": 504.19,
+      "text": "the way up to 10."
+    },
+    {
+      "start": 504.19,
+      "end": 507.55,
+      "text": "So these are the different possible states of the system,"
+    },
+    {
+      "start": 507.55,
+      "end": 510.81,
+      "text": "assuming that the store cannot handle more than 10 customers."
+    },
+    {
+      "start": 510.81,
+      "end": 517.35,
+      "text": "So this is the first step, to write down the set of possible"
+    },
+    {
+      "start": 517.35,
+      "end": 518.99,
+      "text": "states of our system."
+    },
+    {
+      "start": 518.99,
+      "end": 522.35,
+      "text": "Then the next thing to do is to start describing the possible"
+    },
+    {
+      "start": 522.35,
+      "end": 525.57,
+      "text": "transitions between the states."
+    },
+    {
+      "start": 525.57,
+      "end": 528.75,
+      "text": "At any given time step, what are the"
+    },
+    {
+      "start": 528.75,
+      "end": 529.99,
+      "text": "things that can happen?"
+    },
+    {
+      "start": 529.99,
+      "end": 533.73,
+      "text": "We can have a customer arrival, which moves the"
+    },
+    {
+      "start": 533.73,
+      "end": 535.81,
+      "text": "state one higher."
+    },
+    {
+      "start": 535.81,
+      "end": 538.55,
+      "text": "We can have a customer departure, which moves the"
+    },
+    {
+      "start": 538.55,
+      "end": 540.29,
+      "text": "state one lower."
+    },
+    {
+      "start": 540.29,
+      "end": 543.07,
+      "text": "There's the possibility that nothing happens, in which case"
+    },
+    {
+      "start": 543.07,
+      "end": 544.71,
+      "text": "the state stays the same."
+    },
+    {
+      "start": 544.71,
+      "end": 546.47,
+      "text": "And there's also the possibility of having"
+    },
+    {
+      "start": 546.47,
+      "end": 550.79,
+      "text": "simultaneously an arrival and a departure, in which case the"
+    },
+    {
+      "start": 550.79,
+      "end": 552.69,
+      "text": "state again stays the same."
+    },
+    {
+      "start": 552.69,
+      "end": 556.41,
+      "text": "So let's write some representative probabilities."
+    },
+    {
+      "start": 556.41,
+      "end": 559.67,
+      "text": "If we have two customers, the probability that during this"
+    },
+    {
+      "start": 559.67,
+      "end": 562.79,
+      "text": "step we go down, this is the probability that we have a"
+    },
+    {
+      "start": 562.79,
+      "end": 566.95,
+      "text": "service completion, but no customer arrival."
+    },
+    {
+      "start": 566.95,
+      "end": 570.07,
+      "text": "So this is the probability associated with this"
+    },
+    {
+      "start": 570.07,
+      "end": 571.73,
+      "text": "transition."
+    },
+    {
+      "start": 571.73,
+      "end": 577.29,
+      "text": "The other possibility is that there's a customer arrival,"
+    },
+    {
+      "start": 577.29,
+      "end": 579.39,
+      "text": "which happens with probability p."
+    },
+    {
+      "start": 579.39,
+      "end": 582.57,
+      "text": "And we do not have a customer departure."
+    },
+    {
+      "start": 582.57,
+      "end": 586.53,
+      "text": "And so the probability of that particular transition is this"
+    },
+    {
+      "start": 586.53,
+      "end": 587.69,
+      "text": "number."
+    },
+    {
+      "start": 587.69,
+      "end": 590.97,
+      "text": "And then finally, the probability that we stay in"
+    },
+    {
+      "start": 590.97,
+      "end": 592.35,
+      "text": "the same state."
+    },
+    {
+      "start": 592.35,
+      "end": 595.49,
+      "text": "This can happen in two possible ways."
+    },
+    {
+      "start": 595.49,
+      "end": 599.89,
+      "text": "One way is that we have an arrival and a departure."
+    },
+    {
+      "start": 599.89,
+      "end": 601.95,
+      "text": "Simultaneously."
+    },
+    {
+      "start": 601.95,
+      "end": 605.69,
+      "text": "And the other possibility is that we have no arrival and no"
+    },
+    {
+      "start": 605.69,
+      "end": 609.65,
+      "text": "departure, so that the state stays the same."
+    },
+    {
+      "start": 609.65,
+      "end": 611.87,
+      "text": "So these transition probabilities would be the"
+    },
+    {
+      "start": 611.87,
+      "end": 615.79,
+      "text": "same starting from any other states, state three or state"
+    },
+    {
+      "start": 615.79,
+      "end": 617.03,
+      "text": "nine, and so on."
+    },
+    {
+      "start": 617.03,
+      "end": 620.01,
+      "text": "Transition probabilities become a little different at"
+    },
+    {
+      "start": 620.01,
+      "end": 623.25,
+      "text": "the borders, at the boundaries of this diagram."
+    },
+    {
+      "start": 623.25,
+      "end": 626.85,
+      "text": "Because if you're a state zero, then you cannot have any"
+    },
+    {
+      "start": 626.85,
+      "end": 628.11,
+      "text": "customer departures."
+    },
+    {
+      "start": 628.11,
+      "end": 629.37,
+      "text": "There's no one to be served."
+    },
+    {
+      "start": 629.37,
+      "end": 634.09,
+      "text": "But there is a probability p that the customer arrives, in"
+    },
+    {
+      "start": 634.09,
+      "end": 637.49,
+      "text": "which case the number of customers in the system goes to"
+    },
+    {
+      "start": 637.49,
+      "end": 641.15,
+      "text": "one, and probability one minus p that nothing happens."
+    },
+    {
+      "start": 641.15,
+      "end": 646.03,
+      "text": "Similarly with departures, if the system is full, there's no"
+    },
+    {
+      "start": 646.03,
+      "end": 647.79,
+      "text": "room for another arrival."
+    },
+    {
+      "start": 647.79,
+      "end": 650.63,
+      "text": "But we may have a departure that happens with probability"
+    },
+    {
+      "start": 650.63,
+      "end": 655.25,
+      "text": "q, and nothing happens with probability one minus q."
+    },
+    {
+      "start": 655.25,
+      "end": 658.51,
+      "text": "So this is the full transition diagram."
+    },
+    {
+      "start": 658.51,
+      "end": 662.15,
+      "text": "Annotated with transition probabilities."
+    },
+    {
+      "start": 662.15,
+      "end": 665.95,
+      "text": "And this is a complete description of a discrete"
+    },
+    {
+      "start": 665.95,
+      "end": 669.99,
+      "text": "time finite state Markov chain."
+    },
+    {
+      "start": 669.99,
+      "end": 673.01,
+      "text": "So this is a complete probabilistic model."
+    },
+    {
+      "start": 673.01,
+      "end": 675.83,
+      "text": "Once you have all these pieces of information, you can start"
+    },
+    {
+      "start": 675.83,
+      "end": 678.49,
+      "text": "calculating things and trying to predict what's going to"
+    },
+    {
+      "start": 678.49,
+      "end": 680.13,
+      "text": "happen in the future."
+    },
+    {
+      "start": 680.13,
+      "end": 684.43,
+      "text": "Now let us abstract from this example and come up with a"
+    },
+    {
+      "start": 684.43,
+      "end": 685.67,
+      "text": "more general definition."
+    },
+    {
+      "start": 690.75,
+      "end": 696.99,
+      "text": "We have this concept of the state, which describes the"
+    },
+    {
+      "start": 696.99,
+      "end": 700.57,
+      "text": "current situation in the system that we're looking at."
+    },
+    {
+      "start": 700.57,
+      "end": 702.91,
+      "text": "The current state is random."
+    },
+    {
+      "start": 702.91,
+      "end": 705.81,
+      "text": "So we're going to think of it as a random variable."
+    },
+    {
+      "start": 705.81,
+      "end": 711.09,
+      "text": "X sub n is the state n transitions after the system"
+    },
+    {
+      "start": 711.09,
+      "end": 712.55,
+      "text": "started operating."
+    },
+    {
+      "start": 712.55,
+      "end": 716.23,
+      "text": "So the system starts operating at some initial state x0."
+    },
+    {
+      "start": 716.23,
+      "end": 718.99,
+      "text": "And after n transitions, it moves to state xn."
+    },
+    {
+      "start": 720.75,
+      "end": 722.99,
+      "text": "We have a set of possible states."
+    },
+    {
+      "start": 722.99,
+      "end": 730.69,
+      "text": "State 1, state 2, state 3, and in general states i and state j."
+    },
+    {
+      "start": 730.69,
+      "end": 733.91,
+      "text": "To keep things simple, we assume that the set of"
+    },
+    {
+      "start": 733.91,
+      "end": 736.71,
+      "text": "possible states is a finite set."
+    },
+    {
+      "start": 736.71,
+      "end": 739.69,
+      "text": "As you can imagine, we can have systems in which the state"
+    },
+    {
+      "start": 739.69,
+      "end": 741.15,
+      "text": "space is going to be infinite."
+    },
+    {
+      "start": 741.15,
+      "end": 743.23,
+      "text": "It could be discrete or continuous."
+    },
+    {
+      "start": 743.23,
+      "end": 745.89,
+      "text": "But all that is more difficult and more complicated."
+    },
+    {
+      "start": 745.89,
+      "end": 749.11,
+      "text": "It makes sense to start from the simplest possible setting,"
+    },
+    {
+      "start": 749.11,
+      "end": 750.69,
+      "text": "where we just deal with the finite"
+    },
+    {
+      "start": 750.69,
+      "end": 753.75,
+      "text": "state space."
+    },
+    {
+      "start": 753.75,
+      "end": 756.07,
+      "text": "And time is discrete."
+    },
+    {
+      "start": 756.07,
+      "end": 760.45,
+      "text": "So we can think of the states in the beginning, after one"
+    },
+    {
+      "start": 760.45,
+      "end": 762.65,
+      "text": "transition, two transitions, and so on."
+    },
+    {
+      "start": 762.65,
+      "end": 766.59,
+      "text": "So we're in discrete time, and we have finitely many states."
+    },
+    {
+      "start": 766.59,
+      "end": 768.65,
+      "text": "So the system starts somewhere."
+    },
+    {
+      "start": 768.65,
+      "end": 774.71,
+      "text": "And at every time step, the state is, let's say, here."
+    },
+    {
+      "start": 774.71,
+      "end": 779.85,
+      "text": "A whistle blows, and the state jumps to a random next state."
+    },
+    {
+      "start": 779.85,
+      "end": 785.09,
+      "text": "So it may move here, or it may move there, or it may move"
+    },
+    {
+      "start": 785.09,
+      "end": 788.51,
+      "text": "here, or it might stay in place."
+    },
+    {
+      "start": 788.51,
+      "end": 791.91,
+      "text": "So one possible transition is the transition where you jump"
+    },
+    {
+      "start": 791.91,
+      "end": 795.75,
+      "text": "and just land in the same place where you started from."
+    },
+    {
+      "start": 795.75,
+      "end": 799.15,
+      "text": "Now to describe, we want to describe the statistics of"
+    },
+    {
+      "start": 799.15,
+      "end": 800.51,
+      "text": "these transitions."
+    },
+    {
+      "start": 800.51,
+      "end": 804.47,
+      "text": "If I am at that state, how likely is it that next time I'm"
+    },
+    {
+      "start": 804.47,
+      "end": 807.17,
+      "text": "going to find myself at that state?"
+    },
+    {
+      "start": 807.17,
+      "end": 809.81,
+      "text": "Well, we describe the statistics of these"
+    },
+    {
+      "start": 809.81,
+      "end": 814.81,
+      "text": "transition by writing down a transition probability."
+    },
+    {
+      "start": 814.81,
+      "end": 821.41,
+      "text": "The transition probability of going from state 3 to state 1."
+    },
+    {
+      "start": 821.41,
+      "end": 824.17,
+      "text": "So this transition probability is to be thought of as a"
+    },
+    {
+      "start": 824.17,
+      "end": 825.81,
+      "text": "conditional probability."
+    },
+    {
+      "start": 825.81,
+      "end": 829.61,
+      "text": "Given that right now I am at state i, what is the"
+    },
+    {
+      "start": 829.61,
+      "end": 835.63,
+      "text": "probability that next time I find myself at state j?"
+    },
+    {
+      "start": 835.63,
+      "end": 839.79,
+      "text": "So given that right now I am at state 3, p31,"
+    },
+    {
+      "start": 839.81,
+      "end": 842.09,
+      "text": "is the probability that the next time I'm going to find"
+    },
+    {
+      "start": 842.09,
+      "end": 844.75,
+      "text": "myself at state 1."
+    },
+    {
+      "start": 844.75,
+      "end": 849.33,
+      "text": "Similarly, here we would have a probability p3i, which is"
+    },
+    {
+      "start": 849.33,
+      "end": 852.69,
+      "text": "the probability that given that right now I'm at state 3,"
+    },
+    {
+      "start": 852.69,
+      "end": 857.69,
+      "text": "next time I'm going to find myself at state i."
+    },
+    {
+      "start": 857.69,
+      "end": 861.39,
+      "text": "Now one can write such conditional probabilities down"
+    },
+    {
+      "start": 861.39,
+      "end": 866.37,
+      "text": "in principle, but we need to make, so you might think of"
+    },
+    {
+      "start": 866.37,
+      "end": 868.29,
+      "text": "this as a definition here."
+    },
+    {
+      "start": 868.29,
+      "end": 872.79,
+      "text": "But we need to make one additional big assumption."
+    },
+    {
+      "start": 872.79,
+      "end": 876.95,
+      "text": "And this is the assumption that makes a process to be a"
+    },
+    {
+      "start": 876.95,
+      "end": 878.51,
+      "text": "Markov process."
+    },
+    {
+      "start": 878.51,
+      "end": 880.97,
+      "text": "This is the so-called Markov property."
+    },
+    {
+      "start": 880.97,
+      "end": 883.75,
+      "text": "And here's what it says."
+    },
+    {
+      "start": 883.75,
+      "end": 886.73,
+      "text": "Let me describe it first in words here."
+    },
+    {
+      "start": 886.73,
+      "end": 892.21,
+      "text": "Every time that I find myself at state 3, the probability"
+    },
+    {
+      "start": 892.21,
+      "end": 896.35,
+      "text": "that next time I'm going to find myself at state 1 is this"
+    },
+    {
+      "start": 896.35,
+      "end": 898.03,
+      "text": "particular number."
+    },
+    {
+      "start": 898.03,
+      "end": 902.37,
+      "text": "No matter how I got there, that is, this transition"
+    },
+    {
+      "start": 902.37,
+      "end": 906.57,
+      "text": "probability is not affected by the past of the process."
+    },
+    {
+      "start": 906.57,
+      "end": 911.91,
+      "text": "It doesn't care about what path I used to find"
+    },
+    {
+      "start": 911.91,
+      "end": 914.11,
+      "text": "myself at state 3."
+    },
+    {
+      "start": 914.11,
+      "end": 917.05,
+      "text": "Mathematically, it means the following."
+    },
+    {
+      "start": 917.05,
+      "end": 919.69,
+      "text": "You have this transition probability that from i you"
+    },
+    {
+      "start": 919.69,
+      "end": 921.45,
+      "text": "jump to state j."
+    },
+    {
+      "start": 921.45,
+      "end": 924.21,
+      "text": "Suppose that they gave you some additional information,"
+    },
+    {
+      "start": 924.21,
+      "end": 927.53,
+      "text": "that they told you everything else that happened in the past"
+    },
+    {
+      "start": 927.53,
+      "end": 928.03,
+      "text": "of the process."
+    },
+    {
+      "start": 928.03,
+      "end": 932.57,
+      "text": "Everything that happened, how did you get to state i?"
+    },
+    {
+      "start": 932.57,
+      "end": 935.65,
+      "text": "The assumption we're making is that this information about the"
+    },
+    {
+      "start": 935.65,
+      "end": 941.15,
+      "text": "past has no bearing in making predictions about the future,"
+    },
+    {
+      "start": 941.15,
+      "end": 944.87,
+      "text": "as long as you know where you are right now."
+    },
+    {
+      "start": 944.87,
+      "end": 949.59,
+      "text": "So if I tell you right now you are at state i, and by the way"
+    },
+    {
+      "start": 949.59,
+      "end": 954.21,
+      "text": "you got there by following a particular path, you can ignore"
+    },
+    {
+      "start": 954.21,
+      "end": 957.53,
+      "text": "the extra information of the particular path that you"
+    },
+    {
+      "start": 957.53,
+      "end": 958.43,
+      "text": "followed."
+    },
+    {
+      "start": 958.43,
+      "end": 961.61,
+      "text": "You only take into account where you are right now."
+    },
+    {
+      "start": 961.61,
+      "end": 965.81,
+      "text": "So every time you find yourself at that state, no"
+    },
+    {
+      "start": 965.81,
+      "end": 970.15,
+      "text": "matter how you got there, you will find yourself next time at"
+    },
+    {
+      "start": 970.15,
+      "end": 972.97,
+      "text": "state 1 with probability p31."
+    },
+    {
+      "start": 972.97,
+      "end": 977.97,
+      "text": "So the past has no bearing into the future, as long as you"
+    },
+    {
+      "start": 977.97,
+      "end": 981.59,
+      "text": "know where you are sitting right now."
+    },
+    {
+      "start": 981.59,
+      "end": 987.37,
+      "text": "For this property to happen, you need to choose your state,"
+    },
+    {
+      "start": 987.37,
+      "end": 989.67,
+      "text": "carefully, in the right way."
+    },
+    {
+      "start": 989.67,
+      "end": 994.77,
+      "text": "In essence, the state needs to include any information that's"
+    },
+    {
+      "start": 994.77,
+      "end": 998.29,
+      "text": "relevant about the future of the system."
+    },
+    {
+      "start": 998.29,
+      "end": 1001.55,
+      "text": "Anything that's not in the state is not going to play a"
+    },
+    {
+      "start": 1001.55,
+      "end": 1005.35,
+      "text": "role, but the state needs to have all the information"
+    },
+    {
+      "start": 1005.35,
+      "end": 1008.57,
+      "text": "that's relevant in determining what kind of transitions are"
+    },
+    {
+      "start": 1008.57,
+      "end": 1010.09,
+      "text": "going to happen next."
+    },
+    {
+      "start": 1010.09,
+      "end": 1014.69,
+      "text": "So to take an example, before you go to Markov process, just"
+    },
+    {
+      "start": 1014.69,
+      "end": 1017.27,
+      "text": "from the deterministic world, if you have a ball of interest,"
+    },
+    {
+      "start": 1017.27,
+      "end": 1020.77,
+      "text": "ball that's flying out in the air, and you want to make"
+    },
+    {
+      "start": 1020.77,
+      "end": 1022.75,
+      "text": "predictions about the future."
+    },
+    {
+      "start": 1022.75,
+      "end": 1026.37,
+      "text": "If I tell you that the state of the ball is the position of"
+    },
+    {
+      "start": 1026.37,
+      "end": 1032.01,
+      "text": "the ball at a particular time, is that enough for you to make"
+    },
+    {
+      "start": 1032.01,
+      "end": 1035.23,
+      "text": "predictions where the ball is going to go next?"
+    },
+    {
+      "start": 1035.23,
+      "end": 1035.63,
+      "text": "No."
+    },
+    {
+      "start": 1035.63,
+      "end": 1039.45,
+      "text": "You need to know both the position and the velocity."
+    },
+    {
+      "start": 1039.45,
+      "end": 1041.71,
+      "text": "If you know position and velocity, you can make"
+    },
+    {
+      "start": 1041.71,
+      "end": 1043.49,
+      "text": "predictions about the future."
+    },
+    {
+      "start": 1043.49,
+      "end": 1046.95,
+      "text": "So the state of a ball that's flying is position"
+    },
+    {
+      "start": 1046.95,
+      "end": 1049.45,
+      "text": "together with velocity."
+    },
+    {
+      "start": 1049.45,
+      "end": 1052.41,
+      "text": "If you were to just take position, that would not be"
+    },
+    {
+      "start": 1052.41,
+      "end": 1053.37,
+      "text": "enough information."
+    },
+    {
+      "start": 1053.37,
+      "end": 1057.31,
+      "text": "Because if I tell you current position, and then I tell you"
+    },
+    {
+      "start": 1057.31,
+      "end": 1060.57,
+      "text": "the past position, you could use the information from the"
+    },
+    {
+      "start": 1060.57,
+      "end": 1062.97,
+      "text": "past position to complete the trajectory and"
+    },
+    {
+      "start": 1062.97,
+      "end": 1063.93,
+      "text": "make the prediction."
+    },
+    {
+      "start": 1063.93,
+      "end": 1067.87,
+      "text": "So information from the past is useful if you don't know"
+    },
+    {
+      "start": 1067.87,
+      "end": 1068.61,
+      "text": "the velocity."
+    },
+    {
+      "start": 1068.61,
+      "end": 1073.45,
+      "text": "But if you know both position and velocity, you don't care"
+    },
+    {
+      "start": 1073.45,
+      "end": 1076.21,
+      "text": "how you got there, or what time you started."
+    },
+    {
+      "start": 1076.21,
+      "end": 1078.65,
+      "text": "From position and velocity, you can make predictions about"
+    },
+    {
+      "start": 1078.65,
+      "end": 1079.81,
+      "text": "the future."
+    },
+    {
+      "start": 1079.81,
+      "end": 1084.17,
+      "text": "So there is a certain art, or a certain element of thinking,"
+    },
+    {
+      "start": 1084.17,
+      "end": 1087.41,
+      "text": "a non-mechanical aspect into problems of this kind, to"
+    },
+    {
+      "start": 1087.41,
+      "end": 1091.75,
+      "text": "figure out which is the right state variable."
+    },
+    {
+      "start": 1091.75,
+      "end": 1095.15,
+      "text": "When you define the state of your system, you need to define"
+    },
+    {
+      "start": 1095.15,
+      "end": 1099.89,
+      "text": "it in such a way that it includes all information that"
+    },
+    {
+      "start": 1099.89,
+      "end": 1103.41,
+      "text": "has been accumulated, that has some relevance for the"
+    },
+    {
+      "start": 1103.41,
+      "end": 1107.38,
+      "text": "future."
+    },
+    {
+      "start": 1107.38,
+      "end": 1111.26,
+      "text": "So the general process for coming up with a Markov model"
+    },
+    {
+      "start": 1111.26,
+      "end": 1114.92,
+      "text": "is to first make this big decision of what your state"
+    },
+    {
+      "start": 1114.92,
+      "end": 1117.48,
+      "text": "variable is going to be."
+    },
+    {
+      "start": 1117.48,
+      "end": 1122.1,
+      "text": "Then you write down maybe a picture of the different"
+    },
+    {
+      "start": 1122.1,
+      "end": 1123.16,
+      "text": "states."
+    },
+    {
+      "start": 1123.16,
+      "end": 1125.74,
+      "text": "Then you identify the possible transitions."
+    },
+    {
+      "start": 1125.74,
+      "end": 1128.8,
+      "text": "So sometimes the diagram that you're going to have will not"
+    },
+    {
+      "start": 1128.8,
+      "end": 1130.96,
+      "text": "include all possible arcs."
+    },
+    {
+      "start": 1130.96,
+      "end": 1134.04,
+      "text": "You will only show those arcs that correspond to transitions"
+    },
+    {
+      "start": 1134.04,
+      "end": 1134.76,
+      "text": "that are possible."
+    },
+    {
+      "start": 1134.76,
+      "end": 1137.84,
+      "text": "For example, in the supermarket example, we did"
+    },
+    {
+      "start": 1137.84,
+      "end": 1141.26,
+      "text": "not have a transition from state two to state five,"
+    },
+    {
+      "start": 1141.26,
+      "end": 1142.58,
+      "text": "because that cannot happen."
+    },
+    {
+      "start": 1142.58,
+      "end": 1145.34,
+      "text": "You can only have one arrival at any time."
+    },
+    {
+      "start": 1145.34,
+      "end": 1148.3,
+      "text": "So in the diagram, we only showed the possible"
+    },
+    {
+      "start": 1148.3,
+      "end": 1149.26,
+      "text": "transitions."
+    },
+    {
+      "start": 1149.26,
+      "end": 1151.88,
+      "text": "And for each one of the possible transitions, then you"
+    },
+    {
+      "start": 1151.88,
+      "end": 1155.0,
+      "text": "work with the description of the model to figure out the"
+    },
+    {
+      "start": 1155.0,
+      "end": 1157.34,
+      "text": "correct transition probability."
+    },
+    {
+      "start": 1157.34,
+      "end": 1161.08,
+      "text": "So you annotate the diagram by writing down transition"
+    },
+    {
+      "start": 1161.08,
+      "end": 1162.34,
+      "text": "probabilities."
+    },
+    {
+      "start": 1164.76,
+      "end": 1170.59,
+      "text": "OK, so suppose you got your Markov model."
+    },
+    {
+      "start": 1170.59,
+      "end": 1172.83,
+      "text": "What will you do with it?"
+    },
+    {
+      "start": 1172.83,
+      "end": 1174.91,
+      "text": "Well, what do we need models for?"
+    },
+    {
+      "start": 1174.91,
+      "end": 1178.59,
+      "text": "We need models for in order to make predictions, to make"
+    },
+    {
+      "start": 1178.59,
+      "end": 1179.95,
+      "text": "probabilistic predictions."
+    },
+    {
+      "start": 1179.95,
+      "end": 1182.85,
+      "text": "So for example, I tell you that the process started at"
+    },
+    {
+      "start": 1182.85,
+      "end": 1183.79,
+      "text": "that state."
+    },
+    {
+      "start": 1183.79,
+      "end": 1186.01,
+      "text": "You let it run for some time."
+    },
+    {
+      "start": 1186.01,
+      "end": 1189.97,
+      "text": "Where do you think it's going to be 10 time steps from now?"
+    },
+    {
+      "start": 1189.97,
+      "end": 1192.53,
+      "text": "That's a question that you might want to answer."
+    },
+    {
+      "start": 1192.53,
+      "end": 1195.67,
+      "text": "Since the process is random, there's no way for you to tell"
+    },
+    {
+      "start": 1195.67,
+      "end": 1198.63,
+      "text": "me exactly where it's going to be."
+    },
+    {
+      "start": 1198.63,
+      "end": 1200.49,
+      "text": "But maybe you can give me probabilities."
+    },
+    {
+      "start": 1200.49,
+      "end": 1202.77,
+      "text": "You can tell me with so much probability, the"
+    },
+    {
+      "start": 1202.77,
+      "end": 1204.29,
+      "text": "state will be there."
+    },
+    {
+      "start": 1204.29,
+      "end": 1207.67,
+      "text": "With so much probability, the state will be there, and so on."
+    },
+    {
+      "start": 1207.67,
+      "end": 1211.95,
+      "text": "So our first exercise is to calculate those probabilities"
+    },
+    {
+      "start": 1211.95,
+      "end": 1216.73,
+      "text": "about what may happen to the process a number of steps in"
+    },
+    {
+      "start": 1216.73,
+      "end": 1218.79,
+      "text": "the future."
+    },
+    {
+      "start": 1218.79,
+      "end": 1221.79,
+      "text": "It's handy to have some notation in here."
+    },
+    {
+      "start": 1221.79,
+      "end": 1225.65,
+      "text": "So somebody tells us that this process starts at a"
+    },
+    {
+      "start": 1225.65,
+      "end": 1227.55,
+      "text": "particular state i."
+    },
+    {
+      "start": 1227.55,
+      "end": 1232.79,
+      "text": "We let the process run for n transitions."
+    },
+    {
+      "start": 1232.79,
+      "end": 1236.15,
+      "text": "It will land at some state j, but that state j at which it's"
+    },
+    {
+      "start": 1236.15,
+      "end": 1238.03,
+      "text": "going to land is going to be random."
+    },
+    {
+      "start": 1238.03,
+      "end": 1240.41,
+      "text": "So we want to give probabilities."
+    },
+    {
+      "start": 1240.41,
+      "end": 1245.57,
+      "text": "Tell me with what probability the state n times steps later"
+    },
+    {
+      "start": 1245.57,
+      "end": 1249.09,
+      "text": "is going to be that particular state j."
+    },
+    {
+      "start": 1249.09,
+      "end": 1254.63,
+      "text": "The shorthand notation is to use this symbol here for the n"
+    },
+    {
+      "start": 1254.63,
+      "end": 1255.65,
+      "text": "step transition."
+    },
+    {
+      "start": 1255.65,
+      "end": 1258.73,
+      "text": "So you have n transition probabilities that you find"
+    },
+    {
+      "start": 1258.73,
+      "end": 1262.63,
+      "text": "yourself at state j, given that you started at state i."
+    },
+    {
+      "start": 1262.63,
+      "end": 1265.93,
+      "text": "So the way these two indices are ordered, the way to think"
+    },
+    {
+      "start": 1265.93,
+      "end": 1269.13,
+      "text": "about them is that from i, you go to j."
+    },
+    {
+      "start": 1269.13,
+      "end": 1273.55,
+      "text": "So probability that from i, you go to j if you have n steps"
+    },
+    {
+      "start": 1273.55,
+      "end": 1276.21,
+      "text": "ahead of you, in front of you."
+    },
+    {
+      "start": 1276.21,
+      "end": 1278.89,
+      "text": "Some of these transition probabilities are, of course,"
+    },
+    {
+      "start": 1278.89,
+      "end": 1280.47,
+      "text": "easy to write."
+    },
+    {
+      "start": 1280.47,
+      "end": 1284.43,
+      "text": "For example, in 0 transitions."
+    },
+    {
+      "start": 1287.66,
+      "end": 1290.84,
+      "text": "You are going to be exactly where you started."
+    },
+    {
+      "start": 1290.84,
+      "end": 1295.56,
+      "text": "So this probability is going to be equal to 1 if i is equal"
+    },
+    {
+      "start": 1295.56,
+      "end": 1300.82,
+      "text": "to j, and 0 if i is different than j."
+    },
+    {
+      "start": 1300.82,
+      "end": 1303.36,
+      "text": "That's an easy one to write down."
+    },
+    {
+      "start": 1303.36,
+      "end": 1307.0,
+      "text": "If you have only one transition, what's the"
+    },
+    {
+      "start": 1307.0,
+      "end": 1310.42,
+      "text": "probability that one step later you find yourself in"
+    },
+    {
+      "start": 1310.42,
+      "end": 1314.3,
+      "text": "state j, given that you started at state i?"
+    },
+    {
+      "start": 1314.3,
+      "end": 1316.78,
+      "text": "What is this?"
+    },
+    {
+      "start": 1316.78,
+      "end": 1320.44,
+      "text": "These are just the ordinary one step transition"
+    },
+    {
+      "start": 1320.44,
+      "end": 1322.4,
+      "text": "probabilities that were given in the"
+    },
+    {
+      "start": 1322.4,
+      "end": 1324.78,
+      "text": "description of the problem."
+    },
+    {
+      "start": 1324.78,
+      "end": 1327.48,
+      "text": "So by definition, the one-state transition"
+    },
+    {
+      "start": 1327.48,
+      "end": 1329.78,
+      "text": "probabilities are of this form."
+    },
+    {
+      "start": 1334.98,
+      "end": 1337.98,
+      "text": "This equality is correct just because of the way that we"
+    },
+    {
+      "start": 1337.98,
+      "end": 1340.66,
+      "text": "defined those two quantities."
+    },
+    {
+      "start": 1340.66,
+      "end": 1344.66,
+      "text": "Now we want to say something about the n step transition"
+    },
+    {
+      "start": 1344.66,
+      "end": 1345.36,
+      "text": "probabilities."
+    },
+    {
+      "start": 1345.36,
+      "end": 1345.86,
+      "text": "When n is a line."
+    },
+    {
+      "start": 1345.86,
+      "end": 1346.06,
+      "text": "That's right."
+    },
+    {
+      "start": 1346.06,
+      "end": 1346.16,
+      "text": "That's right."
+    },
+    {
+      "start": 1346.16,
+      "end": 1346.48,
+      "text": "That's right."
+    },
+    {
+      "start": 1346.48,
+      "end": 1346.58,
+      "text": "That's right."
+    },
+    {
+      "start": 1346.58,
+      "end": 1346.68,
+      "text": "That's right."
+    },
+    {
+      "start": 1346.68,
+      "end": 1346.7,
+      "text": "That's right."
+    },
+    {
+      "start": 1346.7,
+      "end": 1346.76,
+      "text": "That's right."
+    },
+    {
+      "start": 1346.76,
+      "end": 1346.78,
+      "text": "That's right."
+    },
+    {
+      "start": 1346.78,
+      "end": 1346.98,
+      "text": "That's right."
+    },
+    {
+      "start": 1346.98,
+      "end": 1351.76,
+      "text": "The larger is a bigger number."
+    },
+    {
+      "start": 1351.76,
+      "end": 1356.46,
+      "text": "So here, we're going to use the total probability theorem."
+    },
+    {
+      "start": 1356.46,
+      "end": 1359.74,
+      "text": "So we're going to condition into different scenarios and"
+    },
+    {
+      "start": 1359.74,
+      "end": 1363.68,
+      "text": "break up the calculation of this quantity by considering"
+    },
+    {
+      "start": 1363.68,
+      "end": 1366.84,
+      "text": "the different ways that this event can happen."
+    },
+    {
+      "start": 1366.84,
+      "end": 1369.1,
+      "text": "So what is the event of interest?"
+    },
+    {
+      "start": 1369.1,
+      "end": 1371.04,
+      "text": "The event of interest is the following."
+    },
+    {
+      "start": 1371.04,
+      "end": 1374.08,
+      "text": "At time 0, we start i."
+    },
+    {
+      "start": 1374.08,
+      "end": 1377.28,
+      "text": "We're interested in landing at time n at the"
+    },
+    {
+      "start": 1377.28,
+      "end": 1378.68,
+      "text": "particular state j."
+    },
+    {
+      "start": 1378.68,
+      "end": 1384.16,
+      "text": "Now, this event can happen in several different ways, in lots"
+    },
+    {
+      "start": 1384.16,
+      "end": 1385.1,
+      "text": "of different ways."
+    },
+    {
+      "start": 1385.1,
+      "end": 1388.62,
+      "text": "But let us group them into subgroups."
+    },
+    {
+      "start": 1388.62,
+      "end": 1392.62,
+      "text": "One group, or one sort of scenario, is the following."
+    },
+    {
+      "start": 1392.62,
+      "end": 1398.2,
+      "text": "During the first n minus 1 time steps, things happen, and"
+    },
+    {
+      "start": 1398.2,
+      "end": 1400.74,
+      "text": "somehow you end up at state 1."
+    },
+    {
+      "start": 1400.74,
+      "end": 1404.16,
+      "text": "And then from state 1, at the next time step, you make a"
+    },
+    {
+      "start": 1404.16,
+      "end": 1407.16,
+      "text": "transition to state j."
+    },
+    {
+      "start": 1407.16,
+      "end": 1412.76,
+      "text": "This particular arc here actually corresponds to lots"
+    },
+    {
+      "start": 1412.76,
+      "end": 1416.6,
+      "text": "and lots of different possible scenarios, or different paths,"
+    },
+    {
+      "start": 1416.6,
+      "end": 1418.1,
+      "text": "or different transitions."
+    },
+    {
+      "start": 1418.1,
+      "end": 1422.64,
+      "text": "In n minus 1 time steps, there's lots of possible ways"
+    },
+    {
+      "start": 1422.64,
+      "end": 1427.12,
+      "text": "by which you could end up at state 1, different paths"
+    },
+    {
+      "start": 1427.12,
+      "end": 1428.64,
+      "text": "through the state space."
+    },
+    {
+      "start": 1428.64,
+      "end": 1431.62,
+      "text": "But all of them together, collectively, have a"
+    },
+    {
+      "start": 1431.62,
+      "end": 1435.34,
+      "text": "probability, which is the n minus 1 step transition"
+    },
+    {
+      "start": 1435.34,
+      "end": 1435.86,
+      "text": "probability."
+    },
+    {
+      "start": 1435.86,
+      "end": 1437.16,
+      "text": "That's from state i."
+    },
+    {
+      "start": 1437.16,
+      "end": 1442.19,
+      "text": "You end up at state 1."
+    },
+    {
+      "start": 1442.19,
+      "end": 1446.05,
+      "text": "And then there's other possible scenarios."
+    },
+    {
+      "start": 1446.05,
+      "end": 1450.09,
+      "text": "Perhaps in the first n minus 1 steps, you follow the"
+    },
+    {
+      "start": 1450.09,
+      "end": 1453.35,
+      "text": "trajectory that took you at state m."
+    },
+    {
+      "start": 1453.35,
+      "end": 1457.41,
+      "text": "And then from state m, you did this transition, and you ended"
+    },
+    {
+      "start": 1457.41,
+      "end": 1458.97,
+      "text": "up at state j."
+    },
+    {
+      "start": 1458.97,
+      "end": 1462.55,
+      "text": "So this diagram breaks up the set of all possible"
+    },
+    {
+      "start": 1462.55,
+      "end": 1467.23,
+      "text": "trajectories from i to j into different collections, where"
+    },
+    {
+      "start": 1467.23,
+      "end": 1469.21,
+      "text": "each collection has to do with a set of possible trajectories."
+    },
+    {
+      "start": 1469.21,
+      "end": 1472.81,
+      "text": "And this is to do with which one happens to be the state just"
+    },
+    {
+      "start": 1472.81,
+      "end": 1477.07,
+      "text": "before the last time step, just before time n."
+    },
+    {
+      "start": 1477.07,
+      "end": 1482.61,
+      "text": "And we're going to condition on the state at time n minus 1."
+    },
+    {
+      "start": 1482.61,
+      "end": 1488.17,
+      "text": "So the total probability of ending up at state j is the"
+    },
+    {
+      "start": 1488.17,
+      "end": 1493.21,
+      "text": "sum of the probabilities of the different scenarios, of the"
+    },
+    {
+      "start": 1493.21,
+      "end": 1496.37,
+      "text": "different ways that you can get to state j."
+    },
+    {
+      "start": 1496.37,
+      "end": 1499.09,
+      "text": "If we look at that kind of that type of scenario, we're going"
+    },
+    {
+      "start": 1499.09,
+      "end": 1503.01,
+      "text": "to have the probability of that scenario happen."
+    },
+    {
+      "start": 1503.01,
+      "end": 1508.27,
+      "text": "With probability ri1 of n minus 1, I find myself at"
+    },
+    {
+      "start": 1508.27,
+      "end": 1510.81,
+      "text": "state 1 at time n minus 1."
+    },
+    {
+      "start": 1510.81,
+      "end": 1514.99,
+      "text": "This is just by the definition of these multi-step transition"
+    },
+    {
+      "start": 1514.99,
+      "end": 1516.15,
+      "text": "probabilities."
+    },
+    {
+      "start": 1516.15,
+      "end": 1518.57,
+      "text": "This is the number of transitions, the probability"
+    },
+    {
+      "start": 1518.57,
+      "end": 1522.69,
+      "text": "that from state i, I end up at state 1."
+    },
+    {
+      "start": 1522.69,
+      "end": 1527.13,
+      "text": "And then given that I found myself at state 1, with"
+    },
+    {
+      "start": 1527.13,
+      "end": 1528.29,
+      "text": "probability p1j."
+    },
+    {
+      "start": 1529.09,
+      "end": 1531.03,
+      "text": "That's the transition probability."
+    },
+    {
+      "start": 1531.03,
+      "end": 1534.71,
+      "text": "Next time, I'm going to find myself at state j."
+    },
+    {
+      "start": 1534.71,
+      "end": 1539.67,
+      "text": "So the product of these two is the total probability of my"
+    },
+    {
+      "start": 1539.67,
+      "end": 1545.17,
+      "text": "getting from state i to state j through state 1 at the time"
+    },
+    {
+      "start": 1545.17,
+      "end": 1547.33,
+      "text": "before."
+    },
+    {
+      "start": 1547.33,
+      "end": 1553.15,
+      "text": "Now, where exactly did we use the Markov assumption here?"
+    },
+    {
+      "start": 1553.15,
+      "end": 1557.75,
+      "text": "No matter which particular path we used to get from i to"
+    },
+    {
+      "start": 1557.75,
+      "end": 1559.09,
+      "text": "state 1."
+    },
+    {
+      "start": 1559.09,
+      "end": 1561.63,
+      "text": "The probability that the next time I'm going to make this"
+    },
+    {
+      "start": 1561.63,
+      "end": 1565.51,
+      "text": "transition is that same number, p1j."
+    },
+    {
+      "start": 1565.51,
+      "end": 1569.15,
+      "text": "So that number does not depend on the particular path that I"
+    },
+    {
+      "start": 1569.15,
+      "end": 1571.27,
+      "text": "followed in order to get there."
+    },
+    {
+      "start": 1571.27,
+      "end": 1575.09,
+      "text": "If we didn't have the Markov assumption, we should have"
+    },
+    {
+      "start": 1575.09,
+      "end": 1578.61,
+      "text": "considered all possible individual trajectories here."
+    },
+    {
+      "start": 1578.61,
+      "end": 1581.35,
+      "text": "And then we would need to use the transition probability"
+    },
+    {
+      "start": 1581.35,
+      "end": 1583.83,
+      "text": "that corresponds to that particular trajectory."
+    },
+    {
+      "start": 1583.83,
+      "end": 1586.13,
+      "text": "But because of the Markov assumption, the only thing"
+    },
+    {
+      "start": 1586.13,
+      "end": 1587.93,
+      "text": "that matters is that right now, we are at state 1."
+    },
+    {
+      "start": 1587.93,
+      "end": 1593.09,
+      "text": "It does not matter how we got there."
+    },
+    {
+      "start": 1593.09,
+      "end": 1597.41,
+      "text": "So now once you consider this scenario, then this scenario,"
+    },
+    {
+      "start": 1597.41,
+      "end": 1600.15,
+      "text": "and that scenario, and you add the probabilities of all these"
+    },
+    {
+      "start": 1600.15,
+      "end": 1603.73,
+      "text": "different scenarios, you end up with this formula here,"
+    },
+    {
+      "start": 1603.73,
+      "end": 1605.53,
+      "text": "which is a recursion."
+    },
+    {
+      "start": 1605.53,
+      "end": 1609.79,
+      "text": "It tells us that once you have computed the n minus 1 step"
+    },
+    {
+      "start": 1609.79,
+      "end": 1613.83,
+      "text": "transition probabilities, then you can compute also the n"
+    },
+    {
+      "start": 1613.83,
+      "end": 1616.01,
+      "text": "step transition probabilities."
+    },
+    {
+      "start": 1616.01,
+      "end": 1617.51,
+      "text": "This is a recursion."
+    },
+    {
+      "start": 1617.51,
+      "end": 1621.97,
+      "text": "That you execute, or you run, for all i's and j's"
+    },
+    {
+      "start": 1621.97,
+      "end": 1623.41,
+      "text": "simultaneously."
+    },
+    {
+      "start": 1623.41,
+      "end": 1628.03,
+      "text": "That is, for a particular n, you calculate this quantity"
+    },
+    {
+      "start": 1628.03,
+      "end": 1630.61,
+      "text": "for all possible i, j's, k's."
+    },
+    {
+      "start": 1630.61,
+      "end": 1632.37,
+      "text": "You have all those quantities."
+    },
+    {
+      "start": 1632.37,
+      "end": 1636.27,
+      "text": "And then you use this equation to find those numbers again"
+    },
+    {
+      "start": 1636.27,
+      "end": 1640.31,
+      "text": "for all possible i's and j's."
+    },
+    {
+      "start": 1640.31,
+      "end": 1645.47,
+      "text": "Now this is a formula which is always true."
+    },
+    {
+      "start": 1645.47,
+      "end": 1647.51,
+      "text": "And there's a big idea behind it."
+    },
+    {
+      "start": 1647.51,
+      "end": 1648.81,
+      "text": "You have to find that formula."
+    },
+    {
+      "start": 1648.81,
+      "end": 1652.05,
+      "text": "And now there's variations of this formula, depending on"
+    },
+    {
+      "start": 1652.05,
+      "end": 1653.61,
+      "text": "whether you're interested in something"
+    },
+    {
+      "start": 1653.61,
+      "end": 1655.19,
+      "text": "that's slightly different."
+    },
+    {
+      "start": 1655.19,
+      "end": 1660.59,
+      "text": "So for example, if you were to have a random initial state,"
+    },
+    {
+      "start": 1660.59,
+      "end": 1664.83,
+      "text": "and somebody gives you the probability distribution of"
+    },
+    {
+      "start": 1664.83,
+      "end": 1668.29,
+      "text": "the initial state, so you're told that with probability"
+    },
+    {
+      "start": 1668.29,
+      "end": 1671.27,
+      "text": "such and such, you're going to start at, say, state 1."
+    },
+    {
+      "start": 1671.27,
+      "end": 1672.73,
+      "text": "With that probability, you're going to start at"
+    },
+    {
+      "start": 1672.73,
+      "end": 1674.19,
+      "text": "state 2, and so on."
+    },
+    {
+      "start": 1674.19,
+      "end": 1676.45,
+      "text": "And you want to find the probability that at time n,"
+    },
+    {
+      "start": 1676.45,
+      "end": 1677.41,
+      "text": "you find yourself at state 2."
+    },
+    {
+      "start": 1677.41,
+      "end": 1678.53,
+      "text": "At state j."
+    },
+    {
+      "start": 1678.53,
+      "end": 1680.69,
+      "text": "Well, again, total probability theorem."
+    },
+    {
+      "start": 1680.69,
+      "end": 1683.13,
+      "text": "You condition on the initial state."
+    },
+    {
+      "start": 1683.13,
+      "end": 1684.99,
+      "text": "With this probability, you find yourself at that"
+    },
+    {
+      "start": 1684.99,
+      "end": 1686.21,
+      "text": "particular initial state."
+    },
+    {
+      "start": 1686.21,
+      "end": 1688.97,
+      "text": "And given that this is your initial state, this is the"
+    },
+    {
+      "start": 1688.97,
+      "end": 1692.85,
+      "text": "probability that n times steps later, you find yourself at"
+    },
+    {
+      "start": 1692.85,
+      "end": 1694.87,
+      "text": "state j."
+    },
+    {
+      "start": 1694.87,
+      "end": 1700.65,
+      "text": "Now building again on the same idea, you can run recursions"
+    },
+    {
+      "start": 1700.65,
+      "end": 1704.93,
+      "text": "of this kind by conditioning at different times."
+    },
+    {
+      "start": 1704.93,
+      "end": 1709.31,
+      "text": "So here's a variation."
+    },
+    {
+      "start": 1709.31,
+      "end": 1711.49,
+      "text": "You start at state i."
+    },
+    {
+      "start": 1711.49,
+      "end": 1716.19,
+      "text": "After one time step, you find yourself at state 1 with"
+    },
+    {
+      "start": 1716.19,
+      "end": 1720.61,
+      "text": "probability pi1, and you'll find yourself at state m with"
+    },
+    {
+      "start": 1720.61,
+      "end": 1723.91,
+      "text": "probability pim."
+    },
+    {
+      "start": 1723.91,
+      "end": 1729.21,
+      "text": "And once that happens, then you're going to follow some"
+    },
+    {
+      "start": 1729.21,
+      "end": 1733.49,
+      "text": "trajectories, and there is a possibility that you're going"
+    },
+    {
+      "start": 1733.49,
+      "end": 1737.43,
+      "text": "to end up at state j after n minus 1 time steps."
+    },
+    {
+      "start": 1737.43,
+      "end": 1738.43,
+      "text": "j."
+    },
+    {
+      "start": 1738.43,
+      "end": 1738.51,
+      "text": "Step."
+    },
+    {
+      "start": 1738.51,
+      "end": 1742.14,
+      "text": "Step."
+    },
+    {
+      "start": 1742.14,
+      "end": 1745.14,
+      "text": "This scenario can happen in many possible ways."
+    },
+    {
+      "start": 1745.14,
+      "end": 1748.12,
+      "text": "There's lots of possible paths from state 1 to state j."
+    },
+    {
+      "start": 1748.12,
+      "end": 1752.58,
+      "text": "There's many paths from state m to state j."
+    },
+    {
+      "start": 1752.58,
+      "end": 1755.96,
+      "text": "What is the collective probability of all these"
+    },
+    {
+      "start": 1755.96,
+      "end": 1759.24,
+      "text": "transitions?"
+    },
+    {
+      "start": 1759.24,
+      "end": 1763.14,
+      "text": "This is the event that starting from state 1, I end"
+    },
+    {
+      "start": 1763.14,
+      "end": 1767.6,
+      "text": "up at state j in n minus 1 time steps."
+    },
+    {
+      "start": 1767.6,
+      "end": 1774.24,
+      "text": "So this one has here probability r1j of n minus 1."
+    },
+    {
+      "start": 1774.24,
+      "end": 1777.94,
+      "text": "And similarly down here."
+    },
+    {
+      "start": 1777.94,
+      "end": 1781.36,
+      "text": "And then by using the same way of thinking as before, we get"
+    },
+    {
+      "start": 1781.36,
+      "end": 1788.4,
+      "text": "the formula that rij of n is the sum over all k's of pik,"
+    },
+    {
+      "start": 1788.4,
+      "end": 1794.8,
+      "text": "and then the r of kj n minus 1."
+    },
+    {
+      "start": 1794.8,
+      "end": 1797.36,
+      "text": "So this formula looks almost the"
+    },
+    {
+      "start": 1797.36,
+      "end": 1797.6,
+      "text": "same."
+    },
+    {
+      "start": 1797.6,
+      "end": 1801.16,
+      "text": "It's the same as this one, but it's actually different."
+    },
+    {
+      "start": 1801.16,
+      "end": 1805.58,
+      "text": "The indices and the way things work out are a bit different."
+    },
+    {
+      "start": 1805.58,
+      "end": 1808.48,
+      "text": "But the basic idea is the same."
+    },
+    {
+      "start": 1808.48,
+      "end": 1810.96,
+      "text": "Here we use the total probability theory by"
+    },
+    {
+      "start": 1810.96,
+      "end": 1815.76,
+      "text": "conditioning on the state just one step before the end of our"
+    },
+    {
+      "start": 1815.76,
+      "end": 1817.02,
+      "text": "time horizon."
+    },
+    {
+      "start": 1817.02,
+      "end": 1820.34,
+      "text": "Here we use the total probability theory by"
+    },
+    {
+      "start": 1820.34,
+      "end": 1822.74,
+      "text": "conditioning on the state right after"
+    },
+    {
+      "start": 1822.74,
+      "end": 1824.28,
+      "text": "the first transition."
+    },
+    {
+      "start": 1824.28,
+      "end": 1827.36,
+      "text": "So this general idea has different variations."
+    },
+    {
+      "start": 1827.36,
+      "end": 1829.52,
+      "text": "They're all valid."
+    },
+    {
+      "start": 1829.52,
+      "end": 1831.88,
+      "text": "And depending on the context that you're dealing with, you"
+    },
+    {
+      "start": 1831.88,
+      "end": 1837.12,
+      "text": "might want to work with one of these or another."
+    },
+    {
+      "start": 1837.12,
+      "end": 1840.18,
+      "text": "So let's illustrate these calculations in"
+    },
+    {
+      "start": 1840.18,
+      "end": 1842.08,
+      "text": "terms of an example."
+    },
+    {
+      "start": 1842.08,
+      "end": 1846.36,
+      "text": "So in this example, we just have two states."
+    },
+    {
+      "start": 1846.36,
+      "end": 1849.26,
+      "text": "And somebody gives us transition probabilities to be"
+    },
+    {
+      "start": 1849.26,
+      "end": 1851.72,
+      "text": "those particular numbers."
+    },
+    {
+      "start": 1851.72,
+      "end": 1857.12,
+      "text": "Let's write down the equations, so the probability,"
+    },
+    {
+      "start": 1857.12,
+      "end": 1865.12,
+      "text": "that starting from state 1, I find myself at state 1 n time"
+    },
+    {
+      "start": 1865.12,
+      "end": 1866.56,
+      "text": "steps later."
+    },
+    {
+      "start": 1866.56,
+      "end": 1869.24,
+      "text": "This can happen in two ways."
+    },
+    {
+      "start": 1869.24,
+      "end": 1875.44,
+      "text": "At time n minus 1, I might find myself at state 2."
+    },
+    {
+      "start": 1875.44,
+      "end": 1881.28,
+      "text": "And then from state 2, I make a transition back to state 1,"
+    },
+    {
+      "start": 1881.28,
+      "end": 1885.28,
+      "text": "which happens with probability, why did I put 2 there?"
+    },
+    {
+      "start": 1885.28,
+      "end": 1886.88,
+      "text": "Anyway, 0.2."
+    },
+    {
+      "start": 1886.88,
+      "end": 1892.46,
+      "text": "And another way is that from state 1, I go to state 1 in n"
+    },
+    {
+      "start": 1892.46,
+      "end": 1893.96,
+      "text": "minus 1 steps."
+    },
+    {
+      "start": 1893.96,
+      "end": 1898.7,
+      "text": "And then from state 1, I stay where I am, which happens with"
+    },
+    {
+      "start": 1898.7,
+      "end": 1902.82,
+      "text": "probability 0.5."
+    },
+    {
+      "start": 1902.82,
+      "end": 1908.68,
+      "text": "So this is a recursion for r11 of n."
+    },
+    {
+      "start": 1908.68,
+      "end": 1916.74,
+      "text": "Now r12 of n, we can write a similar recursion for this one."
+    },
+    {
+      "start": 1916.74,
+      "end": 1918.42,
+      "text": "On the other hand, since these are"
+    },
+    {
+      "start": 1918.42,
+      "end": 1922.22,
+      "text": "probabilities, the state at time n is going to be either"
+    },
+    {
+      "start": 1922.22,
+      "end": 1924.4,
+      "text": "state 1 or state 2."
+    },
+    {
+      "start": 1924.4,
+      "end": 1927.04,
+      "text": "So these two numbers need to add to 1."
+    },
+    {
+      "start": 1927.04,
+      "end": 1933.06,
+      "text": "So we can just write that this is 1 minus r11 of n."
+    },
+    {
+      "start": 1933.06,
+      "end": 1939.14,
+      "text": "And this is enough of a recursion to propagate r11"
+    },
+    {
+      "start": 1939.14,
+      "end": 1942.6,
+      "text": "and r12 as time goes on."
+    },
+    {
+      "start": 1942.6,
+      "end": 1946.36,
+      "text": "So the probability that I find my, so after n minus 1"
+    },
+    {
+      "start": 1946.36,
+      "end": 1947.3,
+      "text": "transitions."
+    },
+    {
+      "start": 1947.3,
+      "end": 1948.3,
+      "text": "Either I find myself at state 1, or state 2."
+    },
+    {
+      "start": 1948.3,
+      "end": 1951.28,
+      "text": "Or I find myself at state 2, and then there's a 0.2"
+    },
+    {
+      "start": 1951.28,
+      "end": 1953.5,
+      "text": "transition that I go to 1."
+    },
+    {
+      "start": 1953.5,
+      "end": 1957.76,
+      "text": "Or I find myself at state 1, which is without probability."
+    },
+    {
+      "start": 1957.76,
+      "end": 1960.88,
+      "text": "And from there, I have probability 0.5 of"
+    },
+    {
+      "start": 1960.88,
+      "end": 1962.68,
+      "text": "staying where I am."
+    },
+    {
+      "start": 1962.68,
+      "end": 1965.8,
+      "text": "So now let's start calculating."
+    },
+    {
+      "start": 1965.8,
+      "end": 1969.5,
+      "text": "As we discussed before, if I start at state 1, after 0"
+    },
+    {
+      "start": 1969.5,
+      "end": 1972.28,
+      "text": "transitions, I'm certain to be at state 1."
+    },
+    {
+      "start": 1972.28,
+      "end": 1975.08,
+      "text": "And I'm certain not to be at state 2."
+    },
+    {
+      "start": 1975.08,
+      "end": 1978.3,
+      "text": "If I start from state 2, I'm certain to not"
+    },
+    {
+      "start": 1978.3,
+      "end": 1980.28,
+      "text": "be at state 1 at that time."
+    },
+    {
+      "start": 1980.28,
+      "end": 1983.5,
+      "text": "And I'm certain that I am right now at state 2."
+    },
+    {
+      "start": 1983.5,
+      "end": 1989.96,
+      "text": "After I make one transition, starting from state 1, there's"
+    },
+    {
+      "start": 1989.96,
+      "end": 1993.78,
+      "text": "probability 0.5 that I stay at state 1."
+    },
+    {
+      "start": 1993.78,
+      "end": 1997.82,
+      "text": "And there's probability 0.5 that I move to state 2."
+    },
+    {
+      "start": 1997.82,
+      "end": 2002.06,
+      "text": "If I were to start from state 2, the probability that I go"
+    },
+    {
+      "start": 2002.06,
+      "end": 2005.68,
+      "text": "to 1 in one time step is this transition that has"
+    },
+    {
+      "start": 2005.68,
+      "end": 2007.38,
+      "text": "probability 0.2."
+    },
+    {
+      "start": 2007.38,
+      "end": 2010.54,
+      "text": "And the other one is 0.8."
+    },
+    {
+      "start": 2010.54,
+      "end": 2013.92,
+      "text": "So the calculation now becomes more interesting if we want to"
+    },
+    {
+      "start": 2013.92,
+      "end": 2016.88,
+      "text": "calculate the next term."
+    },
+    {
+      "start": 2016.88,
+      "end": 2024.61,
+      "text": "How likely is it that at time 2, I find myself at state 1?"
+    },
+    {
+      "start": 2024.61,
+      "end": 2030.07,
+      "text": "In order to be here at state 1, this can happen in two ways."
+    },
+    {
+      "start": 2030.07,
+      "end": 2034.37,
+      "text": "Either the first transition left me there, and the second"
+    },
+    {
+      "start": 2034.37,
+      "end": 2037.63,
+      "text": "transition is the same."
+    },
+    {
+      "start": 2037.63,
+      "end": 2039.35,
+      "text": "So this corresponds to this point."
+    },
+    {
+      "start": 2039.37,
+      "end": 2043.65,
+      "text": "0.5 that the first transition took me there, and the next"
+    },
+    {
+      "start": 2043.65,
+      "end": 2047.13,
+      "text": "transition was also of the same kind."
+    },
+    {
+      "start": 2047.13,
+      "end": 2048.85,
+      "text": "That's one possibility."
+    },
+    {
+      "start": 2048.85,
+      "end": 2050.51,
+      "text": "But there's another scenario."
+    },
+    {
+      "start": 2050.51,
+      "end": 2054.93,
+      "text": "In order to be at state 1 at time 2, this"
+    },
+    {
+      "start": 2054.93,
+      "end": 2057.23,
+      "text": "can also happen this way."
+    },
+    {
+      "start": 2057.23,
+      "end": 2062.45,
+      "text": "So that's the event that after one transition, I got there."
+    },
+    {
+      "start": 2062.45,
+      "end": 2066.91,
+      "text": "And the next transition happened to be this one."
+    },
+    {
+      "start": 2066.91,
+      "end": 2069.17,
+      "text": "So this corresponds to 0.5."
+    },
+    {
+      "start": 2069.37,
+      "end": 2071.01,
+      "text": "0.5 times 0.2."
+    },
+    {
+      "start": 2071.01,
+      "end": 2073.67,
+      "text": "It corresponds to taking the one-step transition"
+    },
+    {
+      "start": 2073.67,
+      "end": 2077.51,
+      "text": "probability of getting there, times the probability that"
+    },
+    {
+      "start": 2077.51,
+      "end": 2083.05,
+      "text": "from state 2, I move to state 1, which in this case is 0.2."
+    },
+    {
+      "start": 2083.05,
+      "end": 2087.47,
+      "text": "So basically, we take this number, multiply it with 0.2,"
+    },
+    {
+      "start": 2087.47,
+      "end": 2090.25,
+      "text": "and then add those two numbers."
+    },
+    {
+      "start": 2090.25,
+      "end": 2094.09,
+      "text": "And after you add them, here you get 0.35."
+    },
+    {
+      "start": 2094.09,
+      "end": 2099.07,
+      "text": "And similarly here, you're going to get 0.65."
+    },
+    {
+      "start": 2099.07,
+      "end": 2102.39,
+      "text": "And now to continue with the recursion, we keep doing the"
+    },
+    {
+      "start": 2102.39,
+      "end": 2102.95,
+      "text": "same thing."
+    },
+    {
+      "start": 2102.95,
+      "end": 2108.25,
+      "text": "We take this number times 0.5, plus this number times 0.2,"
+    },
+    {
+      "start": 2108.25,
+      "end": 2110.79,
+      "text": "add them up, you get the next entry."
+    },
+    {
+      "start": 2110.79,
+      "end": 2113.25,
+      "text": "Keep doing that, keep doing that."
+    },
+    {
+      "start": 2113.25,
+      "end": 2117.63,
+      "text": "And eventually, you will notice that the numbers start"
+    },
+    {
+      "start": 2117.63,
+      "end": 2123.79,
+      "text": "settling into a limiting value, 2.7."
+    },
+    {
+      "start": 2123.79,
+      "end": 2125.69,
+      "text": "And let's verify this."
+    },
+    {
+      "start": 2125.69,
+      "end": 2128.21,
+      "text": "If this number is 2.7, what is the next"
+    },
+    {
+      "start": 2128.21,
+      "end": 2129.07,
+      "text": "number going to be?"
+    },
+    {
+      "start": 2129.07,
+      "end": 2141.09,
+      "text": "The next number is going to be 2 sevenths, not 2.7."
+    },
+    {
+      "start": 2141.09,
+      "end": 2143.43,
+      "text": "It's going to be 2 sevenths, that's the probability that I"
+    },
+    {
+      "start": 2143.43,
+      "end": 2147.71,
+      "text": "find myself at that state, times 0.5, that's the next"
+    },
+    {
+      "start": 2147.71,
+      "end": 2153.29,
+      "text": "transition that takes me to state 1, plus 5 sevenths, that"
+    },
+    {
+      "start": 2153.29,
+      "end": 2156.23,
+      "text": "would be the remaining probability that I find"
+    },
+    {
+      "start": 2156.23,
+      "end": 2158.15,
+      "text": "myself at state 2."
+    },
+    {
+      "start": 2158.15,
+      "end": 2166.36,
+      "text": "Times 1 fifth."
+    },
+    {
+      "start": 2166.36,
+      "end": 2171.2,
+      "text": "And so that gives me, again, 2 over 7."
+    },
+    {
+      "start": 2171.2,
+      "end": 2175.46,
+      "text": "So this calculation basically illustrates that, if this"
+    },
+    {
+      "start": 2175.46,
+      "end": 2179.96,
+      "text": "number has become 2.7, then the next number is also going"
+    },
+    {
+      "start": 2179.96,
+      "end": 2181.54,
+      "text": "to be 2.7."
+    },
+    {
+      "start": 2181.54,
+      "end": 2186.18,
+      "text": "And of course, this number here is going to have to be 5"
+    },
+    {
+      "start": 2186.18,
+      "end": 2190.68,
+      "text": "over 7, and this one will have to be, again, the same 5 over"
+    },
+    {
+      "start": 2190.68,
+      "end": 2191.86,
+      "text": "7."
+    },
+    {
+      "start": 2191.86,
+      "end": 2196.62,
+      "text": "So the probability that I find myself at state 1, after a"
+    },
+    {
+      "start": 2196.62,
+      "end": 2201.82,
+      "text": "long time has elapsed, settles into some steady state value."
+    },
+    {
+      "start": 2201.82,
+      "end": 2204.14,
+      "text": "So that's an interesting phenomenon."
+    },
+    {
+      "start": 2204.14,
+      "end": 2206.84,
+      "text": "We just make this observation."
+    },
+    {
+      "start": 2206.84,
+      "end": 2210.38,
+      "text": "Now we can also do the calculation about the"
+    },
+    {
+      "start": 2210.38,
+      "end": 2213.62,
+      "text": "probabilities starting from state 2."
+    },
+    {
+      "start": 2213.62,
+      "end": 2217.04,
+      "text": "And here, you do the calculations."
+    },
+    {
+      "start": 2217.04,
+      "end": 2218.4,
+      "text": "I'm not going to do them."
+    },
+    {
+      "start": 2218.4,
+      "end": 2221.56,
+      "text": "But after you do them, you find that this probability,"
+    },
+    {
+      "start": 2221.56,
+      "end": 2224.94,
+      "text": "also settles to 2 over 7."
+    },
+    {
+      "start": 2224.94,
+      "end": 2231.14,
+      "text": "And this one also settles to 5 over 7."
+    },
+    {
+      "start": 2231.14,
+      "end": 2235.24,
+      "text": "So these numbers here are the same as those numbers."
+    },
+    {
+      "start": 2235.24,
+      "end": 2239.76,
+      "text": "What's the difference between these?"
+    },
+    {
+      "start": 2239.76,
+      "end": 2244.8,
+      "text": "This is the probability that I find myself at state 1, given"
+    },
+    {
+      "start": 2244.8,
+      "end": 2247.04,
+      "text": "that I started at 1."
+    },
+    {
+      "start": 2247.04,
+      "end": 2250.88,
+      "text": "This is the probability that I find myself at state 1, given"
+    },
+    {
+      "start": 2250.88,
+      "end": 2252.0,
+      "text": "that I started at state 2."
+    },
+    {
+      "start": 2253.0,
+      "end": 2258.16,
+      "text": "These probabilities are the same no matter"
+    },
+    {
+      "start": 2258.16,
+      "end": 2260.46,
+      "text": "where I started from."
+    },
+    {
+      "start": 2260.46,
+      "end": 2265.76,
+      "text": "So this numerical example sort of illustrates the idea that"
+    },
+    {
+      "start": 2265.76,
+      "end": 2271.06,
+      "text": "after the chain has run for a long time, what the state of"
+    },
+    {
+      "start": 2271.06,
+      "end": 2274.98,
+      "text": "the chain is does not care about the initial"
+    },
+    {
+      "start": 2274.98,
+      "end": 2276.52,
+      "text": "state of the chain."
+    },
+    {
+      "start": 2276.52,
+      "end": 2282.58,
+      "text": "So if you start here, you know that you're going to stay here"
+    },
+    {
+      "start": 2282.58,
+      "end": 2285.34,
+      "text": "for some time, a few transitions, because this"
+    },
+    {
+      "start": 2285.34,
+      "end": 2287.08,
+      "text": "probability is kind of small."
+    },
+    {
+      "start": 2287.08,
+      "end": 2290.4,
+      "text": "So the initial state does tell you something."
+    },
+    {
+      "start": 2290.4,
+      "end": 2293.66,
+      "text": "But in the very long run, transitions of this kind are"
+    },
+    {
+      "start": 2293.66,
+      "end": 2294.34,
+      "text": "going to happen."
+    },
+    {
+      "start": 2294.34,
+      "end": 2297.52,
+      "text": "Transitions of that kind are going to happen."
+    },
+    {
+      "start": 2297.52,
+      "end": 2300.14,
+      "text": "There's a lot of randomness that comes in."
+    },
+    {
+      "start": 2300.14,
+      "end": 2304.82,
+      "text": "And that randomness washes out any information that could come"
+    },
+    {
+      "start": 2304.82,
+      "end": 2308.56,
+      "text": "from the initial state of the system."
+    },
+    {
+      "start": 2308.56,
+      "end": 2312.38,
+      "text": "We describe this situation by saying that the Markov chain,"
+    },
+    {
+      "start": 2312.58,
+      "end": 2317.22,
+      "text": "eventually, enters a steady state."
+    },
+    {
+      "start": 2317.22,
+      "end": 2321.02,
+      "text": "Where steady state, what does it mean?"
+    },
+    {
+      "start": 2321.02,
+      "end": 2326.64,
+      "text": "Does it mean that the state itself becomes steady and"
+    },
+    {
+      "start": 2326.64,
+      "end": 2328.72,
+      "text": "stops at one place?"
+    },
+    {
+      "start": 2328.72,
+      "end": 2329.22,
+      "text": "No."
+    },
+    {
+      "start": 2329.22,
+      "end": 2332.48,
+      "text": "The state of the chain keeps jumping forever."
+    },
+    {
+      "start": 2332.48,
+      "end": 2335.34,
+      "text": "The state of the chain will keep making transitions, will"
+    },
+    {
+      "start": 2335.34,
+      "end": 2338.78,
+      "text": "keep going back and forth between 1 and 2."
+    },
+    {
+      "start": 2338.78,
+      "end": 2342.38,
+      "text": "So the state itself, the Xn, does not"
+    },
+    {
+      "start": 2342.38,
+      "end": 2344.98,
+      "text": "become steady in any sense."
+    },
+    {
+      "start": 2344.98,
+      "end": 2349.86,
+      "text": "What becomes steady are the probabilities that describe Xn."
+    },
+    {
+      "start": 2349.86,
+      "end": 2352.9,
+      "text": "That is, after a long time elapses, the probability that"
+    },
+    {
+      "start": 2352.9,
+      "end": 2359.34,
+      "text": "you find yourself at state 1 becomes a constant, 2 over 7."
+    },
+    {
+      "start": 2359.34,
+      "end": 2362.32,
+      "text": "And the probability that you find yourself at state 2"
+    },
+    {
+      "start": 2362.32,
+      "end": 2363.82,
+      "text": "becomes a constant."
+    },
+    {
+      "start": 2363.82,
+      "end": 2366.0,
+      "text": "So jumps will keep happening."
+    },
+    {
+      "start": 2366.0,
+      "end": 2369.04,
+      "text": "But at any given time, if you ask what's the probability"
+    },
+    {
+      "start": 2369.04,
+      "end": 2372.22,
+      "text": "that right now I am at state 1, the answer is going to be,"
+    },
+    {
+      "start": 2372.22,
+      "end": 2374.62,
+      "text": "2 over 7."
+    },
+    {
+      "start": 2374.62,
+      "end": 2377.62,
+      "text": "Incidentally, do the numbers sort of make sense?"
+    },
+    {
+      "start": 2377.62,
+      "end": 2382.26,
+      "text": "Why is this number bigger than that number?"
+    },
+    {
+      "start": 2382.26,
+      "end": 2386.5,
+      "text": "Well, this state is a little more sticky than that state."
+    },
+    {
+      "start": 2386.5,
+      "end": 2390.06,
+      "text": "Once you enter here, it's kind of harder to get out."
+    },
+    {
+      "start": 2390.06,
+      "end": 2393.36,
+      "text": "So when you enter here, you spend a lot of time here."
+    },
+    {
+      "start": 2393.36,
+      "end": 2396.86,
+      "text": "This one is easier to get out, because the probability is 0.5."
+    },
+    {
+      "start": 2396.86,
+      "end": 2400.36,
+      "text": "So when you enter there, you tend to get out faster."
+    },
+    {
+      "start": 2400.36,
+      "end": 2401.86,
+      "text": "So you keep moving from 1 to 2."
+    },
+    {
+      "start": 2401.86,
+      "end": 2403.38,
+      "text": "You keep moving from 1 to the other."
+    },
+    {
+      "start": 2403.38,
+      "end": 2406.46,
+      "text": "But you tend to spend more time on that state."
+    },
+    {
+      "start": 2406.46,
+      "end": 2409.5,
+      "text": "And this is reflected in this probability being"
+    },
+    {
+      "start": 2409.5,
+      "end": 2410.92,
+      "text": "bigger than that one."
+    },
+    {
+      "start": 2410.92,
+      "end": 2414.48,
+      "text": "So no matter where you start, there's 5 sevenths probability"
+    },
+    {
+      "start": 2414.48,
+      "end": 2418.64,
+      "text": "of being here, 2 sevenths probability of being there."
+    },
+    {
+      "start": 2418.64,
+      "end": 2420.5,
+      "text": "So there were some really nice things that"
+    },
+    {
+      "start": 2420.5,
+      "end": 2422.1,
+      "text": "happened in this example."
+    },
+    {
+      "start": 2424.72,
+      "end": 2429.24,
+      "text": "The question is whether things are always as nice for general"
+    },
+    {
+      "start": 2429.24,
+      "end": 2430.38,
+      "text": "Markov chains."
+    },
+    {
+      "start": 2430.38,
+      "end": 2431.5,
+      "text": "The two nice things that"
+    },
+    {
+      "start": 2431.5,
+      "end": 2433.34,
+      "text": "happened were the following."
+    },
+    {
+      "start": 2433.34,
+      "end": 2435.92,
+      "text": "As we keep doing this calculation, this number"
+    },
+    {
+      "start": 2435.92,
+      "end": 2437.62,
+      "text": "settles to something."
+    },
+    {
+      "start": 2437.62,
+      "end": 2439.56,
+      "text": "The limit exists."
+    },
+    {
+      "start": 2439.56,
+      "end": 2442.48,
+      "text": "The other thing that happens is that this number is the"
+    },
+    {
+      "start": 2442.48,
+      "end": 2445.68,
+      "text": "same as that number, which means that the initial state"
+    },
+    {
+      "start": 2445.68,
+      "end": 2447.24,
+      "text": "does not matter."
+    },
+    {
+      "start": 2447.24,
+      "end": 2450.12,
+      "text": "Is this always the case?"
+    },
+    {
+      "start": 2450.12,
+      "end": 2454.52,
+      "text": "Is it always the case that as n goes to infinity, the"
+    },
+    {
+      "start": 2454.52,
+      "end": 2458.46,
+      "text": "transition probabilities converge to something?"
+    },
+    {
+      "start": 2458.46,
+      "end": 2461.28,
+      "text": "And if they do converge to something, is it the"
+    },
+    {
+      "start": 2461.28,
+      "end": 2467.4,
+      "text": "case that the limit is not affected by the initial state i"
+    },
+    {
+      "start": 2467.4,
+      "end": 2469.38,
+      "text": "at which the chain started?"
+    },
+    {
+      "start": 2469.38,
+      "end": 2472.96,
+      "text": "So mathematically speaking, the question we are raising is"
+    },
+    {
+      "start": 2472.96,
+      "end": 2479.16,
+      "text": "whether rij of n converges to something."
+    },
+    {
+      "start": 2479.16,
+      "end": 2485.42,
+      "text": "And where that something to which it converges to has only"
+    },
+    {
+      "start": 2485.42,
+      "end": 2486.78,
+      "text": "to do with j."
+    },
+    {
+      "start": 2486.78,
+      "end": 2490.64,
+      "text": "It's the probability that you find yourself at state j, and"
+    },
+    {
+      "start": 2490.64,
+      "end": 2491.12,
+      "text": "that probability is the limit."
+    },
+    {
+      "start": 2491.12,
+      "end": 2494.2,
+      "text": "The probability doesn't care about the initial state."
+    },
+    {
+      "start": 2494.2,
+      "end": 2496.94,
+      "text": "So it's the question of whether the initial state gets"
+    },
+    {
+      "start": 2496.94,
+      "end": 2499.98,
+      "text": "forgotten in the long run."
+    },
+    {
+      "start": 2499.98,
+      "end": 2506.26,
+      "text": "So the answer is that usually, or for nice chains, both of"
+    },
+    {
+      "start": 2506.26,
+      "end": 2509.42,
+      "text": "these things will be true."
+    },
+    {
+      "start": 2509.42,
+      "end": 2512.06,
+      "text": "You'll get the limit, which does not depend on the initial"
+    },
+    {
+      "start": 2512.06,
+      "end": 2517.98,
+      "text": "state, but if your chain has some somewhat peculiar or"
+    },
+    {
+      "start": 2517.98,
+      "end": 2520.24,
+      "text": "unique structure, this might not happen."
+    },
+    {
+      "start": 2521.12,
+      "end": 2525.86,
+      "text": "So let's think first about the issue of convergence."
+    },
+    {
+      "start": 2525.86,
+      "end": 2526.98,
+      "text": "Look at this."
+    },
+    {
+      "start": 2526.98,
+      "end": 2532.7,
+      "text": "So convergence, as n goes to infinity to a steady value,"
+    },
+    {
+      "start": 2532.7,
+      "end": 2534.52,
+      "text": "really means the following."
+    },
+    {
+      "start": 2534.52,
+      "end": 2538.44,
+      "text": "If I tell you a lot of time has passed, then you'll tell"
+    },
+    {
+      "start": 2538.44,
+      "end": 2543.36,
+      "text": "me, OK, the probabilities are equal to that value, without"
+    },
+    {
+      "start": 2543.36,
+      "end": 2545.62,
+      "text": "having to consult your clock."
+    },
+    {
+      "start": 2545.62,
+      "end": 2549.36,
+      "text": "If you don't have convergence, it means that rij can keep"
+    },
+    {
+      "start": 2549.36,
+      "end": 2550.46,
+      "text": "going up and down."
+    },
+    {
+      "start": 2550.46,
+      "end": 2552.22,
+      "text": "Without settling to something."
+    },
+    {
+      "start": 2552.22,
+      "end": 2555.62,
+      "text": "So in order for you to tell me the value of rij, you need to"
+    },
+    {
+      "start": 2555.62,
+      "end": 2559.72,
+      "text": "consult your clock to check if right now it's up or is it"
+    },
+    {
+      "start": 2559.72,
+      "end": 2560.66,
+      "text": "down."
+    },
+    {
+      "start": 2560.66,
+      "end": 2563.22,
+      "text": "So there's some kind of periodic behavior that you"
+    },
+    {
+      "start": 2563.22,
+      "end": 2565.32,
+      "text": "might get when you do not get convergence."
+    },
+    {
+      "start": 2565.32,
+      "end": 2567.48,
+      "text": "And this example here illustrates it."
+    },
+    {
+      "start": 2567.48,
+      "end": 2570.12,
+      "text": "So what's happening in this example?"
+    },
+    {
+      "start": 2570.12,
+      "end": 2574.66,
+      "text": "Starting from state 2, next time you go here or there with"
+    },
+    {
+      "start": 2574.66,
+      "end": 2576.76,
+      "text": "probability half."
+    },
+    {
+      "start": 2576.76,
+      "end": 2580.32,
+      "text": "And then next time, no matter where you are, you move back."
+    },
+    {
+      "start": 2580.46,
+      "end": 2582.2,
+      "text": "You're back to state 2."
+    },
+    {
+      "start": 2582.2,
+      "end": 2585.06,
+      "text": "So this chain has some randomness."
+    },
+    {
+      "start": 2585.06,
+      "end": 2588.06,
+      "text": "But the randomness is kind of a limited type."
+    },
+    {
+      "start": 2588.06,
+      "end": 2589.26,
+      "text": "You go out, you come in."
+    },
+    {
+      "start": 2589.26,
+      "end": 2590.5,
+      "text": "You go out, you come in."
+    },
+    {
+      "start": 2590.5,
+      "end": 2594.28,
+      "text": "So there's a periodic pattern that gets repeated."
+    },
+    {
+      "start": 2594.28,
+      "end": 2599.82,
+      "text": "It means that if you start at state 2, after an even number"
+    },
+    {
+      "start": 2599.82,
+      "end": 2604.1,
+      "text": "of steps, you are certain to be back at state 2."
+    },
+    {
+      "start": 2604.1,
+      "end": 2606.66,
+      "text": "So this probability here is 1."
+    },
+    {
+      "start": 2606.66,
+      "end": 2610.42,
+      "text": "On the other hand, if the number of transitions is odd,"
+    },
+    {
+      "start": 2610.46,
+      "end": 2614.18,
+      "text": "there's no way that you can be at your initial state."
+    },
+    {
+      "start": 2614.18,
+      "end": 2616.96,
+      "text": "If you start here, at even times you will be here."
+    },
+    {
+      "start": 2616.96,
+      "end": 2619.6,
+      "text": "At odd times, you will be there or there."
+    },
+    {
+      "start": 2619.6,
+      "end": 2622.18,
+      "text": "So this probability is 0."
+    },
+    {
+      "start": 2622.18,
+      "end": 2626.54,
+      "text": "As n goes to infinity, this probability, the n-step"
+    },
+    {
+      "start": 2626.54,
+      "end": 2629.22,
+      "text": "transition probability, does not converge to anything."
+    },
+    {
+      "start": 2629.22,
+      "end": 2631.94,
+      "text": "It keeps alternating between 0 and 1."
+    },
+    {
+      "start": 2631.94,
+      "end": 2634.08,
+      "text": "So convergence fails."
+    },
+    {
+      "start": 2634.08,
+      "end": 2637.46,
+      "text": "This is the main mechanism by which convergence can fail if"
+    },
+    {
+      "start": 2637.46,
+      "end": 2640.3,
+      "text": "your chain has a periodic structure, and we're going to"
+    },
+    {
+      "start": 2640.3,
+      "end": 2645.84,
+      "text": "discuss next time that if periodicity is absent, then we"
+    },
+    {
+      "start": 2645.84,
+      "end": 2648.78,
+      "text": "don't have an issue with convergence."
+    },
+    {
+      "start": 2648.78,
+      "end": 2653.26,
+      "text": "The second question is whether, if we have convergence,"
+    },
+    {
+      "start": 2653.26,
+      "end": 2656.82,
+      "text": "whether the initial state matters or not."
+    },
+    {
+      "start": 2656.82,
+      "end": 2659.54,
+      "text": "In the previous chain, where you could keep going back and"
+    },
+    {
+      "start": 2659.54,
+      "end": 2662.9,
+      "text": "forth between states 1 and 2, numerically one finds that the"
+    },
+    {
+      "start": 2662.9,
+      "end": 2665.02,
+      "text": "initial state does not matter."
+    },
+    {
+      "start": 2665.02,
+      "end": 2667.44,
+      "text": "But you can think of situations where the initial"
+    },
+    {
+      "start": 2667.44,
+      "end": 2670.02,
+      "text": "state does matter."
+    },
+    {
+      "start": 2670.02,
+      "end": 2673.12,
+      "text": "Look at this chain here."
+    },
+    {
+      "start": 2673.12,
+      "end": 2677.52,
+      "text": "If you start at state 1, you stay at state 1 forever."
+    },
+    {
+      "start": 2677.52,
+      "end": 2679.84,
+      "text": "There's no way to escape."
+    },
+    {
+      "start": 2679.84,
+      "end": 2686.02,
+      "text": "So this means that r11 of n is 1 for all n."
+    },
+    {
+      "start": 2686.02,
+      "end": 2690.06,
+      "text": "If you start at state 3, you will be moving between states"
+    },
+    {
+      "start": 2690.06,
+      "end": 2694.16,
+      "text": "3 and 4, but there's no way to go in that direction."
+    },
+    {
+      "start": 2694.16,
+      "end": 2697.72,
+      "text": "So there's no way that you go to state 1."
+    },
+    {
+      "start": 2697.72,
+      "end": 2698.86,
+      "text": "And for that reason, r31 is 0."
+    },
+    {
+      "start": 2698.86,
+      "end": 2699.86,
+      "text": "That's the first step."
+    },
+    {
+      "start": 2699.86,
+      "end": 2700.02,
+      "text": "OK."
+    },
+    {
+      "start": 2700.02,
+      "end": 2706.54,
+      "text": "0 for all n."
+    },
+    {
+      "start": 2706.54,
+      "end": 2707.98,
+      "text": "OK."
+    },
+    {
+      "start": 2707.98,
+      "end": 2715.79,
+      "text": "And so this is a case where the initial state matters."
+    },
+    {
+      "start": 2715.79,
+      "end": 2721.63,
+      "text": "r11 goes to a limit as n goes to infinity."
+    },
+    {
+      "start": 2721.63,
+      "end": 2723.81,
+      "text": "Because it's constant, it's always 1."
+    },
+    {
+      "start": 2723.81,
+      "end": 2725.45,
+      "text": "So the limit is 1."
+    },
+    {
+      "start": 2725.45,
+      "end": 2727.95,
+      "text": "r31 also has a limit."
+    },
+    {
+      "start": 2727.95,
+      "end": 2730.01,
+      "text": "It's 0 for all times."
+    },
+    {
+      "start": 2730.01,
+      "end": 2732.95,
+      "text": "So these are the long-term probabilities of finding"
+    },
+    {
+      "start": 2732.95,
+      "end": 2734.61,
+      "text": "yourself at state 1."
+    },
+    {
+      "start": 2734.61,
+      "end": 2736.61,
+      "text": "But those long-term probabilities are"
+    },
+    {
+      "start": 2736.61,
+      "end": 2739.47,
+      "text": "affected by where you started."
+    },
+    {
+      "start": 2739.47,
+      "end": 2741.99,
+      "text": "If you start here, you're sure that in the long-term, you'll"
+    },
+    {
+      "start": 2741.99,
+      "end": 2742.85,
+      "text": "be here."
+    },
+    {
+      "start": 2742.85,
+      "end": 2745.53,
+      "text": "If you start here, you're sure that in the long-term, you will"
+    },
+    {
+      "start": 2745.53,
+      "end": 2747.11,
+      "text": "not be there."
+    },
+    {
+      "start": 2747.11,
+      "end": 2750.55,
+      "text": "So the initial state does matter here."
+    },
+    {
+      "start": 2750.55,
+      "end": 2753.75,
+      "text": "And this is a situation where certain states are not"
+    },
+    {
+      "start": 2753.75,
+      "end": 2756.15,
+      "text": "accessible from certain other states."
+    },
+    {
+      "start": 2756.15,
+      "end": 2758.79,
+      "text": "So it has something to do with the graph structure of our"
+    },
+    {
+      "start": 2758.79,
+      "end": 2760.13,
+      "text": "Markov chain."
+    },
+    {
+      "start": 2760.13,
+      "end": 2764.61,
+      "text": "Finally, let's answer this question here, at"
+    },
+    {
+      "start": 2764.61,
+      "end": 2765.93,
+      "text": "least for large n's."
+    },
+    {
+      "start": 2766.61,
+      "end": 2772.13,
+      "text": "What do you think is going to happen in the long term if you"
+    },
+    {
+      "start": 2772.13,
+      "end": 2774.97,
+      "text": "start at state 2?"
+    },
+    {
+      "start": 2774.97,
+      "end": 2778.79,
+      "text": "If you start at state 2, you may stay at state 2 for a"
+    },
+    {
+      "start": 2778.79,
+      "end": 2780.77,
+      "text": "random amount of time."
+    },
+    {
+      "start": 2780.77,
+      "end": 2784.05,
+      "text": "But eventually, this transition will happen or that"
+    },
+    {
+      "start": 2784.05,
+      "end": 2785.65,
+      "text": "transition will happen."
+    },
+    {
+      "start": 2785.65,
+      "end": 2790.71,
+      "text": "Because of the symmetry, you're as likely to escape from"
+    },
+    {
+      "start": 2790.71,
+      "end": 2793.73,
+      "text": "state 2 in this direction or in that direction."
+    },
+    {
+      "start": 2793.73,
+      "end": 2796.61,
+      "text": "So there's probability 1 half that when the transition"
+    },
+    {
+      "start": 2796.61,
+      "end": 2800.01,
+      "text": "happens, the transition happens in that direction."
+    },
+    {
+      "start": 2800.01,
+      "end": 2807.62,
+      "text": "So for large n, you're certain that the"
+    },
+    {
+      "start": 2807.62,
+      "end": 2810.62,
+      "text": "transition does happen."
+    },
+    {
+      "start": 2810.62,
+      "end": 2814.36,
+      "text": "And given that the transition has happened, it has"
+    },
+    {
+      "start": 2814.36,
+      "end": 2817.54,
+      "text": "probability 1 half that it has gone that particular way."
+    },
+    {
+      "start": 2817.54,
+      "end": 2820.36,
+      "text": "So clearly here, you see that the probability of finding"
+    },
+    {
+      "start": 2820.36,
+      "end": 2823.76,
+      "text": "yourself in a particular state is very much affected by where"
+    },
+    {
+      "start": 2823.76,
+      "end": 2825.38,
+      "text": "you started from."
+    },
+    {
+      "start": 2825.38,
+      "end": 2827.92,
+      "text": "So what we want to do next is to"
+    },
+    {
+      "start": 2828.24,
+      "end": 2831.82,
+      "text": "extract from these two examples and describe the"
+    },
+    {
+      "start": 2831.82,
+      "end": 2834.38,
+      "text": "general structural properties that have to do with"
+    },
+    {
+      "start": 2834.38,
+      "end": 2837.82,
+      "text": "periodicity and that have to do with what happened here with"
+    },
+    {
+      "start": 2837.82,
+      "end": 2840.7,
+      "text": "certain states not being accessible from the others."
+    },
+    {
+      "start": 2840.7,
+      "end": 2843.48,
+      "text": "We're going to leave periodicity for next time."
+    },
+    {
+      "start": 2843.48,
+      "end": 2845.4,
+      "text": "But let's talk about the second kind of"
+    },
+    {
+      "start": 2845.4,
+      "end": 2848.52,
+      "text": "phenomenon that we have."
+    },
+    {
+      "start": 2848.52,
+      "end": 2852.58,
+      "text": "So here, what we're going to do is to classify the states in"
+    },
+    {
+      "start": 2852.58,
+      "end": 2856.36,
+      "text": "the transition diagram into two types, recurrent and"
+    },
+    {
+      "start": 2856.36,
+      "end": 2857.98,
+      "text": "transient."
+    },
+    {
+      "start": 2857.98,
+      "end": 2861.32,
+      "text": "So a state is said to be recurrent if the"
+    },
+    {
+      "start": 2861.32,
+      "end": 2863.54,
+      "text": "following is true."
+    },
+    {
+      "start": 2863.54,
+      "end": 2869.06,
+      "text": "If you start from state i, you can go to some places."
+    },
+    {
+      "start": 2869.06,
+      "end": 2875.36,
+      "text": "But no matter where you go, there is a way of coming back."
+    },
+    {
+      "start": 2875.36,
+      "end": 2879.36,
+      "text": "So what's an example of a recurrent state?"
+    },
+    {
+      "start": 2879.36,
+      "end": 2882.06,
+      "text": "This one."
+    },
+    {
+      "start": 2882.06,
+      "end": 2884.48,
+      "text": "Starting from here, you can go elsewhere."
+    },
+    {
+      "start": 2884.48,
+      "end": 2886.48,
+      "text": "You can go to state 7."
+    },
+    {
+      "start": 2886.48,
+      "end": 2887.76,
+      "text": "You can go to state 6."
+    },
+    {
+      "start": 2887.76,
+      "end": 2891.0,
+      "text": "That's all where you can go to."
+    },
+    {
+      "start": 2891.0,
+      "end": 2895.72,
+      "text": "But no matter where you go, there is a path that can take"
+    },
+    {
+      "start": 2895.72,
+      "end": 2897.16,
+      "text": "you back there."
+    },
+    {
+      "start": 2897.16,
+      "end": 2900.76,
+      "text": "So no matter where you go, there is a chance and there is"
+    },
+    {
+      "start": 2900.76,
+      "end": 2903.44,
+      "text": "a way of returning where you started."
+    },
+    {
+      "start": 2903.44,
+      "end": 2905.76,
+      "text": "Those states we call recurrent."
+    },
+    {
+      "start": 2905.76,
+      "end": 2908.72,
+      "text": "And by this, 8 is recurrent."
+    },
+    {
+      "start": 2908.72,
+      "end": 2911.94,
+      "text": "All of these are recurrent."
+    },
+    {
+      "start": 2911.94,
+      "end": 2912.94,
+      "text": "So this is recurrent."
+    },
+    {
+      "start": 2912.94,
+      "end": 2914.08,
+      "text": "This is recurrent."
+    },
+    {
+      "start": 2914.08,
+      "end": 2916.56,
+      "text": "And this state 5 is also recurrent."
+    },
+    {
+      "start": 2916.56,
+      "end": 2917.64,
+      "text": "You cannot go anywhere."
+    },
+    {
+      "start": 2917.64,
+      "end": 2919.98,
+      "text": "You cannot go anywhere from 5 except to 5 itself."
+    },
+    {
+      "start": 2919.98,
+      "end": 2923.88,
+      "text": "Wherever you can go, you can go back to where you started."
+    },
+    {
+      "start": 2923.88,
+      "end": 2925.6,
+      "text": "So this is recurrent."
+    },
+    {
+      "start": 2925.6,
+      "end": 2929.18,
+      "text": "If it is not recurrent, we say that it is transient."
+    },
+    {
+      "start": 2929.18,
+      "end": 2930.88,
+      "text": "So what does transient mean?"
+    },
+    {
+      "start": 2930.88,
+      "end": 2933.88,
+      "text": "You need to take this definition and reverse it."
+    },
+    {
+      "start": 2933.88,
+      "end": 2938.86,
+      "text": "Transient means that starting from i, there is a place to"
+    },
+    {
+      "start": 2938.86,
+      "end": 2945.01,
+      "text": "which you can go and from which you cannot return."
+    },
+    {
+      "start": 2945.01,
+      "end": 2948.19,
+      "text": "If it's recurrent, anywhere you go, you can always come back."
+    },
+    {
+      "start": 2948.99,
+      "end": 2952.09,
+      "text": "And transient means there are places were you can go from"
+    },
+    {
+      "start": 2952.09,
+      "end": 2954.27,
+      "text": "which you cannot come back."
+    },
+    {
+      "start": 2954.27,
+      "end": 2958.27,
+      "text": "So state 1 is recurrent because starting from here,"
+    },
+    {
+      "start": 2958.27,
+      "end": 2961.07,
+      "text": "there's a possibility that you get there, and then there's"
+    },
+    {
+      "start": 2961.07,
+      "end": 2962.29,
+      "text": "some way back."
+    },
+    {
+      "start": 2962.29,
+      "end": 2963.93,
+      "text": "State 4 is recurrent."
+    },
+    {
+      "start": 2963.93,
+      "end": 2968.85,
+      "text": "Starting from 4, there's somewhere you can go and"
+    },
+    {
+      "start": 2968.85,
+      "end": 2970.23,
+      "text": "transient."
+    },
+    {
+      "start": 2970.23,
+      "end": 2971.47,
+      "text": "State 4 is transient."
+    },
+    {
+      "start": 2971.47,
+      "end": 2974.65,
+      "text": "Starting from here, there are places where you can go and"
+    },
+    {
+      "start": 2974.65,
+      "end": 2976.67,
+      "text": "from which you cannot come back."
+    },
+    {
+      "start": 2976.67,
+      "end": 2978.85,
+      "text": "And in this particular diagram, all"
+    },
+    {
+      "start": 2978.99,
+      "end": 2983.09,
+      "text": "four states are transients."
+    },
+    {
+      "start": 2983.09,
+      "end": 2989.77,
+      "text": "Now if a state is transient, it means that there is a way"
+    },
+    {
+      "start": 2989.77,
+      "end": 2993.31,
+      "text": "to go somewhere where you're going to get stuck and not be"
+    },
+    {
+      "start": 2993.31,
+      "end": 2994.83,
+      "text": "able to come back."
+    },
+    {
+      "start": 2994.83,
+      "end": 2999.33,
+      "text": "As long as your state keeps circulating around here,"
+    },
+    {
+      "start": 2999.33,
+      "end": 3003.43,
+      "text": "eventually one of these transitions is going to happen."
+    },
+    {
+      "start": 3003.43,
+      "end": 3006.03,
+      "text": "And once that happens, then there's no way that you can"
+    },
+    {
+      "start": 3006.03,
+      "end": 3006.95,
+      "text": "come back."
+    },
+    {
+      "start": 3006.95,
+      "end": 3011.73,
+      "text": "So the transient state will be visited only a finite number"
+    },
+    {
+      "start": 3011.73,
+      "end": 3012.65,
+      "text": "of times."
+    },
+    {
+      "start": 3012.65,
+      "end": 3015.09,
+      "text": "You will not be able to return to it."
+    },
+    {
+      "start": 3015.09,
+      "end": 3017.75,
+      "text": "And in the long run, you are certain that you're going to"
+    },
+    {
+      "start": 3017.75,
+      "end": 3022.15,
+      "text": "get out of the transient states and get to some class"
+    },
+    {
+      "start": 3022.15,
+      "end": 3025.09,
+      "text": "of recurrent states and get stuck forever."
+    },
+    {
+      "start": 3025.09,
+      "end": 3026.27,
+      "text": "So let's see."
+    },
+    {
+      "start": 3026.27,
+      "end": 3030.35,
+      "text": "In this diagram, if I start here, could I stay in this"
+    },
+    {
+      "start": 3030.35,
+      "end": 3032.25,
+      "text": "lump of states forever?"
+    },
+    {
+      "start": 3032.25,
+      "end": 3035.75,
+      "text": "Well, as long as I'm staying in this lump of states, I will"
+    },
+    {
+      "start": 3035.75,
+      "end": 3036.79,
+      "text": "keep visiting."
+    },
+    {
+      "start": 3036.79,
+      "end": 3038.39,
+      "text": "States 1 and 2."
+    },
+    {
+      "start": 3038.39,
+      "end": 3041.01,
+      "text": "Each time that I visit state 2, there's going to be a"
+    },
+    {
+      "start": 3041.01,
+      "end": 3043.55,
+      "text": "positive probability that I escape."
+    },
+    {
+      "start": 3043.55,
+      "end": 3047.75,
+      "text": "So in the long run, if I were to stay here, I would visit"
+    },
+    {
+      "start": 3047.75,
+      "end": 3050.15,
+      "text": "state 2 an infinite number of times, and I would get"
+    },
+    {
+      "start": 3050.15,
+      "end": 3052.23,
+      "text": "infinite chances to escape."
+    },
+    {
+      "start": 3052.23,
+      "end": 3056.85,
+      "text": "But if you have infinite chances to escape, eventually"
+    },
+    {
+      "start": 3056.85,
+      "end": 3057.81,
+      "text": "you will escape."
+    },
+    {
+      "start": 3057.81,
+      "end": 3061.73,
+      "text": "So you're certain that with probability 1, starting from"
+    },
+    {
+      "start": 3061.73,
+      "end": 3065.01,
+      "text": "here, you're going to move either to those states or to"
+    },
+    {
+      "start": 3065.01,
+      "end": 3066.13,
+      "text": "those states."
+    },
+    {
+      "start": 3066.13,
+      "end": 3069.69,
+      "text": "So starting from transient states, you only stay at the"
+    },
+    {
+      "start": 3069.69,
+      "end": 3074.67,
+      "text": "transient states for a random but finite amount of time."
+    },
+    {
+      "start": 3074.67,
+      "end": 3079.21,
+      "text": "And after that happens, you end up into a class of"
+    },
+    {
+      "start": 3079.21,
+      "end": 3080.19,
+      "text": "recurrent states."
+    },
+    {
+      "start": 3080.19,
+      "end": 3083.49,
+      "text": "And when I say class, what I mean is that in this picture,"
+    },
+    {
+      "start": 3083.49,
+      "end": 3086.43,
+      "text": "I divide the recurrent states into two"
+    },
+    {
+      "start": 3086.43,
+      "end": 3088.25,
+      "text": "classes or categories."
+    },
+    {
+      "start": 3088.25,
+      "end": 3090.21,
+      "text": "What's special about them?"
+    },
+    {
+      "start": 3090.21,
+      "end": 3091.41,
+      "text": "These states are recurrent."
+    },
+    {
+      "start": 3091.41,
+      "end": 3092.99,
+      "text": "These states are recurrent."
+    },
+    {
+      "start": 3092.99,
+      "end": 3095.13,
+      "text": "But there is no communication between the two."
+    },
+    {
+      "start": 3095.13,
+      "end": 3095.93,
+      "text": "If you start here, you're stuck."
+    },
+    {
+      "start": 3095.93,
+      "end": 3096.77,
+      "text": "If you start here, you're stuck here."
+    },
+    {
+      "start": 3096.77,
+      "end": 3099.75,
+      "text": "If you start here, you are stuck there."
+    },
+    {
+      "start": 3099.75,
+      "end": 3102.99,
+      "text": "And this is a case where the initial state does matter."
+    },
+    {
+      "start": 3102.99,
+      "end": 3105.19,
+      "text": "Because if you start here, you get stuck here."
+    },
+    {
+      "start": 3105.19,
+      "end": 3107.13,
+      "text": "If you start there, you get stuck there."
+    },
+    {
+      "start": 3107.13,
+      "end": 3110.01,
+      "text": "So depending on the initial state, that's going to affect"
+    },
+    {
+      "start": 3110.01,
+      "end": 3112.59,
+      "text": "the long-term behavior of your chain."
+    },
+    {
+      "start": 3112.59,
+      "end": 3115.43,
+      "text": "So the guess you can make at this point is that for the"
+    },
+    {
+      "start": 3115.43,
+      "end": 3119.27,
+      "text": "initial state to not matter, we should not have multiple"
+    },
+    {
+      "start": 3119.27,
+      "end": 3120.17,
+      "text": "recurrent classes."
+    },
+    {
+      "start": 3120.17,
+      "end": 3121.69,
+      "text": "We should have only one."
+    },
+    {
+      "start": 3121.69,
+      "end": 3123.97,
+      "text": "But we're going to get back to this point next time."
+    }
+  ]
+}

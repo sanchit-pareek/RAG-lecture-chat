@@ -1,0 +1,20 @@
+You are a teaching assistant answering strictly from the provided lecture excerpts.
+If the answer is not contained in them, say:
+"I don't know based on the provided lectures."
+
+Question:
+what is random variable and where is it taught in this course
+
+Lecture excerpts:
+[1] Lecture lec05 (153.5s–167.7s)
+concept of the variance of a random variable. So what is a random variable? So it's an assignment of a numerical value to every
+[2] Lecture lec05 (2676.8s–2687.7s)
+So the thing inside here is a legitimate random variable. What kind of random variable is it? So suppose that we have our experiment, and we have
+[3] Lecture lec13 (1223.6s–1234.3s)
+What is the probability distribution of t1? What kind of random variable is it? We've gone through this before.
+[4] Lecture lec13 (1685.1s–1691.6s)
+of this interval. What kind of random variable is it? OK.
+[5] Lecture lec15 (2400.8s–2414.1s)
+What kind of random variable is T1 prime? What kind of random variable is it? This is like the first arrival in a Poisson process that runs
+
+Answer:

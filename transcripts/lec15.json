@@ -1,0 +1,4827 @@
+{
+  "lecture": "lec15",
+  "language": "en",
+  "duration": 2967.0826875,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.44,
+      "text": "The following content is provided under a Creative"
+    },
+    {
+      "start": 2.44,
+      "end": 3.96,
+      "text": "Commons license."
+    },
+    {
+      "start": 3.96,
+      "end": 6.28,
+      "text": "Your support will help MIT OpenCourseWare"
+    },
+    {
+      "start": 6.28,
+      "end": 10.64,
+      "text": "continue to offer high quality educational resources for free."
+    },
+    {
+      "start": 10.64,
+      "end": 13.26,
+      "text": "To make a donation or view additional materials"
+    },
+    {
+      "start": 13.26,
+      "end": 17.2,
+      "text": "from hundreds of MIT courses, visit MIT OpenCourseWare"
+    },
+    {
+      "start": 17.2,
+      "end": 22.46,
+      "text": "at ocw.mit.edu."
+    },
+    {
+      "start": 22.46,
+      "end": 25.22,
+      "text": "So today we're going to finish our discussion"
+    },
+    {
+      "start": 25.22,
+      "end": 27.46,
+      "text": "of the Poisson process."
+    },
+    {
+      "start": 27.46,
+      "end": 30.54,
+      "text": "We're going to see a few of its properties,"
+    },
+    {
+      "start": 30.54,
+      "end": 32.86,
+      "text": "do a few interesting problems, some more"
+    },
+    {
+      "start": 32.86,
+      "end": 35.68,
+      "text": "interesting than others."
+    },
+    {
+      "start": 35.68,
+      "end": 37.58,
+      "text": "So go through a few examples."
+    },
+    {
+      "start": 37.58,
+      "end": 40.94,
+      "text": "And then we're going to talk about some quite strange"
+    },
+    {
+      "start": 40.94,
+      "end": 43.98,
+      "text": "things that happened with the Poisson process."
+    },
+    {
+      "start": 43.98,
+      "end": 46.48,
+      "text": "So the first thing is to remember what the Poisson"
+    },
+    {
+      "start": 46.48,
+      "end": 47.92,
+      "text": "process is."
+    },
+    {
+      "start": 47.92,
+      "end": 52.48,
+      "text": "It's a model, let's say, of arrivals of customers that are"
+    },
+    {
+      "start": 52.48,
+      "end": 55.94,
+      "text": "in some sense, quote unquote, completely random."
+    },
+    {
+      "start": 55.94,
+      "end": 58.96,
+      "text": "That is, a customer can arrive at any point in time."
+    },
+    {
+      "start": 58.96,
+      "end": 60.16,
+      "text": "All points in time are"
+    },
+    {
+      "start": 60.16,
+      "end": 61.66,
+      "text": "equally likely."
+    },
+    {
+      "start": 61.66,
+      "end": 65.36,
+      "text": "And different points in time are sort of independent of"
+    },
+    {
+      "start": 65.36,
+      "end": 66.44,
+      "text": "other points in time."
+    },
+    {
+      "start": 66.44,
+      "end": 70.16,
+      "text": "So the fact that I got an arrival now doesn't tell me"
+    },
+    {
+      "start": 70.16,
+      "end": 73.06,
+      "text": "anything about whether there's going to be an arrival at some"
+    },
+    {
+      "start": 73.06,
+      "end": 74.96,
+      "text": "other time."
+    },
+    {
+      "start": 74.96,
+      "end": 78.12,
+      "text": "In some sense, it's a continuous time version of"
+    },
+    {
+      "start": 78.12,
+      "end": 79.74,
+      "text": "the Bernoulli process."
+    },
+    {
+      "start": 79.74,
+      "end": 83.12,
+      "text": "So the best way to think about the Poisson process is that we"
+    },
+    {
+      "start": 83.12,
+      "end": 86.24,
+      "text": "divide time into extremely tiny slots."
+    },
+    {
+      "start": 86.24,
+      "end": 89.72,
+      "text": "And in each time slot, there's an independent possibility of"
+    },
+    {
+      "start": 89.72,
+      "end": 91.1,
+      "text": "having an arrival."
+    },
+    {
+      "start": 91.1,
+      "end": 93.84,
+      "text": "Different time slots are independent of each other."
+    },
+    {
+      "start": 93.84,
+      "end": 96.6,
+      "text": "On the other hand, when the slot is tiny, the probability"
+    },
+    {
+      "start": 96.6,
+      "end": 100.56,
+      "text": "of obtaining an arrival during that tiny slot is itself going"
+    },
+    {
+      "start": 100.56,
+      "end": 101.92,
+      "text": "to be tiny."
+    },
+    {
+      "start": 101.92,
+      "end": 105.96,
+      "text": "So we capture these properties into a formal definition of"
+    },
+    {
+      "start": 105.96,
+      "end": 108.38,
+      "text": "what the Poisson process is."
+    },
+    {
+      "start": 108.38,
+      "end": 111.36,
+      "text": "We have a probability mass function for the number of"
+    },
+    {
+      "start": 111.36,
+      "end": 116.24,
+      "text": "arrivals, k, during an interval of a given length."
+    },
+    {
+      "start": 116.24,
+      "end": 119.52,
+      "text": "So this is sort of the basic description."
+    },
+    {
+      "start": 119.72,
+      "end": 123.18,
+      "text": "Of the distribution of the number of arrivals."
+    },
+    {
+      "start": 123.18,
+      "end": 127.5,
+      "text": "So tau is fixed."
+    },
+    {
+      "start": 127.5,
+      "end": 129.28,
+      "text": "And k is the parameter."
+    },
+    {
+      "start": 129.28,
+      "end": 133.62,
+      "text": "So when we add over all k's, the sum of these probabilities"
+    },
+    {
+      "start": 133.62,
+      "end": 135.96,
+      "text": "has to be equal to 1."
+    },
+    {
+      "start": 135.96,
+      "end": 138.34,
+      "text": "There's a time homogeneity assumption which"
+    },
+    {
+      "start": 138.34,
+      "end": 140.18,
+      "text": "is hidden in this."
+    },
+    {
+      "start": 140.18,
+      "end": 143.0,
+      "text": "Namely, the only thing that matters is the duration of the"
+    },
+    {
+      "start": 143.0,
+      "end": 145.36,
+      "text": "time interval, not where the time interval"
+    },
+    {
+      "start": 145.36,
+      "end": 148.22,
+      "text": "sits on the real axis."
+    },
+    {
+      "start": 148.22,
+      "end": 149.72,
+      "text": "Then we have an independent society."
+    },
+    {
+      "start": 149.72,
+      "end": 151.22,
+      "text": "Interval assumption."
+    },
+    {
+      "start": 151.22,
+      "end": 154.56,
+      "text": "Intervals that are disjoint are statistically independent"
+    },
+    {
+      "start": 154.56,
+      "end": 155.64,
+      "text": "from each other."
+    },
+    {
+      "start": 155.64,
+      "end": 159.44,
+      "text": "So any information you give me about arrivals during this time"
+    },
+    {
+      "start": 159.44,
+      "end": 163.32,
+      "text": "interval doesn't change my beliefs about what's going to"
+    },
+    {
+      "start": 163.32,
+      "end": 165.92,
+      "text": "happen during another time interval."
+    },
+    {
+      "start": 165.92,
+      "end": 169.08,
+      "text": "So this is a generalization of the idea that we had in"
+    },
+    {
+      "start": 169.08,
+      "end": 171.94,
+      "text": "Bernoulli processes, that different time slots are"
+    },
+    {
+      "start": 171.94,
+      "end": 173.92,
+      "text": "independent of each other."
+    },
+    {
+      "start": 173.92,
+      "end": 176.78,
+      "text": "And then to specify this function, the distribution of"
+    },
+    {
+      "start": 176.78,
+      "end": 178.34,
+      "text": "the number of arrivals."
+    },
+    {
+      "start": 178.34,
+      "end": 180.12,
+      "text": "We sort of go in stages."
+    },
+    {
+      "start": 180.12,
+      "end": 183.72,
+      "text": "We first specify this function for the case where the time"
+    },
+    {
+      "start": 183.72,
+      "end": 185.9,
+      "text": "interval is very small."
+    },
+    {
+      "start": 185.9,
+      "end": 189.64,
+      "text": "And I'm telling you what those probabilities will be."
+    },
+    {
+      "start": 189.64,
+      "end": 193.58,
+      "text": "And based on these, then we do some calculations and find a"
+    },
+    {
+      "start": 193.58,
+      "end": 197.22,
+      "text": "formula for the distribution of the number of arrivals for"
+    },
+    {
+      "start": 197.22,
+      "end": 199.42,
+      "text": "intervals of a general duration."
+    },
+    {
+      "start": 199.42,
+      "end": 203.06,
+      "text": "So for a small duration, delta, the probability of"
+    },
+    {
+      "start": 203.06,
+      "end": 206.72,
+      "text": "obtaining one arrival is lambda delta."
+    },
+    {
+      "start": 206.72,
+      "end": 208.26,
+      "text": "The remaining probability is 1."
+    },
+    {
+      "start": 208.26,
+      "end": 211.86,
+      "text": "That is assigned to the event that we get no arrivals during"
+    },
+    {
+      "start": 211.86,
+      "end": 213.0,
+      "text": "that interval."
+    },
+    {
+      "start": 213.0,
+      "end": 215.86,
+      "text": "The probability of obtaining more than one arrival in a"
+    },
+    {
+      "start": 215.86,
+      "end": 220.62,
+      "text": "tiny interval is essentially 0."
+    },
+    {
+      "start": 220.62,
+      "end": 225.42,
+      "text": "And when we say essentially, it means modulo terms that are"
+    },
+    {
+      "start": 225.42,
+      "end": 227.62,
+      "text": "of order delta squared."
+    },
+    {
+      "start": 227.62,
+      "end": 230.98,
+      "text": "And when delta is very small, anything which is delta squared"
+    },
+    {
+      "start": 230.98,
+      "end": 232.66,
+      "text": "can be ignored."
+    },
+    {
+      "start": 232.66,
+      "end": 235.84,
+      "text": "So up to delta squared terms, that's what happens during a"
+    },
+    {
+      "start": 235.84,
+      "end": 237.64,
+      "text": "little interval."
+    },
+    {
+      "start": 237.64,
+      "end": 240.7,
+      "text": "Now, if we know the probability distribution for"
+    },
+    {
+      "start": 240.7,
+      "end": 244.08,
+      "text": "the number of arrivals in a little interval, we can use"
+    },
+    {
+      "start": 244.08,
+      "end": 247.0,
+      "text": "this to get the distribution for the number of arrivals"
+    },
+    {
+      "start": 247.0,
+      "end": 248.36,
+      "text": "over several intervals."
+    },
+    {
+      "start": 248.36,
+      "end": 249.84,
+      "text": "How do we do that?"
+    },
+    {
+      "start": 249.84,
+      "end": 253.82,
+      "text": "The big interval is composed of many little intervals."
+    },
+    {
+      "start": 253.82,
+      "end": 256.4,
+      "text": "Each little interval is independent from any other"
+    },
+    {
+      "start": 256.4,
+      "end": 257.54,
+      "text": "little interval."
+    },
+    {
+      "start": 257.54,
+      "end": 262.28,
+      "text": "So it is as if we have a sequence of Bernoulli trials."
+    },
+    {
+      "start": 262.28,
+      "end": 264.88,
+      "text": "Each Bernoulli trial is associated with a little"
+    },
+    {
+      "start": 264.88,
+      "end": 265.82,
+      "text": "interval."
+    },
+    {
+      "start": 265.82,
+      "end": 267.3,
+      "text": "And has a small probability."
+    },
+    {
+      "start": 267.3,
+      "end": 270.26,
+      "text": "There's no probability of obtaining a success or an"
+    },
+    {
+      "start": 270.26,
+      "end": 272.72,
+      "text": "arrival during that mini-slot."
+    },
+    {
+      "start": 272.72,
+      "end": 275.78,
+      "text": "On the other hand, when delta is small, and you take a big"
+    },
+    {
+      "start": 275.78,
+      "end": 278.68,
+      "text": "interval and chop it up, you get a large"
+    },
+    {
+      "start": 278.68,
+      "end": 281.38,
+      "text": "number of little intervals."
+    },
+    {
+      "start": 281.38,
+      "end": 285.38,
+      "text": "So what we essentially have here is a Bernoulli process in"
+    },
+    {
+      "start": 285.38,
+      "end": 289.4,
+      "text": "which the number of trials is huge, but the probability of"
+    },
+    {
+      "start": 289.4,
+      "end": 293.02,
+      "text": "success during any given trial is tiny."
+    },
+    {
+      "start": 293.02,
+      "end": 295.2,
+      "text": "The average number of trials."
+    },
+    {
+      "start": 297.3,
+      "end": 304.74,
+      "text": "It ends up being proportional to the length of the interval."
+    },
+    {
+      "start": 304.74,
+      "end": 307.42,
+      "text": "If you have twice as large an interval, it's as if you're"
+    },
+    {
+      "start": 307.42,
+      "end": 310.48,
+      "text": "having twice as many of these mini-trials."
+    },
+    {
+      "start": 310.48,
+      "end": 312.88,
+      "text": "So the expected number of arrivals will increase"
+    },
+    {
+      "start": 312.88,
+      "end": 314.06,
+      "text": "proportionately."
+    },
+    {
+      "start": 314.06,
+      "end": 318.34,
+      "text": "There's also this parameter lambda, which we interpret as"
+    },
+    {
+      "start": 318.34,
+      "end": 322.6,
+      "text": "expected number of arrivals per unit time."
+    },
+    {
+      "start": 322.6,
+      "end": 325.94,
+      "text": "And it comes in in those probabilities here."
+    },
+    {
+      "start": 325.94,
+      "end": 327.3,
+      "text": "When you double lambda."
+    },
+    {
+      "start": 327.3,
+      "end": 329.96,
+      "text": "This means that the little interval is twice as likely to"
+    },
+    {
+      "start": 329.96,
+      "end": 331.16,
+      "text": "get an arrival."
+    },
+    {
+      "start": 331.16,
+      "end": 334.88,
+      "text": "So you would expect to get twice as many arrivals as well."
+    },
+    {
+      "start": 334.88,
+      "end": 337.54,
+      "text": "That's why the expected number of arrivals during an"
+    },
+    {
+      "start": 337.54,
+      "end": 340.84,
+      "text": "interval of length tau also scales proportionately to this"
+    },
+    {
+      "start": 340.84,
+      "end": 342.86,
+      "text": "parameter lambda."
+    },
+    {
+      "start": 342.86,
+      "end": 345.72,
+      "text": "Somewhat unexpectedly, it turns out that the variance of"
+    },
+    {
+      "start": 345.72,
+      "end": 348.8,
+      "text": "the number of arrivals is also the same as the mean."
+    },
+    {
+      "start": 348.8,
+      "end": 352.32,
+      "text": "This is a peculiarity that happens in the Poisson process."
+    },
+    {
+      "start": 352.32,
+      "end": 355.92,
+      "text": "So this is one way of thinking about the Poisson process."
+    },
+    {
+      "start": 355.92,
+      "end": 359.64,
+      "text": "In terms of little intervals, each one of which has a tiny"
+    },
+    {
+      "start": 359.64,
+      "end": 361.68,
+      "text": "probability of success."
+    },
+    {
+      "start": 361.68,
+      "end": 364.36,
+      "text": "And we think of the distribution associated with"
+    },
+    {
+      "start": 364.36,
+      "end": 369.08,
+      "text": "that process as being described by this particular PMF."
+    },
+    {
+      "start": 369.08,
+      "end": 372.78,
+      "text": "So this is the PMF for the number of arrivals during an"
+    },
+    {
+      "start": 372.78,
+      "end": 375.86,
+      "text": "interval of a fixed duration tau."
+    },
+    {
+      "start": 375.86,
+      "end": 380.92,
+      "text": "It's a PMF that extends all over the entire range of"
+    },
+    {
+      "start": 380.92,
+      "end": 382.8,
+      "text": "non-negative integers."
+    },
+    {
+      "start": 382.8,
+      "end": 385.72,
+      "text": "So the number of arrivals you can get during an interval of a"
+    },
+    {
+      "start": 385.72,
+      "end": 387.9,
+      "text": "certain length can be anything."
+    },
+    {
+      "start": 387.9,
+      "end": 391.68,
+      "text": "You can get as many arrivals as you want."
+    },
+    {
+      "start": 391.68,
+      "end": 394.4,
+      "text": "Of course, the probability of getting a zillion arrivals is"
+    },
+    {
+      "start": 394.4,
+      "end": 395.6,
+      "text": "going to be tiny."
+    },
+    {
+      "start": 395.6,
+      "end": 398.1,
+      "text": "But in principle, this is possible."
+    },
+    {
+      "start": 398.1,
+      "end": 401.44,
+      "text": "And that's because an interval, even if it's a fixed"
+    },
+    {
+      "start": 401.44,
+      "end": 406.6,
+      "text": "length, consists of an infinite number of"
+    },
+    {
+      "start": 406.6,
+      "end": 408.7,
+      "text": "mini-slots, in some sense."
+    },
+    {
+      "start": 408.7,
+      "end": 410.88,
+      "text": "You can divide, chop it up into as many"
+    },
+    {
+      "start": 410.88,
+      "end": 412.1,
+      "text": "mini-slots as you want."
+    },
+    {
+      "start": 412.1,
+      "end": 415.36,
+      "text": "So in principle, it's possible that every mini-slot gets an"
+    },
+    {
+      "start": 415.36,
+      "end": 415.86,
+      "text": "arrival."
+    },
+    {
+      "start": 415.86,
+      "end": 419.2,
+      "text": "In principle, it's possible to get an arbitrarily large"
+    },
+    {
+      "start": 419.2,
+      "end": 421.2,
+      "text": "number of arrivals."
+    },
+    {
+      "start": 421.2,
+      "end": 425.24,
+      "text": "So this particular formula here is not very intuitive"
+    },
+    {
+      "start": 425.24,
+      "end": 426.56,
+      "text": "when you look at it."
+    },
+    {
+      "start": 426.56,
+      "end": 428.6,
+      "text": "But it's a legitimate PMF."
+    },
+    {
+      "start": 428.6,
+      "end": 430.56,
+      "text": "And it's called the Poisson PMF."
+    },
+    {
+      "start": 430.56,
+      "end": 433.96,
+      "text": "It's the PMF that describes the number of arrivals."
+    },
+    {
+      "start": 433.96,
+      "end": 437.54,
+      "text": "So that's one way of thinking about the Poisson process,"
+    },
+    {
+      "start": 437.54,
+      "end": 441.54,
+      "text": "where the basic object of interest would be this PMF,"
+    },
+    {
+      "start": 441.54,
+      "end": 443.5,
+      "text": "and you try to work with it."
+    },
+    {
+      "start": 443.5,
+      "end": 444.62,
+      "text": "There's another way of thinking about it."
+    },
+    {
+      "start": 444.62,
+      "end": 448.06,
+      "text": "of thinking about what happens in the Poisson process."
+    },
+    {
+      "start": 448.06,
+      "end": 451.78,
+      "text": "And this has to do with letting things evolve in time."
+    },
+    {
+      "start": 451.78,
+      "end": 454.14,
+      "text": "You start at time 0."
+    },
+    {
+      "start": 454.14,
+      "end": 457.54,
+      "text": "There's going to be a time at which the first arrival occurs"
+    },
+    {
+      "start": 457.54,
+      "end": 460.1,
+      "text": "and call that time t1."
+    },
+    {
+      "start": 460.1,
+      "end": 464.02,
+      "text": "This time turns out to have an exponential distribution with"
+    },
+    {
+      "start": 464.02,
+      "end": 466.34,
+      "text": "parameter lambda."
+    },
+    {
+      "start": 466.34,
+      "end": 469.12,
+      "text": "Once you get an arrival, it's as if the"
+    },
+    {
+      "start": 469.12,
+      "end": 473.3,
+      "text": "process starts fresh."
+    },
+    {
+      "start": 473.3,
+      "end": 475.84,
+      "text": "The best way to understand why this is the case is by"
+    },
+    {
+      "start": 475.84,
+      "end": 477.74,
+      "text": "thinking in terms of the analogy with"
+    },
+    {
+      "start": 477.74,
+      "end": 478.84,
+      "text": "the Bernoulli process."
+    },
+    {
+      "start": 478.84,
+      "end": 481.66,
+      "text": "If you believe that statement for the Bernoulli process,"
+    },
+    {
+      "start": 481.66,
+      "end": 485.52,
+      "text": "since this is a limiting case, it should also be true."
+    },
+    {
+      "start": 485.52,
+      "end": 489.14,
+      "text": "So starting from this time, we're going to wait a random"
+    },
+    {
+      "start": 489.14,
+      "end": 491.82,
+      "text": "amount of time until we get the second arrival."
+    },
+    {
+      "start": 491.82,
+      "end": 495.24,
+      "text": "This random amount of time, let's call it t2."
+    },
+    {
+      "start": 495.24,
+      "end": 498.34,
+      "text": "This time t2 is also going to have an exponential"
+    },
+    {
+      "start": 498.34,
+      "end": 501.14,
+      "text": "distribution with the same parameter lambda."
+    },
+    {
+      "start": 501.14,
+      "end": 502.8,
+      "text": "And these two are going to be"
+    },
+    {
+      "start": 502.8,
+      "end": 507.76,
+      "text": "independent of each other."
+    },
+    {
+      "start": 507.76,
+      "end": 511.52,
+      "text": "So the Poisson process has all the same memorylessness"
+    },
+    {
+      "start": 511.52,
+      "end": 514.86,
+      "text": "properties that the Bernoulli process has."
+    },
+    {
+      "start": 514.86,
+      "end": 517.66,
+      "text": "What's another way of thinking of this property?"
+    },
+    {
+      "start": 517.66,
+      "end": 523.36,
+      "text": "So think of a process where you have a light bulb."
+    },
+    {
+      "start": 523.36,
+      "end": 527.08,
+      "text": "The time until the light bulb burns out, you can model it by"
+    },
+    {
+      "start": 527.08,
+      "end": 528.84,
+      "text": "an exponential random variable."
+    },
+    {
+      "start": 531.68,
+      "end": 534.88,
+      "text": "And suppose that I tell you that"
+    },
+    {
+      "start": 534.88,
+      "end": 540.6,
+      "text": "so far we're sitting at some time t, and I tell you that the"
+    },
+    {
+      "start": 540.6,
+      "end": 544.46,
+      "text": "light bulb has not yet burned out."
+    },
+    {
+      "start": 544.46,
+      "end": 548.72,
+      "text": "What does this tell you about the future of the light bulb?"
+    },
+    {
+      "start": 548.72,
+      "end": 552.36,
+      "text": "The fact that it didn't burn out so far, is it good news or"
+    },
+    {
+      "start": 552.36,
+      "end": 553.7,
+      "text": "is it bad news?"
+    },
+    {
+      "start": 553.7,
+      "end": 557.64,
+      "text": "Would you rather keep this light bulb that has worked for"
+    },
+    {
+      "start": 557.64,
+      "end": 563.0,
+      "text": "t time steps and is still OK, or would you rather use a new"
+    },
+    {
+      "start": 563.0,
+      "end": 564.8,
+      "text": "light bulb that starts now?"
+    },
+    {
+      "start": 564.8,
+      "end": 567.74,
+      "text": "It's new at that point in time."
+    },
+    {
+      "start": 567.74,
+      "end": 570.92,
+      "text": "Because of the memorylessness property, the past of that"
+    },
+    {
+      "start": 570.92,
+      "end": 573.2,
+      "text": "light bulb doesn't matter."
+    },
+    {
+      "start": 573.2,
+      "end": 577.02,
+      "text": "So the future of this light bulb is statistically the same"
+    },
+    {
+      "start": 577.02,
+      "end": 580.74,
+      "text": "as the future of a new light bulb."
+    },
+    {
+      "start": 580.74,
+      "end": 583.7,
+      "text": "For both of them, the time until they burn out is going"
+    },
+    {
+      "start": 583.7,
+      "end": 586.58,
+      "text": "to be described by an exponential distribution."
+    },
+    {
+      "start": 586.58,
+      "end": 590.98,
+      "text": "So one way that people describe this situation is to"
+    },
+    {
+      "start": 590.98,
+      "end": 594.72,
+      "text": "say that used is exactly as good as new."
+    },
+    {
+      "start": 594.8,
+      "end": 599.2,
+      "text": "So a used one is no worse than a new one."
+    },
+    {
+      "start": 599.2,
+      "end": 601.96,
+      "text": "A used one is no better than a new one."
+    },
+    {
+      "start": 601.96,
+      "end": 606.12,
+      "text": "So a used light bulb that hasn't yet burned out is"
+    },
+    {
+      "start": 606.12,
+      "end": 609.18,
+      "text": "exactly as good as a new light bulb."
+    },
+    {
+      "start": 609.18,
+      "end": 611.72,
+      "text": "So that's another way of thinking about the"
+    },
+    {
+      "start": 611.72,
+      "end": 617.48,
+      "text": "memorylessness that we have in the Poisson process."
+    },
+    {
+      "start": 617.48,
+      "end": 619.32,
+      "text": "Back to this picture."
+    },
+    {
+      "start": 619.32,
+      "end": 622.4,
+      "text": "The time until the second arrival is the sum of two"
+    },
+    {
+      "start": 622.4,
+      "end": 624.8,
+      "text": "independent exponential random variables."
+    },
+    {
+      "start": 624.8,
+      "end": 628.04,
+      "text": "So in principle, you can use the convolution formula to"
+    },
+    {
+      "start": 628.04,
+      "end": 631.24,
+      "text": "find the distribution of t1 plus t2."
+    },
+    {
+      "start": 631.24,
+      "end": 635.8,
+      "text": "And that would be what we call y2, the time until the second"
+    },
+    {
+      "start": 635.8,
+      "end": 636.76,
+      "text": "arrival."
+    },
+    {
+      "start": 636.76,
+      "end": 639.2,
+      "text": "But there's also a direct way of obtaining the"
+    },
+    {
+      "start": 639.2,
+      "end": 640.92,
+      "text": "distribution of y2."
+    },
+    {
+      "start": 640.92,
+      "end": 643.3,
+      "text": "And this is the calculation that we did last time on the"
+    },
+    {
+      "start": 643.3,
+      "end": 644.32,
+      "text": "blackboard."
+    },
+    {
+      "start": 644.32,
+      "end": 646.3,
+      "text": "And actually, we did it more generally."
+    },
+    {
+      "start": 646.3,
+      "end": 649.98,
+      "text": "We found the time until the k-th arrival occurs."
+    },
+    {
+      "start": 649.98,
+      "end": 653.88,
+      "text": "It has a closed form formula, which is called the Erlang"
+    },
+    {
+      "start": 653.88,
+      "end": 654.68,
+      "text": "distribution."
+    },
+    {
+      "start": 654.68,
+      "end": 656.96,
+      "text": "With k degrees of freedom."
+    },
+    {
+      "start": 656.96,
+      "end": 659.92,
+      "text": "So let's see what's going on here."
+    },
+    {
+      "start": 659.92,
+      "end": 663.24,
+      "text": "It's a distribution of what kind?"
+    },
+    {
+      "start": 663.24,
+      "end": 665.2,
+      "text": "It's a continuous distribution."
+    },
+    {
+      "start": 665.2,
+      "end": 667.16,
+      "text": "It's a probability density function."
+    },
+    {
+      "start": 667.16,
+      "end": 670.62,
+      "text": "This is because the time is a continuous random variable."
+    },
+    {
+      "start": 670.62,
+      "end": 671.6,
+      "text": "Time is continuous."
+    },
+    {
+      "start": 671.6,
+      "end": 674.3,
+      "text": "Arrivals can happen at any time."
+    },
+    {
+      "start": 674.3,
+      "end": 677.08,
+      "text": "So we're talking about a PDF."
+    },
+    {
+      "start": 677.08,
+      "end": 680.24,
+      "text": "This k is just the parameter of the distribution."
+    },
+    {
+      "start": 680.24,
+      "end": 682.12,
+      "text": "We're talking about the k-th arrival."
+    },
+    {
+      "start": 682.12,
+      "end": 684.2,
+      "text": "So k is a fixed number."
+    },
+    {
+      "start": 684.2,
+      "end": 687.18,
+      "text": "Lambda is another parameter of the distribution, which is"
+    },
+    {
+      "start": 687.18,
+      "end": 688.98,
+      "text": "the arrival rate."
+    },
+    {
+      "start": 688.98,
+      "end": 693.76,
+      "text": "So it's a PDF over the y's, whereas lambda and k are"
+    },
+    {
+      "start": 693.76,
+      "end": 700.86,
+      "text": "parameters of the distribution."
+    },
+    {
+      "start": 700.86,
+      "end": 704.54,
+      "text": "So this was what we knew from last time."
+    },
+    {
+      "start": 704.54,
+      "end": 708.44,
+      "text": "Let's just get some practice."
+    },
+    {
+      "start": 708.44,
+      "end": 714.04,
+      "text": "Let us do a problem that's not too difficult, but just to see"
+    },
+    {
+      "start": 714.04,
+      "end": 717.46,
+      "text": "how we use the various formulas that we have."
+    },
+    {
+      "start": 717.6,
+      "end": 722.24,
+      "text": "So Poisson was a mathematician, but Poisson also"
+    },
+    {
+      "start": 722.24,
+      "end": 724.76,
+      "text": "means fish in French."
+    },
+    {
+      "start": 724.76,
+      "end": 727.14,
+      "text": "So Poisson goes fishing."
+    },
+    {
+      "start": 727.14,
+      "end": 732.48,
+      "text": "And let's assume that fish are caught according to a Poisson"
+    },
+    {
+      "start": 732.48,
+      "end": 733.44,
+      "text": "process."
+    },
+    {
+      "start": 733.44,
+      "end": 735.3,
+      "text": "That's not too bad an assumption."
+    },
+    {
+      "start": 735.3,
+      "end": 738.18,
+      "text": "At any given point in time, you have a little probability"
+    },
+    {
+      "start": 738.18,
+      "end": 739.84,
+      "text": "that the fish will be caught."
+    },
+    {
+      "start": 739.84,
+      "end": 742.92,
+      "text": "And whether you catch one now is sort of independent about"
+    },
+    {
+      "start": 742.92,
+      "end": 747.4,
+      "text": "whether at some later time a fish will be caught or not."
+    },
+    {
+      "start": 747.6,
+      "end": 750.08,
+      "text": "So let's just make this assumption."
+    },
+    {
+      "start": 750.08,
+      "end": 755.9,
+      "text": "And suppose that the rules of the game are that fish are"
+    },
+    {
+      "start": 755.9,
+      "end": 760.36,
+      "text": "being caught at a certain rate of 0.6 per hour."
+    },
+    {
+      "start": 760.36,
+      "end": 764.4,
+      "text": "You fish for two hours, no matter what."
+    },
+    {
+      "start": 764.4,
+      "end": 766.2,
+      "text": "And then there are two possibilities."
+    },
+    {
+      "start": 766.2,
+      "end": 770.72,
+      "text": "If I have caught a fish, I stop and go home."
+    },
+    {
+      "start": 770.72,
+      "end": 773.96,
+      "text": "So if some fish have been caught, so there's at least"
+    },
+    {
+      "start": 773.96,
+      "end": 777.36,
+      "text": "one arrival during this interval, I go home."
+    },
+    {
+      "start": 777.36,
+      "end": 781.76,
+      "text": "Or if nothing has been caught, I continue fishing"
+    },
+    {
+      "start": 781.76,
+      "end": 785.3,
+      "text": "until I catch something, and then I go home."
+    },
+    {
+      "start": 785.3,
+      "end": 789.42,
+      "text": "So that's the description of what is going to happen."
+    },
+    {
+      "start": 789.42,
+      "end": 792.9,
+      "text": "And now let's start asking questions of all sorts."
+    },
+    {
+      "start": 792.9,
+      "end": 796.46,
+      "text": "What is the probability that I'm going to be fishing for"
+    },
+    {
+      "start": 796.46,
+      "end": 799.08,
+      "text": "more than two hours?"
+    },
+    {
+      "start": 799.08,
+      "end": 803.18,
+      "text": "I will be fishing for more than two hours if and only if"
+    },
+    {
+      "start": 803.18,
+      "end": 806.88,
+      "text": "no fish were caught during those two hours."
+    },
+    {
+      "start": 807.36,
+      "end": 810.12,
+      "text": "In which case, I will have to continue."
+    },
+    {
+      "start": 810.12,
+      "end": 813.58,
+      "text": "Therefore, this is just this quantity."
+    },
+    {
+      "start": 813.58,
+      "end": 820.86,
+      "text": "The probability of catching two fish, of catching zero fish"
+    },
+    {
+      "start": 820.86,
+      "end": 822.5,
+      "text": "in the next two hours."
+    },
+    {
+      "start": 822.5,
+      "end": 825.66,
+      "text": "And according to the formula that we have, this is going to"
+    },
+    {
+      "start": 825.66,
+      "end": 830.8,
+      "text": "be e to the minus lambda times how much time we have."
+    },
+    {
+      "start": 830.8,
+      "end": 833.04,
+      "text": "There's another way of thinking about this."
+    },
+    {
+      "start": 833.04,
+      "end": 835.76,
+      "text": "The probability that I fish for more than two hours is the"
+    },
+    {
+      "start": 835.76,
+      "end": 837.18,
+      "text": "probability that the"
+    },
+    {
+      "start": 837.18,
+      "end": 842.02,
+      "text": "first catch happens after time two, which would be the"
+    },
+    {
+      "start": 842.02,
+      "end": 846.5,
+      "text": "integral from 2 to infinity of the density of"
+    },
+    {
+      "start": 846.5,
+      "end": 849.62,
+      "text": "the first arrival time."
+    },
+    {
+      "start": 849.62,
+      "end": 852.42,
+      "text": "And that density is an exponential, so you do the"
+    },
+    {
+      "start": 852.42,
+      "end": 855.42,
+      "text": "integral of an exponential, and of course you would get"
+    },
+    {
+      "start": 855.42,
+      "end": 857.14,
+      "text": "the same answer."
+    },
+    {
+      "start": 857.14,
+      "end": 858.72,
+      "text": "OK, that's easy."
+    },
+    {
+      "start": 858.72,
+      "end": 862.86,
+      "text": "So what's the probability of fishing for more than two, but"
+    },
+    {
+      "start": 862.86,
+      "end": 865.34,
+      "text": "less than five hours?"
+    },
+    {
+      "start": 865.34,
+      "end": 867.18,
+      "text": "What does it take for this to happen?"
+    },
+    {
+      "start": 867.18,
+      "end": 873.78,
+      "text": "For this to happen, we need to catch zero fish from time zero"
+    },
+    {
+      "start": 873.78,
+      "end": 880.16,
+      "text": "to two, and catch the first fish sometime"
+    },
+    {
+      "start": 880.16,
+      "end": 883.04,
+      "text": "between two and five."
+    },
+    {
+      "start": 883.04,
+      "end": 887.5,
+      "text": "So one way of thinking about what's happening here might be"
+    },
+    {
+      "start": 887.5,
+      "end": 889.9,
+      "text": "to say that there's a Poisson process that"
+    },
+    {
+      "start": 889.9,
+      "end": 892.78,
+      "text": "keeps going on forever."
+    },
+    {
+      "start": 892.78,
+      "end": 897.08,
+      "text": "But as soon as I catch the first fish, instead of"
+    },
+    {
+      "start": 897.08,
+      "end": 901.0,
+      "text": "continuing fishing and obtaining those other fish, I"
+    },
+    {
+      "start": 901.0,
+      "end": 904.06,
+      "text": "just go home right now."
+    },
+    {
+      "start": 904.06,
+      "end": 910.96,
+      "text": "Now, the fact that I go home before time five means that if"
+    },
+    {
+      "start": 910.96,
+      "end": 914.6,
+      "text": "I were to stay until time five, I would have caught at"
+    },
+    {
+      "start": 914.6,
+      "end": 915.84,
+      "text": "least one fish."
+    },
+    {
+      "start": 915.84,
+      "end": 918.4,
+      "text": "I might have caught more than one."
+    },
+    {
+      "start": 918.4,
+      "end": 923.48,
+      "text": "So the event of interest here is that the first catch happens"
+    },
+    {
+      "start": 923.48,
+      "end": 926.58,
+      "text": "between times two and five."
+    },
+    {
+      "start": 926.58,
+      "end": 932.36,
+      "text": "So one way of calculating this quantity would be, it's the"
+    },
+    {
+      "start": 932.36,
+      "end": 935.9,
+      "text": "probability that the first catch happens between times"
+    },
+    {
+      "start": 935.9,
+      "end": 937.68,
+      "text": "two and five."
+    },
+    {
+      "start": 937.68,
+      "end": 940.06,
+      "text": "Another way to deal with it is to say, this is the"
+    },
+    {
+      "start": 940.06,
+      "end": 944.26,
+      "text": "probability that I caught zero fish in the first two hours."
+    },
+    {
+      "start": 944.26,
+      "end": 948.84,
+      "text": "And then the probability that I catch at least one fish"
+    },
+    {
+      "start": 948.84,
+      "end": 952.28,
+      "text": "during the next three hours."
+    },
+    {
+      "start": 952.28,
+      "end": 956.06,
+      "text": "So what is this?"
+    },
+    {
+      "start": 956.06,
+      "end": 959.18,
+      "text": "The probability of zero fish in the next three hours is the"
+    },
+    {
+      "start": 959.18,
+      "end": 961.6,
+      "text": "probability of zero fish during this time."
+    },
+    {
+      "start": 961.6,
+      "end": 964.5,
+      "text": "One minus this is the probability of catching at"
+    },
+    {
+      "start": 964.5,
+      "end": 968.28,
+      "text": "least one fish, of having at least one arrival between"
+    },
+    {
+      "start": 968.28,
+      "end": 969.78,
+      "text": "times two and five."
+    },
+    {
+      "start": 969.78,
+      "end": 972.28,
+      "text": "If there's at least one arrival between times two and"
+    },
+    {
+      "start": 972.28,
+      "end": 977.12,
+      "text": "five, then I will have gone home by time five."
+    },
+    {
+      "start": 977.12,
+      "end": 980.76,
+      "text": "So both of these, if you plug in numbers and all that, of"
+    },
+    {
+      "start": 980.76,
+      "end": 984.16,
+      "text": "course, are going to give you the same answer."
+    },
+    {
+      "start": 984.16,
+      "end": 985.0,
+      "text": "Now, next."
+    },
+    {
+      "start": 985.0,
+      "end": 986.04,
+      "text": "What's the probability that I catch at least one fish during"
+    },
+    {
+      "start": 986.04,
+      "end": 989.8,
+      "text": "times two and five?"
+    },
+    {
+      "start": 989.8,
+      "end": 992.38,
+      "text": "In which scenario are we?"
+    },
+    {
+      "start": 992.38,
+      "end": 996.56,
+      "text": "Under this scenario, I go home when I catch my first fish."
+    },
+    {
+      "start": 996.56,
+      "end": 1001.34,
+      "text": "So in order to catch at least two fish, it must be this case."
+    },
+    {
+      "start": 1001.34,
+      "end": 1004.82,
+      "text": "So this is the same as the event that I catch at least two"
+    },
+    {
+      "start": 1004.82,
+      "end": 1009.02,
+      "text": "fish during the first two time steps."
+    },
+    {
+      "start": 1009.02,
+      "end": 1012.42,
+      "text": "So it's going to be the probability from two to"
+    },
+    {
+      "start": 1012.42,
+      "end": 1015.92,
+      "text": "infinity, the probability that I catch two fish"
+    },
+    {
+      "start": 1015.92,
+      "end": 1021.86,
+      "text": "or that I catch three fish or I catch more than that."
+    },
+    {
+      "start": 1021.86,
+      "end": 1024.1,
+      "text": "So it's this quantity."
+    },
+    {
+      "start": 1024.1,
+      "end": 1026.74,
+      "text": "k is the number of fish that I catch."
+    },
+    {
+      "start": 1026.74,
+      "end": 1029.6,
+      "text": "At least two, so k goes from two to infinity."
+    },
+    {
+      "start": 1029.6,
+      "end": 1033.22,
+      "text": "These are the probabilities of catching a number k of fish"
+    },
+    {
+      "start": 1033.22,
+      "end": 1034.88,
+      "text": "during this interval."
+    },
+    {
+      "start": 1034.88,
+      "end": 1037.42,
+      "text": "And if you want a simpler formula without an infinite"
+    },
+    {
+      "start": 1037.42,
+      "end": 1040.44,
+      "text": "sum, this would be 1 minus the probability of catching zero"
+    },
+    {
+      "start": 1040.44,
+      "end": 1044.6,
+      "text": "fish minus the probability of catching one fish during a"
+    },
+    {
+      "start": 1044.6,
+      "end": 1045.72,
+      "text": "time interval of length."
+    },
+    {
+      "start": 1045.72,
+      "end": 1048.04,
+      "text": "Length two."
+    },
+    {
+      "start": 1048.04,
+      "end": 1049.5,
+      "text": "Another way to think of it."
+    },
+    {
+      "start": 1049.5,
+      "end": 1053.7,
+      "text": "I'm going to catch two fish, at least two fish, if and only"
+    },
+    {
+      "start": 1053.7,
+      "end": 1057.82,
+      "text": "if the second fish caught in this process"
+    },
+    {
+      "start": 1057.82,
+      "end": 1060.62,
+      "text": "happens before time two."
+    },
+    {
+      "start": 1060.62,
+      "end": 1063.96,
+      "text": "So that's another way of thinking about the same event."
+    },
+    {
+      "start": 1063.96,
+      "end": 1066.24,
+      "text": "So it's going to be the probability that the random"
+    },
+    {
+      "start": 1066.24,
+      "end": 1071.44,
+      "text": "variable y2, the arrival time of the second fish, is less"
+    },
+    {
+      "start": 1071.44,
+      "end": 1075.8,
+      "text": "than or equal to two."
+    },
+    {
+      "start": 1075.8,
+      "end": 1076.36,
+      "text": "OK."
+    },
+    {
+      "start": 1076.36,
+      "end": 1078.28,
+      "text": "The next one is a little bit more complicated."
+    },
+    {
+      "start": 1078.28,
+      "end": 1080.02,
+      "text": "It's a little trickier."
+    },
+    {
+      "start": 1080.02,
+      "end": 1083.38,
+      "text": "Here we need to do a little bit of divide and conquer."
+    },
+    {
+      "start": 1083.38,
+      "end": 1086.52,
+      "text": "Overall, in this expedition, what's the expected number of"
+    },
+    {
+      "start": 1086.52,
+      "end": 1088.84,
+      "text": "fish to be caught?"
+    },
+    {
+      "start": 1088.84,
+      "end": 1091.56,
+      "text": "One way to think about it is to try to use the total"
+    },
+    {
+      "start": 1091.56,
+      "end": 1096.64,
+      "text": "expectation theorem and think of expected number of fish"
+    },
+    {
+      "start": 1096.64,
+      "end": 1099.68,
+      "text": "given this scenario or expected number of fish given"
+    },
+    {
+      "start": 1099.68,
+      "end": 1101.0,
+      "text": "this scenario."
+    },
+    {
+      "start": 1101.0,
+      "end": 1104.22,
+      "text": "That's a little more complicated than the way I'm"
+    },
+    {
+      "start": 1104.22,
+      "end": 1105.3,
+      "text": "going to do it."
+    },
+    {
+      "start": 1105.3,
+      "end": 1107.66,
+      "text": "The way I'm going to do it is to think as follows."
+    },
+    {
+      "start": 1107.66,
+      "end": 1111.76,
+      "text": "The expected number of fish is the expected number of fish"
+    },
+    {
+      "start": 1111.76,
+      "end": 1116.7,
+      "text": "caught between times 0 and 2 plus expected number of fish"
+    },
+    {
+      "start": 1116.7,
+      "end": 1119.82,
+      "text": "caught after time 2."
+    },
+    {
+      "start": 1119.82,
+      "end": 1125.56,
+      "text": "So what's the expected number caught between time 0 and 2?"
+    },
+    {
+      "start": 1125.56,
+      "end": 1127.86,
+      "text": "This is lambda t."
+    },
+    {
+      "start": 1127.86,
+      "end": 1132.3,
+      "text": "So it's lambda is 0.6 times 2."
+    },
+    {
+      "start": 1132.3,
+      "end": 1135.36,
+      "text": "This is the expected number of fish that are caught between"
+    },
+    {
+      "start": 1135.36,
+      "end": 1137.24,
+      "text": "times 0 and 2."
+    },
+    {
+      "start": 1137.24,
+      "end": 1140.46,
+      "text": "Now let's think about the expected number of fish caught"
+    },
+    {
+      "start": 1140.46,
+      "end": 1141.62,
+      "text": "afterwards."
+    },
+    {
+      "start": 1141.62,
+      "end": 1144.32,
+      "text": "How many fish are being caught afterwards?"
+    },
+    {
+      "start": 1144.32,
+      "end": 1146.2,
+      "text": "Well, it depends on the scenario."
+    },
+    {
+      "start": 1146.2,
+      "end": 1149.56,
+      "text": "If we're in this scenario, we've gone home and we catch"
+    },
+    {
+      "start": 1149.56,
+      "end": 1150.8,
+      "text": "0."
+    },
+    {
+      "start": 1150.8,
+      "end": 1154.54,
+      "text": "If we're in this scenario, then we continue fishing until"
+    },
+    {
+      "start": 1154.54,
+      "end": 1155.98,
+      "text": "we catch 1."
+    },
+    {
+      "start": 1155.98,
+      "end": 1159.96,
+      "text": "So the expected number of fish to be caught after time 2 is"
+    },
+    {
+      "start": 1159.96,
+      "end": 1164.54,
+      "text": "going to be the probability of this scenario times 1."
+    },
+    {
+      "start": 1164.54,
+      "end": 1167.12,
+      "text": "And the probability of that scenario is going to be 1 times"
+    },
+    {
+      "start": 1167.12,
+      "end": 1167.24,
+      "text": "1."
+    },
+    {
+      "start": 1167.24,
+      "end": 1171.38,
+      "text": "scenario is the probability that I caught 0 fish during"
+    },
+    {
+      "start": 1171.38,
+      "end": 1175.46,
+      "text": "the first two time steps times 1, which is the number of fish"
+    },
+    {
+      "start": 1175.46,
+      "end": 1179.78,
+      "text": "that I am going to catch if I continue."
+    },
+    {
+      "start": 1179.78,
+      "end": 1183.96,
+      "text": "The expected total fishing time we can calculate exactly"
+    },
+    {
+      "start": 1183.96,
+      "end": 1186.14,
+      "text": "the same way."
+    },
+    {
+      "start": 1186.14,
+      "end": 1187.88,
+      "text": "I'm jumping to the last one."
+    },
+    {
+      "start": 1187.88,
+      "end": 1191.58,
+      "text": "My total fishing time has a period of two time steps."
+    },
+    {
+      "start": 1191.58,
+      "end": 1194.9,
+      "text": "I'm going to fish for two time steps no matter what."
+    },
+    {
+      "start": 1194.9,
+      "end": 1199.18,
+      "text": "And then if I have caught 0 fish, which happens with this"
+    },
+    {
+      "start": 1199.18,
+      "end": 1204.52,
+      "text": "probability, my expected time is going to be the expected"
+    },
+    {
+      "start": 1204.52,
+      "end": 1208.92,
+      "text": "time from here onwards, which is the expected value of this"
+    },
+    {
+      "start": 1208.92,
+      "end": 1212.48,
+      "text": "geometric random variable with parameter lambda."
+    },
+    {
+      "start": 1212.48,
+      "end": 1215.42,
+      "text": "So the expected time is 1 over lambda."
+    },
+    {
+      "start": 1215.42,
+      "end": 1222.46,
+      "text": "And in our case, this is 1 over 0.6."
+    },
+    {
+      "start": 1222.46,
+      "end": 1226.5,
+      "text": "Finally, if I tell you that I have"
+    },
+    {
+      "start": 1226.5,
+      "end": 1226.82,
+      "text": "being"
+    },
+    {
+      "start": 1226.82,
+      "end": 1226.98,
+      "text": "."
+    },
+    {
+      "start": 1226.98,
+      "end": 1232.26,
+      "text": "Fishing for four hours, and nothing has"
+    },
+    {
+      "start": 1232.26,
+      "end": 1235.36,
+      "text": "been caught so far."
+    },
+    {
+      "start": 1235.36,
+      "end": 1241.62,
+      "text": "How much do you expect this quantity to be?"
+    },
+    {
+      "start": 1241.62,
+      "end": 1243.0,
+      "text": "Here is the story."
+    },
+    {
+      "start": 1243.0,
+      "end": 1247.78,
+      "text": "That's, again, that for the Poisson process, used is as"
+    },
+    {
+      "start": 1247.78,
+      "end": 1248.72,
+      "text": "good as new."
+    },
+    {
+      "start": 1248.72,
+      "end": 1251.0,
+      "text": "The process does not have any memory."
+    },
+    {
+      "start": 1251.0,
+      "end": 1253.72,
+      "text": "Given what happens in the past, doesn't"
+    },
+    {
+      "start": 1253.72,
+      "end": 1254.92,
+      "text": "matter for the future."
+    },
+    {
+      "start": 1254.92,
+      "end": 1258.38,
+      "text": "It's as if the process starts new at this point in time."
+    },
+    {
+      "start": 1258.38,
+      "end": 1261.58,
+      "text": "So this one is going to be, again, the same"
+    },
+    {
+      "start": 1261.58,
+      "end": 1265.24,
+      "text": "exponentially distributed random variable with the same"
+    },
+    {
+      "start": 1265.24,
+      "end": 1268.25,
+      "text": "parameter lambda."
+    },
+    {
+      "start": 1268.25,
+      "end": 1274.09,
+      "text": "So expected time until an arrival comes has an"
+    },
+    {
+      "start": 1274.09,
+      "end": 1277.71,
+      "text": "exponential distribution with parameter lambda, no matter"
+    },
+    {
+      "start": 1277.71,
+      "end": 1279.57,
+      "text": "what has happened in the past."
+    },
+    {
+      "start": 1279.57,
+      "end": 1282.75,
+      "text": "Starting from now and looking into the future, it's as if"
+    },
+    {
+      "start": 1282.75,
+      "end": 1284.89,
+      "text": "the process has just started."
+    },
+    {
+      "start": 1284.89,
+      "end": 1289.47,
+      "text": "So it's going to be 1 over lambda, which is 1 over 0.6."
+    },
+    {
+      "start": 1289.47,
+      "end": 1301.47,
+      "text": "Now, our next example is going to be a little more"
+    },
+    {
+      "start": 1301.47,
+      "end": 1303.81,
+      "text": "complicated or subtle."
+    },
+    {
+      "start": 1303.81,
+      "end": 1306.79,
+      "text": "But before we get to the example, let's refresh our"
+    },
+    {
+      "start": 1306.79,
+      "end": 1310.93,
+      "text": "memory about what we discussed last time about merging"
+    },
+    {
+      "start": 1310.93,
+      "end": 1313.09,
+      "text": "independent Poisson processes."
+    },
+    {
+      "start": 1313.09,
+      "end": 1316.07,
+      "text": "Instead of drawing the picture that way, another way we could"
+    },
+    {
+      "start": 1316.07,
+      "end": 1318.27,
+      "text": "draw it could be this."
+    },
+    {
+      "start": 1318.27,
+      "end": 1321.65,
+      "text": "We have a Poisson process with rate lambda 1, Poisson process"
+    },
+    {
+      "start": 1321.65,
+      "end": 1323.47,
+      "text": "with rate lambda 2."
+    },
+    {
+      "start": 1323.47,
+      "end": 1327.31,
+      "text": "They have, each one of these have their arrivals."
+    },
+    {
+      "start": 1327.31,
+      "end": 1329.79,
+      "text": "And then we form the merged process."
+    },
+    {
+      "start": 1329.79,
+      "end": 1333.53,
+      "text": "And the merged process records an arrival whenever there's an"
+    },
+    {
+      "start": 1333.53,
+      "end": 1339.98,
+      "text": "arrival in either of the two processes."
+    },
+    {
+      "start": 1339.98,
+      "end": 1343.72,
+      "text": "This process and that process are assumed to be independent"
+    },
+    {
+      "start": 1343.72,
+      "end": 1346.75,
+      "text": "of each other."
+    },
+    {
+      "start": 1346.75,
+      "end": 1352.57,
+      "text": "Now, different times in this process and that process are"
+    },
+    {
+      "start": 1352.57,
+      "end": 1354.73,
+      "text": "independent of each other."
+    },
+    {
+      "start": 1354.73,
+      "end": 1356.13,
+      "text": "So."
+    },
+    {
+      "start": 1356.13,
+      "end": 1359.57,
+      "text": "What happens in these two time intervals is independent from"
+    },
+    {
+      "start": 1359.57,
+      "end": 1361.77,
+      "text": "what happens in these two time intervals."
+    },
+    {
+      "start": 1361.77,
+      "end": 1365.53,
+      "text": "These two time intervals determine what happens here."
+    },
+    {
+      "start": 1365.53,
+      "end": 1368.75,
+      "text": "These two time intervals determine what happens there."
+    },
+    {
+      "start": 1368.75,
+      "end": 1373.55,
+      "text": "So because these are independent from these, this"
+    },
+    {
+      "start": 1373.55,
+      "end": 1376.61,
+      "text": "means that this is also independent from that."
+    },
+    {
+      "start": 1376.61,
+      "end": 1379.19,
+      "text": "So the independence assumption is satisfied for"
+    },
+    {
+      "start": 1379.19,
+      "end": 1381.13,
+      "text": "the merged process."
+    },
+    {
+      "start": 1381.13,
+      "end": 1384.97,
+      "text": "And the merged process turns out to be a Poisson process."
+    },
+    {
+      "start": 1384.97,
+      "end": 1390.35,
+      "text": "And if you want to find the arrival rate for that process,"
+    },
+    {
+      "start": 1390.35,
+      "end": 1392.53,
+      "text": "you argue as follows."
+    },
+    {
+      "start": 1392.53,
+      "end": 1395.01,
+      "text": "During a little interval of length delta, we have"
+    },
+    {
+      "start": 1395.01,
+      "end": 1397.23,
+      "text": "probability lambda 1 delta of having an"
+    },
+    {
+      "start": 1397.23,
+      "end": 1398.63,
+      "text": "arrival in this process."
+    },
+    {
+      "start": 1398.63,
+      "end": 1401.69,
+      "text": "We have probability lambda 2 delta of an arrival in this"
+    },
+    {
+      "start": 1401.69,
+      "end": 1405.69,
+      "text": "process, plus second order terms in delta, which we're"
+    },
+    {
+      "start": 1405.69,
+      "end": 1406.87,
+      "text": "ignoring."
+    },
+    {
+      "start": 1406.87,
+      "end": 1409.11,
+      "text": "And then you do the calculation, and you find"
+    },
+    {
+      "start": 1409.11,
+      "end": 1411.85,
+      "text": "that in this process, you're going to have an arrival"
+    },
+    {
+      "start": 1411.85,
+      "end": 1414.81,
+      "text": "probability, which is lambda 1 plus lambda 2."
+    },
+    {
+      "start": 1414.81,
+      "end": 1416.41,
+      "text": "lambda 2 delta."
+    },
+    {
+      "start": 1416.41,
+      "end": 1422.67,
+      "text": "Again, ignoring terms that are second order in delta."
+    },
+    {
+      "start": 1422.67,
+      "end": 1425.59,
+      "text": "So the merged process is a Poisson process, whose"
+    },
+    {
+      "start": 1425.59,
+      "end": 1429.01,
+      "text": "arrival rate is the sum of the arrival rates of the"
+    },
+    {
+      "start": 1429.01,
+      "end": 1432.07,
+      "text": "individual processes."
+    },
+    {
+      "start": 1432.07,
+      "end": 1435.47,
+      "text": "And the calculation we did at the end of the last lecture."
+    },
+    {
+      "start": 1435.47,
+      "end": 1439.55,
+      "text": "If I tell you that an arrival happened here, where did that"
+    },
+    {
+      "start": 1439.55,
+      "end": 1440.61,
+      "text": "arrival come from?"
+    },
+    {
+      "start": 1440.61,
+      "end": 1442.91,
+      "text": "Did it come from here or from there?"
+    },
+    {
+      "start": 1442.91,
+      "end": 1444.71,
+      "text": "If lambda 1 is equal to lambda 2."
+    },
+    {
+      "start": 1444.71,
+      "end": 1447.53,
+      "text": "lambda 2, then by symmetry, you would say that it's"
+    },
+    {
+      "start": 1447.53,
+      "end": 1450.03,
+      "text": "equally likely to have come from here or to come from"
+    },
+    {
+      "start": 1450.03,
+      "end": 1450.65,
+      "text": "there."
+    },
+    {
+      "start": 1450.65,
+      "end": 1453.73,
+      "text": "But if this lambda is much bigger than that lambda, the"
+    },
+    {
+      "start": 1453.73,
+      "end": 1456.25,
+      "text": "fact that I saw an arrival is more likely to"
+    },
+    {
+      "start": 1456.25,
+      "end": 1457.87,
+      "text": "have come from there."
+    },
+    {
+      "start": 1457.87,
+      "end": 1462.39,
+      "text": "And the formula that captures this is the following."
+    },
+    {
+      "start": 1462.39,
+      "end": 1467.29,
+      "text": "This is the probability that my arrival has come from this"
+    },
+    {
+      "start": 1467.29,
+      "end": 1472.35,
+      "text": "particular stream, rather than that particular stream."
+    },
+    {
+      "start": 1472.35,
+      "end": 1474.31,
+      "text": "So when an arrival comes."
+    },
+    {
+      "start": 1474.71,
+      "end": 1479.68,
+      "text": "And you ask, what is the origin of that arrival?"
+    },
+    {
+      "start": 1479.68,
+      "end": 1483.76,
+      "text": "It's as if I'm flipping a coin with these odds."
+    },
+    {
+      "start": 1483.76,
+      "end": 1486.7,
+      "text": "And depending on the outcome of that coin, I'm going to"
+    },
+    {
+      "start": 1486.7,
+      "end": 1489.8,
+      "text": "tell you it came from there or it came from there."
+    },
+    {
+      "start": 1489.8,
+      "end": 1494.88,
+      "text": "So the origin of an arrival is either this stream or that"
+    },
+    {
+      "start": 1494.88,
+      "end": 1497.58,
+      "text": "stream, and this is the probability that the origin of"
+    },
+    {
+      "start": 1497.58,
+      "end": 1499.5,
+      "text": "the arrival is that one."
+    },
+    {
+      "start": 1499.5,
+      "end": 1503.46,
+      "text": "Now, if we look at two different arrivals, and we"
+    },
+    {
+      "start": 1503.46,
+      "end": 1505.56,
+      "text": "ask about their origins."
+    },
+    {
+      "start": 1505.56,
+      "end": 1506.0,
+      "text": "So let's think."
+    },
+    {
+      "start": 1506.0,
+      "end": 1508.72,
+      "text": "Let's think about the origin of this arrival and compare it"
+    },
+    {
+      "start": 1508.72,
+      "end": 1512.04,
+      "text": "with the origin of that arrival."
+    },
+    {
+      "start": 1512.04,
+      "end": 1514.0,
+      "text": "The origin of this arrival is random."
+    },
+    {
+      "start": 1514.0,
+      "end": 1517.36,
+      "text": "It could be either this or that, and this is the"
+    },
+    {
+      "start": 1517.36,
+      "end": 1518.82,
+      "text": "relevant probability."
+    },
+    {
+      "start": 1518.82,
+      "end": 1520.74,
+      "text": "The origin of that arrival is random."
+    },
+    {
+      "start": 1520.74,
+      "end": 1524.36,
+      "text": "It could be either here or there, and again, with the"
+    },
+    {
+      "start": 1524.36,
+      "end": 1526.88,
+      "text": "same relevant probability."
+    },
+    {
+      "start": 1526.88,
+      "end": 1531.04,
+      "text": "the origin of this arrival, is it dependent or"
+    },
+    {
+      "start": 1531.04,
+      "end": 1534.72,
+      "text": "independent from the origin of that arrival?"
+    },
+    {
+      "start": 1534.72,
+      "end": 1535.98,
+      "text": "And here's how the"
+    },
+    {
+      "start": 1535.98,
+      "end": 1537.52,
+      "text": "argument goes."
+    },
+    {
+      "start": 1537.52,
+      "end": 1540.88,
+      "text": "Separate times are independent."
+    },
+    {
+      "start": 1540.88,
+      "end": 1545.06,
+      "text": "Whatever has happened in the process during this set of"
+    },
+    {
+      "start": 1545.06,
+      "end": 1548.04,
+      "text": "times is independent from whatever happened in the"
+    },
+    {
+      "start": 1548.04,
+      "end": 1550.98,
+      "text": "process during that set of times."
+    },
+    {
+      "start": 1550.98,
+      "end": 1555.06,
+      "text": "Because different times have nothing to do with each other,"
+    },
+    {
+      "start": 1555.06,
+      "end": 1560.26,
+      "text": "the origin of an arrival here has nothing to do with the"
+    },
+    {
+      "start": 1560.26,
+      "end": 1562.48,
+      "text": "origin of an arrival there."
+    },
+    {
+      "start": 1562.48,
+      "end": 1565.74,
+      "text": "So the origins of different arrivals are"
+    },
+    {
+      "start": 1565.98,
+      "end": 1568.86,
+      "text": "also independent random variables."
+    },
+    {
+      "start": 1568.86,
+      "end": 1579.47,
+      "text": "So if I tell you that each time that you have an arrival"
+    },
+    {
+      "start": 1579.47,
+      "end": 1582.83,
+      "text": "in the merged process, it's as if you're flipping a coin to"
+    },
+    {
+      "start": 1582.83,
+      "end": 1585.91,
+      "text": "determine where did that arrival came from."
+    },
+    {
+      "start": 1585.91,
+      "end": 1595.9,
+      "text": "And these coins are independent of each other."
+    },
+    {
+      "start": 1595.9,
+      "end": 1601.52,
+      "text": "Now we're going to use what we know about merged processes to"
+    },
+    {
+      "start": 1601.52,
+      "end": 1604.34,
+      "text": "solve a problem that would be harder to solve."
+    },
+    {
+      "start": 1604.34,
+      "end": 1608.08,
+      "text": "Harder to do if you were not using ideas"
+    },
+    {
+      "start": 1608.08,
+      "end": 1609.7,
+      "text": "from Poisson processes."
+    },
+    {
+      "start": 1609.7,
+      "end": 1612.26,
+      "text": "So the formulation of the problem has nothing to do with"
+    },
+    {
+      "start": 1612.26,
+      "end": 1614.38,
+      "text": "the Poisson process."
+    },
+    {
+      "start": 1614.38,
+      "end": 1617.5,
+      "text": "The formulation is the following."
+    },
+    {
+      "start": 1617.5,
+      "end": 1619.88,
+      "text": "We have three light bulbs."
+    },
+    {
+      "start": 1619.88,
+      "end": 1623.5,
+      "text": "And each light bulb is independent and is going to"
+    },
+    {
+      "start": 1623.5,
+      "end": 1627.92,
+      "text": "die out at a time that's exponentially distributed."
+    },
+    {
+      "start": 1627.92,
+      "end": 1631.06,
+      "text": "So three light bulbs."
+    },
+    {
+      "start": 1631.06,
+      "end": 1633.22,
+      "text": "They start their lives."
+    },
+    {
+      "start": 1633.22,
+      "end": 1634.22,
+      "text": "And then they die out."
+    },
+    {
+      "start": 1634.22,
+      "end": 1641.25,
+      "text": "And then at some point, they die or burn out."
+    },
+    {
+      "start": 1641.25,
+      "end": 1646.15,
+      "text": "So let's think of this as x, this as y, and this as z."
+    },
+    {
+      "start": 1646.15,
+      "end": 1652.13,
+      "text": "And we're interested in the time until the last light bulb"
+    },
+    {
+      "start": 1652.13,
+      "end": 1653.19,
+      "text": "burns out."
+    },
+    {
+      "start": 1653.19,
+      "end": 1656.95,
+      "text": "So we're interested in the maximum of the three random"
+    },
+    {
+      "start": 1656.95,
+      "end": 1659.67,
+      "text": "variables, x, y, and z."
+    },
+    {
+      "start": 1659.67,
+      "end": 1662.15,
+      "text": "And in particular, we want to find the expected"
+    },
+    {
+      "start": 1662.15,
+      "end": 1667.48,
+      "text": "value of this maximum."
+    },
+    {
+      "start": 1667.48,
+      "end": 1670.16,
+      "text": "So you can do derived distributions, use the"
+    },
+    {
+      "start": 1670.16,
+      "end": 1672.88,
+      "text": "expected value rule, anything you want."
+    },
+    {
+      "start": 1672.88,
+      "end": 1676.22,
+      "text": "You can get this answer using the tools that you already"
+    },
+    {
+      "start": 1676.22,
+      "end": 1678.16,
+      "text": "have in your hands."
+    },
+    {
+      "start": 1678.16,
+      "end": 1682.02,
+      "text": "But now let us see how we can connect this picture with a"
+    },
+    {
+      "start": 1682.02,
+      "end": 1685.54,
+      "text": "Poisson picture and come up with the answer in a very"
+    },
+    {
+      "start": 1685.54,
+      "end": 1687.14,
+      "text": "simple way."
+    },
+    {
+      "start": 1687.14,
+      "end": 1689.74,
+      "text": "What is an exponential random variable?"
+    },
+    {
+      "start": 1689.74,
+      "end": 1695.48,
+      "text": "An exponential random variable is the first act in a long play"
+    },
+    {
+      "start": 1695.48,
+      "end": 1697.36,
+      "text": "that involves a whole."
+    },
+    {
+      "start": 1697.36,
+      "end": 1699.58,
+      "text": "A whole Poisson process."
+    },
+    {
+      "start": 1699.58,
+      "end": 1703.02,
+      "text": "So an exponential random variable is the first act of a"
+    },
+    {
+      "start": 1703.02,
+      "end": 1704.64,
+      "text": "Poisson movie."
+    },
+    {
+      "start": 1704.64,
+      "end": 1705.66,
+      "text": "Same thing here."
+    },
+    {
+      "start": 1705.66,
+      "end": 1709.7,
+      "text": "You can think of this random variable as being part of some"
+    },
+    {
+      "start": 1709.7,
+      "end": 1715.36,
+      "text": "Poisson process that has been running."
+    },
+    {
+      "start": 1715.36,
+      "end": 1718.08,
+      "text": "So it's part of this bigger picture."
+    },
+    {
+      "start": 1718.08,
+      "end": 1722.34,
+      "text": "We're still interested in the maximum of these three."
+    },
+    {
+      "start": 1722.34,
+      "end": 1725.78,
+      "text": "The other arrivals are not going to affect our answers."
+    },
+    {
+      "start": 1725.78,
+      "end": 1729.36,
+      "text": "It's just conceptually speaking, we can think of the"
+    },
+    {
+      "start": 1729.36,
+      "end": 1732.82,
+      "text": "exponential random variable as being embedded in a bigger"
+    },
+    {
+      "start": 1732.82,
+      "end": 1735.08,
+      "text": "Poisson picture."
+    },
+    {
+      "start": 1735.08,
+      "end": 1738.98,
+      "text": "So we have three Poisson processes that are"
+    },
+    {
+      "start": 1738.98,
+      "end": 1741.44,
+      "text": "running in parallel."
+    },
+    {
+      "start": 1741.44,
+      "end": 1746.14,
+      "text": "Let us split the expected time until the last burnout into"
+    },
+    {
+      "start": 1746.14,
+      "end": 1749.76,
+      "text": "pieces, which is time until the first burnout, time from"
+    },
+    {
+      "start": 1749.76,
+      "end": 1753.12,
+      "text": "the first until the second, and time from the second until"
+    },
+    {
+      "start": 1753.12,
+      "end": 1756.73,
+      "text": "the third."
+    },
+    {
+      "start": 1756.73,
+      "end": 1760.59,
+      "text": "And find the expected values of each one of these pieces."
+    },
+    {
+      "start": 1760.59,
+      "end": 1764.65,
+      "text": "What can we say about the expected value of this?"
+    },
+    {
+      "start": 1764.65,
+      "end": 1770.73,
+      "text": "This is the first arrival out of all these three Poisson"
+    },
+    {
+      "start": 1770.73,
+      "end": 1771.53,
+      "text": "processes."
+    },
+    {
+      "start": 1771.53,
+      "end": 1774.11,
+      "text": "It's the first event that happens when you look at all"
+    },
+    {
+      "start": 1774.11,
+      "end": 1776.09,
+      "text": "these processes simultaneously."
+    },
+    {
+      "start": 1776.09,
+      "end": 1779.67,
+      "text": "So three Poisson processes running in parallel."
+    },
+    {
+      "start": 1779.67,
+      "end": 1783.75,
+      "text": "We're interested in the time until one of them, any one of"
+    },
+    {
+      "start": 1783.75,
+      "end": 1786.37,
+      "text": "them, gets an arrival."
+    },
+    {
+      "start": 1786.37,
+      "end": 1787.71,
+      "text": "Rephrase."
+    },
+    {
+      "start": 1787.71,
+      "end": 1790.19,
+      "text": "We merge the three Poisson processes."
+    },
+    {
+      "start": 1790.19,
+      "end": 1793.77,
+      "text": "And we ask for the time until we observe an arrival in the"
+    },
+    {
+      "start": 1793.77,
+      "end": 1796.95,
+      "text": "merged process."
+    },
+    {
+      "start": 1796.95,
+      "end": 1800.91,
+      "text": "When one of the three gets an arrival for the first time,"
+    },
+    {
+      "start": 1800.91,
+      "end": 1803.87,
+      "text": "then the merged process gets its first arrival."
+    },
+    {
+      "start": 1803.87,
+      "end": 1807.23,
+      "text": "So what's the expected value of this time until the first"
+    },
+    {
+      "start": 1807.23,
+      "end": 1808.81,
+      "text": "burnout?"
+    },
+    {
+      "start": 1808.81,
+      "end": 1811.53,
+      "text": "It's going to be the expected value of a"
+    },
+    {
+      "start": 1811.53,
+      "end": 1813.71,
+      "text": "Poisson random variable."
+    },
+    {
+      "start": 1813.71,
+      "end": 1817.77,
+      "text": "So the first burnout is going to have an expected value,"
+    },
+    {
+      "start": 1817.77,
+      "end": 1819.01,
+      "text": "which is?"
+    },
+    {
+      "start": 1820.19,
+      "end": 1821.55,
+      "text": "OK."
+    },
+    {
+      "start": 1821.55,
+      "end": 1823.65,
+      "text": "It's a Poisson process."
+    },
+    {
+      "start": 1823.65,
+      "end": 1827.79,
+      "text": "The merged process of the three has a collective arrival"
+    },
+    {
+      "start": 1827.79,
+      "end": 1832.75,
+      "text": "rate, which is 3 times lambda."
+    },
+    {
+      "start": 1832.75,
+      "end": 1836.27,
+      "text": "So this is the parameter of the exponential distribution"
+    },
+    {
+      "start": 1836.27,
+      "end": 1839.85,
+      "text": "that describes the time until the first arrival in the"
+    },
+    {
+      "start": 1839.85,
+      "end": 1841.21,
+      "text": "merged process."
+    },
+    {
+      "start": 1841.21,
+      "end": 1844.81,
+      "text": "And the expected value of this random variable is 1 over"
+    },
+    {
+      "start": 1844.81,
+      "end": 1845.69,
+      "text": "that."
+    },
+    {
+      "start": 1845.69,
+      "end": 1848.19,
+      "text": "When you have an exponential random variable with parameter"
+    },
+    {
+      "start": 1848.19,
+      "end": 1851.37,
+      "text": "lambda, the expected value of that random variable is 1 over"
+    },
+    {
+      "start": 1851.37,
+      "end": 1851.45,
+      "text": "lambda.."
+    },
+    {
+      "start": 1851.45,
+      "end": 1851.57,
+      "text": "OK."
+    },
+    {
+      "start": 1851.57,
+      "end": 1856.65,
+      "text": "Here we're talking about the first arrival time in the"
+    },
+    {
+      "start": 1856.65,
+      "end": 1858.71,
+      "text": "process with rate 3 lambda."
+    },
+    {
+      "start": 1858.71,
+      "end": 1861.57,
+      "text": "The expected time until the first arrival is 1 over 3"
+    },
+    {
+      "start": 1861.57,
+      "end": 1862.85,
+      "text": "lambda."
+    },
+    {
+      "start": 1862.85,
+      "end": 1863.87,
+      "text": "All right."
+    },
+    {
+      "start": 1863.87,
+      "end": 1868.39,
+      "text": "So at this time, this arrival happened."
+    },
+    {
+      "start": 1868.39,
+      "end": 1871.47,
+      "text": "This bulb has been burned."
+    },
+    {
+      "start": 1871.47,
+      "end": 1875.77,
+      "text": "So we don't care about that bulb anymore."
+    },
+    {
+      "start": 1875.77,
+      "end": 1881.45,
+      "text": "We start at this time, and we look forward."
+    },
+    {
+      "start": 1881.45,
+      "end": 1883.65,
+      "text": "This bulb has been burned."
+    },
+    {
+      "start": 1883.65,
+      "end": 1887.83,
+      "text": "So let's just look forward from now on."
+    },
+    {
+      "start": 1887.83,
+      "end": 1888.87,
+      "text": "What have we got?"
+    },
+    {
+      "start": 1888.87,
+      "end": 1894.05,
+      "text": "We have two bulbs that are burning."
+    },
+    {
+      "start": 1894.05,
+      "end": 1895.89,
+      "text": "We have a Poisson process."
+    },
+    {
+      "start": 1895.89,
+      "end": 1899.05,
+      "text": "That's the bigger picture of what could happen to that light"
+    },
+    {
+      "start": 1899.05,
+      "end": 1901.13,
+      "text": "bulb if we were to keep replacing it."
+    },
+    {
+      "start": 1901.13,
+      "end": 1902.87,
+      "text": "Another Poisson process."
+    },
+    {
+      "start": 1902.87,
+      "end": 1905.61,
+      "text": "These two processes are, again, independent."
+    },
+    {
+      "start": 1905.61,
+      "end": 1910.85,
+      "text": "From this time until that time, how long does it take?"
+    },
+    {
+      "start": 1910.85,
+      "end": 1913.85,
+      "text": "It's the time until either this process records an"
+    },
+    {
+      "start": 1913.85,
+      "end": 1917.07,
+      "text": "arrival or that process records an arrival."
+    },
+    {
+      "start": 1917.07,
+      "end": 1921.19,
+      "text": "That's the same as the time that the merged process of"
+    },
+    {
+      "start": 1921.19,
+      "end": 1923.81,
+      "text": "these two records an arrival."
+    },
+    {
+      "start": 1923.81,
+      "end": 1926.43,
+      "text": "So we're talking about the expected time until the first"
+    },
+    {
+      "start": 1926.43,
+      "end": 1928.69,
+      "text": "arrival in a merged process."
+    },
+    {
+      "start": 1928.69,
+      "end": 1931.03,
+      "text": "The merged process is Poisson."
+    },
+    {
+      "start": 1931.03,
+      "end": 1934.25,
+      "text": "It's Poisson with rate 2 lambda."
+    },
+    {
+      "start": 1934.25,
+      "end": 1938.81,
+      "text": "So that extra time is going to take the expected value is"
+    },
+    {
+      "start": 1938.81,
+      "end": 1940.73,
+      "text": "going to be 1 over the rate."
+    },
+    {
+      "start": 1940.73,
+      "end": 1942.57,
+      "text": "of that Poisson process."
+    },
+    {
+      "start": 1942.57,
+      "end": 1945.31,
+      "text": "So 1 over 2 lambda is the expected value of"
+    },
+    {
+      "start": 1945.31,
+      "end": 1946.97,
+      "text": "this random variable."
+    },
+    {
+      "start": 1946.97,
+      "end": 1950.89,
+      "text": "So at this point, this bulb now is also burned."
+    },
+    {
+      "start": 1950.89,
+      "end": 1953.63,
+      "text": "So we start looking from this time on."
+    },
+    {
+      "start": 1953.63,
+      "end": 1957.11,
+      "text": "That part of the picture disappears."
+    },
+    {
+      "start": 1957.11,
+      "end": 1960.13,
+      "text": "Starting from this time, what's the expected value"
+    },
+    {
+      "start": 1960.13,
+      "end": 1963.79,
+      "text": "until that remaining light bulb burns out?"
+    },
+    {
+      "start": 1963.79,
+      "end": 1967.11,
+      "text": "Well, as we said before, in a Poisson process, or with"
+    },
+    {
+      "start": 1967.11,
+      "end": 1969.97,
+      "text": "exponential random variables, we have memorylessness."
+    },
+    {
+      "start": 1969.97,
+      "end": 1973.11,
+      "text": "A used bulb is as good as a new one."
+    },
+    {
+      "start": 1973.11,
+      "end": 1975.99,
+      "text": "So it's as if we're starting from scratch here."
+    },
+    {
+      "start": 1975.99,
+      "end": 1978.81,
+      "text": "So this is going to be an exponential random variable"
+    },
+    {
+      "start": 1978.81,
+      "end": 1980.69,
+      "text": "with parameter lambda."
+    },
+    {
+      "start": 1980.69,
+      "end": 1985.55,
+      "text": "And the expected value of it is going to be 1 over lambda."
+    },
+    {
+      "start": 1985.55,
+      "end": 1987.97,
+      "text": "So the beauty of approaching this problem in this"
+    },
+    {
+      "start": 1987.97,
+      "end": 1990.93,
+      "text": "particular way is, of course, that we manage to do"
+    },
+    {
+      "start": 1990.93,
+      "end": 1994.15,
+      "text": "everything without any calculus at all, without"
+    },
+    {
+      "start": 1994.15,
+      "end": 1996.99,
+      "text": "writing an integral, without trying to calculate"
+    },
+    {
+      "start": 1996.99,
+      "end": 1999.21,
+      "text": "expectations in any form."
+    },
+    {
+      "start": 1999.21,
+      "end": 2003.17,
+      "text": "Most of the non-trivial problems that you encounter in"
+    },
+    {
+      "start": 2003.17,
+      "end": 2008.55,
+      "text": "the Poisson world basically involve tricks of this kind."
+    },
+    {
+      "start": 2008.55,
+      "end": 2011.83,
+      "text": "You have a question, and you try to rephrase it in trying to"
+    },
+    {
+      "start": 2011.83,
+      "end": 2015.27,
+      "text": "think in terms of what might happen in a Poisson setting,"
+    },
+    {
+      "start": 2015.27,
+      "end": 2023.34,
+      "text": "use memorylessness, use merging, et cetera, et cetera."
+    },
+    {
+      "start": 2023.34,
+      "end": 2026.04,
+      "text": "Now, we talked about merging."
+    },
+    {
+      "start": 2026.04,
+      "end": 2029.46,
+      "text": "It turns out that the splitting of Poisson processes"
+    },
+    {
+      "start": 2029.46,
+      "end": 2032.64,
+      "text": "also works in a nice way."
+    },
+    {
+      "start": 2032.66,
+      "end": 2037.0,
+      "text": "The story here is exactly the same as"
+    },
+    {
+      "start": 2037.0,
+      "end": 2038.8,
+      "text": "for the Bernoulli process."
+    },
+    {
+      "start": 2038.8,
+      "end": 2044.86,
+      "text": "So I'm having a Poisson process with some rate lambda."
+    },
+    {
+      "start": 2044.86,
+      "end": 2048.74,
+      "text": "And each time that an arrival comes, I'm going to send it to"
+    },
+    {
+      "start": 2048.74,
+      "end": 2051.54,
+      "text": "that stream and record an arrival here with some"
+    },
+    {
+      "start": 2051.54,
+      "end": 2052.86,
+      "text": "probability p."
+    },
+    {
+      "start": 2052.86,
+      "end": 2055.22,
+      "text": "And I'm going to send it to the other stream with some"
+    },
+    {
+      "start": 2055.22,
+      "end": 2057.1,
+      "text": "probability 1 minus p."
+    },
+    {
+      "start": 2057.1,
+      "end": 2060.96,
+      "text": "So either this will happen or that will happen, depending on"
+    },
+    {
+      "start": 2060.96,
+      "end": 2062.54,
+      "text": "the outcome of a coin flip."
+    },
+    {
+      "start": 2062.54,
+      "end": 2063.54,
+      "text": "That's what I do."
+    },
+    {
+      "start": 2063.54,
+      "end": 2067.46,
+      "text": "Each time that an arrival occurs, I flip a coin, and I"
+    },
+    {
+      "start": 2067.46,
+      "end": 2070.92,
+      "text": "decide whether to record it here or there."
+    },
+    {
+      "start": 2070.92,
+      "end": 2072.62,
+      "text": "This is called splitting a Poisson"
+    },
+    {
+      "start": 2072.62,
+      "end": 2074.66,
+      "text": "process into two pieces."
+    },
+    {
+      "start": 2074.66,
+      "end": 2077.12,
+      "text": "What kind of process do we get here?"
+    },
+    {
+      "start": 2077.12,
+      "end": 2080.22,
+      "text": "If you look at the little interval of length delta,"
+    },
+    {
+      "start": 2080.22,
+      "end": 2082.78,
+      "text": "what's the probability that this little interval gets an"
+    },
+    {
+      "start": 2082.78,
+      "end": 2084.08,
+      "text": "arrival?"
+    },
+    {
+      "start": 2084.08,
+      "end": 2087.74,
+      "text": "It's the probability that this one gets an arrival, which is"
+    },
+    {
+      "start": 2087.74,
+      "end": 2091.28,
+      "text": "lambda delta, times the probability that after I get"
+    },
+    {
+      "start": 2091.28,
+      "end": 2092.38,
+      "text": "an arrival, my coin flips."
+    },
+    {
+      "start": 2092.54,
+      "end": 2095.52,
+      "text": "And the coin flip came out to be that way, so that it sends"
+    },
+    {
+      "start": 2095.52,
+      "end": 2096.3,
+      "text": "me there."
+    },
+    {
+      "start": 2096.3,
+      "end": 2098.76,
+      "text": "So this means that this little interval is going to have"
+    },
+    {
+      "start": 2098.76,
+      "end": 2101.6,
+      "text": "probability lambda delta p."
+    },
+    {
+      "start": 2101.6,
+      "end": 2106.72,
+      "text": "Or maybe more suggestively, I should write it as lp times"
+    },
+    {
+      "start": 2106.72,
+      "end": 2109.42,
+      "text": "lambda p times delta."
+    },
+    {
+      "start": 2109.42,
+      "end": 2112.34,
+      "text": "So every little interval has a probability of an arrival"
+    },
+    {
+      "start": 2112.34,
+      "end": 2113.48,
+      "text": "proportional to delta."
+    },
+    {
+      "start": 2113.48,
+      "end": 2115.64,
+      "text": "The proportionality factor is lambda p."
+    },
+    {
+      "start": 2115.64,
+      "end": 2118.6,
+      "text": "So lambda p is the rate of that process."
+    },
+    {
+      "start": 2118.6,
+      "end": 2122.54,
+      "text": "And then you go through the mental exercise that you went"
+    },
+    {
+      "start": 2122.54,
+      "end": 2125.64,
+      "text": "through for the Bernoulli process to argue that different"
+    },
+    {
+      "start": 2125.64,
+      "end": 2128.5,
+      "text": "intervals here are independent, and so on."
+    },
+    {
+      "start": 2128.5,
+      "end": 2131.72,
+      "text": "And that completes checking that this process is going to"
+    },
+    {
+      "start": 2131.72,
+      "end": 2133.36,
+      "text": "be a Poisson process."
+    },
+    {
+      "start": 2133.36,
+      "end": 2138.04,
+      "text": "So when you split a Poisson process by doing independent"
+    },
+    {
+      "start": 2138.04,
+      "end": 2141.44,
+      "text": "coin flips each time that something happens, the process"
+    },
+    {
+      "start": 2141.44,
+      "end": 2144.74,
+      "text": "that you get is again a Poisson process, but of course"
+    },
+    {
+      "start": 2144.74,
+      "end": 2146.46,
+      "text": "with a reduced rate."
+    },
+    {
+      "start": 2146.46,
+      "end": 2150.04,
+      "text": "So instead of the word splitting, sometimes people"
+    },
+    {
+      "start": 2150.04,
+      "end": 2151.4,
+      "text": "also use the words thinning."
+    },
+    {
+      "start": 2151.4,
+      "end": 2151.62,
+      "text": "."
+    },
+    {
+      "start": 2151.62,
+      "end": 2151.92,
+      "text": "."
+    },
+    {
+      "start": 2151.92,
+      "end": 2152.22,
+      "text": "."
+    },
+    {
+      "start": 2152.22,
+      "end": 2152.46,
+      "text": "."
+    },
+    {
+      "start": 2152.46,
+      "end": 2152.52,
+      "text": "."
+    },
+    {
+      "start": 2152.52,
+      "end": 2152.94,
+      "text": "."
+    },
+    {
+      "start": 2152.94,
+      "end": 2153.28,
+      "text": "."
+    },
+    {
+      "start": 2153.28,
+      "end": 2153.38,
+      "text": "."
+    },
+    {
+      "start": 2153.38,
+      "end": 2154.26,
+      "text": "."
+    },
+    {
+      "start": 2154.26,
+      "end": 2157.64,
+      "text": "That is, out of the arrivals that came, you keep a few, but"
+    },
+    {
+      "start": 2157.64,
+      "end": 2161.88,
+      "text": "throw away a few."
+    },
+    {
+      "start": 2161.88,
+      "end": 2162.74,
+      "text": "OK."
+    },
+    {
+      "start": 2162.74,
+      "end": 2168.58,
+      "text": "So now, sort of the last topic of this lecture is a quite"
+    },
+    {
+      "start": 2168.58,
+      "end": 2171.26,
+      "text": "curious phenomenon that goes under the"
+    },
+    {
+      "start": 2171.26,
+      "end": 2175.54,
+      "text": "name of random incidence."
+    },
+    {
+      "start": 2175.54,
+      "end": 2178.98,
+      "text": "So here's the story."
+    },
+    {
+      "start": 2178.98,
+      "end": 2184.06,
+      "text": "Buses have been running on Mass Ave from time immemorial."
+    },
+    {
+      "start": 2184.06,
+      "end": 2186.6,
+      "text": "And the bus company that runs the buses,"
+    },
+    {
+      "start": 2186.6,
+      "end": 2192.18,
+      "text": "claims that they come as a Poisson process with some rate,"
+    },
+    {
+      "start": 2192.18,
+      "end": 2196.24,
+      "text": "let's say, of four buses per hour, so that the expected"
+    },
+    {
+      "start": 2196.24,
+      "end": 2205.02,
+      "text": "time between bus arrivals is going to be 15 minutes."
+    },
+    {
+      "start": 2205.02,
+      "end": 2205.84,
+      "text": "All right."
+    },
+    {
+      "start": 2205.84,
+      "end": 2208.24,
+      "text": "So people have been complaining that they've been"
+    },
+    {
+      "start": 2208.24,
+      "end": 2209.16,
+      "text": "showing up there."
+    },
+    {
+      "start": 2209.16,
+      "end": 2211.5,
+      "text": "They think the buses are taking too long."
+    },
+    {
+      "start": 2211.5,
+      "end": 2214.28,
+      "text": "So you're asked to investigate."
+    },
+    {
+      "start": 2214.28,
+      "end": 2218.5,
+      "text": "Is the company, does it operate according to its"
+    },
+    {
+      "start": 2218.5,
+      "end": 2220.3,
+      "text": "promises or not?"
+    },
+    {
+      "start": 2220.3,
+      "end": 2225.86,
+      "text": "So you send an undercover agent to go and check the"
+    },
+    {
+      "start": 2225.86,
+      "end": 2227.92,
+      "text": "inter-arrival times of the buses."
+    },
+    {
+      "start": 2227.92,
+      "end": 2231.68,
+      "text": "Are they 15 minutes, or are they longer?"
+    },
+    {
+      "start": 2231.68,
+      "end": 2237.62,
+      "text": "So you put your dark glasses, and you show up at the bus"
+    },
+    {
+      "start": 2237.62,
+      "end": 2241.12,
+      "text": "stop at some random time."
+    },
+    {
+      "start": 2241.12,
+      "end": 2245.52,
+      "text": "And you go and ask the guy in the falafel truck, how long"
+    },
+    {
+      "start": 2245.52,
+      "end": 2248.38,
+      "text": "has it been since the last arrival?"
+    },
+    {
+      "start": 2248.38,
+      "end": 2250.22,
+      "text": "So of course, that guy works for the FBI."
+    },
+    {
+      "start": 2250.22,
+      "end": 2251.32,
+      "text": "Right?"
+    },
+    {
+      "start": 2251.32,
+      "end": 2256.9,
+      "text": "So they tell you, well, it's been, let's say, 12 minutes"
+    },
+    {
+      "start": 2256.9,
+      "end": 2259.34,
+      "text": "since the last bus arrival."
+    },
+    {
+      "start": 2259.34,
+      "end": 2260.98,
+      "text": "And then you say, oh, 12 minutes."
+    },
+    {
+      "start": 2260.98,
+      "end": 2262.78,
+      "text": "Average time is 15."
+    },
+    {
+      "start": 2262.78,
+      "end": 2267.02,
+      "text": "So a bus should be coming any time now."
+    },
+    {
+      "start": 2267.02,
+      "end": 2268.22,
+      "text": "Is that correct?"
+    },
+    {
+      "start": 2268.22,
+      "end": 2268.62,
+      "text": "No."
+    },
+    {
+      "start": 2268.62,
+      "end": 2269.64,
+      "text": "You wouldn't think that way."
+    },
+    {
+      "start": 2269.64,
+      "end": 2271.02,
+      "text": "It's a Poisson process."
+    },
+    {
+      "start": 2271.02,
+      "end": 2274.48,
+      "text": "It doesn't matter how long it has been since the last bus"
+    },
+    {
+      "start": 2274.48,
+      "end": 2275.28,
+      "text": "arrival."
+    },
+    {
+      "start": 2275.28,
+      "end": 2276.9,
+      "text": "So you don't go through that fallacy."
+    },
+    {
+      "start": 2276.9,
+      "end": 2279.98,
+      "text": "Instead of predicting how long it's going to be, you just sit"
+    },
+    {
+      "start": 2279.98,
+      "end": 2283.32,
+      "text": "down there, and wait, and measure the time."
+    },
+    {
+      "start": 2283.32,
+      "end": 2288.84,
+      "text": "And you find that this is, let's say, 11 minutes."
+    },
+    {
+      "start": 2288.84,
+      "end": 2293.26,
+      "text": "And you go to your boss and report, well, it took."
+    },
+    {
+      "start": 2293.26,
+      "end": 2296.1,
+      "text": "I went there, and the time from the previous bus to the"
+    },
+    {
+      "start": 2296.1,
+      "end": 2298.3,
+      "text": "next one was 23 minutes."
+    },
+    {
+      "start": 2298.3,
+      "end": 2300.36,
+      "text": "It's more than the 15 that they said."
+    },
+    {
+      "start": 2300.36,
+      "end": 2301.84,
+      "text": "So go and do that again."
+    },
+    {
+      "start": 2301.84,
+      "end": 2303.6,
+      "text": "You go day after day."
+    },
+    {
+      "start": 2303.6,
+      "end": 2308.36,
+      "text": "You keep these statistics of the length of this interval."
+    },
+    {
+      "start": 2308.36,
+      "end": 2309.78,
+      "text": "And you tell your boss."
+    },
+    {
+      "start": 2309.78,
+      "end": 2312.16,
+      "text": "It's a lot more than 15."
+    },
+    {
+      "start": 2312.16,
+      "end": 2316.72,
+      "text": "It tends to be more like 30 or so."
+    },
+    {
+      "start": 2316.72,
+      "end": 2319.16,
+      "text": "So the bus company is cheating us."
+    },
+    {
+      "start": 2319.16,
+      "end": 2323.5,
+      "text": "Does the bus company really run Poisson buses at the rate"
+    },
+    {
+      "start": 2323.5,
+      "end": 2326.48,
+      "text": "that they have promised?"
+    },
+    {
+      "start": 2326.48,
+      "end": 2331.2,
+      "text": "Well, let's analyze the situation here and figure out"
+    },
+    {
+      "start": 2331.2,
+      "end": 2335.0,
+      "text": "what the length of this interval"
+    },
+    {
+      "start": 2335.0,
+      "end": 2337.9,
+      "text": "should be on the average."
+    },
+    {
+      "start": 2337.9,
+      "end": 2339.52,
+      "text": "The naive argument is that this interval is the length of"
+    },
+    {
+      "start": 2339.52,
+      "end": 2340.52,
+      "text": "this interval."
+    },
+    {
+      "start": 2340.52,
+      "end": 2342.6,
+      "text": "But this interval is an inter-arrival time."
+    },
+    {
+      "start": 2342.6,
+      "end": 2346.14,
+      "text": "And inter-arrival times, on the average, are 15 minutes,"
+    },
+    {
+      "start": 2346.14,
+      "end": 2350.46,
+      "text": "if the company runs, indeed, Poisson processes with these"
+    },
+    {
+      "start": 2350.46,
+      "end": 2351.82,
+      "text": "inter-arrival times."
+    },
+    {
+      "start": 2351.82,
+      "end": 2354.96,
+      "text": "But actually, the situation is a little more subtle, because"
+    },
+    {
+      "start": 2354.96,
+      "end": 2359.96,
+      "text": "this is not a typical inter-arrival interval."
+    },
+    {
+      "start": 2359.96,
+      "end": 2363.42,
+      "text": "This inter-arrival interval consists of two pieces."
+    },
+    {
+      "start": 2363.42,
+      "end": 2368.8,
+      "text": "Let's call them T1 and T1 prime."
+    },
+    {
+      "start": 2368.8,
+      "end": 2372.26,
+      "text": "What can you tell me about those two random variables?"
+    },
+    {
+      "start": 2372.26,
+      "end": 2375.94,
+      "text": "What kind of random variable is T1?"
+    },
+    {
+      "start": 2375.94,
+      "end": 2379.98,
+      "text": "Starting from this time, with the Poisson process, the path"
+    },
+    {
+      "start": 2379.98,
+      "end": 2381.3,
+      "text": "doesn't matter."
+    },
+    {
+      "start": 2381.3,
+      "end": 2383.84,
+      "text": "It's the time until an arrival happens."
+    },
+    {
+      "start": 2383.84,
+      "end": 2389.12,
+      "text": "So T1 is going to be an exponential random variable"
+    },
+    {
+      "start": 2389.12,
+      "end": 2393.28,
+      "text": "with parameter lambda."
+    },
+    {
+      "start": 2393.28,
+      "end": 2398.12,
+      "text": "So in particular, the expected value of T1 is going to be 15"
+    },
+    {
+      "start": 2398.12,
+      "end": 2398.78,
+      "text": "by itself."
+    },
+    {
+      "start": 2398.78,
+      "end": 2399.78,
+      "text": "How about the random variable?"
+    },
+    {
+      "start": 2399.78,
+      "end": 2400.78,
+      "text": "What kind of random variable is T1?"
+    },
+    {
+      "start": 2400.78,
+      "end": 2402.82,
+      "text": "What kind of random variable is T1 prime?"
+    },
+    {
+      "start": 2402.82,
+      "end": 2407.13,
+      "text": "What kind of random variable is it?"
+    },
+    {
+      "start": 2407.13,
+      "end": 2414.13,
+      "text": "This is like the first arrival in a Poisson process that runs"
+    },
+    {
+      "start": 2414.13,
+      "end": 2417.69,
+      "text": "backwards in time."
+    },
+    {
+      "start": 2417.69,
+      "end": 2420.33,
+      "text": "What kind of process is a Poisson process running"
+    },
+    {
+      "start": 2420.33,
+      "end": 2421.21,
+      "text": "backwards in time?"
+    },
+    {
+      "start": 2421.21,
+      "end": 2423.03,
+      "text": "Let's think of coin flips."
+    },
+    {
+      "start": 2423.03,
+      "end": 2426.13,
+      "text": "Suppose you have a movie of coin flips."
+    },
+    {
+      "start": 2426.13,
+      "end": 2429.47,
+      "text": "And for some accident, that fascinating movie, you happen"
+    },
+    {
+      "start": 2429.47,
+      "end": 2431.11,
+      "text": "to watch it backwards."
+    },
+    {
+      "start": 2431.11,
+      "end": 2432.51,
+      "text": "Will it look any different?"
+    },
+    {
+      "start": 2432.51,
+      "end": 2433.61,
+      "text": "Statistically?"
+    },
+    {
+      "start": 2433.61,
+      "end": 2433.79,
+      "text": "No."
+    },
+    {
+      "start": 2433.79,
+      "end": 2436.95,
+      "text": "It's going to be just a sequence of random coin flips."
+    },
+    {
+      "start": 2436.95,
+      "end": 2440.63,
+      "text": "So a Bernoulli process that runs in reverse time is"
+    },
+    {
+      "start": 2440.63,
+      "end": 2442.41,
+      "text": "statistically identical to a Bernoulli"
+    },
+    {
+      "start": 2442.41,
+      "end": 2444.31,
+      "text": "process in forward time."
+    },
+    {
+      "start": 2444.31,
+      "end": 2447.43,
+      "text": "The Poisson process is a limit of the Bernoulli, so same"
+    },
+    {
+      "start": 2447.43,
+      "end": 2448.95,
+      "text": "story with the Bernoulli process."
+    },
+    {
+      "start": 2448.95,
+      "end": 2451.51,
+      "text": "If you run it backwards in time, it looks the same."
+    },
+    {
+      "start": 2451.51,
+      "end": 2455.19,
+      "text": "So looking backwards in time, this is a Poisson process."
+    },
+    {
+      "start": 2455.19,
+      "end": 2458.95,
+      "text": "And T1 prime is the time until the first arrival in this"
+    },
+    {
+      "start": 2458.95,
+      "end": 2460.27,
+      "text": "backwards process."
+    },
+    {
+      "start": 2460.27,
+      "end": 2462.49,
+      "text": "So T1 prime is also a Poisson process."
+    },
+    {
+      "start": 2462.51,
+      "end": 2465.83,
+      "text": "going to be an exponential random variable with the same"
+    },
+    {
+      "start": 2465.83,
+      "end": 2467.31,
+      "text": "parameter lambda."
+    },
+    {
+      "start": 2467.31,
+      "end": 2470.95,
+      "text": "And the expected value of T1 prime is 15."
+    },
+    {
+      "start": 2470.95,
+      "end": 2475.81,
+      "text": "Conclusion is that the expected length of this"
+    },
+    {
+      "start": 2475.81,
+      "end": 2482.83,
+      "text": "interval is going to be 30 minutes."
+    },
+    {
+      "start": 2482.83,
+      "end": 2486.65,
+      "text": "And the fact that this agent found the average to be"
+    },
+    {
+      "start": 2486.65,
+      "end": 2491.19,
+      "text": "something like 30 does not contradict the claims of the"
+    },
+    {
+      "start": 2491.19,
+      "end": 2494.87,
+      "text": "bus company that they're running Poisson buses with a"
+    },
+    {
+      "start": 2494.87,
+      "end": 2498.37,
+      "text": "rate of lambda equal to 4."
+    },
+    {
+      "start": 2498.37,
+      "end": 2503.37,
+      "text": "OK, so maybe the company can this way, they can defend"
+    },
+    {
+      "start": 2503.37,
+      "end": 2504.95,
+      "text": "themselves in court."
+    },
+    {
+      "start": 2504.95,
+      "end": 2507.47,
+      "text": "But there's some puzzling here."
+    },
+    {
+      "start": 2507.47,
+      "end": 2510.37,
+      "text": "How long is the inter-arrival time?"
+    },
+    {
+      "start": 2510.37,
+      "end": 2516.13,
+      "text": "Is it 15 or is it 30 on the average?"
+    },
+    {
+      "start": 2516.13,
+      "end": 2520.85,
+      "text": "The issue is, what do we mean by a typical inter-arrival"
+    },
+    {
+      "start": 2520.85,
+      "end": 2521.19,
+      "text": "time?"
+    },
+    {
+      "start": 2521.19,
+      "end": 2524.91,
+      "text": "When we say typical, we mean some kind of average."
+    },
+    {
+      "start": 2524.91,
+      "end": 2528.37,
+      "text": "But average over what?"
+    },
+    {
+      "start": 2528.37,
+      "end": 2533.29,
+      "text": "And here's two different ways of thinking about averages."
+    },
+    {
+      "start": 2533.29,
+      "end": 2535.07,
+      "text": "You number the buses."
+    },
+    {
+      "start": 2535.07,
+      "end": 2539.11,
+      "text": "And you have bus number 100, you have bus number 101, bus"
+    },
+    {
+      "start": 2539.11,
+      "end": 2544.65,
+      "text": "number 102, bus number 110, and so on."
+    },
+    {
+      "start": 2544.65,
+      "end": 2549.37,
+      "text": "One way of thinking about averages is that you pick a"
+    },
+    {
+      "start": 2549.37,
+      "end": 2550.85,
+      "text": "bus number at random."
+    },
+    {
+      "start": 2550.85,
+      "end": 2555.59,
+      "text": "At random, I pick, let's say, that bus, all buses being sort"
+    },
+    {
+      "start": 2555.59,
+      "end": 2557.77,
+      "text": "of equally likely to be picked."
+    },
+    {
+      "start": 2557.77,
+      "end": 2561.61,
+      "text": "And I measure this inter-arrival time."
+    },
+    {
+      "start": 2561.61,
+      "end": 2568.25,
+      "text": "So for a typical bus, then starting from here until"
+    },
+    {
+      "start": 2568.25,
+      "end": 2575.23,
+      "text": "there, the expected time has to be 1 over lambda for the"
+    },
+    {
+      "start": 2575.23,
+      "end": 2576.59,
+      "text": "Poisson process."
+    },
+    {
+      "start": 2576.59,
+      "end": 2578.53,
+      "text": "But what we did in this experiment was"
+    },
+    {
+      "start": 2578.53,
+      "end": 2579.77,
+      "text": "something different."
+    },
+    {
+      "start": 2579.77,
+      "end": 2582.05,
+      "text": "We didn't pick a bus at random."
+    },
+    {
+      "start": 2582.05,
+      "end": 2585.11,
+      "text": "We picked a time at random."
+    },
+    {
+      "start": 2585.11,
+      "end": 2588.85,
+      "text": "And if the picture is, let's say, this way, I'm much more"
+    },
+    {
+      "start": 2588.85,
+      "end": 2592.87,
+      "text": "likely to pick this interval, and therefore this"
+    },
+    {
+      "start": 2592.87,
+      "end": 2596.61,
+      "text": "inter-arrival time, rather than that interval."
+    },
+    {
+      "start": 2596.61,
+      "end": 2600.47,
+      "text": "Because this interval corresponds to very few times."
+    },
+    {
+      "start": 2600.47,
+      "end": 2603.69,
+      "text": "So if I'm picking a time at random, and in some sense,"
+    },
+    {
+      "start": 2603.69,
+      "end": 2607.41,
+      "text": "let's say, uniformly, so that all times are equally likely,"
+    },
+    {
+      "start": 2607.41,
+      "end": 2611.21,
+      "text": "I'm much more likely to fall inside the big interval rather"
+    },
+    {
+      "start": 2611.21,
+      "end": 2611.85,
+      "text": "than the small interval."
+    },
+    {
+      "start": 2611.85,
+      "end": 2617.13,
+      "text": "So a person who shows up at the bus stop at a random time,"
+    },
+    {
+      "start": 2617.13,
+      "end": 2622.03,
+      "text": "they're selecting an interval in a biased way, with a bias in"
+    },
+    {
+      "start": 2622.03,
+      "end": 2624.35,
+      "text": "favor of longer intervals."
+    },
+    {
+      "start": 2624.35,
+      "end": 2627.89,
+      "text": "And that's why what they observe is a random variable"
+    },
+    {
+      "start": 2627.89,
+      "end": 2631.83,
+      "text": "that has a larger expected value than the ordinary"
+    },
+    {
+      "start": 2631.83,
+      "end": 2633.07,
+      "text": "expected value."
+    },
+    {
+      "start": 2633.07,
+      "end": 2636.77,
+      "text": "So the subtlety here is to realize that we're talking"
+    },
+    {
+      "start": 2636.77,
+      "end": 2640.57,
+      "text": "between two different kinds of experiments, picking a bus"
+    },
+    {
+      "start": 2640.57,
+      "end": 2641.73,
+      "text": "number at random."
+    },
+    {
+      "start": 2641.85,
+      "end": 2648.35,
+      "text": "Versus picking an interval at random with a bias in favor of"
+    },
+    {
+      "start": 2648.35,
+      "end": 2650.13,
+      "text": "longer intervals."
+    },
+    {
+      "start": 2650.13,
+      "end": 2654.85,
+      "text": "Many of lots of paradoxes that one can cook up using Poisson"
+    },
+    {
+      "start": 2654.85,
+      "end": 2658.13,
+      "text": "processes, and random processes in general, often"
+    },
+    {
+      "start": 2658.13,
+      "end": 2661.33,
+      "text": "have to do with the story of this kind."
+    },
+    {
+      "start": 2661.33,
+      "end": 2664.77,
+      "text": "The phenomenon that we had in this particular example also"
+    },
+    {
+      "start": 2664.77,
+      "end": 2668.93,
+      "text": "shows up in general whenever you have other kinds of"
+    },
+    {
+      "start": 2668.93,
+      "end": 2670.47,
+      "text": "arrival processes."
+    },
+    {
+      "start": 2670.47,
+      "end": 2671.85,
+      "text": "So the Poisson process."
+    },
+    {
+      "start": 2671.85,
+      "end": 2675.25,
+      "text": "Is the simplest arrival process there is, where the"
+    },
+    {
+      "start": 2675.25,
+      "end": 2678.79,
+      "text": "inter-arrival times are exponential random variables."
+    },
+    {
+      "start": 2678.79,
+      "end": 2680.27,
+      "text": "There's a larger class of models."
+    },
+    {
+      "start": 2680.27,
+      "end": 2683.57,
+      "text": "They're called renewal processes, in which, again, we"
+    },
+    {
+      "start": 2683.57,
+      "end": 2685.77,
+      "text": "have a sequence of successive arrivals."
+    },
+    {
+      "start": 2685.77,
+      "end": 2688.59,
+      "text": "Inter-arrival times are identically distributed and"
+    },
+    {
+      "start": 2688.59,
+      "end": 2692.29,
+      "text": "independent, but they may come from a general distribution."
+    },
+    {
+      "start": 2692.29,
+      "end": 2695.01,
+      "text": "So to make the same point of the previous example, but in"
+    },
+    {
+      "start": 2695.01,
+      "end": 2696.71,
+      "text": "a much simpler setting."
+    },
+    {
+      "start": 2696.71,
+      "end": 2701.53,
+      "text": "Suppose that bus inter-arrival times are either five or 10"
+    },
+    {
+      "start": 2701.53,
+      "end": 2702.83,
+      "text": "minutes apart."
+    },
+    {
+      "start": 2702.83,
+      "end": 2705.95,
+      "text": "So you get some intervals that are of length five."
+    },
+    {
+      "start": 2705.95,
+      "end": 2708.79,
+      "text": "You get some that are of length 10."
+    },
+    {
+      "start": 2708.79,
+      "end": 2712.79,
+      "text": "And suppose that these are equally likely."
+    },
+    {
+      "start": 2712.79,
+      "end": 2716.99,
+      "text": "So we have exactly as many five, not exactly."
+    },
+    {
+      "start": 2716.99,
+      "end": 2720.25,
+      "text": "In the long run, we have as many five-minute intervals as"
+    },
+    {
+      "start": 2720.25,
+      "end": 2722.49,
+      "text": "we have 10-minute intervals."
+    },
+    {
+      "start": 2722.49,
+      "end": 2730.91,
+      "text": "So the average inter-arrival time is seven and a half."
+    },
+    {
+      "start": 2730.91,
+      "end": 2735.87,
+      "text": "But if a person shows up at a random time, what are they"
+    },
+    {
+      "start": 2735.87,
+      "end": 2740.65,
+      "text": "going to see?"
+    },
+    {
+      "start": 2740.65,
+      "end": 2743.15,
+      "text": "We have as many fives as 10s."
+    },
+    {
+      "start": 2743.15,
+      "end": 2747.55,
+      "text": "But every 10 covers twice as much space."
+    },
+    {
+      "start": 2747.55,
+      "end": 2751.41,
+      "text": "So if I show up at a random time, I have probability"
+    },
+    {
+      "start": 2751.41,
+      "end": 2757.19,
+      "text": "2 thirds of falling inside a 10 interval of duration 10."
+    },
+    {
+      "start": 2757.19,
+      "end": 2761.07,
+      "text": "And I have 1 third probability of falling inside an interval"
+    },
+    {
+      "start": 2761.07,
+      "end": 2762.45,
+      "text": "of duration 5."
+    },
+    {
+      "start": 2762.45,
+      "end": 2763.35,
+      "text": "That's because."
+    },
+    {
+      "start": 2763.35,
+      "end": 2767.27,
+      "text": "out of the whole real line, 2 thirds of it is covered by"
+    },
+    {
+      "start": 2767.27,
+      "end": 2769.59,
+      "text": "intervals of length 10, just because they're longer."
+    },
+    {
+      "start": 2769.59,
+      "end": 2772.27,
+      "text": "1 third is covered by the smaller intervals."
+    },
+    {
+      "start": 2772.27,
+      "end": 2779.45,
+      "text": "Now, if I fall inside an interval of length 10, and I"
+    },
+    {
+      "start": 2779.45,
+      "end": 2783.35,
+      "text": "measure the length of the interval that I fell into,"
+    },
+    {
+      "start": 2783.35,
+      "end": 2785.05,
+      "text": "that's going to be 10."
+    },
+    {
+      "start": 2785.05,
+      "end": 2787.81,
+      "text": "But if I fall inside an interval of length 5, and I"
+    },
+    {
+      "start": 2787.81,
+      "end": 2790.33,
+      "text": "measure how long it is, I'm going to get a 5."
+    },
+    {
+      "start": 2790.33,
+      "end": 2794.59,
+      "text": "And that, of course, is going to be different than 7.5."
+    },
+    {
+      "start": 2796.07,
+      "end": 2798.01,
+      "text": "OK."
+    },
+    {
+      "start": 2798.01,
+      "end": 2802.31,
+      "text": "And which number should be bigger?"
+    },
+    {
+      "start": 2802.31,
+      "end": 2805.11,
+      "text": "It's the second number that's bigger, because this one is"
+    },
+    {
+      "start": 2805.11,
+      "end": 2808.99,
+      "text": "biased in favor of the longer intervals."
+    },
+    {
+      "start": 2808.99,
+      "end": 2811.41,
+      "text": "So that's, again, another illustration of the different"
+    },
+    {
+      "start": 2811.41,
+      "end": 2814.07,
+      "text": "results that you get when you have this random"
+    },
+    {
+      "start": 2814.07,
+      "end": 2815.99,
+      "text": "incidence phenomenon."
+    },
+    {
+      "start": 2815.99,
+      "end": 2819.33,
+      "text": "So the bottom line, again, is that if you talk about a"
+    },
+    {
+      "start": 2819.33,
+      "end": 2823.39,
+      "text": "typical inter-arrival time, one must be very precise in"
+    },
+    {
+      "start": 2823.39,
+      "end": 2825.39,
+      "text": "specifying what we mean typical."
+    },
+    {
+      "start": 2825.39,
+      "end": 2828.09,
+      "text": "So typical means sort of random."
+    },
+    {
+      "start": 2828.09,
+      "end": 2831.23,
+      "text": "But to use the word random, you must specify very"
+    },
+    {
+      "start": 2831.23,
+      "end": 2835.07,
+      "text": "precisely what is the random experiment that you are using."
+    },
+    {
+      "start": 2835.07,
+      "end": 2838.45,
+      "text": "And if you're not careful, you can get into sort of apparent"
+    },
+    {
+      "start": 2838.45,
+      "end": 2840.77,
+      "text": "puzzles, such as the following."
+    },
+    {
+      "start": 2840.77,
+      "end": 2845.17,
+      "text": "Suppose somebody tells you the average family size is 4, but"
+    },
+    {
+      "start": 2845.17,
+      "end": 2850.31,
+      "text": "the average person lives in a family of size 6."
+    },
+    {
+      "start": 2850.31,
+      "end": 2853.33,
+      "text": "Is that compatible?"
+    },
+    {
+      "start": 2853.33,
+      "end": 2855.17,
+      "text": "Family size is 4 on the average."
+    },
+    {
+      "start": 2855.17,
+      "end": 2858.01,
+      "text": "But typical people live, on the average, in"
+    },
+    {
+      "start": 2858.01,
+      "end": 2860.19,
+      "text": "families of size 6."
+    },
+    {
+      "start": 2860.19,
+      "end": 2861.59,
+      "text": "Well, yes."
+    },
+    {
+      "start": 2861.59,
+      "end": 2863.05,
+      "text": "There's no contradiction here."
+    },
+    {
+      "start": 2863.05,
+      "end": 2865.41,
+      "text": "We're talking about two different experiments."
+    },
+    {
+      "start": 2865.41,
+      "end": 2869.53,
+      "text": "Well, in one experiment, I pick a family at random."
+    },
+    {
+      "start": 2869.53,
+      "end": 2871.95,
+      "text": "And I tell you the average family is 4."
+    },
+    {
+      "start": 2871.95,
+      "end": 2875.39,
+      "text": "In another experiment, I pick a person at random."
+    },
+    {
+      "start": 2875.39,
+      "end": 2877.73,
+      "text": "And I tell you that this person, on the average, will"
+    },
+    {
+      "start": 2877.73,
+      "end": 2880.07,
+      "text": "be in a family of size 6."
+    },
+    {
+      "start": 2880.07,
+      "end": 2881.15,
+      "text": "And what's the catch here?"
+    },
+    {
+      "start": 2881.15,
+      "end": 2885.15,
+      "text": "That if I pick a person at random, large families,"
+    },
+    {
+      "start": 2885.17,
+      "end": 2888.19,
+      "text": "are more likely to be picked."
+    },
+    {
+      "start": 2888.19,
+      "end": 2891.69,
+      "text": "So there's a bias in favor of the large families."
+    },
+    {
+      "start": 2891.69,
+      "end": 2895.27,
+      "text": "Or if you want to survey, let's say, are trains crowded"
+    },
+    {
+      "start": 2895.27,
+      "end": 2897.35,
+      "text": "in your city?"
+    },
+    {
+      "start": 2897.35,
+      "end": 2899.17,
+      "text": "Or are buses crowded?"
+    },
+    {
+      "start": 2899.17,
+      "end": 2901.59,
+      "text": "One choice is to pick a bus at random and"
+    },
+    {
+      "start": 2901.59,
+      "end": 2903.21,
+      "text": "inspect how crowded it is."
+    },
+    {
+      "start": 2903.21,
+      "end": 2907.27,
+      "text": "Another choice is to pick a typical person and ask them,"
+    },
+    {
+      "start": 2907.27,
+      "end": 2909.09,
+      "text": "did you ride the bus today?"
+    },
+    {
+      "start": 2909.09,
+      "end": 2911.21,
+      "text": "Was it crowded?"
+    },
+    {
+      "start": 2911.21,
+      "end": 2914.59,
+      "text": "Well, suppose that in this city, there's one bus that's"
+    },
+    {
+      "start": 2914.59,
+      "end": 2916.75,
+      "text": "extremely crowded, and all the other buses"
+    },
+    {
+      "start": 2916.75,
+      "end": 2918.53,
+      "text": "are completely empty."
+    },
+    {
+      "start": 2918.53,
+      "end": 2921.57,
+      "text": "If you ask a person, was your bus crowded?"
+    },
+    {
+      "start": 2921.57,
+      "end": 2924.81,
+      "text": "They will tell you, yes, my bus was crowded."
+    },
+    {
+      "start": 2924.81,
+      "end": 2927.59,
+      "text": "There's no witness from the empty buses to"
+    },
+    {
+      "start": 2927.59,
+      "end": 2929.47,
+      "text": "testify in their favor."
+    },
+    {
+      "start": 2929.47,
+      "end": 2932.75,
+      "text": "So by sampling people instead of sampling buses, you're"
+    },
+    {
+      "start": 2932.75,
+      "end": 2934.93,
+      "text": "going to get a different result."
+    },
+    {
+      "start": 2934.93,
+      "end": 2938.29,
+      "text": "And in the process industry, if your job is to inspect and"
+    },
+    {
+      "start": 2938.29,
+      "end": 2941.39,
+      "text": "check cookies, you will be faced with big dilemma."
+    },
+    {
+      "start": 2941.39,
+      "end": 2944.57,
+      "text": "Do you want to find out how many chocolate chips there are?"
+    },
+    {
+      "start": 2944.59,
+      "end": 2946.95,
+      "text": "are on a typical cookie."
+    },
+    {
+      "start": 2946.95,
+      "end": 2950.03,
+      "text": "Are you going to interview cookies, or are you going to"
+    },
+    {
+      "start": 2950.03,
+      "end": 2953.91,
+      "text": "interview chocolate chips and ask them how many other chips"
+    },
+    {
+      "start": 2953.91,
+      "end": 2956.55,
+      "text": "were there on your cookie?"
+    },
+    {
+      "start": 2956.55,
+      "end": 2958.05,
+      "text": "And you're going to get different"
+    },
+    {
+      "start": 2958.05,
+      "end": 2959.41,
+      "text": "answers in these cases."
+    },
+    {
+      "start": 2959.41,
+      "end": 2964.05,
+      "text": "So moral is one has to be very precise on how you formulate"
+    },
+    {
+      "start": 2964.05,
+      "end": 2966.51,
+      "text": "the sampling procedure that you have, and you'll get"
+    },
+    {
+      "start": 2966.51,
+      "end": 2967.75,
+      "text": "different answers."
+    }
+  ]
+}

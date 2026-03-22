@@ -1,0 +1,4682 @@
+{
+  "lecture": "lec21",
+  "language": "en",
+  "duration": 2929.0453125,
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.44,
+      "text": "The following content is provided under a Creative"
+    },
+    {
+      "start": 2.44,
+      "end": 3.96,
+      "text": "Commons license."
+    },
+    {
+      "start": 3.96,
+      "end": 6.28,
+      "text": "Your support will help MIT OpenCourseWare"
+    },
+    {
+      "start": 6.28,
+      "end": 10.64,
+      "text": "continue to offer high quality educational resources for free."
+    },
+    {
+      "start": 10.64,
+      "end": 13.26,
+      "text": "To make a donation or view additional materials"
+    },
+    {
+      "start": 13.26,
+      "end": 17.2,
+      "text": "from hundreds of MIT courses, visit MIT OpenCourseWare"
+    },
+    {
+      "start": 17.2,
+      "end": 22.02,
+      "text": "at ocw.mit.edu."
+    },
+    {
+      "start": 22.02,
+      "end": 25.38,
+      "text": "About real phenomena out there."
+    },
+    {
+      "start": 25.38,
+      "end": 29.06,
+      "text": "So we have real stuff that happens."
+    },
+    {
+      "start": 29.06,
+      "end": 33.62,
+      "text": "So it might be an arrival process to a bank that we're"
+    },
+    {
+      "start": 33.62,
+      "end": 35.8,
+      "text": "trying to model."
+    },
+    {
+      "start": 35.8,
+      "end": 37.04,
+      "text": "This is reality."
+    },
+    {
+      "start": 37.04,
+      "end": 39.7,
+      "text": "But this is what we have been doing so far."
+    },
+    {
+      "start": 39.7,
+      "end": 41.92,
+      "text": "We have been playing with models of"
+    },
+    {
+      "start": 41.92,
+      "end": 43.74,
+      "text": "probabilistic phenomena."
+    },
+    {
+      "start": 43.74,
+      "end": 46.76,
+      "text": "And somehow we need to tie the two together."
+    },
+    {
+      "start": 46.76,
+      "end": 50.92,
+      "text": "The way these are tied is that we observe the real world, and"
+    },
+    {
+      "start": 50.92,
+      "end": 53.54,
+      "text": "this gives us data."
+    },
+    {
+      "start": 53.54,
+      "end": 58.6,
+      "text": "And then based on these data, we try to come up with a model"
+    },
+    {
+      "start": 58.6,
+      "end": 61.9,
+      "text": "of what exactly is going on."
+    },
+    {
+      "start": 61.9,
+      "end": 65.3,
+      "text": "For example, for an arrival process, you might ask the"
+    },
+    {
+      "start": 65.3,
+      "end": 68.68,
+      "text": "modeling question, is my arrival process Poisson, or is"
+    },
+    {
+      "start": 68.68,
+      "end": 70.3,
+      "text": "it something different?"
+    },
+    {
+      "start": 70.3,
+      "end": 74.64,
+      "text": "If it is Poisson, what is the rate of the arrival process?"
+    },
+    {
+      "start": 74.64,
+      "end": 77.38,
+      "text": "Once you come up with your model, and you come up with"
+    },
+    {
+      "start": 77.38,
+      "end": 81.74,
+      "text": "the parameters of the model, then you can use it to make"
+    },
+    {
+      "start": 81.74,
+      "end": 88.28,
+      "text": "predictions about reality or to figure out certain hidden"
+    },
+    {
+      "start": 88.28,
+      "end": 88.54,
+      "text": "things."
+    },
+    {
+      "start": 88.54,
+      "end": 92.3,
+      "text": "Certain hidden aspects of reality that you do not observe"
+    },
+    {
+      "start": 92.3,
+      "end": 95.58,
+      "text": "directly, but you try to infer what they are."
+    },
+    {
+      "start": 95.58,
+      "end": 98.9,
+      "text": "So that's where the usefulness of the model comes in."
+    },
+    {
+      "start": 98.9,
+      "end": 103.64,
+      "text": "Now this field is, of course, tremendously useful, and it"
+    },
+    {
+      "start": 103.64,
+      "end": 106.66,
+      "text": "shows up pretty much everywhere."
+    },
+    {
+      "start": 106.66,
+      "end": 110.76,
+      "text": "So we talked about the polling examples in the last couple of"
+    },
+    {
+      "start": 110.76,
+      "end": 111.3,
+      "text": "lectures."
+    },
+    {
+      "start": 111.3,
+      "end": 113.54,
+      "text": "This is, of course, a real application."
+    },
+    {
+      "start": 113.54,
+      "end": 117.28,
+      "text": "You sample, and on the basis of the sample that you have,"
+    },
+    {
+      "start": 117.28,
+      "end": 118.22,
+      "text": "you try to make some"
+    },
+    {
+      "start": 118.22,
+      "end": 121.7,
+      "text": "inferences about, let's say, the preferences in a given"
+    },
+    {
+      "start": 121.7,
+      "end": 123.08,
+      "text": "population."
+    },
+    {
+      "start": 123.08,
+      "end": 126.22,
+      "text": "Let's say in the medical field, you want to try whether a"
+    },
+    {
+      "start": 126.22,
+      "end": 128.92,
+      "text": "certain drug makes a difference or not."
+    },
+    {
+      "start": 128.92,
+      "end": 134.16,
+      "text": "So people will do medical trials, get some results."
+    },
+    {
+      "start": 134.16,
+      "end": 136.64,
+      "text": "And then from the data, somehow you need to make sense"
+    },
+    {
+      "start": 136.64,
+      "end": 138.52,
+      "text": "of them and make a decision."
+    },
+    {
+      "start": 138.52,
+      "end": 141.36,
+      "text": "Is the new drug useful, or is it not?"
+    },
+    {
+      "start": 141.36,
+      "end": 143.44,
+      "text": "How do we go systematically about the"
+    },
+    {
+      "start": 143.44,
+      "end": 144.68,
+      "text": "question of this type?"
+    },
+    {
+      "start": 148.22,
+      "end": 150.64,
+      "text": "So that's a more sexier, more recent topic."
+    },
+    {
+      "start": 150.64,
+      "end": 154.62,
+      "text": "There is this famous Netflix competition, where Netflix"
+    },
+    {
+      "start": 154.62,
+      "end": 161.46,
+      "text": "gives you a huge table of movies and people."
+    },
+    {
+      "start": 161.46,
+      "end": 166.44,
+      "text": "And people have rated movies, but not everyone has watched"
+    },
+    {
+      "start": 166.44,
+      "end": 167.88,
+      "text": "all the movies in there."
+    },
+    {
+      "start": 167.88,
+      "end": 169.46,
+      "text": "You have some of the ratings."
+    },
+    {
+      "start": 169.46,
+      "end": 173.24,
+      "text": "For example, this person gave a 4 to that particular movie."
+    },
+    {
+      "start": 173.24,
+      "end": 177.26,
+      "text": "So you get the table that's partially filled, and Netflix"
+    },
+    {
+      "start": 177.26,
+      "end": 178.08,
+      "text": "asks you to make a table."
+    },
+    {
+      "start": 178.08,
+      "end": 179.86,
+      "text": "You make recommendations to people."
+    },
+    {
+      "start": 179.86,
+      "end": 182.42,
+      "text": "So this means trying to guess."
+    },
+    {
+      "start": 182.42,
+      "end": 185.8,
+      "text": "This person here, how much would they like"
+    },
+    {
+      "start": 185.8,
+      "end": 187.64,
+      "text": "this particular movie?"
+    },
+    {
+      "start": 187.64,
+      "end": 191.14,
+      "text": "And you can start thinking, well, maybe this person has"
+    },
+    {
+      "start": 191.14,
+      "end": 194.88,
+      "text": "given somewhat similar ratings with another person."
+    },
+    {
+      "start": 194.88,
+      "end": 198.44,
+      "text": "And if that other person has also seen that movie, maybe"
+    },
+    {
+      "start": 198.44,
+      "end": 201.34,
+      "text": "the rating of that other person is relevant."
+    },
+    {
+      "start": 201.34,
+      "end": 204.24,
+      "text": "But of course, it's a lot more complicated than that."
+    },
+    {
+      "start": 204.24,
+      "end": 206.7,
+      "text": "And this has been a serious competition, where people have"
+    },
+    {
+      "start": 206.7,
+      "end": 208.0,
+      "text": "been using every"
+    },
+    {
+      "start": 208.0,
+      "end": 211.94,
+      "text": "heavy machinery that there is in statistics, trying to come"
+    },
+    {
+      "start": 211.94,
+      "end": 215.16,
+      "text": "up with good recommendation systems."
+    },
+    {
+      "start": 215.16,
+      "end": 217.34,
+      "text": "Then other people, of course, are trying to"
+    },
+    {
+      "start": 217.34,
+      "end": 218.96,
+      "text": "analyze financial data."
+    },
+    {
+      "start": 218.96,
+      "end": 223.88,
+      "text": "Somebody gives you the sequence of values, let's say,"
+    },
+    {
+      "start": 223.88,
+      "end": 225.82,
+      "text": "of the S&P index."
+    },
+    {
+      "start": 225.82,
+      "end": 228.84,
+      "text": "You look at something like this, and you can ask"
+    },
+    {
+      "start": 228.84,
+      "end": 229.78,
+      "text": "questions."
+    },
+    {
+      "start": 229.78,
+      "end": 235.02,
+      "text": "How do I model these data using any of the models that"
+    },
+    {
+      "start": 235.02,
+      "end": 237.06,
+      "text": "we have in our bag of tools?"
+    },
+    {
+      "start": 237.06,
+      "end": 237.98,
+      "text": "How can I make"
+    },
+    {
+      "start": 238.0,
+      "end": 241.66,
+      "text": "predictions about what's going to happen afterwards?"
+    },
+    {
+      "start": 241.66,
+      "end": 243.32,
+      "text": "And so on."
+    },
+    {
+      "start": 243.32,
+      "end": 249.72,
+      "text": "On the engineering side, anywhere where you have noise,"
+    },
+    {
+      "start": 249.72,
+      "end": 251.58,
+      "text": "inference comes in."
+    },
+    {
+      "start": 251.58,
+      "end": 253.94,
+      "text": "Signal processing, in some sense, is just an"
+    },
+    {
+      "start": 253.94,
+      "end": 254.96,
+      "text": "inference problem."
+    },
+    {
+      "start": 254.96,
+      "end": 258.72,
+      "text": "You observe signals that are noisy, and you try to figure"
+    },
+    {
+      "start": 258.72,
+      "end": 261.76,
+      "text": "out exactly what's happening out there, or what kind of"
+    },
+    {
+      "start": 261.76,
+      "end": 264.14,
+      "text": "signal has been sent."
+    },
+    {
+      "start": 264.14,
+      "end": 267.34,
+      "text": "Maybe the beginning of the field could be traced."
+    },
+    {
+      "start": 268.0,
+      "end": 272.04,
+      "text": "A few hundred years ago, where people would make"
+    },
+    {
+      "start": 272.04,
+      "end": 276.24,
+      "text": "astronomical observations of the position of planets in the"
+    },
+    {
+      "start": 276.24,
+      "end": 280.88,
+      "text": "sky, they would have some beliefs that perhaps the orbit"
+    },
+    {
+      "start": 280.88,
+      "end": 286.24,
+      "text": "of a planet is an ellipse, or if it's a comet, maybe it's a"
+    },
+    {
+      "start": 286.24,
+      "end": 287.56,
+      "text": "parabola, hyperbola."
+    },
+    {
+      "start": 287.56,
+      "end": 289.18,
+      "text": "I don't know what it is, but they would"
+    },
+    {
+      "start": 289.18,
+      "end": 291.28,
+      "text": "have a model of that."
+    },
+    {
+      "start": 291.28,
+      "end": 293.8,
+      "text": "But of course, astronomical measurements would not be"
+    },
+    {
+      "start": 293.8,
+      "end": 297.66,
+      "text": "perfectly exact, and they would try to find the curve that's,"
+    },
+    {
+      "start": 297.66,
+      "end": 300.68,
+      "text": "in fact, fits these data."
+    },
+    {
+      "start": 300.68,
+      "end": 305.6,
+      "text": "How do you go about choosing this particular curve on the"
+    },
+    {
+      "start": 305.6,
+      "end": 307.96,
+      "text": "base of noisy data, and try to do it in a"
+    },
+    {
+      "start": 307.96,
+      "end": 311.2,
+      "text": "somewhat principled way?"
+    },
+    {
+      "start": 311.2,
+      "end": 311.94,
+      "text": "OK."
+    },
+    {
+      "start": 311.94,
+      "end": 315.06,
+      "text": "So questions of this type, clearly the applications are"
+    },
+    {
+      "start": 315.06,
+      "end": 317.1,
+      "text": "all over the place."
+    },
+    {
+      "start": 317.1,
+      "end": 320.84,
+      "text": "But how is this related conceptually with what we have"
+    },
+    {
+      "start": 320.84,
+      "end": 322.4,
+      "text": "been doing so far?"
+    },
+    {
+      "start": 322.4,
+      "end": 325.96,
+      "text": "What's the relation between the field of inference and the"
+    },
+    {
+      "start": 325.96,
+      "end": 327.4,
+      "text": "field of probability?"
+    },
+    {
+      "start": 327.4,
+      "end": 330.72,
+      "text": "As we have been practicing until now?"
+    },
+    {
+      "start": 330.72,
+      "end": 333.6,
+      "text": "Well, mathematically speaking, what's going to happen in the"
+    },
+    {
+      "start": 333.6,
+      "end": 338.8,
+      "text": "next few lectures could be just exercises or homework"
+    },
+    {
+      "start": 338.8,
+      "end": 344.92,
+      "text": "problems in the class based on what we have done so far."
+    },
+    {
+      "start": 344.92,
+      "end": 348.58,
+      "text": "That is, you're not going to get any new facts about"
+    },
+    {
+      "start": 348.58,
+      "end": 350.2,
+      "text": "probability theory."
+    },
+    {
+      "start": 350.2,
+      "end": 354.02,
+      "text": "Everything we're going to do will be simple applications of"
+    },
+    {
+      "start": 354.02,
+      "end": 357.12,
+      "text": "things that you already do know."
+    },
+    {
+      "start": 357.12,
+      "end": 360.66,
+      "text": "So in some sense, statistics and inference is just an applied"
+    },
+    {
+      "start": 360.66,
+      "end": 362.76,
+      "text": "exercise in probability."
+    },
+    {
+      "start": 362.76,
+      "end": 368.9,
+      "text": "But actually, things are not that simple in the following"
+    },
+    {
+      "start": 368.9,
+      "end": 369.56,
+      "text": "sense."
+    },
+    {
+      "start": 369.56,
+      "end": 373.52,
+      "text": "If you get the probability problem, there's a correct"
+    },
+    {
+      "start": 373.52,
+      "end": 375.44,
+      "text": "answer, there's a correct solution."
+    },
+    {
+      "start": 375.44,
+      "end": 378.16,
+      "text": "And that correct solution is unique."
+    },
+    {
+      "start": 378.16,
+      "end": 380.52,
+      "text": "There's no ambiguity."
+    },
+    {
+      "start": 380.52,
+      "end": 383.4,
+      "text": "The theory of probability has clearly defined rules."
+    },
+    {
+      "start": 383.4,
+      "end": 384.6,
+      "text": "These are the axioms."
+    },
+    {
+      "start": 384.6,
+      "end": 386.52,
+      "text": "You're given some information about probability."
+    },
+    {
+      "start": 386.52,
+      "end": 389.5,
+      "text": "And probability distributions, you're asked to calculate"
+    },
+    {
+      "start": 389.5,
+      "end": 391.04,
+      "text": "certain other things."
+    },
+    {
+      "start": 391.04,
+      "end": 392.2,
+      "text": "There's no ambiguity."
+    },
+    {
+      "start": 392.2,
+      "end": 394.28,
+      "text": "Answers are always unique."
+    },
+    {
+      "start": 394.28,
+      "end": 399.22,
+      "text": "In statistical questions, it's no longer the case that the"
+    },
+    {
+      "start": 399.22,
+      "end": 401.46,
+      "text": "question has a unique answer."
+    },
+    {
+      "start": 401.46,
+      "end": 404.96,
+      "text": "If I give you data and I ask you what's the best way of"
+    },
+    {
+      "start": 404.96,
+      "end": 409.74,
+      "text": "estimating the motion of that planet, reasonable people can"
+    },
+    {
+      "start": 409.74,
+      "end": 413.4,
+      "text": "come up with different methods."
+    },
+    {
+      "start": 413.4,
+      "end": 416.52,
+      "text": "And the reasonable people will try to argue that my method,"
+    },
+    {
+      "start": 416.52,
+      "end": 418.3,
+      "text": "has these desirable properties."
+    },
+    {
+      "start": 418.3,
+      "end": 421.34,
+      "text": "But somebody else may say, here's another method that has"
+    },
+    {
+      "start": 421.34,
+      "end": 423.7,
+      "text": "certain desirable properties."
+    },
+    {
+      "start": 423.7,
+      "end": 428.18,
+      "text": "And it's not clear what the best method is."
+    },
+    {
+      "start": 428.18,
+      "end": 431.18,
+      "text": "So it's good to have some understanding of what the"
+    },
+    {
+      "start": 431.18,
+      "end": 437.32,
+      "text": "issues are, and to know at least what is the general class"
+    },
+    {
+      "start": 437.32,
+      "end": 439.64,
+      "text": "of methods that one tries to consider."
+    },
+    {
+      "start": 439.64,
+      "end": 442.32,
+      "text": "How does one go about such problems?"
+    },
+    {
+      "start": 442.32,
+      "end": 444.32,
+      "text": "So we're going to see lots and lots of"
+    },
+    {
+      "start": 444.32,
+      "end": 445.7,
+      "text": "different inference methods."
+    },
+    {
+      "start": 445.7,
+      "end": 446.32,
+      "text": "We're not going to"
+    },
+    {
+      "start": 446.52,
+      "end": 448.76,
+      "text": "tell you that one is better than the other."
+    },
+    {
+      "start": 448.76,
+      "end": 450.9,
+      "text": "But it's important to understand what are the"
+    },
+    {
+      "start": 450.9,
+      "end": 454.0,
+      "text": "concepts between those different methods."
+    },
+    {
+      "start": 454.0,
+      "end": 458.72,
+      "text": "And finally, statistics can be misused really badly."
+    },
+    {
+      "start": 458.72,
+      "end": 462.08,
+      "text": "That is, one can come up with methods that you think they're"
+    },
+    {
+      "start": 462.08,
+      "end": 468.64,
+      "text": "sound, but in fact, they're not quite that."
+    },
+    {
+      "start": 468.64,
+      "end": 472.84,
+      "text": "I will bring some examples next time and talk a little"
+    },
+    {
+      "start": 472.84,
+      "end": 474.3,
+      "text": "more about this."
+    },
+    {
+      "start": 474.3,
+      "end": 476.3,
+      "text": "So I want to say."
+    },
+    {
+      "start": 476.3,
+      "end": 477.7,
+      "text": "You have some data."
+    },
+    {
+      "start": 477.7,
+      "end": 480.42,
+      "text": "You want to make some inference from them."
+    },
+    {
+      "start": 480.42,
+      "end": 484.4,
+      "text": "What many people will do is to go to Wikipedia, find a"
+    },
+    {
+      "start": 484.4,
+      "end": 487.48,
+      "text": "statistical test that they think it applies to that"
+    },
+    {
+      "start": 487.48,
+      "end": 490.86,
+      "text": "situation, plug in numbers, and present results."
+    },
+    {
+      "start": 490.86,
+      "end": 494.24,
+      "text": "Are the conclusions that they get really justified, or are"
+    },
+    {
+      "start": 494.24,
+      "end": 496.4,
+      "text": "they misusing statistical methods?"
+    },
+    {
+      "start": 496.4,
+      "end": 500.14,
+      "text": "Well, too many people actually do misuse statistics."
+    },
+    {
+      "start": 500.14,
+      "end": 504.54,
+      "text": "And conclusions that people get are often false."
+    },
+    {
+      "start": 504.54,
+      "end": 505.6,
+      "text": "So it's important to."
+    },
+    {
+      "start": 506.3,
+      "end": 511.06,
+      "text": "Besides just being able to copy statistical tests and use"
+    },
+    {
+      "start": 511.06,
+      "end": 513.88,
+      "text": "them, to understand what are the assumptions between the"
+    },
+    {
+      "start": 513.88,
+      "end": 516.22,
+      "text": "different methods, and what kind of"
+    },
+    {
+      "start": 516.22,
+      "end": 520.46,
+      "text": "guarantees they have, if any."
+    },
+    {
+      "start": 520.46,
+      "end": 524.42,
+      "text": "All right, so we'll try to do a quick tour through the field"
+    },
+    {
+      "start": 524.42,
+      "end": 527.58,
+      "text": "of inference in this lecture and the next few lectures that"
+    },
+    {
+      "start": 527.58,
+      "end": 529.94,
+      "text": "we have left this semester."
+    },
+    {
+      "start": 529.94,
+      "end": 533.34,
+      "text": "And try to highlight at a very high level the main concept"
+    },
+    {
+      "start": 533.34,
+      "end": 536.98,
+      "text": "skills and techniques that come in."
+    },
+    {
+      "start": 536.98,
+      "end": 539.84,
+      "text": "Let's start with some generalities and some general"
+    },
+    {
+      "start": 539.84,
+      "end": 542.88,
+      "text": "statements."
+    },
+    {
+      "start": 542.88,
+      "end": 547.1,
+      "text": "One first statement is that statistics or inference"
+    },
+    {
+      "start": 547.1,
+      "end": 551.8,
+      "text": "problems come up in very different guises."
+    },
+    {
+      "start": 551.8,
+      "end": 556.46,
+      "text": "And they may look as if they are of very different forms."
+    },
+    {
+      "start": 556.46,
+      "end": 560.16,
+      "text": "Although at some fundamental level, the basic issues turn"
+    },
+    {
+      "start": 560.16,
+      "end": 563.3,
+      "text": "out to be always pretty much the same."
+    },
+    {
+      "start": 563.3,
+      "end": 565.74,
+      "text": "So let's look at this example."
+    },
+    {
+      "start": 565.74,
+      "end": 565.94,
+      "text": "."
+    },
+    {
+      "start": 565.94,
+      "end": 566.04,
+      "text": "."
+    },
+    {
+      "start": 566.04,
+      "end": 566.14,
+      "text": "."
+    },
+    {
+      "start": 566.14,
+      "end": 566.38,
+      "text": "."
+    },
+    {
+      "start": 566.38,
+      "end": 566.44,
+      "text": "."
+    },
+    {
+      "start": 566.44,
+      "end": 566.68,
+      "text": "."
+    },
+    {
+      "start": 566.68,
+      "end": 566.74,
+      "text": "."
+    },
+    {
+      "start": 566.74,
+      "end": 566.78,
+      "text": "."
+    },
+    {
+      "start": 566.78,
+      "end": 566.84,
+      "text": "."
+    },
+    {
+      "start": 566.84,
+      "end": 566.94,
+      "text": "."
+    },
+    {
+      "start": 566.94,
+      "end": 566.96,
+      "text": "."
+    },
+    {
+      "start": 566.96,
+      "end": 566.98,
+      "text": "."
+    },
+    {
+      "start": 566.98,
+      "end": 567.14,
+      "text": "."
+    },
+    {
+      "start": 567.14,
+      "end": 567.18,
+      "text": "."
+    },
+    {
+      "start": 567.18,
+      "end": 567.82,
+      "text": "."
+    },
+    {
+      "start": 567.82,
+      "end": 571.42,
+      "text": "There's an unknown signal that's being sent."
+    },
+    {
+      "start": 571.42,
+      "end": 575.84,
+      "text": "It's sent through some medium, and that medium just takes the"
+    },
+    {
+      "start": 575.84,
+      "end": 579.18,
+      "text": "signal and amplifies it by a certain number."
+    },
+    {
+      "start": 579.18,
+      "end": 581.36,
+      "text": "So you can think of somebody shouting."
+    },
+    {
+      "start": 581.36,
+      "end": 582.98,
+      "text": "There's the air out there."
+    },
+    {
+      "start": 582.98,
+      "end": 586.24,
+      "text": "What you shouted will be attenuated through the air"
+    },
+    {
+      "start": 586.24,
+      "end": 588.02,
+      "text": "until it gets to a receiver."
+    },
+    {
+      "start": 588.02,
+      "end": 591.72,
+      "text": "And that receiver then observes this, but together"
+    },
+    {
+      "start": 591.72,
+      "end": 596.26,
+      "text": "with some random noise."
+    },
+    {
+      "start": 596.26,
+      "end": 598.86,
+      "text": "Here I meant s. s is the signal."
+    },
+    {
+      "start": 598.86,
+      "end": 604.28,
+      "text": "that's being sent, and what you observe is an X."
+    },
+    {
+      "start": 604.28,
+      "end": 609.22,
+      "text": "So when you observe X, what kind of inference problems"
+    },
+    {
+      "start": 609.22,
+      "end": 611.26,
+      "text": "could we have here?"
+    },
+    {
+      "start": 611.26,
+      "end": 615.4,
+      "text": "In some cases, you want to build a model of the physical"
+    },
+    {
+      "start": 615.4,
+      "end": 617.46,
+      "text": "phenomenon that you are dealing with."
+    },
+    {
+      "start": 617.46,
+      "end": 621.2,
+      "text": "So for example, you don't know the attenuation of your signal,"
+    },
+    {
+      "start": 621.2,
+      "end": 625.18,
+      "text": "and you try to find out what this number is based on the"
+    },
+    {
+      "start": 625.18,
+      "end": 626.98,
+      "text": "observations that you have."
+    },
+    {
+      "start": 626.98,
+      "end": 630.26,
+      "text": "So the way this is done in engineering systems is that"
+    },
+    {
+      "start": 630.26,
+      "end": 635.06,
+      "text": "you design a certain signal, you know what it is, you shout"
+    },
+    {
+      "start": 635.06,
+      "end": 639.78,
+      "text": "a particular word, and then the receiver listens, and"
+    },
+    {
+      "start": 639.78,
+      "end": 643.74,
+      "text": "based on the intensity of the signal that they get, they try"
+    },
+    {
+      "start": 643.74,
+      "end": 648.72,
+      "text": "to make a guess about A. So you don't know A, but you know"
+    },
+    {
+      "start": 648.72,
+      "end": 652.46,
+      "text": "S, and by observing X, you get some information"
+    },
+    {
+      "start": 652.46,
+      "end": 654.3,
+      "text": "about what A is."
+    },
+    {
+      "start": 654.3,
+      "end": 656.96,
+      "text": "So in this case, you're trying to build a model"
+    },
+    {
+      "start": 656.96,
+      "end": 661.18,
+      "text": "of the medium through which your signal is propagating."
+    },
+    {
+      "start": 661.18,
+      "end": 664.66,
+      "text": "So sometimes one would call problems of this kind, let's"
+    },
+    {
+      "start": 664.66,
+      "end": 668.0,
+      "text": "say, system identification."
+    },
+    {
+      "start": 668.0,
+      "end": 671.98,
+      "text": "In a different version of an inference problem that comes"
+    },
+    {
+      "start": 671.98,
+      "end": 675.98,
+      "text": "with this picture, you've done your modeling, you know your"
+    },
+    {
+      "start": 675.98,
+      "end": 680.4,
+      "text": "A, you know the medium through which the signal is going, but"
+    },
+    {
+      "start": 680.4,
+      "end": 682.34,
+      "text": "it's a communication system."
+    },
+    {
+      "start": 682.34,
+      "end": 684.16,
+      "text": "This person is trying to communicate"
+    },
+    {
+      "start": 684.16,
+      "end": 686.14,
+      "text": "something to that person."
+    },
+    {
+      "start": 686.14,
+      "end": 690.24,
+      "text": "So you send the signal S, but that person receives a noisy"
+    },
+    {
+      "start": 690.24,
+      "end": 695.62,
+      "text": "version of S. So that person tries to reconstruct S based on"
+    },
+    {
+      "start": 695.62,
+      "end": 702.16,
+      "text": "X. So in both cases, we have a linear relation between X and"
+    },
+    {
+      "start": 702.16,
+      "end": 703.48,
+      "text": "the unknown quantity."
+    },
+    {
+      "start": 703.48,
+      "end": 707.32,
+      "text": "In one version, A is the unknown, and we know S. In the"
+    },
+    {
+      "start": 707.32,
+      "end": 711.62,
+      "text": "other version, A is known, and we try to infer S."
+    },
+    {
+      "start": 711.62,
+      "end": 714.62,
+      "text": "Mathematically, you can see that it's essentially the same"
+    },
+    {
+      "start": 714.62,
+      "end": 716.02,
+      "text": "kind of problem in both cases."
+    },
+    {
+      "start": 716.02,
+      "end": 716.12,
+      "text": "."
+    },
+    {
+      "start": 716.14,
+      "end": 723.98,
+      "text": "Although the kind of practical problem that you're trying to"
+    },
+    {
+      "start": 723.98,
+      "end": 727.58,
+      "text": "solve is a little different."
+    },
+    {
+      "start": 727.58,
+      "end": 731.88,
+      "text": "So we will not be making any distinctions between problems"
+    },
+    {
+      "start": 731.88,
+      "end": 735.94,
+      "text": "of the model building type, as opposed to models where you"
+    },
+    {
+      "start": 735.94,
+      "end": 739.28,
+      "text": "try to estimate some unknown signal and so on."
+    },
+    {
+      "start": 739.28,
+      "end": 742.38,
+      "text": "Because conceptually, the tools that one uses for both"
+    },
+    {
+      "start": 742.38,
+      "end": 747.58,
+      "text": "types of problems are essentially the same."
+    },
+    {
+      "start": 747.58,
+      "end": 751.14,
+      "text": "Next, a very useful classification of inference"
+    },
+    {
+      "start": 751.14,
+      "end": 753.58,
+      "text": "problems."
+    },
+    {
+      "start": 753.58,
+      "end": 757.94,
+      "text": "The unknown quantity that you're trying to estimate could"
+    },
+    {
+      "start": 757.94,
+      "end": 763.02,
+      "text": "be either a discrete one that takes a small number of values."
+    },
+    {
+      "start": 763.02,
+      "end": 765.84,
+      "text": "So this could be discrete problems, such as the radar"
+    },
+    {
+      "start": 765.84,
+      "end": 770.1,
+      "text": "problem we encountered back a long time ago in this class."
+    },
+    {
+      "start": 770.1,
+      "end": 772.08,
+      "text": "So there's two possibilities."
+    },
+    {
+      "start": 772.08,
+      "end": 775.42,
+      "text": "An airplane is out there, or an airplane is not out there."
+    },
+    {
+      "start": 775.42,
+      "end": 777.42,
+      "text": "And you're trying to make a decision between these two."
+    },
+    {
+      "start": 777.42,
+      "end": 781.56,
+      "text": "Or you can have other problems in which you have, let's say,"
+    },
+    {
+      "start": 781.56,
+      "end": 783.38,
+      "text": "four possible options."
+    },
+    {
+      "start": 783.38,
+      "end": 785.96,
+      "text": "You don't know which one is true, but you get data and you"
+    },
+    {
+      "start": 785.96,
+      "end": 789.08,
+      "text": "try to figure out which one is true."
+    },
+    {
+      "start": 789.08,
+      "end": 792.04,
+      "text": "In problems of this kind, usually you want to make a"
+    },
+    {
+      "start": 792.04,
+      "end": 794.06,
+      "text": "decision based on your data."
+    },
+    {
+      "start": 794.06,
+      "end": 796.96,
+      "text": "And you're interested in the probability of making a"
+    },
+    {
+      "start": 796.96,
+      "end": 798.04,
+      "text": "correct decision."
+    },
+    {
+      "start": 798.04,
+      "end": 801.82,
+      "text": "You would like that probability to be as high as possible."
+    },
+    {
+      "start": 801.82,
+      "end": 804.02,
+      "text": "Estimation problems are a little different."
+    },
+    {
+      "start": 804.02,
+      "end": 807.3,
+      "text": "Here you have some continuous quantity that's not"
+    },
+    {
+      "start": 807.3,
+      "end": 808.54,
+      "text": "known."
+    },
+    {
+      "start": 808.54,
+      "end": 811.88,
+      "text": "And you try to make a good guess of that quantity."
+    },
+    {
+      "start": 811.88,
+      "end": 816.06,
+      "text": "And you would like your guess to be as close as possible to"
+    },
+    {
+      "start": 816.06,
+      "end": 817.3,
+      "text": "the true quantity."
+    },
+    {
+      "start": 817.3,
+      "end": 820.26,
+      "text": "So the polling problem was of this type."
+    },
+    {
+      "start": 820.26,
+      "end": 824.72,
+      "text": "There was an unknown fraction, f, of the population that had"
+    },
+    {
+      "start": 824.72,
+      "end": 825.88,
+      "text": "some property."
+    },
+    {
+      "start": 825.88,
+      "end": 830.02,
+      "text": "And you try to estimate f as accurately as you can."
+    },
+    {
+      "start": 830.02,
+      "end": 833.4,
+      "text": "So the distinction here is that usually here, the unknown"
+    },
+    {
+      "start": 833.4,
+      "end": 836.44,
+      "text": "quantity takes a discrete set of values."
+    },
+    {
+      "start": 836.44,
+      "end": 836.64,
+      "text": "Here."
+    },
+    {
+      "start": 836.64,
+      "end": 840.04,
+      "text": "The unknown quantity takes a continuous set of values."
+    },
+    {
+      "start": 840.04,
+      "end": 843.0,
+      "text": "Here we're interested in the probability of error."
+    },
+    {
+      "start": 843.0,
+      "end": 847.4,
+      "text": "Here we're interested in the size of the error."
+    },
+    {
+      "start": 847.4,
+      "end": 850.98,
+      "text": "Broadly speaking, most inference problems fall either"
+    },
+    {
+      "start": 850.98,
+      "end": 853.92,
+      "text": "in this category or in that category."
+    },
+    {
+      "start": 853.92,
+      "end": 857.22,
+      "text": "Although if you want to complicate life, you can also"
+    },
+    {
+      "start": 857.22,
+      "end": 860.4,
+      "text": "think or construct problems where both of these aspects are"
+    },
+    {
+      "start": 860.4,
+      "end": 864.4,
+      "text": "simultaneously present."
+    },
+    {
+      "start": 864.4,
+      "end": 867.36,
+      "text": "OK, finally, since we're in classification mode."
+    },
+    {
+      "start": 867.92,
+      "end": 873.68,
+      "text": "There's a very big, important dichotomy into how one goes"
+    },
+    {
+      "start": 873.68,
+      "end": 875.94,
+      "text": "about inference problems."
+    },
+    {
+      "start": 875.94,
+      "end": 880.32,
+      "text": "And here's two fundamentally different philosophical points"
+    },
+    {
+      "start": 880.32,
+      "end": 886.04,
+      "text": "of view, which is how do we model the"
+    },
+    {
+      "start": 886.04,
+      "end": 890.26,
+      "text": "quantity that is unknown?"
+    },
+    {
+      "start": 890.26,
+      "end": 894.76,
+      "text": "In one approach, you say there's a certain quantity that"
+    },
+    {
+      "start": 894.76,
+      "end": 897.58,
+      "text": "has a definite value."
+    },
+    {
+      "start": 897.58,
+      "end": 899.1,
+      "text": "It just happens that I don't know."
+    },
+    {
+      "start": 899.1,
+      "end": 899.18,
+      "text": "OK."
+    },
+    {
+      "start": 899.18,
+      "end": 899.3,
+      "text": "OK."
+    },
+    {
+      "start": 899.3,
+      "end": 900.0,
+      "text": "I don't know it."
+    },
+    {
+      "start": 900.0,
+      "end": 901.3,
+      "text": "But it's a number."
+    },
+    {
+      "start": 901.3,
+      "end": 903.3,
+      "text": "There's nothing random about it."
+    },
+    {
+      "start": 903.3,
+      "end": 906.2,
+      "text": "So think of trying to estimate some physical quantity."
+    },
+    {
+      "start": 906.2,
+      "end": 911.6,
+      "text": "Let's say you're making measurements."
+    },
+    {
+      "start": 911.6,
+      "end": 915.42,
+      "text": "You try to estimate the mass of an electron, which is a"
+    },
+    {
+      "start": 915.42,
+      "end": 918.24,
+      "text": "sort of universal physical constant."
+    },
+    {
+      "start": 918.24,
+      "end": 920.34,
+      "text": "There's nothing random about it."
+    },
+    {
+      "start": 920.34,
+      "end": 922.36,
+      "text": "It's a fixed number."
+    },
+    {
+      "start": 922.36,
+      "end": 929.1,
+      "text": "You get data, because you have some measuring apparatus."
+    },
+    {
+      "start": 929.1,
+      "end": 933.02,
+      "text": "And that measuring apparatus, depending on what the results"
+    },
+    {
+      "start": 933.02,
+      "end": 937.18,
+      "text": "that you get are affected by the true mass of the electron,"
+    },
+    {
+      "start": 937.18,
+      "end": 940.88,
+      "text": "but there's also some noise, you take the data out of your"
+    },
+    {
+      "start": 940.88,
+      "end": 943.68,
+      "text": "measuring apparatus, and you try to come up with some"
+    },
+    {
+      "start": 943.68,
+      "end": 947.22,
+      "text": "estimate of that quantity theta."
+    },
+    {
+      "start": 947.22,
+      "end": 949.44,
+      "text": "So this is definitely a legitimate picture."
+    },
+    {
+      "start": 949.44,
+      "end": 952.1,
+      "text": "But the important thing in this picture is that this theta"
+    },
+    {
+      "start": 952.1,
+      "end": 954.58,
+      "text": "is written as lowercase."
+    },
+    {
+      "start": 954.58,
+      "end": 958.1,
+      "text": "And that's to make the point that it's a real number, not a"
+    },
+    {
+      "start": 958.1,
+      "end": 958.98,
+      "text": "random variable."
+    },
+    {
+      "start": 958.98,
+      "end": 963.22,
+      "text": "There's a different philosophical approach, which"
+    },
+    {
+      "start": 963.22,
+      "end": 968.16,
+      "text": "says, well, anything that I don't know, I should model it"
+    },
+    {
+      "start": 968.16,
+      "end": 970.16,
+      "text": "as a random variable."
+    },
+    {
+      "start": 970.16,
+      "end": 974.46,
+      "text": "Yes, I know, the mass of the electron is not really random."
+    },
+    {
+      "start": 974.46,
+      "end": 975.66,
+      "text": "It's a constant."
+    },
+    {
+      "start": 975.66,
+      "end": 977.9,
+      "text": "But I don't know what it is."
+    },
+    {
+      "start": 977.9,
+      "end": 982.48,
+      "text": "I have some vague sense, perhaps, what it is, perhaps"
+    },
+    {
+      "start": 982.48,
+      "end": 985.92,
+      "text": "because of the experiments that some other people carried out."
+    },
+    {
+      "start": 985.92,
+      "end": 988.54,
+      "text": "So perhaps I have a prior distribution."
+    },
+    {
+      "start": 988.98,
+      "end": 992.16,
+      "text": "On the possible values of theta."
+    },
+    {
+      "start": 992.16,
+      "end": 995.2,
+      "text": "And that prior distribution doesn't mean that nature is"
+    },
+    {
+      "start": 995.2,
+      "end": 999.32,
+      "text": "random, but it's more of a subjective description of my"
+    },
+    {
+      "start": 999.32,
+      "end": 1004.62,
+      "text": "subjective beliefs of where do I think this constant number"
+    },
+    {
+      "start": 1004.62,
+      "end": 1006.2,
+      "text": "happens to be."
+    },
+    {
+      "start": 1006.2,
+      "end": 1010.14,
+      "text": "So even though it's not truly random, I model my initial"
+    },
+    {
+      "start": 1010.14,
+      "end": 1014.16,
+      "text": "beliefs before the experiment starts in terms of a prior"
+    },
+    {
+      "start": 1014.16,
+      "end": 1015.08,
+      "text": "distribution."
+    },
+    {
+      "start": 1015.08,
+      "end": 1017.46,
+      "text": "I view it as a random variable."
+    },
+    {
+      "start": 1017.46,
+      "end": 1018.22,
+      "text": "Then I observe another random variable."
+    },
+    {
+      "start": 1018.22,
+      "end": 1021.84,
+      "text": "I observe another related random variable through some"
+    },
+    {
+      "start": 1021.84,
+      "end": 1022.94,
+      "text": "measuring apparatus."
+    },
+    {
+      "start": 1022.94,
+      "end": 1025.78,
+      "text": "And then I use this, again, to create an estimate."
+    },
+    {
+      "start": 1028.88,
+      "end": 1032.08,
+      "text": "So these two pictures, philosophically, are very"
+    },
+    {
+      "start": 1032.08,
+      "end": 1033.58,
+      "text": "different from each other."
+    },
+    {
+      "start": 1033.58,
+      "end": 1037.12,
+      "text": "Here we treat the unknown quantities as unknown numbers."
+    },
+    {
+      "start": 1037.12,
+      "end": 1040.54,
+      "text": "Here we treat them as random variables."
+    },
+    {
+      "start": 1040.54,
+      "end": 1044.84,
+      "text": "When we treat them as random variables, then we know pretty"
+    },
+    {
+      "start": 1044.84,
+      "end": 1047.14,
+      "text": "much already what we should be doing."
+    },
+    {
+      "start": 1047.14,
+      "end": 1048.22,
+      "text": "We should just use them."
+    },
+    {
+      "start": 1048.22,
+      "end": 1049.46,
+      "text": "We should just use the Bayes rule."
+    },
+    {
+      "start": 1049.46,
+      "end": 1051.84,
+      "text": "Based on x, find the conditional"
+    },
+    {
+      "start": 1051.84,
+      "end": 1053.68,
+      "text": "distribution of theta."
+    },
+    {
+      "start": 1053.68,
+      "end": 1057.5,
+      "text": "And that's what we will be doing mostly over this lecture"
+    },
+    {
+      "start": 1057.5,
+      "end": 1060.0,
+      "text": "and the next lecture."
+    },
+    {
+      "start": 1060.0,
+      "end": 1064.66,
+      "text": "Now in both cases, what you end up getting at the end is"
+    },
+    {
+      "start": 1064.66,
+      "end": 1067.22,
+      "text": "an estimate."
+    },
+    {
+      "start": 1067.22,
+      "end": 1072.18,
+      "text": "But actually, that estimate is what kind of object is it?"
+    },
+    {
+      "start": 1072.18,
+      "end": 1075.08,
+      "text": "It's a random variable in both cases."
+    },
+    {
+      "start": 1075.08,
+      "end": 1075.98,
+      "text": "Why?"
+    },
+    {
+      "start": 1075.98,
+      "end": 1076.8,
+      "text": "Even in this case, where theta was a constant, it's a random"
+    },
+    {
+      "start": 1076.8,
+      "end": 1076.96,
+      "text": "variable in both cases."
+    },
+    {
+      "start": 1076.96,
+      "end": 1077.04,
+      "text": "Why?"
+    },
+    {
+      "start": 1077.04,
+      "end": 1078.0,
+      "text": "Even in this case, where theta was a constant, it's a random"
+    },
+    {
+      "start": 1078.0,
+      "end": 1078.14,
+      "text": "variable in both cases."
+    },
+    {
+      "start": 1078.14,
+      "end": 1078.2,
+      "text": "Why?"
+    },
+    {
+      "start": 1078.2,
+      "end": 1078.64,
+      "text": "Even in this case, where theta was a constant, it's a random"
+    },
+    {
+      "start": 1078.64,
+      "end": 1079.08,
+      "text": "variable in both cases."
+    },
+    {
+      "start": 1079.08,
+      "end": 1079.1,
+      "text": "Why?"
+    },
+    {
+      "start": 1079.1,
+      "end": 1079.52,
+      "text": "Even in this case, where theta was a constant, it's a random"
+    },
+    {
+      "start": 1079.52,
+      "end": 1079.98,
+      "text": "variable in both cases."
+    },
+    {
+      "start": 1079.98,
+      "end": 1080.04,
+      "text": "Why?"
+    },
+    {
+      "start": 1080.04,
+      "end": 1081.04,
+      "text": "Because theta is a constant."
+    },
+    {
+      "start": 1081.04,
+      "end": 1081.08,
+      "text": "My data are random."
+    },
+    {
+      "start": 1081.08,
+      "end": 1082.86,
+      "text": "I do my data processing."
+    },
+    {
+      "start": 1082.86,
+      "end": 1085.92,
+      "text": "So I calculate a function of the data."
+    },
+    {
+      "start": 1085.92,
+      "end": 1087.8,
+      "text": "The data are random variables."
+    },
+    {
+      "start": 1087.8,
+      "end": 1090.72,
+      "text": "So out here, we output something which is a"
+    },
+    {
+      "start": 1090.72,
+      "end": 1092.78,
+      "text": "function of a random variable."
+    },
+    {
+      "start": 1092.78,
+      "end": 1095.82,
+      "text": "So this quantity here will be also random."
+    },
+    {
+      "start": 1095.82,
+      "end": 1098.64,
+      "text": "It's affected by the noise in the experiment that I have been"
+    },
+    {
+      "start": 1098.64,
+      "end": 1099.66,
+      "text": "doing."
+    },
+    {
+      "start": 1099.66,
+      "end": 1102.64,
+      "text": "That's why these estimators will be denoted by"
+    },
+    {
+      "start": 1102.64,
+      "end": 1104.92,
+      "text": "uppercase thetas."
+    },
+    {
+      "start": 1104.92,
+      "end": 1106.64,
+      "text": "And we will be using hats."
+    },
+    {
+      "start": 1106.64,
+      "end": 1107.92,
+      "text": "Hat, usually, an estimator."
+    },
+    {
+      "start": 1107.92,
+      "end": 1112.98,
+      "text": "Estimation means an estimate of something."
+    },
+    {
+      "start": 1112.98,
+      "end": 1115.42,
+      "text": "All right, so this is the big picture."
+    },
+    {
+      "start": 1115.42,
+      "end": 1118.68,
+      "text": "We're going to start with the Bayesian version."
+    },
+    {
+      "start": 1118.68,
+      "end": 1121.58,
+      "text": "And then the last few lectures, we're going to talk"
+    },
+    {
+      "start": 1121.58,
+      "end": 1125.66,
+      "text": "about the non-Bayesian version or the classical one."
+    },
+    {
+      "start": 1125.66,
+      "end": 1128.6,
+      "text": "By the way, I should say that statisticians have been"
+    },
+    {
+      "start": 1128.6,
+      "end": 1132.48,
+      "text": "debating fiercely for 100 years whether the right way to"
+    },
+    {
+      "start": 1132.48,
+      "end": 1134.86,
+      "text": "approach statistics is to go the classical"
+    },
+    {
+      "start": 1134.86,
+      "end": 1137.42,
+      "text": "way or the Bayesian way."
+    },
+    {
+      "start": 1137.42,
+      "end": 1139.14,
+      "text": "And there have been tides going"
+    },
+    {
+      "start": 1139.14,
+      "end": 1142.42,
+      "text": "back and forth between the two sides."
+    },
+    {
+      "start": 1142.42,
+      "end": 1145.3,
+      "text": "These days, Bayesian methods tend to become a little more"
+    },
+    {
+      "start": 1145.3,
+      "end": 1147.32,
+      "text": "popular for various reasons."
+    },
+    {
+      "start": 1147.32,
+      "end": 1151.68,
+      "text": "We're going to come back to this later."
+    },
+    {
+      "start": 1151.68,
+      "end": 1154.46,
+      "text": "All right, so in Bayesian estimation, what we got in"
+    },
+    {
+      "start": 1154.46,
+      "end": 1156.6,
+      "text": "our hands is Bayes' rule."
+    },
+    {
+      "start": 1156.6,
+      "end": 1159.38,
+      "text": "And if you have Bayes' rule, there's not a lot"
+    },
+    {
+      "start": 1159.38,
+      "end": 1161.32,
+      "text": "that's left to do."
+    },
+    {
+      "start": 1161.32,
+      "end": 1164.18,
+      "text": "We have different forms of the Bayes' rule, depending on"
+    },
+    {
+      "start": 1164.18,
+      "end": 1167.9,
+      "text": "whether we're dealing with discrete data and discrete"
+    },
+    {
+      "start": 1167.9,
+      "end": 1169.02,
+      "text": "quantities to estimate."
+    },
+    {
+      "start": 1169.14,
+      "end": 1172.3,
+      "text": "Or continuous data, and so on."
+    },
+    {
+      "start": 1172.3,
+      "end": 1176.0,
+      "text": "In the hypothesis testing problem, the unknown quantity"
+    },
+    {
+      "start": 1176.0,
+      "end": 1178.18,
+      "text": "theta is discrete."
+    },
+    {
+      "start": 1178.18,
+      "end": 1182.88,
+      "text": "So in both cases here, we have a p of theta."
+    },
+    {
+      "start": 1182.88,
+      "end": 1185.52,
+      "text": "We obtain data, the x's."
+    },
+    {
+      "start": 1185.52,
+      "end": 1189.02,
+      "text": "And on the basis of the x that we observe, we can calculate"
+    },
+    {
+      "start": 1189.02,
+      "end": 1193.32,
+      "text": "the posterior distribution of theta, given the data."
+    },
+    {
+      "start": 1193.32,
+      "end": 1199.0,
+      "text": "So to apply, to use Bayesian inference, what do we start"
+    },
+    {
+      "start": 1199.0,
+      "end": 1199.84,
+      "text": "with?"
+    },
+    {
+      "start": 1199.84,
+      "end": 1203.14,
+      "text": "We start with some priors."
+    },
+    {
+      "start": 1203.14,
+      "end": 1207.88,
+      "text": "These are our initial beliefs about what theta might be."
+    },
+    {
+      "start": 1207.88,
+      "end": 1210.5,
+      "text": "That's before we do the experiment."
+    },
+    {
+      "start": 1210.5,
+      "end": 1217.49,
+      "text": "We have a model of the experimental apparatus."
+    },
+    {
+      "start": 1217.49,
+      "end": 1221.53,
+      "text": "And the model of the experimental apparatus tells"
+    },
+    {
+      "start": 1221.53,
+      "end": 1225.65,
+      "text": "us, if this theta is true, I'm going to see"
+    },
+    {
+      "start": 1225.65,
+      "end": 1228.03,
+      "text": "x's of that kind."
+    },
+    {
+      "start": 1228.03,
+      "end": 1231.15,
+      "text": "If that other theta is true, I'm going to see x's of that"
+    },
+    {
+      "start": 1231.15,
+      "end": 1233.13,
+      "text": "that are somewhere else."
+    },
+    {
+      "start": 1233.13,
+      "end": 1235.19,
+      "text": "That models my apparatus."
+    },
+    {
+      "start": 1235.19,
+      "end": 1239.15,
+      "text": "And based on that knowledge, once I observe, I have these"
+    },
+    {
+      "start": 1239.15,
+      "end": 1240.45,
+      "text": "two functions in my hands."
+    },
+    {
+      "start": 1240.45,
+      "end": 1243.47,
+      "text": "We have already seen that if you know those two functions,"
+    },
+    {
+      "start": 1243.47,
+      "end": 1246.55,
+      "text": "you can also calculate the denominator here."
+    },
+    {
+      "start": 1246.55,
+      "end": 1248.75,
+      "text": "So all these functions are available."
+    },
+    {
+      "start": 1248.75,
+      "end": 1250.91,
+      "text": "So you can compute."
+    },
+    {
+      "start": 1250.91,
+      "end": 1254.17,
+      "text": "You can find the formula for this function as well."
+    },
+    {
+      "start": 1254.17,
+      "end": 1258.81,
+      "text": "And as soon as you observe the data, the x's, you plug in"
+    },
+    {
+      "start": 1258.81,
+      "end": 1260.99,
+      "text": "here the numerical value of those x's."
+    },
+    {
+      "start": 1260.99,
+      "end": 1264.73,
+      "text": "And you get a function of theta."
+    },
+    {
+      "start": 1264.73,
+      "end": 1267.91,
+      "text": "And this is the posterior distribution of theta given"
+    },
+    {
+      "start": 1267.91,
+      "end": 1269.65,
+      "text": "the data that you have seen."
+    },
+    {
+      "start": 1269.65,
+      "end": 1271.59,
+      "text": "So you've already done a fair number of"
+    },
+    {
+      "start": 1271.59,
+      "end": 1273.77,
+      "text": "exercises of this kind."
+    },
+    {
+      "start": 1273.77,
+      "end": 1277.31,
+      "text": "So let me not say more about this."
+    },
+    {
+      "start": 1277.31,
+      "end": 1280.29,
+      "text": "And there's a similar formula, as you know, for the case"
+    },
+    {
+      "start": 1280.29,
+      "end": 1282.33,
+      "text": "where we have continuous data."
+    },
+    {
+      "start": 1282.33,
+      "end": 1285.11,
+      "text": "If the x's are continuous random variable, then the"
+    },
+    {
+      "start": 1285.11,
+      "end": 1288.61,
+      "text": "formula is the same, except that x's are described by"
+    },
+    {
+      "start": 1288.61,
+      "end": 1290.97,
+      "text": "densities instead of being described by"
+    },
+    {
+      "start": 1290.99,
+      "end": 1295.72,
+      "text": "probability mass functions."
+    },
+    {
+      "start": 1295.72,
+      "end": 1300.46,
+      "text": "Now if theta is continuous, then we're dealing with"
+    },
+    {
+      "start": 1300.46,
+      "end": 1302.18,
+      "text": "estimation problems."
+    },
+    {
+      "start": 1302.18,
+      "end": 1304.86,
+      "text": "But the story is once more the same."
+    },
+    {
+      "start": 1304.86,
+      "end": 1307.92,
+      "text": "You're going to use the Bayes rule to come up with the"
+    },
+    {
+      "start": 1307.92,
+      "end": 1311.08,
+      "text": "posterior density of theta given the data"
+    },
+    {
+      "start": 1311.08,
+      "end": 1313.28,
+      "text": "that you have observed."
+    },
+    {
+      "start": 1313.28,
+      "end": 1317.26,
+      "text": "Now just for the sake of the example, let's come back to"
+    },
+    {
+      "start": 1317.26,
+      "end": 1318.9,
+      "text": "this picture here."
+    },
+    {
+      "start": 1318.9,
+      "end": 1322.26,
+      "text": "Suppose that something is flying in the air."
+    },
+    {
+      "start": 1322.26,
+      "end": 1326.8,
+      "text": "And maybe this is just an object in the air around close"
+    },
+    {
+      "start": 1326.8,
+      "end": 1327.8,
+      "text": "to the earth."
+    },
+    {
+      "start": 1327.8,
+      "end": 1330.82,
+      "text": "So because of gravity, the trajectory that it's going to"
+    },
+    {
+      "start": 1330.82,
+      "end": 1335.16,
+      "text": "follow is going to be a parabola."
+    },
+    {
+      "start": 1335.16,
+      "end": 1338.2,
+      "text": "So this is the general equation of a parabola."
+    },
+    {
+      "start": 1338.2,
+      "end": 1343.04,
+      "text": "Zt is the position of my object at time t."
+    },
+    {
+      "start": 1346.3,
+      "end": 1349.48,
+      "text": "But I don't know exactly which parabola it is."
+    },
+    {
+      "start": 1349.48,
+      "end": 1352.12,
+      "text": "So the parameters of the parabola are"
+    },
+    {
+      "start": 1352.12,
+      "end": 1354.06,
+      "text": "unknown quantities."
+    },
+    {
+      "start": 1354.06,
+      "end": 1357.72,
+      "text": "What I can do is to go and measure the position of my"
+    },
+    {
+      "start": 1357.72,
+      "end": 1361.86,
+      "text": "object at different times."
+    },
+    {
+      "start": 1361.86,
+      "end": 1365.74,
+      "text": "But unfortunately, my measurements are noisy."
+    },
+    {
+      "start": 1365.74,
+      "end": 1369.2,
+      "text": "And now what I want to do is to model the"
+    },
+    {
+      "start": 1369.2,
+      "end": 1371.08,
+      "text": "motion of my object."
+    },
+    {
+      "start": 1371.08,
+      "end": 1375.48,
+      "text": "So I guess in this picture, the axis would be t going this"
+    },
+    {
+      "start": 1375.48,
+      "end": 1380.0,
+      "text": "way and z going this way."
+    },
+    {
+      "start": 1380.0,
+      "end": 1383.36,
+      "text": "And on the basis of the data that I get, these are my"
+    },
+    {
+      "start": 1383.36,
+      "end": 1385.02,
+      "text": "axes."
+    },
+    {
+      "start": 1385.02,
+      "end": 1387.64,
+      "text": "I want to figure out the thetas."
+    },
+    {
+      "start": 1387.64,
+      "end": 1389.58,
+      "text": "That is, I want to figure out the exact"
+    },
+    {
+      "start": 1389.58,
+      "end": 1391.84,
+      "text": "equation of this parabola."
+    },
+    {
+      "start": 1391.84,
+      "end": 1394.94,
+      "text": "Now if somebody gives you probability distributions for"
+    },
+    {
+      "start": 1394.94,
+      "end": 1398.5,
+      "text": "theta, these would be your priors."
+    },
+    {
+      "start": 1398.5,
+      "end": 1399.86,
+      "text": "So this is given."
+    },
+    {
+      "start": 1403.22,
+      "end": 1405.42,
+      "text": "We need the conditional distribution of the"
+    },
+    {
+      "start": 1405.42,
+      "end": 1407.36,
+      "text": "axes given the thetas."
+    },
+    {
+      "start": 1407.36,
+      "end": 1410.86,
+      "text": "Well, we have the conditional distribution of z given the"
+    },
+    {
+      "start": 1410.86,
+      "end": 1412.92,
+      "text": "thetas from this equation."
+    },
+    {
+      "start": 1412.92,
+      "end": 1416.4,
+      "text": "And then by playing with this equation, you can also find how"
+    },
+    {
+      "start": 1416.4,
+      "end": 1422.46,
+      "text": "is x distributed if theta takes a particular value."
+    },
+    {
+      "start": 1422.46,
+      "end": 1426.44,
+      "text": "So you do have all the densities that you might need."
+    },
+    {
+      "start": 1426.44,
+      "end": 1428.8,
+      "text": "And you can apply the Bayes' rule."
+    },
+    {
+      "start": 1428.8,
+      "end": 1433.62,
+      "text": "And at the end, your end result would be a formula for"
+    },
+    {
+      "start": 1433.62,
+      "end": 1437.22,
+      "text": "the distribution of theta, given the x"
+    },
+    {
+      "start": 1437.22,
+      "end": 1439.12,
+      "text": "that you have observed."
+    },
+    {
+      "start": 1439.12,
+      "end": 1442.74,
+      "text": "Except for one sort of complication, or to make"
+    },
+    {
+      "start": 1442.74,
+      "end": 1443.86,
+      "text": "things more interesting."
+    },
+    {
+      "start": 1444.2,
+      "end": 1447.66,
+      "text": "Instead of these x's and thetas being single random"
+    },
+    {
+      "start": 1447.66,
+      "end": 1451.48,
+      "text": "variables that we have here, typically those x's and thetas"
+    },
+    {
+      "start": 1451.48,
+      "end": 1454.44,
+      "text": "will be multidimensional random variables, or will"
+    },
+    {
+      "start": 1454.44,
+      "end": 1456.1,
+      "text": "correspond to multiple ones."
+    },
+    {
+      "start": 1456.48,
+      "end": 1460.3,
+      "text": "So this little theta here actually stands for a triple of"
+    },
+    {
+      "start": 1460.3,
+      "end": 1462.5,
+      "text": "theta 0, theta 1, and theta 2."
+    },
+    {
+      "start": 1462.88,
+      "end": 1467.22,
+      "text": "And that x here stands for the entire sequence of x's that we"
+    },
+    {
+      "start": 1467.22,
+      "end": 1467.84,
+      "text": "have observed."
+    },
+    {
+      "start": 1468.4,
+      "end": 1471.26,
+      "text": "So in reality, the object you're going to get at the end"
+    },
+    {
+      "start": 1471.26,
+      "end": 1476.34,
+      "text": "after inference is done is a function that you plug in the"
+    },
+    {
+      "start": 1476.34,
+      "end": 1480.12,
+      "text": "values of the data, and you get a function of the thetas"
+    },
+    {
+      "start": 1480.12,
+      "end": 1483.9,
+      "text": "that tells you the relative likelihoods of different"
+    },
+    {
+      "start": 1483.9,
+      "end": 1485.98,
+      "text": "theta triples."
+    },
+    {
+      "start": 1486.76,
+      "end": 1489.8,
+      "text": "So what I'm saying is that this is no harder than the"
+    },
+    {
+      "start": 1489.8,
+      "end": 1493.82,
+      "text": "problems that you have dealt with so far, except perhaps for"
+    },
+    {
+      "start": 1493.82,
+      "end": 1496.44,
+      "text": "the complication that usually in interesting inference"
+    },
+    {
+      "start": 1496.44,
+      "end": 1500.6,
+      "text": "problems, your thetas and x's are often vectors of"
+    },
+    {
+      "start": 1500.6,
+      "end": 1501.24,
+      "text": "variables."
+    },
+    {
+      "start": 1501.26,
+      "end": 1504.3,
+      "text": "Random variables instead of individual random variables."
+    },
+    {
+      "start": 1505.08,
+      "end": 1509.62,
+      "text": "Now if you are to do estimation in a case where you"
+    },
+    {
+      "start": 1509.62,
+      "end": 1513.3,
+      "text": "have discrete data, again the situation is no different."
+    },
+    {
+      "start": 1513.52,
+      "end": 1516.94,
+      "text": "We still have a Bayes rule of the same kind, except that"
+    },
+    {
+      "start": 1516.94,
+      "end": 1519.28,
+      "text": "densities get replaced by PMFs."
+    },
+    {
+      "start": 1519.52,
+      "end": 1523.18,
+      "text": "If x is discrete, you put a p here instead of putting an f."
+    },
+    {
+      "start": 1523.66,
+      "end": 1527.12,
+      "text": "So an example of an estimation problem with discrete data is"
+    },
+    {
+      "start": 1527.12,
+      "end": 1529.6,
+      "text": "similar to the polling problem."
+    },
+    {
+      "start": 1529.6,
+      "end": 1531.6,
+      "text": "You have a coin."
+    },
+    {
+      "start": 1531.6,
+      "end": 1533.52,
+      "text": "It has an unknown parameter theta."
+    },
+    {
+      "start": 1533.52,
+      "end": 1535.26,
+      "text": "This is the probability of obtaining heads."
+    },
+    {
+      "start": 1535.26,
+      "end": 1537.36,
+      "text": "You flip the coin many times."
+    },
+    {
+      "start": 1537.36,
+      "end": 1541.56,
+      "text": "What can you tell me about the true value of theta?"
+    },
+    {
+      "start": 1541.56,
+      "end": 1546.24,
+      "text": "A classical statistician at this point would say, OK, I'm"
+    },
+    {
+      "start": 1546.24,
+      "end": 1550.2,
+      "text": "going to use an estimator, the most reasonable one, which is"
+    },
+    {
+      "start": 1550.2,
+      "end": 1550.96,
+      "text": "this."
+    },
+    {
+      "start": 1550.96,
+      "end": 1555.26,
+      "text": "How many heads did I obtain in n trials, divided by the total"
+    },
+    {
+      "start": 1555.26,
+      "end": 1556.42,
+      "text": "number of trials?"
+    },
+    {
+      "start": 1556.42,
+      "end": 1559.22,
+      "text": "This is my estimate of the bias of my data."
+    },
+    {
+      "start": 1559.22,
+      "end": 1560.72,
+      "text": "Of my coin."
+    },
+    {
+      "start": 1560.72,
+      "end": 1562.88,
+      "text": "And then the classical statistician would continue"
+    },
+    {
+      "start": 1562.88,
+      "end": 1567.6,
+      "text": "from here and try to prove some properties and argue that"
+    },
+    {
+      "start": 1567.6,
+      "end": 1570.04,
+      "text": "this estimate is a good one."
+    },
+    {
+      "start": 1570.04,
+      "end": 1573.14,
+      "text": "For example, we have the weak law of large numbers that tells"
+    },
+    {
+      "start": 1573.14,
+      "end": 1575.64,
+      "text": "us that this particular estimate converges in"
+    },
+    {
+      "start": 1575.64,
+      "end": 1578.02,
+      "text": "probability to the true parameter."
+    },
+    {
+      "start": 1578.02,
+      "end": 1581.02,
+      "text": "This is a kind of guarantee that's useful to have."
+    },
+    {
+      "start": 1581.02,
+      "end": 1583.42,
+      "text": "And the classical statistician would pretty much close the"
+    },
+    {
+      "start": 1583.42,
+      "end": 1584.68,
+      "text": "subject in this way."
+    },
+    {
+      "start": 1587.28,
+      "end": 1589.12,
+      "text": "What would a Bayesian person do?"
+    },
+    {
+      "start": 1589.12,
+      "end": 1595.04,
+      "text": "A Bayesian person would start by assuming a prior"
+    },
+    {
+      "start": 1595.04,
+      "end": 1597.1,
+      "text": "distribution on theta."
+    },
+    {
+      "start": 1597.1,
+      "end": 1599.98,
+      "text": "Instead of treating theta as an unknown constant, they would"
+    },
+    {
+      "start": 1599.98,
+      "end": 1604.56,
+      "text": "say that theta was picked randomly, or pretend that it"
+    },
+    {
+      "start": 1604.56,
+      "end": 1609.3,
+      "text": "was picked randomly, and assume a distribution on theta."
+    },
+    {
+      "start": 1609.3,
+      "end": 1613.12,
+      "text": "So for example, you might assume, if you don't know"
+    },
+    {
+      "start": 1613.12,
+      "end": 1616.36,
+      "text": "anything more, you might assume that any value for the"
+    },
+    {
+      "start": 1616.36,
+      "end": 1619.08,
+      "text": "bias of the coin is as likely as any"
+    },
+    {
+      "start": 1619.12,
+      "end": 1621.46,
+      "text": "other value of the bias of the coin."
+    },
+    {
+      "start": 1621.46,
+      "end": 1623.42,
+      "text": "And this way, assume a probability"
+    },
+    {
+      "start": 1623.42,
+      "end": 1625.74,
+      "text": "distribution that's uniform."
+    },
+    {
+      "start": 1625.74,
+      "end": 1629.8,
+      "text": "Or if you have a little more faith in the manufacturing"
+    },
+    {
+      "start": 1629.8,
+      "end": 1633.24,
+      "text": "process that created that coin, you might choose your"
+    },
+    {
+      "start": 1633.24,
+      "end": 1637.46,
+      "text": "prior to be a distribution that's centered around 1 half"
+    },
+    {
+      "start": 1637.46,
+      "end": 1641.86,
+      "text": "and sits fairly narrowly centered around 1 half."
+    },
+    {
+      "start": 1641.86,
+      "end": 1644.48,
+      "text": "That would be a prior distribution in which you say,"
+    },
+    {
+      "start": 1644.48,
+      "end": 1647.92,
+      "text": "well, I believe that the manufacturer tried to make my"
+    },
+    {
+      "start": 1647.92,
+      "end": 1649.12,
+      "text": "coin to be fair."
+    },
+    {
+      "start": 1649.12,
+      "end": 1653.82,
+      "text": "But they often make some mistakes, so I believe it's"
+    },
+    {
+      "start": 1653.82,
+      "end": 1656.58,
+      "text": "approximately 1 half, but not quite."
+    },
+    {
+      "start": 1656.58,
+      "end": 1660.7,
+      "text": "So depending on your beliefs, you would choose an appropriate"
+    },
+    {
+      "start": 1660.7,
+      "end": 1663.62,
+      "text": "prior for the distribution of theta."
+    },
+    {
+      "start": 1663.62,
+      "end": 1668.6,
+      "text": "And then you would use the Bayes rule to find the"
+    },
+    {
+      "start": 1668.6,
+      "end": 1672.24,
+      "text": "probabilities of different values of theta based on the"
+    },
+    {
+      "start": 1672.24,
+      "end": 1679.61,
+      "text": "data that you have observed."
+    },
+    {
+      "start": 1679.61,
+      "end": 1684.11,
+      "text": "So no matter which version of the Bayes rule that you use,"
+    },
+    {
+      "start": 1684.11,
+      "end": 1690.35,
+      "text": "the end product of the Bayes rule is going to be either a"
+    },
+    {
+      "start": 1690.35,
+      "end": 1694.39,
+      "text": "plot of this kind or a plot of that kind."
+    },
+    {
+      "start": 1694.39,
+      "end": 1696.71,
+      "text": "So what am I plotting here?"
+    },
+    {
+      "start": 1696.71,
+      "end": 1699.79,
+      "text": "This axis is the theta axis."
+    },
+    {
+      "start": 1699.79,
+      "end": 1703.77,
+      "text": "These are the possible values of the unknown quantity that"
+    },
+    {
+      "start": 1703.77,
+      "end": 1706.65,
+      "text": "we're trying to estimate."
+    },
+    {
+      "start": 1706.65,
+      "end": 1708.93,
+      "text": "In the continuous case, theta is a"
+    },
+    {
+      "start": 1708.93,
+      "end": 1710.73,
+      "text": "continuous random variable."
+    },
+    {
+      "start": 1710.73,
+      "end": 1712.53,
+      "text": "I obtain my data."
+    },
+    {
+      "start": 1712.53,
+      "end": 1713.53,
+      "text": "And I plot the"
+    },
+    {
+      "start": 1713.53,
+      "end": 1716.41,
+      "text": "posterior probability distribution after"
+    },
+    {
+      "start": 1716.41,
+      "end": 1717.95,
+      "text": "observing my data."
+    },
+    {
+      "start": 1717.95,
+      "end": 1722.21,
+      "text": "And I'm plotting here the probability density for theta."
+    },
+    {
+      "start": 1722.21,
+      "end": 1725.51,
+      "text": "So this is a plot of that density."
+    },
+    {
+      "start": 1725.51,
+      "end": 1729.21,
+      "text": "In the discrete case, theta can take finitely many values"
+    },
+    {
+      "start": 1729.21,
+      "end": 1731.57,
+      "text": "or a discrete set of values."
+    },
+    {
+      "start": 1731.57,
+      "end": 1734.51,
+      "text": "And for each one of those values, I'm telling you how"
+    },
+    {
+      "start": 1734.51,
+      "end": 1738.45,
+      "text": "likely is that value to be the correct one, given the data"
+    },
+    {
+      "start": 1738.45,
+      "end": 1741.01,
+      "text": "that I have observed."
+    },
+    {
+      "start": 1741.01,
+      "end": 1743.17,
+      "text": "And in general, what you would"
+    },
+    {
+      "start": 1743.17,
+      "end": 1746.55,
+      "text": "go back to your boss and report after you've done all"
+    },
+    {
+      "start": 1746.55,
+      "end": 1750.31,
+      "text": "your inference work would be either a plot of this kind or"
+    },
+    {
+      "start": 1750.31,
+      "end": 1751.09,
+      "text": "of that kind."
+    },
+    {
+      "start": 1751.09,
+      "end": 1754.17,
+      "text": "So you go to your boss, who asks you, what is"
+    },
+    {
+      "start": 1754.17,
+      "end": 1755.27,
+      "text": "the value of theta?"
+    },
+    {
+      "start": 1755.27,
+      "end": 1757.65,
+      "text": "And you say, well, I only have limited data."
+    },
+    {
+      "start": 1757.65,
+      "end": 1759.39,
+      "text": "I don't know what it is."
+    },
+    {
+      "start": 1759.39,
+      "end": 1763.41,
+      "text": "It could be this with so much probability or there's"
+    },
+    {
+      "start": 1763.41,
+      "end": 1767.21,
+      "text": "probability, OK, let's throw in some numbers here."
+    },
+    {
+      "start": 1767.21,
+      "end": 1772.25,
+      "text": "There's probability 0.3 that theta is this value."
+    },
+    {
+      "start": 1772.25,
+      "end": 1776.09,
+      "text": "There's probability 0.2 that theta is this value, 0.1 that"
+    },
+    {
+      "start": 1776.09,
+      "end": 1779.41,
+      "text": "it's this one, 0.1 that it's this one, 0.2 that it's that"
+    },
+    {
+      "start": 1779.41,
+      "end": 1781.41,
+      "text": "one, and so on."
+    },
+    {
+      "start": 1781.41,
+      "end": 1784.89,
+      "text": "Now bosses often want simple answers."
+    },
+    {
+      "start": 1784.89,
+      "end": 1788.41,
+      "text": "They say, OK, you're talking too much."
+    },
+    {
+      "start": 1788.41,
+      "end": 1791.77,
+      "text": "What do you think theta is?"
+    },
+    {
+      "start": 1791.77,
+      "end": 1795.21,
+      "text": "And now you're forced to make a decision."
+    },
+    {
+      "start": 1795.21,
+      "end": 1800.69,
+      "text": "If that was the situation and you have to make a decision,"
+    },
+    {
+      "start": 1800.69,
+      "end": 1802.41,
+      "text": "how would you make it?"
+    },
+    {
+      "start": 1802.41,
+      "end": 1806.89,
+      "text": "Well, I'm going to make a decision that's most likely to"
+    },
+    {
+      "start": 1806.89,
+      "end": 1809.13,
+      "text": "be correct."
+    },
+    {
+      "start": 1809.13,
+      "end": 1813.07,
+      "text": "If I make this decision, what's going to happen?"
+    },
+    {
+      "start": 1813.07,
+      "end": 1817.67,
+      "text": "Theta is this value with probability 0.2, which means"
+    },
+    {
+      "start": 1817.67,
+      "end": 1821.35,
+      "text": "there's probability 0.8 that I make an error if"
+    },
+    {
+      "start": 1821.35,
+      "end": 1823.29,
+      "text": "I make that guess."
+    },
+    {
+      "start": 1823.29,
+      "end": 1829.17,
+      "text": "If I make that decision, this decision has probability 0.3"
+    },
+    {
+      "start": 1829.17,
+      "end": 1830.61,
+      "text": "of being the correct one."
+    },
+    {
+      "start": 1830.61,
+      "end": 1835.01,
+      "text": "So I have probability of error 0.7, so on."
+    },
+    {
+      "start": 1835.01,
+      "end": 1838.45,
+      "text": "So if you want to just maximize the probability of"
+    },
+    {
+      "start": 1838.45,
+      "end": 1841.73,
+      "text": "giving the correct decision, or if you want to minimize the"
+    },
+    {
+      "start": 1841.73,
+      "end": 1844.97,
+      "text": "probability of making an incorrect decision, what you're"
+    },
+    {
+      "start": 1844.97,
+      "end": 1849.43,
+      "text": "going to choose to report is that value of theta for which"
+    },
+    {
+      "start": 1849.43,
+      "end": 1851.45,
+      "text": "the probability is highest."
+    },
+    {
+      "start": 1851.45,
+      "end": 1854.23,
+      "text": "So in this case, I would choose to report this"
+    },
+    {
+      "start": 1854.23,
+      "end": 1855.57,
+      "text": "particular value."
+    },
+    {
+      "start": 1855.57,
+      "end": 1858.85,
+      "text": "The most likely value of theta, given what I have"
+    },
+    {
+      "start": 1858.85,
+      "end": 1860.13,
+      "text": "observed."
+    },
+    {
+      "start": 1860.13,
+      "end": 1864.65,
+      "text": "And that value is called the maximum a posteriori"
+    },
+    {
+      "start": 1864.65,
+      "end": 1867.53,
+      "text": "probability estimate."
+    },
+    {
+      "start": 1867.53,
+      "end": 1871.57,
+      "text": "It's going to be this one in our case."
+    },
+    {
+      "start": 1871.57,
+      "end": 1876.85,
+      "text": "So picking the point in the posterior PMF that has the"
+    },
+    {
+      "start": 1876.85,
+      "end": 1880.73,
+      "text": "highest probability, that's the reasonable thing to do."
+    },
+    {
+      "start": 1880.73,
+      "end": 1883.85,
+      "text": "This is the optimal thing to do if you want to minimize the"
+    },
+    {
+      "start": 1883.85,
+      "end": 1887.35,
+      "text": "probability of an incorrect inference."
+    },
+    {
+      "start": 1887.35,
+      "end": 1890.13,
+      "text": "And that's what people do usually if they"
+    },
+    {
+      "start": 1890.13,
+      "end": 1893.35,
+      "text": "need to report a single answer, if they need to report"
+    },
+    {
+      "start": 1893.35,
+      "end": 1895.27,
+      "text": "a single decision."
+    },
+    {
+      "start": 1895.27,
+      "end": 1899.53,
+      "text": "How about in the estimation context?"
+    },
+    {
+      "start": 1899.53,
+      "end": 1903.25,
+      "text": "If that's what you know about theta, theta could be around"
+    },
+    {
+      "start": 1903.25,
+      "end": 1906.63,
+      "text": "here, but there's also some sharp probability that it is"
+    },
+    {
+      "start": 1906.63,
+      "end": 1908.59,
+      "text": "around here."
+    },
+    {
+      "start": 1908.59,
+      "end": 1912.25,
+      "text": "What's the single answer you would give to your boss?"
+    },
+    {
+      "start": 1912.25,
+      "end": 1916.31,
+      "text": "One option is to use the same philosophy and say, OK, I'm"
+    },
+    {
+      "start": 1916.31,
+      "end": 1920.13,
+      "text": "going to find the theta at which this posterior density"
+    },
+    {
+      "start": 1920.13,
+      "end": 1925.99,
+      "text": "is highest, so I would pick this point here and report this"
+    },
+    {
+      "start": 1925.99,
+      "end": 1926.89,
+      "text": "particular theta."
+    },
+    {
+      "start": 1926.89,
+      "end": 1931.13,
+      "text": "So this would be my theta, again, theta map, the theta"
+    },
+    {
+      "start": 1931.13,
+      "end": 1935.29,
+      "text": "that has the highest a posteriori probability, just"
+    },
+    {
+      "start": 1935.29,
+      "end": 1939.09,
+      "text": "because it corresponds to the peak of the density."
+    },
+    {
+      "start": 1939.09,
+      "end": 1943.77,
+      "text": "But in this context, the maximum a posteriori"
+    },
+    {
+      "start": 1943.77,
+      "end": 1946.73,
+      "text": "probability theta was the one that was"
+    },
+    {
+      "start": 1946.73,
+      "end": 1948.59,
+      "text": "most likely to be true."
+    },
+    {
+      "start": 1948.59,
+      "end": 1950.13,
+      "text": "In the continuous case,"
+    },
+    {
+      "start": 1950.13,
+      "end": 1953.49,
+      "text": "you cannot really say that this is the most likely value"
+    },
+    {
+      "start": 1953.49,
+      "end": 1954.57,
+      "text": "of theta."
+    },
+    {
+      "start": 1954.57,
+      "end": 1957.99,
+      "text": "In a continuous setting, any value of theta has zero"
+    },
+    {
+      "start": 1957.99,
+      "end": 1962.07,
+      "text": "probability, when we talk about densities, so it's not the"
+    },
+    {
+      "start": 1962.07,
+      "end": 1962.85,
+      "text": "most likely."
+    },
+    {
+      "start": 1962.85,
+      "end": 1967.37,
+      "text": "It's the one for which the density around the"
+    },
+    {
+      "start": 1967.37,
+      "end": 1971.41,
+      "text": "probabilities of that neighborhood are highest."
+    },
+    {
+      "start": 1971.41,
+      "end": 1976.05,
+      "text": "So the rationale for picking this particular estimate in"
+    },
+    {
+      "start": 1976.05,
+      "end": 1979.61,
+      "text": "the continuous case is much less compelling than the"
+    },
+    {
+      "start": 1979.61,
+      "end": 1980.01,
+      "text": "rationale."
+    },
+    {
+      "start": 1980.01,
+      "end": 1980.13,
+      "text": "All right."
+    },
+    {
+      "start": 1980.13,
+      "end": 1982.23,
+      "text": "rationale that we had in here."
+    },
+    {
+      "start": 1982.23,
+      "end": 1985.59,
+      "text": "So in this case, reasonable people might choose different"
+    },
+    {
+      "start": 1985.59,
+      "end": 1987.45,
+      "text": "quantities to report."
+    },
+    {
+      "start": 1987.45,
+      "end": 1991.77,
+      "text": "And a very popular one would be to report instead the"
+    },
+    {
+      "start": 1991.77,
+      "end": 1993.69,
+      "text": "conditional expectation."
+    },
+    {
+      "start": 1993.69,
+      "end": 1995.97,
+      "text": "So I don't know what theta is."
+    },
+    {
+      "start": 1995.97,
+      "end": 1999.63,
+      "text": "Given the data that I have, theta has this distribution."
+    },
+    {
+      "start": 1999.63,
+      "end": 2003.33,
+      "text": "Let me just report the average over that distribution."
+    },
+    {
+      "start": 2003.33,
+      "end": 2007.09,
+      "text": "Let me report the center of gravity of this figure."
+    },
+    {
+      "start": 2007.09,
+      "end": 2009.97,
+      "text": "And in this figure, the center of gravity would probably"
+    },
+    {
+      "start": 2009.97,
+      "end": 2012.21,
+      "text": "be somewhere around here."
+    },
+    {
+      "start": 2012.21,
+      "end": 2016.41,
+      "text": "And that would be a different estimate that you might choose"
+    },
+    {
+      "start": 2016.41,
+      "end": 2017.47,
+      "text": "to report."
+    },
+    {
+      "start": 2017.47,
+      "end": 2020.31,
+      "text": "So center of gravity is somewhere around here."
+    },
+    {
+      "start": 2020.31,
+      "end": 2023.57,
+      "text": "And this is the conditional expectation of theta, given"
+    },
+    {
+      "start": 2023.57,
+      "end": 2025.99,
+      "text": "the data that you have."
+    },
+    {
+      "start": 2025.99,
+      "end": 2031.21,
+      "text": "So these are two, in some sense, fairly reasonable ways"
+    },
+    {
+      "start": 2031.21,
+      "end": 2033.83,
+      "text": "of choosing what to report to your boss."
+    },
+    {
+      "start": 2033.83,
+      "end": 2035.73,
+      "text": "Some people might choose to report this."
+    },
+    {
+      "start": 2035.73,
+      "end": 2038.61,
+      "text": "Some people might choose to report that."
+    },
+    {
+      "start": 2038.61,
+      "end": 2039.67,
+      "text": "And"
+    },
+    {
+      "start": 2039.67,
+      "end": 2043.45,
+      "text": "a priori, there's no compelling reason why one would"
+    },
+    {
+      "start": 2043.45,
+      "end": 2048.63,
+      "text": "be preferable than the other one, unless you set some rules"
+    },
+    {
+      "start": 2048.63,
+      "end": 2052.37,
+      "text": "for the game and you describe a little more precisely what"
+    },
+    {
+      "start": 2052.37,
+      "end": 2054.07,
+      "text": "your objectives are."
+    },
+    {
+      "start": 2054.07,
+      "end": 2059.05,
+      "text": "But no matter which one you report, a single answer, a"
+    },
+    {
+      "start": 2059.05,
+      "end": 2064.49,
+      "text": "point estimate, doesn't really tell you the whole story."
+    },
+    {
+      "start": 2064.49,
+      "end": 2068.15,
+      "text": "There's a lot more information conveyed by this posterior"
+    },
+    {
+      "start": 2068.15,
+      "end": 2069.61,
+      "text": "distribution plot."
+    },
+    {
+      "start": 2069.61,
+      "end": 2072.15,
+      "text": "Than any single number that you might report."
+    },
+    {
+      "start": 2072.15,
+      "end": 2076.47,
+      "text": "So in general, you may wish to convince your boss that it's"
+    },
+    {
+      "start": 2076.47,
+      "end": 2079.49,
+      "text": "worth their time to look at the entire plot."
+    },
+    {
+      "start": 2079.49,
+      "end": 2083.11,
+      "text": "Because that plot sort of covers all the possibilities."
+    },
+    {
+      "start": 2083.11,
+      "end": 2086.63,
+      "text": "It tells your boss, most likely, we're in that range."
+    },
+    {
+      "start": 2086.63,
+      "end": 2090.81,
+      "text": "But there's also a distinct chance that our theta happens"
+    },
+    {
+      "start": 2090.81,
+      "end": 2094.13,
+      "text": "to lie in that range."
+    },
+    {
+      "start": 2094.13,
+      "end": 2094.61,
+      "text": "All right."
+    },
+    {
+      "start": 2094.61,
+      "end": 2098.79,
+      "text": "Now let us try to perhaps differentiate between these"
+    },
+    {
+      "start": 2098.79,
+      "end": 2099.57,
+      "text": "two."
+    },
+    {
+      "start": 2099.61,
+      "end": 2102.75,
+      "text": "And see under what circumstances this one might be"
+    },
+    {
+      "start": 2102.75,
+      "end": 2105.51,
+      "text": "the better estimate to perform."
+    },
+    {
+      "start": 2105.51,
+      "end": 2107.35,
+      "text": "Better with respect to what?"
+    },
+    {
+      "start": 2107.35,
+      "end": 2108.85,
+      "text": "We need some rules."
+    },
+    {
+      "start": 2108.85,
+      "end": 2110.73,
+      "text": "So we're going to throw in some rules."
+    },
+    {
+      "start": 2114.31,
+      "end": 2118.03,
+      "text": "As a warm-up, we're going to deal with the problem of making"
+    },
+    {
+      "start": 2118.03,
+      "end": 2122.73,
+      "text": "an estimation if you had no information at all, except for"
+    },
+    {
+      "start": 2122.73,
+      "end": 2124.67,
+      "text": "a prior distribution."
+    },
+    {
+      "start": 2124.67,
+      "end": 2128.07,
+      "text": "So this is a warm-up for what's coming next, which would be"
+    },
+    {
+      "start": 2128.07,
+      "end": 2129.27,
+      "text": "estimation."
+    },
+    {
+      "start": 2129.61,
+      "end": 2132.93,
+      "text": "That takes into account some information."
+    },
+    {
+      "start": 2132.93,
+      "end": 2134.85,
+      "text": "So we have a theta."
+    },
+    {
+      "start": 2134.85,
+      "end": 2138.47,
+      "text": "And because of your subjective beliefs or models by others,"
+    },
+    {
+      "start": 2138.47,
+      "end": 2141.75,
+      "text": "you believe that theta is uniformly distributed between,"
+    },
+    {
+      "start": 2141.75,
+      "end": 2146.23,
+      "text": "let's say, 4 and 10."
+    },
+    {
+      "start": 2146.23,
+      "end": 2151.6,
+      "text": "You want to come up with a point estimate."
+    },
+    {
+      "start": 2151.6,
+      "end": 2154.86,
+      "text": "Let's try to look for an estimate."
+    },
+    {
+      "start": 2154.86,
+      "end": 2157.52,
+      "text": "Call it c, in this case."
+    },
+    {
+      "start": 2157.52,
+      "end": 2159.48,
+      "text": "I want to pick a number with which to"
+    },
+    {
+      "start": 2159.48,
+      "end": 2160.86,
+      "text": "estimate the value of theta."
+    },
+    {
+      "start": 2161.5,
+      "end": 2166.3,
+      "text": "And I will be interested in the size of the"
+    },
+    {
+      "start": 2166.3,
+      "end": 2168.24,
+      "text": "error that I make."
+    },
+    {
+      "start": 2168.24,
+      "end": 2172.3,
+      "text": "And I really dislike large errors, so I'm going to focus"
+    },
+    {
+      "start": 2172.3,
+      "end": 2175.5,
+      "text": "on the square of the error that I make."
+    },
+    {
+      "start": 2175.5,
+      "end": 2179.02,
+      "text": "So I pick c."
+    },
+    {
+      "start": 2179.02,
+      "end": 2181.36,
+      "text": "Theta has a random value that I don't know."
+    },
+    {
+      "start": 2181.36,
+      "end": 2185.88,
+      "text": "But whatever it is, once it becomes known, it results into"
+    },
+    {
+      "start": 2185.88,
+      "end": 2188.62,
+      "text": "a squared error between what it is and what I"
+    },
+    {
+      "start": 2188.62,
+      "end": 2189.58,
+      "text": "guessed that it was."
+    },
+    {
+      "start": 2189.58,
+      "end": 2190.68,
+      "text": "."
+    },
+    {
+      "start": 2190.68,
+      "end": 2195.74,
+      "text": "And I'm interested in making a small error on the average,"
+    },
+    {
+      "start": 2195.74,
+      "end": 2198.18,
+      "text": "where the average is taken with respect to all the"
+    },
+    {
+      "start": 2198.18,
+      "end": 2202.36,
+      "text": "possible and unknown values of theta."
+    },
+    {
+      "start": 2202.36,
+      "end": 2207.86,
+      "text": "So this is a least squares formulation of the problem,"
+    },
+    {
+      "start": 2207.86,
+      "end": 2211.16,
+      "text": "where we try to minimize the least squares error."
+    },
+    {
+      "start": 2211.16,
+      "end": 2214.22,
+      "text": "How do you find the optimal C?"
+    },
+    {
+      "start": 2214.22,
+      "end": 2220.92,
+      "text": "Well, we take that expression and expand it."
+    },
+    {
+      "start": 2220.92,
+      "end": 2225.62,
+      "text": "And it is using linearity of expectations, expect theta"
+    },
+    {
+      "start": 2225.62,
+      "end": 2231.42,
+      "text": "squared minus 2C expected theta plus C squared."
+    },
+    {
+      "start": 2231.42,
+      "end": 2233.6,
+      "text": "That's the quantity that we want to minimize"
+    },
+    {
+      "start": 2233.6,
+      "end": 2236.64,
+      "text": "with respect to C."
+    },
+    {
+      "start": 2236.64,
+      "end": 2239.64,
+      "text": "To do the minimization, take the derivative with respect to"
+    },
+    {
+      "start": 2239.64,
+      "end": 2241.94,
+      "text": "C and set it to 0."
+    },
+    {
+      "start": 2241.94,
+      "end": 2246.7,
+      "text": "So that differentiation gives us, from here, minus 2"
+    },
+    {
+      "start": 2246.7,
+      "end": 2249.44,
+      "text": "expected value of theta."
+    },
+    {
+      "start": 2249.44,
+      "end": 2250.6,
+      "text": "Plus 2C."
+    },
+    {
+      "start": 2250.6,
+      "end": 2252.4,
+      "text": "Is equal to 0."
+    },
+    {
+      "start": 2252.4,
+      "end": 2256.48,
+      "text": "And the answer that you get by solving this equation is that"
+    },
+    {
+      "start": 2256.48,
+      "end": 2259.3,
+      "text": "C is the expected value of theta."
+    },
+    {
+      "start": 2259.3,
+      "end": 2262.84,
+      "text": "So when you do this optimization, you find that"
+    },
+    {
+      "start": 2262.84,
+      "end": 2266.14,
+      "text": "the optimal estimate, the thing you should be reporting,"
+    },
+    {
+      "start": 2266.14,
+      "end": 2267.92,
+      "text": "is the expected value of theta."
+    },
+    {
+      "start": 2267.92,
+      "end": 2271.82,
+      "text": "So in this particular example, you would choose your estimate"
+    },
+    {
+      "start": 2271.82,
+      "end": 2277.8,
+      "text": "C to be just the middle of these values, which would be"
+    },
+    {
+      "start": 2277.8,
+      "end": 2284.12,
+      "text": "7."
+    },
+    {
+      "start": 2284.12,
+      "end": 2288.62,
+      "text": "And in case your boss asks you, how good is your estimate?"
+    },
+    {
+      "start": 2288.62,
+      "end": 2291.98,
+      "text": "How big is your error going to be?"
+    },
+    {
+      "start": 2291.98,
+      "end": 2297.24,
+      "text": "What you report is the average, what you could report, is the"
+    },
+    {
+      "start": 2297.24,
+      "end": 2302.54,
+      "text": "average size of the estimation error that you are making."
+    },
+    {
+      "start": 2302.54,
+      "end": 2306.74,
+      "text": "We picked our estimates to be the expected value of theta."
+    },
+    {
+      "start": 2306.74,
+      "end": 2309.5,
+      "text": "So for this particular way that I'm using to do my"
+    },
+    {
+      "start": 2309.5,
+      "end": 2313.58,
+      "text": "estimation, this is the mean squared error that they get."
+    },
+    {
+      "start": 2313.58,
+      "end": 2315.3,
+      "text": "And this is a familiar quantity."
+    },
+    {
+      "start": 2315.3,
+      "end": 2318.34,
+      "text": "It's just the variance of the distribution."
+    },
+    {
+      "start": 2318.34,
+      "end": 2322.7,
+      "text": "So the expectation is the best way to estimate a quantity, if"
+    },
+    {
+      "start": 2322.7,
+      "end": 2325.52,
+      "text": "you're interested in the mean squared error."
+    },
+    {
+      "start": 2325.52,
+      "end": 2330.4,
+      "text": "And the resulting mean squared error is the variance itself."
+    },
+    {
+      "start": 2330.4,
+      "end": 2336.34,
+      "text": "How will this story change if we now have data as well?"
+    },
+    {
+      "start": 2336.34,
+      "end": 2341.26,
+      "text": "Now, having data means that we can compute posterior"
+    },
+    {
+      "start": 2341.26,
+      "end": 2343.48,
+      "text": "distributions, or conditional"
+    },
+    {
+      "start": 2343.48,
+      "end": 2345.16,
+      "text": "distributions."
+    },
+    {
+      "start": 2345.16,
+      "end": 2350.48,
+      "text": "So we get transported into a new universe, where instead of"
+    },
+    {
+      "start": 2350.48,
+      "end": 2354.74,
+      "text": "working with the original distribution of theta, the"
+    },
+    {
+      "start": 2354.74,
+      "end": 2358.84,
+      "text": "prior distribution, now we work with the conditional"
+    },
+    {
+      "start": 2358.84,
+      "end": 2364.84,
+      "text": "distribution of theta, given the data that we have observed."
+    },
+    {
+      "start": 2364.84,
+      "end": 2370.42,
+      "text": "Now remember our old slogan that conditional models and"
+    },
+    {
+      "start": 2370.42,
+      "end": 2373.48,
+      "text": "conditional probabilities are no different than ordinary"
+    },
+    {
+      "start": 2373.48,
+      "end": 2378.86,
+      "text": "probabilities, except that we live now in a new universe,"
+    },
+    {
+      "start": 2378.86,
+      "end": 2382.64,
+      "text": "where the new information has been taken into account."
+    },
+    {
+      "start": 2382.64,
+      "end": 2387.82,
+      "text": "So if you use that philosophy, and you're asked to minimize"
+    },
+    {
+      "start": 2387.82,
+      "end": 2393.28,
+      "text": "the squared error, but now that you live in a new universe,"
+    },
+    {
+      "start": 2393.28,
+      "end": 2396.86,
+      "text": "where x has been fixed to something, what would the"
+    },
+    {
+      "start": 2396.86,
+      "end": 2399.18,
+      "text": "optimal solution be?"
+    },
+    {
+      "start": 2399.18,
+      "end": 2403.26,
+      "text": "It would again be the expectation of theta."
+    },
+    {
+      "start": 2403.26,
+      "end": 2404.68,
+      "text": "But which expectation?"
+    },
+    {
+      "start": 2404.68,
+      "end": 2408.94,
+      "text": "It's the expectation which applies in the new conditional"
+    },
+    {
+      "start": 2408.94,
+      "end": 2412.32,
+      "text": "universe in which we live right now."
+    },
+    {
+      "start": 2412.32,
+      "end": 2416.28,
+      "text": "So because of what we did before, by the same"
+    },
+    {
+      "start": 2416.28,
+      "end": 2420.42,
+      "text": "calculation, we would find that the optimal estimate is the"
+    },
+    {
+      "start": 2420.42,
+      "end": 2425.64,
+      "text": "expected value of x of theta, but the optimal estimate that"
+    },
+    {
+      "start": 2425.64,
+      "end": 2429.14,
+      "text": "takes into account the information that we have."
+    },
+    {
+      "start": 2429.14,
+      "end": 2433.24,
+      "text": "So conclusion, once you get your data, if you"
+    },
+    {
+      "start": 2433.26,
+      "end": 2438.5,
+      "text": "want to minimize the mean squared error, you should just"
+    },
+    {
+      "start": 2438.5,
+      "end": 2442.66,
+      "text": "report the conditional estimation of this unknown"
+    },
+    {
+      "start": 2442.66,
+      "end": 2446.62,
+      "text": "quantity based on the data that you have."
+    },
+    {
+      "start": 2446.62,
+      "end": 2453.02,
+      "text": "So the picture here is that theta is unknown."
+    },
+    {
+      "start": 2453.02,
+      "end": 2460.7,
+      "text": "You have your apparatus that creates measurements."
+    },
+    {
+      "start": 2460.7,
+      "end": 2463.26,
+      "text": "So this creates an x."
+    },
+    {
+      "start": 2463.26,
+      "end": 2466.26,
+      "text": "You take an x."
+    },
+    {
+      "start": 2466.26,
+      "end": 2473.47,
+      "text": "And here you have a box that does calculations."
+    },
+    {
+      "start": 2473.47,
+      "end": 2478.17,
+      "text": "It does calculations, and it spits out the conditional"
+    },
+    {
+      "start": 2478.17,
+      "end": 2482.21,
+      "text": "expectation of theta, given the particular data that you"
+    },
+    {
+      "start": 2482.21,
+      "end": 2484.73,
+      "text": "have observed."
+    },
+    {
+      "start": 2484.73,
+      "end": 2488.65,
+      "text": "And what we have done in this class so far is, to some"
+    },
+    {
+      "start": 2488.65,
+      "end": 2493.41,
+      "text": "extent, developing the computational tools and skills"
+    },
+    {
+      "start": 2493.41,
+      "end": 2494.51,
+      "text": "to do this particular calculation."
+    },
+    {
+      "start": 2495.15,
+      "end": 2499.75,
+      "text": "How to calculate the posterior density for theta, and how to"
+    },
+    {
+      "start": 2499.75,
+      "end": 2502.75,
+      "text": "calculate expectations, conditional expectations."
+    },
+    {
+      "start": 2502.75,
+      "end": 2505.33,
+      "text": "So in principle, we know how to do this."
+    },
+    {
+      "start": 2505.33,
+      "end": 2509.99,
+      "text": "In principle we can program a computer to take the data and"
+    },
+    {
+      "start": 2509.99,
+      "end": 2511.67,
+      "text": "to spit out conditional expectations."
+    },
+    {
+      "start": 2516.12,
+      "end": 2524.36,
+      "text": "Somebody who doesn't think like us might instead, design a"
+    },
+    {
+      "start": 2524.36,
+      "end": 2525.0,
+      "text": "calculating machine."
+    },
+    {
+      "start": 2525.0,
+      "end": 2525.88,
+      "text": "."
+    },
+    {
+      "start": 2525.88,
+      "end": 2526.42,
+      "text": "That does calculations."
+    },
+    {
+      "start": 2526.42,
+      "end": 2526.88,
+      "text": "That does calculations."
+    },
+    {
+      "start": 2526.88,
+      "end": 2536.48,
+      "text": "something differently and produces some other estimate."
+    },
+    {
+      "start": 2536.48,
+      "end": 2540.0,
+      "text": "So we went through this argument, and we decided to"
+    },
+    {
+      "start": 2540.0,
+      "end": 2542.58,
+      "text": "program our computer to calculate"
+    },
+    {
+      "start": 2542.58,
+      "end": 2544.5,
+      "text": "conditional expectations."
+    },
+    {
+      "start": 2544.5,
+      "end": 2548.46,
+      "text": "Somebody else came up with some other crazy idea for how"
+    },
+    {
+      "start": 2548.46,
+      "end": 2550.56,
+      "text": "to estimate the random variable."
+    },
+    {
+      "start": 2550.56,
+      "end": 2554.52,
+      "text": "They came up with some function g, and they programmed"
+    },
+    {
+      "start": 2554.52,
+      "end": 2558.7,
+      "text": "it, and they designed a machine that estimates thetas"
+    },
+    {
+      "start": 2558.7,
+      "end": 2563.0,
+      "text": "by outputting a certain g of x."
+    },
+    {
+      "start": 2563.0,
+      "end": 2567.6,
+      "text": "That would be an alternative estimator."
+    },
+    {
+      "start": 2567.6,
+      "end": 2570.38,
+      "text": "Which one is better?"
+    },
+    {
+      "start": 2570.38,
+      "end": 2574.54,
+      "text": "Well, our own, we convinced ourselves that this is the"
+    },
+    {
+      "start": 2574.54,
+      "end": 2579.2,
+      "text": "optimal one in a universe where we have fixed the"
+    },
+    {
+      "start": 2579.2,
+      "end": 2581.44,
+      "text": "particular value of the data."
+    },
+    {
+      "start": 2581.44,
+      "end": 2584.0,
+      "text": "So what we have proved so far is the"
+    },
+    {
+      "start": 2584.0,
+      "end": 2586.06,
+      "text": "relation of this kind."
+    },
+    {
+      "start": 2586.06,
+      "end": 2590.98,
+      "text": "In this conditional universe, the mean squared error that I"
+    },
+    {
+      "start": 2590.98,
+      "end": 2595.9,
+      "text": "get, I'm the one who's using this estimator, is less than"
+    },
+    {
+      "start": 2595.9,
+      "end": 2599.5,
+      "text": "or equal than the mean squared error that this person will"
+    },
+    {
+      "start": 2599.5,
+      "end": 2603.98,
+      "text": "get, the person who uses that estimator."
+    },
+    {
+      "start": 2603.98,
+      "end": 2608.04,
+      "text": "For any particular value of the data, I'm going to do"
+    },
+    {
+      "start": 2608.04,
+      "end": 2610.18,
+      "text": "better than the other person."
+    },
+    {
+      "start": 2610.18,
+      "end": 2612.76,
+      "text": "Now, the data themselves are random."
+    },
+    {
+      "start": 2612.76,
+      "end": 2613.98,
+      "text": "If I ever"
+    },
+    {
+      "start": 2614.0,
+      "end": 2618.04,
+      "text": "average over all possible values of the data, I should"
+    },
+    {
+      "start": 2618.04,
+      "end": 2620.22,
+      "text": "still be better off."
+    },
+    {
+      "start": 2620.22,
+      "end": 2625.1,
+      "text": "If I'm better off for any possible value of x, then I"
+    },
+    {
+      "start": 2625.1,
+      "end": 2629.12,
+      "text": "should be better off on the average over all possible"
+    },
+    {
+      "start": 2629.12,
+      "end": 2630.62,
+      "text": "values of x."
+    },
+    {
+      "start": 2630.62,
+      "end": 2635.64,
+      "text": "So let us average both sides of this quantity with respect"
+    },
+    {
+      "start": 2635.64,
+      "end": 2638.4,
+      "text": "to the probability distribution of x."
+    },
+    {
+      "start": 2638.4,
+      "end": 2642.92,
+      "text": "If you want to do it formally, you can write this inequality"
+    },
+    {
+      "start": 2642.92,
+      "end": 2643.86,
+      "text": "between numbers."
+    },
+    {
+      "start": 2643.86,
+      "end": 2647.04,
+      "text": "As an inequality between random variables, and it tells"
+    },
+    {
+      "start": 2647.04,
+      "end": 2650.88,
+      "text": "that no matter what that random variable turns out to"
+    },
+    {
+      "start": 2650.88,
+      "end": 2653.98,
+      "text": "be, this quantity is better than that quantity."
+    },
+    {
+      "start": 2653.98,
+      "end": 2657.24,
+      "text": "Take expectations of both sides, and you get this"
+    },
+    {
+      "start": 2657.24,
+      "end": 2661.32,
+      "text": "inequality between expectations overall."
+    },
+    {
+      "start": 2661.32,
+      "end": 2669.1,
+      "text": "And this last inequality tells me that the person who's using"
+    },
+    {
+      "start": 2669.1,
+      "end": 2674.4,
+      "text": "this estimator, who produces estimates according to this"
+    },
+    {
+      "start": 2674.4,
+      "end": 2675.54,
+      "text": "machine."
+    },
+    {
+      "start": 2675.54,
+      "end": 2680.24,
+      "text": "Is going to have, on the average overall, less than or"
+    },
+    {
+      "start": 2680.24,
+      "end": 2685.08,
+      "text": "equal to the, it will have a mean squared estimation error"
+    },
+    {
+      "start": 2685.08,
+      "end": 2688.52,
+      "text": "that's less than or equal to the estimation error that's"
+    },
+    {
+      "start": 2688.52,
+      "end": 2691.26,
+      "text": "produced by the other person."
+    },
+    {
+      "start": 2691.26,
+      "end": 2696.78,
+      "text": "In a few words, the conditional expectation estimator is the"
+    },
+    {
+      "start": 2696.78,
+      "end": 2698.44,
+      "text": "optimal estimator."
+    },
+    {
+      "start": 2698.44,
+      "end": 2701.7,
+      "text": "It's the ultimate estimating machine."
+    },
+    {
+      "start": 2701.7,
+      "end": 2702.74,
+      "text": "That's how you should do it."
+    },
+    {
+      "start": 2705.54,
+      "end": 2709.2,
+      "text": "You should solve estimation problems and report a single"
+    },
+    {
+      "start": 2709.2,
+      "end": 2714.3,
+      "text": "value if you're forced to report a single value, and if"
+    },
+    {
+      "start": 2714.3,
+      "end": 2718.02,
+      "text": "you're interested in estimation errors."
+    },
+    {
+      "start": 2718.02,
+      "end": 2724.0,
+      "text": "OK, well, we could have told you that story, of course, a"
+    },
+    {
+      "start": 2724.0,
+      "end": 2726.94,
+      "text": "month or two ago."
+    },
+    {
+      "start": 2726.94,
+      "end": 2730.06,
+      "text": "This is mostly about interpretation, about"
+    },
+    {
+      "start": 2730.06,
+      "end": 2733.44,
+      "text": "realizing that conditional expectations have a very"
+    },
+    {
+      "start": 2733.44,
+      "end": 2735.14,
+      "text": "nice property."
+    },
+    {
+      "start": 2735.14,
+      "end": 2738.18,
+      "text": "But other than that, any probabilistic skills that come"
+    },
+    {
+      "start": 2738.18,
+      "end": 2741.64,
+      "text": "into this business are just the probabilistic skills of being"
+    },
+    {
+      "start": 2741.64,
+      "end": 2745.3,
+      "text": "able to calculate conditional expectations, which you already"
+    },
+    {
+      "start": 2745.3,
+      "end": 2746.74,
+      "text": "know how to do."
+    },
+    {
+      "start": 2746.74,
+      "end": 2747.92,
+      "text": "So conclusion."
+    },
+    {
+      "start": 2747.92,
+      "end": 2751.36,
+      "text": "All of optimal Bayesian estimation just means"
+    },
+    {
+      "start": 2751.36,
+      "end": 2754.82,
+      "text": "calculating and reporting conditional expectations."
+    },
+    {
+      "start": 2754.82,
+      "end": 2758.38,
+      "text": "Well, if the world were that simple, then statisticians"
+    },
+    {
+      "start": 2758.38,
+      "end": 2762.66,
+      "text": "wouldn't be able to find jobs if life is that simple."
+    },
+    {
+      "start": 2762.66,
+      "end": 2765.14,
+      "text": "So real life is not that simple."
+    },
+    {
+      "start": 2765.14,
+      "end": 2769.54,
+      "text": "There are complications, and that perhaps makes their life a"
+    },
+    {
+      "start": 2769.54,
+      "end": 2771.12,
+      "text": "little more interesting."
+    },
+    {
+      "start": 2771.12,
+      "end": 2774.08,
+      "text": "So some complications that come into the work of a Bayesian"
+    },
+    {
+      "start": 2774.08,
+      "end": 2780.82,
+      "text": "statistician is, in the first place, before it gets to the"
+    },
+    {
+      "start": 2780.82,
+      "end": 2785.46,
+      "text": "complications, one complication is that we deal with vectors"
+    },
+    {
+      "start": 2785.46,
+      "end": 2788.56,
+      "text": "instead of just single random variables."
+    },
+    {
+      "start": 2788.56,
+      "end": 2793.52,
+      "text": "I use the notation here as if x was a single random variable."
+    },
+    {
+      "start": 2793.52,
+      "end": 2794.76,
+      "text": "In real life,"
+    },
+    {
+      "start": 2795.14,
+      "end": 2797.72,
+      "text": "you get several data."
+    },
+    {
+      "start": 2797.72,
+      "end": 2799.48,
+      "text": "Does our story change?"
+    },
+    {
+      "start": 2799.48,
+      "end": 2800.38,
+      "text": "Not really."
+    },
+    {
+      "start": 2800.38,
+      "end": 2801.94,
+      "text": "Same argument."
+    },
+    {
+      "start": 2801.94,
+      "end": 2804.68,
+      "text": "Given all the data that you have observed, you should still"
+    },
+    {
+      "start": 2804.68,
+      "end": 2807.64,
+      "text": "report the conditional expectation of theta."
+    },
+    {
+      "start": 2807.64,
+      "end": 2811.24,
+      "text": "But what kind of work does it take in order to report this"
+    },
+    {
+      "start": 2811.24,
+      "end": 2813.08,
+      "text": "conditional expectation?"
+    },
+    {
+      "start": 2813.08,
+      "end": 2817.02,
+      "text": "One issue is that you need to cook up a plausible prior"
+    },
+    {
+      "start": 2817.02,
+      "end": 2818.82,
+      "text": "distribution for theta."
+    },
+    {
+      "start": 2818.82,
+      "end": 2819.96,
+      "text": "How do you do that?"
+    },
+    {
+      "start": 2819.96,
+      "end": 2823.62,
+      "text": "In a given application, this is a bit of a judgment call."
+    },
+    {
+      "start": 2823.62,
+      "end": 2824.84,
+      "text": "What prior will you be"
+    },
+    {
+      "start": 2824.84,
+      "end": 2825.98,
+      "text": "working with?"
+    },
+    {
+      "start": 2825.98,
+      "end": 2828.84,
+      "text": "And there's a certain skill there of not"
+    },
+    {
+      "start": 2828.84,
+      "end": 2832.1,
+      "text": "making silly choices."
+    },
+    {
+      "start": 2832.1,
+      "end": 2836.68,
+      "text": "A more pragmatic practical issue is that this is a"
+    },
+    {
+      "start": 2836.68,
+      "end": 2841.28,
+      "text": "formula that's extremely nice and compact and simple that you"
+    },
+    {
+      "start": 2841.28,
+      "end": 2844.66,
+      "text": "can write with minimal ink."
+    },
+    {
+      "start": 2844.66,
+      "end": 2848.64,
+      "text": "But behind it, there could be hidden a huge"
+    },
+    {
+      "start": 2848.64,
+      "end": 2851.52,
+      "text": "amount of calculation."
+    },
+    {
+      "start": 2851.52,
+      "end": 2854.82,
+      "text": "So doing any sort of calculations that involve"
+    },
+    {
+      "start": 2854.84,
+      "end": 2859.66,
+      "text": "multiple random variables really involves calculating"
+    },
+    {
+      "start": 2859.66,
+      "end": 2862.24,
+      "text": "multidimensional integrals."
+    },
+    {
+      "start": 2862.24,
+      "end": 2866.24,
+      "text": "And multidimensional integrals are hard to compute."
+    },
+    {
+      "start": 2866.24,
+      "end": 2871.26,
+      "text": "So implementing, actually, this calculating machine here may not"
+    },
+    {
+      "start": 2871.26,
+      "end": 2874.36,
+      "text": "be easy, might be complicated computationally."
+    },
+    {
+      "start": 2874.36,
+      "end": 2878.24,
+      "text": "It's also complicated in terms of not being able to derive"
+    },
+    {
+      "start": 2878.24,
+      "end": 2879.9,
+      "text": "intuition about it."
+    },
+    {
+      "start": 2879.9,
+      "end": 2883.64,
+      "text": "So perhaps you might want to have a simpler version, a"
+    },
+    {
+      "start": 2883.64,
+      "end": 2884.68,
+      "text": "simpler alternative."
+    },
+    {
+      "start": 2884.68,
+      "end": 2890.06,
+      "text": "To this formula, that's easier to work with and easier to calculate."
+    },
+    {
+      "start": 2890.06,
+      "end": 2893.28,
+      "text": "So we're going to be, we will be talking about one such simpler"
+    },
+    {
+      "start": 2893.28,
+      "end": 2895.68,
+      "text": "alternative next time."
+    },
+    {
+      "start": 2895.68,
+      "end": 2898.48,
+      "text": "So again, to conclude, at the high level Bayesian"
+    },
+    {
+      "start": 2898.48,
+      "end": 2902.86,
+      "text": "estimation is very, very simple, given that you have mastered"
+    },
+    {
+      "start": 2902.86,
+      "end": 2906.54,
+      "text": "everything that has happened in this course so far."
+    },
+    {
+      "start": 2906.54,
+      "end": 2910.5,
+      "text": "There are certain practical issues, and it's also good to be familiar"
+    },
+    {
+      "start": 2910.5,
+      "end": 2914.68,
+      "text": "with the concepts and the issues that, in general, you would prefer"
+    },
+    {
+      "start": 2914.68,
+      "end": 2917.36,
+      "text": "to report the complete posterior distribution."
+    },
+    {
+      "start": 2917.36,
+      "end": 2920.92,
+      "text": "But if you're forced to report a point estimate, then there's a"
+    },
+    {
+      "start": 2920.92,
+      "end": 2923.12,
+      "text": "number of reasonable ways to do it."
+    },
+    {
+      "start": 2923.12,
+      "end": 2926.72,
+      "text": "And perhaps the most reasonable one is to just report the"
+    },
+    {
+      "start": 2926.72,
+      "end": 2928.26,
+      "text": "conditional expectation itself."
+    }
+  ]
+}
