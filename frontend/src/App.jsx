@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+
 const suggestions = [
   "What is a random variable?",
   "Explain Bayes' theorem",
@@ -34,7 +36,7 @@ function App() {
     setMessages(prev => [...prev, { role: 'user', content: question }])
 
     try {
-      const response = await fetch('http://localhost:8000/query', {
+      const response = await fetch(`${API_URL}/query`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question })

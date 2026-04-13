@@ -21,13 +21,27 @@ def load_index():
     df = df.sort_values(["lecture", "start"]).reset_index(drop=True)
 
 def create_embeddings(texts):
-    r = requests.post(
-        "http://localhost:11434/api/embed",
-        json={"model": "bge-m3", "input": texts},
-        timeout=120
-    )
-    r.raise_for_status()
-    return r.json()["embeddings"]
+    provider = os.getenv("LLM_PROVIDER", "ollama")
+    
+    if provider == "ollama":
+        r = requests.post(
+            f"{os.getenv('OLLAMA_BASE_URL', 'http://localhost:11434')}/api/embed",
+            json={"model": os.getenv("EMBEDDING_MODEL", "bge-m3"), "input": texts},
+            timeout=120
+        )
+        r.raise_for_status()
+        return r.json()["embeddings"]
+    elif provider == "groq":
+        api_key = os.getenv("GROQ_API_KEY")
+        headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+        data = {
+            "model": "llm-embeddings",  # Will need fallback for embeddings
+            "input": texts
+        }
+        # Groq doesn't have free embeddings - use a workaround
+        raise HTTPException(status_code=501, detail="Groq embeddings not available - use Ollama or another provider")
+    else:
+        raise HTTPException(status_code=501, detail=f"Unknown LLM provider: {provider}")
 
 def expand_with_neighbors(df, indices, window=1):
     expanded = set()
@@ -63,13 +77,30 @@ def merge_segments(df):
     return merged
 
 def call_llm(prompt):
-    r = requests.post(
-        "http://localhost:11434/api/generate",
-        json={"model": "llama3.1:8b", "prompt": prompt, "stream": False},
-        timeout=300
-    )
-    r.raise_for_status()
-    return r.json()["response"]
+    provider = os.getenv("LLM_PROVIDER", "ollama")
+    
+    if provider == "ollama":
+        r = requests.post(
+            f"{os.getenv('OLLAMA_BASE_URL', 'http://localhost:11434')}/api/generate",
+            json={"model": os.getenv("LLM_MODEL", "llama3.1:8b"), "prompt": prompt, "stream": False},
+            timeout=300
+        )
+        r.raise_for_status()
+        return r.json()["response"]
+    elif provider == "groq":
+        api_key = os.getenv("GROQ_API_KEY")
+        if not api_key:
+            raise HTTPException(status_code=500, detail="GROQ_API_KEY not set")
+        headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+        data = {
+            "model": "llama-3.1-8b-instant",
+            "messages": [{"role": "user", "content": prompt}]
+        }
+        r = requests.post("https://api.groq.com/openai/v1/chat/completions", headers=headers, json=data, timeout=300)
+        r.raise_for_status()
+        return r.json()["choices"][0]["message"]["content"]
+    else:
+        raise HTTPException(status_code=501, detail=f"Unknown LLM provider: {provider}")
 
 def build_prompt(incoming_query, contexts):
     blocks = []
