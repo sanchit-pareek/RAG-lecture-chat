@@ -134,12 +134,6 @@ Generation uses temperature 0 and seed 42. The frontend defaults to same-origin 
 
 For new recordings, install FFmpeg and root `requirements.txt`, create `videos/` and `audios/`, then run `process_videos.py` and `transcription.py`. Transcription uses faster-whisper `large-v3` with CUDA/FP16. Adapt filename conventions and device settings for your recordings, then rebuild the index. The included corpus needs no retranscription.
 
-## Limitations and next work
 
-- ASR segments average 3.15 seconds and often end mid-sentence. Neighbor expansion can still miss the explanation.
-- Displayed sources do not guarantee supported citations. The pilot observed both unsupported correct answers and incorrect answers.
-- The similarity threshold is not calibrated as a reliable out-of-domain detector.
-- Independent relevance labels, held-out student questions, and concurrent-load measurements remain future work.
-- Docker/NGINX configuration is included; Docker and Railway deployment have not been verified. The existing deployment guide contains historical instructions and needs review against current configuration.
 
 The interface identifies the material as MIT OpenCourseWare probability lectures by John Tsitsiklis. Course content retains its original attribution and applicable terms. No standalone code-license file is currently included; the earlier README's MIT license assertion has been removed pending an explicit license choice.
