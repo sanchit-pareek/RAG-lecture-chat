@@ -1,0 +1,2102 @@
+{
+  "summary": {
+    "dataset_status": "draft_source_derived_not_human_validated",
+    "unique_queries": 30,
+    "repeats": 1,
+    "ranking": {
+      "hit_at_1": 0.3333333333333333,
+      "hit_at_5": 0.6666666666666666,
+      "reciprocal_rank": 0.43388888888888894
+    },
+    "latency_ms": {
+      "embedding": {
+        "p50": 53.95090000001801,
+        "p95": 89.56591500000286,
+        "n": 30
+      },
+      "similarity": {
+        "p50": 200.08675000008225,
+        "p95": 232.28795500017438,
+        "n": 30
+      },
+      "retrieval": {
+        "p50": 256.1893499996586,
+        "p95": 320.94978000041,
+        "n": 30
+      }
+    },
+    "configurations": {
+      "0": {
+        "mean_relevant_context_coverage": 0.0689105339105339,
+        "mean_context_words": 41.36666666666667,
+        "context_ms": {
+          "p50": 1.0794999989229837,
+          "p95": 1.5240750001794365,
+          "n": 30
+        },
+        "retrieval_ms": {
+          "p50": 255.33795000046666,
+          "p95": 319.96875500126396,
+          "n": 30
+        }
+      },
+      "1": {
+        "mean_relevant_context_coverage": 0.1821284271284271,
+        "mean_context_words": 112.33333333333333,
+        "context_ms": {
+          "p50": 1.953500000126951,
+          "p95": 2.39566999980525,
+          "n": 30
+        },
+        "retrieval_ms": {
+          "p50": 256.21979999959876,
+          "p95": 320.57873000157986,
+          "n": 30
+        }
+      }
+    }
+  },
+  "configuration": {
+    "metadata": {
+      "schema_version": 1,
+      "corpus_sha256": "25446f169c4798ea121aeeb23db7f8fb42e13f09a72e49cb06e7f1b418680316",
+      "embedding_model": "bge-m3",
+      "lectures": [
+        {
+          "lecture": "lec01",
+          "duration": 3070.4426875,
+          "bytes": 120873
+        },
+        {
+          "lecture": "lec02",
+          "duration": 3070.848,
+          "bytes": 116765
+        },
+        {
+          "lecture": "lec03",
+          "duration": 2789.0986875,
+          "bytes": 108091
+        },
+        {
+          "lecture": "lec04",
+          "duration": 3093.9733125,
+          "bytes": 110355
+        },
+        {
+          "lecture": "lec05",
+          "duration": 3034.048,
+          "bytes": 117280
+        },
+        {
+          "lecture": "lec06",
+          "duration": 3052.032,
+          "bytes": 115188
+        },
+        {
+          "lecture": "lec07",
+          "duration": 3041.088,
+          "bytes": 116879
+        },
+        {
+          "lecture": "lec08",
+          "duration": 3028.0746875,
+          "bytes": 116715
+        },
+        {
+          "lecture": "lec09",
+          "duration": 3050.0906875,
+          "bytes": 116235
+        },
+        {
+          "lecture": "lec10",
+          "duration": 2932.032,
+          "bytes": 107445
+        },
+        {
+          "lecture": "lec11",
+          "duration": 3114.0266875,
+          "bytes": 112092
+        },
+        {
+          "lecture": "lec12",
+          "duration": 2873.0453125,
+          "bytes": 113448
+        },
+        {
+          "lecture": "lec13",
+          "duration": 3057.024,
+          "bytes": 110440
+        },
+        {
+          "lecture": "lec14",
+          "duration": 3163.0293125,
+          "bytes": 118091
+        },
+        {
+          "lecture": "lec15",
+          "duration": 2967.0826875,
+          "bytes": 115546
+        },
+        {
+          "lecture": "lec16",
+          "duration": 3125.0346875,
+          "bytes": 119794
+        },
+        {
+          "lecture": "lec17",
+          "duration": 3084.0533125,
+          "bytes": 115751
+        },
+        {
+          "lecture": "lec18",
+          "duration": 3109.0773125,
+          "bytes": 116524
+        },
+        {
+          "lecture": "lec19",
+          "duration": 3012.0533125,
+          "bytes": 117584
+        },
+        {
+          "lecture": "lec20",
+          "duration": 3082.048,
+          "bytes": 107188
+        },
+        {
+          "lecture": "lec21",
+          "duration": 2929.0453125,
+          "bytes": 112484
+        },
+        {
+          "lecture": "lec22",
+          "duration": 3135.04,
+          "bytes": 119986
+        },
+        {
+          "lecture": "lec23",
+          "duration": 2971.072,
+          "bytes": 118245
+        },
+        {
+          "lecture": "lec24",
+          "duration": 3109.12,
+          "bytes": 111452
+        },
+        {
+          "lecture": "lec25",
+          "duration": 3126.0373125,
+          "bytes": 121086
+        }
+      ],
+      "model_digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab"
+    },
+    "generation_model": "llama3.1:8b",
+    "matrix_shape": [
+      23912,
+      1024
+    ],
+    "embedding_num_gpu": "0",
+    "top_k": 5,
+    "threshold": 0.25,
+    "windows": [
+      0,
+      1
+    ],
+    "generation_options": {
+      "temperature": 0,
+      "seed": 42,
+      "num_predict": 512,
+      "num_ctx": 8192
+    },
+    "dataset_sha256": "36d5e7fd869d55b5332ff4e4073016535d0d279c74eb630f2483da3fbbdb7b18",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "processor": "AMD64 Family 25 Model 116 Stepping 1, AuthenticAMD",
+    "python": "3.14.3",
+    "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU, 6141 MiB, 592.82",
+    "packages": {
+      "numpy": "2.5.4",
+      "pandas": "3.1.1",
+      "scikit-learn": "1.9.1",
+      "requests": "2.34.2",
+      "joblib": "1.6.0"
+    },
+    "ollama_tags": {
+      "models": [
+        {
+          "name": "llama3.1:8b",
+          "model": "llama3.1:8b",
+          "modified_at": "2026-03-22T15:19:24.9454771+05:30",
+          "size": 4920753328,
+          "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "llama",
+            "families": [
+              "llama"
+            ],
+            "parameter_size": "8.0B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 131072,
+            "embedding_length": 4096,
+            "runner": "ggml"
+          },
+          "capabilities": [
+            "completion",
+            "tools"
+          ]
+        },
+        {
+          "name": "bge-m3:latest",
+          "model": "bge-m3:latest",
+          "modified_at": "2026-03-22T15:19:23.319817+05:30",
+          "size": 1157672605,
+          "digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "bert",
+            "families": [
+              "bert"
+            ],
+            "parameter_size": "566.70M",
+            "quantization_level": "F16",
+            "context_length": 8192,
+            "embedding_length": 1024,
+            "runner": "ggml"
+          },
+          "capabilities": [
+            "embedding"
+          ]
+        },
+        {
+          "name": "deepseek-r1:latest",
+          "model": "deepseek-r1:latest",
+          "modified_at": "2025-12-18T10:27:31.1195499+05:30",
+          "size": 5225376047,
+          "digest": "6995872bfe4c521a67b32da386cd21d5c6e819b6e0d62f79f64ec83be99f5763",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "8.2B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 131072,
+            "embedding_length": 4096,
+            "runner": "ggml"
+          },
+          "capabilities": [
+            "tools",
+            "thinking",
+            "completion"
+          ]
+        }
+      ]
+    }
+  },
+  "results": [
+    {
+      "query_id": "q01",
+      "repeat": 0,
+      "question": "Why is the probability of the entire sample space equal to one?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 89.28360000027169,
+        "similarity": 260.92380000045523,
+        "context": 1.8670000008569332,
+        "retrieval": 352.07440000158385
+      },
+      "top5": [
+        {
+          "lecture": "lec01",
+          "segment": 488,
+          "score": 0.8547623343905169
+        },
+        {
+          "lecture": "lec01",
+          "segment": 555,
+          "score": 0.8203150325762418
+        },
+        {
+          "lecture": "lec02",
+          "segment": 116,
+          "score": 0.7913998005255474
+        },
+        {
+          "lecture": "lec02",
+          "segment": 63,
+          "score": 0.7757615394929752
+        },
+        {
+          "lecture": "lec04",
+          "segment": 45,
+          "score": 0.7325664503379202
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.4382999997906154,
+          "context_segments": 5,
+          "context_words": 49,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 351.64570000051754
+        },
+        "1": {
+          "context_ms": 2.3794999997335253,
+          "context_segments": 15,
+          "context_words": 110,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 352.58690000046045
+        }
+      }
+    },
+    {
+      "query_id": "q02",
+      "repeat": 0,
+      "question": "In the radar example, what are the prior probability of a plane and the probability of detecting it?",
+      "ranking": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 64.30100000034145,
+        "similarity": 221.90749999936088,
+        "context": 1.803200000722427,
+        "retrieval": 288.01170000042475
+      },
+      "top5": [
+        {
+          "lecture": "lec02",
+          "segment": 496,
+          "score": 0.7511061696046013
+        },
+        {
+          "lecture": "lec02",
+          "segment": 571,
+          "score": 0.7383551565827149
+        },
+        {
+          "lecture": "lec02",
+          "segment": 858,
+          "score": 0.7300263566421391
+        },
+        {
+          "lecture": "lec10",
+          "segment": 156,
+          "score": 0.7245812349638607
+        },
+        {
+          "lecture": "lec02",
+          "segment": 522,
+          "score": 0.7233968234683436
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.548600001115119,
+          "context_segments": 5,
+          "context_words": 52,
+          "relevant_context_coverage": 0.08333333333333333,
+          "retrieval_ms": 287.75710000081745
+        },
+        "1": {
+          "context_ms": 2.4088999998639338,
+          "context_segments": 15,
+          "context_words": 116,
+          "relevant_context_coverage": 0.16666666666666666,
+          "retrieval_ms": 288.61739999956626
+        }
+      }
+    },
+    {
+      "query_id": "q03",
+      "repeat": 0,
+      "question": "Can conditioning destroy independence between events?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.25
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 44.89350000039849,
+        "similarity": 187.97529999937979,
+        "context": 1.8371000005572569,
+        "retrieval": 234.70590000033553
+      },
+      "top5": [
+        {
+          "lecture": "lec03",
+          "segment": 426,
+          "score": 0.7051354195897386
+        },
+        {
+          "lecture": "lec03",
+          "segment": 364,
+          "score": 0.6600071651985014
+        },
+        {
+          "lecture": "lec07",
+          "segment": 22,
+          "score": 0.6554959383191004
+        },
+        {
+          "lecture": "lec03",
+          "segment": 460,
+          "score": 0.6494569033417235
+        },
+        {
+          "lecture": "lec03",
+          "segment": 12,
+          "score": 0.6436078654595081
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.486299999669427,
+          "context_segments": 5,
+          "context_words": 26,
+          "relevant_context_coverage": 0.08333333333333333,
+          "retrieval_ms": 234.3550999994477
+        },
+        "1": {
+          "context_ms": 2.319399998668814,
+          "context_segments": 15,
+          "context_words": 93,
+          "relevant_context_coverage": 0.25,
+          "retrieval_ms": 235.1881999984471
+        }
+      }
+    },
+    {
+      "query_id": "q04",
+      "repeat": 0,
+      "question": "What value is assigned to zero factorial, and why?",
+      "ranking": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 69.84579999880225,
+        "similarity": 208.1984000014927,
+        "context": 1.253099999303231,
+        "retrieval": 279.2972999995982
+      },
+      "top5": [
+        {
+          "lecture": "lec04",
+          "segment": 461,
+          "score": 0.8446018701886537
+        },
+        {
+          "lecture": "lec14",
+          "segment": 617,
+          "score": 0.7337370558801245
+        },
+        {
+          "lecture": "lec04",
+          "segment": 466,
+          "score": 0.7272673014439412
+        },
+        {
+          "lecture": "lec14",
+          "segment": 613,
+          "score": 0.6913459665604634
+        },
+        {
+          "lecture": "lec04",
+          "segment": 453,
+          "score": 0.6767455634442151
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 0.9031000008690171,
+          "context_segments": 5,
+          "context_words": 40,
+          "relevant_context_coverage": 0.16666666666666666,
+          "retrieval_ms": 278.94730000116397
+        },
+        "1": {
+          "context_ms": 1.4257000002544373,
+          "context_segments": 15,
+          "context_words": 116,
+          "relevant_context_coverage": 0.5,
+          "retrieval_ms": 279.4699000005494
+        }
+      }
+    },
+    {
+      "query_id": "q05",
+      "repeat": 0,
+      "question": "How is the average payoff calculated for payoffs 1, 2, and 4 with probabilities one sixth, one half, and one third?",
+      "ranking": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 89.79689999978291,
+        "similarity": 205.09639999909268,
+        "context": 1.6988999996101484,
+        "retrieval": 296.59219999848574
+      },
+      "top5": [
+        {
+          "lecture": "lec05",
+          "segment": 499,
+          "score": 0.7086501623890542
+        },
+        {
+          "lecture": "lec04",
+          "segment": 242,
+          "score": 0.7027063897849147
+        },
+        {
+          "lecture": "lec05",
+          "segment": 485,
+          "score": 0.6978370957795061
+        },
+        {
+          "lecture": "lec05",
+          "segment": 487,
+          "score": 0.6949988023137162
+        },
+        {
+          "lecture": "lec17",
+          "segment": 114,
+          "score": 0.6766083435974554
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.2495999999373453,
+          "context_segments": 5,
+          "context_words": 52,
+          "relevant_context_coverage": 0.08333333333333333,
+          "retrieval_ms": 296.14289999881294
+        },
+        "1": {
+          "context_ms": 1.9802000006166054,
+          "context_segments": 14,
+          "context_words": 134,
+          "relevant_context_coverage": 0.25,
+          "retrieval_ms": 296.8734999994922
+        }
+      }
+    },
+    {
+      "query_id": "q06",
+      "repeat": 0,
+      "question": "What sequence of coin tosses corresponds to a geometric waiting time of k?",
+      "ranking": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 52.11799999960931,
+        "similarity": 199.94390000101703,
+        "context": 1.427999999577878,
+        "retrieval": 253.48990000020422
+      },
+      "top5": [
+        {
+          "lecture": "lec06",
+          "segment": 481,
+          "score": 0.7107310206438643
+        },
+        {
+          "lecture": "lec06",
+          "segment": 505,
+          "score": 0.6897783008991969
+        },
+        {
+          "lecture": "lec03",
+          "segment": 113,
+          "score": 0.6405390796835196
+        },
+        {
+          "lecture": "lec14",
+          "segment": 639,
+          "score": 0.628332238459692
+        },
+        {
+          "lecture": "lec13",
+          "segment": 744,
+          "score": 0.6281475461031385
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.0051999997813255,
+          "context_segments": 5,
+          "context_words": 41,
+          "relevant_context_coverage": 0.08333333333333333,
+          "retrieval_ms": 253.06710000040766
+        },
+        "1": {
+          "context_ms": 1.74689999948896,
+          "context_segments": 15,
+          "context_words": 121,
+          "relevant_context_coverage": 0.25,
+          "retrieval_ms": 253.8088000001153
+        }
+      }
+    },
+    {
+      "query_id": "q07",
+      "repeat": 0,
+      "question": "Why do functions of independent random variables remain independent?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 43.16060000019206,
+        "similarity": 186.63419999938924,
+        "context": 1.8184000000474043,
+        "retrieval": 231.6131999996287
+      },
+      "top5": [
+        {
+          "lecture": "lec13",
+          "segment": 850,
+          "score": 0.7832116836781317
+        },
+        {
+          "lecture": "lec07",
+          "segment": 812,
+          "score": 0.7349935239864087
+        },
+        {
+          "lecture": "lec07",
+          "segment": 264,
+          "score": 0.726342487993352
+        },
+        {
+          "lecture": "lec07",
+          "segment": 351,
+          "score": 0.7227605883931896
+        },
+        {
+          "lecture": "lec07",
+          "segment": 213,
+          "score": 0.7169689274370612
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.4090000004216563,
+          "context_segments": 5,
+          "context_words": 32,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 231.20380000000296
+        },
+        "1": {
+          "context_ms": 2.1813999992446043,
+          "context_segments": 15,
+          "context_words": 95,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 231.9761999988259
+        }
+      }
+    },
+    {
+      "query_id": "q08",
+      "repeat": 0,
+      "question": "Does changing a probability density at a single point affect probabilities?",
+      "ranking": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 46.834799999487586,
+        "similarity": 197.3193000012543,
+        "context": 1.7902999989019008,
+        "retrieval": 245.9443999996438
+      },
+      "top5": [
+        {
+          "lecture": "lec08",
+          "segment": 483,
+          "score": 0.7548055308294275
+        },
+        {
+          "lecture": "lec09",
+          "segment": 598,
+          "score": 0.6917936212044362
+        },
+        {
+          "lecture": "lec04",
+          "segment": 701,
+          "score": 0.6885042589520425
+        },
+        {
+          "lecture": "lec11",
+          "segment": 237,
+          "score": 0.665188757544865
+        },
+        {
+          "lecture": "lec06",
+          "segment": 365,
+          "score": 0.6606214020630805
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.325699999142671,
+          "context_segments": 5,
+          "context_words": 45,
+          "relevant_context_coverage": 0.08333333333333333,
+          "retrieval_ms": 245.47979999988456
+        },
+        "1": {
+          "context_ms": 1.9905999997718027,
+          "context_segments": 15,
+          "context_words": 109,
+          "relevant_context_coverage": 0.16666666666666666,
+          "retrieval_ms": 246.1447000005137
+        }
+      }
+    },
+    {
+      "query_id": "q09",
+      "repeat": 0,
+      "question": "In the needle example, what geometric condition determines whether the needle crosses a line?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 79.2462000008527,
+        "similarity": 203.69019999998272,
+        "context": 1.5065000006870832,
+        "retrieval": 284.4429000015225
+      },
+      "top5": [
+        {
+          "lecture": "lec09",
+          "segment": 534,
+          "score": 0.7132876332978026
+        },
+        {
+          "lecture": "lec09",
+          "segment": 551,
+          "score": 0.7059988145122958
+        },
+        {
+          "lecture": "lec09",
+          "segment": 494,
+          "score": 0.6889824203583459
+        },
+        {
+          "lecture": "lec09",
+          "segment": 492,
+          "score": 0.6671727368845655
+        },
+        {
+          "lecture": "lec09",
+          "segment": 397,
+          "score": 0.6629974978299382
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.1024999985238537,
+          "context_segments": 5,
+          "context_words": 51,
+          "relevant_context_coverage": 0.16666666666666666,
+          "retrieval_ms": 284.0388999993593
+        },
+        "1": {
+          "context_ms": 1.7609999995329417,
+          "context_segments": 14,
+          "context_words": 98,
+          "relevant_context_coverage": 0.3333333333333333,
+          "retrieval_ms": 284.69740000036836
+        }
+      }
+    },
+    {
+      "query_id": "q10",
+      "repeat": 0,
+      "question": "How do we obtain the PMF of a function of a discrete random variable?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 54.07019999984186,
+        "similarity": 203.5422999997536,
+        "context": 1.2443000014172867,
+        "retrieval": 258.85680000101274
+      },
+      "top5": [
+        {
+          "lecture": "lec06",
+          "segment": 405,
+          "score": 0.8232740972441137
+        },
+        {
+          "lecture": "lec05",
+          "segment": 341,
+          "score": 0.8212206494139082
+        },
+        {
+          "lecture": "lec20",
+          "segment": 687,
+          "score": 0.7979633062212136
+        },
+        {
+          "lecture": "lec06",
+          "segment": 93,
+          "score": 0.7752373557038682
+        },
+        {
+          "lecture": "lec08",
+          "segment": 133,
+          "score": 0.7741948823917861
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 0.9413999996468192,
+          "context_segments": 5,
+          "context_words": 38,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 258.5538999992423
+        },
+        "1": {
+          "context_ms": 1.4396999995369697,
+          "context_segments": 15,
+          "context_words": 120,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 259.0521999991324
+        }
+      }
+    },
+    {
+      "query_id": "q11",
+      "repeat": 0,
+      "question": "What does convolution of two probability mass functions produce?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 50.705900001048576,
+        "similarity": 215.0099999998929,
+        "context": 1.360799999019946,
+        "retrieval": 267.0766999999614
+      },
+      "top5": [
+        {
+          "lecture": "lec06",
+          "segment": 825,
+          "score": 0.7055230219538335
+        },
+        {
+          "lecture": "lec11",
+          "segment": 429,
+          "score": 0.6493159876621897
+        },
+        {
+          "lecture": "lec07",
+          "segment": 457,
+          "score": 0.6463294995588729
+        },
+        {
+          "lecture": "lec08",
+          "segment": 951,
+          "score": 0.6415669734447975
+        },
+        {
+          "lecture": "lec05",
+          "segment": 22,
+          "score": 0.6341279905390486
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.0041999994427897,
+          "context_segments": 5,
+          "context_words": 41,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 266.72010000038426
+        },
+        "1": {
+          "context_ms": 1.8359999994572718,
+          "context_segments": 15,
+          "context_words": 124,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 267.55190000039875
+        }
+      }
+    },
+    {
+      "query_id": "q12",
+      "repeat": 0,
+      "question": "How does the section-average example explain the law of iterated expectations?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 83.41240000117978,
+        "similarity": 204.3928999992204,
+        "context": 1.297500000873697,
+        "retrieval": 289.10280000127386
+      },
+      "top5": [
+        {
+          "lecture": "lec12",
+          "segment": 842,
+          "score": 0.772608698895751
+        },
+        {
+          "lecture": "lec22",
+          "segment": 430,
+          "score": 0.7480745611501513
+        },
+        {
+          "lecture": "lec12",
+          "segment": 476,
+          "score": 0.7373711392039992
+        },
+        {
+          "lecture": "lec22",
+          "segment": 426,
+          "score": 0.7355953175462003
+        },
+        {
+          "lecture": "lec12",
+          "segment": 841,
+          "score": 0.7317248696429597
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 0.9135000000242144,
+          "context_segments": 5,
+          "context_words": 45,
+          "relevant_context_coverage": 0.08333333333333333,
+          "retrieval_ms": 288.7188000004244
+        },
+        "1": {
+          "context_ms": 1.3913000002503395,
+          "context_segments": 13,
+          "context_words": 92,
+          "relevant_context_coverage": 0.25,
+          "retrieval_ms": 289.1966000006505
+        }
+      }
+    },
+    {
+      "query_id": "q13",
+      "repeat": 0,
+      "question": "Does the waiting time for the first success affect future independent Bernoulli trials?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 48.983599999701255,
+        "similarity": 192.90970000110974,
+        "context": 2.3070999995979946,
+        "retrieval": 244.200400000409
+      },
+      "top5": [
+        {
+          "lecture": "lec13",
+          "segment": 543,
+          "score": 0.6952171811792097
+        },
+        {
+          "lecture": "lec14",
+          "segment": 49,
+          "score": 0.6882078264422964
+        },
+        {
+          "lecture": "lec13",
+          "segment": 581,
+          "score": 0.6831064065122532
+        },
+        {
+          "lecture": "lec13",
+          "segment": 603,
+          "score": 0.6831064065122532
+        },
+        {
+          "lecture": "lec13",
+          "segment": 657,
+          "score": 0.6831064065122532
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.3075999995635357,
+          "context_segments": 5,
+          "context_words": 29,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 243.20090000037453
+        },
+        "1": {
+          "context_ms": 2.1244999988994095,
+          "context_segments": 15,
+          "context_words": 113,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 244.0177999997104
+        }
+      }
+    },
+    {
+      "query_id": "q14",
+      "repeat": 0,
+      "question": "How is a Poisson process approximated using Bernoulli trials as time slots shrink?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 54.930699998294585,
+        "similarity": 193.14420000046084,
+        "context": 1.9724000012502074,
+        "retrieval": 250.04730000000563
+      },
+      "top5": [
+        {
+          "lecture": "lec14",
+          "segment": 739,
+          "score": 0.7758439217755744
+        },
+        {
+          "lecture": "lec15",
+          "segment": 799,
+          "score": 0.7536501617159751
+        },
+        {
+          "lecture": "lec15",
+          "segment": 60,
+          "score": 0.743114041788318
+        },
+        {
+          "lecture": "lec14",
+          "segment": 418,
+          "score": 0.7305259215701315
+        },
+        {
+          "lecture": "lec13",
+          "segment": 816,
+          "score": 0.72486753806167
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.5676999992138008,
+          "context_segments": 5,
+          "context_words": 44,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 249.64259999796923
+        },
+        "1": {
+          "context_ms": 2.502099998309859,
+          "context_segments": 15,
+          "context_words": 121,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 250.5769999970653
+        }
+      }
+    },
+    {
+      "query_id": "q15",
+      "repeat": 0,
+      "question": "When comparing arrivals from two sources, how is the origin of each arrival modeled?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.5
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 72.00300000113202,
+        "similarity": 182.4170999989292,
+        "context": 1.4989999999670545,
+        "retrieval": 255.91910000002827
+      },
+      "top5": [
+        {
+          "lecture": "lec15",
+          "segment": 504,
+          "score": 0.7619884030300694
+        },
+        {
+          "lecture": "lec15",
+          "segment": 485,
+          "score": 0.733185933342711
+        },
+        {
+          "lecture": "lec15",
+          "segment": 482,
+          "score": 0.7035267840822568
+        },
+        {
+          "lecture": "lec15",
+          "segment": 479,
+          "score": 0.6987620473581859
+        },
+        {
+          "lecture": "lec15",
+          "segment": 508,
+          "score": 0.6847873750771024
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.0298000015609432,
+          "context_segments": 5,
+          "context_words": 47,
+          "relevant_context_coverage": 0.16666666666666666,
+          "retrieval_ms": 255.44990000162215
+        },
+        "1": {
+          "context_ms": 1.8369999997958075,
+          "context_segments": 15,
+          "context_words": 115,
+          "relevant_context_coverage": 0.4166666666666667,
+          "retrieval_ms": 256.257099999857
+        }
+      }
+    },
+    {
+      "query_id": "q16",
+      "repeat": 0,
+      "question": "Where is the Markov assumption used when computing transition probabilities through an intermediate state?",
+      "ranking": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 49.94280000028084,
+        "similarity": 226.97379999954137,
+        "context": 2.3999000004550908,
+        "retrieval": 279.3165000002773
+      },
+      "top5": [
+        {
+          "lecture": "lec16",
+          "segment": 497,
+          "score": 0.7494219569188274
+        },
+        {
+          "lecture": "lec17",
+          "segment": 131,
+          "score": 0.6906725640667788
+        },
+        {
+          "lecture": "lec17",
+          "segment": 719,
+          "score": 0.6457834239579217
+        },
+        {
+          "lecture": "lec16",
+          "segment": 8,
+          "score": 0.6412574736087471
+        },
+        {
+          "lecture": "lec16",
+          "segment": 281,
+          "score": 0.6403555708092956
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.494099999035825,
+          "context_segments": 5,
+          "context_words": 32,
+          "relevant_context_coverage": 0.08333333333333333,
+          "retrieval_ms": 278.41069999885804
+        },
+        "1": {
+          "context_ms": 2.024600000368082,
+          "context_segments": 15,
+          "context_words": 113,
+          "relevant_context_coverage": 0.25,
+          "retrieval_ms": 278.9412000001903
+        }
+      }
+    },
+    {
+      "query_id": "q17",
+      "repeat": 0,
+      "question": "How can steady-state probabilities be obtained from the balance equations?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.2
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 65.05950000064331,
+        "similarity": 236.63590000069235,
+        "context": 1.6919999998208368,
+        "retrieval": 303.3874000011565
+      },
+      "top5": [
+        {
+          "lecture": "lec17",
+          "segment": 438,
+          "score": 0.7900347456887169
+        },
+        {
+          "lecture": "lec18",
+          "segment": 482,
+          "score": 0.7868210103402545
+        },
+        {
+          "lecture": "lec18",
+          "segment": 540,
+          "score": 0.7618289440147352
+        },
+        {
+          "lecture": "lec18",
+          "segment": 138,
+          "score": 0.7616271346313483
+        },
+        {
+          "lecture": "lec17",
+          "segment": 477,
+          "score": 0.7529756653225733
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.430100001016399,
+          "context_segments": 5,
+          "context_words": 35,
+          "relevant_context_coverage": 0.08333333333333333,
+          "retrieval_ms": 303.12550000235206
+        },
+        "1": {
+          "context_ms": 2.116800000294461,
+          "context_segments": 15,
+          "context_words": 116,
+          "relevant_context_coverage": 0.25,
+          "retrieval_ms": 303.8122000016301
+        }
+      }
+    },
+    {
+      "query_id": "q18",
+      "repeat": 0,
+      "question": "How does conservation of transitions across a cut help analyze a birth-death chain?",
+      "ranking": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 127.07720000071276,
+        "similarity": 205.65170000008948,
+        "context": 2.590099998997175,
+        "retrieval": 335.3189999997994
+      },
+      "top5": [
+        {
+          "lecture": "lec18",
+          "segment": 486,
+          "score": 0.6350276017558298
+        },
+        {
+          "lecture": "lec18",
+          "segment": 487,
+          "score": 0.626373444698624
+        },
+        {
+          "lecture": "lec16",
+          "segment": 318,
+          "score": 0.6260590096356664
+        },
+        {
+          "lecture": "lec17",
+          "segment": 645,
+          "score": 0.6175771069848817
+        },
+        {
+          "lecture": "lec18",
+          "segment": 479,
+          "score": 0.600553005768643
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.0206999995716615,
+          "context_segments": 5,
+          "context_words": 43,
+          "relevant_context_coverage": 0.16666666666666666,
+          "retrieval_ms": 333.7496000003739
+        },
+        "1": {
+          "context_ms": 1.5679000007366994,
+          "context_segments": 13,
+          "context_words": 98,
+          "relevant_context_coverage": 0.3333333333333333,
+          "retrieval_ms": 334.29680000153894
+        }
+      }
+    },
+    {
+      "query_id": "q19",
+      "repeat": 0,
+      "question": "Why is repeated convolution an inconvenient way to analyze the sample mean?",
+      "ranking": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 50.844599998526974,
+        "similarity": 213.8559000013629,
+        "context": 1.3635999985126546,
+        "retrieval": 266.0640999984025
+      },
+      "top5": [
+        {
+          "lecture": "lec19",
+          "segment": 508,
+          "score": 0.6665886898472468
+        },
+        {
+          "lecture": "lec23",
+          "segment": 607,
+          "score": 0.6418537710463292
+        },
+        {
+          "lecture": "lec19",
+          "segment": 38,
+          "score": 0.6343446277287927
+        },
+        {
+          "lecture": "lec23",
+          "segment": 905,
+          "score": 0.6264068904003223
+        },
+        {
+          "lecture": "lec22",
+          "segment": 888,
+          "score": 0.6216820072119897
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 0.9701999988465104,
+          "context_segments": 5,
+          "context_words": 45,
+          "relevant_context_coverage": 0.08333333333333333,
+          "retrieval_ms": 265.6706999987364
+        },
+        "1": {
+          "context_ms": 2.104200000758283,
+          "context_segments": 15,
+          "context_words": 107,
+          "relevant_context_coverage": 0.25,
+          "retrieval_ms": 266.80470000064815
+        }
+      }
+    },
+    {
+      "query_id": "q20",
+      "repeat": 0,
+      "question": "How is symmetry used to calculate the probability that the absolute value of a standard normal exceeds two?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 57.684299999891664,
+        "similarity": 203.02629999969213,
+        "context": 2.2415000003093155,
+        "retrieval": 262.9520999998931
+      },
+      "top5": [
+        {
+          "lecture": "lec19",
+          "segment": 954,
+          "score": 0.6578446389978695
+        },
+        {
+          "lecture": "lec11",
+          "segment": 429,
+          "score": 0.6410828199445073
+        },
+        {
+          "lecture": "lec08",
+          "segment": 808,
+          "score": 0.6351566879687218
+        },
+        {
+          "lecture": "lec23",
+          "segment": 897,
+          "score": 0.6260145502843398
+        },
+        {
+          "lecture": "lec20",
+          "segment": 65,
+          "score": 0.625611652988707
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.3695999987248797,
+          "context_segments": 5,
+          "context_words": 47,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 262.0801999983087
+        },
+        "1": {
+          "context_ms": 1.9917999998142477,
+          "context_segments": 15,
+          "context_words": 110,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 262.70239999939804
+        }
+      }
+    },
+    {
+      "query_id": "q21",
+      "repeat": 0,
+      "question": "What parameters must be inferred when fitting a parabola to noisy motion measurements?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.2
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 52.859899999020854,
+        "similarity": 186.97609999981069,
+        "context": 1.6189000016311184,
+        "retrieval": 241.45490000046266
+      },
+      "top5": [
+        {
+          "lecture": "lec21",
+          "segment": 463,
+          "score": 0.6762965795327516
+        },
+        {
+          "lecture": "lec22",
+          "segment": 1010,
+          "score": 0.6162492122406574
+        },
+        {
+          "lecture": "lec08",
+          "segment": 729,
+          "score": 0.6089727000660643
+        },
+        {
+          "lecture": "lec22",
+          "segment": 19,
+          "score": 0.5985328671234292
+        },
+        {
+          "lecture": "lec21",
+          "segment": 467,
+          "score": 0.5858335819726004
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 0.9704000003694091,
+          "context_segments": 5,
+          "context_words": 43,
+          "relevant_context_coverage": 0.08333333333333333,
+          "retrieval_ms": 240.80639999920095
+        },
+        "1": {
+          "context_ms": 1.5335999996750616,
+          "context_segments": 15,
+          "context_words": 114,
+          "relevant_context_coverage": 0.16666666666666666,
+          "retrieval_ms": 241.3695999985066
+        }
+      }
+    },
+    {
+      "query_id": "q22",
+      "repeat": 0,
+      "question": "How does zero covariance between estimate and error simplify a variance decomposition?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.2
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 51.87680000017281,
+        "similarity": 171.09770000024582,
+        "context": 1.4322999995783903,
+        "retrieval": 224.40679999999702
+      },
+      "top5": [
+        {
+          "lecture": "lec22",
+          "segment": 297,
+          "score": 0.6892617098067008
+        },
+        {
+          "lecture": "lec23",
+          "segment": 510,
+          "score": 0.6656415386620338
+        },
+        {
+          "lecture": "lec11",
+          "segment": 857,
+          "score": 0.6509612995432336
+        },
+        {
+          "lecture": "lec11",
+          "segment": 895,
+          "score": 0.6384568262406299
+        },
+        {
+          "lecture": "lec22",
+          "segment": 510,
+          "score": 0.6229289664207626
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.0112999989360105,
+          "context_segments": 5,
+          "context_words": 30,
+          "relevant_context_coverage": 0.08333333333333333,
+          "retrieval_ms": 223.98579999935464
+        },
+        "1": {
+          "context_ms": 1.6405999995185994,
+          "context_segments": 15,
+          "context_words": 107,
+          "relevant_context_coverage": 0.25,
+          "retrieval_ms": 224.61509999993723
+        }
+      }
+    },
+    {
+      "query_id": "q23",
+      "repeat": 0,
+      "question": "What two contributions determine the mean squared error of an estimator?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 41.280299999925774,
+        "similarity": 200.22959999914747,
+        "context": 1.4648000014858553,
+        "retrieval": 242.9747000005591
+      },
+      "top5": [
+        {
+          "lecture": "lec22",
+          "segment": 726,
+          "score": 0.8024696071903555
+        },
+        {
+          "lecture": "lec22",
+          "segment": 728,
+          "score": 0.7709700631228739
+        },
+        {
+          "lecture": "lec23",
+          "segment": 593,
+          "score": 0.7647139229201257
+        },
+        {
+          "lecture": "lec22",
+          "segment": 731,
+          "score": 0.7341731621392291
+        },
+        {
+          "lecture": "lec23",
+          "segment": 597,
+          "score": 0.7296176459493982
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.1606000007304829,
+          "context_segments": 5,
+          "context_words": 42,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 242.67049999980372
+        },
+        "1": {
+          "context_ms": 1.9983000001957407,
+          "context_segments": 14,
+          "context_words": 91,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 243.50819999926898
+        }
+      }
+    },
+    {
+      "query_id": "q24",
+      "repeat": 0,
+      "question": "Which explanatory variables are used in the college GPA regression example?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 47.98769999979413,
+        "similarity": 188.34460000107356,
+        "context": 1.7357999986415962,
+        "retrieval": 238.0680999995093
+      },
+      "top5": [
+        {
+          "lecture": "lec24",
+          "segment": 518,
+          "score": 0.6759381588277915
+        },
+        {
+          "lecture": "lec24",
+          "segment": 716,
+          "score": 0.6513848303762
+        },
+        {
+          "lecture": "lec25",
+          "segment": 903,
+          "score": 0.6513848303762
+        },
+        {
+          "lecture": "lec25",
+          "segment": 906,
+          "score": 0.6513848303762
+        },
+        {
+          "lecture": "lec24",
+          "segment": 253,
+          "score": 0.6440996169198461
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.4246000009734416,
+          "context_segments": 5,
+          "context_words": 28,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 237.75690000184113
+        },
+        "1": {
+          "context_ms": 2.222700000857003,
+          "context_segments": 15,
+          "context_words": 121,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 238.5550000017247
+        }
+      }
+    },
+    {
+      "query_id": "q25",
+      "repeat": 0,
+      "question": "Why can observations supporting a fair coin model fail to prove the hypothesis?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 47.558700000081444,
+        "similarity": 201.97820000066713,
+        "context": 1.8234999988635536,
+        "retrieval": 251.36039999961213
+      },
+      "top5": [
+        {
+          "lecture": "lec25",
+          "segment": 554,
+          "score": 0.7281175883038237
+        },
+        {
+          "lecture": "lec25",
+          "segment": 19,
+          "score": 0.6791211052049048
+        },
+        {
+          "lecture": "lec25",
+          "segment": 509,
+          "score": 0.6778907763638451
+        },
+        {
+          "lecture": "lec25",
+          "segment": 376,
+          "score": 0.6582547660951832
+        },
+        {
+          "lecture": "lec25",
+          "segment": 22,
+          "score": 0.6536009437475464
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.447599999664817,
+          "context_segments": 5,
+          "context_words": 42,
+          "relevant_context_coverage": 0.08333333333333333,
+          "retrieval_ms": 250.9845000004134
+        },
+        "1": {
+          "context_ms": 2.2107000004325528,
+          "context_segments": 15,
+          "context_words": 100,
+          "relevant_context_coverage": 0.25,
+          "retrieval_ms": 251.74760000118113
+        }
+      }
+    },
+    {
+      "query_id": "q26",
+      "repeat": 0,
+      "question": "What is the first component that must be specified in a probabilistic model?",
+      "ranking": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 71.44049999988056,
+        "similarity": 184.98240000008082,
+        "context": 1.6357000004063593,
+        "retrieval": 258.05860000036773
+      },
+      "top5": [
+        {
+          "lecture": "lec01",
+          "segment": 252,
+          "score": 0.8018790532983618
+        },
+        {
+          "lecture": "lec01",
+          "segment": 232,
+          "score": 0.731670937907761
+        },
+        {
+          "lecture": "lec16",
+          "segment": 63,
+          "score": 0.6756849335221922
+        },
+        {
+          "lecture": "lec17",
+          "segment": 114,
+          "score": 0.6692109907924151
+        },
+        {
+          "lecture": "lec06",
+          "segment": 547,
+          "score": 0.6591629726446631
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.0564999993221136,
+          "context_segments": 5,
+          "context_words": 43,
+          "relevant_context_coverage": 0.07142857142857142,
+          "retrieval_ms": 257.4793999992835
+        },
+        "1": {
+          "context_ms": 1.521300000604242,
+          "context_segments": 15,
+          "context_words": 121,
+          "relevant_context_coverage": 0.21428571428571427,
+          "retrieval_ms": 257.9442000005656
+        }
+      }
+    },
+    {
+      "query_id": "q27",
+      "repeat": 0,
+      "question": "Why should receiving new information change our probabilities?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 35.6102000005194,
+        "similarity": 196.2359999997716,
+        "context": 1.3875000004190952,
+        "retrieval": 233.2337000007101
+      },
+      "top5": [
+        {
+          "lecture": "lec03",
+          "segment": 30,
+          "score": 0.7211313463097571
+        },
+        {
+          "lecture": "lec06",
+          "segment": 396,
+          "score": 0.7168875488032436
+        },
+        {
+          "lecture": "lec02",
+          "segment": 253,
+          "score": 0.7144015995287594
+        },
+        {
+          "lecture": "lec10",
+          "segment": 76,
+          "score": 0.7051524319410511
+        },
+        {
+          "lecture": "lec06",
+          "segment": 365,
+          "score": 0.6973913371447769
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 1.0154000010516029,
+          "context_segments": 5,
+          "context_words": 36,
+          "relevant_context_coverage": 0.05,
+          "retrieval_ms": 232.8616000013426
+        },
+        "1": {
+          "context_ms": 1.9267999996372964,
+          "context_segments": 15,
+          "context_words": 98,
+          "relevant_context_coverage": 0.15,
+          "retrieval_ms": 233.7729999999283
+        }
+      }
+    },
+    {
+      "query_id": "q28",
+      "repeat": 0,
+      "question": "Why does learning the outcome of the first coin toss leave the probability of heads on the second toss unchanged?",
+      "ranking": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 63.31780000073195,
+        "similarity": 191.14239999908023,
+        "context": 1.9993999994767364,
+        "retrieval": 256.4595999992889
+      },
+      "top5": [
+        {
+          "lecture": "lec03",
+          "segment": 245,
+          "score": 0.7886867904957979
+        },
+        {
+          "lecture": "lec03",
+          "segment": 248,
+          "score": 0.777764090221315
+        },
+        {
+          "lecture": "lec03",
+          "segment": 254,
+          "score": 0.7764753039385905
+        },
+        {
+          "lecture": "lec03",
+          "segment": 766,
+          "score": 0.747281840991709
+        },
+        {
+          "lecture": "lec03",
+          "segment": 295,
+          "score": 0.7403606023715028
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 0.765799999498995,
+          "context_segments": 5,
+          "context_words": 48,
+          "relevant_context_coverage": 0.13636363636363635,
+          "retrieval_ms": 255.22599999931117
+        },
+        "1": {
+          "context_ms": 1.7222999995283317,
+          "context_segments": 15,
+          "context_words": 127,
+          "relevant_context_coverage": 0.4090909090909091,
+          "retrieval_ms": 256.1824999993405
+        }
+      }
+    },
+    {
+      "query_id": "q29",
+      "repeat": 0,
+      "question": "Why is the probability of a particular sequence of six fair die rolls one over six to the sixth?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 59.35539999882167,
+        "similarity": 175.3896000009263,
+        "context": 1.3433999993139878,
+        "retrieval": 236.08839999906195
+      },
+      "top5": [
+        {
+          "lecture": "lec04",
+          "segment": 269,
+          "score": 0.7352178906200335
+        },
+        {
+          "lecture": "lec04",
+          "segment": 226,
+          "score": 0.6950513260329132
+        },
+        {
+          "lecture": "lec04",
+          "segment": 242,
+          "score": 0.6675233415804701
+        },
+        {
+          "lecture": "lec25",
+          "segment": 581,
+          "score": 0.6592875900062106
+        },
+        {
+          "lecture": "lec04",
+          "segment": 230,
+          "score": 0.6500364410615274
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 0.9504999998171115,
+          "context_segments": 5,
+          "context_words": 50,
+          "relevant_context_coverage": 0.14285714285714285,
+          "retrieval_ms": 235.69549999956507
+        },
+        "1": {
+          "context_ms": 1.5972999990481185,
+          "context_segments": 15,
+          "context_words": 142,
+          "relevant_context_coverage": 0.35714285714285715,
+          "retrieval_ms": 236.34229999879608
+        }
+      }
+    },
+    {
+      "query_id": "q30",
+      "repeat": 0,
+      "question": "What does the value of a discrete random variable PMF at x represent?",
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "accepted": true,
+      "timings_ms": {
+        "embedding": 53.83160000019416,
+        "similarity": 190.6942000005074,
+        "context": 1.3585999986389652,
+        "retrieval": 245.88439999934053
+      },
+      "top5": [
+        {
+          "lecture": "lec05",
+          "segment": 415,
+          "score": 0.8149651574608694
+        },
+        {
+          "lecture": "lec05",
+          "segment": 341,
+          "score": 0.7686545235045821
+        },
+        {
+          "lecture": "lec06",
+          "segment": 405,
+          "score": 0.7671727689883242
+        },
+        {
+          "lecture": "lec20",
+          "segment": 257,
+          "score": 0.7465726198113546
+        },
+        {
+          "lecture": "lec20",
+          "segment": 687,
+          "score": 0.7452495782883618
+        }
+      ],
+      "configurations": {
+        "0": {
+          "context_ms": 0.8699999998498242,
+          "context_segments": 5,
+          "context_words": 45,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 245.3958000005514
+        },
+        "1": {
+          "context_ms": 1.346800001556403,
+          "context_segments": 15,
+          "context_words": 128,
+          "relevant_context_coverage": 0.0,
+          "retrieval_ms": 245.87260000225797
+        }
+      }
+    }
+  ]
+}

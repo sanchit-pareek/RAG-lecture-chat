@@ -1,6 +1,2 @@
-joblib
-requests
-numpy
-scikit-learn
-pandas
+-r backend/requirements.txt
 faster-whisper

@@ -1,0 +1,12 @@
+{
+  "lectures": 25,
+  "segments": 23912,
+  "transcript_bytes": 2875537,
+  "duration_hours": 21.11625480902778,
+  "average_segment_seconds": 3.145604299096688,
+  "corpus_sha256": "25446f169c4798ea121aeeb23db7f8fb42e13f09a72e49cb06e7f1b418680316",
+  "embedding_shape": [
+    23912,
+    1024
+  ]
+}

@@ -57,3 +57,6 @@ videos/
 
 # Logs
 *.log
+.embedding-cache/
+frontend/node_modules/
+frontend/dist/

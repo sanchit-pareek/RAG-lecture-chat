@@ -1,0 +1,43 @@
+{
+  "answer": "A random variable is an assignment of a numerical value to every outcome of an experiment. (References: [1], [2])",
+  "contexts": [
+    {
+      "lecture": "lec05",
+      "start": 153.54,
+      "end": 167.7,
+      "text": "concept of the variance of a random variable. So what is a random variable? So it's an assignment of a numerical value to every"
+    },
+    {
+      "lecture": "lec05",
+      "start": 2676.83,
+      "end": 2687.71,
+      "text": "So the thing inside here is a legitimate random variable. What kind of random variable is it? So suppose that we have our experiment, and we have"
+    },
+    {
+      "lecture": "lec13",
+      "start": 1223.6,
+      "end": 1234.28,
+      "text": "What is the probability distribution of t1? What kind of random variable is it? We've gone through this before."
+    },
+    {
+      "lecture": "lec13",
+      "start": 1685.1,
+      "end": 1691.59,
+      "text": "of this interval. What kind of random variable is it? OK."
+    },
+    {
+      "lecture": "lec15",
+      "start": 2400.78,
+      "end": 2414.13,
+      "text": "What kind of random variable is T1 prime? What kind of random variable is it? This is like the first arrival in a Poisson process that runs"
+    }
+  ],
+  "timings_ms": {
+    "embedding": 156.97000000000116,
+    "similarity": 188.08620000027076,
+    "context": 5.111399999805144,
+    "retrieval": 350.1676000000771,
+    "generation": 67339.64460000016,
+    "total": 67689.84480000017
+  }
+}

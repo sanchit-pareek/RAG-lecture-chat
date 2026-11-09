@@ -1,71 +1,51 @@
-import requests
+"""Build a resumable, fingerprinted index without an interactive prompt."""
+import argparse
+import hashlib
 import json
-import os
-import pandas as pd
-import numpy as np
-from sklearn.metrics.pairwise import cosine_similarity
-
-def create_embeddings(texts):
-    r = requests.post(
-        "http://localhost:11434/api/embed",
-        json={
-            "model": "bge-m3",
-            "input": texts
-        }
-    )
-    r.raise_for_status()
-    return r.json()["embeddings"]
-
-
-records = []
-segment_id = 0
-
-for file in os.listdir("transcripts"):
-    with open(f"transcripts/{file}", "r", encoding="utf-8") as f:
-        data = json.load(f)
-
-    lecture = data["lecture"]
-    segments = data["segments"]
-
-    texts = [seg["text"] for seg in segments]
-    embeddings = create_embeddings(texts)
-
-    for i, seg in enumerate(segments):
-        records.append({
-            "segment_id": segment_id,
-            "lecture": lecture,
-            "start": seg["start"],
-            "end": seg["end"],
-            "text": seg["text"],
-            "embedding": embeddings[i]
-        })
-        segment_id += 1
-
-df = pd.DataFrame.from_records(records)
-embedding_matrix = np.vstack(df["embedding"].values)
-
 import joblib
+import numpy as np
+from backend.rag import ROOT, corpus, create_embeddings, model_digest, load_index
 
-joblib.dump(
-    {
-        "df": df,
-        "embedding_matrix": embedding_matrix
-    },
-    "lecture_index.joblib"
-)
-incoming_query = input("Ask a Question: ")
-query_embedding = create_embeddings([incoming_query])[0]
+def build_index(batch_size=32, force=False):
+    if batch_size < 1:
+        raise ValueError('batch-size must be positive')
+    frame, metadata = corpus()
+    metadata['model_digest'] = model_digest()
+    target = ROOT / 'lecture_index.joblib'
+    if target.exists() and not force:
+        _, _, existing = load_index()
+        if existing.get('model_digest') != metadata['model_digest']:
+            raise ValueError('Model digest changed; rebuild with --force')
+        print(f'Valid index already exists: {target}', flush=True)
+        return
+    cache = ROOT / '.embedding-cache'
+    cache.mkdir(exist_ok=True)
+    matrices = []
+    for start in range(0, len(frame), batch_size):
+        texts = frame.iloc[start:start + batch_size].text.tolist()
+        key = hashlib.sha256(json.dumps([metadata, texts], sort_keys=True).encode()).hexdigest()
+        path = cache / f'{key}.joblib'
+        if path.exists():
+            vectors = joblib.load(path)
+        else:
+            vectors = np.asarray(create_embeddings(texts), dtype=np.float32)
+            temporary = path.with_suffix('.tmp')
+            joblib.dump(vectors, temporary)
+            temporary.replace(path)
+        if (vectors.ndim != 2 or vectors.shape[0] != len(texts) or not np.isfinite(vectors).all()
+                or np.any(np.linalg.norm(vectors, axis=1) == 0)):
+            raise ValueError('Invalid embedding response/cache')
+        matrices.append(vectors)
+        print(f'Indexed {min(start + batch_size, len(frame))}/{len(frame)} segments', flush=True)
+    matrix = np.vstack(matrices)
+    temporary = target.with_suffix('.tmp')
+    joblib.dump(dict(df=frame, embedding_matrix=matrix, metadata=metadata), temporary)
+    temporary.replace(target)
+    print(f'Saved {target}: {matrix.shape}', flush=True)
 
-similarities = cosine_similarity(
-    embedding_matrix,
-    [query_embedding]
-).flatten()
-
-top_k = 5
-top_idx = similarities.argsort()[::-1][:top_k]
-
-results = df.iloc[top_idx]
-
-print(results[["lecture", "start", "end", "text"]])
-
-
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--batch-size', type=int, default=32)
+    parser.add_argument('--force', action='store_true')
+    args = parser.parse_args()
+    build_index(args.batch_size, args.force)

@@ -1,0 +1,22 @@
+{
+  "status": "healthy",
+  "segments": 23912,
+  "embedding_shape": [
+    23912,
+    1024
+  ],
+  "embedding_model": "bge-m3",
+  "corpus_sha256": "25446f169c4798ea121aeeb23db7f8fb42e13f09a72e49cb06e7f1b418680316",
+  "api_version": "1.2.0",
+  "pid": 4384,
+  "code_sha256": "4f6f4408bb6f5d9850f22a3f606a8184022227fe98a97698e7043e2a65837a08",
+  "embedding_model_digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+  "embedding_num_gpu": "0",
+  "generation_model": "llama3.1:8b",
+  "generation_options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_predict": 512,
+    "num_ctx": 8192
+  }
+}

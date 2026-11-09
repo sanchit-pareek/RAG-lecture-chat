@@ -1,0 +1,31 @@
+{
+  "status": "small_repeated_prompt_diagnostic_not_general_latency_benchmark",
+  "checks": {
+    "same_prompt": true,
+    "same_contexts": true,
+    "same_corpus": true,
+    "same_embedding_digest": true,
+    "same_answers": true,
+    "stable_cpu_top5": true
+  },
+  "cpu_co_resident_in_all_snapshots": true,
+  "original_pipeline_ms": [
+    15481.64369999995,
+    15808.586600000126
+  ],
+  "cpu_pipeline_ms": [
+    1723.9115999991554,
+    1688.2838999999876,
+    1706.2414000001809
+  ],
+  "original_median_pipeline_ms": 15645.115150000038,
+  "cpu_median_pipeline_ms": 1706.2414000001809,
+  "original_mean_llama_load_ms": 8989.8393,
+  "cpu_mean_llama_load_ms": 9.478433333333333,
+  "corpus_sha256": "25446f169c4798ea121aeeb23db7f8fb42e13f09a72e49cb06e7f1b418680316",
+  "input_sha256": {
+    "generation_profile.json": "966f57b5de1090f603d0120cf4b56ed3fddea568c64dd3ee5732b388c80ab429",
+    "generation_profile_cpu.json": "4c0380a8c592ddf2ad851b032d854c44d13f9c0f3837d53784bdfa1e7eaf6fa1"
+  },
+  "limitations": "One unique question, 2 baseline and 3 CPU pipeline repeats. CPU runs reuse 280 of 281 prompt tokens; baseline runs reuse none. Sequential diagnostic samples include residency-probe HTTP calls and are not API response-latency measurements. No independent accuracy or broad placement-equivalence test."
+}
