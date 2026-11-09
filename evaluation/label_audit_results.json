@@ -1,0 +1,513 @@
+{
+  "status": "assistant_source_reviewed_post_hoc_not_independent",
+  "limitations": "Reviewed after seeing retrieved results; not human-validated, not exhaustive, and not a held-out test. Passage-localization labels include connected ASR fragments. Do not interpret Hit@k as answer correctness. Original benchmark remains unchanged.",
+  "summary": {
+    "queries_scored": 29,
+    "excluded_queries": [
+      "q21"
+    ],
+    "original_labels_same_subset": {
+      "hit_at_1": 0.3448275862068966,
+      "hit_at_5": 0.6551724137931034,
+      "reciprocal_rank": 0.4419540229885057
+    },
+    "reviewed_labels_same_subset": {
+      "hit_at_1": 0.41379310344827586,
+      "hit_at_5": 0.7586206896551724,
+      "reciprocal_rank": 0.5195402298850574
+    },
+    "changed_outcomes": [
+      "q01",
+      "q02",
+      "q11",
+      "q14",
+      "q15",
+      "q30"
+    ]
+  },
+  "source_dataset_sha256": "36d5e7fd869d55b5332ff4e4073016535d0d279c74eb630f2483da3fbbdb7b18",
+  "reviewed_dataset_sha256": "a84ba5de527aba7256522c9a988d246dedbbcd5a0bd76c8a98d6d5d64d04e783",
+  "corpus_sha256": "25446f169c4798ea121aeeb23db7f8fb42e13f09a72e49cb06e7f1b418680316",
+  "results": [
+    {
+      "query_id": "q01",
+      "question": "Why is the probability of the entire sample space equal to one?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "reviewed": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "note": "Original label excluded the explicit axiom and preceding explanation. Extend to the actual supporting paragraph."
+    },
+    {
+      "query_id": "q02",
+      "question": "In the radar example, what are the prior probability of a plane and the probability of detecting it?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reviewed": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "note": "Trim unrelated framing at the end. A retrieved discussion about radar in general is not sufficient to answer both numeric facts."
+    },
+    {
+      "query_id": "q03",
+      "question": "Can conditioning destroy independence between events?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.25
+      },
+      "reviewed": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.25
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q04",
+      "question": "What value is assigned to zero factorial, and why?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reviewed": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q05",
+      "question": "How is the average payoff calculated for payoffs 1, 2, and 4 with probabilities one sixth, one half, and one third?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reviewed": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q06",
+      "question": "What sequence of coin tosses corresponds to a geometric waiting time of k?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reviewed": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q07",
+      "question": "Why do functions of independent random variables remain independent?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "reviewed": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "note": "Keep the information argument. A statement that functions remain independent without an explanation is only partial support."
+    },
+    {
+      "query_id": "q08",
+      "question": "Does changing a probability density at a single point affect probabilities?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reviewed": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q09",
+      "question": "In the needle example, what geometric condition determines whether the needle crosses a line?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "reviewed": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q10",
+      "question": "How do we obtain the PMF of a function of a discrete random variable?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "reviewed": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q11",
+      "question": "What does convolution of two probability mass functions produce?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "reviewed": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.5
+      },
+      "note": "Original window omitted that the new PMF is for the sum and omitted the independence assumption. Extend the support passage; question should state independence in a future benchmark."
+    },
+    {
+      "query_id": "q12",
+      "question": "How does the section-average example explain the law of iterated expectations?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "reviewed": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q13",
+      "question": "Does the waiting time for the first success affect future independent Bernoulli trials?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "reviewed": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q14",
+      "question": "How is a Poisson process approximated using Bernoulli trials as time slots shrink?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "reviewed": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.25
+      },
+      "note": "A second earlier passage explains independent short slots with success probability lambda times delta. Add it as an alternate support passage."
+    },
+    {
+      "query_id": "q15",
+      "question": "When comparing arrivals from two sources, how is the origin of each arrival modeled?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.5
+      },
+      "reviewed": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "note": "Original window stopped before the independence conclusion. Extend it to the actual coin-flip explanation."
+    },
+    {
+      "query_id": "q16",
+      "question": "Where is the Markov assumption used when computing transition probabilities through an intermediate state?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reviewed": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q17",
+      "question": "How can steady-state probabilities be obtained from the balance equations?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.2
+      },
+      "reviewed": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.2
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q18",
+      "question": "How does conservation of transitions across a cut help analyze a birth-death chain?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reviewed": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q19",
+      "question": "Why is repeated convolution an inconvenient way to analyze the sample mean?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reviewed": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q20",
+      "question": "How is symmetry used to calculate the probability that the absolute value of a standard normal exceeds two?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "reviewed": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "note": "The lecture rounds to 0.0457; the usual normal-table calculation from 0.9772 gives 0.0456. Accept reasonable table rounding."
+    },
+    {
+      "query_id": "q21",
+      "question": "What parameters must be inferred when fitting a parabola to noisy motion measurements?",
+      "include_in_scoring": false,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.2
+      },
+      "reviewed": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "note": "Requires a displayed parabola equation to name the actual coefficients. Excluded from this text-only reviewed score; rewrite before a future benchmark."
+    },
+    {
+      "query_id": "q22",
+      "question": "How does zero covariance between estimate and error simplify a variance decomposition?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.2
+      },
+      "reviewed": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.2
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q23",
+      "question": "What two contributions determine the mean squared error of an estimator?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "reviewed": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "note": "The answer is squared bias plus variance. The original window called it bias but omitted the explicit squaring immediately before it."
+    },
+    {
+      "query_id": "q24",
+      "question": "Which explanatory variables are used in the college GPA regression example?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "reviewed": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q25",
+      "question": "Why can observations supporting a fair coin model fail to prove the hypothesis?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "reviewed": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q26",
+      "question": "What is the first component that must be specified in a probabilistic model?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reviewed": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q27",
+      "question": "Why should receiving new information change our probabilities?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "reviewed": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q28",
+      "question": "Why does learning the outcome of the first coin toss leave the probability of heads on the second toss unchanged?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "reviewed": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "note": "Independence is a model assumption, not a consequence of every pair of coin tosses in general."
+    },
+    {
+      "query_id": "q29",
+      "question": "Why is the probability of a particular sequence of six fair die rolls one over six to the sixth?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "reviewed": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.3333333333333333
+      },
+      "note": "Source passage supports the expected answer; alternate relevance labels may remain incomplete."
+    },
+    {
+      "query_id": "q30",
+      "question": "What does the value of a discrete random variable PMF at x represent?",
+      "include_in_scoring": true,
+      "original": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "reviewed": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "note": "A separate worked example in lecture 5 explicitly defines Px(2); add it as alternate support."
+    }
+  ]
+}

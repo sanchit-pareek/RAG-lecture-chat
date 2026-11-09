@@ -1,0 +1,710 @@
+{
+  "created_at": "2026-11-09T08:16:07.040691+00:00",
+  "question": "What is a random variable?",
+  "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU, 6141 MiB, 592.82",
+  "index_metadata": {
+    "schema_version": 1,
+    "corpus_sha256": "25446f169c4798ea121aeeb23db7f8fb42e13f09a72e49cb06e7f1b418680316",
+    "embedding_model": "bge-m3",
+    "lectures": [
+      {
+        "lecture": "lec01",
+        "duration": 3070.4426875,
+        "bytes": 120873
+      },
+      {
+        "lecture": "lec02",
+        "duration": 3070.848,
+        "bytes": 116765
+      },
+      {
+        "lecture": "lec03",
+        "duration": 2789.0986875,
+        "bytes": 108091
+      },
+      {
+        "lecture": "lec04",
+        "duration": 3093.9733125,
+        "bytes": 110355
+      },
+      {
+        "lecture": "lec05",
+        "duration": 3034.048,
+        "bytes": 117280
+      },
+      {
+        "lecture": "lec06",
+        "duration": 3052.032,
+        "bytes": 115188
+      },
+      {
+        "lecture": "lec07",
+        "duration": 3041.088,
+        "bytes": 116879
+      },
+      {
+        "lecture": "lec08",
+        "duration": 3028.0746875,
+        "bytes": 116715
+      },
+      {
+        "lecture": "lec09",
+        "duration": 3050.0906875,
+        "bytes": 116235
+      },
+      {
+        "lecture": "lec10",
+        "duration": 2932.032,
+        "bytes": 107445
+      },
+      {
+        "lecture": "lec11",
+        "duration": 3114.0266875,
+        "bytes": 112092
+      },
+      {
+        "lecture": "lec12",
+        "duration": 2873.0453125,
+        "bytes": 113448
+      },
+      {
+        "lecture": "lec13",
+        "duration": 3057.024,
+        "bytes": 110440
+      },
+      {
+        "lecture": "lec14",
+        "duration": 3163.0293125,
+        "bytes": 118091
+      },
+      {
+        "lecture": "lec15",
+        "duration": 2967.0826875,
+        "bytes": 115546
+      },
+      {
+        "lecture": "lec16",
+        "duration": 3125.0346875,
+        "bytes": 119794
+      },
+      {
+        "lecture": "lec17",
+        "duration": 3084.0533125,
+        "bytes": 115751
+      },
+      {
+        "lecture": "lec18",
+        "duration": 3109.0773125,
+        "bytes": 116524
+      },
+      {
+        "lecture": "lec19",
+        "duration": 3012.0533125,
+        "bytes": 117584
+      },
+      {
+        "lecture": "lec20",
+        "duration": 3082.048,
+        "bytes": 107188
+      },
+      {
+        "lecture": "lec21",
+        "duration": 2929.0453125,
+        "bytes": 112484
+      },
+      {
+        "lecture": "lec22",
+        "duration": 3135.04,
+        "bytes": 119986
+      },
+      {
+        "lecture": "lec23",
+        "duration": 2971.072,
+        "bytes": 118245
+      },
+      {
+        "lecture": "lec24",
+        "duration": 3109.12,
+        "bytes": 111452
+      },
+      {
+        "lecture": "lec25",
+        "duration": 3126.0373125,
+        "bytes": 121086
+      }
+    ],
+    "model_digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab"
+  },
+  "results": [
+    {
+      "mode": "fixed_prompt",
+      "repeat": 0,
+      "num_ctx": 8192,
+      "resident_before": {
+        "models": [
+          {
+            "name": "bge-m3:latest",
+            "model": "bge-m3:latest",
+            "size": 689187061,
+            "digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "bert",
+              "families": [
+                "bert"
+              ],
+              "parameter_size": "566.70M",
+              "quantization_level": "F16"
+            },
+            "expires_at": "2026-11-09T13:56:12.4015278+05:30",
+            "size_vram": 689187061,
+            "context_length": 4096,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "resident_after": {
+        "models": [
+          {
+            "name": "llama3.1:8b",
+            "model": "llama3.1:8b",
+            "size": 6187982518,
+            "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "llama",
+              "families": [
+                "llama"
+              ],
+              "parameter_size": "8.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-11-09T13:51:23.2356582+05:30",
+            "size_vram": 4206194851,
+            "context_length": 8192,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "answer": "A random variable is an assignment of a numerical value to every outcome of an experiment. (References: [1], [2])",
+      "metrics": {
+        "model": "llama3.1:8b",
+        "done_reason": "stop",
+        "total_duration": 10548991600,
+        "load_duration": 8676239500,
+        "prompt_eval_count": 281,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 482966000,
+        "eval_count": 27,
+        "eval_duration": 1381695000,
+        "wall_ms": 10568.381000000045,
+        "output_tokens_per_second": 19.54121568073996
+      },
+      "options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 512,
+        "num_ctx": 8192
+      }
+    },
+    {
+      "mode": "fixed_prompt",
+      "repeat": 0,
+      "num_ctx": 4096,
+      "resident_before": {
+        "models": [
+          {
+            "name": "llama3.1:8b",
+            "model": "llama3.1:8b",
+            "size": 6187982518,
+            "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "llama",
+              "families": [
+                "llama"
+              ],
+              "parameter_size": "8.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-11-09T13:51:23.2356582+05:30",
+            "size_vram": 4206194851,
+            "context_length": 8192,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "resident_after": {
+        "models": [
+          {
+            "name": "llama3.1:8b",
+            "model": "llama3.1:8b",
+            "size": 5634334390,
+            "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "llama",
+              "families": [
+                "llama"
+              ],
+              "parameter_size": "8.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-11-09T13:51:32.8432134+05:30",
+            "size_vram": 4242989383,
+            "context_length": 4096,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "answer": "A random variable is an assignment of a numerical value to every outcome of an experiment. (References: [1], [2])",
+      "metrics": {
+        "model": "llama3.1:8b",
+        "done_reason": "stop",
+        "total_duration": 9579865100,
+        "load_duration": 8066892200,
+        "prompt_eval_count": 281,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 347766000,
+        "eval_count": 27,
+        "eval_duration": 1157458000,
+        "wall_ms": 9600.233899999694,
+        "output_tokens_per_second": 23.32698033103577
+      },
+      "options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 512,
+        "num_ctx": 4096
+      }
+    },
+    {
+      "mode": "fixed_prompt",
+      "repeat": 1,
+      "num_ctx": 4096,
+      "resident_before": {
+        "models": [
+          {
+            "name": "llama3.1:8b",
+            "model": "llama3.1:8b",
+            "size": 5634334390,
+            "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "llama",
+              "families": [
+                "llama"
+              ],
+              "parameter_size": "8.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-11-09T13:51:32.8432134+05:30",
+            "size_vram": 4242989383,
+            "context_length": 4096,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "resident_after": {
+        "models": [
+          {
+            "name": "llama3.1:8b",
+            "model": "llama3.1:8b",
+            "size": 5634334390,
+            "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "llama",
+              "families": [
+                "llama"
+              ],
+              "parameter_size": "8.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-11-09T13:51:34.5102581+05:30",
+            "size_vram": 4242989383,
+            "context_length": 4096,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "answer": "A random variable is an assignment of a numerical value to every outcome of an experiment. (Reference: Lecture lec05, 153.5s-167.7s)",
+      "metrics": {
+        "model": "llama3.1:8b",
+        "done_reason": "stop",
+        "total_duration": 1640219000,
+        "load_duration": 6600600,
+        "prompt_eval_count": 281,
+        "prompt_eval_cached_count": 280,
+        "prompt_eval_duration": 45662000,
+        "eval_count": 37,
+        "eval_duration": 1580591000,
+        "wall_ms": 1660.8050999993793,
+        "output_tokens_per_second": 23.4089653806709
+      },
+      "options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 512,
+        "num_ctx": 4096
+      }
+    },
+    {
+      "mode": "fixed_prompt",
+      "repeat": 1,
+      "num_ctx": 8192,
+      "resident_before": {
+        "models": [
+          {
+            "name": "llama3.1:8b",
+            "model": "llama3.1:8b",
+            "size": 5634334390,
+            "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "llama",
+              "families": [
+                "llama"
+              ],
+              "parameter_size": "8.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-11-09T13:51:34.5102581+05:30",
+            "size_vram": 4242989383,
+            "context_length": 4096,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "resident_after": {
+        "models": [
+          {
+            "name": "llama3.1:8b",
+            "model": "llama3.1:8b",
+            "size": 6187982518,
+            "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "llama",
+              "families": [
+                "llama"
+              ],
+              "parameter_size": "8.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-11-09T13:51:43.6101403+05:30",
+            "size_vram": 4206194851,
+            "context_length": 8192,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "answer": "A random variable is an assignment of a numerical value to every outcome of an experiment. (References: [1], [2])",
+      "metrics": {
+        "model": "llama3.1:8b",
+        "done_reason": "stop",
+        "total_duration": 9069488100,
+        "load_duration": 7386582800,
+        "prompt_eval_count": 281,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 365114000,
+        "eval_count": 27,
+        "eval_duration": 1310434000,
+        "wall_ms": 9072.877100000369,
+        "output_tokens_per_second": 20.603861010932256
+      },
+      "options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 512,
+        "num_ctx": 8192
+      }
+    },
+    {
+      "mode": "embedding_then_generation",
+      "repeat": 0,
+      "resident_before": {
+        "models": [
+          {
+            "name": "llama3.1:8b",
+            "model": "llama3.1:8b",
+            "size": 6187982518,
+            "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "llama",
+              "families": [
+                "llama"
+              ],
+              "parameter_size": "8.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-11-09T13:51:43.6101403+05:30",
+            "size_vram": 4206194851,
+            "context_length": 8192,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "resident_after_embedding": {
+        "models": [
+          {
+            "name": "bge-m3:latest",
+            "model": "bge-m3:latest",
+            "size": 689187061,
+            "digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "bert",
+              "families": [
+                "bert"
+              ],
+              "parameter_size": "566.70M",
+              "quantization_level": "F16"
+            },
+            "expires_at": "2026-11-09T13:56:47.8343228+05:30",
+            "size_vram": 689187061,
+            "context_length": 4096,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "resident_after": {
+        "models": [
+          {
+            "name": "llama3.1:8b",
+            "model": "llama3.1:8b",
+            "size": 6187982518,
+            "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "llama",
+              "families": [
+                "llama"
+              ],
+              "parameter_size": "8.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-11-09T13:51:59.096553+05:30",
+            "size_vram": 4206194851,
+            "context_length": 8192,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "retrieval_ms": {
+        "embedding": 4220.012400000087,
+        "similarity": 227.79649999938556,
+        "context": 2.0968000007997034,
+        "retrieval": 4449.905700000272
+      },
+      "diagnostic_pipeline_ms": 15481.64369999995,
+      "answer": "A random variable is an assignment of a numerical value to every outcome of an experiment. (References: [1], [2])",
+      "metrics": {
+        "model": "llama3.1:8b",
+        "done_reason": "stop",
+        "total_duration": 11011188100,
+        "load_duration": 9186987000,
+        "prompt_eval_count": 281,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 434132000,
+        "eval_count": 27,
+        "eval_duration": 1371549000,
+        "wall_ms": 11027.414499999395,
+        "output_tokens_per_second": 19.685771343203925
+      },
+      "options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 512,
+        "num_ctx": 8192
+      }
+    },
+    {
+      "mode": "embedding_then_generation",
+      "repeat": 1,
+      "resident_before": {
+        "models": [
+          {
+            "name": "llama3.1:8b",
+            "model": "llama3.1:8b",
+            "size": 6187982518,
+            "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "llama",
+              "families": [
+                "llama"
+              ],
+              "parameter_size": "8.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-11-09T13:51:59.096553+05:30",
+            "size_vram": 4206194851,
+            "context_length": 8192,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "resident_after_embedding": {
+        "models": [
+          {
+            "name": "bge-m3:latest",
+            "model": "bge-m3:latest",
+            "size": 689187061,
+            "digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "bert",
+              "families": [
+                "bert"
+              ],
+              "parameter_size": "566.70M",
+              "quantization_level": "F16"
+            },
+            "expires_at": "2026-11-09T13:57:04.0702157+05:30",
+            "size_vram": 689187061,
+            "context_length": 4096,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "resident_after": {
+        "models": [
+          {
+            "name": "llama3.1:8b",
+            "model": "llama3.1:8b",
+            "size": 6187982518,
+            "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "llama",
+              "families": [
+                "llama"
+              ],
+              "parameter_size": "8.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-11-09T13:52:14.9115996+05:30",
+            "size_vram": 4206194851,
+            "context_length": 8192,
+            "runner": "llamacpp"
+          }
+        ]
+      },
+      "retrieval_ms": {
+        "embedding": 4967.553600000429,
+        "similarity": 265.864099999817,
+        "context": 3.4587000000101398,
+        "retrieval": 5236.876400000256
+      },
+      "diagnostic_pipeline_ms": 15808.586600000126,
+      "answer": "A random variable is an assignment of a numerical value to every outcome of an experiment. (References: [1], [2])",
+      "metrics": {
+        "model": "llama3.1:8b",
+        "done_reason": "stop",
+        "total_duration": 10550785100,
+        "load_duration": 8792691600,
+        "prompt_eval_count": 281,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 382365000,
+        "eval_count": 27,
+        "eval_duration": 1367989000,
+        "wall_ms": 10555.946200000108,
+        "output_tokens_per_second": 19.737000809217033
+      },
+      "options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 512,
+        "num_ctx": 8192
+      }
+    }
+  ],
+  "limitations": "First-observed requests are not guaranteed cold. Repeated identical prompts may use prompt cache. Alternating contexts may reload the model. No forced unloads; avoid other queries during profiling. This is a diagnostic, not a representative latency benchmark.",
+  "prompt": "Answer strictly from the lecture excerpts and cite their numbered references. If the answer is absent, say \"I don't know based on the provided lectures.\"\n\nQuestion: What is a random variable?\n\nLecture excerpts:\n[1] Lecture lec05 (153.5s-167.7s)\nconcept of the variance of a random variable. So what is a random variable? So it's an assignment of a numerical value to every\n[2] Lecture lec05 (2676.8s-2687.7s)\nSo the thing inside here is a legitimate random variable. What kind of random variable is it? So suppose that we have our experiment, and we have\n[3] Lecture lec13 (1223.6s-1234.3s)\nWhat is the probability distribution of t1? What kind of random variable is it? We've gone through this before.\n[4] Lecture lec13 (1685.1s-1691.6s)\nof this interval. What kind of random variable is it? OK.\n[5] Lecture lec15 (2400.8s-2414.1s)\nWhat kind of random variable is T1 prime? What kind of random variable is it? This is like the first arrival in a Poisson process that runs\n\nAnswer:",
+  "contexts": [
+    {
+      "lecture": "lec05",
+      "start": 153.54,
+      "end": 167.7,
+      "text": "concept of the variance of a random variable. So what is a random variable? So it's an assignment of a numerical value to every"
+    },
+    {
+      "lecture": "lec05",
+      "start": 2676.83,
+      "end": 2687.71,
+      "text": "So the thing inside here is a legitimate random variable. What kind of random variable is it? So suppose that we have our experiment, and we have"
+    },
+    {
+      "lecture": "lec13",
+      "start": 1223.6,
+      "end": 1234.28,
+      "text": "What is the probability distribution of t1? What kind of random variable is it? We've gone through this before."
+    },
+    {
+      "lecture": "lec13",
+      "start": 1685.1,
+      "end": 1691.59,
+      "text": "of this interval. What kind of random variable is it? OK."
+    },
+    {
+      "lecture": "lec15",
+      "start": 2400.78,
+      "end": 2414.13,
+      "text": "What kind of random variable is T1 prime? What kind of random variable is it? This is like the first arrival in a Poisson process that runs"
+    }
+  ],
+  "initial_retrieval_ms": {
+    "embedding": 5300.1858000006905,
+    "similarity": 248.30049999945913,
+    "context": 3.074700000070152,
+    "retrieval": 5551.56100000022
+  },
+  "summary": {
+    "fixed_prompt:8192": {
+      "wall_ms": {
+        "p50": 9820.629050000207,
+        "p95": 10493.605805000061,
+        "n": 2
+      },
+      "mean_load_ms": 8031.41115,
+      "mean_prompt_ms": 424.03999999999996,
+      "mean_decode_ms": 1346.0645
+    },
+    "fixed_prompt:4096": {
+      "wall_ms": {
+        "p50": 5630.5194999995365,
+        "p95": 9203.262459999678,
+        "n": 2
+      },
+      "mean_load_ms": 4036.7464,
+      "mean_prompt_ms": 196.714,
+      "mean_decode_ms": 1369.0245
+    },
+    "embedding_then_generation:8192": {
+      "wall_ms": {
+        "p50": 10791.680349999751,
+        "p95": 11003.84108499943,
+        "n": 2
+      },
+      "mean_load_ms": 8989.8393,
+      "mean_prompt_ms": 408.24850000000004,
+      "mean_decode_ms": 1369.769
+    }
+  }
+}

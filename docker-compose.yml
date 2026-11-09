@@ -9,6 +9,11 @@ services:
       - "8000:8000"
     volumes:
       - ./lecture_index.joblib:/app/lecture_index.joblib
+      - ./transcripts:/app/transcripts:ro
+    environment:
+      OLLAMA_BASE_URL: http://ollama:11434
+      INDEX_PATH: /app/lecture_index.joblib
+      RAG_ROOT: /app
     depends_on:
       - ollama
     networks:

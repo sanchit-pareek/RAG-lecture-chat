@@ -1,188 +1,72 @@
+from contextlib import asynccontextmanager
+from time import perf_counter
+import os
+import hashlib
+from pathlib import Path
+from typing import Literal
+import requests
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-import joblib
-import requests
-import numpy as np
-from sklearn.metrics.pairwise import cosine_similarity
-from contextlib import asynccontextmanager
-import os
+from pydantic import BaseModel, Field
+try:
+    from .rag import load_index, retrieve, build_prompt, call_llm_details, model_digest, generation_options
+except ImportError:
+    from rag import load_index, retrieve, build_prompt, call_llm_details, model_digest, generation_options
 
-data = None
-df = None
-embedding_matrix = None
-
-def load_index():
-    global data, df, embedding_matrix
-    index_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "lecture_index.joblib")
-    data = joblib.load(index_path)
-    df = data["df"]
-    embedding_matrix = data["embedding_matrix"]
-    df = df.sort_values(["lecture", "start"]).reset_index(drop=True)
-
-def create_embeddings(texts):
-    provider = os.getenv("LLM_PROVIDER", "ollama")
-    
-    if provider == "ollama":
-        r = requests.post(
-            f"{os.getenv('OLLAMA_BASE_URL', 'http://localhost:11434')}/api/embed",
-            json={"model": os.getenv("EMBEDDING_MODEL", "bge-m3"), "input": texts},
-            timeout=120
-        )
-        r.raise_for_status()
-        return r.json()["embeddings"]
-    elif provider == "groq":
-        api_key = os.getenv("GROQ_API_KEY")
-        headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
-        data = {
-            "model": "llm-embeddings",  # Will need fallback for embeddings
-            "input": texts
-        }
-        # Groq doesn't have free embeddings - use a workaround
-        raise HTTPException(status_code=501, detail="Groq embeddings not available - use Ollama or another provider")
-    else:
-        raise HTTPException(status_code=501, detail=f"Unknown LLM provider: {provider}")
-
-def expand_with_neighbors(df, indices, window=1):
-    expanded = set()
-    for idx in indices:
-        for i in range(max(0, idx-window), min(len(df), idx+window+1)):
-            if df.iloc[i].lecture == df.iloc[idx].lecture:
-                expanded.add(i)
-    return df.iloc[sorted(expanded)]
-
-def merge_segments(df):
-    merged, current = [], None
-    for row in df.itertuples():
-        if current is None:
-            current = {
-                "lecture": row.lecture,
-                "start": row.start,
-                "end": row.end,
-                "text": row.text
-            }
-        elif row.lecture == current["lecture"] and row.start <= current["end"] + 1.0:
-            current["end"] = row.end
-            current["text"] += " " + row.text
-        else:
-            merged.append(current)
-            current = {
-                "lecture": row.lecture,
-                "start": row.start,
-                "end": row.end,
-                "text": row.text
-            }
-    if current:
-        merged.append(current)
-    return merged
-
-def call_llm(prompt):
-    provider = os.getenv("LLM_PROVIDER", "ollama")
-    
-    if provider == "ollama":
-        r = requests.post(
-            f"{os.getenv('OLLAMA_BASE_URL', 'http://localhost:11434')}/api/generate",
-            json={"model": os.getenv("LLM_MODEL", "llama3.1:8b"), "prompt": prompt, "stream": False},
-            timeout=300
-        )
-        r.raise_for_status()
-        return r.json()["response"]
-    elif provider == "groq":
-        api_key = os.getenv("GROQ_API_KEY")
-        if not api_key:
-            raise HTTPException(status_code=500, detail="GROQ_API_KEY not set")
-        headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
-        data = {
-            "model": "llama-3.1-8b-instant",
-            "messages": [{"role": "user", "content": prompt}]
-        }
-        r = requests.post("https://api.groq.com/openai/v1/chat/completions", headers=headers, json=data, timeout=300)
-        r.raise_for_status()
-        return r.json()["choices"][0]["message"]["content"]
-    else:
-        raise HTTPException(status_code=501, detail=f"Unknown LLM provider: {provider}")
-
-def build_prompt(incoming_query, contexts):
-    blocks = []
-    for i, ctx in enumerate(contexts, start=1):
-        blocks.append(
-            f"[{i}] Lecture {ctx['lecture']} "
-            f"({ctx['start']:.1f}s–{ctx['end']:.1f}s)\n{ctx['text']}"
-        )
-    return f"""You are a teaching assistant answering strictly from the provided lecture excerpts.
-If the answer is not contained in them, say:
-"I don't know based on the provided lectures."
-
-Question:
-{incoming_query}
-
-Lecture excerpts:
-{chr(10).join(blocks)}
-
-Answer:
-""".strip()
-
-class QueryRequest(BaseModel):
-    question: str
-
-class ContextSnippet(BaseModel):
-    lecture: str
-    start: float
-    end: float
-    text: str
-
-class QueryResponse(BaseModel):
-    answer: str
-    contexts: list[ContextSnippet]
+df = embedding_matrix = metadata = None
+RUNTIME_CODE_SHA256 = hashlib.sha256(Path(__file__).read_bytes() +
+    Path(__file__).with_name('rag.py').read_bytes()).hexdigest()
 
 @asynccontextmanager
-async def lifespan(app: FastAPI):
-    load_index()
+async def lifespan(app):
+    global df, embedding_matrix, metadata
+    df, embedding_matrix, metadata = load_index()
+    if metadata.get('model_digest') != model_digest():
+        raise RuntimeError('Ollama embedding model changed; rebuild index with --force')
     yield
 
-app = FastAPI(title="Lecture RAG API", version="1.0.0", lifespan=lifespan)
+app = FastAPI(title='Lecture RAG API', version='1.2.0', lifespan=lifespan)
+app.add_middleware(CORSMiddleware, allow_origins=['http://localhost:5173', 'http://127.0.0.1:5173'],
+    allow_methods=['GET', 'POST'], allow_headers=['Content-Type'])
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+class QueryRequest(BaseModel):
+    question: str = Field(min_length=1, max_length=2000)
+    neighbor_window: Literal[0, 1] = 1
 
-@app.get("/health")
-async def health():
-    return {"status": "healthy"}
+@app.get('/health')
+def health():
+    return dict(status='healthy', segments=len(df), embedding_shape=list(embedding_matrix.shape),
+                embedding_model=metadata['embedding_model'], corpus_sha256=metadata['corpus_sha256'],
+                api_version=app.version, pid=os.getpid(),
+                code_sha256=RUNTIME_CODE_SHA256,
+                embedding_model_digest=metadata.get('model_digest'),
+                embedding_num_gpu=os.getenv('EMBEDDING_NUM_GPU', 'automatic'),
+                generation_model=os.getenv('LLM_MODEL', 'llama3.1:8b'),
+                generation_options=generation_options())
 
-@app.post("/query", response_model=QueryResponse)
-async def query(request: QueryRequest):
+@app.post('/query')
+def query(request: QueryRequest):
+    question = request.question.strip()
+    if not question:
+        raise HTTPException(status_code=422, detail='Question must not be blank')
+    start = perf_counter()
     try:
-        q_emb = create_embeddings([request.question])[0]
-        sims = cosine_similarity(embedding_matrix, [q_emb]).flatten()
+        result = retrieve(df, embedding_matrix, question, window=request.neighbor_window)
+        generation_start = perf_counter()
+        generated = (call_llm_details(build_prompt(question, result['contexts'])) if result['contexts']
+                     else dict(answer="I don't know based on the provided lectures.", metrics=None, options=None))
+        result['timings_ms']['generation'] = (perf_counter()-generation_start)*1000
+        result['timings_ms']['total'] = (perf_counter()-start)*1000
+        return dict(answer=generated['answer'], contexts=result['contexts'], timings_ms=result['timings_ms'],
+                    generation_metrics=generated['metrics'], generation_options=generated['options'],
+                    neighbor_window=request.neighbor_window,
+                    top5=[dict(lecture=df.iloc[i].lecture, segment=int(df.iloc[i].local_segment_id),
+                               score=float(result['scores'][i])) for i in result['indices']],
+                    delivered_segments=[dict(lecture=r.lecture, segment=int(r.local_segment_id))
+                                        for r in result['selected'].itertuples()] if result['contexts'] else [])
+    except requests.RequestException as exc:
+        raise HTTPException(status_code=503, detail=f'Ollama request failed: {exc}') from exc
 
-        if sims.max() < 0.25:
-            return QueryResponse(
-                answer="I don't know based on the provided lectures.",
-                contexts=[]
-            )
-
-        top_idx = sims.argsort()[::-1][:5]
-        expanded = expand_with_neighbors(df, top_idx, window=1)
-        contexts = merge_segments(expanded)
-        contexts = contexts[:5]
-
-        prompt = build_prompt(request.question, contexts)
-        answer = call_llm(prompt)
-
-        return QueryResponse(
-            answer=answer,
-            contexts=[ContextSnippet(**ctx) for ctx in contexts]
-        )
-    except requests.exceptions.ConnectionError:
-        raise HTTPException(status_code=503, detail="Ollama service not available")
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host='127.0.0.1', port=8000)

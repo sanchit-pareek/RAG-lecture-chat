@@ -1,0 +1,1509 @@
+{
+  "unique_questions": 30,
+  "all_top5_orders_match": true,
+  "matching_top1": 30,
+  "matching_top5_orders": 30,
+  "results": [
+    {
+      "query_id": "q01",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec01",
+          488
+        ],
+        [
+          "lec01",
+          555
+        ],
+        [
+          "lec02",
+          116
+        ],
+        [
+          "lec02",
+          63
+        ],
+        [
+          "lec04",
+          45
+        ]
+      ],
+      "candidate": [
+        [
+          "lec01",
+          488
+        ],
+        [
+          "lec01",
+          555
+        ],
+        [
+          "lec02",
+          116
+        ],
+        [
+          "lec02",
+          63
+        ],
+        [
+          "lec04",
+          45
+        ]
+      ]
+    },
+    {
+      "query_id": "q02",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec02",
+          496
+        ],
+        [
+          "lec02",
+          571
+        ],
+        [
+          "lec02",
+          858
+        ],
+        [
+          "lec10",
+          156
+        ],
+        [
+          "lec02",
+          522
+        ]
+      ],
+      "candidate": [
+        [
+          "lec02",
+          496
+        ],
+        [
+          "lec02",
+          571
+        ],
+        [
+          "lec02",
+          858
+        ],
+        [
+          "lec10",
+          156
+        ],
+        [
+          "lec02",
+          522
+        ]
+      ]
+    },
+    {
+      "query_id": "q03",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec03",
+          426
+        ],
+        [
+          "lec03",
+          364
+        ],
+        [
+          "lec07",
+          22
+        ],
+        [
+          "lec03",
+          460
+        ],
+        [
+          "lec03",
+          12
+        ]
+      ],
+      "candidate": [
+        [
+          "lec03",
+          426
+        ],
+        [
+          "lec03",
+          364
+        ],
+        [
+          "lec07",
+          22
+        ],
+        [
+          "lec03",
+          460
+        ],
+        [
+          "lec03",
+          12
+        ]
+      ]
+    },
+    {
+      "query_id": "q04",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec04",
+          461
+        ],
+        [
+          "lec14",
+          617
+        ],
+        [
+          "lec04",
+          466
+        ],
+        [
+          "lec14",
+          613
+        ],
+        [
+          "lec04",
+          453
+        ]
+      ],
+      "candidate": [
+        [
+          "lec04",
+          461
+        ],
+        [
+          "lec14",
+          617
+        ],
+        [
+          "lec04",
+          466
+        ],
+        [
+          "lec14",
+          613
+        ],
+        [
+          "lec04",
+          453
+        ]
+      ]
+    },
+    {
+      "query_id": "q05",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec05",
+          499
+        ],
+        [
+          "lec04",
+          242
+        ],
+        [
+          "lec05",
+          485
+        ],
+        [
+          "lec05",
+          487
+        ],
+        [
+          "lec17",
+          114
+        ]
+      ],
+      "candidate": [
+        [
+          "lec05",
+          499
+        ],
+        [
+          "lec04",
+          242
+        ],
+        [
+          "lec05",
+          485
+        ],
+        [
+          "lec05",
+          487
+        ],
+        [
+          "lec17",
+          114
+        ]
+      ]
+    },
+    {
+      "query_id": "q06",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec06",
+          481
+        ],
+        [
+          "lec06",
+          505
+        ],
+        [
+          "lec03",
+          113
+        ],
+        [
+          "lec14",
+          639
+        ],
+        [
+          "lec13",
+          744
+        ]
+      ],
+      "candidate": [
+        [
+          "lec06",
+          481
+        ],
+        [
+          "lec06",
+          505
+        ],
+        [
+          "lec03",
+          113
+        ],
+        [
+          "lec14",
+          639
+        ],
+        [
+          "lec13",
+          744
+        ]
+      ]
+    },
+    {
+      "query_id": "q07",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec13",
+          850
+        ],
+        [
+          "lec07",
+          812
+        ],
+        [
+          "lec07",
+          264
+        ],
+        [
+          "lec07",
+          351
+        ],
+        [
+          "lec07",
+          213
+        ]
+      ],
+      "candidate": [
+        [
+          "lec13",
+          850
+        ],
+        [
+          "lec07",
+          812
+        ],
+        [
+          "lec07",
+          264
+        ],
+        [
+          "lec07",
+          351
+        ],
+        [
+          "lec07",
+          213
+        ]
+      ]
+    },
+    {
+      "query_id": "q08",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec08",
+          483
+        ],
+        [
+          "lec09",
+          598
+        ],
+        [
+          "lec04",
+          701
+        ],
+        [
+          "lec11",
+          237
+        ],
+        [
+          "lec06",
+          365
+        ]
+      ],
+      "candidate": [
+        [
+          "lec08",
+          483
+        ],
+        [
+          "lec09",
+          598
+        ],
+        [
+          "lec04",
+          701
+        ],
+        [
+          "lec11",
+          237
+        ],
+        [
+          "lec06",
+          365
+        ]
+      ]
+    },
+    {
+      "query_id": "q09",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec09",
+          534
+        ],
+        [
+          "lec09",
+          551
+        ],
+        [
+          "lec09",
+          494
+        ],
+        [
+          "lec09",
+          492
+        ],
+        [
+          "lec09",
+          397
+        ]
+      ],
+      "candidate": [
+        [
+          "lec09",
+          534
+        ],
+        [
+          "lec09",
+          551
+        ],
+        [
+          "lec09",
+          494
+        ],
+        [
+          "lec09",
+          492
+        ],
+        [
+          "lec09",
+          397
+        ]
+      ]
+    },
+    {
+      "query_id": "q10",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec06",
+          405
+        ],
+        [
+          "lec05",
+          341
+        ],
+        [
+          "lec20",
+          687
+        ],
+        [
+          "lec06",
+          93
+        ],
+        [
+          "lec08",
+          133
+        ]
+      ],
+      "candidate": [
+        [
+          "lec06",
+          405
+        ],
+        [
+          "lec05",
+          341
+        ],
+        [
+          "lec20",
+          687
+        ],
+        [
+          "lec06",
+          93
+        ],
+        [
+          "lec08",
+          133
+        ]
+      ]
+    },
+    {
+      "query_id": "q11",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec06",
+          825
+        ],
+        [
+          "lec11",
+          429
+        ],
+        [
+          "lec07",
+          457
+        ],
+        [
+          "lec08",
+          951
+        ],
+        [
+          "lec05",
+          22
+        ]
+      ],
+      "candidate": [
+        [
+          "lec06",
+          825
+        ],
+        [
+          "lec11",
+          429
+        ],
+        [
+          "lec07",
+          457
+        ],
+        [
+          "lec08",
+          951
+        ],
+        [
+          "lec05",
+          22
+        ]
+      ]
+    },
+    {
+      "query_id": "q12",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec12",
+          842
+        ],
+        [
+          "lec22",
+          430
+        ],
+        [
+          "lec12",
+          476
+        ],
+        [
+          "lec22",
+          426
+        ],
+        [
+          "lec12",
+          841
+        ]
+      ],
+      "candidate": [
+        [
+          "lec12",
+          842
+        ],
+        [
+          "lec22",
+          430
+        ],
+        [
+          "lec12",
+          476
+        ],
+        [
+          "lec22",
+          426
+        ],
+        [
+          "lec12",
+          841
+        ]
+      ]
+    },
+    {
+      "query_id": "q13",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec13",
+          543
+        ],
+        [
+          "lec14",
+          49
+        ],
+        [
+          "lec13",
+          581
+        ],
+        [
+          "lec13",
+          603
+        ],
+        [
+          "lec13",
+          657
+        ]
+      ],
+      "candidate": [
+        [
+          "lec13",
+          543
+        ],
+        [
+          "lec14",
+          49
+        ],
+        [
+          "lec13",
+          581
+        ],
+        [
+          "lec13",
+          603
+        ],
+        [
+          "lec13",
+          657
+        ]
+      ]
+    },
+    {
+      "query_id": "q14",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec14",
+          739
+        ],
+        [
+          "lec15",
+          799
+        ],
+        [
+          "lec15",
+          60
+        ],
+        [
+          "lec14",
+          418
+        ],
+        [
+          "lec13",
+          816
+        ]
+      ],
+      "candidate": [
+        [
+          "lec14",
+          739
+        ],
+        [
+          "lec15",
+          799
+        ],
+        [
+          "lec15",
+          60
+        ],
+        [
+          "lec14",
+          418
+        ],
+        [
+          "lec13",
+          816
+        ]
+      ]
+    },
+    {
+      "query_id": "q15",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec15",
+          504
+        ],
+        [
+          "lec15",
+          485
+        ],
+        [
+          "lec15",
+          482
+        ],
+        [
+          "lec15",
+          479
+        ],
+        [
+          "lec15",
+          508
+        ]
+      ],
+      "candidate": [
+        [
+          "lec15",
+          504
+        ],
+        [
+          "lec15",
+          485
+        ],
+        [
+          "lec15",
+          482
+        ],
+        [
+          "lec15",
+          479
+        ],
+        [
+          "lec15",
+          508
+        ]
+      ]
+    },
+    {
+      "query_id": "q16",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec16",
+          497
+        ],
+        [
+          "lec17",
+          131
+        ],
+        [
+          "lec17",
+          719
+        ],
+        [
+          "lec16",
+          8
+        ],
+        [
+          "lec16",
+          281
+        ]
+      ],
+      "candidate": [
+        [
+          "lec16",
+          497
+        ],
+        [
+          "lec17",
+          131
+        ],
+        [
+          "lec17",
+          719
+        ],
+        [
+          "lec16",
+          8
+        ],
+        [
+          "lec16",
+          281
+        ]
+      ]
+    },
+    {
+      "query_id": "q17",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec17",
+          438
+        ],
+        [
+          "lec18",
+          482
+        ],
+        [
+          "lec18",
+          540
+        ],
+        [
+          "lec18",
+          138
+        ],
+        [
+          "lec17",
+          477
+        ]
+      ],
+      "candidate": [
+        [
+          "lec17",
+          438
+        ],
+        [
+          "lec18",
+          482
+        ],
+        [
+          "lec18",
+          540
+        ],
+        [
+          "lec18",
+          138
+        ],
+        [
+          "lec17",
+          477
+        ]
+      ]
+    },
+    {
+      "query_id": "q18",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec18",
+          486
+        ],
+        [
+          "lec18",
+          487
+        ],
+        [
+          "lec16",
+          318
+        ],
+        [
+          "lec17",
+          645
+        ],
+        [
+          "lec18",
+          479
+        ]
+      ],
+      "candidate": [
+        [
+          "lec18",
+          486
+        ],
+        [
+          "lec18",
+          487
+        ],
+        [
+          "lec16",
+          318
+        ],
+        [
+          "lec17",
+          645
+        ],
+        [
+          "lec18",
+          479
+        ]
+      ]
+    },
+    {
+      "query_id": "q19",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec19",
+          508
+        ],
+        [
+          "lec23",
+          607
+        ],
+        [
+          "lec19",
+          38
+        ],
+        [
+          "lec23",
+          905
+        ],
+        [
+          "lec22",
+          888
+        ]
+      ],
+      "candidate": [
+        [
+          "lec19",
+          508
+        ],
+        [
+          "lec23",
+          607
+        ],
+        [
+          "lec19",
+          38
+        ],
+        [
+          "lec23",
+          905
+        ],
+        [
+          "lec22",
+          888
+        ]
+      ]
+    },
+    {
+      "query_id": "q20",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec19",
+          954
+        ],
+        [
+          "lec11",
+          429
+        ],
+        [
+          "lec08",
+          808
+        ],
+        [
+          "lec23",
+          897
+        ],
+        [
+          "lec20",
+          65
+        ]
+      ],
+      "candidate": [
+        [
+          "lec19",
+          954
+        ],
+        [
+          "lec11",
+          429
+        ],
+        [
+          "lec08",
+          808
+        ],
+        [
+          "lec23",
+          897
+        ],
+        [
+          "lec20",
+          65
+        ]
+      ]
+    },
+    {
+      "query_id": "q21",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec21",
+          463
+        ],
+        [
+          "lec22",
+          1010
+        ],
+        [
+          "lec08",
+          729
+        ],
+        [
+          "lec22",
+          19
+        ],
+        [
+          "lec21",
+          467
+        ]
+      ],
+      "candidate": [
+        [
+          "lec21",
+          463
+        ],
+        [
+          "lec22",
+          1010
+        ],
+        [
+          "lec08",
+          729
+        ],
+        [
+          "lec22",
+          19
+        ],
+        [
+          "lec21",
+          467
+        ]
+      ]
+    },
+    {
+      "query_id": "q22",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec22",
+          297
+        ],
+        [
+          "lec23",
+          510
+        ],
+        [
+          "lec11",
+          857
+        ],
+        [
+          "lec11",
+          895
+        ],
+        [
+          "lec22",
+          510
+        ]
+      ],
+      "candidate": [
+        [
+          "lec22",
+          297
+        ],
+        [
+          "lec23",
+          510
+        ],
+        [
+          "lec11",
+          857
+        ],
+        [
+          "lec11",
+          895
+        ],
+        [
+          "lec22",
+          510
+        ]
+      ]
+    },
+    {
+      "query_id": "q23",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec22",
+          726
+        ],
+        [
+          "lec22",
+          728
+        ],
+        [
+          "lec23",
+          593
+        ],
+        [
+          "lec22",
+          731
+        ],
+        [
+          "lec23",
+          597
+        ]
+      ],
+      "candidate": [
+        [
+          "lec22",
+          726
+        ],
+        [
+          "lec22",
+          728
+        ],
+        [
+          "lec23",
+          593
+        ],
+        [
+          "lec22",
+          731
+        ],
+        [
+          "lec23",
+          597
+        ]
+      ]
+    },
+    {
+      "query_id": "q24",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec24",
+          518
+        ],
+        [
+          "lec24",
+          716
+        ],
+        [
+          "lec25",
+          903
+        ],
+        [
+          "lec25",
+          906
+        ],
+        [
+          "lec24",
+          253
+        ]
+      ],
+      "candidate": [
+        [
+          "lec24",
+          518
+        ],
+        [
+          "lec24",
+          716
+        ],
+        [
+          "lec25",
+          903
+        ],
+        [
+          "lec25",
+          906
+        ],
+        [
+          "lec24",
+          253
+        ]
+      ]
+    },
+    {
+      "query_id": "q25",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec25",
+          554
+        ],
+        [
+          "lec25",
+          19
+        ],
+        [
+          "lec25",
+          509
+        ],
+        [
+          "lec25",
+          376
+        ],
+        [
+          "lec25",
+          22
+        ]
+      ],
+      "candidate": [
+        [
+          "lec25",
+          554
+        ],
+        [
+          "lec25",
+          19
+        ],
+        [
+          "lec25",
+          509
+        ],
+        [
+          "lec25",
+          376
+        ],
+        [
+          "lec25",
+          22
+        ]
+      ]
+    },
+    {
+      "query_id": "q26",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec01",
+          252
+        ],
+        [
+          "lec01",
+          232
+        ],
+        [
+          "lec16",
+          63
+        ],
+        [
+          "lec17",
+          114
+        ],
+        [
+          "lec06",
+          547
+        ]
+      ],
+      "candidate": [
+        [
+          "lec01",
+          252
+        ],
+        [
+          "lec01",
+          232
+        ],
+        [
+          "lec16",
+          63
+        ],
+        [
+          "lec17",
+          114
+        ],
+        [
+          "lec06",
+          547
+        ]
+      ]
+    },
+    {
+      "query_id": "q27",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec03",
+          30
+        ],
+        [
+          "lec06",
+          396
+        ],
+        [
+          "lec02",
+          253
+        ],
+        [
+          "lec10",
+          76
+        ],
+        [
+          "lec06",
+          365
+        ]
+      ],
+      "candidate": [
+        [
+          "lec03",
+          30
+        ],
+        [
+          "lec06",
+          396
+        ],
+        [
+          "lec02",
+          253
+        ],
+        [
+          "lec10",
+          76
+        ],
+        [
+          "lec06",
+          365
+        ]
+      ]
+    },
+    {
+      "query_id": "q28",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec03",
+          245
+        ],
+        [
+          "lec03",
+          248
+        ],
+        [
+          "lec03",
+          254
+        ],
+        [
+          "lec03",
+          766
+        ],
+        [
+          "lec03",
+          295
+        ]
+      ],
+      "candidate": [
+        [
+          "lec03",
+          245
+        ],
+        [
+          "lec03",
+          248
+        ],
+        [
+          "lec03",
+          254
+        ],
+        [
+          "lec03",
+          766
+        ],
+        [
+          "lec03",
+          295
+        ]
+      ]
+    },
+    {
+      "query_id": "q29",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec04",
+          269
+        ],
+        [
+          "lec04",
+          226
+        ],
+        [
+          "lec04",
+          242
+        ],
+        [
+          "lec25",
+          581
+        ],
+        [
+          "lec04",
+          230
+        ]
+      ],
+      "candidate": [
+        [
+          "lec04",
+          269
+        ],
+        [
+          "lec04",
+          226
+        ],
+        [
+          "lec04",
+          242
+        ],
+        [
+          "lec25",
+          581
+        ],
+        [
+          "lec04",
+          230
+        ]
+      ]
+    },
+    {
+      "query_id": "q30",
+      "exact_order_match": true,
+      "top1_match": true,
+      "top5_set_overlap": 1.0,
+      "original": [
+        [
+          "lec05",
+          415
+        ],
+        [
+          "lec05",
+          341
+        ],
+        [
+          "lec06",
+          405
+        ],
+        [
+          "lec20",
+          257
+        ],
+        [
+          "lec20",
+          687
+        ]
+      ],
+      "candidate": [
+        [
+          "lec05",
+          415
+        ],
+        [
+          "lec05",
+          341
+        ],
+        [
+          "lec06",
+          405
+        ],
+        [
+          "lec20",
+          257
+        ],
+        [
+          "lec20",
+          687
+        ]
+      ]
+    }
+  ],
+  "limitation": "This checks placement consistency on the existing source-derived benchmark, not independent answer accuracy."
+}

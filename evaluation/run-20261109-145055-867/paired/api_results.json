@@ -1,0 +1,2560 @@
+{
+  "status": "complete",
+  "created_at": "2026-11-09T09:30:01.112873+00:00",
+  "dataset_status": "assistant_source_reviewed_post_hoc_not_independent",
+  "configuration": {
+    "dataset_sha256": "a84ba5de527aba7256522c9a988d246dedbbcd5a0bd76c8a98d6d5d64d04e783",
+    "corpus_sha256": "25446f169c4798ea121aeeb23db7f8fb42e13f09a72e49cb06e7f1b418680316",
+    "health": {
+      "status": "healthy",
+      "segments": 23912,
+      "embedding_shape": [
+        23912,
+        1024
+      ],
+      "embedding_model": "bge-m3",
+      "corpus_sha256": "25446f169c4798ea121aeeb23db7f8fb42e13f09a72e49cb06e7f1b418680316",
+      "api_version": "1.2.0",
+      "pid": 4384,
+      "code_sha256": "4f6f4408bb6f5d9850f22a3f606a8184022227fe98a97698e7043e2a65837a08",
+      "embedding_model_digest": "7907646426070047a77226ac3e684fbbe8410524f7b4a74d02837e43f2146bab",
+      "embedding_num_gpu": "0",
+      "generation_model": "llama3.1:8b",
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 512,
+        "num_ctx": 8192
+      }
+    },
+    "seed": 42,
+    "query_ids": [
+      "q01",
+      "q02",
+      "q07",
+      "q11",
+      "q15",
+      "q20",
+      "q23",
+      "q30"
+    ],
+    "request_timeout_seconds": 180.0,
+    "gpu": "NVIDIA GeForce RTX 4050 Laptop GPU, 6141 MiB, 592.82",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "warmup": "One complete question excluded",
+    "protocol": "Paired window 0/1 first pass in seeded random order; two more window-1 passes by default. Sequential HTTP requests, no forced model unload or cache clearing."
+  },
+  "results": [
+    {
+      "query_id": "q11",
+      "question": "What does convolution of two probability mass functions produce?",
+      "repeat": 0,
+      "neighbor_window": 1,
+      "created_at": "2026-11-09T09:30:15.508909+00:00",
+      "api_ms": 3967.898900000364,
+      "response": {
+        "answer": "I don't know based on the provided lectures.",
+        "contexts": [
+          {
+            "lecture": "lec05",
+            "start": 90.22,
+            "end": 99.76,
+            "text": "And then we're going to describe them using so-called probability mass functions. Basically, some numerical values are more likely to"
+          },
+          {
+            "lecture": "lec06",
+            "start": 2638.44,
+            "end": 2649.16,
+            "text": "It's called the joint PMF. It's the joint probability mass function of the two random variables, X and Y, looked at together jointly."
+          },
+          {
+            "lecture": "lec07",
+            "start": 1488.64,
+            "end": 1499.56,
+            "text": "taking the expectation of x times y, we take expectation of the product of two functions of x and y? I claim that the expected value of the product is still"
+          },
+          {
+            "lecture": "lec08",
+            "start": 2972.75,
+            "end": 2987.37,
+            "text": "So what's there that's left for us to do is to look at these two concepts, joint probability mass functions and conditional mass functions, and figure out what would be"
+          },
+          {
+            "lecture": "lec11",
+            "start": 1498.52,
+            "end": 1504.68,
+            "text": "to be equal to 3. What's the probability that the sum of the two random variables is equal to 3?"
+          }
+        ],
+        "timings_ms": {
+          "embedding": 2648.0670000000828,
+          "similarity": 296.5590000003431,
+          "context": 2.3242000006575836,
+          "retrieval": 2946.9502000010834,
+          "generation": 1009.896800000206,
+          "total": 3956.8727999994735
+        },
+        "generation_metrics": {
+          "model": "llama3.1:8b",
+          "done_reason": "stop",
+          "total_duration": 1004213200,
+          "load_duration": 7572200,
+          "prompt_eval_count": 305,
+          "prompt_eval_cached_count": 38,
+          "prompt_eval_duration": 442712000,
+          "eval_count": 11,
+          "eval_duration": 532371999,
+          "wall_ms": 1009.6770000000106,
+          "output_tokens_per_second": 20.662243733070568
+        },
+        "generation_options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 512,
+          "num_ctx": 8192
+        },
+        "neighbor_window": 1,
+        "top5": [
+          {
+            "lecture": "lec06",
+            "segment": 825,
+            "score": 0.7055230219538335
+          },
+          {
+            "lecture": "lec11",
+            "segment": 429,
+            "score": 0.6493159876621897
+          },
+          {
+            "lecture": "lec07",
+            "segment": 457,
+            "score": 0.6463294995588729
+          },
+          {
+            "lecture": "lec08",
+            "segment": 951,
+            "score": 0.6415669734447975
+          },
+          {
+            "lecture": "lec05",
+            "segment": 22,
+            "score": 0.6341279905390486
+          }
+        ],
+        "delivered_segments": [
+          {
+            "lecture": "lec05",
+            "segment": 21
+          },
+          {
+            "lecture": "lec05",
+            "segment": 22
+          },
+          {
+            "lecture": "lec05",
+            "segment": 23
+          },
+          {
+            "lecture": "lec06",
+            "segment": 824
+          },
+          {
+            "lecture": "lec06",
+            "segment": 825
+          },
+          {
+            "lecture": "lec06",
+            "segment": 826
+          },
+          {
+            "lecture": "lec07",
+            "segment": 456
+          },
+          {
+            "lecture": "lec07",
+            "segment": 457
+          },
+          {
+            "lecture": "lec07",
+            "segment": 458
+          },
+          {
+            "lecture": "lec08",
+            "segment": 950
+          },
+          {
+            "lecture": "lec08",
+            "segment": 951
+          },
+          {
+            "lecture": "lec08",
+            "segment": 952
+          },
+          {
+            "lecture": "lec11",
+            "segment": 428
+          },
+          {
+            "lecture": "lec11",
+            "segment": 429
+          },
+          {
+            "lecture": "lec11",
+            "segment": 430
+          }
+        ]
+      },
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.5
+      },
+      "context_coverage": 0.06976744186046512
+    },
+    {
+      "query_id": "q11",
+      "question": "What does convolution of two probability mass functions produce?",
+      "repeat": 0,
+      "neighbor_window": 0,
+      "created_at": "2026-11-09T09:30:18.476074+00:00",
+      "api_ms": 2965.4300000001967,
+      "response": {
+        "answer": "Based on the lecture excerpts, the convolution of two probability mass functions produces the joint probability mass function of the two random variables. (References: [2] Lecture lec06 (2640.9s-2644.9s))",
+        "contexts": [
+          {
+            "lecture": "lec05",
+            "start": 95.04,
+            "end": 96.42,
+            "text": "probability mass functions."
+          },
+          {
+            "lecture": "lec06",
+            "start": 2640.86,
+            "end": 2644.92,
+            "text": "It's the joint probability mass function of the two random"
+          },
+          {
+            "lecture": "lec07",
+            "start": 1491.74,
+            "end": 1496.6,
+            "text": "of the product of two functions of x and y?"
+          },
+          {
+            "lecture": "lec08",
+            "start": 2977.83,
+            "end": 2981.29,
+            "text": "these two concepts, joint probability mass functions and"
+          },
+          {
+            "lecture": "lec11",
+            "start": 1500.0,
+            "end": 1502.36,
+            "text": "What's the probability that the sum of the two random"
+          }
+        ],
+        "timings_ms": {
+          "embedding": 49.66270000113582,
+          "similarity": 203.20499999979802,
+          "context": 1.6568999999435619,
+          "retrieval": 254.5246000008774,
+          "generation": 2704.446400000961,
+          "total": 2958.999700000277
+        },
+        "generation_metrics": {
+          "model": "llama3.1:8b",
+          "done_reason": "stop",
+          "total_duration": 2683674300,
+          "load_duration": 7716000,
+          "prompt_eval_count": 205,
+          "prompt_eval_cached_count": 59,
+          "prompt_eval_duration": 202191000,
+          "eval_count": 49,
+          "eval_duration": 2457792000,
+          "wall_ms": 2704.2937999995047,
+          "output_tokens_per_second": 19.936593495299846
+        },
+        "generation_options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 512,
+          "num_ctx": 8192
+        },
+        "neighbor_window": 0,
+        "top5": [
+          {
+            "lecture": "lec06",
+            "segment": 825,
+            "score": 0.7055230219538335
+          },
+          {
+            "lecture": "lec11",
+            "segment": 429,
+            "score": 0.6493159876621897
+          },
+          {
+            "lecture": "lec07",
+            "segment": 457,
+            "score": 0.6463294995588729
+          },
+          {
+            "lecture": "lec08",
+            "segment": 951,
+            "score": 0.6415669734447975
+          },
+          {
+            "lecture": "lec05",
+            "segment": 22,
+            "score": 0.6341279905390486
+          }
+        ],
+        "delivered_segments": [
+          {
+            "lecture": "lec05",
+            "segment": 22
+          },
+          {
+            "lecture": "lec06",
+            "segment": 825
+          },
+          {
+            "lecture": "lec07",
+            "segment": 457
+          },
+          {
+            "lecture": "lec08",
+            "segment": 951
+          },
+          {
+            "lecture": "lec11",
+            "segment": 429
+          }
+        ]
+      },
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 1,
+        "reciprocal_rank": 0.5
+      },
+      "context_coverage": 0.023255813953488372
+    },
+    {
+      "query_id": "q15",
+      "question": "When comparing arrivals from two sources, how is the origin of each arrival modeled?",
+      "repeat": 0,
+      "neighbor_window": 1,
+      "created_at": "2026-11-09T09:30:28.000396+00:00",
+      "api_ms": 9522.039499999664,
+      "response": {
+        "answer": "According to the lecture excerpts, the origin of each arrival is modeled as a random variable that is either from one stream or the other, with a certain probability. Specifically:\n\n* The origin of an arrival is modeled as a binary choice between two streams, with a probability associated with each stream (Reference [1], 1486.7s-1512.0s).\n* The origins of different arrivals are independent random variables (Reference [2], 1560.3s-1568.9s).\n* The origin of each arrival is determined by an independent \"coin flip\" (Reference [3], 1579.5s-1595.9s).\n\nSo, to answer the question: the origin of each arrival is modeled as a binary random variable with a certain probability, and the origins of different arrivals are independent of each other.",
+        "contexts": [
+          {
+            "lecture": "lec15",
+            "start": 1486.7,
+            "end": 1512.04,
+            "text": "tell you it came from there or it came from there. So the origin of an arrival is either this stream or that stream, and this is the probability that the origin of the arrival is that one. Now, if we look at two different arrivals, and we ask about their origins. So let's think. Let's think about the origin of this arrival and compare it with the origin of that arrival."
+          },
+          {
+            "lecture": "lec15",
+            "start": 1560.26,
+            "end": 1568.86,
+            "text": "origin of an arrival there. So the origins of different arrivals are also independent random variables."
+          },
+          {
+            "lecture": "lec15",
+            "start": 1579.47,
+            "end": 1595.9,
+            "text": "in the merged process, it's as if you're flipping a coin to determine where did that arrival came from. And these coins are independent of each other."
+          }
+        ],
+        "timings_ms": {
+          "embedding": 81.89250000032189,
+          "similarity": 236.1949000005552,
+          "context": 1.9125999988318654,
+          "retrieval": 319.99999999970896,
+          "generation": 9194.486899999902,
+          "total": 9514.507399999275
+        },
+        "generation_metrics": {
+          "model": "llama3.1:8b",
+          "done_reason": "stop",
+          "total_duration": 9190032000,
+          "load_duration": 8021600,
+          "prompt_eval_count": 256,
+          "prompt_eval_cached_count": 37,
+          "prompt_eval_duration": 233840000,
+          "eval_count": 173,
+          "eval_duration": 8933360000,
+          "wall_ms": 9194.265000000087,
+          "output_tokens_per_second": 19.365613833988554
+        },
+        "generation_options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 512,
+          "num_ctx": 8192
+        },
+        "neighbor_window": 1,
+        "top5": [
+          {
+            "lecture": "lec15",
+            "segment": 504,
+            "score": 0.7619884030300694
+          },
+          {
+            "lecture": "lec15",
+            "segment": 485,
+            "score": 0.733185933342711
+          },
+          {
+            "lecture": "lec15",
+            "segment": 482,
+            "score": 0.7035267840822568
+          },
+          {
+            "lecture": "lec15",
+            "segment": 479,
+            "score": 0.6987620473581859
+          },
+          {
+            "lecture": "lec15",
+            "segment": 508,
+            "score": 0.6847873750771024
+          }
+        ],
+        "delivered_segments": [
+          {
+            "lecture": "lec15",
+            "segment": 478
+          },
+          {
+            "lecture": "lec15",
+            "segment": 479
+          },
+          {
+            "lecture": "lec15",
+            "segment": 480
+          },
+          {
+            "lecture": "lec15",
+            "segment": 481
+          },
+          {
+            "lecture": "lec15",
+            "segment": 482
+          },
+          {
+            "lecture": "lec15",
+            "segment": 483
+          },
+          {
+            "lecture": "lec15",
+            "segment": 484
+          },
+          {
+            "lecture": "lec15",
+            "segment": 485
+          },
+          {
+            "lecture": "lec15",
+            "segment": 486
+          },
+          {
+            "lecture": "lec15",
+            "segment": 503
+          },
+          {
+            "lecture": "lec15",
+            "segment": 504
+          },
+          {
+            "lecture": "lec15",
+            "segment": 505
+          },
+          {
+            "lecture": "lec15",
+            "segment": 507
+          },
+          {
+            "lecture": "lec15",
+            "segment": 508
+          },
+          {
+            "lecture": "lec15",
+            "segment": 509
+          }
+        ]
+      },
+      "ranking": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "context_coverage": 0.45161290322580644
+    },
+    {
+      "query_id": "q15",
+      "question": "When comparing arrivals from two sources, how is the origin of each arrival modeled?",
+      "repeat": 0,
+      "neighbor_window": 0,
+      "created_at": "2026-11-09T09:30:41.137876+00:00",
+      "api_ms": 13134.936399999788,
+      "response": {
+        "answer": "According to the lecture excerpts, the origin of each arrival is modeled as either one of two sources or streams. \n\n[1] Lecture lec15 (1489.8s-1494.9s): \"So the origin of an arrival is either this stream or that\"\n\n[2] Lecture lec15 (1499.5s-1503.5s): (no direct mention of modeling the origin of an arrival)\n\n[3] Lecture lec15 (1506.0s-1508.7s): (no direct mention of modeling the origin of an arrival)\n\n[4] Lecture lec15 (1562.5s-1565.7s): \"So the origins of different arrivals are\" (no direct mention of how the origins are modeled)\n\n[5] Lecture lec15 (1582.8s-1585.9s): \"determine where did that arrival came from.\" (no direct mention of how the origin is modeled)\n\nHowever, [1] Lecture lec15 (1489.8s-1494.9s) provides a clear answer: the origin of each arrival is modeled as either one of two sources or streams.",
+        "contexts": [
+          {
+            "lecture": "lec15",
+            "start": 1489.8,
+            "end": 1494.88,
+            "text": "So the origin of an arrival is either this stream or that"
+          },
+          {
+            "lecture": "lec15",
+            "start": 1499.5,
+            "end": 1503.46,
+            "text": "Now, if we look at two different arrivals, and we"
+          },
+          {
+            "lecture": "lec15",
+            "start": 1506.0,
+            "end": 1508.72,
+            "text": "Let's think about the origin of this arrival and compare it"
+          },
+          {
+            "lecture": "lec15",
+            "start": 1562.48,
+            "end": 1565.74,
+            "text": "So the origins of different arrivals are"
+          },
+          {
+            "lecture": "lec15",
+            "start": 1582.83,
+            "end": 1585.91,
+            "text": "determine where did that arrival came from."
+          }
+        ],
+        "timings_ms": {
+          "embedding": 55.46019999928831,
+          "similarity": 248.06200000057288,
+          "context": 1.3177999990148237,
+          "retrieval": 304.839999998876,
+          "generation": 12822.81619999958,
+          "total": 13127.67520000125
+        },
+        "generation_metrics": {
+          "model": "llama3.1:8b",
+          "done_reason": "stop",
+          "total_duration": 12807229100,
+          "load_duration": 6889200,
+          "prompt_eval_count": 220,
+          "prompt_eval_cached_count": 66,
+          "prompt_eval_duration": 247107000,
+          "eval_count": 246,
+          "eval_duration": 12533951000,
+          "wall_ms": 12822.67580000007,
+          "output_tokens_per_second": 19.62669233348686
+        },
+        "generation_options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 512,
+          "num_ctx": 8192
+        },
+        "neighbor_window": 0,
+        "top5": [
+          {
+            "lecture": "lec15",
+            "segment": 504,
+            "score": 0.7619884030300694
+          },
+          {
+            "lecture": "lec15",
+            "segment": 485,
+            "score": 0.733185933342711
+          },
+          {
+            "lecture": "lec15",
+            "segment": 482,
+            "score": 0.7035267840822568
+          },
+          {
+            "lecture": "lec15",
+            "segment": 479,
+            "score": 0.6987620473581859
+          },
+          {
+            "lecture": "lec15",
+            "segment": 508,
+            "score": 0.6847873750771024
+          }
+        ],
+        "delivered_segments": [
+          {
+            "lecture": "lec15",
+            "segment": 479
+          },
+          {
+            "lecture": "lec15",
+            "segment": 482
+          },
+          {
+            "lecture": "lec15",
+            "segment": 485
+          },
+          {
+            "lecture": "lec15",
+            "segment": 504
+          },
+          {
+            "lecture": "lec15",
+            "segment": 508
+          }
+        ]
+      },
+      "ranking": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "context_coverage": 0.16129032258064516
+    },
+    {
+      "query_id": "q23",
+      "question": "What two contributions determine the mean squared error of an estimator?",
+      "repeat": 0,
+      "neighbor_window": 0,
+      "created_at": "2026-11-09T09:30:46.060933+00:00",
+      "api_ms": 4920.822800000678,
+      "response": {
+        "answer": "Based on the lecture excerpts, the two contributions that determine the mean squared error of an estimator are:\n\n1. The variance of the estimator (ref. [5])\n2. The squared bias of the estimator (ref. [5])\n\nNote that the lecture excerpts do not explicitly mention the two contributions, but rather the formula for the mean squared error, which is the sum of the variance and the squared bias of the estimator.",
+        "contexts": [
+          {
+            "lecture": "lec22",
+            "start": 2232.26,
+            "end": 2235.2,
+            "text": "How about the resulting mean squared error?"
+          },
+          {
+            "lecture": "lec22",
+            "start": 2238.12,
+            "end": 2241.06,
+            "text": "formula for the mean squared error obtained from"
+          },
+          {
+            "lecture": "lec22",
+            "start": 2248.06,
+            "end": 2251.18,
+            "text": "The mean squared error that we have has something to do with"
+          },
+          {
+            "lecture": "lec23",
+            "start": 1769.61,
+            "end": 1771.57,
+            "text": "defined the mean squared error."
+          },
+          {
+            "lecture": "lec23",
+            "start": 1780.09,
+            "end": 1783.63,
+            "text": "The mean squared error is the variance of the distribution"
+          }
+        ],
+        "timings_ms": {
+          "embedding": 50.14590000064345,
+          "similarity": 262.93989999976475,
+          "context": 1.975299999685376,
+          "retrieval": 315.0611000000936,
+          "generation": 4598.174700000527,
+          "total": 4913.271100000202
+        },
+        "generation_metrics": {
+          "model": "llama3.1:8b",
+          "done_reason": "stop",
+          "total_duration": 4592816500,
+          "load_duration": 7084300,
+          "prompt_eval_count": 207,
+          "prompt_eval_cached_count": 37,
+          "prompt_eval_duration": 268391000,
+          "eval_count": 86,
+          "eval_duration": 4295911000,
+          "wall_ms": 4597.989699999744,
+          "output_tokens_per_second": 20.0190367072316
+        },
+        "generation_options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 512,
+          "num_ctx": 8192
+        },
+        "neighbor_window": 0,
+        "top5": [
+          {
+            "lecture": "lec22",
+            "segment": 726,
+            "score": 0.8024696071903555
+          },
+          {
+            "lecture": "lec22",
+            "segment": 728,
+            "score": 0.7709700631228739
+          },
+          {
+            "lecture": "lec23",
+            "segment": 593,
+            "score": 0.7647139229201257
+          },
+          {
+            "lecture": "lec22",
+            "segment": 731,
+            "score": 0.7341731621392291
+          },
+          {
+            "lecture": "lec23",
+            "segment": 597,
+            "score": 0.7296176459493982
+          }
+        ],
+        "delivered_segments": [
+          {
+            "lecture": "lec22",
+            "segment": 726
+          },
+          {
+            "lecture": "lec22",
+            "segment": 728
+          },
+          {
+            "lecture": "lec22",
+            "segment": 731
+          },
+          {
+            "lecture": "lec23",
+            "segment": 593
+          },
+          {
+            "lecture": "lec23",
+            "segment": 597
+          }
+        ]
+      },
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "context_coverage": 0.0
+    },
+    {
+      "query_id": "q23",
+      "question": "What two contributions determine the mean squared error of an estimator?",
+      "repeat": 0,
+      "neighbor_window": 1,
+      "created_at": "2026-11-09T09:30:50.806209+00:00",
+      "api_ms": 4743.112599999222,
+      "response": {
+        "answer": "Based on the lecture excerpts, the two contributions that determine the mean squared error of an estimator are:\n\n1. The variance of the original random variable (Reference: Lecture lec22 (2224.6s-2255.4s))\n2. The variance of the distribution of the axes divided by n (Reference: Lecture lec23 (1778.7s-1786.0s))",
+        "contexts": [
+          {
+            "lecture": "lec22",
+            "start": 2224.62,
+            "end": 2255.42,
+            "text": "better estimate of theta. How about the resulting mean squared error? In this context, it turns out that there's a very nice formula for the mean squared error obtained from the best linear estimate. What's the story here? The mean squared error that we have has something to do with the variance of the original random variable."
+          },
+          {
+            "lecture": "lec23",
+            "start": 1766.75,
+            "end": 1775.29,
+            "text": "corresponding to this estimator, remember how we defined the mean squared error. It's this quantity."
+          },
+          {
+            "lecture": "lec23",
+            "start": 1778.67,
+            "end": 1785.99,
+            "text": "times by now. The mean squared error is the variance of the distribution of the axes divided by n."
+          }
+        ],
+        "timings_ms": {
+          "embedding": 68.0437000009988,
+          "similarity": 296.34710000027553,
+          "context": 2.53569999949832,
+          "retrieval": 366.92650000077265,
+          "generation": 4370.058900000004,
+          "total": 4737.00430000099
+        },
+        "generation_metrics": {
+          "model": "llama3.1:8b",
+          "done_reason": "stop",
+          "total_duration": 4365202300,
+          "load_duration": 8712600,
+          "prompt_eval_count": 227,
+          "prompt_eval_cached_count": 61,
+          "prompt_eval_duration": 224146000,
+          "eval_count": 83,
+          "eval_duration": 4117307000,
+          "wall_ms": 4369.917199999691,
+          "output_tokens_per_second": 20.15880768667481
+        },
+        "generation_options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 512,
+          "num_ctx": 8192
+        },
+        "neighbor_window": 1,
+        "top5": [
+          {
+            "lecture": "lec22",
+            "segment": 726,
+            "score": 0.8024696071903555
+          },
+          {
+            "lecture": "lec22",
+            "segment": 728,
+            "score": 0.7709700631228739
+          },
+          {
+            "lecture": "lec23",
+            "segment": 593,
+            "score": 0.7647139229201257
+          },
+          {
+            "lecture": "lec22",
+            "segment": 731,
+            "score": 0.7341731621392291
+          },
+          {
+            "lecture": "lec23",
+            "segment": 597,
+            "score": 0.7296176459493982
+          }
+        ],
+        "delivered_segments": [
+          {
+            "lecture": "lec22",
+            "segment": 725
+          },
+          {
+            "lecture": "lec22",
+            "segment": 726
+          },
+          {
+            "lecture": "lec22",
+            "segment": 727
+          },
+          {
+            "lecture": "lec22",
+            "segment": 728
+          },
+          {
+            "lecture": "lec22",
+            "segment": 729
+          },
+          {
+            "lecture": "lec22",
+            "segment": 730
+          },
+          {
+            "lecture": "lec22",
+            "segment": 731
+          },
+          {
+            "lecture": "lec22",
+            "segment": 732
+          },
+          {
+            "lecture": "lec23",
+            "segment": 592
+          },
+          {
+            "lecture": "lec23",
+            "segment": 593
+          },
+          {
+            "lecture": "lec23",
+            "segment": 594
+          },
+          {
+            "lecture": "lec23",
+            "segment": 596
+          },
+          {
+            "lecture": "lec23",
+            "segment": 597
+          },
+          {
+            "lecture": "lec23",
+            "segment": 598
+          }
+        ]
+      },
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "context_coverage": 0.0
+    },
+    {
+      "query_id": "q30",
+      "question": "What does the value of a discrete random variable PMF at x represent?",
+      "repeat": 0,
+      "neighbor_window": 1,
+      "created_at": "2026-11-09T09:30:54.920528+00:00",
+      "api_ms": 4111.9362999997975,
+      "response": {
+        "answer": "According to the lecture excerpts, the value of a discrete random variable PMF at x represents the probability of the random variable taking on the value x. This is stated in excerpt [2] as \"Px of 2 is meant to be, by definition, it's the probability that the random variable x takes on the value 2.\"",
+        "contexts": [
+          {
+            "lecture": "lec05",
+            "start": 1078.29,
+            "end": 1086.49,
+            "text": "So this was an example of how to compute the PMF of a random variable. This was an easy example, because this event could be"
+          },
+          {
+            "lecture": "lec05",
+            "start": 1297.93,
+            "end": 1310.65,
+            "text": "So let's, for concreteness, n equal to 4. Px is the PMF of that random variable x. Px of 2 is meant to be, by definition, it's the"
+          },
+          {
+            "lecture": "lec06",
+            "start": 1270.26,
+            "end": 1279.7,
+            "text": "Now, whenever you have a probabilistic model involving a random variable and you have a PMF for that random variable, you can talk about the expected value of that"
+          },
+          {
+            "lecture": "lec20",
+            "start": 805.27,
+            "end": 816.51,
+            "text": "And it's an excellent approximation. So this is the PMF of the sum of 32 discrete random variables with this uniform distribution."
+          },
+          {
+            "lecture": "lec20",
+            "start": 2373.07,
+            "end": 2381.91,
+            "text": "And the central limit theorem was first proved by considering the PMF of a binomial random variable when P is equal to 1 half."
+          }
+        ],
+        "timings_ms": {
+          "embedding": 52.8147999993962,
+          "similarity": 223.9224999993894,
+          "context": 1.8690000015340047,
+          "retrieval": 278.6063000003196,
+          "generation": 3811.2622999997257,
+          "total": 4089.8891999986517
+        },
+        "generation_metrics": {
+          "model": "llama3.1:8b",
+          "done_reason": "stop",
+          "total_duration": 3807072700,
+          "load_duration": 6914900,
+          "prompt_eval_count": 321,
+          "prompt_eval_cached_count": 38,
+          "prompt_eval_duration": 286122000,
+          "eval_count": 69,
+          "eval_duration": 3496501000,
+          "wall_ms": 3811.0656999997445,
+          "output_tokens_per_second": 19.73401409008606
+        },
+        "generation_options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 512,
+          "num_ctx": 8192
+        },
+        "neighbor_window": 1,
+        "top5": [
+          {
+            "lecture": "lec05",
+            "segment": 415,
+            "score": 0.8149651574608694
+          },
+          {
+            "lecture": "lec05",
+            "segment": 341,
+            "score": 0.7686545235045821
+          },
+          {
+            "lecture": "lec06",
+            "segment": 405,
+            "score": 0.7671727689883242
+          },
+          {
+            "lecture": "lec20",
+            "segment": 257,
+            "score": 0.7465726198113546
+          },
+          {
+            "lecture": "lec20",
+            "segment": 687,
+            "score": 0.7452495782883618
+          }
+        ],
+        "delivered_segments": [
+          {
+            "lecture": "lec05",
+            "segment": 340
+          },
+          {
+            "lecture": "lec05",
+            "segment": 341
+          },
+          {
+            "lecture": "lec05",
+            "segment": 342
+          },
+          {
+            "lecture": "lec05",
+            "segment": 414
+          },
+          {
+            "lecture": "lec05",
+            "segment": 415
+          },
+          {
+            "lecture": "lec05",
+            "segment": 416
+          },
+          {
+            "lecture": "lec06",
+            "segment": 404
+          },
+          {
+            "lecture": "lec06",
+            "segment": 405
+          },
+          {
+            "lecture": "lec06",
+            "segment": 406
+          },
+          {
+            "lecture": "lec20",
+            "segment": 256
+          },
+          {
+            "lecture": "lec20",
+            "segment": 257
+          },
+          {
+            "lecture": "lec20",
+            "segment": 258
+          },
+          {
+            "lecture": "lec20",
+            "segment": 686
+          },
+          {
+            "lecture": "lec20",
+            "segment": 687
+          },
+          {
+            "lecture": "lec20",
+            "segment": 688
+          }
+        ]
+      },
+      "ranking": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "context_coverage": 0.15
+    },
+    {
+      "query_id": "q30",
+      "question": "What does the value of a discrete random variable PMF at x represent?",
+      "repeat": 0,
+      "neighbor_window": 0,
+      "created_at": "2026-11-09T09:30:58.651862+00:00",
+      "api_ms": 3729.4672000007267,
+      "response": {
+        "answer": "Based on the lecture excerpts, the value of a discrete random variable PMF at x represents the probability that the random variable takes on the value x.\n\nReferences:\n[2] Lecture lec05 (1301.6s-1305.3s)\nPx is the PMF of that random variable x.",
+        "contexts": [
+          {
+            "lecture": "lec05",
+            "start": 1080.73,
+            "end": 1082.61,
+            "text": "PMF of a random variable."
+          },
+          {
+            "lecture": "lec05",
+            "start": 1301.57,
+            "end": 1305.27,
+            "text": "Px is the PMF of that random variable x."
+          },
+          {
+            "lecture": "lec06",
+            "start": 1273.36,
+            "end": 1276.6,
+            "text": "a random variable and you have a PMF for that random"
+          },
+          {
+            "lecture": "lec20",
+            "start": 807.83,
+            "end": 812.25,
+            "text": "So this is the PMF of the sum of 32 discrete random"
+          },
+          {
+            "lecture": "lec20",
+            "start": 2376.49,
+            "end": 2379.33,
+            "text": "the PMF of a binomial random variable when"
+          }
+        ],
+        "timings_ms": {
+          "embedding": 79.9196000007214,
+          "similarity": 195.54599999901257,
+          "context": 1.8929000016214559,
+          "retrieval": 277.3585000013554,
+          "generation": 3446.643600000243,
+          "total": 3724.082000000635
+        },
+        "generation_metrics": {
+          "model": "llama3.1:8b",
+          "done_reason": "stop",
+          "total_duration": 3440993500,
+          "load_duration": 7516500,
+          "prompt_eval_count": 218,
+          "prompt_eval_cached_count": 64,
+          "prompt_eval_duration": 206244000,
+          "eval_count": 64,
+          "eval_duration": 3209227000,
+          "wall_ms": 3446.441299998696,
+          "output_tokens_per_second": 19.942497056144674
+        },
+        "generation_options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 512,
+          "num_ctx": 8192
+        },
+        "neighbor_window": 0,
+        "top5": [
+          {
+            "lecture": "lec05",
+            "segment": 415,
+            "score": 0.8149651574608694
+          },
+          {
+            "lecture": "lec05",
+            "segment": 341,
+            "score": 0.7686545235045821
+          },
+          {
+            "lecture": "lec06",
+            "segment": 405,
+            "score": 0.7671727689883242
+          },
+          {
+            "lecture": "lec20",
+            "segment": 257,
+            "score": 0.7465726198113546
+          },
+          {
+            "lecture": "lec20",
+            "segment": 687,
+            "score": 0.7452495782883618
+          }
+        ],
+        "delivered_segments": [
+          {
+            "lecture": "lec05",
+            "segment": 341
+          },
+          {
+            "lecture": "lec05",
+            "segment": 415
+          },
+          {
+            "lecture": "lec06",
+            "segment": 405
+          },
+          {
+            "lecture": "lec20",
+            "segment": 257
+          },
+          {
+            "lecture": "lec20",
+            "segment": 687
+          }
+        ]
+      },
+      "ranking": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "context_coverage": 0.05
+    },
+    {
+      "query_id": "q07",
+      "question": "Why do functions of independent random variables remain independent?",
+      "repeat": 0,
+      "neighbor_window": 1,
+      "created_at": "2026-11-09T09:31:01.845573+00:00",
+      "api_ms": 3191.579099999217,
+      "response": {
+        "answer": "According to the lecture excerpts, the answer is:\n\nThe functions of independent random variables remain independent because of the basic property that functions of independent things remain independent. (Reference: Lecture lec13, 2846.0s-2858.7s)",
+        "contexts": [
+          {
+            "lecture": "lec07",
+            "start": 665.4,
+            "end": 679.46,
+            "text": "The intuitive content is the same as for events. Random variables are independent if knowing something about the realized values of some of these random"
+          },
+          {
+            "lecture": "lec07",
+            "start": 848.1,
+            "end": 858.02,
+            "text": "It's an event that has probability 1 over 20. Are these two random variables independent? You can try to check a condition like this, but can"
+          },
+          {
+            "lecture": "lec07",
+            "start": 1156.2,
+            "end": 1161.84,
+            "text": "this universe. So the two random variables are independent inside this universe."
+          },
+          {
+            "lecture": "lec07",
+            "start": 2554.46,
+            "end": 2559.02,
+            "text": "All right. So the random variables are not independent. Are we stuck?"
+          },
+          {
+            "lecture": "lec13",
+            "start": 2845.98,
+            "end": 2858.68,
+            "text": "So we're using here the basic property that functions of independent things remain independent. There's a converse picture of this."
+          }
+        ],
+        "timings_ms": {
+          "embedding": 46.164600000338396,
+          "similarity": 206.48929999879329,
+          "context": 1.8632000010256888,
+          "retrieval": 254.51710000015737,
+          "generation": 2923.686899999666,
+          "total": 3178.2277999991493
+        },
+        "generation_metrics": {
+          "model": "llama3.1:8b",
+          "done_reason": "stop",
+          "total_duration": 2919150200,
+          "load_duration": 6418300,
+          "prompt_eval_count": 267,
+          "prompt_eval_cached_count": 37,
+          "prompt_eval_duration": 262719000,
+          "eval_count": 53,
+          "eval_duration": 2634453000,
+          "wall_ms": 2923.4591999993427,
+          "output_tokens_per_second": 20.118028296576178
+        },
+        "generation_options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 512,
+          "num_ctx": 8192
+        },
+        "neighbor_window": 1,
+        "top5": [
+          {
+            "lecture": "lec13",
+            "segment": 850,
+            "score": 0.7832116836781317
+          },
+          {
+            "lecture": "lec07",
+            "segment": 812,
+            "score": 0.7349935239864087
+          },
+          {
+            "lecture": "lec07",
+            "segment": 264,
+            "score": 0.726342487993352
+          },
+          {
+            "lecture": "lec07",
+            "segment": 351,
+            "score": 0.7227605883931896
+          },
+          {
+            "lecture": "lec07",
+            "segment": 213,
+            "score": 0.7169689274370612
+          }
+        ],
+        "delivered_segments": [
+          {
+            "lecture": "lec07",
+            "segment": 212
+          },
+          {
+            "lecture": "lec07",
+            "segment": 213
+          },
+          {
+            "lecture": "lec07",
+            "segment": 214
+          },
+          {
+            "lecture": "lec07",
+            "segment": 263
+          },
+          {
+            "lecture": "lec07",
+            "segment": 264
+          },
+          {
+            "lecture": "lec07",
+            "segment": 265
+          },
+          {
+            "lecture": "lec07",
+            "segment": 350
+          },
+          {
+            "lecture": "lec07",
+            "segment": 351
+          },
+          {
+            "lecture": "lec07",
+            "segment": 352
+          },
+          {
+            "lecture": "lec07",
+            "segment": 811
+          },
+          {
+            "lecture": "lec07",
+            "segment": 812
+          },
+          {
+            "lecture": "lec07",
+            "segment": 813
+          },
+          {
+            "lecture": "lec13",
+            "segment": 849
+          },
+          {
+            "lecture": "lec13",
+            "segment": 850
+          },
+          {
+            "lecture": "lec13",
+            "segment": 851
+          }
+        ]
+      },
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "context_coverage": 0.0
+    },
+    {
+      "query_id": "q07",
+      "question": "Why do functions of independent random variables remain independent?",
+      "repeat": 0,
+      "neighbor_window": 0,
+      "created_at": "2026-11-09T09:31:04.374555+00:00",
+      "api_ms": 2525.902400000632,
+      "response": {
+        "answer": "According to the lecture excerpt [5], the answer is:\n\nfunctions of independent things remain independent. (Reference: Lecture lec13, 2849.4s-2856.4s)",
+        "contexts": [
+          {
+            "lecture": "lec07",
+            "start": 671.12,
+            "end": 675.02,
+            "text": "Random variables are independent if knowing"
+          },
+          {
+            "lecture": "lec07",
+            "start": 850.78,
+            "end": 854.5,
+            "text": "Are these two random variables independent?"
+          },
+          {
+            "lecture": "lec07",
+            "start": 1157.26,
+            "end": 1159.88,
+            "text": "So the two random variables are independent"
+          },
+          {
+            "lecture": "lec07",
+            "start": 2554.8,
+            "end": 2558.06,
+            "text": "So the random variables are not independent."
+          },
+          {
+            "lecture": "lec13",
+            "start": 2849.36,
+            "end": 2856.42,
+            "text": "functions of independent things remain independent."
+          }
+        ],
+        "timings_ms": {
+          "embedding": 47.88439999902039,
+          "similarity": 215.78849999968952,
+          "context": 1.7380999997840263,
+          "retrieval": 265.41099999849393,
+          "generation": 2245.0110999998287,
+          "total": 2510.449699999299
+        },
+        "generation_metrics": {
+          "model": "llama3.1:8b",
+          "done_reason": "stop",
+          "total_duration": 2239729600,
+          "load_duration": 8038600,
+          "prompt_eval_count": 191,
+          "prompt_eval_cached_count": 59,
+          "prompt_eval_duration": 216722000,
+          "eval_count": 41,
+          "eval_duration": 1998687000,
+          "wall_ms": 2244.82960000023,
+          "output_tokens_per_second": 20.513467091145337
+        },
+        "generation_options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 512,
+          "num_ctx": 8192
+        },
+        "neighbor_window": 0,
+        "top5": [
+          {
+            "lecture": "lec13",
+            "segment": 850,
+            "score": 0.7832116836781317
+          },
+          {
+            "lecture": "lec07",
+            "segment": 812,
+            "score": 0.7349935239864087
+          },
+          {
+            "lecture": "lec07",
+            "segment": 264,
+            "score": 0.726342487993352
+          },
+          {
+            "lecture": "lec07",
+            "segment": 351,
+            "score": 0.7227605883931896
+          },
+          {
+            "lecture": "lec07",
+            "segment": 213,
+            "score": 0.7169689274370612
+          }
+        ],
+        "delivered_segments": [
+          {
+            "lecture": "lec07",
+            "segment": 213
+          },
+          {
+            "lecture": "lec07",
+            "segment": 264
+          },
+          {
+            "lecture": "lec07",
+            "segment": 351
+          },
+          {
+            "lecture": "lec07",
+            "segment": 812
+          },
+          {
+            "lecture": "lec13",
+            "segment": 850
+          }
+        ]
+      },
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "context_coverage": 0.0
+    },
+    {
+      "query_id": "q20",
+      "question": "How is symmetry used to calculate the probability that the absolute value of a standard normal exceeds two?",
+      "repeat": 0,
+      "neighbor_window": 1,
+      "created_at": "2026-11-09T09:31:05.486437+00:00",
+      "api_ms": 1108.4452000013698,
+      "response": {
+        "answer": "I don't know based on the provided lectures.",
+        "contexts": [
+          {
+            "lecture": "lec08",
+            "start": 2503.74,
+            "end": 2510.04,
+            "text": "How will you calculate probabilities? If I ask you, what's the probability that the normal is less than 3?"
+          },
+          {
+            "lecture": "lec11",
+            "start": 1498.52,
+            "end": 1504.68,
+            "text": "to be equal to 3. What's the probability that the sum of the two random variables is equal to 3?"
+          },
+          {
+            "lecture": "lec19",
+            "start": 2828.06,
+            "end": 2837.58,
+            "text": "you can calculate for Zn in the limit become the same as the probabilities that you would get from the standard normal tables from Z."
+          },
+          {
+            "lecture": "lec20",
+            "start": 176.61,
+            "end": 187.27,
+            "text": "less than or equal to C in the limit becomes the same as the probability that the standard normal becomes less than or equal to C. And of course, this is useful"
+          },
+          {
+            "lecture": "lec23",
+            "start": 2704.9,
+            "end": 2711.28,
+            "text": "estimate of sigma somehow. What is a generic method for estimating a standard deviation?"
+          }
+        ],
+        "timings_ms": {
+          "embedding": 61.48669999856793,
+          "similarity": 219.19090000119468,
+          "context": 1.854500000263215,
+          "retrieval": 282.5321000000258,
+          "generation": 818.6609000003955,
+          "total": 1101.2155999997049
+        },
+        "generation_metrics": {
+          "model": "llama3.1:8b",
+          "done_reason": "stop",
+          "total_duration": 791832500,
+          "load_duration": 6552500,
+          "prompt_eval_count": 291,
+          "prompt_eval_cached_count": 37,
+          "prompt_eval_duration": 258358000,
+          "eval_count": 11,
+          "eval_duration": 512842999,
+          "wall_ms": 818.5243999996601,
+          "output_tokens_per_second": 21.449059500566566
+        },
+        "generation_options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 512,
+          "num_ctx": 8192
+        },
+        "neighbor_window": 1,
+        "top5": [
+          {
+            "lecture": "lec19",
+            "segment": 954,
+            "score": 0.6578446389978695
+          },
+          {
+            "lecture": "lec11",
+            "segment": 429,
+            "score": 0.6410828199445073
+          },
+          {
+            "lecture": "lec08",
+            "segment": 808,
+            "score": 0.6351566879687218
+          },
+          {
+            "lecture": "lec23",
+            "segment": 897,
+            "score": 0.6260145502843398
+          },
+          {
+            "lecture": "lec20",
+            "segment": 65,
+            "score": 0.625611652988707
+          }
+        ],
+        "delivered_segments": [
+          {
+            "lecture": "lec08",
+            "segment": 807
+          },
+          {
+            "lecture": "lec08",
+            "segment": 808
+          },
+          {
+            "lecture": "lec08",
+            "segment": 809
+          },
+          {
+            "lecture": "lec11",
+            "segment": 428
+          },
+          {
+            "lecture": "lec11",
+            "segment": 429
+          },
+          {
+            "lecture": "lec11",
+            "segment": 430
+          },
+          {
+            "lecture": "lec19",
+            "segment": 953
+          },
+          {
+            "lecture": "lec19",
+            "segment": 954
+          },
+          {
+            "lecture": "lec19",
+            "segment": 955
+          },
+          {
+            "lecture": "lec20",
+            "segment": 64
+          },
+          {
+            "lecture": "lec20",
+            "segment": 65
+          },
+          {
+            "lecture": "lec20",
+            "segment": 66
+          },
+          {
+            "lecture": "lec23",
+            "segment": 896
+          },
+          {
+            "lecture": "lec23",
+            "segment": 897
+          },
+          {
+            "lecture": "lec23",
+            "segment": 898
+          }
+        ]
+      },
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "context_coverage": 0.0
+    },
+    {
+      "query_id": "q20",
+      "question": "How is symmetry used to calculate the probability that the absolute value of a standard normal exceeds two?",
+      "repeat": 0,
+      "neighbor_window": 0,
+      "created_at": "2026-11-09T09:31:06.545214+00:00",
+      "api_ms": 1055.9954999989714,
+      "response": {
+        "answer": "I don't know based on the provided lectures.",
+        "contexts": [
+          {
+            "lecture": "lec08",
+            "start": 2505.74,
+            "end": 2508.66,
+            "text": "If I ask you, what's the probability that the normal is"
+          },
+          {
+            "lecture": "lec11",
+            "start": 1500.0,
+            "end": 1502.36,
+            "text": "What's the probability that the sum of the two random"
+          },
+          {
+            "lecture": "lec19",
+            "start": 2832.3,
+            "end": 2835.14,
+            "text": "probabilities that you would get from the standard normal"
+          },
+          {
+            "lecture": "lec20",
+            "start": 181.13,
+            "end": 184.09,
+            "text": "the probability that the standard normal becomes less"
+          },
+          {
+            "lecture": "lec23",
+            "start": 2707.1,
+            "end": 2710.14,
+            "text": "What is a generic method for estimating a standard"
+          }
+        ],
+        "timings_ms": {
+          "embedding": 68.73900000027788,
+          "similarity": 235.48909999954049,
+          "context": 1.8433000004733913,
+          "retrieval": 306.07140000029176,
+          "generation": 734.1424000005645,
+          "total": 1040.2500000000146
+        },
+        "generation_metrics": {
+          "model": "llama3.1:8b",
+          "done_reason": "stop",
+          "total_duration": 728646600,
+          "load_duration": 7429100,
+          "prompt_eval_count": 221,
+          "prompt_eval_cached_count": 69,
+          "prompt_eval_duration": 201323000,
+          "eval_count": 11,
+          "eval_duration": 504362000,
+          "wall_ms": 733.9155000008759,
+          "output_tokens_per_second": 21.809731898913874
+        },
+        "generation_options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 512,
+          "num_ctx": 8192
+        },
+        "neighbor_window": 0,
+        "top5": [
+          {
+            "lecture": "lec19",
+            "segment": 954,
+            "score": 0.6578446389978695
+          },
+          {
+            "lecture": "lec11",
+            "segment": 429,
+            "score": 0.6410828199445073
+          },
+          {
+            "lecture": "lec08",
+            "segment": 808,
+            "score": 0.6351566879687218
+          },
+          {
+            "lecture": "lec23",
+            "segment": 897,
+            "score": 0.6260145502843398
+          },
+          {
+            "lecture": "lec20",
+            "segment": 65,
+            "score": 0.625611652988707
+          }
+        ],
+        "delivered_segments": [
+          {
+            "lecture": "lec08",
+            "segment": 808
+          },
+          {
+            "lecture": "lec11",
+            "segment": 429
+          },
+          {
+            "lecture": "lec19",
+            "segment": 954
+          },
+          {
+            "lecture": "lec20",
+            "segment": 65
+          },
+          {
+            "lecture": "lec23",
+            "segment": 897
+          }
+        ]
+      },
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "context_coverage": 0.0
+    },
+    {
+      "query_id": "q01",
+      "question": "Why is the probability of the entire sample space equal to one?",
+      "repeat": 0,
+      "neighbor_window": 1,
+      "created_at": "2026-11-09T09:31:09.378277+00:00",
+      "api_ms": 2829.9753999999666,
+      "response": {
+        "answer": "The probability of the entire sample space is equal to one because it expresses the fact that we're certain (Reference: [4] Lecture lec02 (164.5s-172.3s)).",
+        "contexts": [
+          {
+            "lecture": "lec01",
+            "start": 1506.36,
+            "end": 1515.02,
+            "text": "What's the second axiom? The probability of the entire sample space is equal to 1. Why does this make sense?"
+          },
+          {
+            "lecture": "lec01",
+            "start": 1788.38,
+            "end": 1789.54,
+            "text": "Here's how it goes."
+          },
+          {
+            "lecture": "lec01",
+            "start": 1790.74,
+            "end": 1797.56,
+            "text": "One is the probability of the entire sample space. Here we're using the second axiom."
+          },
+          {
+            "lecture": "lec02",
+            "start": 164.52,
+            "end": 172.32,
+            "text": "They're non-negative. The probability of the overall sample space is equal to 1, which expresses the fact that we're certain,"
+          },
+          {
+            "lecture": "lec02",
+            "start": 338.4,
+            "end": 347.24,
+            "text": "And now let's do a calculation. One is the probability of our overall sample space, which is the unit square."
+          },
+          {
+            "lecture": "lec04",
+            "start": 130.69,
+            "end": 143.83,
+            "text": "particular, we assume that the sample points are equally likely, which means that every element of the sample space has the same probability, equal to 1 over N. And then we're"
+          }
+        ],
+        "timings_ms": {
+          "embedding": 53.78279999968072,
+          "similarity": 254.18179999905988,
+          "context": 1.99609999981476,
+          "retrieval": 309.96069999855536,
+          "generation": 2513.3853999996063,
+          "total": 2823.3696999996027
+        },
+        "generation_metrics": {
+          "model": "llama3.1:8b",
+          "done_reason": "stop",
+          "total_duration": 2489479600,
+          "load_duration": 6420100,
+          "prompt_eval_count": 314,
+          "prompt_eval_cached_count": 37,
+          "prompt_eval_duration": 260843000,
+          "eval_count": 42,
+          "eval_duration": 2208764000,
+          "wall_ms": 2513.231999999334,
+          "output_tokens_per_second": 19.01515960962783
+        },
+        "generation_options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 512,
+          "num_ctx": 8192
+        },
+        "neighbor_window": 1,
+        "top5": [
+          {
+            "lecture": "lec01",
+            "segment": 488,
+            "score": 0.8547623343905169
+          },
+          {
+            "lecture": "lec01",
+            "segment": 555,
+            "score": 0.8203150325762418
+          },
+          {
+            "lecture": "lec02",
+            "segment": 116,
+            "score": 0.7913998005255474
+          },
+          {
+            "lecture": "lec02",
+            "segment": 63,
+            "score": 0.7757615394929752
+          },
+          {
+            "lecture": "lec04",
+            "segment": 45,
+            "score": 0.7325664503379202
+          }
+        ],
+        "delivered_segments": [
+          {
+            "lecture": "lec01",
+            "segment": 487
+          },
+          {
+            "lecture": "lec01",
+            "segment": 488
+          },
+          {
+            "lecture": "lec01",
+            "segment": 489
+          },
+          {
+            "lecture": "lec01",
+            "segment": 554
+          },
+          {
+            "lecture": "lec01",
+            "segment": 555
+          },
+          {
+            "lecture": "lec01",
+            "segment": 556
+          },
+          {
+            "lecture": "lec02",
+            "segment": 62
+          },
+          {
+            "lecture": "lec02",
+            "segment": 63
+          },
+          {
+            "lecture": "lec02",
+            "segment": 64
+          },
+          {
+            "lecture": "lec02",
+            "segment": 115
+          },
+          {
+            "lecture": "lec02",
+            "segment": 116
+          },
+          {
+            "lecture": "lec02",
+            "segment": 117
+          },
+          {
+            "lecture": "lec04",
+            "segment": 44
+          },
+          {
+            "lecture": "lec04",
+            "segment": 45
+          },
+          {
+            "lecture": "lec04",
+            "segment": 46
+          }
+        ]
+      },
+      "ranking": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "context_coverage": 0.2222222222222222
+    },
+    {
+      "query_id": "q01",
+      "question": "Why is the probability of the entire sample space equal to one?",
+      "repeat": 0,
+      "neighbor_window": 0,
+      "created_at": "2026-11-09T09:31:12.043255+00:00",
+      "api_ms": 2662.8307000009954,
+      "response": {
+        "answer": "The probability of the entire sample space is equal to one because every element of the sample space has a non-zero probability. (Reference: Lecture lec04, 135.0s-138.8s)",
+        "contexts": [
+          {
+            "lecture": "lec01",
+            "start": 1508.1,
+            "end": 1512.72,
+            "text": "The probability of the entire sample space is equal to 1."
+          },
+          {
+            "lecture": "lec01",
+            "start": 1790.74,
+            "end": 1794.4,
+            "text": "One is the probability of the entire sample space."
+          },
+          {
+            "lecture": "lec02",
+            "start": 166.2,
+            "end": 168.44,
+            "text": "The probability of the overall sample space"
+          },
+          {
+            "lecture": "lec02",
+            "start": 341.14,
+            "end": 345.06,
+            "text": "One is the probability of our overall sample space, which is"
+          },
+          {
+            "lecture": "lec04",
+            "start": 134.97,
+            "end": 138.75,
+            "text": "likely, which means that every element of the sample space has"
+          }
+        ],
+        "timings_ms": {
+          "embedding": 65.95809999998892,
+          "similarity": 216.59080000063113,
+          "context": 1.1086999984399881,
+          "retrieval": 283.65759999906004,
+          "generation": 2365.420999998605,
+          "total": 2649.099099999148
+        },
+        "generation_metrics": {
+          "model": "llama3.1:8b",
+          "done_reason": "stop",
+          "total_duration": 2361144100,
+          "load_duration": 6382100,
+          "prompt_eval_count": 212,
+          "prompt_eval_cached_count": 63,
+          "prompt_eval_duration": 216398000,
+          "eval_count": 44,
+          "eval_duration": 2120755000,
+          "wall_ms": 2365.2734000006603,
+          "output_tokens_per_second": 20.747328192082538
+        },
+        "generation_options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 512,
+          "num_ctx": 8192
+        },
+        "neighbor_window": 0,
+        "top5": [
+          {
+            "lecture": "lec01",
+            "segment": 488,
+            "score": 0.8547623343905169
+          },
+          {
+            "lecture": "lec01",
+            "segment": 555,
+            "score": 0.8203150325762418
+          },
+          {
+            "lecture": "lec02",
+            "segment": 116,
+            "score": 0.7913998005255474
+          },
+          {
+            "lecture": "lec02",
+            "segment": 63,
+            "score": 0.7757615394929752
+          },
+          {
+            "lecture": "lec04",
+            "segment": 45,
+            "score": 0.7325664503379202
+          }
+        ],
+        "delivered_segments": [
+          {
+            "lecture": "lec01",
+            "segment": 488
+          },
+          {
+            "lecture": "lec01",
+            "segment": 555
+          },
+          {
+            "lecture": "lec02",
+            "segment": 63
+          },
+          {
+            "lecture": "lec02",
+            "segment": 116
+          },
+          {
+            "lecture": "lec04",
+            "segment": 45
+          }
+        ]
+      },
+      "ranking": {
+        "hit_at_1": 1,
+        "hit_at_5": 1,
+        "reciprocal_rank": 1.0
+      },
+      "context_coverage": 0.1111111111111111
+    },
+    {
+      "query_id": "q02",
+      "question": "In the radar example, what are the prior probability of a plane and the probability of detecting it?",
+      "repeat": 0,
+      "neighbor_window": 1,
+      "created_at": "2026-11-09T09:31:13.130163+00:00",
+      "api_ms": 1084.8400999984733,
+      "response": {
+        "answer": "I don't know based on the provided lectures.",
+        "contexts": [
+          {
+            "lecture": "lec02",
+            "start": 1537.49,
+            "end": 1552.55,
+            "text": "So this particular part of the picture is a self-contained probability model of what your radar does in a world where a plane is out there."
+          },
+          {
+            "lecture": "lec02",
+            "start": 1618.49,
+            "end": 1627.75,
+            "text": "We're given probabilities about this. And we're given probabilities about how the radar behaves. So here, I have indirectly specified the probability law"
+          },
+          {
+            "lecture": "lec02",
+            "start": 1772.45,
+            "end": 1785.07,
+            "text": "And now here's the interesting question. Given that your radar recorded something, how likely is it that there is an airplane up there?"
+          },
+          {
+            "lecture": "lec02",
+            "start": 2702.5,
+            "end": 2712.06,
+            "text": "associated essentially with an inference problem. Given that our radar recorded something, how likely is it that the plane was up there?"
+          },
+          {
+            "lecture": "lec10",
+            "start": 450.04,
+            "end": 458.66,
+            "text": "And we make inferences and calculate the probability that the plane is there or the probability that the plane is not there."
+          }
+        ],
+        "timings_ms": {
+          "embedding": 65.79000000056112,
+          "similarity": 204.302899999675,
+          "context": 1.6642000009596813,
+          "retrieval": 271.7571000011958,
+          "generation": 799.7255999998742,
+          "total": 1071.5030000010302
+        },
+        "generation_metrics": {
+          "model": "llama3.1:8b",
+          "done_reason": "stop",
+          "total_duration": 794655200,
+          "load_duration": 7423300,
+          "prompt_eval_count": 299,
+          "prompt_eval_cached_count": 37,
+          "prompt_eval_duration": 274355000,
+          "eval_count": 11,
+          "eval_duration": 498223000,
+          "wall_ms": 799.5329999994283,
+          "output_tokens_per_second": 22.07846687126046
+        },
+        "generation_options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 512,
+          "num_ctx": 8192
+        },
+        "neighbor_window": 1,
+        "top5": [
+          {
+            "lecture": "lec02",
+            "segment": 496,
+            "score": 0.7511061696046013
+          },
+          {
+            "lecture": "lec02",
+            "segment": 571,
+            "score": 0.7383551565827149
+          },
+          {
+            "lecture": "lec02",
+            "segment": 858,
+            "score": 0.7300263566421391
+          },
+          {
+            "lecture": "lec10",
+            "segment": 156,
+            "score": 0.7245812349638607
+          },
+          {
+            "lecture": "lec02",
+            "segment": 522,
+            "score": 0.7233968234683436
+          }
+        ],
+        "delivered_segments": [
+          {
+            "lecture": "lec02",
+            "segment": 495
+          },
+          {
+            "lecture": "lec02",
+            "segment": 496
+          },
+          {
+            "lecture": "lec02",
+            "segment": 497
+          },
+          {
+            "lecture": "lec02",
+            "segment": 521
+          },
+          {
+            "lecture": "lec02",
+            "segment": 522
+          },
+          {
+            "lecture": "lec02",
+            "segment": 523
+          },
+          {
+            "lecture": "lec02",
+            "segment": 570
+          },
+          {
+            "lecture": "lec02",
+            "segment": 571
+          },
+          {
+            "lecture": "lec02",
+            "segment": 572
+          },
+          {
+            "lecture": "lec02",
+            "segment": 857
+          },
+          {
+            "lecture": "lec02",
+            "segment": 858
+          },
+          {
+            "lecture": "lec02",
+            "segment": 859
+          },
+          {
+            "lecture": "lec10",
+            "segment": 155
+          },
+          {
+            "lecture": "lec10",
+            "segment": 156
+          },
+          {
+            "lecture": "lec10",
+            "segment": 157
+          }
+        ]
+      },
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "context_coverage": 0.0
+    },
+    {
+      "query_id": "q02",
+      "question": "In the radar example, what are the prior probability of a plane and the probability of detecting it?",
+      "repeat": 0,
+      "neighbor_window": 0,
+      "created_at": "2026-11-09T09:31:14.095566+00:00",
+      "api_ms": 963.6233000001084,
+      "response": {
+        "answer": "I don't know based on the provided lectures.",
+        "contexts": [
+          {
+            "lecture": "lec02",
+            "start": 1543.91,
+            "end": 1550.27,
+            "text": "probability model of what your radar does in a world where a"
+          },
+          {
+            "lecture": "lec02",
+            "start": 1619.99,
+            "end": 1624.13,
+            "text": "And we're given probabilities about how the radar behaves."
+          },
+          {
+            "lecture": "lec02",
+            "start": 1775.71,
+            "end": 1781.49,
+            "text": "Given that your radar recorded something, how likely is it"
+          },
+          {
+            "lecture": "lec02",
+            "start": 2705.6,
+            "end": 2709.84,
+            "text": "Given that our radar recorded something, how likely is it"
+          },
+          {
+            "lecture": "lec10",
+            "start": 453.84,
+            "end": 457.86,
+            "text": "the plane is there or the probability that the plane is"
+          }
+        ],
+        "timings_ms": {
+          "embedding": 62.428400000499096,
+          "similarity": 181.98069999925792,
+          "context": 1.04760000067472,
+          "retrieval": 245.45670000043174,
+          "generation": 713.7189000004582,
+          "total": 959.1944000003423
+        },
+        "generation_metrics": {
+          "model": "llama3.1:8b",
+          "done_reason": "stop",
+          "total_duration": 710061800,
+          "load_duration": 5232200,
+          "prompt_eval_count": 226,
+          "prompt_eval_cached_count": 69,
+          "prompt_eval_duration": 196082000,
+          "eval_count": 11,
+          "eval_duration": 494655000,
+          "wall_ms": 713.5846000001038,
+          "output_tokens_per_second": 22.2377212400562
+        },
+        "generation_options": {
+          "temperature": 0,
+          "seed": 42,
+          "num_predict": 512,
+          "num_ctx": 8192
+        },
+        "neighbor_window": 0,
+        "top5": [
+          {
+            "lecture": "lec02",
+            "segment": 496,
+            "score": 0.7511061696046013
+          },
+          {
+            "lecture": "lec02",
+            "segment": 571,
+            "score": 0.7383551565827149
+          },
+          {
+            "lecture": "lec02",
+            "segment": 858,
+            "score": 0.7300263566421391
+          },
+          {
+            "lecture": "lec10",
+            "segment": 156,
+            "score": 0.7245812349638607
+          },
+          {
+            "lecture": "lec02",
+            "segment": 522,
+            "score": 0.7233968234683436
+          }
+        ],
+        "delivered_segments": [
+          {
+            "lecture": "lec02",
+            "segment": 496
+          },
+          {
+            "lecture": "lec02",
+            "segment": 522
+          },
+          {
+            "lecture": "lec02",
+            "segment": 571
+          },
+          {
+            "lecture": "lec02",
+            "segment": 858
+          },
+          {
+            "lecture": "lec10",
+            "segment": 156
+          }
+        ]
+      },
+      "ranking": {
+        "hit_at_1": 0,
+        "hit_at_5": 0,
+        "reciprocal_rank": 0
+      },
+      "context_coverage": 0.0
+    }
+  ],
+  "errors": [],
+  "limitations": "Post-hoc source-derived questions. Repeated questions and shared prompt prefixes can hit caches. Paired contexts differ in length. Report first-pass and all-repeat timings separately. No concurrent load test.",
+  "warmup": {
+    "api_ms": 10332.218999999895,
+    "response": {
+      "answer": "A random variable is an assignment of a numerical value to every outcome of an experiment. (References: [1], [2])",
+      "contexts": [
+        {
+          "lecture": "lec05",
+          "start": 153.54,
+          "end": 167.7,
+          "text": "concept of the variance of a random variable. So what is a random variable? So it's an assignment of a numerical value to every"
+        },
+        {
+          "lecture": "lec05",
+          "start": 2676.83,
+          "end": 2687.71,
+          "text": "So the thing inside here is a legitimate random variable. What kind of random variable is it? So suppose that we have our experiment, and we have"
+        },
+        {
+          "lecture": "lec13",
+          "start": 1223.6,
+          "end": 1234.28,
+          "text": "What is the probability distribution of t1? What kind of random variable is it? We've gone through this before."
+        },
+        {
+          "lecture": "lec13",
+          "start": 1685.1,
+          "end": 1691.59,
+          "text": "of this interval. What kind of random variable is it? OK."
+        },
+        {
+          "lecture": "lec15",
+          "start": 2400.78,
+          "end": 2414.13,
+          "text": "What kind of random variable is T1 prime? What kind of random variable is it? This is like the first arrival in a Poisson process that runs"
+        }
+      ],
+      "timings_ms": {
+        "embedding": 55.39599999974598,
+        "similarity": 273.38760000020557,
+        "context": 2.643099998749676,
+        "retrieval": 331.4266999987012,
+        "generation": 9991.935699999885,
+        "total": 10323.43260000016
+      },
+      "generation_metrics": {
+        "model": "llama3.1:8b",
+        "done_reason": "stop",
+        "total_duration": 9987152800,
+        "load_duration": 8218991000,
+        "prompt_eval_count": 281,
+        "prompt_eval_cached_count": 0,
+        "prompt_eval_duration": 399151000,
+        "eval_count": 27,
+        "eval_duration": 1362315000,
+        "wall_ms": 9991.697600000407,
+        "output_tokens_per_second": 19.819204809460366
+      },
+      "generation_options": {
+        "temperature": 0,
+        "seed": 42,
+        "num_predict": 512,
+        "num_ctx": 8192
+      },
+      "neighbor_window": 1,
+      "top5": [
+        {
+          "lecture": "lec05",
+          "segment": 44,
+          "score": 0.9903654144426
+        },
+        {
+          "lecture": "lec05",
+          "segment": 816,
+          "score": 0.9224658970865722
+        },
+        {
+          "lecture": "lec13",
+          "segment": 399,
+          "score": 0.9224658970865722
+        },
+        {
+          "lecture": "lec13",
+          "segment": 532,
+          "score": 0.9224658970865722
+        },
+        {
+          "lecture": "lec15",
+          "segment": 783,
+          "score": 0.9224658970865722
+        }
+      ],
+      "delivered_segments": [
+        {
+          "lecture": "lec05",
+          "segment": 43
+        },
+        {
+          "lecture": "lec05",
+          "segment": 44
+        },
+        {
+          "lecture": "lec05",
+          "segment": 45
+        },
+        {
+          "lecture": "lec05",
+          "segment": 815
+        },
+        {
+          "lecture": "lec05",
+          "segment": 816
+        },
+        {
+          "lecture": "lec05",
+          "segment": 817
+        },
+        {
+          "lecture": "lec13",
+          "segment": 398
+        },
+        {
+          "lecture": "lec13",
+          "segment": 399
+        },
+        {
+          "lecture": "lec13",
+          "segment": 400
+        },
+        {
+          "lecture": "lec13",
+          "segment": 531
+        },
+        {
+          "lecture": "lec13",
+          "segment": 532
+        },
+        {
+          "lecture": "lec13",
+          "segment": 533
+        },
+        {
+          "lecture": "lec15",
+          "segment": 782
+        },
+        {
+          "lecture": "lec15",
+          "segment": 783
+        },
+        {
+          "lecture": "lec15",
+          "segment": 784
+        }
+      ]
+    }
+  },
+  "completed_at": "2026-11-09T09:31:14.100315+00:00",
+  "summary": {
+    "unique_questions": 8,
+    "repeats_expanded": 1,
+    "expanded_api_ms": {
+      "p50": 3579.7389999997904,
+      "p95": 7849.415084999507,
+      "n": 8
+    },
+    "expanded_first_pass_api_ms": {
+      "p50": 3579.7389999997904,
+      "p95": 7849.415084999507,
+      "n": 8
+    },
+    "baseline_first_pass_api_ms": {
+      "p50": 2814.130350000596,
+      "p95": 10259.996640000096,
+      "n": 8
+    },
+    "expanded_generation_ms": {
+      "p50": 2718.536149999636,
+      "p95": 7505.937099999935,
+      "n": 8
+    },
+    "expanded_retrieval_ms": {
+      "p50": 296.2463999992906,
+      "p95": 2043.9419050009733,
+      "n": 8
+    },
+    "ranking_first_pass": {
+      "hit_at_1": 0.375,
+      "hit_at_5": 0.5,
+      "reciprocal_rank": 0.4375
+    },
+    "paired_context_coverage": {
+      "0": 0.04320715595565558,
+      "1": 0.11170032091356172
+    },
+    "answer_quality_status": "pending blinded review; coverage is not answer accuracy"
+  }
+}
